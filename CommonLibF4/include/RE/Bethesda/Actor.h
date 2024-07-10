@@ -537,7 +537,7 @@ namespace RE
 		void KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)
 		{
 			using func_t = decltype(&AIProcess::KnockExplosion);
-			static REL::Relocation<func_t> func{ REL::ID(533106) };
+			static REL::Relocation<func_t> func{ REL::ID(2232384) };
 			return func(this, a_actor, a_location, a_magnitude);
 		}
 
@@ -556,7 +556,7 @@ namespace RE
 		bool RequestLoadAnimationsForWeaponChange(Actor& a_actor)
 		{
 			using func_t = decltype(&AIProcess::RequestLoadAnimationsForWeaponChange);
-			static REL::Relocation<func_t> func{ REL::ID(666002) };
+			static REL::Relocation<func_t> func{ REL::ID(2231758) };
 			return func(this, a_actor);
 		}
 

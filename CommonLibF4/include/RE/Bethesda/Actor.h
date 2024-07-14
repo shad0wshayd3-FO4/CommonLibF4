@@ -1265,6 +1265,13 @@ namespace RE
 			return func(this, a_refr, a_owner, a_crime);
 		}
 
+		void UpdateVoiceTimer(bool a_force)
+		{
+			using func_t = decltype(&Actor::UpdateVoiceTimer);
+			static REL::Relocation<func_t> func{ REL::ID(2230178) };
+			return func(this, a_force);
+		}
+
 		// members
 		NiTFlags<std::uint32_t, Actor>                   niFlags;                      // 2D0
 		float                                            updateTargetTimer;            // 2D4

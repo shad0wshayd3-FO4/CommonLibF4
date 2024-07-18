@@ -976,6 +976,13 @@ namespace RE
 			return func(this);
 		}
 
+		bool IsDamaged()
+		{
+			using func_t = decltype(&ExtraDataList::IsDamaged);
+			static REL::Relocation<func_t> func{ REL::ID(2190224) };
+			return func(this);
+		}
+
 		// members
 		BaseExtraList           extraData;    // 08
 		mutable BSReadWriteLock extraRWLock;  // 20

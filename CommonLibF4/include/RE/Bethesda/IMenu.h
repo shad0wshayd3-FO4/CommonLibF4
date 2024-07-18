@@ -1982,14 +1982,14 @@ namespace RE
 		[[nodiscard]] std::uint32_t GetSelectedIndex()
 		{
 			using func_t = decltype(&ExamineMenu::GetSelectedIndex);
-			static REL::Relocation<func_t> func{ REL::ID(776503) };
+			static REL::Relocation<func_t> func{ REL::ID(2223022) };
 			return func(this);
 		}
 
 		void ShowConfirmMenu(ExamineConfirmMenu::InitData* a_data, ExamineConfirmMenu::ICallback* a_callback)
 		{
 			using func_t = decltype(&ExamineMenu::ShowConfirmMenu);
-			static REL::Relocation<func_t> func{ REL::ID(443081) };
+			static REL::Relocation<func_t> func{ REL::ID(2223081) };
 			return func(this, a_data, a_callback);
 		}
 

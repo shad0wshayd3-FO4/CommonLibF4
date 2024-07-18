@@ -24,7 +24,7 @@ namespace RE
 				float                  a_compareDamage = FLT_MAX)
 			{
 				using func_t = decltype(&detail::AddItemCardInfoEntry);
-				static REL::Relocation<func_t> func{ REL::ID(489521) };
+				static REL::Relocation<func_t> func{ REL::ID(2222648) };
 				return func(a_array, a_newEntry, a_textID, a_value, a_difference, a_totalDamage, a_compareDamage);
 			}
 		}
@@ -70,14 +70,14 @@ namespace RE
 		inline void PlayPipboySound(const char* a_soundName)
 		{
 			using func_t = decltype(&PlayPipboySound);
-			static REL::Relocation<func_t> func{ REL::ID(1320952) };
+			static REL::Relocation<func_t> func{ REL::ID(2249706) };
 			return func(a_soundName);
 		}
 
 		inline void PlayMenuSound(const char* a_soundName)
 		{
 			using func_t = decltype(&PlayMenuSound);
-			static REL::Relocation<func_t> func{ REL::ID(1227993) };
+			static REL::Relocation<func_t> func{ REL::ID(2249707) };
 			return func(a_soundName);
 		}
 	}

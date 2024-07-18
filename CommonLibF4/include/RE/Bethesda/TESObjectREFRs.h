@@ -345,7 +345,7 @@ namespace RE
 			bool a_alwaysContinue = false)
 		{
 			using func_t = decltype(&BGSInventoryList::FindAndWriteStackDataForItem);
-			static REL::Relocation<func_t> func{ REL::ID(1354005) };
+			static REL::Relocation<func_t> func{ REL::ID(2194179) };
 			return func(this, a_object, a_compareFunc, a_writeFunc, a_objCompFn, a_alwaysContinue);
 		}
 
@@ -795,7 +795,7 @@ namespace RE
 		[[nodiscard]] std::uint32_t GetInventoryObjectCount(const TESBoundObject* a_object)
 		{
 			using func_t = decltype(&TESObjectREFR::GetInventoryObjectCount);
-			static REL::Relocation<func_t> func{ REL::ID(333415) };
+			static REL::Relocation<func_t> func{ REL::ID(2200939) };
 			return func(this, a_object);
 		}
 
@@ -907,7 +907,7 @@ namespace RE
 		bool GetItemCount(uint32_t& count, TESForm* item, bool countComponent)
 		{
 			using func_t = decltype(&TESObjectREFR::GetItemCount);
-			static REL::Relocation<func_t> func{ REL::ID(635042) };
+			static REL::Relocation<func_t> func{ REL::ID(2200996) };
 			return func(this, count, item, countComponent);
 		}
 

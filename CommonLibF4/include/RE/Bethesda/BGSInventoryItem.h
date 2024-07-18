@@ -127,10 +127,31 @@ namespace RE
 		};
 		static_assert(sizeof(ModifyModDataFunctor) == 0x30);
 
+		class __declspec(novtable) SetHealthFunctor :
+			public StackDataWriteFunctor // 00
+		{
+		public:
+			static constexpr auto RTTI{ RTTI::BGSInventoryItem__SetHealthFunctor };
+			static constexpr auto VTABLE{ VTABLE::BGSInventoryItem__SetHealthFunctor };
+
+			SetHealthFunctor(float a_health) :
+				health(a_health)
+			{
+				stl::emplace_vtable(this);
+			}
+
+			// override (StackDataWriteFunctor)
+			void WriteDataImpl(TESBoundObject&, BGSInventoryItem::Stack&) override; // 01
+
+			// members
+			float health;									// 10
+		};
+		static_assert(sizeof(SetHealthFunctor) == 0x18);
+
 		bool FindAndWriteStackData(StackDataCompareFunctor& a_compareFunc, StackDataWriteFunctor& a_writeFunc, bool a_manualMerge, ObjectRefHandle a_owner)
 		{
 			using func_t = decltype(&BGSInventoryItem::FindAndWriteStackData);
-			static REL::Relocation<func_t> func{ REL::ID(770140) };
+			static REL::Relocation<func_t> func{ REL::ID(2194123) };
 			return func(this, a_compareFunc, a_writeFunc, a_manualMerge, a_owner);
 		}
 

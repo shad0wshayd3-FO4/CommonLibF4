@@ -879,7 +879,7 @@ namespace RE
 		void SetTemporary()
 		{
 			using func_t = decltype(&TESForm::SetTemporary);
-			static REL::Relocation<func_t> func{ REL::ID(482454) };
+			static REL::Relocation<func_t> func{ REL::ID(2193125) };
 			return func(this);
 		}
 
@@ -1520,7 +1520,7 @@ namespace RE
 		[[nodiscard]] BGSEncounterZone* GetEncounterZone() const
 		{
 			using func_t = decltype(&TESObjectCELL::GetEncounterZone);
-			static REL::Relocation<func_t> func{ REL::ID(1414637) };
+			static REL::Relocation<func_t> func{ REL::ID(2200242) };
 			return func(this);
 		}
 
@@ -1723,6 +1723,13 @@ namespace RE
 			return func(this);
 		}
 
+		TESIdleForm* GetSpeakerIdle()
+		{
+			using func_t = decltype(&TESResponse::GetSpeakerIdle);
+			static REL::Relocation<func_t> func{ REL::ID(2208293) };
+			return func(this);
+		}
+
 		// Members
 		BGSLocalizedString                                    responseText;
 		TESResponse*                                          pNext;
@@ -1795,6 +1802,11 @@ namespace RE
 			return func(this);
 		}
 
+		[[nodiscard]] bool         IsRandom() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kRandom); }
+		[[nodiscard]] bool         IsRandomEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kRandomEnd); }
+		[[nodiscard]] bool         IsSayOnce() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kSayOnce); }
+		[[nodiscard]] bool         StartSceneOnEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kStartSceneOnEnd); }
+
 		// members
 		TESTopic*           parentTopic;       // 20
 		TESGlobal*          resetGlobal;       // 28
@@ -1807,6 +1819,13 @@ namespace RE
 		ResponseListWrapper responses;         // 48
 	};
 	static_assert(sizeof(TESTopicInfo) == 0x50);
+
+	struct TOPIC_INFO_SCENEDATA
+	{
+		BGSScene* scene;
+		std::uint32_t phase;
+	};
+	static_assert(sizeof(TOPIC_INFO_SCENEDATA) == 0x10);
 
 	struct IDLE_DATA
 	{

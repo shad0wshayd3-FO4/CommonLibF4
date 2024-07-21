@@ -478,7 +478,7 @@ namespace RE
 		[[nodiscard]] LOCK_LEVEL GetLockLevel(TESObjectREFR* a_owner)
 		{
 			using func_t = decltype(&REFR_LOCK::GetLockLevel);
-			static REL::Relocation<func_t> func{ REL::ID(782953) };
+			static REL::Relocation<func_t> func{ REL::ID(2191018) };
 			return func(this, a_owner);
 		}
 
@@ -673,7 +673,7 @@ namespace RE
 		void AddInventoryItem(TESBoundObject* a_object, BSTSmartPointer<ExtraDataList> a_extra, std::uint32_t a_count, TESObjectREFR* a_oldContainer, const INSTANCE_FILTER* a_filter, TESObjectREFR* a_overrideRef)
 		{
 			using func_t = decltype(&TESObjectREFR::AddInventoryItem);
-			static REL::Relocation<func_t> func{ REL::ID(78185) };
+			static REL::Relocation<func_t> func{ REL::ID(2200949) };
 			return func(this, a_object, a_extra, a_count, a_oldContainer, a_filter, a_overrideRef);
 		}
 
@@ -774,7 +774,7 @@ namespace RE
 		[[nodiscard]] std::int64_t GetGoldAmount()
 		{
 			using func_t = decltype(&TESObjectREFR::GetGoldAmount);
-			static REL::Relocation<func_t> func{ REL::ID(564356) };
+			static REL::Relocation<func_t> func{ REL::ID(2200923) };
 			return func(this);
 		}
 

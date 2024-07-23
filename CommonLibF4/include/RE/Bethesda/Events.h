@@ -45,11 +45,72 @@ namespace RE
 		{
 			// members
 			REX::EnumSet<Type, std::uint16_t> changeType;     // 00
-			const BGSObjectInstance*          itemAffected;   // 08
-			Actor*                            actorAffected;  // 10
+			const BGSObjectInstance*		  itemAffected;   // 08
+			Actor*							  actorAffected;  // 10
 			std::uint32_t                     stackID;        // 18
 		};
 		static_assert(sizeof(Event) == 0x20);
+	}
+
+	namespace PerkValueEvents
+	{
+		enum class Type
+		{
+			Add = 0,
+			Remove
+		};
+
+		struct PerkValueChangedEvent
+		{
+			Type changeType;												// 00
+			BSPointerHandle<Actor, BSUntypedPointerHandle<21, 5>> owner;	// 04
+			BGSPerk* perk;													// 08
+			std::uint8_t rank;												// 10
+		};
+		static_assert(sizeof(PerkValueChangedEvent) == 0x18);
+
+		struct PerkEntryUpdatedEvent
+		{
+			BSPointerHandle<Actor, BSUntypedPointerHandle<21, 5>> owner;	// 00
+			BGSPerkEntry* perkEntry;										// 08
+		};
+		static_assert(sizeof(PerkEntryUpdatedEvent) == 0x10);
+	}
+
+	namespace HolotapeStateChanged
+	{
+		// intentional
+		struct Event
+		{};
+	}
+
+	namespace BGSInventoryItemEvent
+	{
+		struct Event
+		{
+			BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>> owner;	// 00
+			InventoryInterface::Handle* item;										// 04
+		};
+	}
+
+	namespace FavoriteMgr_Events
+	{
+		struct ComponentFavoriteEvent
+		{
+			BGSComponent* component;	// 00
+			bool isFavorited;
+		};
+		static_assert(sizeof(ComponentFavoriteEvent) == 0x10);
+	}
+
+	namespace PlayerDifficultySettingChanged
+	{
+		struct Event
+		{
+			std::uint32_t oldDifficulty;
+			std::uint32_t newDifficulty;
+		};
+		static_assert(sizeof(Event) == 0x8);
 	}
 
 	struct BGSActorEvent

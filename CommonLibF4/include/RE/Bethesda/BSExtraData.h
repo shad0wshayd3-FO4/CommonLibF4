@@ -858,6 +858,23 @@ namespace RE
 			!std::is_reference_v<T>;
 	}
 
+	namespace ComparisonQualifiers
+	{
+		static bool ContainerQualifier(const BSExtraData* a_extraData)
+		{
+			using func_t = decltype(ComparisonQualifiers::ContainerQualifier);
+			REL::Relocation<func_t> func{ REL::ID(2190674) };
+			return func(a_extraData);
+		}
+
+		static bool UIQualifier(const BSExtraData* a_extraData)
+		{
+			using func_t = decltype(ComparisonQualifiers::UIQualifier);
+			REL::Relocation<func_t> func{ REL::ID(2190675) };
+			return func(a_extraData);
+		}
+	};
+
 	class ExtraDataList :
 		public BSIntrusiveRefCounted  // 00
 	{
@@ -983,9 +1000,17 @@ namespace RE
 			return func(this);
 		}
 
+		typedef bool (*ComparisonQualifier)(const BSExtraData*);
+		bool CompareList(const ExtraDataList* a_compare, ComparisonQualifier a_qualifier)
+		{
+			using func_t = decltype(&ExtraDataList::CompareList);
+			REL::Relocation<func_t> func{ REL::ID(2190098) };
+			return func(this, a_compare, a_qualifier);
+		}
+
 		// members
 		BaseExtraList           extraData;    // 08
-		mutable BSReadWriteLock extraRWLock;  // 20
+		mutable BSReadWriteLock extraRWLock;  // 20	
 	};
 	static_assert(sizeof(ExtraDataList) == 0x28);
 }

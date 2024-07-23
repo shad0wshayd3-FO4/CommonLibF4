@@ -198,6 +198,7 @@ set(SOURCES
 	include/RE/Bethesda/NavMesh.h
 	include/RE/Bethesda/NavMeshInfoMap.h
 	include/RE/Bethesda/PipboyDataGroup.h
+	include/RE/Bethesda/PipboyInventoryData.h
 	include/RE/Bethesda/PipboyInventoryUtils.h
 	include/RE/Bethesda/PipboyManager.h
 	include/RE/Bethesda/PipboyValue.h

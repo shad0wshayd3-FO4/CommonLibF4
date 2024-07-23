@@ -187,6 +187,13 @@ namespace RE
 			return func(this, a_stackID, a_scale);
 		}
 
+		ExtraDataList GetExtraDataAt(std::uint32_t a_index)
+		{
+			using func_t = decltype(&BGSInventoryItem::GetExtraDataAt);
+			static REL::Relocation<func_t> func{ REL::ID(2194092) };
+			return func(this, a_index);
+		}
+
 		// members
 		TESBoundObject*        object;     // 00
 		BSTSmartPointer<Stack> stackData;  // 08

@@ -80,6 +80,25 @@ namespace RE
 		};
 		static_assert(sizeof(CheckStackIDFunctor) == 0x10);
 
+		class alignas(0x08) CheckExtraDataFunctor :
+			public StackDataCompareFunctor // 00
+		{
+		public:
+			static constexpr auto RTTI{ RTTI::BGSInventoryItem__CheckExtraDataFunctor };
+			static constexpr auto VTABLE{ VTABLE::BGSInventoryItem__CheckExtraDataFunctor };
+
+			CheckExtraDataFunctor(const BGSInventoryItem::Stack* a_stack) noexcept :
+				extra(a_stack->extra.get())
+			{}
+
+			// override (StackDataCompareFunctor)
+			bool CompareData(const BGSInventoryItem::Stack&) override { return this->extra == extra; }
+
+			// members
+			const ExtraDataList* extra;	// 08
+		};
+		static_assert(sizeof(CheckExtraDataFunctor) == 0x10);
+
 		class __declspec(novtable) alignas(0x08) StackDataWriteFunctor
 		{
 		public:
@@ -127,10 +146,31 @@ namespace RE
 		};
 		static_assert(sizeof(ModifyModDataFunctor) == 0x30);
 
+		class __declspec(novtable) SetHealthFunctor :
+			public StackDataWriteFunctor // 00
+		{
+		public:
+			static constexpr auto RTTI{ RTTI::BGSInventoryItem__SetHealthFunctor };
+			static constexpr auto VTABLE{ VTABLE::BGSInventoryItem__SetHealthFunctor };
+
+			SetHealthFunctor(float a_health) :
+				health(a_health)
+			{
+				stl::emplace_vtable(this);
+			}
+
+			// override (StackDataWriteFunctor)
+			void WriteDataImpl(TESBoundObject&, BGSInventoryItem::Stack&) override; // 01
+
+			// members
+			float health;									// 10
+		};
+		static_assert(sizeof(SetHealthFunctor) == 0x18);
+
 		bool FindAndWriteStackData(StackDataCompareFunctor& a_compareFunc, StackDataWriteFunctor& a_writeFunc, bool a_manualMerge, ObjectRefHandle a_owner)
 		{
 			using func_t = decltype(&BGSInventoryItem::FindAndWriteStackData);
-			static REL::Relocation<func_t> func{ REL::ID(770140) };
+			static REL::Relocation<func_t> func{ REL::ID(2194123) };
 			return func(this, a_compareFunc, a_writeFunc, a_manualMerge, a_owner);
 		}
 
@@ -164,6 +204,20 @@ namespace RE
 			using func_t = decltype(&BGSInventoryItem::GetInventoryValue);
 			static REL::Relocation<func_t> func{ REL::ID(2194099) };
 			return func(this, a_stackID, a_scale);
+		}
+
+		ExtraDataList GetExtraDataAt(std::uint32_t a_index)
+		{
+			using func_t = decltype(&BGSInventoryItem::GetExtraDataAt);
+			static REL::Relocation<func_t> func{ REL::ID(2194092) };
+			return func(this, a_index);
+		}
+
+		[[nodiscard]] void MergeStacks()
+		{
+			using func_t = decltype(&BGSInventoryItem::MergeStacks);
+			static REL::Relocation<func_t> func{ REL::ID(2194109) };
+			return func(this);
 		}
 
 		// members

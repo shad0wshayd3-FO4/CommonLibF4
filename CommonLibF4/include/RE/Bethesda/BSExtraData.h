@@ -380,7 +380,105 @@ namespace RE
 	struct __declspec(novtable) MapMarkerData :
 		public TESFullName  // 00
 	{
-		std::uint32_t flags;  // 10
+		enum MARKER_TYPE : std::uint16_t
+		{
+			kCave = 0,
+			kCity,
+			kDiamondCity,
+			kEncampment,
+			kIndustrial,
+			kGovtBuilding,
+			kMetro,
+			kMilitaryBase,
+			kLandmark,
+			kOffice,
+			kRuinsTown,
+			kRuinsUrban,
+			kSanctuary,
+			kSettlement,
+			kSewer,
+			kVault,
+			kAirfield,
+			kBunkerHill,
+			kCamper,
+			kCar,
+			kChurch,
+			kCountryClub,
+			kCustomHouse,
+			kDriveIn,
+			kElevatedHighway,
+			kFaneuilHall,
+			kFarm,
+			kFillingStation,
+			kForest,
+			kGoodNeighbor,
+			kGraveyard,
+			kHospital,
+			kIndustrialDome,
+			kIndustrialStacks,
+			kInstitute,
+			kIrishPride,
+			kJunkyard,
+			kObservatory,
+			kPier,
+			kPondOrLake,
+			kQuarry,
+			kRadioactiveArea,
+			kRadioTower,
+			kSalem,
+			kSchool,
+			kShipwreck,
+			kSubmarine,
+			kSwanPond,
+			kSynthHead,
+			kTown,
+			kBOS,
+			kBrownstone,
+			kBunker,
+			kCastle,
+			kSkyscraper,
+			kLibertalia,
+			kLowrise,
+			kMinutemen,
+			kPoliceStation,
+			kPrydwen,
+			kRailroadFaction,
+			kRailroad,
+			kSatellite,
+			kSentinel,
+			kUSSConstitution,
+			kMechanist,
+			kRaiderSettlement,
+			kVassalSettlement,
+			kPotentialVassalSettlement,
+			kBottlingPlant,
+			kGalactic,
+			kHub,
+			kKiddieKingdom,
+			kMonorail,
+			kRides,
+			kSafari,
+			kWildWest,
+			kPOI,
+			kDisciples,
+			kOperators,
+			kPack,
+			kDoor,
+			kCountEditor,
+			kQuest,
+			kQuestDoor,
+			kQuestMultiple,
+			kPlayerSet,
+			kPlayerLocation,
+			kPowerArmorLocation,
+			kDogmeat,
+			kTeammate,
+			kCountTotal
+		};
+
+		std::uint8_t flags;				// 10
+		std::uint8_t originalFlags;		// 11
+		MARKER_TYPE type;               // 12
 	};
 	static_assert(sizeof(MapMarkerData) == 0x18);
 
@@ -858,6 +956,23 @@ namespace RE
 			!std::is_reference_v<T>;
 	}
 
+	namespace ComparisonQualifiers
+	{
+		static bool ContainerQualifier(const BSExtraData* a_extraData)
+		{
+			using func_t = decltype(ComparisonQualifiers::ContainerQualifier);
+			REL::Relocation<func_t> func{ REL::ID(2190674) };
+			return func(a_extraData);
+		}
+
+		static bool UIQualifier(const BSExtraData* a_extraData)
+		{
+			using func_t = decltype(ComparisonQualifiers::UIQualifier);
+			REL::Relocation<func_t> func{ REL::ID(2190675) };
+			return func(a_extraData);
+		}
+	};
+
 	class ExtraDataList :
 		public BSIntrusiveRefCounted  // 00
 	{
@@ -976,9 +1091,24 @@ namespace RE
 			return func(this);
 		}
 
+		bool IsDamaged()
+		{
+			using func_t = decltype(&ExtraDataList::IsDamaged);
+			static REL::Relocation<func_t> func{ REL::ID(2190224) };
+			return func(this);
+		}
+
+		typedef bool (*ComparisonQualifier)(const BSExtraData*);
+		bool CompareList(const ExtraDataList* a_compare, ComparisonQualifier a_qualifier)
+		{
+			using func_t = decltype(&ExtraDataList::CompareList);
+			REL::Relocation<func_t> func{ REL::ID(2190098) };
+			return func(this, a_compare, a_qualifier);
+		}
+
 		// members
 		BaseExtraList           extraData;    // 08
-		mutable BSReadWriteLock extraRWLock;  // 20
+		mutable BSReadWriteLock extraRWLock;  // 20	
 	};
 	static_assert(sizeof(ExtraDataList) == 0x28);
 }

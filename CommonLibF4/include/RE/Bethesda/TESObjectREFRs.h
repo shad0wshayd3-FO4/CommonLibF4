@@ -345,7 +345,7 @@ namespace RE
 			bool a_alwaysContinue = false)
 		{
 			using func_t = decltype(&BGSInventoryList::FindAndWriteStackDataForItem);
-			static REL::Relocation<func_t> func{ REL::ID(1354005) };
+			static REL::Relocation<func_t> func{ REL::ID(2194179) };
 			return func(this, a_object, a_compareFunc, a_writeFunc, a_objCompFn, a_alwaysContinue);
 		}
 
@@ -478,7 +478,7 @@ namespace RE
 		[[nodiscard]] LOCK_LEVEL GetLockLevel(TESObjectREFR* a_owner)
 		{
 			using func_t = decltype(&REFR_LOCK::GetLockLevel);
-			static REL::Relocation<func_t> func{ REL::ID(782953) };
+			static REL::Relocation<func_t> func{ REL::ID(2191018) };
 			return func(this, a_owner);
 		}
 
@@ -673,7 +673,7 @@ namespace RE
 		void AddInventoryItem(TESBoundObject* a_object, BSTSmartPointer<ExtraDataList> a_extra, std::uint32_t a_count, TESObjectREFR* a_oldContainer, const INSTANCE_FILTER* a_filter, TESObjectREFR* a_overrideRef)
 		{
 			using func_t = decltype(&TESObjectREFR::AddInventoryItem);
-			static REL::Relocation<func_t> func{ REL::ID(78185) };
+			static REL::Relocation<func_t> func{ REL::ID(2200949) };
 			return func(this, a_object, a_extra, a_count, a_oldContainer, a_filter, a_overrideRef);
 		}
 
@@ -774,7 +774,7 @@ namespace RE
 		[[nodiscard]] std::int64_t GetGoldAmount()
 		{
 			using func_t = decltype(&TESObjectREFR::GetGoldAmount);
-			static REL::Relocation<func_t> func{ REL::ID(564356) };
+			static REL::Relocation<func_t> func{ REL::ID(2200923) };
 			return func(this);
 		}
 
@@ -795,7 +795,7 @@ namespace RE
 		[[nodiscard]] std::uint32_t GetInventoryObjectCount(const TESBoundObject* a_object)
 		{
 			using func_t = decltype(&TESObjectREFR::GetInventoryObjectCount);
-			static REL::Relocation<func_t> func{ REL::ID(333415) };
+			static REL::Relocation<func_t> func{ REL::ID(2200939) };
 			return func(this, a_object);
 		}
 
@@ -907,7 +907,7 @@ namespace RE
 		bool GetItemCount(uint32_t& count, TESForm* item, bool countComponent)
 		{
 			using func_t = decltype(&TESObjectREFR::GetItemCount);
-			static REL::Relocation<func_t> func{ REL::ID(635042) };
+			static REL::Relocation<func_t> func{ REL::ID(2200996) };
 			return func(this, count, item, countComponent);
 		}
 

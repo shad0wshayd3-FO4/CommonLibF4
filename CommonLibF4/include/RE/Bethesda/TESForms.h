@@ -879,7 +879,7 @@ namespace RE
 		void SetTemporary()
 		{
 			using func_t = decltype(&TESForm::SetTemporary);
-			static REL::Relocation<func_t> func{ REL::ID(482454) };
+			static REL::Relocation<func_t> func{ REL::ID(2193125) };
 			return func(this);
 		}
 
@@ -1520,7 +1520,7 @@ namespace RE
 		[[nodiscard]] BGSEncounterZone* GetEncounterZone() const
 		{
 			using func_t = decltype(&TESObjectCELL::GetEncounterZone);
-			static REL::Relocation<func_t> func{ REL::ID(1414637) };
+			static REL::Relocation<func_t> func{ REL::ID(2200242) };
 			return func(this);
 		}
 
@@ -1723,6 +1723,13 @@ namespace RE
 			return func(this);
 		}
 
+		TESIdleForm* GetSpeakerIdle()
+		{
+			using func_t = decltype(&TESResponse::GetSpeakerIdle);
+			static REL::Relocation<func_t> func{ REL::ID(2208293) };
+			return func(this);
+		}
+
 		// Members
 		BGSLocalizedString                                    responseText;
 		TESResponse*                                          pNext;
@@ -1765,12 +1772,12 @@ namespace RE
 			CC_CHALLENGE_COUNT = 0x8,
 		};
 
-		enum CHARISMA_CHALLENGE_SUCCESS : std::uint32_t
+		enum CHARISMA_CHALLENGE_SUCCESS : int32_t
 		{
-			CC_SUCCESS_NONE = 0xFFFFFFFF,
-			CC_SUCCESS_FAIL = 0x0,
-			CC_SUCCESS_SUCCEED = 0x1,
-			CC_SUCCESS_COUNT = 0x2,
+			CC_SUCCESS_FAIL = 0,
+			CC_SUCCESS_SUCCEED = 1,
+			CC_SUCCESS_COUNT = 2,
+			CC_SUCCESS_NONE = -1,
 		};
 
 		// Returns nullptr if no parent.
@@ -1781,9 +1788,9 @@ namespace RE
 			return func(this);
 		}
 
-		CHARISMA_CHALLENGE_DIFFICULTY GetSpeechChallengeLevel()
+		CHARISMA_CHALLENGE_DIFFICULTY GetChallengeLevel()
 		{
-			using func_t = decltype(&TESTopicInfo::GetSpeechChallengeLevel);
+			using func_t = decltype(&TESTopicInfo::GetChallengeLevel);
 			static REL::Relocation<func_t> func{ REL::ID(2208441) };
 			return func(this);
 		}
@@ -1794,6 +1801,11 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(2208444) };
 			return func(this);
 		}
+
+		[[nodiscard]] bool         IsRandom() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kRandom); }
+		[[nodiscard]] bool         IsRandomEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kRandomEnd); }
+		[[nodiscard]] bool         IsSayOnce() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kSayOnce); }
+		[[nodiscard]] bool         StartSceneOnEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kStartSceneOnEnd); }
 
 		// members
 		TESTopic*           parentTopic;       // 20
@@ -1807,6 +1819,13 @@ namespace RE
 		ResponseListWrapper responses;         // 48
 	};
 	static_assert(sizeof(TESTopicInfo) == 0x50);
+
+	struct TOPIC_INFO_SCENEDATA
+	{
+		BGSScene* scene;		// 00
+		std::uint32_t phase;	// 08
+	};
+	static_assert(sizeof(TOPIC_INFO_SCENEDATA) == 0x10);
 
 	struct IDLE_DATA
 	{
@@ -2912,6 +2931,42 @@ namespace RE
 		public IKeywordFormBase  // 20
 	{
 	public:
+		enum class FLAG 
+		{
+			kBeginOnQuestStart = 0x0,
+			kStopQuestOnEnd = 0x1,
+			kShowAllTextInEditor = 0x2,
+			kRepeats = 0x3,
+			kInterruptible = 0x4,
+			kPlayerDialogue = 0x5,
+			kNoPlayerExitDialogue = 0x6,
+			kPlayerRadioStation = 0x7,
+			kBroadCastScene = 0x8,
+			kPauseActorsCurrentSceneinDialogue = 0x9,
+			kLookAhead = 0xA,
+			kAllowDialogueCamera = 0xB,
+			kNoFollowerIdleChatter = 0xC,
+		};
+
+		enum class BOOL_BITS
+		{
+			kActive = 0x1,
+			kPhaseActionDone = 0x2,
+			KPauseScene = 0x4,
+			kSceneScriptFinished = 0x8,
+			kNeedsToEnd = 0x10,
+			kRandom = 0x20,
+			kCombatPause = 0x40,
+			kDialoguePause = 0x80,
+			kObserveCombatPause = 0x100,
+			kPlayerWalkedAway = 0x200,
+			kNoUpdate = 0x400,
+			kInheritedPhases = 0x800,
+			kQueueActive = 0x100000,
+			kSceneJumpActive = 0x200000,
+			kGamePause = 0x400000,
+		};
+
 		static constexpr auto RTTI{ RTTI::BGSScene };
 		static constexpr auto VTABLE{ VTABLE::BGSScene };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kSCEN };
@@ -2934,6 +2989,20 @@ namespace RE
 		float                             maxREFDistanceCenter;    // D8
 		ObjectRefHandle                   targetRef;               // DC
 		bool                              shouldNotRotateToTrack;  // E0
+
+		void ResetAllSceneActions()
+		{
+			using func_t = decltype(&BGSScene::ResetAllSceneActions);
+			static REL::Relocation<func_t> func{ REL::ID(2206864) };
+			return func(this);
+		}
+
+		void SetSceneActive(bool abFlag)
+		{
+			using func_t = decltype(&BGSScene::SetSceneActive);
+			static REL::Relocation<func_t> func{ REL::ID(2206845) };
+			return func(this, abFlag);
+		}
 	};
 	static_assert(sizeof(BGSScene) == 0xE8);
 

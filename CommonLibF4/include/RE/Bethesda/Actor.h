@@ -20,9 +20,6 @@
 
 namespace RE
 {
-	enum class ACTOR_CRITICAL_STAGE;
-	enum class ACTOR_LIFE_STATE;
-	enum class ACTOR_LOS_LOCATION;
 	enum class ATTACK_STATE_ENUM;
 	enum class COMMAND_TYPE;
 	enum class DEFAULT_OBJECT;
@@ -111,6 +108,41 @@ namespace RE
 		struct PerkValueChangedEvent;
 		struct PerkEntryUpdatedEvent;
 	}
+
+	enum class ACTOR_CRITICAL_STAGE : std::int32_t
+	{
+		kNone,
+		kGooStart,
+		kGooEnd,
+		kDisintegrateStart,
+		kDisintegrateEnd,
+		kFreezeStart,
+		kFreezeEnd,
+		kCount
+	};
+
+	enum class ACTOR_LIFE_STATE : std::int32_t
+	{
+		kAlive,
+		kDying,
+		kDead,
+		kUnconscious,
+		kReanimate,
+		kRecycle,
+		kRestrained,
+		kEssentialDown,
+		kBleedout
+	};
+
+	enum class ACTOR_LOS_LOCATION : std::int32_t
+	{
+		kNone,
+		kEye,
+		kHead,
+		kTorse,
+		kFeet,
+		kCount
+	};
 
 	enum class PTYPE : std::int32_t
 	{
@@ -537,7 +569,7 @@ namespace RE
 		void KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)
 		{
 			using func_t = decltype(&AIProcess::KnockExplosion);
-			static REL::Relocation<func_t> func{ REL::ID(533106) };
+			static REL::Relocation<func_t> func{ REL::ID(2232384) };
 			return func(this, a_actor, a_location, a_magnitude);
 		}
 
@@ -556,7 +588,7 @@ namespace RE
 		bool RequestLoadAnimationsForWeaponChange(Actor& a_actor)
 		{
 			using func_t = decltype(&AIProcess::RequestLoadAnimationsForWeaponChange);
-			static REL::Relocation<func_t> func{ REL::ID(666002) };
+			static REL::Relocation<func_t> func{ REL::ID(2231758) };
 			return func(this, a_actor);
 		}
 
@@ -1263,6 +1295,13 @@ namespace RE
 			using func_t = decltype(&Actor::TrespassAlarm);
 			static REL::Relocation<func_t> func{ REL::ID(2229834) };
 			return func(this, a_refr, a_owner, a_crime);
+		}
+
+		void UpdateVoiceTimer(bool a_force)
+		{
+			using func_t = decltype(&Actor::UpdateVoiceTimer);
+			static REL::Relocation<func_t> func{ REL::ID(2230178) };
+			return func(this, a_force);
 		}
 
 		// members

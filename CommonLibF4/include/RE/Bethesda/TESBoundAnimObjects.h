@@ -396,15 +396,8 @@ namespace RE
 
 		[[nodiscard]] static BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>& GetAlternateHeadPartListMap()
 		{
-			static REL::Relocation<BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>*> map{ REL::ID(1306546), -0x8 };
+			static REL::Relocation<BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>*> map{ REL::ID(2662368), -0x8 };
 			return *map;
-		}
-
-		[[nodiscard]] static TESNPC* GetDefaultNPC(TESNPC* npc)
-		{
-			using func_t = decltype(&TESNPC::GetDefaultNPC);
-			static REL::Relocation<func_t> func{ REL::ID(1073775) };
-			return func(npc);
 		}
 
 		[[nodiscard]] std::span<BGSHeadPart*> GetHeadParts(bool a_alternate = true) const

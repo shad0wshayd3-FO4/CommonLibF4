@@ -19,10 +19,7 @@
 namespace RE
 {
 	enum class CHUNK_ID;
-	enum class SOUND_LEVEL;
 	enum class STAGGER_MAGNITUDE;
-	enum class WEAPON_RUMBLE_PATTERN;
-	enum class WEAPONHITBEHAVIOR;
 
 	class BGSObjectInstanceExtra;
 	class NiAVObject;
@@ -514,6 +511,33 @@ namespace RE
 		kBoltAction = 0x00400000,
 		kSecondaryWeapon = 0x00800000,
 		kDisableShells = 0x01000000,
+	};
+
+	enum class WEAPON_RUMBLE_PATTERN : std::int32_t
+	{
+		kConstant = 0,
+		kPeriodicSquare = 1,
+		kPeriodicTriangle = 2,
+		kPeriodicSawtooth = 3,
+		kPatternCount = 4
+	};
+
+	enum class WEAPONHITBEHAVIOR : std::int32_t
+	{
+		kNormal = 0,
+		kDismemberOnly = 1,
+		kExplodeOnly = 2,
+		kNoDismemberOrExplode = 3
+	};
+
+	enum class SOUND_LEVEL : std::int32_t
+	{
+		kLoud = 0,
+		kNormal = 1,
+		kSilent = 2,
+		kVeryLoud = 3,
+		kQuiet = 4,
+		kCount = 5
 	};
 
 	class __declspec(novtable) TESObjectWEAP :

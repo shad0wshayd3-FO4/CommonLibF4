@@ -111,37 +111,37 @@ namespace RE
 
 	enum class ACTOR_CRITICAL_STAGE : std::int32_t
 	{
-		kNone = 0,
-		kGooStart = 1,
-		kGooEnd = 2,
-		kDisintegrateStart = 3,
-		kDisintegrateEnd = 4,
-		kFreezeStart = 5,
-		kFreezeEnd = 6,
-		kCount = 7
+		kNone,
+		kGooStart,
+		kGooEnd,
+		kDisintegrateStart,
+		kDisintegrateEnd,
+		kFreezeStart,
+		kFreezeEnd,
+		kCount
 	};
 
 	enum class ACTOR_LIFE_STATE : std::int32_t
 	{
-		kAlive = 0,
-		kDying = 1,
-		kDead = 2,
-		kUnconscious = 3,
-		kReanimate = 4,
-		kRecycle = 5,
-		kRestrained = 6,
-		kEssentialDown = 7,
-		kBleedout = 8
+		kAlive,
+		kDying,
+		kDead,
+		kUnconscious,
+		kReanimate,
+		kRecycle,
+		kRestrained,
+		kEssentialDown,
+		kBleedout
 	};
 
 	enum class ACTOR_LOS_LOCATION : std::int32_t
 	{
-		kNone = 0,
-		kEye = 1,
-		kHead = 2,
-		kTorse = 3,
-		kFeet = 4,
-		kCount = 5
+		kNone,
+		kEye,
+		kHead,
+		kTorse,
+		kFeet,
+		kCount
 	};
 
 	enum class PTYPE : std::int32_t

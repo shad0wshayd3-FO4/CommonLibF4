@@ -27,7 +27,7 @@ namespace RE
 		virtual BSEventNotifyControl ProcessEvent(const PlayerActiveEffectChanged::Event& a_event, BSTEventSource<PlayerActiveEffectChanged::Event>* a_source);                  // 03
 		virtual BSEventNotifyControl ProcessEvent(const ConditionBoyEvent& a_event, BSTEventSource<ConditionBoyEvent>* a_source);												 // 04
 		virtual BSEventNotifyControl ProcessEvent(const ActorItemEquipped::Event& a_event, BSTEventSource<ActorItemEquipped::Event>* a_source);                                  // 05
-		virtual BSEventNotifyControl ProcessEvent(const BGSInventoryListEvent::Event& a_event, BSTEventSource<BGSInventoryListEvent::Event>* a_source);							 // 06
+		virtual BSEventNotifyControl ProcessEvent(const BGSInventoryItemEvent::Event& a_event, BSTEventSource<BGSInventoryItemEvent::Event>* a_source);                          // 06
 
 		// override
 		virtual void Populate(bool a_arg1) override;  // 07

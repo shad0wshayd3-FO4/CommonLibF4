@@ -18,6 +18,7 @@ namespace RE
 	class TESObjectCELL;
 	class TESObjectREFR;
 	class VATSCommand;
+	class BGSInstancedQuestObjective;
 
 	struct InventoryUserUIInterfaceEntry;
 
@@ -35,10 +36,10 @@ namespace RE
 
 	namespace ActorEquipManagerEvent
 	{
-		enum class Type
+		enum class Type : std::int32_t
 		{
-			Equip = 0,
-			Unequip,
+			kEquip,
+			kUnequip
 		};
 
 		struct Event
@@ -54,10 +55,10 @@ namespace RE
 
 	namespace PerkValueEvents
 	{
-		enum class Type
+		enum class Type : std::int32_t
 		{
-			Add = 0,
-			Remove
+			kAdd,
+			kRemove
 		};
 
 		struct PerkValueChangedEvent
@@ -77,7 +78,152 @@ namespace RE
 		static_assert(sizeof(PerkEntryUpdatedEvent) == 0x10);
 	}
 
+	namespace PlayerCharacterQuestEvent
+	{
+		enum Type : std::int32_t
+		{
+			kAddObjective,
+			kUpdateObjective,
+			kRemoveQuest,
+			kRemoveQuestTarget,
+			kUpdateQuestTarget
+		};
+
+		struct Event
+		{
+			PlayerCharacterQuestEvent::Type changeType;		// 00
+			BGSInstancedQuestObjective* questObjective;		// 08
+		};
+		static_assert(sizeof(Event) == 0x10);
+	}
+
+	struct TESTrackedStatsEvent
+	{
+		BSFixedString stat; // 00
+		std::int32_t value; // 08
+	};
+	static_assert(sizeof(TESTrackedStatsEvent) == 0x10);
+
+	namespace TESQuestEvent
+	{
+		enum Type : std::int32_t
+		{
+			kUpdateQuestActiveStatus,
+			kUpdateQuestEnableStatus,
+			kUpdateQuestStageChange,
+			kUpdateMiscQuestVisibility
+		};
+
+		struct Event
+		{
+			TESQuestEvent::Type changeType; // 00
+			TESQuest* quest;				// 08
+		};
+		static_assert(sizeof(Event) == 0x10);
+	}
+
+	struct TESLocationClearedEvent
+	{
+		const BGSLocation* loc;	//00
+	};
+	static_assert(sizeof(TESLocationClearedEvent) == 0x8);
+
+	namespace PlayerLifeStateChanged
+	{
+		struct Event
+		{
+			ACTOR_LIFE_STATE lifeState;	// 00
+		};
+		static_assert(sizeof(Event) == 0x4);
+	}
+
+	namespace PlayerActiveEffectChanged
+	{
+		enum Status : std::int32_t
+		{
+			kAdded,
+			kRemoved,
+			kStatusChanged
+		};
+
+		struct Event
+		{
+			BSTSmartPointer<ActiveEffect, BSTSmartPointerIntrusiveRefCount> effect; // 00
+			PlayerActiveEffectChanged::Status status;								// 08
+		};
+	}
+
+	namespace HourPassed
+	{
+		// intentional
+		struct Event
+		{};
+	}
+
+	namespace LevelIncrease
+	{
+		struct Event
+		{
+			std::uint32_t newLevel;	// 00
+		};
+		static_assert(sizeof(Event) == 0x4);
+	}
+
+	namespace LoadingStatusChanged
+	{
+		struct Event
+		{
+			bool isLoading;	// 00
+		};
+		static_assert(sizeof(Event) == 0x1);
+	}
+
+	namespace ActorItemEquipped
+	{
+		struct Event
+		{
+			const TESBoundObject* item;		// 00
+			const Actor*          equipper;	// 08
+		};
+		static_assert(sizeof(Event) == 0x10);
+	}
+
+	namespace PlayerInDialogueChanged
+	{
+		struct Event
+		{
+			bool isPlayerInDialogue; // 00
+		};
+		static_assert(sizeof(Event) == 0x1);
+	}
+
+	namespace LocationMarkerArrayUpdate
+	{
+		struct Event
+		{
+			bool shouldClearMapMarkers;	// 00
+		};
+		static_assert(sizeof(Event) == 0x1);
+	}
+
+	namespace LocalMapCameraUpdate
+	{
+		// intentional
+		struct Event
+		{}; 
+	}
 	namespace HolotapeStateChanged
+	{
+		// intentional
+		struct Event
+		{};
+	}
+
+	// intentional
+	struct PlayerUpdateEvent
+	{};
+
+	namespace CustomMarkerUpdate
 	{
 		// intentional
 		struct Event
@@ -97,8 +243,8 @@ namespace RE
 	{
 		struct ComponentFavoriteEvent
 		{
-			BGSComponent* component;	// 00
-			bool isFavorited;
+			BGSComponent* component; // 00
+			bool isFavorited; // 08
 		};
 		static_assert(sizeof(ComponentFavoriteEvent) == 0x10);
 	}
@@ -107,17 +253,29 @@ namespace RE
 	{
 		struct Event
 		{
-			std::uint32_t oldDifficulty;
-			std::uint32_t newDifficulty;
+			std::uint32_t oldDifficulty; // 00
+			std::uint32_t newDifficulty; // 04
 		};
 		static_assert(sizeof(Event) == 0x8);
+	}
+
+	namespace TravelMarkerStateChange
+	{
+		struct Event
+		{
+			BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>> markerRef;	// 00
+			MapMarkerData* data;														// 08
+			std::uint32_t selectedMarkerIndex;											// 10					
+			bool discovered;															// 14
+		};
+		static_assert(sizeof(Event) == 0x18);
 	}
 
 	struct BGSActorEvent
 	{
 	public:
 		// member
-		ActorHandle actor;  // 00
+		ActorHandle actor; // 00
 	};
 	static_assert(sizeof(BGSActorEvent) == 0x4);
 
@@ -126,8 +284,8 @@ namespace RE
 	public:
 		enum class CellFlag
 		{
-			kEnter = 0,
-			kLeave = 1
+			kEnter,
+			kLeave
 		};
 
 		// members
@@ -216,11 +374,12 @@ namespace RE
 			return *singleton;
 		}
 	};
+	static_assert(sizeof(CanDisplayNextHUDMessage) == 0x2);
 
 	struct CellAttachDetachEvent
 	{
 	public:
-		enum class EVENT_TYPE
+		enum class EVENT_TYPE : std::int32_t
 		{
 			kPreAttach,
 			kPostAttach,
@@ -269,7 +428,7 @@ namespace RE
 			return *singleton;
 		}
 	};
-	static_assert(sizeof(CurrentRadiationSourceCount) == 0x08);
+	static_assert(sizeof(CurrentRadiationSourceCount) == 0x8);
 
 	struct ColorUpdateEvent
 	{
@@ -293,14 +452,14 @@ namespace RE
 	{
 	public:
 	};
-	static_assert(sizeof(CurrentRadsDisplayMagnitude) == 0x08);
+	static_assert(sizeof(CurrentRadsDisplayMagnitude) == 0x8);
 
 	class CurrentRadsPercentOfLethal :
 		public BSTValueEvent<float>
 	{
 	public:
 	};
-	static_assert(sizeof(CurrentRadsPercentOfLethal) == 0x08);
+	static_assert(sizeof(CurrentRadsPercentOfLethal) == 0x8);
 
 	struct DoBeforeNewOrLoadCompletedEvent
 	{
@@ -317,7 +476,7 @@ namespace RE
 			return *singleton;
 		}
 	};
-	static_assert(sizeof(DoBeforeNewOrLoadCompletedEvent) == 0x01);
+	static_assert(sizeof(DoBeforeNewOrLoadCompletedEvent) == 0x1);
 
 	struct HUDModeEvent
 	{
@@ -335,9 +494,9 @@ namespace RE
 		}
 
 		// members
-		const BSTArray<HUDModeType>* currentHUDModes;
+		const BSTArray<HUDModeType>* currentHUDModes; // 00
 	};
-	static_assert(sizeof(HUDModeEvent) == 0x08);
+	static_assert(sizeof(HUDModeEvent) == 0x8);
 
 	struct InventoryItemDisplayData
 	{
@@ -468,7 +627,7 @@ namespace RE
 			return *singleton;
 		}
 	};
-	static_assert(sizeof(PipboyLightEvent) == 0x02);
+	static_assert(sizeof(PipboyLightEvent) == 0x2);
 
 	struct PlayerAmmoCounts
 	{
@@ -477,21 +636,21 @@ namespace RE
 		std::uint32_t clipAmmo;     // 00
 		std::uint32_t reserveAmmo;  // 04
 	};
-	static_assert(sizeof(PlayerAmmoCounts) == 0x08);
+	static_assert(sizeof(PlayerAmmoCounts) == 0x8);
 
 	class PlayerAmmoCountEvent :
 		public BSTValueEvent<PlayerAmmoCounts>
 	{
 	public:
 	};
-	static_assert(sizeof(PlayerAmmoCountEvent) == 0x0C);
+	static_assert(sizeof(PlayerAmmoCountEvent) == 0xC);
 
 	class PlayerWeaponReloadEvent :
 		public BSTValueEvent<bool>
 	{
 	public:
 	};
-	static_assert(sizeof(PlayerWeaponReloadEvent) == 0x02);
+	static_assert(sizeof(PlayerWeaponReloadEvent) == 0x2);
 
 	struct PowerArmorLightData
 	{
@@ -511,7 +670,7 @@ namespace RE
 		// members
 		bool lightOn;  // 00
 	};
-	static_assert(sizeof(PowerArmorLightData) == 0x01);
+	static_assert(sizeof(PowerArmorLightData) == 0x1);
 
 	struct QuickContainerStateData
 	{
@@ -547,11 +706,11 @@ namespace RE
 	{
 	public:
 		// members
-		BSFixedString                 SwfName;
-		const BGSSoundDescriptorForm* soundForm;
-		bool                          VATSCritAppliedAnim;
-		bool                          VATSCritFillenAnim;
-		bool                          dialogueSpeechChallengeAnim;
+		BSFixedString                 SwfName;						// 00
+		const BGSSoundDescriptorForm* soundForm;					// 08
+		bool                          VATSCritAppliedAnim;			// 10
+		bool                          VATSCritFillenAnim;			// 11
+		bool                          dialogueSpeechChallengeAnim;	// 12
 	};
 	static_assert(sizeof(HUDPerkVaultBoyData) == 0x18);
 
@@ -898,20 +1057,20 @@ namespace RE
 
 	struct PositionPlayerEvent
 	{
-		enum EVENT_TYPE : uint32_t
+		enum EVENT_TYPE : std::int32_t
 		{
-			PRE_POSITION_PLAYER = 0x0,
-			POSITION_PLAYER_PRE_UPDATE_PACKAGES = 0x1,
-			POSITION_PLAYER_POST_UPDATE_PACKAGES = 0x2,
-			POST_POSITION_PLAYER = 0x3,
-			FINISH_POSITION_PLAYER = 0x4,
+			kPrePositionPlayer,
+			kPositionPlayerPreUpdatePackages,
+			kPositionPlayerPostUpdatePackages,
+			kPostPositionPlayer,
+			kFinishPositionPlayer,
 		};
 
 		// members
-		EVENT_TYPE type;
-		bool       NoLoadScreen;
+		EVENT_TYPE type;			// 00
+		bool       NoLoadScreen;	// 04
 	};
-	static_assert(sizeof(PositionPlayerEvent) == 0x08);
+	static_assert(sizeof(PositionPlayerEvent) == 0x8);
 
 	class TESInitScriptEvent
 	{
@@ -919,7 +1078,7 @@ namespace RE
 		// Members
 		TESObjectREFR* hObjectInitialized;  // 00
 	};
-	static_assert(sizeof(TESInitScriptEvent) == 0x08);
+	static_assert(sizeof(TESInitScriptEvent) == 0x8);
 
 	class TESInitScriptEventSource : public BSTEventSource<TESInitScriptEvent>
 	{

@@ -80,6 +80,25 @@ namespace RE
 		};
 		static_assert(sizeof(CheckStackIDFunctor) == 0x10);
 
+		class alignas(0x08) CheckExtraDataFunctor :
+			public StackDataCompareFunctor // 00
+		{
+		public:
+			static constexpr auto RTTI{ RTTI::BGSInventoryItem__CheckExtraDataFunctor };
+			static constexpr auto VTABLE{ VTABLE::BGSInventoryItem__CheckExtraDataFunctor };
+
+			CheckExtraDataFunctor(const BGSInventoryItem::Stack* a_stack) noexcept :
+				extra(a_stack->extra.get())
+			{}
+
+			// override (StackDataCompareFunctor)
+			bool CompareData(const BGSInventoryItem::Stack&) override { return this->extra == extra; }
+
+			// members
+			const ExtraDataList* extra;	// 08
+		};
+		static_assert(sizeof(CheckExtraDataFunctor) == 0x10);
+
 		class __declspec(novtable) alignas(0x08) StackDataWriteFunctor
 		{
 		public:
@@ -192,6 +211,13 @@ namespace RE
 			using func_t = decltype(&BGSInventoryItem::GetExtraDataAt);
 			static REL::Relocation<func_t> func{ REL::ID(2194092) };
 			return func(this, a_index);
+		}
+
+		[[nodiscard]] void MergeStacks()
+		{
+			using func_t = decltype(&BGSInventoryItem::MergeStacks);
+			static REL::Relocation<func_t> func{ REL::ID(2194109) };
+			return func(this);
 		}
 
 		// members

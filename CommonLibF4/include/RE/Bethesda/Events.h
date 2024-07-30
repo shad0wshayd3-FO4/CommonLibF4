@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/Bethesda/Actor.h"
 #include "RE/Bethesda/BSFixedString.h"
 #include "RE/Bethesda/BSPointerHandle.h"
 #include "RE/Bethesda/BSTArray.h"
@@ -12,6 +13,7 @@
 
 namespace RE
 {
+	class ActiveEffect;
 	class bhkNPCollisionObject;
 	class BGSMessage;
 	class HUDModeType;

@@ -21,16 +21,6 @@ namespace RE
 	class TESHitEvent;
 	struct WeaponFiredEvent;
 
-	namespace VATSEvents
-	{
-		struct ModeChange
-		{
-			VATS::VATS_MODE_ENUM oldMode;	// 00
-			VATS::VATS_MODE_ENUM newMode;	// 04
-		};
-		static_assert(sizeof(ModeChange) == 0x8);
-	}
-
 	class __declspec(novtable) VATS :
 		public BSTEventSink<WeaponFiredEvent>,            // 00
 		public BSTEventSink<ProjectileBeginUpdateEvent>,  // 08
@@ -92,4 +82,14 @@ namespace RE
 		BSSpinLock                                  spinLock;                 // D0
 	};
 	static_assert(sizeof(VATS) == 0xD8);
+
+	namespace VATSEvents
+	{
+		struct ModeChange
+		{
+			VATS::VATS_MODE_ENUM oldMode;  // 00
+			VATS::VATS_MODE_ENUM newMode;  // 04
+		};
+		static_assert(sizeof(ModeChange) == 0x8);
+	}
 }

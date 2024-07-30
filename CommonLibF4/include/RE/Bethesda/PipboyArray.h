@@ -5,7 +5,7 @@
 namespace RE
 {
 	class PipboyArray :
-		public PipboyValue
+		public PipboyValue	// 00
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::PipboyArray };

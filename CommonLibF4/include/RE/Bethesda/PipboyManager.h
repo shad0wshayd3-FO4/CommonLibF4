@@ -45,10 +45,10 @@ namespace RE
 
 		enum class LOWER_REASON
 		{
-			kNone = 0,
-			kBook = 1,
-			kPerkGrid = 2,
-			kInspect = 3
+			kNone = 0x0,
+			kBook = 0x1,
+			kPerkGrid = 0x2,
+			kInspect = 0x3
 		};
 
 		virtual ~PipboyManager();  // 00

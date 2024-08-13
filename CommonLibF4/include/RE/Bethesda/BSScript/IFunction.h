@@ -38,18 +38,18 @@ namespace RE
 
 			enum class CallResult
 			{
-				kCompleted,
-				kSetupForVM,
-				kInProgress,
-				kFailedRetry,
-				kFailedAbort
+				kCompleted = 0x0,
+				kSetupForVM = 0x1,
+				kInProgress = 0x2,
+				kFailedRetry = 0x3,
+				kFailedAbort = 0x4
 			};
 
 			enum class FunctionType
 			{
-				kNormal,
-				kPropertyGetter,
-				kPropertySetter
+				kNormal = 0x0,
+				kPropertyGetter = 0x1,
+				kPropertySetter = 0x2
 			};
 
 			virtual ~IFunction() = default;  // 00

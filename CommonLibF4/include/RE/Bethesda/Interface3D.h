@@ -23,53 +23,53 @@ namespace RE
 	{
 		enum class BackgroundMode
 		{
-			kLive,
-			kStatic,
-			kSolidColor
+			kLive = 0x0,
+			kStatic = 0x1,
+			kSolidColor = 0x2
 		};
 
 		enum class PostEffect
 		{
-			kNone,
-			kPipboy,
-			kHUDGlass,
-			kHUDGlassWithMod,
-			kModMenu,
-			kModMenuHighlightAll,
-			kModMenuHighlightAllNoPulseOrScanLines
+			kNone = 0x0,
+			kPipboy = 0x1,
+			kHUDGlass = 0x2,
+			kHUDGlassWithMod = 0x3,
+			kModMenu = 0x4,
+			kModMenuHighlightAll = 0x5,
+			kModMenuHighlightAllNoPulseOrScanLines = 0x6
 		};
 
 		enum class HighlightEffect
 		{
-			kNone,
-			kVATS
+			kNone = 0x0,
+			kVATS = 0x1
 		};
 
 		enum class OffscreenMenuSize
 		{
-			kPipboy,
-			kFullFrame,
-			kFullFrameText
+			kPipboy = 0x0,
+			kFullFrame = 0x1,
+			kFullFrameText = 0x2
 		};
 
 		enum class ScreenMode
 		{
-			kNone,
-			kWorldAttached,
-			kScreenAttached
+			kNone = 0x0,
+			kWorldAttached = 0x1,
+			kScreenAttached = 0x2
 		};
 
 		enum class OffscreenMenuBlendMode
 		{
-			kAdditive,
-			kAlpha
+			kAdditive = 0x0,
+			kAlpha = 0x1
 		};
 
 		enum class LightType
 		{
-			kSpot,
-			kShadowSpot,
-			kPoint
+			kSpot = 0x0,
+			kShadowSpot = 0x1,
+			kPoint = 0x2
 		};
 
 		class OldScreenEffectControl

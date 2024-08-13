@@ -34,8 +34,8 @@ namespace RE
 
 		enum class VATS_MODE_ENUM
 		{
-			kNone = 0,
-			kPlayback = 1
+			kNone = 0x0,
+			kPlayback = 0x1
 		};
 
 		virtual ~VATS();  // 00

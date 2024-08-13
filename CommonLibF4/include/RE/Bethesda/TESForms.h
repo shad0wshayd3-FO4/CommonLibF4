@@ -910,7 +910,7 @@ namespace RE
 		std::uint32_t                            formFlags;        // 10
 		TESFormID                                formID;           // 14
 		std::uint16_t                            inGameFormFlags;  // 18
-		REX::EnumSet<ENUM_FORM_ID, std::uint8_t> formType;         // 1A
+		ENUM_FORM_ID							 formType;         // 1A
 	};
 	static_assert(sizeof(TESForm) == 0x20);
 
@@ -1243,16 +1243,16 @@ namespace RE
 
 		enum class SpellContext
 		{
-			kApplyOnLightning,
-			kApplyWhenActive
+			kApplyOnLightning = 0x0,
+			kApplyWhenActive = 0x1
 		};
 
 		enum class SoundType
 		{
-			kDefault,
-			kPrecipitation,
-			kWind,
-			kThunder
+			kDefault = 0x0,
+			kPrecipitation = 0x1,
+			kWind = 0x2,
+			kThunder = 0x3
 		};
 
 		struct SpellData
@@ -1471,15 +1471,15 @@ namespace RE
 
 		enum class CELL_STATE
 		{
-			kNotLoaded,
-			kUnloading,
-			kLoadingData,
-			kLoading,
-			kLoaded,
-			kDetaching,
-			kAttachQueued,
-			kAttaching,
-			kAttached
+			kNotLoaded = 0x0,
+			kUnloading = 0x1,
+			kLoadingData = 0x2,
+			kLoading = 0x3,
+			kLoaded = 0x4,
+			kDetaching = 0x5,
+			kAttachQueued = 0x6,
+			kAttaching = 0x7,
+			kAttached = 0x8
 		};
 
 		enum class Flag
@@ -1675,7 +1675,7 @@ namespace RE
 	public:
 		enum class TOPIC_INFO_FLAGS : std::uint32_t
 		{
-			kNone = 0,
+			kNone = 0x0,
 			kStartSceneOnEnd = 0x1,
 			kRandom = 0x2,
 			kSayOnce = 0x4,
@@ -1774,10 +1774,10 @@ namespace RE
 
 		enum CHARISMA_CHALLENGE_SUCCESS : int32_t
 		{
-			CC_SUCCESS_FAIL = 0,
-			CC_SUCCESS_SUCCEED = 1,
-			CC_SUCCESS_COUNT = 2,
-			CC_SUCCESS_NONE = -1,
+			CC_SUCCESS_FAIL = 0x0,
+			CC_SUCCESS_SUCCEED = 0x1,
+			CC_SUCCESS_COUNT = 0x2,
+			CC_SUCCESS_NONE = 0xFFFFFFFF,
 		};
 
 		// Returns nullptr if no parent.
@@ -2213,32 +2213,32 @@ namespace RE
 
 		enum PartType
 		{
-			Torso,
-			Head1,
-			Eye,
-			LookAt,
-			FlyGrab,
-			Head2,
-			LeftArm1,
-			LeftArm2,
-			RightArm1,
-			RightArm2,
-			LeftLeg1,
-			LeftLeg2,
-			LeftLeg3,
-			RightLeg1,
-			RightLeg2,
-			RightLeg3,
-			Brain,
-			Weapon,
-			Root,
-			COM,
-			Pelvis,
-			Camera,
-			OffsetRoot,
-			LeftFoot,
-			RightFoot,
-			FaceTargetSource
+			Torso = 0x0,
+			Head1 = 0x1,
+			Eye = 0x2,
+			LookAt = 0x3,
+			FlyGrab = 0x4,
+			Head2 = 0x5,
+			LeftArm1 = 0x6,
+			LeftArm2 = 0x7,
+			RightArm1 = 0x8,
+			RightArm2 = 0x9,
+			LeftLeg1 = 0xA,
+			LeftLeg2 = 0xB,
+			LeftLeg3 = 0xC,
+			RightLeg1 = 0xD,
+			RightLeg2 = 0xE,
+			RightLeg3 = 0xF,
+			Brain = 0x10,
+			Weapon = 0x11,
+			Root = 0x12,
+			COM = 0x13,
+			Pelvis = 0x14,
+			Camera = 0x15,
+			OffsetRoot = 0x16,
+			LeftFoot = 0x17,
+			RightFoot = 0x18,
+			FaceTargetSource = 0x19
 		};
 
 		// members
@@ -3361,7 +3361,7 @@ namespace RE
 		static_assert(sizeof(RuleSet) == 0x18);
 
 		// members
-		REX::EnumSet<ENUM_FORM_ID, std::int32_t> type;          // 020
+		ENUM_FORM_ID							 type;          // 020
 		RuleSet                                  ruleSets[10];  // 028
 		BSTArray<const BGSInstanceNamingRules*>  mergeSources;  // 118
 	};

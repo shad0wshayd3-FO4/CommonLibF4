@@ -13,27 +13,27 @@ namespace RE
 
 	enum class UI_MESSAGE_RESULTS
 	{
-		kHandled,
-		kIgnore,
-		kPassOn
+		kHandled = 0x0,
+		kIgnore = 0x1,
+		kPassOn = 0x2
 	};
 
 	enum class UI_MESSAGE_TYPE
 	{
-		kUpdate,
-		kShow,
-		kReshow,
-		kHide,
-		kForceHide,
-		kScaleformEvent,
-		kUserEvent,
-		kInventoryUpdate,
-		kUserProfileChange,
-		kMUStatusChange,
-		kResumeCaching,
-		kUpdateController,
-		kChatterEvent,
-		kTotal
+		kUpdate = 0x0,
+		kShow = 0x1,
+		kReshow = 0x2,
+		kHide = 0x3,
+		kForceHide = 0x4,
+		kScaleformEvent = 0x5,
+		kUserEvent = 0x6,
+		kInventoryUpdate = 0x7,
+		kUserProfileChange = 0x8,
+		kMUStatusChange = 0x9,
+		kResumeCaching = 0xA,
+		kUpdateController = 0xB,
+		kChatterEvent = 0xC,
+		kTotal = 0xD
 	};
 
 	class IUIMessageData;

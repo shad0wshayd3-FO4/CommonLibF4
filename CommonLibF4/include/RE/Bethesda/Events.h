@@ -26,22 +26,22 @@ namespace RE
 
 	enum class QuickContainerMode : std::int32_t
 	{
-		kLoot,
-		kTeammate,
-		kPowerArmor,
-		kTurret,
-		kWorkshop,
-		kCrafting,
-		kStealing,
-		kStealingPowerArmor
+		kLoot = 0x0,
+		kTeammate = 0x1,
+		kPowerArmor = 0x2,
+		kTurret = 0x3,
+		kWorkshop = 0x4,
+		kCrafting = 0x5,
+		kStealing = 0x6,
+		kStealingPowerArmor = 0x7
 	};
 
 	namespace ActorEquipManagerEvent
 	{
 		enum class Type : std::int32_t
 		{
-			kEquip,
-			kUnequip
+			kEquip = 0x0,
+			kUnequip = 0x1
 		};
 
 		struct Event
@@ -59,8 +59,8 @@ namespace RE
 	{
 		enum class Type : std::int32_t
 		{
-			kAdd,
-			kRemove
+			kAdd = 0x0,
+			kRemove = 0x1
 		};
 
 		struct PerkValueChangedEvent
@@ -84,11 +84,11 @@ namespace RE
 	{
 		enum Type : std::int32_t
 		{
-			kAddObjective,
-			kUpdateObjective,
-			kRemoveQuest,
-			kRemoveQuestTarget,
-			kUpdateQuestTarget
+			kAddObjective = 0x0,
+			kUpdateObjective = 0x1,
+			kRemoveQuest = 0x2,
+			kRemoveQuestTarget = 0x3,
+			kUpdateQuestTarget = 0x4
 		};
 
 		struct Event
@@ -110,10 +110,10 @@ namespace RE
 	{
 		enum Type : std::int32_t
 		{
-			kUpdateQuestActiveStatus,
-			kUpdateQuestEnableStatus,
-			kUpdateQuestStageChange,
-			kUpdateMiscQuestVisibility
+			kUpdateQuestActiveStatus = 0x0,
+			kUpdateQuestEnableStatus = 0x1,
+			kUpdateQuestStageChange = 0x2,
+			kUpdateMiscQuestVisibility = 0x3
 		};
 
 		struct Event
@@ -143,9 +143,9 @@ namespace RE
 	{
 		enum Status : std::int32_t
 		{
-			kAdded,
-			kRemoved,
-			kStatusChanged
+			kAdded = 0x0,
+			kRemoved = 0x1,
+			kStatusChanged = 0x2
 		};
 
 		struct Event
@@ -286,8 +286,8 @@ namespace RE
 	public:
 		enum class CellFlag
 		{
-			kEnter,
-			kLeave
+			kEnter = 0x0,
+			kLeave = 0x1
 		};
 
 		// members
@@ -310,8 +310,8 @@ namespace RE
 	public:
 		enum class Event
 		{
-			kOnStartup,
-			kOnShutdown
+			kOnStartup = 0x0,
+			kOnShutdown = 0x1
 		};
 
 		static void InitSDM()
@@ -383,10 +383,10 @@ namespace RE
 	public:
 		enum class EVENT_TYPE : std::int32_t
 		{
-			kPreAttach,
-			kPostAttach,
-			kPreDetach,
-			kPostDetach
+			kPreAttach = 0x0,
+			kPostAttach = 0x1,
+			kPreDetach = 0x2,
+			kPostDetach = 0x3
 		};
 
 		// members
@@ -861,8 +861,8 @@ namespace RE
 	public:
 		enum class FurnitureEventType : std::int32_t
 		{
-			kEnter,
-			kExit
+			kEnter = 0x0,
+			kExit = 0x1
 		};
 
 		[[nodiscard]] static BSTEventSource<TESFurnitureEvent>* GetEventSource()
@@ -1061,11 +1061,11 @@ namespace RE
 	{
 		enum EVENT_TYPE : std::int32_t
 		{
-			kPrePositionPlayer,
-			kPositionPlayerPreUpdatePackages,
-			kPositionPlayerPostUpdatePackages,
-			kPostPositionPlayer,
-			kFinishPositionPlayer,
+			kPrePositionPlayer = 0x0,
+			kPositionPlayerPreUpdatePackages = 0x1,
+			kPositionPlayerPostUpdatePackages = 0x2,
+			kPostPositionPlayer = 0x3,
+			kFinishPositionPlayer = 0x4,
 		};
 
 		// members

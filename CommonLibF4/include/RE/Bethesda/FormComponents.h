@@ -144,9 +144,9 @@ namespace RE
 
 	enum class ACTOR_VALUE_MODIFIER
 	{
-		kPermanent,
-		kTemporary,
-		kDamage
+		kPermanent = 0,
+		kTemporary = 1,
+		kDamage = 2
 	};
 
 	class __declspec(novtable) ActorValueOwner
@@ -554,27 +554,27 @@ namespace RE
 
 	enum class KeywordType
 	{
-		kNone,
-		kComponentTechLevel,
-		kAttachPoint,
-		kComponentProperty,
-		kInstantiationFilter,
-		kModAssociation,
-		kSound,
-		kAnimArchetype,
-		kFunctionCall,
-		kRecipeFilter,
-		kAttractionType,
-		kDialogueSubtype,
-		kQuestTarget,
-		kAnimFlavor,
-		kAnimGender,
-		kAnimFaceArchetype,
-		kQuestGroup,
-		kAnimInjured,
-		kDispelEffect,
+		kNone = 0x0,
+		kComponentTechLevel = 0x1,
+		kAttachPoint = 0x2,
+		kComponentProperty = 0x3,
+		kInstantiationFilter = 0x4,
+		kModAssociation = 0x5,
+		kSound = 0x6,
+		kAnimArchetype = 0x7,
+		kFunctionCall = 0x8,
+		kRecipeFilter = 0x9,
+		kAttractionType = 0xA,
+		kDialogueSubtype = 0xB,
+		kQuestTarget = 0xC,
+		kAnimFlavor = 0xD,
+		kAnimGender = 0xE,
+		kAnimFaceArchetype = 0xF,
+		kQuestGroup = 0x10,
+		kAnimInjured = 0x11,
+		kDispelEffect = 0x12,
 
-		kTotal
+		kTotal = 0x13
 	};
 
 	template <KeywordType TYPE>
@@ -1835,10 +1835,10 @@ namespace RE
 
 	enum class FIGHT_REACTION
 	{
-		kNeutral = 0,
-		kEnemy = 1,
-		kAlly = 2,
-		kFriend = 3
+		kNeutral = 0x0,
+		kEnemy = 0x1,
+		kAlly = 0x2,
+		kFriend = 0x3
 	};
 
 	struct GROUP_REACTION

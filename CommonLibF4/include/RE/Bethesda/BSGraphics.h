@@ -362,7 +362,7 @@ namespace RE
 				VA_LANDDATA = 0x7,
 				VA_EYEDATA = 0x8,
 
-				VA_COUNT = 9
+				VA_COUNT = 0X9
 			};
 
 			enum Flags : std::uint16_t

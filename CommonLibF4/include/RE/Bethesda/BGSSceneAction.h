@@ -34,23 +34,23 @@ namespace RE
 
 		enum SCENE_ACTION_PLAYER_RESPONSE_TYPE : std::uint32_t
 		{
-			kPositive = 0,
-			kNegative = 1,
-			kNeutral = 2,
-			kQuestion = 3,
-			kTotal = 4,
-			kNone
+			kPositive = 0x0,
+			kNegative = 0x1,
+			kNeutral = 0x2,
+			kQuestion = 0x3,
+			kTotal = 0x4,
+			kNone  =0x5
 		};
 
 		enum SCENE_ACTION_TYPE : std::uint32_t
 		{
-			kDialogue = 0,
-			kPackage = 1,
-			kTimer = 2,
-			kPlayerDialogue = 3,
-			kStartScene = 4,
-			kNPCResponse = 5,
-			kRadio = 6,
+			kDialogue = 0x0,
+			kPackage = 0x1,
+			kTimer = 0x2,
+			kPlayerDialogue = 0x3,
+			kStartScene = 0x4,
+			kNPCResponse = 0x5,
+			kRadio = 0x6,
 		};
 
 		enum class Flag
@@ -68,9 +68,9 @@ namespace RE
 
 		enum class Status
 		{
-			kStopped,
-			kRunning,
-			kComplete
+			kStopped = 0x0,
+			kRunning = 0x1,
+			kComplete = 0x2
 		};
 
 		virtual ~BGSSceneAction();  // 00

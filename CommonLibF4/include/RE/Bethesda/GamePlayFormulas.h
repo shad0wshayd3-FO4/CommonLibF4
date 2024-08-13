@@ -21,8 +21,8 @@ namespace RE
 	{
 		enum class EXPERIENCE_ACTIVITY
 		{
-			kKillNPC = 0,
-			kHackComputer = 1,
+			kKillNPC = 0x0,
+			kHackComputer = 0x1,
 		};
 
 		inline bool CanHackGateCheck(LOCK_LEVEL a_lockLevel)

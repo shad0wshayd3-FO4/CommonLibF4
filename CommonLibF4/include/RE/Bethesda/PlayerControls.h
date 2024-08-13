@@ -40,9 +40,9 @@ namespace RE
 
 		enum class ACTIONPRIORITY
 		{
-			kImperative,
-			kQueue,
-			kTry
+			kImperative = 0x0,
+			kQueue = 0x1,
+			kTry = 0x2
 		};
 
 		struct Data

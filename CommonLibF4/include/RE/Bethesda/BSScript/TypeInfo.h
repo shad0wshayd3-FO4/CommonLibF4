@@ -24,24 +24,24 @@ namespace RE
 		public:
 			enum class RawType : std::uint32_t
 			{
-				kNone,
-				kObject,
-				kString,
-				kInt,
-				kFloat,
-				kBool,
-				kVar,
-				kStruct,
+				kNone = 0x0,
+				kObject = 0x1,
+				kString = 0x2,
+				kInt = 0x3,
+				kFloat = 0x4,
+				kBool = 0x5,
+				kVar = 0x6,
+				kStruct = 0x7,
 
-				kArrayStart = 10,
-				kArrayObject,
-				kArrayString,
-				kArrayInt,
-				kArrayFloat,
-				kArrayBool,
-				kArrayVar,
-				kArrayStruct,
-				kArrayEnd
+				kArrayStart = 0xA,
+				kArrayObject = 0xB,
+				kArrayString = 0xC,
+				kArrayInt = 0xD,
+				kArrayFloat = 0xE,
+				kArrayBool = 0xF,
+				kArrayVar = 0x10,
+				kArrayStruct = 0x11,
+				kArrayEnd = 0x12
 			};
 
 			TypeInfo() noexcept = default;

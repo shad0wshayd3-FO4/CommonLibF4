@@ -14,12 +14,12 @@ namespace RE
 	{
 		enum BlendOp : std::uint32_t
 		{
-			kDefault = 0,
-			kMultiply = 1,
-			kOverlay = 2,
-			kSoftLight = 3,
-			kHardLight = 4,
-			kTotal = 5
+			kDefault = 0x0,
+			kMultiply = 0x1,
+			kOverlay = 0x2,
+			kSoftLight = 0x3,
+			kHardLight = 0x4,
+			kTotal = 0x5
 		};
 
 		enum EntryType : std::uint32_t
@@ -32,32 +32,32 @@ namespace RE
 
 		enum class EntrySlot
 		{
-			kForeheadMask,
-			kEyesMask,
-			kNoseMask,
-			kEarsMask,
-			kCheeksMask,
-			kMouthMask,
-			kNeckMask,
-			kLipColor,
-			kCheekColor,
-			kEyeliner,
-			kEyeSocketUpper,
-			kEyeSocketLower,
-			kSkinTone,
-			kPaint,
-			kLaughLines,
-			kCheekColorLower,
-			kNose,
-			kChin,
-			kNeck,
-			kForehead,
-			kDirt,
-			kScars,
-			kFaceDetail,
-			kBrow,
-			kWrinkles,
-			kBeard
+			kForeheadMask = 0x0,
+			kEyesMask = 0x1,
+			kNoseMask = 0x2,
+			kEarsMask = 0x3,
+			kCheeksMask = 0x4,
+			kMouthMask = 0x5,
+			kNeckMask = 0x6,
+			kLipColor = 0x7,
+			kCheekColor = 0x8,
+			kEyeliner = 0x9,
+			kEyeSocketUpper = 0xA,
+			kEyeSocketLower = 0xB,
+			kSkinTone = 0xC,
+			kPaint = 0xD,
+			kLaughLines = 0xE,
+			kCheekColorLower = 0xF,
+			kNose = 0x10,
+			kChin = 0x11,
+			kNeck = 0x12,
+			kForehead = 0x13,
+			kDirt = 0x14,
+			kScars = 0x15,
+			kFaceDetail = 0x16,
+			kBrow = 0x17,
+			kWrinkles = 0x18,
+			kBeard = 0x19
 		};
 
 		namespace Template

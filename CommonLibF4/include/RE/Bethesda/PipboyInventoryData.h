@@ -31,20 +31,20 @@ namespace RE
 
 		enum ENTRY_TYPE
 		{
-			ENTRY_INT = 0,
-			ENTRY_FIXED_STRING,
-			ENTRY_FLOAT
+			ENTRY_INT = 0x0,
+			ENTRY_FIXED_STRING = 0x1,
+			ENTRY_FLOAT = 0x1
 		};
 
 		enum SORT_ON_FIELD
 		{
-			SOF_ALPHABETICALLY = 0,
-			SOF_DAMAGE,
-			SOF_ROF,
-			SOF_RANGE,
-			SOF_ACCURARY,
-			SOF_VALUE,
-			SOF_WEIGHT
+			SOF_ALPHABETICALLY = 0x0,
+			SOF_DAMAGE = 0x1,
+			SOF_ROF = 0x2,
+			SOF_RANGE = 0x3,
+			SOF_ACCURARY = 0x4,
+			SOF_VALUE = 0x5,
+			SOF_WEIGHT = 0x6
 		};
 
 		struct StackEntry

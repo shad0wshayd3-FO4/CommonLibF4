@@ -32,10 +32,10 @@ namespace RE
 
 			enum class LinkValidState : std::uint32_t
 			{
-				kNotLinked,
-				kCurrentlyLinking,
-				kLinkedInvalid,
-				kLinkedValid
+				kNotLinked = 0x0,
+				kCurrentlyLinking = 0x1,
+				kLinkedInvalid = 0x2,
+				kLinkedValid = 0x3
 			};
 
 			[[nodiscard]] std::uint32_t GetVariableCount() const noexcept
@@ -123,7 +123,7 @@ namespace RE
 				enum : std::uint32_t
 				{
 					kFuncCountMask = 0x1FF,
-					kFuncOffsetShift = 9
+					kFuncOffsetShift = 0x9
 				};
 
 				struct Func

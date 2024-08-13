@@ -462,28 +462,28 @@ namespace RE
 
 	enum class MELEE_ATTACK_SPEED : std::int32_t
 	{
-		kVerySlow = 0,
-		kSlow = 1,
-		kMedium = 2,
-		kFast = 3,
-		kVeryFast = 4
+		kVerySlow = 0x0,
+		kSlow = 0x1,
+		kMedium = 0x2,
+		kFast = 0x3,
+		kVeryFast = 0x4
 	};
 
 	enum class WEAPON_TYPE : std::uint8_t
 	{
 		kNone = 0xFF,
-		kHandToHand = 0,
-		kOneHandSword = 1,
-		kOneHandDagger = 2,
-		kOneHandAxe = 3,
-		kOneHandMace = 4,
-		kTwoHandSword = 5,
-		kTwoHandAxe = 6,
-		kBow = 7,
-		kStaff = 8,
-		kGun = 9,
-		kGrenade = 10,
-		kMine = 11,
+		kHandToHand = 0x0,
+		kOneHandSword = 0x1,
+		kOneHandDagger = 0x2,
+		kOneHandAxe = 0x3,
+		kOneHandMace = 0x4,
+		kTwoHandSword = 0x5,
+		kTwoHandAxe = 0x6,
+		kBow = 0x7,
+		kStaff = 0x8,
+		kGun = 0x9,
+		kGrenade = 0xA,
+		kMine = 0xB,
 	};
 
 	enum class WEAPON_FLAGS : std::uint32_t
@@ -515,29 +515,29 @@ namespace RE
 
 	enum class WEAPON_RUMBLE_PATTERN : std::int32_t
 	{
-		kConstant = 0,
-		kPeriodicSquare = 1,
-		kPeriodicTriangle = 2,
-		kPeriodicSawtooth = 3,
-		kPatternCount = 4
+		kConstant = 0x0,
+		kPeriodicSquare = 0x1,
+		kPeriodicTriangle = 0x2,
+		kPeriodicSawtooth = 0x3,
+		kPatternCount = 0x4
 	};
 
 	enum class WEAPONHITBEHAVIOR : std::int32_t
 	{
-		kNormal = 0,
-		kDismemberOnly = 1,
-		kExplodeOnly = 2,
-		kNoDismemberOrExplode = 3
+		kNormal = 0x0,
+		kDismemberOnly = 0x1,
+		kExplodeOnly = 0x2,
+		kNoDismemberOrExplode = 0x3
 	};
 
 	enum class SOUND_LEVEL : std::int32_t
 	{
-		kLoud = 0,
-		kNormal = 1,
-		kSilent = 2,
-		kVeryLoud = 3,
-		kQuiet = 4,
-		kCount = 5
+		kLoud = 0x0,
+		kNormal = 0x1,
+		kSilent = 0x2,
+		kVeryLoud = 0x3,
+		kQuiet = 0x4,
+		kCount = 0x5
 	};
 
 	class __declspec(novtable) TESObjectWEAP :

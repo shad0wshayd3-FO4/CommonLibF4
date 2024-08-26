@@ -115,6 +115,13 @@ namespace RE
 			return func(this, a_paramData, a_function);
 		}
 
+		void ClearAllConditionItems() const
+		{
+			using func_t = decltype(&TESCondition::ClearAllConditionItems);
+			static REL::Relocation<func_t> func{ REL::ID(2211988) };
+			return func(this);
+		}
+
 		// members
 		TESConditionItem* head;  // 0
 	};

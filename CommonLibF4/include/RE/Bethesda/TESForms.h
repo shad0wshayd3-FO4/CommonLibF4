@@ -1774,10 +1774,10 @@ namespace RE
 
 		enum CHARISMA_CHALLENGE_SUCCESS : int32_t
 		{
-			CC_SUCCESS_FAIL = 0x0,
-			CC_SUCCESS_SUCCEED = 0x1,
-			CC_SUCCESS_COUNT = 0x2,
-			CC_SUCCESS_NONE = 0xFFFFFFFF,
+			CC_SUCCESS_FAIL = 0,
+			CC_SUCCESS_SUCCEED = 1,
+			CC_SUCCESS_COUNT = 2,
+			CC_SUCCESS_NONE = -1,
 		};
 
 		// Returns nullptr if no parent.

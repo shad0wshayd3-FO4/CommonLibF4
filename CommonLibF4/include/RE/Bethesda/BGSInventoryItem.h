@@ -185,14 +185,21 @@ namespace RE
 			return iter;
 		}
 
-		[[nodiscard]] const char* GetDisplayFullName(std::uint32_t a_stackID)
+		[[nodiscard]] const char* GetDisplayFullName(std::uint32_t a_stackID) const
 		{
-			using func_t = decltype(&BGSInventoryItem::GetDisplayFullName);
+			using func_t = const char* (BGSInventoryItem::*)(std::uint32_t) const;
 			static REL::Relocation<func_t> func{ REL::ID(2194079) };
 			return func(this, a_stackID);
 		}
 
-		[[nodiscard]] TBO_InstanceData* GetInstanceData(std::uint32_t a_stackID)
+		[[nodiscard]] const char* GetDisplayFullName(const ExtraDataList* a_extra) const
+		{
+			using func_t = const char* (BGSInventoryItem::*)(const ExtraDataList*) const;
+			static REL::Relocation<func_t> func{ REL::ID(2194080) };
+			return func(this, a_extra);
+		}
+
+		[[nodiscard]] TBO_InstanceData* GetInstanceData(std::uint32_t a_stackID) const
 		{
 			using func_t = decltype(&BGSInventoryItem::GetInstanceData);
 			static REL::Relocation<func_t> func{ REL::ID(2194072) };

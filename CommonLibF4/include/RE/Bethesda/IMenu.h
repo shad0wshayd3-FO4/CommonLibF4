@@ -1874,9 +1874,9 @@ namespace RE
 			static constexpr auto RTTI{ RTTI::ExamineConfirmMenu__InitDataRepairFailure };
 			static constexpr auto VTABLE{ VTABLE::ExamineConfirmMenu__InitDataRepairFailure };
 
-			InitDataRepairFailure(const BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* requiredItems) :
+			InitDataRepairFailure(const BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* a_requiredItems) :
 				InitData(GameSettingCollection::GetSingleton()->GetSetting("sCannotRepairMessage")->GetString(), "$OK", CONFIRM_TYPE::kRepairFailure),
-				requiredItems(requiredItems)
+				requiredItems(a_requiredItems)
 			{
 				this->hasCancelButton = false;
 				stl::emplace_vtable(this);
@@ -1889,6 +1889,7 @@ namespace RE
 			// members
 			const BSTArray<BSTTuple<TESForm *,BGSTypedFormValuePair::SharedVal>>* requiredItems;  // 20
 			BSTHashMap<TESBoundObject*, std::uint32_t> availableComponents;						  // 28
+			
 		};
 		static_assert(sizeof(InitDataRepairFailure) == 0x58);
 
@@ -1922,6 +1923,72 @@ namespace RE
 		std::uint32_t itemIndex;  // 10
 	};
 	static_assert(sizeof(ScrapItemCallback) == 0x18);
+
+	class __declspec(novtable) RepairFailureCallback :
+		public ExamineConfirmMenu::ICallback  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::__RepairFailureCallback };
+		static constexpr auto VTABLE{ VTABLE::__RepairFailureCallback };
+
+		RepairFailureCallback(ExamineMenu* a_thisMenu) :
+			ExamineConfirmMenu::ICallback(a_thisMenu)
+		{
+			stl::emplace_vtable(this);
+		}
+
+		virtual ~RepairFailureCallback() = default;  // 00
+
+		// override
+		virtual void OnAccept() override;  // 01
+
+		F4_HEAP_REDEFINE_NEW(RepairFailureCallback);
+	};
+	static_assert(sizeof(RepairFailureCallback) == 0x10);
+
+	class __declspec(novtable) BaseBotConfirmCallback :
+		public ExamineConfirmMenu::ICallback  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::__BaseBotConfirmCallback };
+		static constexpr auto VTABLE{ VTABLE::__BaseBotConfirmCallback };
+
+		BaseBotConfirmCallback(ExamineMenu* a_thisMenu) :
+			ExamineConfirmMenu::ICallback(a_thisMenu)
+		{
+			stl::emplace_vtable(this);
+		}
+
+		virtual ~BaseBotConfirmCallback() = default;  // 00
+
+		// override
+		virtual void OnAccept() override;  // 01
+
+		F4_HEAP_REDEFINE_NEW(BaseBotConfirmCallback);
+	};
+	static_assert(sizeof(BaseBotConfirmCallback) == 0x10);
+
+	class __declspec(novtable) ModConfirmCallback :
+		public ExamineConfirmMenu::ICallback  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::__ModConfirmCallback };
+		static constexpr auto VTABLE{ VTABLE::__ModConfirmCallback };
+
+		ModConfirmCallback(ExamineMenu* a_thisMenu) :
+			ExamineConfirmMenu::ICallback(a_thisMenu)
+		{
+			stl::emplace_vtable(this);
+		}
+
+		virtual ~ModConfirmCallback() = default;  // 00
+
+		// override
+		virtual void OnAccept() override;  // 01
+
+		F4_HEAP_REDEFINE_NEW(ModConfirmCallback);
+	};
+	static_assert(sizeof(ModConfirmCallback) == 0x10);
 
 	class __declspec(novtable) ExamineMenu :
 		public WorkbenchMenuBase  // 00
@@ -2023,6 +2090,13 @@ namespace RE
 			using func_t = decltype(&ExamineMenu::ShowConfirmMenu);
 			static REL::Relocation<func_t> func{ REL::ID(2223081) };
 			return func(this, a_data, a_callback);
+		}
+
+		void ConsumeSelectedItems(bool a_autoBuild, const BGSSoundDescriptorForm* a_consumeSound)
+		{
+			using func_t = decltype(&ExamineMenu::ConsumeSelectedItems);
+			static REL::Relocation<func_t> func{ REL::ID(2223052) };
+			return func(this, a_autoBuild, a_consumeSound);
 		}
 
 		// members

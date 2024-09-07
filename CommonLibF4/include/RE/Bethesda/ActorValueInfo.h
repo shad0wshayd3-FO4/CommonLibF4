@@ -17,16 +17,16 @@ namespace RE
 	public:
 		enum class AVType
 		{
-			kDerivedAttribute,
-			kAttribute,
-			kSkill,
-			kAIAttribute,
-			kResistance,
-			kCondition,
-			kCharge,
-			kIntValue,
-			kVariable,
-			kResource
+			kDerivedAttribute = 0x0,
+			kAttribute = 0x1,
+			kSkill = 0x2,
+			kAIAttribute = 0x3,
+			kResistance = 0x4,
+			kCondition = 0x5,
+			kCharge = 0x6,
+			kIntValue = 0x7,
+			kVariable = 0x8,
+			kResource = 0x9
 		};
 
 		enum class Flags : std::int32_t

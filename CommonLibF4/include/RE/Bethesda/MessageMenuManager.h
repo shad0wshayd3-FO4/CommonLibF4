@@ -13,40 +13,40 @@ namespace RE
 
 	enum class WARNING_TYPES
 	{
-		kDefault,
-		kSystem,
-		kCombat,
-		kAnimation,
-		kAI,
-		kScripts,
-		kSaveLoad,
-		kDialogue,
-		kQuests,
-		kPackages,
-		kEditor,
-		kModels,
-		kTextures,
-		kPlugins,
-		kMasterFile,
-		kForms,
-		kMagic,
-		kShaders,
-		kRendering,
-		kPathfinding,
-		kMenus,
-		kAudio,
-		kCells,
-		kHavok,
-		kFaceGen,
-		kWater,
-		kInGameMessage,
-		kMemory,
-		kPerformance,
-		kLootJoy,
-		kVATS,
-		kDismember,
-		kCompanion,
-		kWorkshop,
+		kDefault = 0x0,
+		kSystem = 0x1,
+		kCombat = 0x2,
+		kAnimation = 0x3,
+		kAI = 0x4,
+		kScripts = 0x5,
+		kSaveLoad = 0x6,
+		kDialogue = 0x7,
+		kQuests = 0x8,
+		kPackages = 0x9,
+		kEditor = 0xA,
+		kModels = 0xB,
+		kTextures = 0xC,
+		kPlugins = 0xD,
+		kMasterFile = 0xE,
+		kForms = 0xF,
+		kMagic = 0x10,
+		kShaders = 0x11,
+		kRendering = 0x12,
+		kPathfinding = 0x13,
+		kMenus = 0x14,
+		kAudio = 0x15,
+		kCells = 0x16,
+		kHavok = 0x17,
+		kFaceGen = 0x18,
+		kWater = 0x19,
+		kInGameMessage = 0x1A,
+		kMemory = 0x1B,
+		kPerformance = 0x1C,
+		kLootJoy = 0x1D,
+		kVATS = 0x1E,
+		kDismember = 0x1F,
+		kCompanion = 0x20,
+		kWorkshop = 0x21,
 	};
 
 	class alignas(0x10) IMessageBoxCallback :
@@ -88,7 +88,7 @@ namespace RE
 	public:
 		[[nodiscard]] static MessageMenuManager* GetSingleton()
 		{
-			static REL::Relocation<MessageMenuManager**> singleton{ REL::ID(959572) };
+			static REL::Relocation<MessageMenuManager**> singleton{ REL::ID(2689087) };
 			return *singleton;
 		}
 
@@ -104,7 +104,7 @@ namespace RE
 			bool                 a_ensureUnique = false)
 		{
 			using func_t = decltype(&MessageMenuManager::Create);
-			static REL::Relocation<func_t> func{ REL::ID(89563) };
+			static REL::Relocation<func_t> func{ REL::ID(2249456) };
 			return func(this, a_headerText, a_bodyText, a_callback, a_warningContext, a_button1Text, a_button2Text, a_button3Text, a_button4Text, a_ensureUnique);
 		}
 

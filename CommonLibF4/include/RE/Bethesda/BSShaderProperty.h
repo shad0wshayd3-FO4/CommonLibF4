@@ -26,17 +26,17 @@ namespace RE
 
 		enum class TextureTypeEnum
 		{
-			kBase = 0,
-			kNormal,
-			kGlow,
-			kHeight,
-			kEnv,
-			kWrinkles,
-			kMultilayer,
-			kBacklightMask,
+			kBase = 0x0,
+			kNormal = 0x1,
+			kGlow = 0x2,
+			kHeight = 0x3,
+			kEnv = 0x4,
+			kWrinkles = 0x5,
+			kMultilayer = 0x6,
+			kBacklightMask = 0x7,
 			kSmoothSpec = kBacklightMask,
 
-			kTotal,
+			kTotal
 		};
 
 		enum class EShaderPropertyFlag : std::uint64_t

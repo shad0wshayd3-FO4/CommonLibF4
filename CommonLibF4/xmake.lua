@@ -16,7 +16,7 @@ target("commonlibf4", function()
     add_packages("rsm-binary-io", "rsm-mmio", "spdlog", { public = true })
 
     if has_config("f4se_xbyak") then
-        add_packages("xbyak")
+        add_packages("xbyak", { public = true })
     end
 
     -- add options

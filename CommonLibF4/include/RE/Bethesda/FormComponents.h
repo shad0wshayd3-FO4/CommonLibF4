@@ -1423,7 +1423,7 @@ namespace RE
 		[[nodiscard]] static std::uint32_t GetFormHealth(const TESForm* a_form, const TBO_InstanceData* a_data)
 		{
 			using func_t = decltype(&TESHealthForm::GetFormHealth);
-			static REL::Relocation<func_t> func{ REL::ID(1515099) };
+			static REL::Relocation<func_t> func{ REL::ID(2193227) };
 			return func(a_form, a_data);
 		}
 
@@ -1771,7 +1771,7 @@ namespace RE
 		bool GetUseAll()
 		{
 			using func_t = decltype(&TESLeveledList::GetUseAll);
-			static REL::Relocation<func_t> func{ REL::ID(233875) };
+			static REL::Relocation<func_t> func{ REL::ID(2193253) };
 			return func(this);
 		}
 
@@ -2061,7 +2061,7 @@ namespace RE
 		[[nodiscard]] static float GetFormWeight(const TESForm* a_form, const TBO_InstanceData* a_data)
 		{
 			using func_t = float (*)(const TESForm*, const TBO_InstanceData*);
-			static REL::Relocation<func_t> func{ REL::ID(1321341) };
+			static REL::Relocation<func_t> func{ REL::ID(2193446) };
 			return func(a_form, a_data);
 		}
 

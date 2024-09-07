@@ -210,7 +210,7 @@ namespace RE
 		void UpdateDataModels()
 		{
 			using func_t = decltype(&GameUIModel::UpdateDataModels);
-			static REL::Relocation<func_t> func{ REL::ID(1269653) };
+			static REL::Relocation<func_t> func{ REL::ID(2220905) };
 			return func(this);
 		}
 	};
@@ -296,7 +296,7 @@ namespace RE
 		virtual bool PassesRenderConditionText(MENU_RENDER_CONTEXT a_reason, const BSFixedString& a_customRendererName) const  // 07
 		{
 			using func_t = decltype(&IMenu::PassesRenderConditionText);
-			static REL::Relocation<func_t> func{ REL::ID(937304) };
+			static REL::Relocation<func_t> func{ REL::ID(2287379) };
 			return func(this, a_reason, a_customRendererName);
 		}
 

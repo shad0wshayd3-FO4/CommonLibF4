@@ -1406,6 +1406,13 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(2231395) };
 			return func(this, a_actor, a_object, a_number, a_slot, a_stackID, a_queueEquip, a_forceEquip, a_playSounds, a_applyNow, a_slotBeingReplaced);
 		}
+
+		void UnequipItem(Actor* a_actor, const EquippedItem* a_equippedItem, bool a_queueEquip)
+		{
+			using func_t = decltype(&ActorEquipManager::UnequipItem);
+			static REL::Relocation<func_t> func{ REL::ID(2231399) };
+			return func(this, a_actor, a_equippedItem, a_queueEquip);
+		}
 	};
 	static_assert(sizeof(ActorEquipManager) == 0x60);
 }

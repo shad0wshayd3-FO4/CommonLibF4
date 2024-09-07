@@ -52,5 +52,12 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(880926) };
 			return func(a_lockLevel);
 		}
+
+		inline float CalculateItemHealthDamageBonus(float a_itemHealth)
+		{
+			using func_t = decltype(&GamePlayFormulas::CalculateItemHealthDamageBonus);
+			static REL::Relocation<func_t> func{ REL::ID(2209087) };
+			return func(a_itemHealth);
+		}
 	}
 }

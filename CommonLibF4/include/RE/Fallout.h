@@ -211,6 +211,7 @@
 #include "RE/Bethesda/Settings.h"
 #include "RE/Bethesda/Sky.h"
 #include "RE/Bethesda/SplineUtils.h"
+#include "RE/Bethesda/TES.h"
 #include "RE/Bethesda/TESBoundAnimObjects.h"
 #include "RE/Bethesda/TESBoundObjects.h"
 #include "RE/Bethesda/TESCamera.h"

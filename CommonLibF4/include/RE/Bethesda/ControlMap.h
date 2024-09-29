@@ -115,7 +115,7 @@ namespace RE
 		void SetTextEntryMode(bool a_enable)
 		{
 			using func_t = decltype(&ControlMap::SetTextEntryMode);
-			static REL::Relocation<func_t> func{ REL::ID(0) };
+			static REL::Relocation<func_t> func{ REL::ID(2268339) };
 			return func(this, a_enable);
 		}
 

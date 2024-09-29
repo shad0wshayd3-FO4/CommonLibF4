@@ -57,6 +57,13 @@ namespace RE
 			return *singleton;
 		}
 
+		void SetCameraFOV(float a_fov)
+		{
+			using func_t = decltype(&Main::SetCameraFOV);
+			static REL::Relocation<func_t> func{ REL::ID(2228973) };
+			return func(this, a_fov);
+		}
+
 		// members
 		BSTArray<BSTTuple<float, BSPointerHandle<Actor>>> sortedVisibleHighActors;      // 08
 		std::uint32_t                                     localMapRenderDelay;          // 20

@@ -370,6 +370,13 @@ namespace RE
 				return func(this);
 			}
 
+			static void DisableAll(bool a_disableAll)
+			{
+				using func_t = decltype(&Renderer::DisableAll);
+				static REL::Relocation<func_t> func{ REL::ID(2222521) };
+				return func(a_disableAll);
+			}
+
 			void Release()
 			{
 				using func_t = decltype(&Renderer::Release);

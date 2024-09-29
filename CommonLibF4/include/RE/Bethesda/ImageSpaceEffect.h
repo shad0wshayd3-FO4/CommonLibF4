@@ -100,6 +100,45 @@ namespace RE
 	};
 	static_assert(sizeof(ImageSpaceEffectOption) == 0xC8);
 
+	class __declspec(novtable) ImageSpaceEffectBokehDepthOfField :
+		public ImageSpaceEffectOption  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::ImageSpaceEffectBokehDepthOfField };
+		static constexpr auto VTABLE{ VTABLE::ImageSpaceEffectBokehDepthOfField };
+
+		virtual ~ImageSpaceEffectBokehDepthOfField() override;  // 00
+
+		// override (ImageSpaceEffect)
+		virtual void Render(BSTriShape* a_geometry, ImageSpaceEffectParam* a_param) override;       // 01
+		virtual void Setup(ImageSpaceManager* a_manager, ImageSpaceEffectParam* a_param) override;  // 03
+		virtual bool IsActive() override;                                                           // 08
+	};
+	static_assert(sizeof(ImageSpaceEffectBokehDepthOfField) == 0xC8);
+
+	class __declspec(novtable) ImageSpaceEffectDepthOfField :
+		public ImageSpaceEffectOption  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::ImageSpaceEffectDepthOfField };
+		static constexpr auto VTABLE{ VTABLE::ImageSpaceEffectDepthOfField };
+
+		virtual ~ImageSpaceEffectDepthOfField() override;  // 00
+
+		// override (ImageSpaceEffect)
+		virtual void Setup(ImageSpaceManager* a_manager, ImageSpaceEffectParam* a_param) override;  // 03
+		virtual void BorrowTextures(ImageSpaceEffectParam* a_param) override;                       // 05
+		virtual void ReturnTextures() override;                                                     // 06
+		virtual bool IsActive() override;                                                           // 08
+		virtual bool UpdateParams(ImageSpaceEffectParam* a_param) override;                         // 09
+
+		// members
+		ImageSpaceTexture maskBuffer;  // B0
+		ImageSpaceTexture buffer[3];   // F0
+		bool              useFog;      // 168
+	};
+	static_assert(sizeof(ImageSpaceEffectDepthOfField) == 0x170);
+
 	class __declspec(novtable) ImageSpaceEffectFullScreenBlur :
 		public ImageSpaceEffect  // 00
 	{
@@ -148,6 +187,25 @@ namespace RE
 		ImageSpaceTexture buffer[2];  // B8
 	};
 	static_assert(sizeof(ImageSpaceEffectGetHit) == 0x108);
+
+	class __declspec(novtable) ImageSpaceEffectHDR :
+		public ImageSpaceEffect  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::ImageSpaceEffectHDR };
+		static constexpr auto VTABLE{ VTABLE::ImageSpaceEffectHDR };
+
+		virtual ~ImageSpaceEffectHDR();  // 00
+
+		// override (ImageSpaceEffect)
+		virtual void Render(BSTriShape* a_geometry, ImageSpaceEffectParam* a_param) override;       // 01
+		virtual void Setup(ImageSpaceManager* a_manager, ImageSpaceEffectParam* a_param) override;  // 03
+		virtual void Shutdown() override;                                                           // 04
+		virtual bool UpdateParams(ImageSpaceEffectParam* a_param) override;                         // 09
+
+		inline static REL::Relocation<bool*> UsePipboyScreenMask{ REL::ID(2678029) };
+	};
+	static_assert(sizeof(ImageSpaceEffectHDR) == 0xB0);
 
 	class __declspec(novtable) ImageSpaceEffectMotionBlur :
 		public ImageSpaceEffect  // 00

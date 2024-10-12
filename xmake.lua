@@ -11,7 +11,7 @@ set_encodings("utf-8")
 add_rules("mode.debug", "mode.releasedbg")
 
 -- require packages
-add_requires("rsm-binary-io", "rsm-mmio", "xbyak")
+add_requires("rsm-binary-io", "rsm-mmio")
 add_requires("spdlog", { configs = { header_only = false, wchar = true, std_format = true } })
 
 -- include subprojects

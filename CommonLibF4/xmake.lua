@@ -5,6 +5,11 @@ option("f4se_xbyak", function()
     add_defines("F4SE_SUPPORT_XBYAK=1")
 end)
 
+-- require packages
+if has_config("f4se_xbyak") then
+    add_requires("xbyak")
+end
+
 -- define targets
 target("commonlibf4", function()
     set_kind("static")

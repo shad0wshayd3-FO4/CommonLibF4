@@ -14,6 +14,9 @@ end
 target("commonlibf4", function()
     set_kind("static")
 
+    -- set build by default
+    set_default(path.directory(os.scriptdir()) == os.projectdir())
+
     -- set build group
     set_group("commonlibf4")
 

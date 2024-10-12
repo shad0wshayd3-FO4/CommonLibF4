@@ -33,10 +33,10 @@ namespace RE
 
 			enum class LinkValidState
 			{
-				kNotLinked,
-				kCurrentlyLinking,
-				kLinkedInvalid,
-				kLinkedValid
+				kNotLinked = 0x0,
+				kCurrentlyLinking = 0x1,
+				kLinkedInvalid = 0x2,
+				kLinkedValid = 0x3
 			};
 
 			struct StructVar

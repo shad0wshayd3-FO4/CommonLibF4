@@ -10,8 +10,8 @@ namespace RE
 {
 	enum class PC_GAMEPAD_TYPE
 	{
-		kDirectX,
-		kOrbis,
+		kDirectX  = 0x0,
+		kOrbis = 0x1,
 
 		kTotal
 	};

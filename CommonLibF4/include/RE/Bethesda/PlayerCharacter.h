@@ -244,14 +244,14 @@ namespace RE
 			void ctor(bool a_suppressMessages, bool a_suppressAudio)
 			{
 				using func_t = decltype(&ScopedInventoryChangeMessageContext::ctor);
-				static REL::Relocation<func_t> func{ REL::ID(1512872) };
+				static REL::Relocation<func_t> func{ REL::ID(2233292) };
 				return func(this, a_suppressMessages, a_suppressAudio);
 			}
 
 			void dtor()
 			{
 				using func_t = decltype(&ScopedInventoryChangeMessageContext::dtor);
-				static REL::Relocation<func_t> func{ REL::ID(542100) };
+				static REL::Relocation<func_t> func{ REL::ID(2233293) };
 				return func(this);
 			}
 		};

@@ -38,12 +38,12 @@ namespace RE
 
 		enum class Mode
 		{
-			kNone = 0,
-			kInterior,
-			kSkyDomeOnly,
-			kFull,
+			kNone = 0x0,
+			kInterior = 0x1,
+			kSkyDomeOnly = 0x2,
+			kFull = 0x3,
 
-			kTotal
+			kTotal = 0x4
 		};
 
 		enum class Flags

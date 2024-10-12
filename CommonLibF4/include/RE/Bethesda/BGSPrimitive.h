@@ -17,12 +17,12 @@ namespace RE
 
 		enum class PRIMITIVE_TYPE
 		{
-			kNone,
-			kBox,
-			kSphere,
-			kPlane,
-			kLine,
-			kEllipsoid
+			kNone = 0x0,
+			kBox = 0x1,
+			kSphere = 0x2,
+			kPlane = 0x3,
+			kLine = 0x4,
+			kEllipsoid = 0x5
 		};
 
 		virtual ~BGSPrimitive();  // 00

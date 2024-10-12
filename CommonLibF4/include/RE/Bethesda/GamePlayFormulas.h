@@ -21,8 +21,8 @@ namespace RE
 	{
 		enum class EXPERIENCE_ACTIVITY
 		{
-			kKillNPC = 0,
-			kHackComputer = 1,
+			kKillNPC = 0x0,
+			kHackComputer = 0x1,
 		};
 
 		inline bool CanHackGateCheck(LOCK_LEVEL a_lockLevel)
@@ -51,6 +51,13 @@ namespace RE
 			using func_t = decltype(&GamePlayFormulas::GetLockXPReward);
 			static REL::Relocation<func_t> func{ REL::ID(880926) };
 			return func(a_lockLevel);
+		}
+
+		inline float CalculateItemHealthDamageBonus(float a_itemHealth)
+		{
+			using func_t = decltype(&GamePlayFormulas::CalculateItemHealthDamageBonus);
+			static REL::Relocation<func_t> func{ REL::ID(2209087) };
+			return func(a_itemHealth);
 		}
 	}
 }

@@ -180,7 +180,7 @@ namespace RE::BGSMod
 			TESObjectMISC* GetLooseMod()
 			{
 				using func_t = decltype(&Mod::GetLooseMod);
-				static REL::Relocation<func_t> func{ REL::ID(1359613) };
+				static REL::Relocation<func_t> func{ REL::ID(2197514) };
 				return func(this);
 			}
 
@@ -195,7 +195,7 @@ namespace RE::BGSMod
 			BGSAttachParentArray                                         attachParents;            // 98
 			BGSTypedKeywordValueArray<KeywordType::kInstantiationFilter> filterKeywords;           // B0
 			BGSTypedKeywordValue<KeywordType::kAttachPoint>              attachPoint;              // C0
-			REX::EnumSet<ENUM_FORM_ID, std::uint8_t>                     targetFormType;           // C2
+			REX::EnumSet<ENUM_FORM_ID, std::uint8_t>					 targetFormType;           // C2
 			std::uint8_t                                                 maxRank;                  // C3
 			std::uint8_t                                                 lvlsPerTierScaledOffset;  // C4
 			std::int8_t                                                  priority;                 // C5

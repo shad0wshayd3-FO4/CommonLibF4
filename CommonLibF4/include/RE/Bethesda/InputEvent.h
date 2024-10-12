@@ -7,23 +7,23 @@ namespace RE
 {
 	enum class DIRECTION_VAL : std::int32_t
 	{
-		kNone,
-		kUp,
-		kRight,
-		kDown,
-		kLeft
+		kNone = 0x0,
+		kUp = 0x1,
+		kRight = 0x2,
+		kDown = 0x3,
+		kLeft = 0x4
 	};
 
 	enum class INPUT_EVENT_TYPE : std::int32_t
 	{
-		kButton,
-		kMouseMove,
-		kCursorMove,
-		kChar,
-		kThumbstick,
-		kDeviceConnect,
-		kKinect,
-		kNone
+		kButton = 0x0,
+		kMouseMove = 0x1,
+		kCursorMove = 0x2,
+		kChar = 0x3,
+		kThumbstick = 0x4,
+		kDeviceConnect = 0x5,
+		kKinect = 0x6,
+		kNone = 0x7
 	};
 
 	enum class BS_BUTTON_CODE : std::int32_t

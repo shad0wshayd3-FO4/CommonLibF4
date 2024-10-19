@@ -216,7 +216,6 @@ set(SOURCES
 	include/RE/Bethesda/Settings.h
 	include/RE/Bethesda/Sky.h
 	include/RE/Bethesda/SplineUtils.h
-	include/RE/Bethesda/TaskQueueInterface.h
 	include/RE/Bethesda/TESBoundAnimObjects.h
 	include/RE/Bethesda/TESBoundObjects.h
 	include/RE/Bethesda/TESCamera.h
@@ -232,6 +231,7 @@ set(SOURCES
 	include/RE/Bethesda/TESWaterForm.h
 	include/RE/Bethesda/TESWorldSpace.h
 	include/RE/Bethesda/TLS.h
+	include/RE/Bethesda/TaskQueueInterface.h
 	include/RE/Bethesda/UI.h
 	include/RE/Bethesda/UIMessage.h
 	include/RE/Bethesda/UIMessageQueue.h

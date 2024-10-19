@@ -301,29 +301,25 @@ namespace REL
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0>
-		std::uintptr_t write_branch(const std::uintptr_t a_dst)
-			requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_branch(const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return F4SE::GetTrampoline().write_branch<N>(address() + O, a_dst);
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0, class F>
-		std::uintptr_t write_branch(const F a_dst)
-			requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_branch(const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return F4SE::GetTrampoline().write_branch<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0>
-		std::uintptr_t write_call(const std::uintptr_t a_dst)
-			requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_call(const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_call<N>(address() + O , a_dst);
+			return F4SE::GetTrampoline().write_call<N>(address() + O, a_dst);
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0, class F>
-		std::uintptr_t write_call(const F a_dst)
-			requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_call(const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return F4SE::GetTrampoline().write_call<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}

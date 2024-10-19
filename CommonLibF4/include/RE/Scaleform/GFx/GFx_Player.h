@@ -576,6 +576,20 @@ namespace RE::Scaleform::GFx
 				return func(this, a_data, a_name, a_val, a_isdobj);
 			}
 
+			bool GetElement(void* a_data, std::uint32_t a_idx, Value* a_val) const
+			{
+				using func_t = decltype(&ObjectInterface::GetElement);
+				static REL::Relocation<func_t> func{ REL::ID(2285881) };
+				return func(this, a_data, a_idx, a_val);
+			}
+
+			bool SetElement(void* a_data, std::uint32_t a_idx, const Value& a_val)
+			{
+				using func_t = decltype(&ObjectInterface::SetElement);
+				static REL::Relocation<func_t> func{ REL::ID(2286575) };
+				return func(this, a_data, a_idx, a_val);
+			}
+
 			bool SetMember(void* a_data, const char* a_name, const Value& a_value, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::SetMember);
@@ -912,6 +926,18 @@ namespace RE::Scaleform::GFx
 		{
 			assert(IsArray());
 			return _objectInterface->GetArraySize(_value.data);
+		}
+
+		bool GetElement(std::uint32_t a_idx, Value* a_val) const
+		{
+			assert(IsArray());
+			return _objectInterface->GetElement(_value.data, a_idx, a_val);
+		}
+
+		bool SetElement(std::uint32_t a_idx, const Value& a_val)
+		{
+			assert(IsArray());
+			return _objectInterface->SetElement(_value.data, a_idx, a_val);
 		}
 
 		bool GetMember(stl::zstring a_name, Value* a_val) const

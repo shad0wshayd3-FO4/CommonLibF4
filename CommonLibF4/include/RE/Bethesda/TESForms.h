@@ -832,7 +832,7 @@ namespace RE
 		template <class... Args>
 
 		[[nodiscard]] bool Is(Args... a_args) const noexcept  //
-			requires(std::same_as<Args, ENUM_FORM_ID>&&...)
+			requires(std::same_as<Args, ENUM_FORM_ID> && ...)
 		{
 			return (Is(a_args) || ...);
 		}
@@ -856,7 +856,7 @@ namespace RE
 		template <class... Args>
 
 		[[nodiscard]] bool IsNot(Args... a_args) const noexcept  //
-			requires(std::same_as<Args, ENUM_FORM_ID>&&...)
+			requires(std::same_as<Args, ENUM_FORM_ID> && ...)
 		{
 			return (IsNot(a_args) && ...);
 		}
@@ -1826,6 +1826,21 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::TESIdleForm };
 		static constexpr auto VTABLE{ VTABLE::TESIdleForm };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kIDLE };
+
+		bool CheckConditions(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef, bool a_recurseUp)
+		{
+			if (!conditions.IsTrue(a_actionRef, a_targetRef)) {
+				return false;
+			}
+
+			if (a_recurseUp) {
+				if (parentIdle) {
+					return parentIdle->CheckConditions(a_actionRef, a_targetRef, a_recurseUp);
+				}
+			}
+
+			return true;
+		}
 
 		// members
 		TESCondition    conditions;         // 20

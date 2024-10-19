@@ -633,9 +633,9 @@ namespace RE
 			}
 
 			// members
-			RenderTargetProperties        renderTargetData[100];                          // 000
-			DepthStencilTargetProperties  depthStencilTargetData[12];                     // C80
-			CubeMapRenderTargetProperties cubeMapRenderTargetData[1];                     // DA0
+			RenderTargetProperties        renderTargetData[100];       // 000
+			DepthStencilTargetProperties  depthStencilTargetData[12];  // C80
+			CubeMapRenderTargetProperties cubeMapRenderTargetData[1];  // DA0
 			std::byte                     padDC4[0x30];
 			std::uint32_t                 renderTargetID[100];                            // DC4
 			std::uint32_t                 depthStencilTargetID[12];                       // F54

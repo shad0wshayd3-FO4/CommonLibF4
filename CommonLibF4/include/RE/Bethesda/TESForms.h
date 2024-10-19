@@ -832,7 +832,7 @@ namespace RE
 		template <class... Args>
 
 		[[nodiscard]] bool Is(Args... a_args) const noexcept  //
-			requires(std::same_as<Args, ENUM_FORM_ID> && ...)
+			requires(std::same_as<Args, ENUM_FORM_ID>&&...)
 		{
 			return (Is(a_args) || ...);
 		}
@@ -856,7 +856,7 @@ namespace RE
 		template <class... Args>
 
 		[[nodiscard]] bool IsNot(Args... a_args) const noexcept  //
-			requires(std::same_as<Args, ENUM_FORM_ID> && ...)
+			requires(std::same_as<Args, ENUM_FORM_ID>&&...)
 		{
 			return (IsNot(a_args) && ...);
 		}

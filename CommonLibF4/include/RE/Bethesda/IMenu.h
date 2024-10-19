@@ -630,14 +630,14 @@ namespace RE
 
 		void CreateAndSetFiltersToColor(const NiColor& a_color, float a_brightness)
 		{
-			using func_t = void            (BSGFxShaderFXTarget::*)(const NiColor&, float);
+			using func_t = void (BSGFxShaderFXTarget::*)(const NiColor&, float);
 			static REL::Relocation<func_t> func{ REL::ID(2287028) };
 			func(this, a_color, a_brightness);
 		}
 
 		void CreateAndSetFiltersToColor(std::uint8_t a_r, std::uint8_t a_g, std::uint8_t a_b, float a_brightness)
 		{
-			using func_t = void            (BSGFxShaderFXTarget::*)(std::uint8_t, std::uint8_t, std::uint8_t, float);
+			using func_t = void (BSGFxShaderFXTarget::*)(std::uint8_t, std::uint8_t, std::uint8_t, float);
 			static REL::Relocation<func_t> func{ REL::ID(783104) };
 			func(this, a_r, a_g, a_b, a_brightness);
 		}

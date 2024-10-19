@@ -216,6 +216,7 @@ set(SOURCES
 	include/RE/Bethesda/Settings.h
 	include/RE/Bethesda/Sky.h
 	include/RE/Bethesda/SplineUtils.h
+	include/RE/Bethesda/TaskQueueInterface.h
 	include/RE/Bethesda/TESBoundAnimObjects.h
 	include/RE/Bethesda/TESBoundObjects.h
 	include/RE/Bethesda/TESCamera.h
@@ -230,7 +231,7 @@ set(SOURCES
 	include/RE/Bethesda/TESRace.h
 	include/RE/Bethesda/TESWaterForm.h
 	include/RE/Bethesda/TESWorldSpace.h
-	include/RE/Bethesda/TaskQueueInterface.h
+	include/RE/Bethesda/TLS.h
 	include/RE/Bethesda/UI.h
 	include/RE/Bethesda/UIMessage.h
 	include/RE/Bethesda/UIMessageQueue.h
@@ -390,6 +391,7 @@ set(SOURCES
 	include/REX/W32/DXGI_5.h
 	include/REX/W32/DXGI_6.h
 	include/REX/W32/KERNEL32.h
+	include/REX/W32/NT.h
 	include/REX/W32/OLE32.h
 	include/REX/W32/SHELL32.h
 	include/REX/W32/USER32.h

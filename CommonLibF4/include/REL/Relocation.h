@@ -300,28 +300,32 @@ namespace REL
 			safe_write(address(), a_data.data(), a_data.size_bytes());
 		}
 
-		template <std::size_t N>
-		std::uintptr_t write_branch(const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::size_t N, std::ptrdiff_t O = 0>
+		std::uintptr_t write_branch(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_branch<N>(address(), a_dst);
+			return F4SE::GetTrampoline().write_branch<N>(address() + O, a_dst);
 		}
 
-		template <std::size_t N, class F>
-		std::uintptr_t write_branch(const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::size_t N, std::ptrdiff_t O = 0, class F>
+		std::uintptr_t write_branch(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_branch<N>(address(), stl::unrestricted_cast<std::uintptr_t>(a_dst));
+			return F4SE::GetTrampoline().write_branch<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
-		template <std::size_t N>
-		std::uintptr_t write_call(const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::size_t N, std::ptrdiff_t O = 0>
+		std::uintptr_t write_call(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_call<N>(address(), a_dst);
+			return F4SE::GetTrampoline().write_call<N>(address() + O , a_dst);
 		}
 
-		template <std::size_t N, class F>
-		std::uintptr_t write_call(const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::size_t N, std::ptrdiff_t O = 0, class F>
+		std::uintptr_t write_call(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_call<N>(address(), stl::unrestricted_cast<std::uintptr_t>(a_dst));
+			return F4SE::GetTrampoline().write_call<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
 		void write_fill(const std::uint8_t a_value, const std::size_t a_count) requires(std::same_as<value_type, std::uintptr_t>)

@@ -14,27 +14,27 @@ namespace RE
 
 	enum class CONDITIONITEMOBJECT : unsigned
 	{
-		kSelf,
-		kTarget,
-		kRef,
-		kCombatTarget,
-		kLinkedRef,
-		kQuestAlias,
-		kPackData,
-		kEventData,
-		kCommandTarget,
-		kEventCameraRef,
-		kMyKiller
+		kSelf = 0x0,
+		kTarget = 0x1,
+		kRef = 0x2,
+		kCombatTarget = 0x3,
+		kLinkedRef = 0x4,
+		kQuestAlias = 0x5,
+		kPackData = 0x6,
+		kEventData = 0x7,
+		kCommandTarget = 0x8,
+		kEventCameraRef = 0x9,
+		kMyKiller = 0xA
 	};
 
 	enum class ENUM_COMPARISON_CONDITION : std::uint8_t
 	{
-		kEqual,
-		kNotEqual,
-		kGreaterThan,
-		kGreaterThanEqual,
-		kLessThan,
-		kLessThanEqual
+		kEqual = 0x0,
+		kNotEqual = 0x1,
+		kGreaterThan = 0x2,
+		kGreaterThanEqual = 0x3,
+		kLessThan = 0x4,
+		kLessThanEqual = 0x5
 	};
 
 	struct FUNCTION_DATA
@@ -120,6 +120,13 @@ namespace RE
 			using func_t = decltype(&TESCondition::IsTrueForAllButFunction);
 			static REL::Relocation<func_t> func{ REL::ID(1182457) };
 			return func(this, a_paramData, a_function);
+		}
+
+		void ClearAllConditionItems() const
+		{
+			using func_t = decltype(&TESCondition::ClearAllConditionItems);
+			static REL::Relocation<func_t> func{ REL::ID(2211988) };
+			return func(this);
 		}
 
 		// members

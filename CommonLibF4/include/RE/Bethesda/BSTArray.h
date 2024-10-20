@@ -373,7 +373,7 @@ namespace RE
 		[[nodiscard]] constexpr size_type size() const noexcept { return _size; }
 		[[nodiscard]] constexpr size_type max_size() const noexcept { return std::numeric_limits<size_type>::max(); }
 
-		[[nodiscard]] constexpr bool empty() const noexcept { size() == 0; }
+		[[nodiscard]] constexpr bool empty() const noexcept { return size() == 0; }
 
 		void reserve(size_type a_capacity)
 		{

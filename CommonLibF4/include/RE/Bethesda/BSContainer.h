@@ -4,7 +4,7 @@ namespace RE::BSContainer
 {
 	enum class ForEachResult
 	{
-		kContinue = 0,
-		kStop = 1
+		kContinue = 0x0,
+		kStop = 0x1
 	};
 }

@@ -229,16 +229,16 @@ namespace RE
 	public:
 		enum class Type
 		{
-			kNone,
-			kCreateObject,
-			kWeapons,
-			kEnchanting,
-			kEnchantingExperiment,
-			kAlchemy,
-			kAlchemyExperiment,
-			kArmor,
-			kPowerArmor,
-			kRobotMod
+			kNone = 0x0,
+			kCreateObject = 0x1,
+			kWeapons = 0x2,
+			kEnchanting = 0x3,
+			kEnchantingExperiment = 0x4,
+			kAlchemy = 0x5,
+			kAlchemyExperiment = 0x6,
+			kArmor = 0x7,
+			kPowerArmor = 0x8,
+			kRobotMod = 0x9
 		};
 
 		// members
@@ -342,10 +342,10 @@ namespace RE
 	enum class SEX : std::uint32_t
 	{
 		kNone = static_cast<std::underlying_type_t<SEX>>(-1),
-		kMale = 0,
-		kFemale = 1,
+		kMale = 0x0,
+		kFemale = 0x1,
 
-		kTotal = 2
+		kTotal = 0x2
 	};
 
 	class __declspec(novtable) TESNPC :
@@ -396,15 +396,8 @@ namespace RE
 
 		[[nodiscard]] static BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>& GetAlternateHeadPartListMap()
 		{
-			static REL::Relocation<BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>*> map{ REL::ID(1306546), -0x8 };
+			static REL::Relocation<BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>*> map{ REL::ID(2662368), -0x8 };
 			return *map;
-		}
-
-		[[nodiscard]] static TESNPC* GetDefaultNPC(TESNPC* npc)
-		{
-			using func_t = decltype(&TESNPC::GetDefaultNPC);
-			static REL::Relocation<func_t> func{ REL::ID(1073775) };
-			return func(npc);
 		}
 
 		[[nodiscard]] std::span<BGSHeadPart*> GetHeadParts(bool a_alternate = true) const

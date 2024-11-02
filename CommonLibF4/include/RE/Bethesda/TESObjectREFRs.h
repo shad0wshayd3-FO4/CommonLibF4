@@ -24,11 +24,6 @@ namespace RE
 		enum class CastingSource;
 	}
 
-	namespace BGSBodyPartDefs
-	{
-		enum class LIMB_ENUM;
-	}
-
 	class ActorCause;
 	class BGSAnimationSequencer;
 	class BGSDecalGroup;

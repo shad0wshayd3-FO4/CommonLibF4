@@ -1107,6 +1107,13 @@ namespace RE
 			return func(this, a_compare, a_qualifier);
 		}
 
+		void SetFavorite(char a_quickkeyIndex)
+		{
+			using func_t = decltype(&ExtraDataList::SetFavorite);
+			static REL::Relocation<func_t> func{ REL::ID(2190188) };
+			return func(this, a_quickkeyIndex);
+		}
+
 		// members
 		BaseExtraList           extraData;    // 08
 		mutable BSReadWriteLock extraRWLock;  // 20	

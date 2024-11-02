@@ -1305,6 +1305,13 @@ namespace RE
 			return func(this, a_force);
 		}
 
+		BGSBodyPartData* GetBodyPartData()
+		{
+			using func_t = decltype(&Actor::GetBodyPartData);
+			static REL::Relocation<func_t> func{ REL::ID(2229571) };
+			return func(this);
+		}
+
 		// members
 		NiTFlags<std::uint32_t, Actor>                   niFlags;                      // 2D0
 		float                                            updateTargetTimer;            // 2D4

@@ -166,10 +166,18 @@ namespace RE
 	{
 		struct Event
 		{
+			[[nodiscard]] static BSTEventSource<Event>* GetEventSource()
+			{
+				using func_t = decltype(&Event::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(349120) }; // .163
+				return func();
+			}
+
 			std::uint32_t newLevel;	// 00
 		};
 		static_assert(sizeof(Event) == 0x4);
 	}
+
 
 	namespace LoadingStatusChanged
 	{
@@ -959,7 +967,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESHitEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESHitEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(1411899) };
+			static REL::Relocation<func_t> func{ REL::ID(2201886) };
 			return func();
 		}
 
@@ -1020,6 +1028,25 @@ namespace RE
 		NiPointer<TESObjectREFR> actor;  // 00
 	};
 	static_assert(sizeof(TESSwitchRaceCompleteEvent) == 0x8);
+
+	namespace TESHarvestEvent
+	{
+		struct ItemHarvested
+		{
+			[[nodiscard]] static BSTEventSource<ItemHarvested>* GetEventSource()
+			{
+				using func_t = decltype(&ItemHarvested::GetEventSource);
+				static REL::Relocation<func_t> func{ REL::ID(2193351) };
+				return func();
+			}
+
+			// members
+			const TESBoundObject* itemHarvested;		// 00
+			TESObjectREFR*        referenceHarvested;	// 08
+			const Actor*          harvestedBy;			// 10
+		};
+		static_assert(sizeof(ItemHarvested) == 0x18);
+	};
 
 	class TutorialEvent
 	{

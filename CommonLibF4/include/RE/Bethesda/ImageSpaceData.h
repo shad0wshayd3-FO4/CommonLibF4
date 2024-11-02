@@ -59,11 +59,24 @@ namespace RE
 		};
 		static_assert(sizeof(Tint) == 0x10);
 
+		struct DepthOfField  // DNAM
+		{
+		public:
+			// members
+			float strength;          // 00
+			float distance;          // 04
+			float range;             // 08
+			float vignetteRadius;    // 0C
+			float vignetteStrength;  // 10
+			float mode;              // 14
+		};
+		static_assert(sizeof(DepthOfField) == 0x18);
+
 		// members
-		HDR       hdrData;        // 00
-		Cinematic cinematicData;  // 24
-		Tint      tintData;       // 30
-		float     dofData[6];     // 40
+		HDR          hdrData;        // 00
+		Cinematic    cinematicData;  // 24
+		Tint         tintData;       // 30
+		DepthOfField dofData;        // 40
 	};
 	static_assert(sizeof(ImageSpaceBaseData) == 0x58);
 
@@ -82,7 +95,21 @@ namespace RE
 	{
 	public:
 		// members
-		float data[20];  // 00
+		float                            fadeAmount;            // 00
+		float                            fadeR;                 // 04
+		float                            fadeG;                 // 08
+		float                            fadeB;                 // 0C
+		float                            blurRadius;            // 10
+		float                            doubleVisionStrength;  // 14
+		float                            radiusBlurStrength;    // 18
+		float                            radiusBlurRampUp;      // 1C
+		float                            radiusBlurStart;       // 20
+		float                            radiusBlurRampDown;    // 24
+		float                            radiusBlurDownStart;   // 28
+		float                            radiusBlurCenterX;     // 2C
+		float                            radiusBlurCenterY;     // 30
+		ImageSpaceBaseData::DepthOfField depthOfField;          // 34
+		float                            motionBlurStrength;    // 4C
 	};
 	static_assert(sizeof(ImageSpaceModData) == 0x50);
 

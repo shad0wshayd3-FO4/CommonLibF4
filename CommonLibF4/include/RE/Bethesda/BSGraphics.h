@@ -245,7 +245,7 @@ namespace RE
 		public:
 			[[nodiscard]] static RendererData* GetSingleton()
 			{
-				static REL::Relocation<RendererData**> singleton{ REL::ID(1235449) };
+				static REL::Relocation<RendererData**> singleton{ REL::ID(2704429) };
 				return *singleton;
 			}
 
@@ -512,7 +512,7 @@ namespace RE
 		public:
 			[[nodiscard]] static State GetSingleton()
 			{
-				static REL::Relocation<State*> singleton{ REL::ID(600795) };
+				static REL::Relocation<State*> singleton{ REL::ID(2704621) };
 				return *singleton;
 			}
 
@@ -621,7 +621,7 @@ namespace RE
 
 			[[nodiscard]] static RenderTargetManager GetSingleton()
 			{
-				static REL::Relocation<RenderTargetManager*> singleton{ REL::ID(1508457) };
+				static REL::Relocation<RenderTargetManager*> singleton{ REL::ID(2666735) };
 				return *singleton;
 			}
 
@@ -633,9 +633,10 @@ namespace RE
 			}
 
 			// members
-			RenderTargetProperties        renderTargetData[100];                          // 000
-			DepthStencilTargetProperties  depthStencilTargetData[12];                     // C80
-			CubeMapRenderTargetProperties cubeMapRenderTargetData[1];                     // DA0
+			RenderTargetProperties        renderTargetData[100];       // 000
+			DepthStencilTargetProperties  depthStencilTargetData[12];  // C80
+			CubeMapRenderTargetProperties cubeMapRenderTargetData[1];  // DA0
+			std::byte                     padDC4[0x30];
 			std::uint32_t                 renderTargetID[100];                            // DC4
 			std::uint32_t                 depthStencilTargetID[12];                       // F54
 			std::uint32_t                 cubeMapRenderTargetID[1];                       // F84
@@ -656,7 +657,7 @@ namespace RE
 			BSTAtomicValue<std::uint32_t> dynamicResolutionDisabled;                      // FB4
 			Create_T                      create;                                         // FB8
 		};
-		static_assert(sizeof(RenderTargetManager) == 0xFC0);
+		static_assert(sizeof(RenderTargetManager) == 0xFF0);
 	};
 
 	namespace BSShaderTechniqueIDMap

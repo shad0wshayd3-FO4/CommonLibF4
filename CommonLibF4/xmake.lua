@@ -5,9 +5,17 @@ option("f4se_xbyak", function()
     add_defines("F4SE_SUPPORT_XBYAK=1")
 end)
 
+-- require packages
+if has_config("f4se_xbyak") then
+    add_requires("xbyak")
+end
+
 -- define targets
 target("commonlibf4", function()
     set_kind("static")
+
+    -- set build by default
+    set_default(path.directory(os.scriptdir()) == os.projectdir())
 
     -- set build group
     set_group("commonlibf4")
@@ -141,6 +149,15 @@ rule("commonlibf4.plugin")
         target:set("arch", "x64")
         target:set("kind", "shared")
 
+        target:add("installfiles", target:targetfile(), { prefixdir = "F4SE/Plugins" })
+        target:add("installfiles", target:symbolfile(), { prefixdir = "F4SE/Plugins" })
+
+        if os.getenv("XSE_FO4_MODS_PATH") then
+            target:set("installdir", path.join(os.getenv("XSE_FO4_MODS_PATH"), target:name()))
+        elseif os.getenv("XSE_FO4_GAME_PATH") then
+            target:set("installdir", path.join(os.getenv("XSE_FO4_GAME_PATH"), "Data"))
+        end
+
         local conf = target:extraconf("rules", "commonlibf4.plugin")
         local conf_dir = path.join(target:autogendir(), "rules", "commonlibf4", "plugin")
 
@@ -185,4 +202,53 @@ rule("commonlibf4.plugin")
 
         add_file("plugin.cpp", PLUGIN_FILE)
         add_file("version.rc", PLUGIN_RC_FILE)
+    end)
+
+    on_install(function(target)
+        local srcfiles, dstfiles = target:installfiles()
+        if srcfiles and #srcfiles > 0 and dstfiles and #dstfiles > 0 then
+            for idx, srcfile in ipairs(srcfiles) do
+                os.trycp(srcfile, dstfiles[idx])
+            end
+        end
+    end)
+
+    on_package(function(target)
+        import("core.project.config")
+        import("core.project.project")
+        import("utils.archive")
+
+        local archive_name = target:name() .. "-" .. (target:version() or "0.0.0") .. ".zip"
+        print("packing %s .. ", archive_name)
+
+        local root_dir = path.join(os.tmpdir(), "packages", project.name() or "", target:name())
+        os.tryrm(root_dir)
+
+        local srcfiles, dstfiles = target:installfiles(path.join(root_dir, "Data"))
+        if srcfiles and #srcfiles > 0 and dstfiles and #dstfiles > 0 then
+            for idx, srcfile in ipairs(srcfiles) do
+                os.trycp(srcfile, dstfiles[idx])
+            end
+        else
+            return
+        end
+
+        local archive_path = path.join(config.buildir(), "packages", archive_name)
+        local old_dir = os.cd(root_dir)
+        local archive_files = os.files("**")
+        os.cd(old_dir)
+        archive.archive(path.absolute(archive_path), archive_files, { curdir = root_dir })
+    end)
+
+    after_build(function(target)
+        import("core.project.depend")
+        import("core.project.project")
+        import("core.project.task")
+
+        depend.on_changed(function()
+            local srcfiles, dstfiles = target:installfiles()
+            if srcfiles and #srcfiles > 0 and dstfiles and #dstfiles > 0 then 
+                task.run("install")
+            end
+        end, { changed = target:is_rebuilt(), files = { target:targetfile() } })
     end)

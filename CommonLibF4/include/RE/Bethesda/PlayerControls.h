@@ -12,21 +12,16 @@
 
 namespace RE
 {
+	class BGSAction;
 	class MenuModeChangeEvent;
 	class MenuOpenCloseEvent;
 	class QuickContainerStateEvent;
 	class UserEventEnabledEvent;
 
 	struct ActivateHandler;
-	struct AttackBlockHandler;
-	struct AutoMoveHandler;
 	struct GrabRotationHandler;
-	struct JumpHandler;
-	struct MeleeThrowHandler;
 	struct MovementHandler;
-	struct ReadyWeaponHandler;
 	struct RunHandler;
-	struct SneakHandler;
 	struct SprintHandler;
 	struct TESFurnitureEvent;
 	struct TogglePOVHandler;
@@ -109,6 +104,19 @@ namespace RE
 	};
 	static_assert(sizeof(PlayerInputHandler) == 0x20);
 
+	class AutoMoveHandler :
+		public PlayerInputHandler
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::AutoMoveHandler };
+		static constexpr auto VTABLE{ VTABLE::AutoMoveHandler };
+
+		explicit constexpr AutoMoveHandler(PlayerControlsData& a_data) noexcept :
+			PlayerInputHandler(a_data)
+		{}
+	};
+	static_assert(sizeof(AutoMoveHandler) == 0x20);
+
 	class HeldStateHandler :
 		public PlayerInputHandler  // 00
 	{
@@ -137,6 +145,62 @@ namespace RE
 	};
 	static_assert(sizeof(HeldStateHandler) == 0x28);
 
+	class AttackBlockHandler :
+		public HeldStateHandler
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::AttackBlockHandler };
+		static constexpr auto VTABLE{ VTABLE::AttackBlockHandler };
+
+		enum class POWER_ATTACK_STATE
+		{
+			kNone = 0,
+			kLeft,
+			kRight,
+			kDual,
+		};
+
+		// members
+		std::uint64_t                                   dualAttackStartTime;         // 28
+		BSFixedString                                   debounceEvent;               // 30
+		REX::EnumSet<POWER_ATTACK_STATE, std::uint32_t> checkForPowerAttack;         // 38
+		std::uint32_t                                   numPowerAttacks;             // 3C
+		SettingT<INISettingCollection>*                 initialDelay;                // 40
+		SettingT<INISettingCollection>*                 subsequentDelay;             // 48
+		float                                           attackTimer;                 // 50
+		std::uint64_t                                   rightAttackTimestamp;        // 58
+		float                                           rightAttackHeldSeconds;      // 60
+		float                                           rightAttackLastHeldSeconds;  // 64
+		float                                           rightAttackLatchEngage;      // 68
+		float                                           rightAttackLatchRelease;     // 6C
+		bool                                            debounce;                    // 70
+		bool                                            castAttemptMade;             // 71
+		bool                                            leftAttackButtonHeld;        // 72
+		bool                                            rightAttackButtonHeld;       // 73
+		bool                                            rightAttackQueued;           // 74
+		bool                                            rightAttackPrevFrame;        // 75
+		bool                                            setAttackTimer;              // 76
+		bool                                            checkPostMeleeActions;       // 77
+		bool                                            checkPostThrowActions;       // 78
+	};
+	static_assert(sizeof(AttackBlockHandler) == 0x80);
+
+	class JumpHandler :
+		public PlayerInputHandler
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::JumpHandler };
+		static constexpr auto VTABLE{ VTABLE::JumpHandler };
+
+		explicit constexpr JumpHandler(PlayerControlsData& a_data) noexcept :
+			PlayerInputHandler(a_data)
+		{}
+
+		// members
+		bool debounceAlternateExit{ false };  // 20
+	};
+	static_assert(sizeof(JumpHandler) == 0x28);
+
 	class LookHandler :
 		public PlayerInputHandler
 	{
@@ -152,6 +216,49 @@ namespace RE
 		float thumbstickMaxedSec{ 0.0f };  // 20
 	};
 	static_assert(sizeof(LookHandler) == 0x28);
+
+	class MeleeThrowHandler :
+		public HeldStateHandler
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::MeleeThrowHandler };
+		static constexpr auto VTABLE{ VTABLE::MeleeThrowHandler };
+
+		// members
+		bool buttonHoldDebounce;  // 28
+		bool pressRegistered;     // 29
+		bool queueThrow;          // 2A
+	};
+	static_assert(sizeof(MeleeThrowHandler) == 0x30);
+
+	class ReadyWeaponHandler :
+		public PlayerInputHandler
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::ReadyWeaponHandler };
+		static constexpr auto VTABLE{ VTABLE::ReadyWeaponHandler };
+
+		explicit constexpr ReadyWeaponHandler(PlayerControlsData& a_data) noexcept :
+			PlayerInputHandler(a_data)
+		{}
+
+		// members
+		bool actionTaken{ false };  // 20
+	};
+	static_assert(sizeof(ReadyWeaponHandler) == 0x28);
+
+	class SneakHandler :
+		public PlayerInputHandler
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::SneakHandler };
+		static constexpr auto VTABLE{ VTABLE::SneakHandler };
+
+		explicit constexpr SneakHandler(PlayerControlsData& a_data) noexcept :
+			PlayerInputHandler(a_data)
+		{}
+	};
+	static_assert(sizeof(SneakHandler) == 0x20);
 
 	class __declspec(novtable) PlayerControls :
 		BSInputEventReceiver,                    // 000
@@ -221,7 +328,7 @@ namespace RE
 		void DoRegisterHandler(PlayerInputHandler* a_handler, bool a_isHeldStateHandler)
 		{
 			using func_t = decltype(&PlayerControls::DoRegisterHandler);
-			static REL::Relocation<func_t> func{ REL::ID(177801) };
+			static REL::Relocation<func_t> func{ REL::ID(2234822) };
 			return func(this, a_handler, a_isHeldStateHandler);
 		}
 	};

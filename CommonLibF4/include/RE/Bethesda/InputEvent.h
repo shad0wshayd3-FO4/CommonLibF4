@@ -82,6 +82,7 @@ namespace RE
 		kX = 0x58,
 		kY = 0x59,
 		kZ = 0x5A,
+		kApps = 0x5D,
 		kNumpad_0 = 0x60,
 		kNumpad_1 = 0x61,
 		kNumpad_2 = 0x62,

@@ -7,14 +7,14 @@ namespace RE
 		inline void PopHUDMode(const HUDModeType& a_hudMode)
 		{
 			using func_t = decltype(&SendHUDMessage::PopHUDMode);
-			static REL::Relocation<func_t> func{ REL::ID(1495042) };
+			static REL::Relocation<func_t> func{ REL::ID(2222444) };
 			return func(a_hudMode);
 		}
 
 		inline void PushHUDMode(const HUDModeType& a_hudMode)
 		{
 			using func_t = decltype(&SendHUDMessage::PushHUDMode);
-			static REL::Relocation<func_t> func{ REL::ID(1321764) };
+			static REL::Relocation<func_t> func{ REL::ID(2222443) };
 			return func(a_hudMode);
 		}
 

@@ -10,6 +10,23 @@ namespace RE
 
 	class HUDModeType;
 
+	namespace HUDMenuUtils
+	{
+		inline NiColor GetGameplayHUDColor()
+		{
+			using func_t = decltype(&HUDMenuUtils::GetGameplayHUDColor);
+			static REL::Relocation<func_t> func{ REL::ID(2248840) };
+			return func();
+		}
+
+		inline NiColor GetGameplayHUDBackgroundColor()
+		{
+			using func_t = decltype(&HUDMenuUtils::GetGameplayHUDBackgroundColor);
+			static REL::Relocation<func_t> func{ REL::ID(2248845) };
+			return func();
+		}
+	}
+
 	namespace InventoryUserUIUtils
 	{
 		namespace detail

@@ -1846,6 +1846,21 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESIdleForm };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kIDLE };
 
+		bool CheckConditions(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef, bool a_recurseUp)
+		{
+			if (!conditions.IsTrue(a_actionRef, a_targetRef)) {
+				return false;
+			}
+
+			if (a_recurseUp) {
+				if (parentIdle) {
+					return parentIdle->CheckConditions(a_actionRef, a_targetRef, a_recurseUp);
+				}
+			}
+
+			return true;
+		}
+
 		// members
 		TESCondition    conditions;         // 20
 		IDLE_DATA       data;               // 28

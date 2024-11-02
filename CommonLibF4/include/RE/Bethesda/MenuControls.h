@@ -12,7 +12,6 @@ namespace RE
 	struct CameraZoomHandler;
 	struct ClickHandler;
 	struct GFxConvertHandler;
-	struct MenuOpenHandler;
 	struct QuickSaveLoadHandler;
 
 	class MenuControls :

@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.21)
 
 option(F4SE_SUPPORT_XBYAK "Enables trampoline support for Xbyak." OFF)
+option(REX_OPTION_INI "Enables ini config support for REX." OFF)
+option(REX_OPTION_JSON "Enables json config support for REX." OFF)
+option(REX_OPTION_TOML "Enables toml config support for REX." OFF)
 
 project(
 	CommonLibF4
@@ -39,6 +42,9 @@ target_compile_definitions(
 		WINVER=0x0601	# windows 7, minimum supported version by fallout 4
 		_WIN32_WINNT=0x0601
 		"$<$<BOOL:${F4SE_SUPPORT_XBYAK}>:F4SE_SUPPORT_XBYAK=1>"
+		"$<$<BOOL:${REX_OPTION_INI}>:REX_OPTION_INI=1>"
+		"$<$<BOOL:${REX_OPTION_JSON}>:REX_OPTION_JSON=1>"
+		"$<$<BOOL:${REX_OPTION_TOML}>:REX_OPTION_TOML=1>"
 )
 
 target_compile_features(

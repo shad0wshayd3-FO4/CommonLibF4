@@ -50,8 +50,7 @@ namespace REL
 	};
 
 	template <class T>
-	void Relocation<T>::write_func(const std::size_t a_count, const std::uintptr_t a_dst)
-		requires(std::same_as<value_type, std::uintptr_t>)
+	void Relocation<T>::write_func(const std::size_t a_count, const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
 	{
 		safe_fill(address(), INT3, a_count);
 		auto patch = write_func_impl{ a_dst };

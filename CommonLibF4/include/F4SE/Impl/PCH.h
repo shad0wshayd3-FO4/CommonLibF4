@@ -14,6 +14,7 @@
 #include <ctime>
 #include <execution>
 #include <filesystem>
+#include <fstream>
 #include <functional>
 #include <initializer_list>
 #include <intrin.h>
@@ -41,14 +42,15 @@ static_assert(
 	std::is_integral_v<std::time_t> && sizeof(std::time_t) == sizeof(std::size_t),
 	"wrap std::time_t instead");
 
+#include "REX/REX/Enum.h"
+#include "REX/REX/EnumSet.h"
+#include "REX/W32/KERNEL32.h"
+#include "REX/W32/USER32.h"
+
 #pragma warning(push, 0)
 #include <mmio/mmio.hpp>
 #include <spdlog/spdlog.h>
 #pragma warning(pop)
-
-#include "REX/REX.h"
-#include "REX/W32/KERNEL32.h"
-#include "REX/W32/USER32.h"
 
 namespace F4SE
 {

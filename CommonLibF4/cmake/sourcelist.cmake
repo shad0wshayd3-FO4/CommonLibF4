@@ -385,6 +385,13 @@ set(SOURCES
 	include/REX/PS4.h
 	include/REX/PS4/SCEPAD.h
 	include/REX/REX.h
+	include/REX/REX/Enum.h
+	include/REX/REX/EnumSet.h
+	include/REX/REX/INI.h
+	include/REX/REX/JSON.h
+	include/REX/REX/Setting.h
+	include/REX/REX/Singleton.h
+	include/REX/REX/TOML.h
 	include/REX/W32.h
 	include/REX/W32/ADVAPI32.h
 	include/REX/W32/BASE.h
@@ -461,5 +468,6 @@ set(SOURCES
 	src/REL/Module.cpp
 	src/REL/Relocation.cpp
 	src/REL/Version.cpp
+	src/REX/REX.cpp
 	src/REX/W32.cpp
 )

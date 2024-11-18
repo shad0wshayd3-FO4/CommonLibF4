@@ -2,8 +2,8 @@
 
 #include "RE/Bethesda/BSTEvent.h"
 #include "RE/Bethesda/IMenu.h"
-#include "RE/Bethesda/PipboyValue.h"
 #include "RE/Bethesda/PipboyThrottleManager.h"
+#include "RE/Bethesda/PipboyValue.h"
 
 namespace RE
 {

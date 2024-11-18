@@ -473,13 +473,13 @@ namespace RE
 			kPowerArmorLocation = 0x58,
 			kDogmeat = 0x59,
 			kTeammate = 0x5A,
-			
+
 			kCountTotal = 0x5B
 		};
 
-		std::uint8_t flags;				// 10
-		std::uint8_t originalFlags;		// 11
-		MARKER_TYPE type;               // 12
+		std::uint8_t flags;          // 10
+		std::uint8_t originalFlags;  // 11
+		MARKER_TYPE  type;           // 12
 	};
 	static_assert(sizeof(MapMarkerData) == 0x18);
 
@@ -1116,7 +1116,7 @@ namespace RE
 
 		// members
 		BaseExtraList           extraData;    // 08
-		mutable BSReadWriteLock extraRWLock;  // 20	
+		mutable BSReadWriteLock extraRWLock;  // 20
 	};
 	static_assert(sizeof(ExtraDataList) == 0x28);
 }

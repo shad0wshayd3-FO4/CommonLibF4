@@ -6,14 +6,14 @@
 namespace RE
 {
 	class __declspec(novtable) PipboyStatusData :
-		public PipboyDataGroup,									// 00
-		public BSTEventSink<PlayerLifeStateChanged::Event>,		// 98
-		public BSTEventSink<PlayerInDialogueChanged::Event>,	// A0
-		public BSTEventSink<MenuOpenCloseEvent>,				// A8
-		public BSTEventSink<BGSInventoryListEvent::Event>,		// B0
-		public BSTEventSink<LoadingStatusChanged::Event>,		// B8
-		public BSTEventSink<VATSEvents::ModeChange>,			// C0
-		public BSTEventSink<UserEventEnabledEvent>				// C8
+		public PipboyDataGroup,                               // 00
+		public BSTEventSink<PlayerLifeStateChanged::Event>,   // 98
+		public BSTEventSink<PlayerInDialogueChanged::Event>,  // A0
+		public BSTEventSink<MenuOpenCloseEvent>,              // A8
+		public BSTEventSink<BGSInventoryListEvent::Event>,    // B0
+		public BSTEventSink<LoadingStatusChanged::Event>,     // B8
+		public BSTEventSink<VATSEvents::ModeChange>,          // C0
+		public BSTEventSink<UserEventEnabledEvent>            // C8
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::PipboyStatusData };

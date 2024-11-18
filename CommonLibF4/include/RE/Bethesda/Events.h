@@ -48,8 +48,8 @@ namespace RE
 		{
 			// members
 			REX::EnumSet<Type, std::uint16_t> changeType;     // 00
-			const BGSObjectInstance*		  itemAffected;   // 08
-			Actor*							  actorAffected;  // 10
+			const BGSObjectInstance*          itemAffected;   // 08
+			Actor*                            actorAffected;  // 10
 			std::uint32_t                     stackID;        // 18
 		};
 		static_assert(sizeof(Event) == 0x20);
@@ -65,17 +65,17 @@ namespace RE
 
 		struct PerkValueChangedEvent
 		{
-			Type changeType;												// 00
-			BSPointerHandle<Actor, BSUntypedPointerHandle<21, 5>> owner;	// 04
-			BGSPerk* perk;													// 08
-			std::uint8_t rank;												// 10
+			Type                                                  changeType;  // 00
+			BSPointerHandle<Actor, BSUntypedPointerHandle<21, 5>> owner;       // 04
+			BGSPerk*                                              perk;        // 08
+			std::uint8_t                                          rank;        // 10
 		};
 		static_assert(sizeof(PerkValueChangedEvent) == 0x18);
 
 		struct PerkEntryUpdatedEvent
 		{
-			BSPointerHandle<Actor, BSUntypedPointerHandle<21, 5>> owner;	// 00
-			BGSPerkEntry* perkEntry;										// 08
+			BSPointerHandle<Actor, BSUntypedPointerHandle<21, 5>> owner;      // 00
+			BGSPerkEntry*                                         perkEntry;  // 08
 		};
 		static_assert(sizeof(PerkEntryUpdatedEvent) == 0x10);
 	}
@@ -93,16 +93,16 @@ namespace RE
 
 		struct Event
 		{
-			PlayerCharacterQuestEvent::Type changeType;		// 00
-			BGSInstancedQuestObjective* questObjective;		// 08
+			PlayerCharacterQuestEvent::Type changeType;      // 00
+			BGSInstancedQuestObjective*     questObjective;  // 08
 		};
 		static_assert(sizeof(Event) == 0x10);
 	}
 
 	struct TESTrackedStatsEvent
 	{
-		BSFixedString stat; // 00
-		std::int32_t value; // 08
+		BSFixedString stat;   // 00
+		std::int32_t  value;  // 08
 	};
 	static_assert(sizeof(TESTrackedStatsEvent) == 0x10);
 
@@ -118,15 +118,15 @@ namespace RE
 
 		struct Event
 		{
-			TESQuestEvent::Type changeType; // 00
-			TESQuest* quest;				// 08
+			TESQuestEvent::Type changeType;  // 00
+			TESQuest*           quest;       // 08
 		};
 		static_assert(sizeof(Event) == 0x10);
 	}
 
 	struct TESLocationClearedEvent
 	{
-		const BGSLocation* loc;	//00
+		const BGSLocation* loc;  //00
 	};
 	static_assert(sizeof(TESLocationClearedEvent) == 0x8);
 
@@ -134,7 +134,7 @@ namespace RE
 	{
 		struct Event
 		{
-			ACTOR_LIFE_STATE lifeState;	// 00
+			ACTOR_LIFE_STATE lifeState;  // 00
 		};
 		static_assert(sizeof(Event) == 0x4);
 	}
@@ -150,8 +150,8 @@ namespace RE
 
 		struct Event
 		{
-			BSTSmartPointer<ActiveEffect, BSTSmartPointerIntrusiveRefCount> effect; // 00
-			PlayerActiveEffectChanged::Status status;								// 08
+			BSTSmartPointer<ActiveEffect, BSTSmartPointerIntrusiveRefCount> effect;  // 00
+			PlayerActiveEffectChanged::Status                               status;  // 08
 		};
 	}
 
@@ -169,21 +169,20 @@ namespace RE
 			[[nodiscard]] static BSTEventSource<Event>* GetEventSource()
 			{
 				using func_t = decltype(&Event::GetEventSource);
-				static REL::Relocation<func_t> func{ REL::ID(349120) }; // .163
+				static REL::Relocation<func_t> func{ REL::ID(349120) };  // .163
 				return func();
 			}
 
-			std::uint32_t newLevel;	// 00
+			std::uint32_t newLevel;  // 00
 		};
 		static_assert(sizeof(Event) == 0x4);
 	}
-
 
 	namespace LoadingStatusChanged
 	{
 		struct Event
 		{
-			bool isLoading;	// 00
+			bool isLoading;  // 00
 		};
 		static_assert(sizeof(Event) == 0x1);
 	}
@@ -192,8 +191,8 @@ namespace RE
 	{
 		struct Event
 		{
-			const TESBoundObject* item;		// 00
-			const Actor*          equipper;	// 08
+			const TESBoundObject* item;      // 00
+			const Actor*          equipper;  // 08
 		};
 		static_assert(sizeof(Event) == 0x10);
 	}
@@ -202,7 +201,7 @@ namespace RE
 	{
 		struct Event
 		{
-			bool isPlayerInDialogue; // 00
+			bool isPlayerInDialogue;  // 00
 		};
 		static_assert(sizeof(Event) == 0x1);
 	}
@@ -211,7 +210,7 @@ namespace RE
 	{
 		struct Event
 		{
-			bool shouldClearMapMarkers;	// 00
+			bool shouldClearMapMarkers;  // 00
 		};
 		static_assert(sizeof(Event) == 0x1);
 	}
@@ -220,7 +219,7 @@ namespace RE
 	{
 		// intentional
 		struct Event
-		{}; 
+		{};
 	}
 	namespace HolotapeStateChanged
 	{
@@ -244,8 +243,8 @@ namespace RE
 	{
 		struct Event
 		{
-			BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>> owner;	// 00
-			InventoryInterface::Handle* item;										// 04
+			BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>> owner;  // 00
+			InventoryInterface::Handle*                                   item;   // 04
 		};
 	}
 
@@ -253,8 +252,8 @@ namespace RE
 	{
 		struct ComponentFavoriteEvent
 		{
-			BGSComponent* component; // 00
-			bool isFavorited; // 08
+			BGSComponent* component;    // 00
+			bool          isFavorited;  // 08
 		};
 		static_assert(sizeof(ComponentFavoriteEvent) == 0x10);
 	}
@@ -263,8 +262,8 @@ namespace RE
 	{
 		struct Event
 		{
-			std::uint32_t oldDifficulty; // 00
-			std::uint32_t newDifficulty; // 04
+			std::uint32_t oldDifficulty;  // 00
+			std::uint32_t newDifficulty;  // 04
 		};
 		static_assert(sizeof(Event) == 0x8);
 	}
@@ -273,10 +272,10 @@ namespace RE
 	{
 		struct Event
 		{
-			BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>> markerRef;	// 00
-			MapMarkerData* data;														// 08
-			std::uint32_t selectedMarkerIndex;											// 10					
-			bool discovered;															// 14
+			BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>> markerRef;            // 00
+			MapMarkerData*                                                data;                 // 08
+			std::uint32_t                                                 selectedMarkerIndex;  // 10
+			bool                                                          discovered;           // 14
 		};
 		static_assert(sizeof(Event) == 0x18);
 	}
@@ -285,7 +284,7 @@ namespace RE
 	{
 	public:
 		// member
-		ActorHandle actor; // 00
+		ActorHandle actor;  // 00
 	};
 	static_assert(sizeof(BGSActorEvent) == 0x4);
 
@@ -504,7 +503,7 @@ namespace RE
 		}
 
 		// members
-		const BSTArray<HUDModeType>* currentHUDModes; // 00
+		const BSTArray<HUDModeType>* currentHUDModes;  // 00
 	};
 	static_assert(sizeof(HUDModeEvent) == 0x8);
 
@@ -716,11 +715,11 @@ namespace RE
 	{
 	public:
 		// members
-		BSFixedString                 SwfName;						// 00
-		const BGSSoundDescriptorForm* soundForm;					// 08
-		bool                          VATSCritAppliedAnim;			// 10
-		bool                          VATSCritFillenAnim;			// 11
-		bool                          dialogueSpeechChallengeAnim;	// 12
+		BSFixedString                 SwfName;                      // 00
+		const BGSSoundDescriptorForm* soundForm;                    // 08
+		bool                          VATSCritAppliedAnim;          // 10
+		bool                          VATSCritFillenAnim;           // 11
+		bool                          dialogueSpeechChallengeAnim;  // 12
 	};
 	static_assert(sizeof(HUDPerkVaultBoyData) == 0x18);
 
@@ -1041,9 +1040,9 @@ namespace RE
 			}
 
 			// members
-			const TESBoundObject* itemHarvested;		// 00
-			TESObjectREFR*        referenceHarvested;	// 08
-			const Actor*          harvestedBy;			// 10
+			const TESBoundObject* itemHarvested;       // 00
+			TESObjectREFR*        referenceHarvested;  // 08
+			const Actor*          harvestedBy;         // 10
 		};
 		static_assert(sizeof(ItemHarvested) == 0x18);
 	};
@@ -1096,8 +1095,8 @@ namespace RE
 		};
 
 		// members
-		EVENT_TYPE type;			// 00
-		bool       NoLoadScreen;	// 04
+		EVENT_TYPE type;          // 00
+		bool       NoLoadScreen;  // 04
 	};
 	static_assert(sizeof(PositionPlayerEvent) == 0x8);
 

@@ -39,7 +39,7 @@ namespace RE
 			kNeutral = 0x2,
 			kQuestion = 0x3,
 			kTotal = 0x4,
-			kNone  =0x5
+			kNone = 0x5
 		};
 
 		enum SCENE_ACTION_TYPE : std::uint32_t
@@ -80,7 +80,7 @@ namespace RE
 		virtual void              InitItem(void);                                                       // 02
 		virtual void              OnDelete(void);                                                       // 03
 		virtual void              ClearData(void);                                                      // 04
-		virtual void              Copy(void);															// 05
+		virtual void              Copy(void);                                                           // 05
 		virtual bool              QIsLooping(void);                                                     // 06
 		virtual bool              QFaceHeadTrackTarget(const BGSScene* scene);                          // 07
 		virtual SCENE_ACTION_TYPE GetActionType() const = 0;                                            // 08
@@ -154,11 +154,11 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BGSSceneActionPlayerDialogue };
 		static constexpr auto VTABlE{ VTABLE::BGSSceneActionPlayerDialogue };
 
-		std::uint64_t                     dialogueTarget;                  // 90
-		TESTopic*                         pNPCResponseTopics[4];           // 98
-		BGSKeyword*                       pNPCResponseSubtypeKeywords[4];  // B8
-		TESTopic*                         pTopic;                          // D8
-		std::uint32_t					  playerInput;                     // E0
+		std::uint64_t dialogueTarget;                  // 90
+		TESTopic*     pNPCResponseTopics[4];           // 98
+		BGSKeyword*   pNPCResponseSubtypeKeywords[4];  // B8
+		TESTopic*     pTopic;                          // D8
+		std::uint32_t playerInput;                     // E0
 
 		TESTopicInfo* GetCurrentTopicInfo(BGSScene* a_parentScene, TESObjectREFR* a_target, std::uint32_t a_type)
 		{

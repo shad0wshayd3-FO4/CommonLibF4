@@ -81,7 +81,7 @@ namespace RE
 		static_assert(sizeof(CheckStackIDFunctor) == 0x10);
 
 		class alignas(0x08) CheckExtraDataFunctor :
-			public StackDataCompareFunctor // 00
+			public StackDataCompareFunctor  // 00
 		{
 		public:
 			static constexpr auto RTTI{ RTTI::BGSInventoryItem__CheckExtraDataFunctor };
@@ -95,7 +95,7 @@ namespace RE
 			bool CompareData(const BGSInventoryItem::Stack&) override { return this->extra == extra; }
 
 			// members
-			const ExtraDataList* extra;	// 08
+			const ExtraDataList* extra;  // 08
 		};
 		static_assert(sizeof(CheckExtraDataFunctor) == 0x10);
 
@@ -147,7 +147,7 @@ namespace RE
 		static_assert(sizeof(ModifyModDataFunctor) == 0x30);
 
 		class __declspec(novtable) SetHealthFunctor :
-			public StackDataWriteFunctor // 00
+			public StackDataWriteFunctor  // 00
 		{
 		public:
 			static constexpr auto RTTI{ RTTI::BGSInventoryItem__SetHealthFunctor };
@@ -160,10 +160,10 @@ namespace RE
 			}
 
 			// override (StackDataWriteFunctor)
-			void WriteDataImpl(TESBoundObject&, BGSInventoryItem::Stack&) override; // 01
+			void WriteDataImpl(TESBoundObject&, BGSInventoryItem::Stack&) override;  // 01
 
 			// members
-			float health;									// 10
+			float health;  // 10
 		};
 		static_assert(sizeof(SetHealthFunctor) == 0x18);
 

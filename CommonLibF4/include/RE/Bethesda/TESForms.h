@@ -1802,10 +1802,10 @@ namespace RE
 			return func(this);
 		}
 
-		[[nodiscard]] bool         IsRandom() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kRandom); }
-		[[nodiscard]] bool         IsRandomEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kRandomEnd); }
-		[[nodiscard]] bool         IsSayOnce() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kSayOnce); }
-		[[nodiscard]] bool         StartSceneOnEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kStartSceneOnEnd); }
+		[[nodiscard]] bool IsRandom() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kRandom); }
+		[[nodiscard]] bool IsRandomEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kRandomEnd); }
+		[[nodiscard]] bool IsSayOnce() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kSayOnce); }
+		[[nodiscard]] bool StartSceneOnEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kStartSceneOnEnd); }
 
 		// members
 		TESTopic*           parentTopic;       // 20
@@ -1822,8 +1822,8 @@ namespace RE
 
 	struct TOPIC_INFO_SCENEDATA
 	{
-		BGSScene* scene;		// 00
-		std::uint32_t phase;	// 08
+		BGSScene*     scene;  // 00
+		std::uint32_t phase;  // 08
 	};
 	static_assert(sizeof(TOPIC_INFO_SCENEDATA) == 0x10);
 
@@ -2946,7 +2946,7 @@ namespace RE
 		public IKeywordFormBase  // 20
 	{
 	public:
-		enum class FLAG 
+		enum class FLAG
 		{
 			kBeginOnQuestStart = 0x0,
 			kStopQuestOnEnd = 0x1,
@@ -3376,9 +3376,9 @@ namespace RE
 		static_assert(sizeof(RuleSet) == 0x18);
 
 		// members
-		ENUM_FORM_ID							 type;          // 020
-		RuleSet                                  ruleSets[10];  // 028
-		BSTArray<const BGSInstanceNamingRules*>  mergeSources;  // 118
+		ENUM_FORM_ID                            type;          // 020
+		RuleSet                                 ruleSets[10];  // 028
+		BSTArray<const BGSInstanceNamingRules*> mergeSources;  // 118
 	};
 	static_assert(sizeof(BGSInstanceNamingRules) == 0x130);
 

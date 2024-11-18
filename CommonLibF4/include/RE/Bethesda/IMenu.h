@@ -1947,9 +1947,8 @@ namespace RE
 			F4_HEAP_REDEFINE_NEW(InitDataRepairFailure);
 
 			// members
-			const BSTArray<BSTTuple<TESForm *,BGSTypedFormValuePair::SharedVal>>* requiredItems;  // 20
-			BSTHashMap<TESBoundObject*, std::uint32_t> availableComponents;						  // 28
-			
+			const BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* requiredItems;        // 20
+			BSTHashMap<TESBoundObject*, std::uint32_t>                            availableComponents;  // 28
 		};
 		static_assert(sizeof(InitDataRepairFailure) == 0x58);
 

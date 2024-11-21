@@ -334,7 +334,7 @@ namespace RE
 		if (mem) {                                                                                            \
 			return mem;                                                                                       \
 		} else {                                                                                              \
-			stl::report_and_fail("out of memory"sv);                                                          \
+			RE::stl::report_and_fail("out of memory"sv);                                                      \
 		}                                                                                                     \
 	}                                                                                                         \
                                                                                                               \
@@ -344,7 +344,7 @@ namespace RE
 		if (mem) {                                                                                            \
 			return mem;                                                                                       \
 		} else {                                                                                              \
-			stl::report_and_fail("out of memory"sv);                                                          \
+			RE::stl::report_and_fail("out of memory"sv);                                                      \
 		}                                                                                                     \
 	}                                                                                                         \
                                                                                                               \
@@ -368,7 +368,7 @@ namespace RE
 		if (mem) {                                                        \
 			return mem;                                                   \
 		} else {                                                          \
-			stl::report_and_fail("out of memory"sv);                      \
+			RE::stl::report_and_fail("out of memory"sv);                  \
 		}                                                                 \
 	}                                                                     \
                                                                           \
@@ -378,7 +378,7 @@ namespace RE
 		if (mem) {                                                        \
 			return mem;                                                   \
 		} else {                                                          \
-			stl::report_and_fail("out of memory"sv);                      \
+			RE::stl::report_and_fail("out of memory"sv);                  \
 		}                                                                 \
 	}                                                                     \
                                                                           \
@@ -396,7 +396,7 @@ namespace RE
 		if (mem) {                                                                \
 			return mem;                                                           \
 		} else {                                                                  \
-			stl::report_and_fail("out of memory"sv);                              \
+			RE::stl::report_and_fail("out of memory"sv);                          \
 		}                                                                         \
 	}                                                                             \
                                                                                   \
@@ -406,7 +406,7 @@ namespace RE
 		if (mem) {                                                                \
 			return mem;                                                           \
 		} else {                                                                  \
-			stl::report_and_fail("out of memory"sv);                              \
+			RE::stl::report_and_fail("out of memory"sv);                          \
 		}                                                                         \
 	}                                                                             \
                                                                                   \

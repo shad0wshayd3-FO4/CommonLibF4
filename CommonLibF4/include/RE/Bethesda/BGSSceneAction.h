@@ -34,23 +34,23 @@ namespace RE
 
 		enum SCENE_ACTION_PLAYER_RESPONSE_TYPE : std::uint32_t
 		{
-			kPositive = 0,
-			kNegative = 1,
-			kNeutral = 2,
-			kQuestion = 3,
-			kTotal = 4,
-			kNone
+			kPositive = 0x0,
+			kNegative = 0x1,
+			kNeutral = 0x2,
+			kQuestion = 0x3,
+			kTotal = 0x4,
+			kNone = 0x5
 		};
 
 		enum SCENE_ACTION_TYPE : std::uint32_t
 		{
-			kDialogue = 0,
-			kPackage = 1,
-			kTimer = 2,
-			kPlayerDialogue = 3,
-			kStartScene = 4,
-			kNPCResponse = 5,
-			kRadio = 6,
+			kDialogue = 0x0,
+			kPackage = 0x1,
+			kTimer = 0x2,
+			kPlayerDialogue = 0x3,
+			kStartScene = 0x4,
+			kNPCResponse = 0x5,
+			kRadio = 0x6,
 		};
 
 		enum class Flag
@@ -68,34 +68,34 @@ namespace RE
 
 		enum class Status
 		{
-			kStopped,
-			kRunning,
-			kComplete
+			kStopped = 0x0,
+			kRunning = 0x1,
+			kComplete = 0x2
 		};
 
 		virtual ~BGSSceneAction();  // 00
 
 		// add
-		virtual void              Unk_01(void);                                                         // 01
-		virtual void              Unk_02(void);                                                         // 02
-		virtual void              Unk_03(void);                                                         // 03
-		virtual void              Unk_04(void);                                                         // 04
-		virtual void              Unk_05(void);                                                         // 05
+		virtual void              Load(void);                                                           // 01
+		virtual void              InitItem(void);                                                       // 02
+		virtual void              OnDelete(void);                                                       // 03
+		virtual void              ClearData(void);                                                      // 04
+		virtual void              Copy(void);                                                           // 05
 		virtual bool              QIsLooping(void);                                                     // 06
 		virtual bool              QFaceHeadTrackTarget(const BGSScene* scene);                          // 07
 		virtual SCENE_ACTION_TYPE GetActionType() const = 0;                                            // 08
 		virtual bool              QActionCanEnd();                                                      // 09
 		virtual bool              IsPackageActive(BGSScene* scene, TESPackage* package, Actor* actor);  // 0A
-		virtual void              Unk_0B(void);                                                         // 0B
-		virtual void              Unk_0C(void);                                                         // 0C
-		virtual void              Unk_0D(void);                                                         // 0D
-		virtual void              Unk_0E(void);                                                         // 0E
-		virtual void              Unk_0F(void);                                                         // 0F
-		virtual void              Unk_10(void);                                                         // 10
-		virtual void              Unk_11(void);                                                         // 11
+		virtual void              LoadGame(void);                                                       // 0B
+		virtual void              SaveGame(void);                                                       // 0C
+		virtual void              Revert(void);                                                         // 0D
+		virtual void              InitLoadGame(void);                                                   // 0E
+		virtual void              ResetActionData(void);                                                // 0F
+		virtual void              SetInput(void);                                                       // 10
+		virtual float             GetActionPercentDone(const BGSScene* scene);                          // 11
 		virtual void              StartAction(BGSScene* scene);                                         // 12
 		virtual void              EndAction(BGSScene* scene);                                           // 13
-		virtual void              CleanUpActionActor(void);                                             // 14
+		virtual void              CleanUpActionActor(BGSScene* scene);                                  // 14
 		virtual void              UpdateAction(BGSScene* scene);                                        // 14
 
 		// members
@@ -154,16 +154,36 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BGSSceneActionPlayerDialogue };
 		static constexpr auto VTABlE{ VTABLE::BGSSceneActionPlayerDialogue };
 
-		std::uint64_t                     dialogueTarget;                  // 90
-		TESTopic*                         pNPCResponseTopics[4];           // 98
-		BGSKeyword*                       pNPCResponseSubtypeKeywords[4];  // B8
-		TESTopic*                         pTopic;                          // D8
-		SCENE_ACTION_PLAYER_RESPONSE_TYPE playerInput;                     // E0
+		std::uint64_t dialogueTarget;                  // 90
+		TESTopic*     pNPCResponseTopics[4];           // 98
+		BGSKeyword*   pNPCResponseSubtypeKeywords[4];  // B8
+		TESTopic*     pTopic;                          // D8
+		std::uint32_t playerInput;                     // E0
+
+		TESTopicInfo* GetCurrentTopicInfo(BGSScene* a_parentScene, TESObjectREFR* a_target, std::uint32_t a_type)
+		{
+			using func_t = decltype(&BGSSceneActionPlayerDialogue::GetCurrentTopicInfo);
+			static REL::Relocation<func_t> func{ REL::ID(2196825) };
+			return func(this, a_parentScene, a_target, a_type);
+		}
 	};
 	static_assert(sizeof(BGSSceneActionPlayerDialogue) == 0xE8);
 
-	class __declspec(novtable) BGSSceneActionNPCResponseDialogue : public BGSSceneActionConversationBase
-	{};
+	class __declspec(novtable) BGSSceneActionNPCResponseDialogue :
+		public BGSSceneActionConversationBase
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::BGSSceneActionNPCResponseDialogue };
+		static constexpr auto VTABLE{ VTABLE::BGSSceneActionNPCResponseDialogue };
+
+		TESTopicInfo* GetCurrentTopicInfo(BGSScene* a_parentScene)
+		{
+			using func_t = decltype(&BGSSceneActionNPCResponseDialogue::GetCurrentTopicInfo);
+			static REL::Relocation<func_t> func{ REL::ID(2196825) };
+			return func(this, a_parentScene);
+		}
+	};
+	static_assert(sizeof(BGSSceneActionNPCResponseDialogue) == 0x90);
 
 	class __declspec(novtable) BGSSceneActionStartScene :
 		public BGSSceneAction

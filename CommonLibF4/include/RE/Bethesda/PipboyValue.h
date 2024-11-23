@@ -33,13 +33,25 @@ namespace RE
 			kObject = 0x8,
 		};
 
-		virtual ~PipboyValue();  // 00
+		virtual ~PipboyValue() = default;  // 00
 
 		// add
 		virtual void                    CleanDirtyToGame();                                                        // 01
 		virtual void                    Serialize(Json::Value* a_json) = 0;                                        // 02
 		virtual void                    SerializeChanges(BSBinarySerializer& a_serializer, bool a_fullSerialize);  // 03
 		virtual SERIALIZATION_DATA_TYPE GetType() = 0;                                                             // 04
+
+		PipboyValue(PipboyValue* a_parentValue)
+		{
+			ctor(a_parentValue);
+		};
+
+		void ctor(PipboyValue* a_parentValue)
+		{
+			using func_t = decltype(&PipboyValue::ctor);
+			REL::Relocation<func_t> func{ REL::ID(2225915) };
+			return func(this, a_parentValue);
+		}
 
 		// members
 		std::uint32_t id;                  // 08

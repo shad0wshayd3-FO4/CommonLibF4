@@ -44,13 +44,13 @@ namespace RE
 	public:
 		enum class BS_DEVICES
 		{
-			kKeyboard,
-			kMouse,
-			kGamepad,
-			kDebugGamepad,
-			kVirtualKeyboard,
+			kKeyboard = 0x0,
+			kMouse = 0x1,
+			kGamepad = 0x2,
+			kDebugGamepad = 0x3,
+			kVirtualKeyboard = 0x4,
 
-			kTotal
+			kTotal = 0x5
 		};
 
 		[[nodiscard]] static BSInputDeviceManager* GetSingleton()

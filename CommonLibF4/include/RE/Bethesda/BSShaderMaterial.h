@@ -24,35 +24,35 @@ namespace RE
 		enum class Feature
 		{
 			kNone = static_cast<std::underlying_type_t<Feature>>(-1),
-			kDefault = 0,
-			kEnvmap,
-			kGlowmap,
-			kParallax,
-			kFace,
-			kSkinTint,
-			kHairTint,
-			kParallaxOcc,
-			kLandscape,
-			kLODLandscape,
-			kSnow,
-			kMultiLayerParallax,
-			kTreeAnim,
-			kLODObjects,
-			kMultiIndexSnow,
-			kLODObjectsHD,
-			kEye,
-			kCloud,
-			kLODLandscapeNoise,
-			kLODLandscapeBlend,
-			kDismemberment
+			kDefault = 0x0,
+			kEnvmap = 0x1,
+			kGlowmap = 0x2,
+			kParallax = 0x3,
+			kFace = 0x4,
+			kSkinTint = 0x5,
+			kHairTint = 0x6,
+			kParallaxOcc = 0x7,
+			kLandscape = 0x8,
+			kLODLandscape = 0x9,
+			kSnow = 0xA,
+			kMultiLayerParallax = 0xB,
+			kTreeAnim = 0xC,
+			kLODObjects = 0xD,
+			kMultiIndexSnow = 0xE,
+			kLODObjectsHD = 0xF,
+			kEye = 0x10,
+			kCloud = 0x11,
+			kLODLandscapeNoise = 0x12,
+			kLODLandscapeBlend = 0x13,
+			kDismemberment = 0x14
 		};
 
 		enum class Type
 		{
-			kBase = 0,
-			kEffect = 1,
-			kLighting = 2,
-			kWater = 3
+			kBase = 0x0,
+			kEffect = 0x1,
+			kLighting = 0x2,
+			kWater = 0x3
 		};
 
 		virtual ~BSShaderMaterial();

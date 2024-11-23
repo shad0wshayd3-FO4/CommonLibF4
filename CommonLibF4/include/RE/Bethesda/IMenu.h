@@ -83,59 +83,59 @@ namespace RE
 
 	enum class HUDColorTypes
 	{
-		kNoColorMultiplier = 0,
-		kMenuNoColorBackground = 1,
-		kGameplayHUDColor = 2,
-		kPlayerSetColor = 3,
-		kPowerArmorColorOnly = 4,
-		kWarningColor = 5,
-		kAltWarningColor = 6,
-		kCustomColor = 7
+		kNoColorMultiplier = 0x0,
+		kMenuNoColorBackground = 0x1,
+		kGameplayHUDColor = 0x2,
+		kPlayerSetColor = 0x3,
+		kPowerArmorColorOnly = 0x4,
+		kWarningColor = 0x5,
+		kAltWarningColor = 0x6,
+		kCustomColor = 0x7
 	};
 
 	enum class MENU_RENDER_CONTEXT : std::int32_t
 	{
-		kMenuDelete,
-		kPreDisplay,
-		kRenderScreenspace,
-		kRenderCopyQuads,
-		kRenderImagespace,
-		kEnsureDisplayMenuCalled,
-		kPostDisplay
+		kMenuDelete = 0x0,
+		kPreDisplay = 0x1,
+		kRenderScreenspace = 0x2,
+		kRenderCopyQuads = 0x3,
+		kRenderImagespace = 0x4,
+		kEnsureDisplayMenuCalled = 0x5,
+		kPostDisplay = 0x6
 	};
 
 	enum class PIPBOY_PAGES : std::uint32_t
 	{
-		kStat,
-		kInv,
-		kData,
-		kMap,
-		kRadio
+		kStat = 0x0,
+		kInv = 0x1,
+		kData = 0x2,
+		kMap = 0x3,
+		kRadio = 0x4
 	};
 
 	enum class UI_DEPTH_PRIORITY
 	{
-		kUndefined,
-		k3DUnderHUD,  // WorkshopMenu3D
-		kBook,        // BookMenu
-		kScope,       // ScopeMenu
-		kSWFLoader,
-		kHUD,
-		kStandard,         // PipboyMenu, PowerArmorRenderer, HUDRainRenderer, LockpickingMenu3D
-		kStandard3DModel,  // Container3D, WorkbenchItem3D
-		kPipboy,
-		kTerminal,
-		kGameMessage,
-		kPauseMenu,
-		kLoadingFader,
-		kLoading3DModel,  // BackgroundScreenModel
-		kLoadingMenu,
-		kMessage,
-		kButtonBarMenu,  // FlatScreenModel, HUDScreenModel
-		kButtonBarSupressingMenu,
-		kDebug,
-		kConsole,
-		kCursor
+		kUndefined = 0x0,
+		k3DUnderHUD = 0x1,  // WorkshopMenu3D
+		kBook = 0x2,        // BookMenu
+		kScope = 0x3,       // ScopeMenu
+		kSWFLoader = 0x4,
+		kHUD = 0x5,
+		kStandard = 0x6,         // PipboyMenu, PowerArmorRenderer, HUDRainRenderer, LockpickingMenu3D
+		kStandard3DModel = 0x7,  // Container3D, WorkbenchItem3D
+		kPipboy = 0x8,
+		kTerminal = 0x9,
+		kGameMessage = 0xA,
+		kPauseMenu = 0xB,
+		kLoadingFader = 0xC,
+		kLoading3DModel = 0xD,  // BackgroundScreenModel
+		kLoadingMenu = 0xE,
+		kMessage = 0xF,
+		kButtonBarMenu = 0x10,  // FlatScreenModel, HUDScreenModel
+		kButtonBarSupressingMenu = 0x11,
+		kDebug = 0x12,
+		kConsole = 0x13,
+		kCursor = 0x14
 	};
 
 	enum class UI_MENU_FLAGS : std::uint32_t
@@ -211,7 +211,7 @@ namespace RE
 		void UpdateDataModels()
 		{
 			using func_t = decltype(&GameUIModel::UpdateDataModels);
-			static REL::Relocation<func_t> func{ REL::ID(1269653) };
+			static REL::Relocation<func_t> func{ REL::ID(2220905) };
 			return func(this);
 		}
 	};
@@ -297,7 +297,7 @@ namespace RE
 		virtual bool PassesRenderConditionText(MENU_RENDER_CONTEXT a_reason, const BSFixedString& a_customRendererName) const  // 07
 		{
 			using func_t = decltype(&IMenu::PassesRenderConditionText);
-			static REL::Relocation<func_t> func{ REL::ID(937304) };
+			static REL::Relocation<func_t> func{ REL::ID(2287379) };
 			return func(this, a_reason, a_customRendererName);
 		}
 
@@ -932,10 +932,10 @@ namespace RE
 
 		enum class ShowMenuState
 		{
-			kConstructed = 0,
-			kShown,
-			kHidden,
-			kReshowOnDestructor
+			kConstructed = 0x0,
+			kShown = 0x1,
+			kHidden = 0x2,
+			kReshowOnDestructor = 0x3
 		};
 
 		// members
@@ -1272,7 +1272,7 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyInventoryMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(762897) };
+			static REL::Relocation<func_t> func{ REL::ID(2224143) };
 			return func(this);
 		}
 	};
@@ -1500,13 +1500,13 @@ namespace RE
 		public:
 			enum class SORT_ON_FIELD
 			{
-				kAlphabetical = 0,
-				kDamage = 1,
-				kRateOfFire = 2,
-				kRange = 3,
-				kAccuracy = 4,
-				kValue = 5,
-				kWeight = 6,
+				kAlphabetical = 0x0,
+				kDamage = 0x1,
+				kRateOfFire = 0x2,
+				kRange = 0x3,
+				kAccuracy = 0x4,
+				kValue = 0x5,
+				kWeight = 0x6,
 			};
 
 			void IncrementSort()
@@ -1804,6 +1804,13 @@ namespace RE
 		virtual void                 ShowBuildFailureMessage();                    // 1A
 		virtual bool                 TryCreate() = 0;                              // 1B
 
+		void UpdateOptimizedAutoBuildInv()
+		{
+			using func_t = decltype(&WorkbenchMenuBase::UpdateOptimizedAutoBuildInv);
+			static REL::Relocation<func_t> func{ REL::ID(2224955) };
+			return func(this);
+		}
+
 		// members
 		NiPointer<TESObjectREFR>                   sharedContainerRef;        // 0E0
 		NiPointer<TESObjectREFR>                   workbenchContainerRef;     // 0E8
@@ -1839,10 +1846,10 @@ namespace RE
 
 		enum class CONFIRM_TYPE
 		{
-			kSimple,
-			kBuild,
-			kScrap,
-			kRepairFailure
+			kSimple = 0,
+			kBuild = 1,
+			kScrap = 2,
+			kRepairFailure = 3
 		};
 
 		class __declspec(novtable) ICallback
@@ -1860,7 +1867,7 @@ namespace RE
 			virtual ~ICallback() = default;  // 00
 
 			// add
-			virtual void OnAccept() = 0;  // 01
+			virtual void OnAccept();  // 01
 
 			F4_HEAP_REDEFINE_NEW(ICallback);
 
@@ -1920,6 +1927,31 @@ namespace RE
 		};
 		static_assert(sizeof(InitDataScrap) == 0x40);
 
+		class __declspec(novtable) InitDataRepairFailure :
+			public InitData  // 00
+		{
+		public:
+			static constexpr auto RTTI{ RTTI::ExamineConfirmMenu__InitDataRepairFailure };
+			static constexpr auto VTABLE{ VTABLE::ExamineConfirmMenu__InitDataRepairFailure };
+
+			InitDataRepairFailure(const BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* a_requiredItems) :
+				InitData(GameSettingCollection::GetSingleton()->GetSetting("sCannotRepairMessage")->GetString(), "$OK", CONFIRM_TYPE::kRepairFailure),
+				requiredItems(a_requiredItems)
+			{
+				this->hasCancelButton = false;
+				stl::emplace_vtable(this);
+			}
+
+			virtual ~InitDataRepairFailure() = default;  // 00
+
+			F4_HEAP_REDEFINE_NEW(InitDataRepairFailure);
+
+			// members
+			const BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* requiredItems;        // 20
+			BSTHashMap<TESBoundObject*, std::uint32_t>                            availableComponents;  // 28
+		};
+		static_assert(sizeof(InitDataRepairFailure) == 0x58);
+
 		// members
 		Scaleform::GFx::Value confirmObj;  // E0
 	};
@@ -1950,6 +1982,72 @@ namespace RE
 		std::uint32_t itemIndex;  // 10
 	};
 	static_assert(sizeof(ScrapItemCallback) == 0x18);
+
+	class __declspec(novtable) RepairFailureCallback :
+		public ExamineConfirmMenu::ICallback  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::__RepairFailureCallback };
+		static constexpr auto VTABLE{ VTABLE::__RepairFailureCallback };
+
+		RepairFailureCallback(ExamineMenu* a_thisMenu) :
+			ExamineConfirmMenu::ICallback(a_thisMenu)
+		{
+			stl::emplace_vtable(this);
+		}
+
+		virtual ~RepairFailureCallback() = default;  // 00
+
+		// override
+		virtual void OnAccept() override;  // 01
+
+		F4_HEAP_REDEFINE_NEW(RepairFailureCallback);
+	};
+	static_assert(sizeof(RepairFailureCallback) == 0x10);
+
+	class __declspec(novtable) BaseBotConfirmCallback :
+		public ExamineConfirmMenu::ICallback  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::__BaseBotConfirmCallback };
+		static constexpr auto VTABLE{ VTABLE::__BaseBotConfirmCallback };
+
+		BaseBotConfirmCallback(ExamineMenu* a_thisMenu) :
+			ExamineConfirmMenu::ICallback(a_thisMenu)
+		{
+			stl::emplace_vtable(this);
+		}
+
+		virtual ~BaseBotConfirmCallback() = default;  // 00
+
+		// override
+		virtual void OnAccept() override;  // 01
+
+		F4_HEAP_REDEFINE_NEW(BaseBotConfirmCallback);
+	};
+	static_assert(sizeof(BaseBotConfirmCallback) == 0x10);
+
+	class __declspec(novtable) ModConfirmCallback :
+		public ExamineConfirmMenu::ICallback  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::__ModConfirmCallback };
+		static constexpr auto VTABLE{ VTABLE::__ModConfirmCallback };
+
+		ModConfirmCallback(ExamineMenu* a_thisMenu) :
+			ExamineConfirmMenu::ICallback(a_thisMenu)
+		{
+			stl::emplace_vtable(this);
+		}
+
+		virtual ~ModConfirmCallback() = default;  // 00
+
+		// override
+		virtual void OnAccept() override;  // 01
+
+		F4_HEAP_REDEFINE_NEW(ModConfirmCallback);
+	};
+	static_assert(sizeof(ModConfirmCallback) == 0x10);
 
 	class __declspec(novtable) ExamineMenu :
 		public WorkbenchMenuBase  // 00
@@ -2042,15 +2140,22 @@ namespace RE
 		[[nodiscard]] std::uint32_t GetSelectedIndex()
 		{
 			using func_t = decltype(&ExamineMenu::GetSelectedIndex);
-			static REL::Relocation<func_t> func{ REL::ID(776503) };
+			static REL::Relocation<func_t> func{ REL::ID(2223022) };
 			return func(this);
 		}
 
 		void ShowConfirmMenu(ExamineConfirmMenu::InitData* a_data, ExamineConfirmMenu::ICallback* a_callback)
 		{
 			using func_t = decltype(&ExamineMenu::ShowConfirmMenu);
-			static REL::Relocation<func_t> func{ REL::ID(443081) };
+			static REL::Relocation<func_t> func{ REL::ID(2223081) };
 			return func(this, a_data, a_callback);
+		}
+
+		void ConsumeSelectedItems(bool a_autoBuild, const BGSSoundDescriptorForm* a_consumeSound)
+		{
+			using func_t = decltype(&ExamineMenu::ConsumeSelectedItems);
+			static REL::Relocation<func_t> func{ REL::ID(2223052) };
+			return func(this, a_autoBuild, a_consumeSound);
 		}
 
 		// members

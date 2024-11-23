@@ -26,7 +26,7 @@ namespace RE::BSUtilities
 	inline NiAVObject* GetObjectByName(NiAVObject* a_root, const BSFixedString& a_name, bool a_tryInternal, bool a_dontAttach)
 	{
 		using func_t = decltype(&GetObjectByName);
-		static REL::Relocation<func_t> func{ REL::ID(843650) };
+		static REL::Relocation<func_t> func{ REL::ID(2274841) };
 		return func(a_root, a_name, a_tryInternal, a_dontAttach);
 	}
 }

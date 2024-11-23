@@ -30,16 +30,16 @@ namespace RE
 
 		enum class HeadPartType
 		{
-			kMisc,
-			kFace,
-			kEyes,
-			kHair,
-			kFacialHair,
-			kScar,
-			kEyebrows,
-			kMeatcaps,
-			kTeeth,
-			kHeadRear
+			kMisc = 0x0,
+			kFace = 0x1,
+			kEyes = 0x2,
+			kHair = 0x3,
+			kFacialHair = 0x4,
+			kScar = 0x5,
+			kEyebrows = 0x6,
+			kMeatcaps = 0x7,
+			kTeeth = 0x8,
+			kHeadRear = 0x9
 		};
 
 		[[nodiscard]] bool IsExtraPart() const noexcept { return flags.all(Flag::kExtraPart); }

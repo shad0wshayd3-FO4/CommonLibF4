@@ -73,6 +73,13 @@ namespace RE
 			return func(this, a_handleID);
 		}
 
+		[[nodiscard]] bool ForceMergeStacks(const std::uint32_t& a_handleID)
+		{
+			using func_t = decltype(&BGSInventoryInterface::ForceMergeStacks);
+			static REL::Relocation<func_t> func{ REL::ID(2194032) };
+			return func(this, a_handleID);
+		}
+
 		// members
 		BSTArray<Agent> agentArray;  // B8
 	};

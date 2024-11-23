@@ -24,11 +24,6 @@ namespace RE
 		enum class CastingSource;
 	}
 
-	namespace BGSBodyPartDefs
-	{
-		enum class LIMB_ENUM;
-	}
-
 	class ActorCause;
 	class BGSAnimationSequencer;
 	class BGSDecalGroup;
@@ -100,12 +95,12 @@ namespace RE
 
 	enum class ITEM_REMOVE_REASON
 	{
-		kNone = 0,
-		kStealing = 1,
-		kSelling = 2,
-		KDropping = 3,
-		kStoreContainer = 4,
-		kStoreTeammate = 5
+		kNone = 0x0,
+		kStealing = 0x1,
+		kSelling = 0x2,
+		KDropping = 0x3,
+		kStoreContainer = 0x4,
+		kStoreTeammate = 0x5
 	};
 
 	enum class RESET_3D_FLAGS
@@ -345,7 +340,7 @@ namespace RE
 			bool a_alwaysContinue = false)
 		{
 			using func_t = decltype(&BGSInventoryList::FindAndWriteStackDataForItem);
-			static REL::Relocation<func_t> func{ REL::ID(1354005) };
+			static REL::Relocation<func_t> func{ REL::ID(2194179) };
 			return func(this, a_object, a_compareFunc, a_writeFunc, a_objCompFn, a_alwaysContinue);
 		}
 
@@ -393,22 +388,22 @@ namespace RE
 	{
 		kNone = static_cast<std::underlying_type_t<BIPED_OBJECT>>(-1),
 
-		kEditorCount = 32,
+		kEditorCount = 0x20,
 
 		kWeaponHand = kEditorCount,
-		kWeaponSword,
-		kWeaponDagger,
-		kWeaponAxe,
-		kWeaponMace,
-		kWeaponTwoHandMelee,
-		kWeaponBow,
-		kWeaponStaff,
-		kQuiver,
-		kWeaponGun,
-		kWeaponGrenade,
-		kWeaponMine,
+		kWeaponSword = 0x21,
+		kWeaponDagger = 0x22,
+		kWeaponAxe = 0x23,
+		kWeaponMace = 0x24,
+		kWeaponTwoHandMelee = 0x25,
+		kWeaponBow = 0x26,
+		kWeaponStaff = 0x27,
+		kQuiver = 0x28,
+		kWeaponGun = 0x29,
+		kWeaponGrenade = 0x2A,
+		kWeaponMine = 0x2B,
 
-		kTotal
+		kTotal = 0x2C
 	};
 
 	struct BIPOBJECT
@@ -461,15 +456,15 @@ namespace RE
 	enum class LOCK_LEVEL
 	{
 		kUnlocked = static_cast<std::underlying_type_t<BIPED_OBJECT>>(-1),
-		kEasy = 0,
-		kAverage = 1,
-		kHard = 2,
-		kVeryHard = 3,
-		kRequiresKey = 4,
-		kInaccessible = 5,
-		kTerminal = 6,
-		kBarred = 7,
-		kChained = 8,
+		kEasy = 0x0,
+		kAverage = 0x1,
+		kHard = 0x2,
+		kVeryHard = 0x3,
+		kRequiresKey = 0x4,
+		kInaccessible = 0x5,
+		kTerminal = 0x6,
+		kBarred = 0x7,
+		kChained = 0x8,
 	};
 
 	struct REFR_LOCK
@@ -478,7 +473,7 @@ namespace RE
 		[[nodiscard]] LOCK_LEVEL GetLockLevel(TESObjectREFR* a_owner)
 		{
 			using func_t = decltype(&REFR_LOCK::GetLockLevel);
-			static REL::Relocation<func_t> func{ REL::ID(782953) };
+			static REL::Relocation<func_t> func{ REL::ID(2191018) };
 			return func(this, a_owner);
 		}
 
@@ -673,7 +668,7 @@ namespace RE
 		void AddInventoryItem(TESBoundObject* a_object, BSTSmartPointer<ExtraDataList> a_extra, std::uint32_t a_count, TESObjectREFR* a_oldContainer, const INSTANCE_FILTER* a_filter, TESObjectREFR* a_overrideRef)
 		{
 			using func_t = decltype(&TESObjectREFR::AddInventoryItem);
-			static REL::Relocation<func_t> func{ REL::ID(78185) };
+			static REL::Relocation<func_t> func{ REL::ID(2200949) };
 			return func(this, a_object, a_extra, a_count, a_oldContainer, a_filter, a_overrideRef);
 		}
 
@@ -774,7 +769,7 @@ namespace RE
 		[[nodiscard]] std::int64_t GetGoldAmount()
 		{
 			using func_t = decltype(&TESObjectREFR::GetGoldAmount);
-			static REL::Relocation<func_t> func{ REL::ID(564356) };
+			static REL::Relocation<func_t> func{ REL::ID(2200923) };
 			return func(this);
 		}
 
@@ -795,7 +790,7 @@ namespace RE
 		[[nodiscard]] std::uint32_t GetInventoryObjectCount(const TESBoundObject* a_object)
 		{
 			using func_t = decltype(&TESObjectREFR::GetInventoryObjectCount);
-			static REL::Relocation<func_t> func{ REL::ID(333415) };
+			static REL::Relocation<func_t> func{ REL::ID(2200939) };
 			return func(this, a_object);
 		}
 
@@ -907,7 +902,7 @@ namespace RE
 		bool GetItemCount(uint32_t& count, TESForm* item, bool countComponent)
 		{
 			using func_t = decltype(&TESObjectREFR::GetItemCount);
-			static REL::Relocation<func_t> func{ REL::ID(635042) };
+			static REL::Relocation<func_t> func{ REL::ID(2200996) };
 			return func(this, count, item, countComponent);
 		}
 

@@ -34,8 +34,8 @@ namespace RE
 
 		enum class VATS_MODE_ENUM
 		{
-			kNone = 0,
-			kPlayback = 1
+			kNone = 0x0,
+			kPlayback = 0x1
 		};
 
 		virtual ~VATS();  // 00
@@ -82,4 +82,14 @@ namespace RE
 		BSSpinLock                                  spinLock;                 // D0
 	};
 	static_assert(sizeof(VATS) == 0xD8);
+
+	namespace VATSEvents
+	{
+		struct ModeChange
+		{
+			VATS::VATS_MODE_ENUM oldMode;  // 00
+			VATS::VATS_MODE_ENUM newMode;  // 04
+		};
+		static_assert(sizeof(ModeChange) == 0x8);
+	}
 }

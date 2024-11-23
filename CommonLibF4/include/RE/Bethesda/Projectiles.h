@@ -15,11 +15,6 @@ namespace RE
 	enum class COL_LAYER;
 	enum class ImpactResult;
 
-	namespace BGSBodyPartDefs
-	{
-		enum class LIMB_ENUM;
-	}
-
 	namespace MagicSystem
 	{
 		enum class CastingSource;

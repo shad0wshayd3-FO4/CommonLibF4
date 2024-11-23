@@ -18,7 +18,7 @@ namespace RE
 		kActorBodyPart = 0x7,
 		kRenderedMenu = 0x8,
 		kInvisible = 0x9,
-		kSkyCell = 0xa,
+		kSkyCell = 0xA,
 	};
 
 	struct BSModelDB

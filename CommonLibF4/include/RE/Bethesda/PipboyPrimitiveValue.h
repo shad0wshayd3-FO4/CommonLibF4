@@ -14,9 +14,9 @@ namespace RE
 		virtual ~PipboyPrimitiveValue() {}  // 00
 
 		// override
-		virtual void                    CleanDirtyToGame() override {}                                                            // 00
-		virtual void                    Serialize(Json::Value* a_json) override {}                                                // 01
-		virtual void                    SerializeChanges(BSBinarySerializer& a_serializer, bool a_fullSerialization) override {}  // 03
+		virtual void                    CleanDirtyToGame() override {}                                                                                              // 00
+		virtual void                    Serialize([[maybe_unused]] Json::Value* a_json) override {}                                                                 // 01
+		virtual void                    SerializeChanges([[maybe_unused]] BSBinarySerializer& a_serializer, [[maybe_unused]] bool a_fullSerialization) override {}  // 03
 		virtual SERIALIZATION_DATA_TYPE GetType() override { return SERIALIZATION_DATA_TYPE::kUint32; }
 
 		PipboyPrimitiveValue(std::uint32_t a_value, PipboyValue* a_parentValue) :
@@ -46,9 +46,9 @@ namespace RE
 		virtual ~PipboyPrimitiveValue() {}  // 00
 
 		// override
-		virtual void                    CleanDirtyToGame() override {}                                                            // 00
-		virtual void                    Serialize(Json::Value* a_json) override {}                                                // 01
-		virtual void                    SerializeChanges(BSBinarySerializer& a_serializer, bool a_fullSerialization) override {}  // 03
+		virtual void                    CleanDirtyToGame() override {}                                                                                              // 00
+		virtual void                    Serialize([[maybe_unused]] Json::Value* a_json) override {}                                                                 // 01
+		virtual void                    SerializeChanges([[maybe_unused]] BSBinarySerializer& a_serializer, [[maybe_unused]] bool a_fullSerialization) override {}  // 03
 		virtual SERIALIZATION_DATA_TYPE GetType() override { return SERIALIZATION_DATA_TYPE::kBool; }
 
 		PipboyPrimitiveValue(bool a_value, PipboyValue* a_parentValue) :

@@ -10,6 +10,7 @@ set(SOURCES
 	include/RE/Bethesda/AITimeStamp.h
 	include/RE/Bethesda/ActiveEffect.h
 	include/RE/Bethesda/Actor.h
+	include/RE/Bethesda/ActorUtils.h
 	include/RE/Bethesda/ActorValueInfo.h
 	include/RE/Bethesda/Archive2.h
 	include/RE/Bethesda/Atomic.h

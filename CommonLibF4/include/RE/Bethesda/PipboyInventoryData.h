@@ -6,6 +6,7 @@
 #include "RE/Bethesda/BSTHashMap.h"
 #include "RE/Bethesda/BSTList.h"
 #include "RE/Bethesda/Events.h"
+#include "RE/Bethesda/PipboyArray.h"
 #include "RE/Bethesda/PipboyDataGroup.h"
 
 namespace RE
@@ -84,6 +85,20 @@ namespace RE
 			using func_t = decltype(&PipboyInventoryData::RepopulateItemCardsOnSection);
 			static REL::Relocation<func_t> func{ REL::ID(2225279) };
 			return func(this, itemTypeID);
+		}
+
+		void PopulateItemCardInfo(const BGSInventoryItem* a_inventoryItem, const BGSInventoryItem::Stack* a_stack, PipboyObject* a_data)
+		{
+			using func_t = decltype(&PipboyInventoryData::PopulateItemCardInfo);
+			static REL::Relocation<func_t> func{ REL::ID(2225266) };
+			return func(this, a_inventoryItem, a_stack, a_data);
+		}
+
+		void AddItemCardInfoEntry(const BSFixedStringCS* a_string, float a_value, PipboyArray* a_itemCardSection)
+		{
+			using func_t = decltype(&PipboyInventoryData::AddItemCardInfoEntry);
+			static REL::Relocation<func_t> func{ REL::ID(2225267) };
+			return func(this, a_string, a_value, a_itemCardSection);
 		}
 
 		// members

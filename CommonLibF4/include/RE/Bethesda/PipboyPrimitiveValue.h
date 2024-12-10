@@ -37,7 +37,7 @@ namespace RE
 		// members
 		std::uint32_t value;  // 18
 	};
-	static_assert(sizeof(PipboyPrimitiveValue<bool>) == 0x20);
+	static_assert(sizeof(PipboyPrimitiveValue<std::uint32_t>) == 0x20);
 
 	template <>
 	class __declspec(novtable) PipboyPrimitiveValue<bool> : public PipboyValue

@@ -180,7 +180,7 @@ namespace RE::BGSMod
 			TESObjectMISC* GetLooseMod()
 			{
 				using func_t = decltype(&Mod::GetLooseMod);
-				static REL::Relocation<func_t> func{ REL::ID(1359613) };
+				static REL::Relocation<func_t> func{ REL::ID(2197514) };
 				return func(this);
 			}
 

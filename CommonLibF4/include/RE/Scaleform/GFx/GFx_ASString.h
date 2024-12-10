@@ -13,7 +13,7 @@ namespace RE::Scaleform::GFx
 		[[nodiscard]] ASStringNode* CreateStringNode(const char* a_str)
 		{
 			using func_t = decltype(&ASStringManager::CreateStringNode);
-			static REL::Relocation<func_t> func{ REL::ID(419974) };
+			static REL::Relocation<func_t> func{ REL::ID(2290014) };
 			return func(this, a_str);
 		}
 

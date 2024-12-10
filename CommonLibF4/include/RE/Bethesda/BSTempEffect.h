@@ -58,18 +58,18 @@ namespace RE
 
 	enum class TEMP_EFFECT_TYPE
 	{
-		kTerrain = 0,
-		kWeaponBlood = 1,
-		kDecal = 2,
-		kGeometryDecal = 3,
-		kParticle = 4,
-		kDebris = 5,
-		kSPG = 6,
-		kDefault = 7,
-		kRefDefault = 8,
-		kRefModel = 9,
-		kRefShader = 10,
-		kMagicSummon = 11
+		kTerrain = 0x0,
+		kWeaponBlood = 0x1,
+		kDecal = 0x2,
+		kGeometryDecal = 0x3,
+		kParticle = 0x4,
+		kDebris = 0x5,
+		kSPG = 0x6,
+		kDefault = 0x7,
+		kRefDefault = 0x8,
+		kRefModel = 0x9,
+		kRefShader = 0xA,
+		kMagicSummon = 0xB
 	};
 
 	class __declspec(novtable) BSTempEffect :

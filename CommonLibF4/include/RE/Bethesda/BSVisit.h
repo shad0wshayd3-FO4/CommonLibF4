@@ -10,8 +10,8 @@ namespace RE
 	{
 		enum class BSVisitControl
 		{
-			kContinue = 0,
-			kStop = 1
+			kContinue = 0x0,
+			kStop = 0x1
 		};
 
 		BSVisitControl TraverseScenegraphGeometries(NiAVObject* a_object, std::function<BSVisitControl(BSGeometry*)> a_func);

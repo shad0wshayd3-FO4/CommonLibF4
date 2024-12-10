@@ -20,9 +20,6 @@
 
 namespace RE
 {
-	enum class ACTOR_CRITICAL_STAGE;
-	enum class ACTOR_LIFE_STATE;
-	enum class ACTOR_LOS_LOCATION;
 	enum class ATTACK_STATE_ENUM;
 	enum class COMMAND_TYPE;
 	enum class DEFAULT_OBJECT;
@@ -112,53 +109,89 @@ namespace RE
 		struct PerkEntryUpdatedEvent;
 	}
 
+	enum class ACTOR_CRITICAL_STAGE : std::int32_t
+	{
+		kNone = 0x0,
+		kGooStart = 0x1,
+		kGooEnd = 0x2,
+		kDisintegrateStart = 0x3,
+		kDisintegrateEnd = 0x4,
+		kFreezeStart = 0x5,
+		kFreezeEnd = 0x6,
+		kCount = 0x7
+	};
+
+	enum class ACTOR_LIFE_STATE : std::int32_t
+	{
+		kAlive = 0x0,
+		kDying = 0x1,
+		kDead = 0x2,
+		kUnconscious = 0x3,
+		kReanimate = 0x4,
+		kRecycle = 0x5,
+		kRestrained = 0x6,
+		kEssentialDown = 0x7,
+		kBleedout = 0x8
+	};
+
+	enum class ACTOR_LOS_LOCATION : std::int32_t
+	{
+		kNone = 0x0,
+		kEye = 0x1,
+		kHead = 0x2,
+		kTorse = 0x3,
+		kFeet = 0x4,
+		kCount = 0x5
+	};
+
 	enum class PTYPE : std::int32_t
 	{
-		kExplore = 0,
-		kFollow = 1,
-		kEscore = 2,
-		kEat = 3,
-		kSleep = 4,
-		kWander = 5,
-		kTravel = 6,
-		kAccompany = 7,
-		kUseItemAt = 8,
-		kAmbush = 9,
-		kFleeNonCombat = 10,
-		kCastMagic = 11,
-		kSandbox = 12,
-		kPatrol = 13,
-		kGuard = 14,
-		kDialogue = 15,
-		kUseWeapon = 16,
-		kFind = 17,
-		kCustom = 18,
-		kTemplate = 19,
-		kActivate = 20,
-		kAlarm = 21,
-		kFlee = 22,
-		kTrespass = 23,
-		kSpectator = 24,
-		kGreet = 25,
-		kGetUp = 26,
-		kDoNothing = 27,
-		kInGameDialogue = 28,
-		kSurface = 29,
-		kSearchForAttacker = 30,
-		kAvoidReference = 31,
-		kBumpReaction = 32,
-		kGrenadeMineReaction = 33,
-		kStealWarning = 34,
-		kPickpocketWarning = 35,
-		kMovementBlocked = 36,
-		kVampireFeed = 37,
-		kCannibal = 38,
-		kLand = 39,
-		kUnused = 40,
-		kMountActor = 41,
-		kDismountActor = 42,
-		kClearMountPosition = 43,
-		kClearPowerArmorExit = 44,
+		kExplore = 0x0,
+		kFollow = 0x1,
+		kEscore = 0x2,
+		kEat = 0x3,
+		kSleep = 0x4,
+		kWander = 0x5,
+		kTravel = 0x6,
+		kAccompany = 0x7,
+		kUseItemAt = 0x8,
+		kAmbush = 0x9,
+		kFleeNonCombat = 0xA,
+		kCastMagic = 0xB,
+		kSandbox = 0xC,
+		kPatrol = 0xD,
+		kGuard = 0xE,
+		kDialogue = 0xF,
+		kUseWeapon = 0x10,
+		kFind = 0x11,
+		kCustom = 0x12,
+		kTemplate = 0x13,
+		kActivate = 0x14,
+		kAlarm = 0x15,
+		kFlee = 0x16,
+		kTrespass = 0x17,
+		kSpectator = 0x18,
+		kGreet = 0x19,
+		kGetUp = 0x1A,
+		kDoNothing = 0x1B,
+		kInGameDialogue = 0x1C,
+		kSurface = 0x1D,
+		kSearchForAttacker = 0x1E,
+		kAvoidReference = 0x1F,
+		kBumpReaction = 0x20,
+		kGrenadeMineReaction = 0x21,
+		kStealWarning = 0x22,
+		kPickpocketWarning = 0x23,
+		kMovementBlocked = 0x24,
+		kVampireFeed = 0x25,
+		kCannibal = 0x26,
+		kLand = 0x27,
+		kUnused = 0x28,
+		kMountActor = 0x29,
+		kDismountActor = 0x2A,
+		kClearMountPosition = 0x2B,
+		kClearPowerArmorExit = 0x2C,
+		kCount = 0x2D
 	};
 
 	struct MiddleLowProcessData
@@ -490,9 +523,9 @@ namespace RE
 
 	enum class WEAPON_CULL_TYPE
 	{
-		kGeneral,
-		kAnimation,
-		kWeaponSwitch,
+		kGeneral = 0x0,
+		kAnimation = 0x1,
+		kWeaponSwitch = 0x2,
 	};
 
 	class AITimer
@@ -537,7 +570,7 @@ namespace RE
 		void KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)
 		{
 			using func_t = decltype(&AIProcess::KnockExplosion);
-			static REL::Relocation<func_t> func{ REL::ID(533106) };
+			static REL::Relocation<func_t> func{ REL::ID(2232384) };
 			return func(this, a_actor, a_location, a_magnitude);
 		}
 
@@ -556,7 +589,7 @@ namespace RE
 		bool RequestLoadAnimationsForWeaponChange(Actor& a_actor)
 		{
 			using func_t = decltype(&AIProcess::RequestLoadAnimationsForWeaponChange);
-			static REL::Relocation<func_t> func{ REL::ID(666002) };
+			static REL::Relocation<func_t> func{ REL::ID(2231758) };
 			return func(this, a_actor);
 		}
 
@@ -697,46 +730,46 @@ namespace RE
 
 	enum class LIFE_STATE : std::uint32_t
 	{
-		kAlive,
-		kDying,
-		kDead,
-		kUnconscious,
-		kReanimate,
-		kRecycle,
-		kRestrained,
-		kEssentialDown,
-		kBleedout
+		kAlive = 0x0,
+		kDying = 0x1,
+		kDead = 0x2,
+		kUnconscious = 0x3,
+		kReanimate = 0x4,
+		kRecycle = 0x5,
+		kRestrained = 0x6,
+		kEssentialDown = 0x7,
+		kBleedout = 0x8
 	};
 
 	enum class WEAPON_STATE : std::uint32_t
 	{
-		kSheathed,
-		kWantToDraw,
-		kDrawing,
-		kDrawn,
-		kWantToSheathe,
-		kSheathing
+		kSheathed = 0x0,
+		kWantToDraw = 0x1,
+		kDrawing = 0x2,
+		kDrawn = 0x3,
+		kWantToSheathe = 0x4,
+		kSheathing = 0x5
 	};
 
 	enum class GUN_STATE : std::uint32_t
 	{
-		kDrawn,
-		kRelaxed,
-		kBlocked,
-		kAlert,
-		kReloading,
-		kThrowing,
-		kSighted,
-		kFire,
-		kFireSighted
+		kDrawn = 0x0,
+		kRelaxed = 0x1,
+		kBlocked = 0x2,
+		kAlert = 0x3,
+		kReloading = 0x4,
+		kThrowing = 0x5,
+		kSighted = 0x6,
+		kFire = 0x7,
+		kFireSighted = 0x8
 	};
 
 	enum class INTERACTING_STATE : std::uint32_t
 	{
-		kNotInteracting,
-		kWaitingToInteract,
-		kInteracting,
-		kWaitingToStopInteracting
+		kNotInteracting = 0x0,
+		kWaitingToInteract = 0x1,
+		kInteracting = 0x2,
+		kWaitingToStopInteracting = 0x3
 	};
 
 	class __declspec(novtable) ActorState :
@@ -881,12 +914,12 @@ namespace RE
 
 		enum class DETECTION_PRIORITY
 		{
-			kNone = 0,
-			kVeryLow = 1,
-			kLow = 2,
-			kNormal = 3,
-			kHigh = 4,
-			kCritical = 5,
+			kNone = 0x0,
+			kVeryLow = 0x1,
+			kLow = 0x2,
+			kNormal = 0x3,
+			kHigh = 0x4,
+			kCritical = 0x5,
 		};
 
 		// add
@@ -1265,6 +1298,20 @@ namespace RE
 			return func(this, a_refr, a_owner, a_crime);
 		}
 
+		void UpdateVoiceTimer(bool a_force)
+		{
+			using func_t = decltype(&Actor::UpdateVoiceTimer);
+			static REL::Relocation<func_t> func{ REL::ID(2230178) };
+			return func(this, a_force);
+		}
+
+		BGSBodyPartData* GetBodyPartData()
+		{
+			using func_t = decltype(&Actor::GetBodyPartData);
+			static REL::Relocation<func_t> func{ REL::ID(2229571) };
+			return func(this);
+		}
+
 		// members
 		NiTFlags<std::uint32_t, Actor>                   niFlags;                      // 2D0
 		float                                            updateTargetTimer;            // 2D4
@@ -1365,6 +1412,13 @@ namespace RE
 			using func_t = decltype(&ActorEquipManager::UnequipObject);
 			static REL::Relocation<func_t> func{ REL::ID(2231395) };
 			return func(this, a_actor, a_object, a_number, a_slot, a_stackID, a_queueEquip, a_forceEquip, a_playSounds, a_applyNow, a_slotBeingReplaced);
+		}
+
+		void UnequipItem(Actor* a_actor, const EquippedItem* a_equippedItem, bool a_queueEquip)
+		{
+			using func_t = decltype(&ActorEquipManager::UnequipItem);
+			static REL::Relocation<func_t> func{ REL::ID(2231399) };
+			return func(this, a_actor, a_equippedItem, a_queueEquip);
 		}
 	};
 	static_assert(sizeof(ActorEquipManager) == 0x60);

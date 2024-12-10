@@ -48,22 +48,22 @@ namespace RE
 
 			enum class FreezeState
 			{
-				kUnfrozen,
-				kFreezing,
-				kFrozen
+				kUnfrozen = 0x0,
+				kFreezing = 0x1,
+				kFrozen = 0x2
 			};
 
 			enum class State
 			{
-				kRunning,
-				kFinished,
-				kWaitingOnMemory,
-				kWaitingOnLatentFunction,
-				kWaitingInOtherStackForCall,
-				kWaitingInOtherStackForReturn,
-				kWaitingInOtherStackForReturnNoPop,
-				kRetryReturnNoPop,
-				kRetryCall
+				kRunning = 0x0,
+				kFinished = 0x1,
+				kWaitingOnMemory = 0x2,
+				kWaitingOnLatentFunction = 0x3,
+				kWaitingInOtherStackForCall = 0x4,
+				kWaitingInOtherStackForReturn = 0x5,
+				kWaitingInOtherStackForReturnNoPop = 0x6,
+				kRetryReturnNoPop = 0x7,
+				kRetryCall = 0x8
 			};
 
 			struct MemoryPageData

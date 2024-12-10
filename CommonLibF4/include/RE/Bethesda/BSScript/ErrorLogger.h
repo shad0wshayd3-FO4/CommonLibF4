@@ -29,10 +29,10 @@ namespace RE
 
 			enum class Severity
 			{
-				kInfo,
-				kWarning,
-				kError,
-				kFatal
+				kInfo = 0x0,
+				kWarning = 0x1,
+				kError = 0x2,
+				kFatal = 0x3
 			};
 
 			struct PerThreadErrorCounts

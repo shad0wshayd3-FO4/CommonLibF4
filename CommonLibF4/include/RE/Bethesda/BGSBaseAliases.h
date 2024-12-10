@@ -73,14 +73,14 @@ namespace RE
 
 		enum class FILL_TYPE
 		{
-			kConditions,
-			kForced,
-			kFromAlias,
-			kFromEvent,
-			kCreated,
-			kFromExternal,
-			kUniqueActor,
-			kNearAlias,
+			kConditions = 0x0,
+			kForced = 0x1,
+			kFromAlias = 0x2,
+			kFromEvent = 0x3,
+			kCreated = 0x4,
+			kFromExternal = 0x5,
+			kUniqueActor = 0x6,
+			kNearAlias = 0x7,
 		};
 
 		struct GenericFillData

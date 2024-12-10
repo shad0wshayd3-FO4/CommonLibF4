@@ -33,13 +33,25 @@ namespace RE
 			kObject = 0x8,
 		};
 
-		virtual ~PipboyValue();  // 00
+		virtual ~PipboyValue() = default;  // 00
 
 		// add
 		virtual void                    CleanDirtyToGame();                                                        // 01
 		virtual void                    Serialize(Json::Value* a_json) = 0;                                        // 02
 		virtual void                    SerializeChanges(BSBinarySerializer& a_serializer, bool a_fullSerialize);  // 03
 		virtual SERIALIZATION_DATA_TYPE GetType() = 0;                                                             // 04
+
+		PipboyValue(PipboyValue* a_parentValue)
+		{
+			ctor(a_parentValue);
+		};
+
+		void ctor(PipboyValue* a_parentValue)
+		{
+			using func_t = decltype(&PipboyValue::ctor);
+			REL::Relocation<func_t> func{ REL::ID(2225915) };
+			return func(this, a_parentValue);
+		}
 
 		// members
 		std::uint32_t id;                  // 08
@@ -63,6 +75,20 @@ namespace RE
 		virtual void                    Serialize(Json::Value* a_json) override;                                            // 02
 		virtual void                    SerializeChanges(BSBinarySerializer& a_serializer, bool a_fullSerialize) override;  // 03
 		virtual SERIALIZATION_DATA_TYPE GetType() override;                                                                 // 04
+
+		template <typename T>
+		T GetMember(const BSFixedString& a_name)
+		{
+			const auto it = memberMap.find(a_name);
+			return (it != memberMap.end()) ? static_cast<T>(it->second) : nullptr;
+		}
+
+		void AddMember(const BSFixedString* a_name, PipboyValue* a_member)
+		{
+			using func_t = decltype(&PipboyObject::AddMember);
+			static REL::Relocation<func_t> func{ REL::ID(2225699) };
+			return func(this, a_name, a_member);
+		}
 
 		// members
 		BSTHashMap<BSFixedString, PipboyValue*> memberMap;         // 18

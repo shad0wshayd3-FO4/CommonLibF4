@@ -10,6 +10,7 @@ set(SOURCES
 	include/RE/Bethesda/AITimeStamp.h
 	include/RE/Bethesda/ActiveEffect.h
 	include/RE/Bethesda/Actor.h
+	include/RE/Bethesda/ActorUtils.h
 	include/RE/Bethesda/ActorValueInfo.h
 	include/RE/Bethesda/Archive2.h
 	include/RE/Bethesda/Atomic.h
@@ -197,10 +198,25 @@ set(SOURCES
 	include/RE/Bethesda/Movement.h
 	include/RE/Bethesda/NavMesh.h
 	include/RE/Bethesda/NavMeshInfoMap.h
+	include/RE/Bethesda/PipboyArray.h
 	include/RE/Bethesda/PipboyDataGroup.h
+	include/RE/Bethesda/PipboyDataManager.h
+	include/RE/Bethesda/PipboyInventoryData.h
 	include/RE/Bethesda/PipboyInventoryUtils.h
+	include/RE/Bethesda/PipboyLogData.h
 	include/RE/Bethesda/PipboyManager.h
+	include/RE/Bethesda/PipboyMapData.h
+	include/RE/Bethesda/PipboyPerksData.h
+	include/RE/Bethesda/PipboyPlayerInfoData.h
+	include/RE/Bethesda/PipboyPrimitiveValue.h
+	include/RE/Bethesda/PipboyQuestData.h
+	include/RE/Bethesda/PipboyRadioData.h
+	include/RE/Bethesda/PipboySpecialData.h
+	include/RE/Bethesda/PipboyStatsData.h
+	include/RE/Bethesda/PipboyStatusData.h
+	include/RE/Bethesda/PipboyThrottleManager.h
 	include/RE/Bethesda/PipboyValue.h
+	include/RE/Bethesda/PipboyWorkshopData.h
 	include/RE/Bethesda/PlayerCharacter.h
 	include/RE/Bethesda/PlayerControls.h
 	include/RE/Bethesda/PowerArmor.h

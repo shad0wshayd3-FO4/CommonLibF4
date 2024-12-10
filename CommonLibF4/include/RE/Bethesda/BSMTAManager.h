@@ -51,7 +51,7 @@ namespace RE
 			kWaterStencil = 0x15,
 			kWaterDepth = 0x16,
 
-			kTotal
+			kTotal = 0x17
 		};
 
 		struct CommandBufferPassesMapAccess;
@@ -127,9 +127,9 @@ namespace RE
 	{
 		enum class MODE
 		{
-			kIdle,
-			kCollecting,
-			kExecuting,
+			kIdle = 0x0,
+			kCollecting = 0x1,
+			kExecuting = 0x2,
 		};
 
 		class CalculateBoneMatricesTask

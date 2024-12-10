@@ -30,11 +30,11 @@ namespace RE
 	public:
 		enum class LightingShaderEnum
 		{
-			kStandard,
-			kWater,
-			kEffect,
-			kSky,
-			kTallGrass
+			kStandard = 0x0,
+			kWater = 0x1,
+			kEffect = 0x2,
+			kSky = 0x3,
+			kTallGrass = 0x4
 		};
 
 		// members

@@ -4,22 +4,22 @@ namespace RE::BSResource
 {
 	enum class ErrorCode : std::uint32_t
 	{
-		kNone = 0,
-		kNotExist = 1,
-		kInvalidPath = 2,
-		kFileError = 3,
-		kInvalidType = 4,
-		kMemoryError = 5,
-		kBusy = 6,
-		kInvalidParam = 7,
-		kUnsupported = 8
+		kNone = 0x0,
+		kNotExist = 0x1,
+		kInvalidPath = 0x2,
+		kFileError = 0x3,
+		kInvalidType = 0x4,
+		kMemoryError = 0x5,
+		kBusy = 0x6,
+		kInvalidParam = 0x7,
+		kUnsupported = 0x8
 	};
 
 	enum class SeekMode
 	{
-		kSet = 0,
-		kCurrent = 1,
-		kEnd = 2
+		kSet = 0x0,
+		kCurrent = 0x1,
+		kEnd = 0x2
 	};
 
 	struct FileID

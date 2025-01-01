@@ -184,7 +184,7 @@ namespace RE
 		bool SetGraphVariableBool(const BSFixedString& a_variable, bool a_var)
 		{
 			using func_t = decltype(&IAnimationGraphManagerHolder::SetGraphVariableBool);
-			static REL::Relocation<func_t> func{ REL::ID(1437197) };
+			static REL::Relocation<func_t> func{ REL::ID(2214543) };
 			return func(this, a_variable, a_var);
 		};
 
@@ -205,7 +205,7 @@ namespace RE
 		bool RevertAnimationGraphManager(bool a_performModifyInitialAnimationStateC = true)
 		{
 			using func_t = decltype(&IAnimationGraphManagerHolder::RevertAnimationGraphManager);
-			static REL::Relocation<func_t> func{ REL::ID(41382) };
+			static REL::Relocation<func_t> func{ REL::ID(2214541) };
 			return func(this, a_performModifyInitialAnimationStateC);
 		}
 	};
@@ -480,8 +480,15 @@ namespace RE
 		void SetLocked(bool a_locked)
 		{
 			using func_t = decltype(&REFR_LOCK::SetLocked);
-			static REL::Relocation<func_t> func{ REL::ID(157617) };
+			static REL::Relocation<func_t> func{ REL::ID(2191020) };
 			return func(this, a_locked);
+		}
+
+		bool IsBroken()
+		{
+			using func_t = decltype(&REFR_LOCK::IsBroken);
+			static REL::Relocation<func_t> func{ REL::ID(2191021) };
+			return func(this);
 		}
 
 		// members

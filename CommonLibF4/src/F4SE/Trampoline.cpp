@@ -92,7 +92,7 @@ namespace F4SE
 		REX::W32::MEMORY_BASIC_INFORMATION mbi;
 		do {
 			if (!REX::W32::VirtualQuery(reinterpret_cast<void*>(min), std::addressof(mbi), sizeof(mbi))) {
-				log::error("VirtualQuery failed with code: 0x{:08X}"sv, REX::W32::GetLastError());
+				F4SE::ERROR("VirtualQuery failed with code: 0x{:08X}"sv, REX::W32::GetLastError());
 				return nullptr;
 			}
 
@@ -109,7 +109,7 @@ namespace F4SE
 					if (mem) {
 						return mem;
 					}
-					log::warn("VirtualAlloc failed with code: 0x{:08X}"sv, REX::W32::GetLastError());
+					F4SE::WARN("VirtualAlloc failed with code: 0x{:08X}"sv, REX::W32::GetLastError());
 				}
 			}
 		} while (min < max);
@@ -228,7 +228,7 @@ namespace F4SE
 	void Trampoline::log_stats() const
 	{
 		auto pct = (static_cast<double>(_size) / static_cast<double>(_capacity)) * 100.0;
-		log::debug("{} => {}B / {}B ({:05.2f}%)", _name, _size, _capacity, pct);
+		F4SE::DEBUG("{} => {}B / {}B ({:05.2f}%)", _name, _size, _capacity, pct);
 	}
 
 	Trampoline& GetTrampoline() noexcept

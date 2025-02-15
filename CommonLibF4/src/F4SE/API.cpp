@@ -4,13 +4,15 @@
 #include "F4SE/Logger.h"
 #include "F4SE/Trampoline.h"
 
+#include <spdlog/sinks/basic_file_sink.h>
+#include <spdlog/sinks/msvc_sink.h>
+
 namespace F4SE
 {
-	namespace detail
+	namespace Impl
 	{
 		struct APIStorage
 		{
-		public:
 			APIStorage(const APIStorage&) = delete;
 			APIStorage(APIStorage&&) = delete;
 
@@ -51,9 +53,34 @@ namespace F4SE
 		{
 			auto result = static_cast<T*>(a_intfc->QueryInterface(a_id));
 			if (result && result->Version() > T::kVersion) {
-				log::warn("interface definition is out of date");
+				F4SE::WARN("interface definition is out of date");
 			}
 			return result;
+		}
+
+		void InitLog()
+		{
+			auto path = log::log_directory();
+			if (!path)
+				return;
+
+			*path /= std::format("{}.log", F4SE::GetPluginName());
+
+			std::vector<spdlog::sink_ptr> sinks{
+				std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true),
+				std::make_shared<spdlog::sinks::msvc_sink_mt>()
+			};
+
+			auto logger = std::make_shared<spdlog::logger>("global", sinks.begin(), sinks.end());
+#ifndef NDEBUG
+			logger->set_level(spdlog::level::debug);
+			logger->flush_on(spdlog::level::debug);
+#else
+			logger->set_level(spdlog::level::info);
+			logger->flush_on(spdlog::level::info);
+#endif
+			spdlog::set_default_logger(std::move(logger));
+			spdlog::set_pattern("[%T.%e] [%=5t] [%L] %v");
 		}
 	}
 
@@ -66,7 +93,7 @@ namespace F4SE
 		(void)REL::Module::get();
 		(void)REL::IDDB::get();
 
-		auto&       storage = detail::APIStorage::get();
+		auto&       storage = Impl::APIStorage::get();
 		const auto& intfc = *a_intfc;
 
 		if (const auto pluginVersionData = PluginVersionData::GetSingleton()) {
@@ -78,105 +105,104 @@ namespace F4SE
 		storage.f4seVersion = intfc.F4SEVersion();
 		storage.pluginHandle = intfc.GetPluginHandle();
 		storage.releaseIndex = intfc.GetReleaseIndex();
-		storage.pluginInfoAccessor = reinterpret_cast<const detail::F4SEInterface&>(intfc).GetPluginInfo;
+		storage.pluginInfoAccessor = reinterpret_cast<const Impl::F4SEInterface&>(intfc).GetPluginInfo;
 		storage.saveFolderName = intfc.GetSaveFolderName();
 
 		if (a_log) {
-			log::init();
-			log::info("{} v{}", GetPluginName(), GetPluginVersion());
+			Impl::InitLog();
+			F4SE::INFO("{} v{}", GetPluginName(), GetPluginVersion());
 		}
 
-		storage.messagingInterface = detail::QueryInterface<MessagingInterface>(a_intfc, LoadInterface::kMessaging);
-		storage.scaleformInterface = detail::QueryInterface<ScaleformInterface>(a_intfc, LoadInterface::kScaleform);
-		storage.papyrusInterface = detail::QueryInterface<PapyrusInterface>(a_intfc, LoadInterface::kPapyrus);
-		storage.serializationInterface = detail::QueryInterface<SerializationInterface>(a_intfc, LoadInterface::kSerialization);
-		storage.taskInterface = detail::QueryInterface<TaskInterface>(a_intfc, LoadInterface::kTask);
-		storage.objectInterface = detail::QueryInterface<ObjectInterface>(a_intfc, LoadInterface::kObject);
-		storage.trampolineInterface = detail::QueryInterface<TrampolineInterface>(a_intfc, LoadInterface::kTrampoline);
+		storage.messagingInterface = Impl::QueryInterface<MessagingInterface>(a_intfc, LoadInterface::kMessaging);
+		storage.scaleformInterface = Impl::QueryInterface<ScaleformInterface>(a_intfc, LoadInterface::kScaleform);
+		storage.papyrusInterface = Impl::QueryInterface<PapyrusInterface>(a_intfc, LoadInterface::kPapyrus);
+		storage.serializationInterface = Impl::QueryInterface<SerializationInterface>(a_intfc, LoadInterface::kSerialization);
+		storage.taskInterface = Impl::QueryInterface<TaskInterface>(a_intfc, LoadInterface::kTask);
+		storage.objectInterface = Impl::QueryInterface<ObjectInterface>(a_intfc, LoadInterface::kObject);
+		storage.trampolineInterface = Impl::QueryInterface<TrampolineInterface>(a_intfc, LoadInterface::kTrampoline);
 	}
 
 	std::string_view GetPluginName() noexcept
 	{
-		return detail::APIStorage::get().pluginName;
+		return Impl::APIStorage::get().pluginName;
 	}
 
 	std::string_view GetPluginAuthor() noexcept
 	{
-		return detail::APIStorage::get().pluginAuthor;
+		return Impl::APIStorage::get().pluginAuthor;
 	}
 
 	REL::Version GetPluginVersion() noexcept
 	{
-		return detail::APIStorage::get().pluginVersion;
+		return Impl::APIStorage::get().pluginVersion;
 	}
 
 	REL::Version GetF4SEVersion() noexcept
 	{
-		return detail::APIStorage::get().f4seVersion;
+		return Impl::APIStorage::get().f4seVersion;
 	}
 
 	PluginHandle GetPluginHandle() noexcept
 	{
-		return detail::APIStorage::get().pluginHandle;
+		return Impl::APIStorage::get().pluginHandle;
 	}
 
 	std::uint32_t GetReleaseIndex() noexcept
 	{
-		return detail::APIStorage::get().releaseIndex;
+		return Impl::APIStorage::get().releaseIndex;
 	}
 
-	std::optional<PluginInfo> GetPluginInfo(stl::zstring a_plugin) noexcept
+	const PluginInfo* GetPluginInfo(std::string_view a_plugin) noexcept
 	{
-		const auto& accessor = detail::APIStorage::get().pluginInfoAccessor;
-		if (accessor) {
-			const auto result = accessor(a_plugin.data());
-			if (result) {
-				return *static_cast<const PluginInfo*>(result);
+		if (const auto& accessor = Impl::APIStorage::get().pluginInfoAccessor) {
+			if (const auto result = accessor(a_plugin.data())) {
+				return static_cast<const PluginInfo*>(result);
 			}
 		}
 
-		log::warn("failed to get plugin info for {}", a_plugin);
-		return std::nullopt;
+		F4SE::WARN("failed to get plugin info for {}", a_plugin);
+
+		return nullptr;
 	}
 
 	std::string_view GetSaveFolderName() noexcept
 	{
-		return detail::APIStorage::get().saveFolderName;
+		return Impl::APIStorage::get().saveFolderName;
 	}
 
 	const MessagingInterface* GetMessagingInterface() noexcept
 	{
-		return detail::APIStorage::get().messagingInterface;
+		return Impl::APIStorage::get().messagingInterface;
 	}
 
 	const ScaleformInterface* GetScaleformInterface() noexcept
 	{
-		return detail::APIStorage::get().scaleformInterface;
+		return Impl::APIStorage::get().scaleformInterface;
 	}
 
 	const PapyrusInterface* GetPapyrusInterface() noexcept
 	{
-		return detail::APIStorage::get().papyrusInterface;
+		return Impl::APIStorage::get().papyrusInterface;
 	}
 
 	const SerializationInterface* GetSerializationInterface() noexcept
 	{
-		return detail::APIStorage::get().serializationInterface;
+		return Impl::APIStorage::get().serializationInterface;
 	}
 
 	const TaskInterface* GetTaskInterface() noexcept
 	{
-		return detail::APIStorage::get().taskInterface;
+		return Impl::APIStorage::get().taskInterface;
 	}
 
 	const ObjectInterface* GetObjectInterface() noexcept
 	{
-		return detail::APIStorage::get().objectInterface;
+		return Impl::APIStorage::get().objectInterface;
 	}
 
 	const TrampolineInterface* GetTrampolineInterface() noexcept
 	{
-		return detail::APIStorage::get().trampolineInterface;
+		return Impl::APIStorage::get().trampolineInterface;
 	}
 
 	void AllocTrampoline(std::size_t a_size) noexcept

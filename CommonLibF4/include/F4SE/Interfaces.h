@@ -26,7 +26,7 @@ namespace F4SE
 	class ObjectRegistry;
 	class PersistentObjectStorage;
 
-	namespace detail
+	namespace Impl
 	{
 		struct F4SEInterface
 		{
@@ -107,7 +107,7 @@ namespace F4SE
 	protected:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEInterface&>(*this);
 		}
 
 	private:
@@ -155,7 +155,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEMessagingInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEMessagingInterface&>(*this);
 		}
 
 	public:
@@ -206,7 +206,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEScaleformInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEScaleformInterface&>(*this);
 		}
 
 	public:
@@ -227,7 +227,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SESerializationInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SESerializationInterface&>(*this);
 		}
 
 	public:
@@ -319,7 +319,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEPapyrusInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEPapyrusInterface&>(*this);
 		}
 
 	public:
@@ -353,7 +353,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SETaskInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SETaskInterface&>(*this);
 		}
 
 		class TaskDelegate :
@@ -389,7 +389,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEObjectInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEObjectInterface&>(*this);
 		}
 
 	public:
@@ -409,7 +409,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SETrampolineInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SETrampolineInterface&>(*this);
 		}
 
 	public:

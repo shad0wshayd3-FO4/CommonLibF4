@@ -84,6 +84,7 @@ namespace F4SE
 			std::uint32_t interfaceVersion;
 			void(F4SEAPI* AddTask)(void*);
 			void(F4SEAPI* AddUITask)(void*);
+			void(F4SEAPI* AddTaskPermanent)(void*);
 		};
 
 		struct F4SEObjectInterface
@@ -382,6 +383,8 @@ namespace F4SE
 		void AddTask(std::function<void()> a_task) const { AddTask(new TaskDelegate(std::move(a_task))); }
 		void AddUITask(ITaskDelegate* a_task) const { GetProxy().AddUITask(a_task); }
 		void AddUITask(std::function<void()> a_task) const { AddUITask(new TaskDelegate(std::move(a_task))); }
+		void AddTaskPermanent(ITaskDelegate* a_task) const { GetProxy().AddTaskPermanent(a_task); }
+		void AddTaskPermanent(std::function<void()> a_task) const { AddTaskPermanent(new TaskDelegate(std::move(a_task))); }
 	};
 
 	class ObjectInterface

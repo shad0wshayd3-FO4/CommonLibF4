@@ -321,7 +321,7 @@ namespace RE
 	public:
 		BGSInventoryList(const TESContainer* a_container, ObjectRefHandle a_owner)
 		{
-			auto native_handle = a_owner.native_handle();
+			auto native_handle = a_owner.get_handle();
 			ctor(a_container, &native_handle);
 		}
 

@@ -22,7 +22,7 @@ namespace RE
 	class BSUntypedPointerHandle
 	{
 	public:
-		using value_type = std::uint32_t;
+		using HandleType = std::uint32_t;
 
 		enum : std::uint32_t
 		{
@@ -33,7 +33,7 @@ namespace RE
 		BSUntypedPointerHandle() noexcept = default;
 		BSUntypedPointerHandle(const BSUntypedPointerHandle&) noexcept = default;
 
-		explicit BSUntypedPointerHandle(value_type a_handle) noexcept :
+		explicit BSUntypedPointerHandle(HandleType a_handle) noexcept :
 			_handle(a_handle)
 		{}
 
@@ -41,7 +41,7 @@ namespace RE
 
 		BSUntypedPointerHandle& operator=(const BSUntypedPointerHandle&) noexcept = default;
 
-		BSUntypedPointerHandle& operator=(value_type a_rhs) noexcept
+		BSUntypedPointerHandle& operator=(HandleType a_rhs) noexcept
 		{
 			_handle = a_rhs;
 			return *this;
@@ -50,7 +50,7 @@ namespace RE
 		[[nodiscard]] explicit operator bool() const noexcept { return has_value(); }
 		[[nodiscard]] bool     has_value() const noexcept { return _handle != 0; }
 
-		[[nodiscard]] value_type value() const noexcept { return _handle; }
+		[[nodiscard]] HandleType value() const noexcept { return _handle; }
 
 		void reset() noexcept { _handle = 0; }
 
@@ -61,7 +61,7 @@ namespace RE
 
 	private:
 		// members
-		value_type _handle{ 0 };  // 0
+		HandleType _handle{ 0 };  // 0
 	};
 
 	extern template class BSUntypedPointerHandle<>;
@@ -70,18 +70,16 @@ namespace RE
 	class BSPointerHandle
 	{
 	public:
-		using native_handle_type = typename Handle::value_type;
-
 		BSPointerHandle() noexcept = default;
 
 		template <class Y>
-		BSPointerHandle(BSPointerHandle<Y, Handle> a_rhs) noexcept  //
+		BSPointerHandle(BSPointerHandle<Y, Handle> a_rhs) noexcept
 			requires(std::convertible_to<Y*, T*>) :
 			_handle(a_rhs._handle)
 		{}
 
 		template <class Y>
-		explicit BSPointerHandle(Y* a_rhs)  //
+		explicit BSPointerHandle(Y* a_rhs)
 			requires(std::convertible_to<Y*, T*>)
 		{
 			get_handle(a_rhs);
@@ -90,7 +88,7 @@ namespace RE
 		~BSPointerHandle() noexcept = default;
 
 		template <class Y>
-		BSPointerHandle& operator=(BSPointerHandle<Y, Handle> a_rhs) noexcept  //
+		BSPointerHandle& operator=(BSPointerHandle<Y, Handle> a_rhs) noexcept
 			requires(std::convertible_to<Y*, T*>)
 		{
 			_handle = a_rhs._handle;
@@ -98,7 +96,7 @@ namespace RE
 		}
 
 		template <class Y>
-		BSPointerHandle& operator=(Y* a_rhs)  //
+		BSPointerHandle& operator=(Y* a_rhs)
 			requires(std::convertible_to<Y*, T*>)
 		{
 			get_handle(a_rhs);
@@ -109,12 +107,10 @@ namespace RE
 
 		[[nodiscard]] NiPointer<T> get() const
 		{
-			NiPointer<T> ptr;
-			get_smartptr(ptr);
-			return ptr;
+			return BSPointerHandleManagerInterface<T>::GetSmartPointer(*this);
 		}
 
-		[[nodiscard]] native_handle_type native_handle() noexcept
+		[[nodiscard]] Handle::HandleType get_handle() noexcept
 		{
 			return _handle.value();
 		}
@@ -126,12 +122,21 @@ namespace RE
 			return a_lhs._handle == a_rhs._handle;
 		}
 
+		[[nodiscard]] NiPointer<T> operator*() const noexcept
+		{
+			assert(static_cast<bool>(*this));
+			return get();
+		}
+
+		[[nodiscard]] NiPointer<T> operator->() const noexcept
+		{
+			assert(static_cast<bool>(*this));
+			return get();
+		}
+
 	private:
 		template <class, class>
 		friend class BSPointerHandle;
-
-		void get_handle(T* a_ptr);
-		bool get_smartptr(NiPointer<T>& a_smartPointerOut) const;
 
 		Handle _handle;  // 00
 	};
@@ -172,27 +177,22 @@ namespace RE
 			return func(a_ptr);
 		}
 
-		static bool GetSmartPointer(const BSPointerHandle<T>& a_handle, NiPointer<T>& a_smartPointerOut)
+		static bool GetSmartPointer(const BSPointerHandle<T>& a_in, NiPointer<T>& a_out)
 		{
-			using func_t = decltype(&BSPointerHandleManagerInterface<T, Manager>::GetSmartPointer);
+			using func_t = bool (*)(const BSPointerHandle<T>& a_in, NiPointer<T>& a_out);
 			static REL::Relocation<func_t> func{ REL::ID(2188681) };
-			return func(a_handle, a_smartPointerOut);
+			return func(a_in, a_out);
+		}
+
+		static NiPointer<T> GetSmartPointer(const BSPointerHandle<T>& a_in)
+		{
+			NiPointer<T> out;
+			GetSmartPointer(a_in, out);
+			return out;
 		}
 	};
 
 	extern template class BSPointerHandleManagerInterface<Actor>;
 	extern template class BSPointerHandleManagerInterface<Projectile>;
 	extern template class BSPointerHandleManagerInterface<TESObjectREFR>;
-
-	template <class T, class Handle>
-	void BSPointerHandle<T, Handle>::get_handle(T* a_ptr)
-	{
-		*this = BSPointerHandleManagerInterface<T>::GetHandle(a_ptr);
-	}
-
-	template <class T, class Handle>
-	bool BSPointerHandle<T, Handle>::get_smartptr(NiPointer<T>& a_smartPointerOut) const
-	{
-		return BSPointerHandleManagerInterface<T>::GetSmartPointer(*this, a_smartPointerOut);
-	}
 }

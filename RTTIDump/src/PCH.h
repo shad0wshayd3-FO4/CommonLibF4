@@ -19,6 +19,5 @@
 #include <utility>
 #include <vector>
 
-namespace logger = F4SE::log;
 namespace stl = F4SE::stl;
 using namespace std::literals;

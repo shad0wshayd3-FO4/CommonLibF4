@@ -25,7 +25,7 @@ namespace F4SE
 	[[nodiscard]] REL::Version              GetF4SEVersion() noexcept;
 	[[nodiscard]] PluginHandle              GetPluginHandle() noexcept;
 	[[nodiscard]] std::uint32_t             GetReleaseIndex() noexcept;
-	[[nodiscard]] std::optional<PluginInfo> GetPluginInfo(std::string_view a_plugin) noexcept;
+	[[nodiscard]] const PluginInfo*         GetPluginInfo(std::string_view a_plugin) noexcept;
 	[[nodiscard]] std::string_view          GetSaveFolderName() noexcept;
 
 	[[nodiscard]] const MessagingInterface*     GetMessagingInterface() noexcept;

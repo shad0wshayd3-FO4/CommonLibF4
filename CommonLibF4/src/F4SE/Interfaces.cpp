@@ -15,7 +15,7 @@ namespace F4SE
 				a_sender.data(),
 				a_handler);
 		if (!success) {
-			log::warn("failed to register listener for {}"sv, a_sender);
+			F4SE::WARN("failed to register listener for {}"sv, a_sender);
 		}
 		return success;
 	}
@@ -30,7 +30,7 @@ namespace F4SE
 				a_dataLen,
 				a_receiver);
 		if (!success) {
-			log::warn("failed to dispatch to {}"sv, (a_receiver ? a_receiver : "all listeners"));
+			F4SE::WARN("failed to dispatch to {}"sv, (a_receiver ? a_receiver : "all listeners"));
 		}
 		return success;
 	}
@@ -42,7 +42,7 @@ namespace F4SE
 				a_name.data(),
 				a_callback);
 		if (!success) {
-			log::warn("failed to register {}"sv, a_name);
+			F4SE::WARN("failed to register {}"sv, a_name);
 		}
 		return success;
 	}
@@ -91,7 +91,7 @@ namespace F4SE
 				a_buf,
 				a_length);
 		if (!success) {
-			log::warn("failed to write record"sv);
+			F4SE::WARN("failed to write record"sv);
 		}
 		return success;
 	}
@@ -103,7 +103,7 @@ namespace F4SE
 				a_type,
 				a_version);
 		if (!success) {
-			log::warn("failed to open record"sv);
+			F4SE::WARN("failed to open record"sv);
 		}
 		return success;
 	}
@@ -115,7 +115,7 @@ namespace F4SE
 				a_buf,
 				a_length);
 		if (!success) {
-			log::warn("failed to write record data"sv);
+			F4SE::WARN("failed to write record data"sv);
 		}
 		return success;
 	}
@@ -135,7 +135,7 @@ namespace F4SE
 				a_buf,
 				a_length);
 		if (read != a_length) {
-			log::warn("failed to read full record data {}B of {}B"sv, read, a_length);
+			F4SE::WARN("failed to read full record data {}B of {}B"sv, read, a_length);
 		}
 		return read;
 	}
@@ -144,7 +144,7 @@ namespace F4SE
 	{
 		const auto success = GetProxy().Register(a_callback);
 		if (!success) {
-			log::warn("failed to register callback"sv);
+			F4SE::WARN("failed to register callback"sv);
 		}
 		return success;
 	}
@@ -156,7 +156,7 @@ namespace F4SE
 				GetPluginHandle(),
 				a_size);
 		if (!mem) {
-			log::warn("failed to allocate from branch pool"sv);
+			F4SE::WARN("failed to allocate from branch pool"sv);
 		}
 		return mem;
 	}
@@ -168,7 +168,7 @@ namespace F4SE
 				GetPluginHandle(),
 				a_size);
 		if (!mem) {
-			log::warn("failed to allocate from local pool"sv);
+			F4SE::WARN("failed to allocate from local pool"sv);
 		}
 		return mem;
 	}

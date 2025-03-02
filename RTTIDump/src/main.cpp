@@ -217,7 +217,7 @@ void dump_rtti()
 
 				results.emplace_back(sanitize_name(std::move(name)), rid, std::move(vids));
 			} catch (const std::exception&) {
-				logger::error("{}", decode_name(typeDescriptor));
+				F4SE::ERROR(decode_name(typeDescriptor));
 				continue;
 			}
 		}
@@ -347,7 +347,7 @@ void dump_nirtti()
 			const auto id = iddb(result - base);
 			toPrint.emplace_back(sanitize_name(rtti->GetName()), id);
 		} catch (const std::exception&) {
-			spdlog::error(rtti->GetName());
+			F4SE::ERROR(rtti->GetName());
 		}
 	}
 
@@ -379,7 +379,7 @@ void MessageHandler(F4SE::MessagingInterface::Message* a_message)
 			dump_rtti();
 			dump_nirtti();
 		} catch (const std::exception& e) {
-			logger::error("{}", e.what());
+			F4SE::ERROR(e.what());
 		}
 		break;
 	default:

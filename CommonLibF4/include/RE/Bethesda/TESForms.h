@@ -186,7 +186,7 @@ namespace RE
 	class BGSSoundTagSet;
 	class BGSLensFlare;
 	class BGSGodRays;
-	class bhkWorld;
+	class bhkWorldM;
 
 	namespace BGSMod::Attachment
 	{
@@ -1489,10 +1489,10 @@ namespace RE
 			kWarnToLeave = 1u << 9,
 		};
 
-		[[nodiscard]] bhkWorld* GetbhkWorld() const
+		[[nodiscard]] bhkWorldM* GetbhkWorld() const
 		{
 			using func_t = decltype(&TESObjectCELL::GetbhkWorld);
-			static REL::Relocation<func_t> func{ REL::ID(1326073) };
+			static REL::Relocation<func_t> func{ REL::ID(2200260) };
 			return func(this);
 		}
 

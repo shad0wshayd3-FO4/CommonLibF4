@@ -23,15 +23,12 @@ namespace RE
 
 	struct BSModelDB
 	{
-	public:
 		struct DBTraits
 		{
-		public:
 			using U_Type = NiPointer<NiNode>;
 
 			struct ArgsType
 			{
-			public:
 				// members
 				REX::EnumSet<ENUM_LOD_MULT, std::int32_t> lodFadeMult;          // 00
 				std::uint32_t                             loadLevel;            // 04
@@ -52,12 +49,28 @@ namespace RE
 		};
 		static_assert(std::is_empty_v<DBTraits>);
 
-		static BSResource::ErrorCode Demand(
-			const char*                                                                                                                                                                                               a_name,
-			BSResource::RHandleType<BSResource::Entry<NiPointer<NiNode>, BSResource::EntryDBTraits<BSModelDB::DBTraits, BSResource::EntryDB<BSModelDB::DBTraits>>::CArgs>, BSResource::EntryDB<BSModelDB::DBTraits>>& a_result,
-			const DBTraits::ArgsType&                                                                                                                                                                                 a_args)
+		using Handle = BSResource::RHandleType<BSResource::Entry<NiPointer<NiNode>, BSResource::EntryDBTraits<BSModelDB::DBTraits, BSResource::EntryDB<BSModelDB::DBTraits>>::CArgs>, BSResource::EntryDB<BSModelDB::DBTraits>>;
+
+		struct HandelListHead
 		{
-			using func_t = BSResource::ErrorCode (*)(const char*, BSResource::RHandleType<BSResource::Entry<NiPointer<NiNode>, BSResource::EntryDBTraits<BSModelDB::DBTraits, BSResource::EntryDB<BSModelDB::DBTraits>>::CArgs>, BSResource::EntryDB<BSModelDB::DBTraits>>&, const DBTraits::ArgsType&);
+			struct HandleList
+			{
+				// members
+				Handle      handle;
+				HandleList* next;
+			};
+
+			// members
+			HandleList* head;
+		};
+		static_assert(sizeof(HandelListHead) == 0x8);
+
+		static BSResource::ErrorCode Demand(
+			const char*               a_name,
+			Handle&                   a_result,
+			const DBTraits::ArgsType& a_args)
+		{
+			using func_t = BSResource::ErrorCode (*)(const char*, Handle&, const DBTraits::ArgsType&);
 			static REL::Relocation<func_t> func{ REL::ID(1066398) };
 			return func(a_name, a_result, a_args);
 		}
@@ -72,6 +85,4 @@ namespace RE
 			return func(a_name, a_result, a_args);
 		}
 	};
-
-	using ModelDBHandle = BSResource::RHandleType<BSResource::Entry<NiPointer<NiNode>, BSResource::EntryDBTraits<BSModelDB::DBTraits, BSResource::EntryDB<BSModelDB::DBTraits>>::CArgs>, BSResource::EntryDB<BSModelDB::DBTraits>>;
 }

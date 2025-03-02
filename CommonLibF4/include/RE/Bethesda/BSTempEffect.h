@@ -270,7 +270,7 @@ namespace RE
 		// members
 		NiPointer<NiAVObject>                 particleObject;   // 30
 		NiPointer<BGSParticleObjectCloneTask> cloneTask;        // 38
-		ModelDBHandle                         modelHandle;      // 40
+		BSModelDB::Handle                     modelHandle;      // 40
 		NiPointer<NiNode>                     parentNode;       // 48
 		NiMatrix3                             rotation;         // 50
 		NiPoint3                              position;         // 80
@@ -405,7 +405,7 @@ namespace RE
 		using Filter = bool(NiAVObject*);
 
 		// members
-		ModelDBHandle     protoSystem;         // 00
+		BSModelDB::Handle protoSystem;         // 00
 		NiPointer<NiNode> particlesRoot;       // 08
 		bool              hasData;             // 10
 		bool              attached;            // 11
@@ -430,7 +430,7 @@ namespace RE
 		BSMagicShaderParticles                                     particles;               // 048
 		BSTArray<BSTTuple<TextureDBHandle, NiPointer<NiTexture>*>> textureRequests;         // 068
 		BSTArray<NiPointer<NiAVObject>>                            addOnObjects;            // 080
-		BSTArray<ModelDBHandle>                                    modelHandles;            // 098
+		BSTArray<BSModelDB::Handle>                                modelHandles;            // 098
 		BSTArray<NiPointer<NiAVObject>>                            targetArray;             // 0B0
 		BSSoundHandle                                              soundHandle;             // 0C8
 		NiPointer<NiSourceTexture>                                 textureShaderTexture;    // 0D0

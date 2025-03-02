@@ -13,13 +13,6 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::hknpAllHitsCollector };
 		static constexpr auto VTABLE{ VTABLE::hknpAllHitsCollector };
 
-		hknpAllHitsCollector()
-		{
-			stl::emplace_vtable<hknpAllHitsCollector>(this);
-			hits._data = (hknpCollisionResult*)((uintptr_t)this + 0x30);
-			hits._capacityAndFlags = 0x8000000A;
-		}
-
 		// override (hknpCollisionQueryCollector)
 		void                       Reset() override;                             // 01
 		void                       AddHit(const hknpCollisionResult&) override;  // 02

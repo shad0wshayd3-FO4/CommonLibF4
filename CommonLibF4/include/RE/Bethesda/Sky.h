@@ -104,7 +104,7 @@ namespace RE
 		NiPointer<BSMultiBoundNode>        root;                             // 008
 		NiPointer<NiNode>                  moonsRoot;                        // 010
 		NiPointer<NiNode>                  auroraRoot;                       // 018
-		ModelDBHandle                      aurora3d;                         // 020
+		BSModelDB::Handle                  aurora3d;                         // 020
 		BGSLightingTemplate*               extLightingOverride;              // 028
 		ObjectRefHandle                    currentRoom;                      // 030
 		ObjectRefHandle                    previousRoom;                     // 034

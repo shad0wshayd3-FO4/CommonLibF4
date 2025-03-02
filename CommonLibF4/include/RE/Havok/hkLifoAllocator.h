@@ -51,16 +51,17 @@ namespace RE
 			return func(this, a_old, a_oldNumBytes, a_reqNumBytesInOut);
 		}
 
-		void GetMemoryStatistics(
-			[[maybe_unused]] MemoryStatistics& a_stats) const override { return; }  // 08
-		std::int32_t GetAllocatedSize(
-			[[maybe_unused]] const void* a_obj,
-			std::int32_t                 a_numBytes) const override { return a_numBytes; }  // 09
+		void GetMemoryStatistics([[maybe_unused]] MemoryStatistics& a_stats) const override  // 08
+		{
+			return;
+		}
 
-		void Init(
-			hkMemoryAllocator* a_slabAllocator,
-			hkMemoryAllocator* a_largeAllocator,
-			hkMemoryAllocator* a_internalAllocator)
+		std::int32_t GetAllocatedSize([[maybe_unused]] const void* a_obj, std::int32_t a_numBytes) const override  // 09
+		{
+			return a_numBytes;
+		}
+
+		void Init(hkMemoryAllocator* a_slabAllocator, hkMemoryAllocator* a_largeAllocator, hkMemoryAllocator* a_internalAllocator)
 		{
 			using func_t = decltype(&hkLifoAllocator::Init);
 			static REL::Relocation<func_t> func{ REL::ID(1417289) };

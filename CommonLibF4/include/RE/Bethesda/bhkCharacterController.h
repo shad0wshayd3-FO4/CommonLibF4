@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/Bethesda/bhkNPCollisionObject.h"
 #include "RE/Bethesda/BSBound.h"
 #include "RE/Bethesda/BSTArray.h"
 #include "RE/Bethesda/BSTEvent.h"
@@ -11,9 +12,7 @@
 #include "RE/Havok/hknpCharacterContext.h"
 #include "RE/Havok/hknpCharacterState.h"
 #include "RE/Havok/hknpCharacterSurfaceInfo.h"
-#include "RE/NetImmerse/NiCollisionObject.h"
-#include "RE/NetImmerse/NiFlags.h"
-#include "RE/NetImmerse/NiMatrix3.h"
+#include "RE/Havok/hkStepInfo.h"
 #include "RE/NetImmerse/NiPoint.h"
 #include "RE/NetImmerse/NiSmartPointer.h"
 
@@ -36,141 +35,6 @@ namespace RE
 	struct DamageImpactData;
 	struct MoveData;
 
-	class hknpMotionPropertiesId
-	{
-	public:
-		enum class Preset
-		{
-			STATIC = 0x0,     ///< No velocity allowed
-			DYNAMIC = 0x1,    ///< For regular dynamic bodies, undamped and gravity factor = 1
-			KEYFRAMED = 0x2,  ///< like DYNAMIC, but gravity factor = 0
-			FROZEN = 0x3,     ///< like KEYFRAMED, but lots of damping
-			DEBRIS = 0x4,     ///< like DYNAMIC, but aggressive deactivation
-
-			NUM_PRESETS = 0x5
-		};
-	};
-
-	class hkTransformf
-	{
-	public:
-		void SetIdentity()
-		{
-			rotation.MakeIdentity();
-			translation = NiPoint4();
-		}
-		// members
-		NiMatrix3 rotation;
-		NiPoint4  translation;
-	};
-	using hkTransform = hkTransformf;
-
-	class CFilter
-	{
-	public:
-		~CFilter() noexcept {}  // intentional
-
-		// members
-		std::uint32_t filter;  // 0
-	};
-	static_assert(sizeof(CFilter) == 0x4);
-
-	class hkStepInfo
-	{
-	public:
-		// members
-		hkPadSpu<float> startTime;     // 00
-		hkPadSpu<float> endTime;       // 04
-		hkPadSpu<float> deltaTime;     // 08
-		hkPadSpu<float> invDeltaTime;  // 0C
-	};
-	static_assert(sizeof(hkStepInfo) == 0x10);
-
-	class __declspec(novtable) bhkNPCollisionObjectBase :
-		public NiCollisionObject  // 00
-	{
-	public:
-		static constexpr auto RTTI{ RTTI::bhkNPCollisionObjectBase };
-		static constexpr auto VTABLE{ VTABLE::bhkNPCollisionObjectBase };
-
-		// add
-		virtual void LockMotionImpl() = 0;  // 2C
-
-		// members
-		NiTFlags<std::uint16_t, bhkNPCollisionObjectBase> flags;  // 18
-	};
-	static_assert(sizeof(bhkNPCollisionObjectBase) == 0x20);
-
-	class __declspec(novtable) bhkNPCollisionObject :
-		public bhkNPCollisionObjectBase  // 00
-	{
-	public:
-		static constexpr auto RTTI{ RTTI::bhkNPCollisionObject };
-		static constexpr auto VTABLE{ VTABLE::bhkNPCollisionObject };
-
-		// add
-		virtual void CreateInstance(bhkWorld& a_world);             // 2D
-		virtual void AddToWorld(bhkWorld& a_world);                 // 2E
-		virtual void RemoveFromWorld();                             // 2F
-		virtual bool SetCollisionFilterInfo(CFilter a_filterInfo);  // 30
-
-		void CopyMembers(bhkNPCollisionObject* from, NiCloningProcess& cp)
-		{
-			using func_t = decltype(&bhkNPCollisionObject::CopyMembers);
-			static REL::Relocation<func_t> func{ REL::ID(1558409) };
-			func(this, from, cp);
-		}
-
-		static bhkNPCollisionObject* Getbhk(bhkWorld* world, hknpBodyId& bodyId)
-		{
-			using func_t = decltype(&bhkNPCollisionObject::Getbhk);
-			static REL::Relocation<func_t> func{ REL::ID(730034) };
-			return func(world, bodyId);
-		}
-
-		hknpShape* GetShape()
-		{
-			using func_t = decltype(&bhkNPCollisionObject::GetShape);
-			static REL::Relocation<func_t> func{ REL::ID(315427) };
-			return func(this);
-		}
-
-		bool GetTransform(hkTransformf& transform)
-		{
-			using func_t = decltype(&bhkNPCollisionObject::GetTransform);
-			static REL::Relocation<func_t> func{ REL::ID(1508189) };
-			return func(this, transform);
-		}
-
-		void SetMotionType(hknpMotionPropertiesId::Preset type)
-		{
-			using func_t = decltype(&bhkNPCollisionObject::SetMotionType);
-			static REL::Relocation<func_t> func{ REL::ID(200912) };
-			return func(this, type);
-		}
-
-		bool SetTransform(hkTransformf& transform)
-		{
-			using func_t = decltype(&bhkNPCollisionObject::SetTransform);
-			static REL::Relocation<func_t> func{ REL::ID(178085) };
-			return func(this, transform);
-		}
-
-		// members
-		NiPointer<bhkPhysicsSystem> spSystem;       // 20
-		std::uint32_t               systemBodyIdx;  // 28
-	};
-	static_assert(sizeof(bhkNPCollisionObject) == 0x30);
-
-	class __declspec(novtable) bhkNPCollisionObjectUnlinked :
-		public bhkNPCollisionObject  // 00
-	{
-	public:
-		static constexpr auto RTTI{ RTTI::bhkNPCollisionObjectUnlinked };
-		static constexpr auto VTABLE{ VTABLE::bhkNPCollisionObjectUnlinked };
-	};
-	static_assert(sizeof(bhkNPCollisionObjectUnlinked) == 0x30);
-
 	class __declspec(novtable) bhkCharacterController :
 		public bhkNPCollisionObjectUnlinked,                 // 000
 		public BSTEventSource<bhkCharacterMoveFinishEvent>,  // 030
@@ -178,8 +42,8 @@ namespace RE
 		public BSTEventSource<bhkCharacterStateChangeEvent>  // 0E0
 	{
 	public:
-		static constexpr auto RTTI{ RTTI::bhkCharacterController };
-		static constexpr auto VTABLE{ VTABLE::bhkCharacterController };
+		inline static constexpr auto RTTI{ RTTI::bhkCharacterController };
+		inline static constexpr auto VTABLE{ VTABLE::bhkCharacterController };
 
 		enum class CHARACTER_SIZE;
 

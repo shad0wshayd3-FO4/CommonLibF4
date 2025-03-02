@@ -2,6 +2,7 @@
 
 #include "RE/Bethesda/BGSInventoryItem.h"
 #include "RE/Bethesda/BSFixedString.h"
+#include "RE/Bethesda/BSModelDB.h"
 #include "RE/Bethesda/BSSoundHandle.h"
 #include "RE/Bethesda/BSStringT.h"
 #include "RE/Bethesda/BSTArray.h"
@@ -229,6 +230,26 @@ namespace RE
 	};
 	static_assert(sizeof(SimpleAnimationGraphManagerHolder) == 0x18);
 
+	class __declspec(novtable) WeaponAnimationGraphManagerHolder :
+		public IAnimationGraphManagerHolder,
+		public BSTEventSink<BSAnimationGraphEvent>,
+		public BSIntrusiveRefCounted
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::WeaponAnimationGraphManagerHolder };
+		static constexpr auto VTABLE{ VTABLE::WeaponAnimationGraphManagerHolder };
+
+		virtual ~WeaponAnimationGraphManagerHolder() = default;  // 00
+
+		// override (BSTEventSink<BSAnimationGraphEvent>)
+		BSEventNotifyControl ProcessEvent(const BSAnimationGraphEvent& a_event, BSTEventSource<BSAnimationGraphEvent>* a_eventSource) override;
+
+		// members
+		BSTSmartPointer<BSAnimationGraphManager> animationGraphManager;  // 08
+		ObjectRefHandle                          owner;                  // 10
+	};
+	static_assert(sizeof(WeaponAnimationGraphManagerHolder) == 0x28);
+
 	class BGSEquipIndex
 	{
 	public:
@@ -387,49 +408,77 @@ namespace RE
 	enum class BIPED_OBJECT
 	{
 		kNone = static_cast<std::underlying_type_t<BIPED_OBJECT>>(-1),
+		kHairTop = 0,
+		kHairLong = 1,
+		kFaceGenHead = 2,
+		kBody = 3,
+		kLeftHand = 4,
+		kRightHand = 5,
+		kUnderTorso = 6,
+		kUnderLeftArm = 7,
+		kUnderRightArm = 8,
+		kUnderLeftLeg = 9,
+		kUnderRightLeg = 10,
+		kAboveTorso = 11,
+		kAboveLeftArm = 12,
+		kAboveRightArm = 13,
+		kAboveLeftLeg = 14,
+		kAboveRightLeg = 15,
+		kHeadband = 16,
+		kEyes = 17,
+		kBeard = 18,
+		kMouth = 19,
+		kNeck = 20,
+		kRing = 21,
+		kScalp = 22,
+		kDecapitation = 23,
+		kUnnamed1 = 24,
+		kUnnamed2 = 25,
+		kUnnamed3 = 26,
+		kUnnamed4 = 27,
+		kUnnamed5 = 28,
+		kShield = 29,
+		kPipboy = 30,
+		kFX = 31,
 
-		kEditorCount = 0x20,
+		kEditorTotal = 32,
 
-		kWeaponHand = kEditorCount,
-		kWeaponSword = 0x21,
-		kWeaponDagger = 0x22,
-		kWeaponAxe = 0x23,
-		kWeaponMace = 0x24,
-		kWeaponTwoHandMelee = 0x25,
-		kWeaponBow = 0x26,
-		kWeaponStaff = 0x27,
-		kQuiver = 0x28,
-		kWeaponGun = 0x29,
-		kWeaponGrenade = 0x2A,
-		kWeaponMine = 0x2B,
+		kWeaponHand = kEditorTotal,
+		kWeaponSword = 33,
+		kWeaponDagger = 34,
+		kWeaponAxe = 35,
+		kWeaponMace = 36,
+		kWeaponTwoHandMelee = 37,
+		kWeaponBow = 38,
+		kWeaponStaff = 39,
+		kQuiver = 40,
+		kWeaponGun = 41,
+		kWeaponGrenade = 42,
+		kWeaponMine = 43,
 
-		kTotal = 0x2C
+		kTotal = 44
 	};
 
 	struct BIPOBJECT
 	{
 	public:
-		~BIPOBJECT();
+		//~BIPOBJECT()
+		//{
+		//	Dtor();
+		//	stl::memzero(this);
+		//}
 
 		// members
-		BGSObjectInstance       parent;       // 00
-		BGSObjectInstanceExtra* modExtra;     // 10
-		TESObjectARMA*          armorAddon;   // 18
-		TESModel*               part;         // 20
-		BGSTextureSet*          skinTexture;  // 28
-		NiPointer<NiAVObject>   partClone;    // 30
-		void*                   handleList;   // 38 - TODO: BSModelDB::HandleListHead
-		union
-		{
-			std::byte                                          spare40;
-			BSTSmartPointer<WeaponAnimationGraphManagerHolder> objectGraphManager;
-		};  // 40 - TODO
-		union
-		{
-			std::byte                       spare48;
-			NiPointer<ModelReferenceEffect> hitEffect;
-		};             // 48 - TODO
-		bool skinned;  // 50
+		BGSObjectInstance                                  parent;              // 00
+		BGSObjectInstanceExtra*                            modExtra;            // 10
+		TESObjectARMA*                                     armorAddon;          // 18
+		TESModel*                                          part;                // 20
+		BGSTextureSet*                                     skinTexture;         // 28
+		NiPointer<NiAVObject>                              partClone;           // 30
+		BSModelDB::HandelListHead                          handleList;          // 38
+		BSTSmartPointer<WeaponAnimationGraphManagerHolder> objectGraphManager;  // 40
+		NiPointer<ModelReferenceEffect>                    hitEffect;           // 48
+		bool                                               skinned;             // 50
 
 	private:
 		void Dtor()
@@ -445,6 +494,26 @@ namespace RE
 		public BSIntrusiveRefCounted  // 0000
 	{
 	public:
+		const BIPOBJECT* GetBipObject(const BIPED_OBJECT a_bipedObject) const
+		{
+			return std::addressof(object[std::to_underlying(a_bipedObject)]);
+		}
+
+		BIPOBJECT* GetBipObject(const BIPED_OBJECT a_bipedObject)
+		{
+			return std::addressof(object[std::to_underlying(a_bipedObject)]);
+		}
+
+		ObjectRefHandle GetRequester() const
+		{
+			return actorRef;
+		}
+
+		NiNode* GetRoot() const
+		{
+			return root;
+		}
+
 		// members
 		NiNode*         root;                                                       // 0008
 		BIPOBJECT       object[std::to_underlying(BIPED_OBJECT::kTotal)];           // 0010

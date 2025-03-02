@@ -610,7 +610,7 @@ namespace RE
 		void SetCommandType(COMMAND_TYPE a_type)
 		{
 			using func_t = decltype(&AIProcess::SetCommandType);
-			static REL::Relocation<func_t> func{ REL::ID(1555789) };
+			static REL::Relocation<func_t> func{ REL::ID(2231826) };
 			return func(this, a_type);
 		}
 
@@ -1064,21 +1064,21 @@ namespace RE
 		void ExitCover()
 		{
 			using func_t = decltype(&Actor::ExitCover);
-			static REL::Relocation<func_t> func{ REL::ID(770035) };
+			static REL::Relocation<func_t> func{ REL::ID(2231166) };
 			return func(this);
 		}
 
 		void GetAimVector(NiPoint3& a_aimVector)
 		{
 			using func_t = decltype(&Actor::GetAimVector);
-			static REL::Relocation<func_t> func{ REL::ID(554863) };
+			static REL::Relocation<func_t> func{ REL::ID(2230378) };
 			return func(this, a_aimVector);
 		}
 
 		NiAVObject* GetClosestBone(NiPoint3 a_impactLocation, NiPoint3 a_movementDirection)
 		{
 			using func_t = decltype(&Actor::GetClosestBone);
-			static REL::Relocation<func_t> func{ REL::ID(1180004) };
+			static REL::Relocation<func_t> func{ REL::ID(2230051) };
 			return func(this, a_impactLocation, a_movementDirection);
 		}
 
@@ -1111,7 +1111,7 @@ namespace RE
 		bool GetCurrentFireLocation(BGSEquipIndex a_index, NiPoint3& a_fireLocation)
 		{
 			using func_t = decltype(&Actor::GetCurrentFireLocation);
-			static REL::Relocation<func_t> func{ REL::ID(663107) };
+			static REL::Relocation<func_t> func{ REL::ID(2231167) };
 			return func(this, a_index, a_fireLocation);
 		}
 
@@ -1211,14 +1211,14 @@ namespace RE
 		bool IsPathingComplete()
 		{
 			using func_t = decltype(&Actor::IsPathingComplete);
-			static REL::Relocation<func_t> func{ REL::ID(817283) };
+			static REL::Relocation<func_t> func{ REL::ID(2230274) };
 			return func(this);
 		}
 
 		bool IsQuadruped()
 		{
 			using func_t = decltype(&Actor::IsQuadruped);
-			static REL::Relocation<func_t> func{ REL::ID(1552322) };
+			static REL::Relocation<func_t> func{ REL::ID(2229614) };
 			return func(this);
 		}
 
@@ -1238,28 +1238,28 @@ namespace RE
 		bhkCharacterController* Move(float a_deltaTime, NiPoint3 a_deltaPos, bool a_defer)
 		{
 			using func_t = decltype(&Actor::Move);
-			static REL::Relocation<func_t> func{ REL::ID(737625) };
+			static REL::Relocation<func_t> func{ REL::ID(2229934) };
 			return func(this, a_deltaTime, a_deltaPos, a_defer);
 		}
 
 		bool PerformAction(BGSAction* a_action, TESObjectREFR* a_target)
 		{
 			using func_t = decltype(&Actor::PerformAction);
-			static REL::Relocation<func_t> func{ REL::ID(1057231) };
+			static REL::Relocation<func_t> func{ REL::ID(2231177) };
 			return func(this, a_action, a_target);
 		}
 
 		void RemovePerk(BGSPerk* a_perk)
 		{
 			using func_t = decltype(&Actor::RemovePerk);
-			static REL::Relocation<func_t> func{ REL::ID(1316475) };
+			static REL::Relocation<func_t> func{ REL::ID(2230122) };
 			return func(this, a_perk);
 		}
 
 		void Reset3D(bool a_reloadAll, std::uint32_t a_additionalFlags, bool a_queueReset, std::uint32_t a_excludeFlags)
 		{
 			using func_t = decltype(&Actor::Reset3D);
-			static REL::Relocation<func_t> func{ REL::ID(302888) };
+			static REL::Relocation<func_t> func{ REL::ID(2229913) };
 			return func(this, a_reloadAll, a_additionalFlags, a_queueReset, a_excludeFlags);
 		}
 

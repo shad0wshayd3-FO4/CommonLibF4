@@ -21,10 +21,9 @@ namespace RE
 		const NiPoint4& operator[](std::size_t a_pos) const noexcept;
 		bool            operator==(const NiMatrix3& a_rhs) const noexcept;
 		bool            operator!=(const NiMatrix3& a_rhs) const noexcept;
-
-		NiMatrix3 operator*(const NiMatrix3& a_rhs) const noexcept;
-		NiMatrix3 operator*(float a_scalar) const noexcept;
-		NiPoint3  operator*(const NiPoint3& a_rhs) const noexcept;
+		NiMatrix3       operator*(const NiMatrix3& a_rhs) const noexcept;
+		NiMatrix3       operator*(float a_scalar) const noexcept;
+		NiPoint3        operator*(const NiPoint3& a_rhs) const noexcept;
 
 		void      MakeIdentity() noexcept;
 		NiMatrix3 Transpose() const noexcept;

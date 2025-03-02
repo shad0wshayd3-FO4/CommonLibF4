@@ -58,9 +58,7 @@ namespace RE
 
 		template <class Key>
 		struct BSCRC32<Key, true>
-		{
-		public:
-		};
+		{};
 	}
 
 	template <class Key>
@@ -74,7 +72,6 @@ namespace RE
 				std::is_enum_v<Key> ||
 				std::is_pointer_v<Key>>
 	{
-	public:
 		[[nodiscard]] std::uint32_t operator()(Key a_data) const noexcept
 		{
 			return detail::GenerateCRC32({ reinterpret_cast<const std::uint8_t*>(std::addressof(a_data)), sizeof(Key) });
@@ -84,7 +81,6 @@ namespace RE
 	template <>
 	struct BSCRC32<std::nullptr_t>
 	{
-	public:
 		[[nodiscard]] std::uint32_t operator()(std::nullptr_t) const noexcept
 		{
 			return BSCRC32<std::uintptr_t>()(0);
@@ -94,14 +90,12 @@ namespace RE
 	template <>
 	struct BSCRC32<InventoryInterface::Handle>
 	{
-	public:
 		[[nodiscard]] std::uint32_t operator()(InventoryInterface::Handle a_data) const noexcept;
 	};
 
 	template <class CharT>
 	struct BSCRC32<std::basic_string_view<CharT>>
 	{
-	public:
 		[[nodiscard]] std::uint32_t operator()(std::basic_string_view<CharT> a_data) const noexcept
 		{
 			return detail::GenerateCRC32({ a_data.data(), a_data.length() });

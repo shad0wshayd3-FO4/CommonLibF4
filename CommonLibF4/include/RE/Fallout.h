@@ -171,6 +171,7 @@
 #include "RE/Bethesda/FormUtil.h"
 #include "RE/Bethesda/GamePlayFormulas.h"
 #include "RE/Bethesda/GameScript.h"
+#include "RE/Bethesda/HUDMenuUtils.h"
 #include "RE/Bethesda/HUDModes.h"
 #include "RE/Bethesda/IMenu.h"
 #include "RE/Bethesda/IMovementInterface.h"

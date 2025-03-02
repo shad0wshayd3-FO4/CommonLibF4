@@ -44,10 +44,10 @@ set(SOURCES
 	include/RE/Bethesda/BSExtraData.h
 	include/RE/Bethesda/BSFadeNode.h
 	include/RE/Bethesda/BSFixedString.h
+	include/RE/Bethesda/BSFlattenedBoneTree.h
 	include/RE/Bethesda/BSGeometry.h
 	include/RE/Bethesda/BSGraphics.h
 	include/RE/Bethesda/BSGraphicsUtility.h
-	include/RE/Bethesda/BSHavok.h
 	include/RE/Bethesda/BSInputDeviceManager.h
 	include/RE/Bethesda/BSInputEnableManager.h
 	include/RE/Bethesda/BSInputEventReceiver.h
@@ -176,6 +176,7 @@ set(SOURCES
 	include/RE/Bethesda/FormUtil.h
 	include/RE/Bethesda/GamePlayFormulas.h
 	include/RE/Bethesda/GameScript.h
+	include/RE/Bethesda/HUDMenuUtils.h
 	include/RE/Bethesda/HUDModes.h
 	include/RE/Bethesda/IMenu.h
 	include/RE/Bethesda/IMovementInterface.h
@@ -258,33 +259,89 @@ set(SOURCES
 	include/RE/Bethesda/VATS.h
 	include/RE/Bethesda/Workshop.h
 	include/RE/Bethesda/bhkCharacterController.h
+	include/RE/Bethesda/bhkNPCollisionObject.h
+	include/RE/Bethesda/bhkPhysicsSystem.h
 	include/RE/Bethesda/bhkPickData.h
+	include/RE/Bethesda/bhkUtilFunctions.h
+	include/RE/Bethesda/bhkWorld.h
 	include/RE/Fallout.h
+	include/RE/Havok/hkAabb.h
+	include/RE/Havok/hkAabb16.h
 	include/RE/Havok/hkArray.h
 	include/RE/Havok/hkBaseObject.h
 	include/RE/Havok/hkBaseTypes.h
+	include/RE/Havok/hkBitField.h
 	include/RE/Havok/hkBlockStream.h
+	include/RE/Havok/hkContainerAllocators.h
+	include/RE/Havok/hkCriticalSection.h
 	include/RE/Havok/hkHandle.h
+	include/RE/Havok/hkHardwareInfo.h
+	include/RE/Havok/hkIntSpaceUtil.h
 	include/RE/Havok/hkLifoAllocator.h
+	include/RE/Havok/hkLocalArray.h
+	include/RE/Havok/hkMap.h
 	include/RE/Havok/hkMemoryAllocator.h
 	include/RE/Havok/hkMemoryRouter.h
 	include/RE/Havok/hkMemorySystem.h
+	include/RE/Havok/hkMonitorStream.h
+	include/RE/Havok/hkMultiMap.h
+	include/RE/Havok/hkProcessContext.h
+	include/RE/Havok/hkProcessFactory.h
+	include/RE/Havok/hkQuaternion.h
 	include/RE/Havok/hkRefPtr.h
 	include/RE/Havok/hkReferencedObject.h
+	include/RE/Havok/hkRelArray.h
+	include/RE/Havok/hkSerializeUtil.h
+	include/RE/Havok/hkSignalSlots.h
 	include/RE/Havok/hkSimdFloat.h
+	include/RE/Havok/hkStepInfo.h
+	include/RE/Havok/hkStopwatch.h
+	include/RE/Havok/hkStringPtr.h
+	include/RE/Havok/hkTransform.h
 	include/RE/Havok/hkVector4.h
+	include/RE/Havok/hkVisualDebugger.h
+	include/RE/Havok/hkVtableClassRegistry.h
+	include/RE/Havok/hkcdRay.h
+	include/RE/Havok/hknpActivation.h
 	include/RE/Havok/hknpAllHitsCollector.h
+	include/RE/Havok/hknpBSWorld.h
+	include/RE/Havok/hknpBody.h
+	include/RE/Havok/hknpBodyCinfo.h
 	include/RE/Havok/hknpBodyId.h
+	include/RE/Havok/hknpBodyManager.h
+	include/RE/Havok/hknpBodyQualityId.h
+	include/RE/Havok/hknpCapsuleShape.h
 	include/RE/Havok/hknpCharacterContext.h
 	include/RE/Havok/hknpCharacterState.h
 	include/RE/Havok/hknpCharacterSurfaceInfo.h
 	include/RE/Havok/hknpClosestHitCollector.h
 	include/RE/Havok/hknpClosestUniqueBodyIdHitCollector.h
+	include/RE/Havok/hknpCollisionFlags.h
 	include/RE/Havok/hknpCollisionQueryCollector.h
 	include/RE/Havok/hknpCollisionResult.h
+	include/RE/Havok/hknpConstraintId.h
+	include/RE/Havok/hknpConstraintManager.h
+	include/RE/Havok/hknpContactSolver.h
+	include/RE/Havok/hknpConvexPolytopeShape.h
+	include/RE/Havok/hknpConvexShape.h
+	include/RE/Havok/hknpDefaultViewerColorScheme.h
 	include/RE/Havok/hknpMaterialId.h
+	include/RE/Havok/hknpModifierManager.h
+	include/RE/Havok/hknpMotionCinfo.h
+	include/RE/Havok/hknpMotionId.h
+	include/RE/Havok/hknpMotionManager.h
+	include/RE/Havok/hknpMotionPropertiesId.h
+	include/RE/Havok/hknpPhysicsSystem.h
+	include/RE/Havok/hknpPhysicsSystemData.h
+	include/RE/Havok/hknpProcessContext.h
 	include/RE/Havok/hknpShape.h
+	include/RE/Havok/hknpShapeManager.h
+	include/RE/Havok/hknpSolverInfo.h
+	include/RE/Havok/hknpThreadSafetyCheck.h
 	include/RE/Havok/hknpUniqueBodyIdHitCollector.h
+	include/RE/Havok/hknpViewerColorScheme.h
+	include/RE/Havok/hknpWorld.h
+	include/RE/Havok/hknpWorldSignals.h
 	include/RE/NetImmerse/NiAVObject.h
 	include/RE/NetImmerse/NiAlphaProperty.h
 	include/RE/NetImmerse/NiBinaryStream.h
@@ -463,6 +520,7 @@ set(SOURCES
 	src/RE/NetImmerse/NiObjectNET.cpp
 	src/RE/NetImmerse/NiPoint.cpp
 	src/RE/NetImmerse/NiRect.cpp
+	src/RE/NetImmerse/NiTransform.cpp
 	src/RE/Scaleform/GFx/GFx_Player.cpp
 	src/REL/IAT.cpp
 	src/REL/IDDB.cpp

@@ -1275,6 +1275,13 @@ namespace RE
 			static REL::Relocation<func_t> func{ REL::ID(2224143) };
 			return func(this);
 		}
+
+		void SetQuickkey(int a_selectedIndex, int a_quickkeyIndex)
+		{
+			using func_t = decltype(&PipboyInventoryMenu::SetQuickkey);
+			static REL::Relocation<func_t> func{ REL::ID(2224159) };
+			return func(this, a_selectedIndex, a_quickkeyIndex);
+		}
 	};
 	static_assert(sizeof(PipboyInventoryMenu) == 0x18);
 
@@ -1289,7 +1296,7 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyQuestMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(1495929) };
+			static REL::Relocation<func_t> func{ REL::ID(2224231) };
 			return func(this);
 		}
 	};
@@ -1306,7 +1313,7 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyWorkshopMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(1370368) };
+			static REL::Relocation<func_t> func{ REL::ID(2224273) };
 			return func(this);
 		}
 	};
@@ -1410,6 +1417,13 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::PipboyMenu };
 		static constexpr auto VTABLE{ VTABLE::PipboyMenu };
 		static constexpr auto MENU_NAME{ "PipboyMenu"sv };
+
+		void RefreshMapMarkers(std::uint32_t a_markerID)
+		{
+			using func_t = decltype(&PipboyMenu::RefreshMapMarkers);
+			static REL::Relocation<func_t> func{ REL::ID(2224187) };
+			return func(this, a_markerID);
+		}
 
 		// members
 		Scaleform::GFx::Value dataObj;                    // 0F0
@@ -2227,6 +2241,13 @@ namespace RE
 		virtual bool ShouldHandleEvent(const InputEvent*) override;       // 01
 		virtual void OnThumbstickEvent(const ThumbstickEvent*) override;  // 04
 		virtual void OnButtonEvent(const ButtonEvent*) override;          // 08
+
+		static void StartTestingLoadMenu()
+		{
+			using func_t = decltype(&LoadingMenu::StartTestingLoadMenu);
+			static REL::Relocation<func_t> func{ REL::ID(2249224) };
+			return func();
+		}
 
 		// members
 		BGSLocation*             loadLocation;                      // 0E0

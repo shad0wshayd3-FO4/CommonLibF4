@@ -608,7 +608,7 @@ namespace RE
 
 		[[nodiscard]] static EventSource_t* GetEventSource()
 		{
-			static REL::Relocation<EventSource_t**> singleton{ REL::ID(685859) };
+			static REL::Relocation<EventSource_t**> singleton{ REL::ID(2697359) };
 			if (!*singleton) {
 				*singleton = new EventSource_t(&BSTGlobalEvent::GetSingleton()->eventSourceSDMKiller);
 			}
@@ -804,6 +804,23 @@ namespace RE
 		std::uint16_t uniqueID;            // 14
 	};
 	static_assert(sizeof(TESContainerChangedEvent) == 0x18);
+
+	struct TESCellAttachDetachEvent
+	{
+	public:
+		// members
+		NiPointer<TESObjectREFR> refr;
+		bool isAttaching;
+	};
+	static_assert(sizeof(TESCellAttachDetachEvent) == 0x10);
+
+	struct TESCellFullyLoadedEvent
+	{
+	public:
+		// members
+		TESObjectCELL* cell;
+	};
+	static_assert(sizeof(TESCellFullyLoadedEvent) == 0x8);
 
 	struct TESDeathEvent
 	{

@@ -12,29 +12,8 @@
 
 namespace RE
 {
-	enum class DXGI_MODE_SCALING;
-	enum class DXGI_MODE_SCANLINE_ORDER;
-
-	enum class TextureFileFormat
-	{
-		kBMP = 0,
-		kJPG = 1,
-		kTGA = 2,
-		kPNG = 3,
-		kDDS = 4,
-	};
-
 	class BSD3DResourceCreator;
 	class NiCamera;
-
-	struct DXGI_RATIONAL
-	{
-	public:
-		// members
-		std::uint32_t numerator;    // 00
-		std::uint32_t denominator;  // 04
-	};
-	static_assert(sizeof(DXGI_RATIONAL) == 0x08);
 
 	namespace BSGraphics
 	{
@@ -64,11 +43,14 @@ namespace RE
 			kTGA = 2,
 			kPNG = 3,
 			kDDS = 4,
+			kPPM = 5,
+			kDIB = 6,
+			kHDR = 7,
+			kPFM = 8,
 		};
 
 		struct Buffer
 		{
-		public:
 			// members
 			REX::W32::ID3D11Buffer*              buffer;              // 00
 			void*                                data;                // 08
@@ -99,7 +81,6 @@ namespace RE
 
 		struct TextureHeader
 		{
-		public:
 			// members
 			std::uint16_t height = 0;    // 0
 			std::uint16_t width = 0;     // 2
@@ -223,13 +204,25 @@ namespace RE
 		class RendererWindow
 		{
 		public:
-			REX::W32::HWND            hwnd;
-			std::int32_t              windowX;
-			std::int32_t              windowY;
-			std::int32_t              windowWidth;
-			std::int32_t              windowHeight;
-			REX::W32::IDXGISwapChain* swapChain;
-			RenderTarget              swapChainRenderTarget;
+			template <class T = std::int32_t>
+			[[nodiscard]] NiRect<T> GetWindowRect() const
+			{
+				return {
+					static_cast<T>(windowX),
+					static_cast<T>(windowX + windowWidth),
+					static_cast<T>(windowY),
+					static_cast<T>(windowY + windowHeight)
+				};
+			}
+
+			// members
+			REX::W32::HWND            hwnd;                   // 00
+			std::int32_t              windowX;                // 08
+			std::int32_t              windowY;                // 0C
+			std::int32_t              windowWidth;            // 10
+			std::int32_t              windowHeight;           // 14
+			REX::W32::IDXGISwapChain* swapChain;              // 18
+			RenderTarget              swapChainRenderTarget;  // 20
 		};
 		static_assert(sizeof(RendererWindow) == 0x50);
 
@@ -243,39 +236,33 @@ namespace RE
 		class RendererData
 		{
 		public:
-			[[nodiscard]] static RendererData* GetSingleton()
-			{
-				static REL::Relocation<RendererData**> singleton{ REL::ID(2704429) };
-				return *singleton;
-			}
-
 			// members
-			RendererShadowState*           shadowState;              // 0000
-			BSD3DResourceCreator*          resourceCreator;          // 0008
-			std::uint32_t                  adapter;                  // 0010
-			DXGI_RATIONAL                  desiredRefreshRate;       // 0014
-			DXGI_RATIONAL                  actualRefreshRate;        // 001C
-			DXGI_MODE_SCALING              scaleMode;                // 0024
-			DXGI_MODE_SCANLINE_ORDER       scanlineMode;             // 0028
-			std::int32_t                   fullScreen;               // 002C
-			bool                           appFullScreen;            // 0030
-			bool                           borderlessWindow;         // 0031
-			bool                           vsync;                    // 0032
-			bool                           initialized;              // 0033
-			bool                           requestWindowSizeChange;  // 0034
-			std::uint32_t                  newWidth;                 // 0038
-			std::uint32_t                  newHeight;                // 003C
-			std::uint32_t                  presentInterval;          // 0040
-			REX::W32::ID3D11Device*        device;                   // 0048
-			REX::W32::ID3D11DeviceContext* context;                  // 0050
-			RendererWindow                 renderWindow[32];         // 0058
-			RenderTarget                   renderTargets[101];       // 0A58
-			DepthStencilTarget             depthStencilTargets[13];  // 1D48
-			CubeMapRenderTarget            cubeMapRenderTargets[2];  // 2500
-			BSCriticalSection              rendererLock;             // 2580
-			const char*                    className;                // 25A8
-			void*                          instance;                 // 25B0
-			bool                           nvapiEnabled;             // 25B8
+			RendererShadowState*               shadowState;              // 0000
+			BSD3DResourceCreator*              resourceCreator;          // 0008
+			std::uint32_t                      adapter;                  // 0010
+			REX::W32::DXGI_RATIONAL            desiredRefreshRate;       // 0014
+			REX::W32::DXGI_RATIONAL            actualRefreshRate;        // 001C
+			REX::W32::DXGI_MODE_SCALING        scaleMode;                // 0024
+			REX::W32::DXGI_MODE_SCANLINE_ORDER scanlineMode;             // 0028
+			std::int32_t                       fullScreen;               // 002C
+			bool                               appFullScreen;            // 0030
+			bool                               borderlessWindow;         // 0031
+			bool                               vsync;                    // 0032
+			bool                               initialized;              // 0033
+			bool                               requestWindowSizeChange;  // 0034
+			std::uint32_t                      newWidth;                 // 0038
+			std::uint32_t                      newHeight;                // 003C
+			std::uint32_t                      presentInterval;          // 0040
+			REX::W32::ID3D11Device*            device;                   // 0048
+			REX::W32::ID3D11DeviceContext*     context;                  // 0050
+			RendererWindow                     renderWindow[32];         // 0058
+			RenderTarget                       renderTargets[101];       // 0A58
+			DepthStencilTarget                 depthStencilTargets[13];  // 1D48
+			CubeMapRenderTarget                cubeMapRenderTargets[2];  // 2500
+			BSCriticalSection                  rendererLock;             // 2580
+			const char*                        className;                // 25A8
+			void*                              instance;                 // 25B0
+			bool                               nvapiEnabled;             // 25B8
 		};
 		static_assert(sizeof(RendererData) == 0x25C0);
 
@@ -290,11 +277,40 @@ namespace RE
 				static REL::Relocation<func_t> func{ REL::ID(1337764) };
 				return func(this, a_vertexBuffer);
 			}
+
 			void DecRef(Buffer* a_vertexBuffer)
 			{
 				using func_t = decltype(&BSGraphics::Renderer::DecRef);
 				static REL::Relocation<func_t> func{ REL::ID(194808) };
 				return func(this, a_vertexBuffer);
+			}
+
+			void Begin(std::uint32_t a_windowID)
+			{
+				using func_t = decltype(&BSGraphics::Renderer::Begin);
+				static REL::Relocation<func_t> func{ REL::ID(2276833) };
+				return func(this, a_windowID);
+			}
+
+			void End()
+			{
+				using func_t = decltype(&BSGraphics::Renderer::End);
+				static REL::Relocation<func_t> func{ REL::ID(2276834) };
+				return func(this);
+			}
+
+			void Lock()
+			{
+				using func_t = decltype(&BSGraphics::Renderer::Lock);
+				static REL::Relocation<func_t> func{ REL::ID(2276828) };
+				return func(this);
+			}
+
+			void Unlock()
+			{
+				using func_t = decltype(&BSGraphics::Renderer::Unlock);
+				static REL::Relocation<func_t> func{ REL::ID(2276829) };
+				return func(this);
 			}
 
 			// members
@@ -304,9 +320,22 @@ namespace RE
 		};
 		static_assert(sizeof(Renderer) == 0x25D0);
 
+		[[nodiscard]] inline RendererData* GetRendererData()
+		{
+			static REL::Relocation<RendererData**> ptr{ REL::ID(2704429) };
+			return *ptr;
+		}
+
+		[[nodiscard]] inline RendererWindow* GetCurrentRendererWindow()
+		{
+			static REL::Relocation<RendererWindow**> ptr{ REL::ID(2704431) };
+			return *ptr;
+		}
+
 		class Context
 		{
 		public:
+			// members
 			REX::W32::ID3D11DeviceContext*                          deferredContext;                           // 0000
 			REX::W32::ID3D11Buffer*                                 shaderConstantBuffer[541];                 // 0008
 			REX::W32::ID3D11Buffer*                                 vertexShaderConstantBufferTechnique[20];   // 10F0
@@ -460,7 +489,6 @@ namespace RE
 
 		struct FogStateType
 		{
-		public:
 			// members
 			NiPoint4 rangeData;         // 00
 			NiColor  nearLowColor;      // 10
@@ -477,7 +505,6 @@ namespace RE
 
 		struct ViewData
 		{
-		public:
 			// members
 			NiRect<float> viewPort;                       // 000
 			NiPoint2      viewDepthRange;                 // 010
@@ -496,7 +523,6 @@ namespace RE
 
 		struct CameraStateData
 		{
-		public:
 			// members
 			ViewData        camViewData;        // 000
 			NiPoint3        posAdjust;          // 210

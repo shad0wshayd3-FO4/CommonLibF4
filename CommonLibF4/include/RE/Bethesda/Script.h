@@ -257,16 +257,16 @@ namespace RE
 		using CompileFunction_t = bool(const std::uint16_t a_paramCount, const SCRIPT_PARAMETER* a_parameters, SCRIPT_LINE* a_scriptLine, ScriptCompileData* a_compileData);
 		using ExecuteFunction_t = bool(const SCRIPT_PARAMETER* a_parameters, const char* a_compiledParams, TESObjectREFR* a_refObject, TESObjectREFR* a_container, Script* a_script, ScriptLocals* a_scriptLocals, float& a_returnValue, std::uint32_t& a_offset);
 
-		[[nodiscard]] static std::span<SCRIPT_FUNCTION, 526> GetConsoleFunctions()
+		[[nodiscard]] static auto GetConsoleFunctions()
 		{
 			static REL::Relocation<SCRIPT_FUNCTION(*)[526]> functions{ REL::ID(901511) };
-			return { *functions };
+			return std::span{ *functions };
 		}
 
-		[[nodiscard]] static std::span<SCRIPT_FUNCTION, 819> GetScriptFunctions()
+		[[nodiscard]] static auto GetScriptFunctions()
 		{
 			static REL::Relocation<SCRIPT_FUNCTION(*)[819]> functions{ REL::ID(75173) };
-			return { *functions };
+			return std::span{ *functions };
 		}
 
 		// members
@@ -320,6 +320,28 @@ namespace RE
 			using func_t = decltype(&Script::GetProcessScripts);
 			static REL::Relocation<func_t> func{ REL::ID(2204310) };
 			return func();
+		}
+
+		static SCRIPT_FUNCTION* LocateConsoleCommand(const std::string_view a_longName)
+		{
+			for (auto& command : SCRIPT_FUNCTION::GetConsoleFunctions()) {
+				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
+					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
+						return std::addressof(command);
+			}
+
+			return nullptr;
+		}
+
+		static SCRIPT_FUNCTION* LocateScriptCommand(const std::string_view a_longName)
+		{
+			for (auto& command : SCRIPT_FUNCTION::GetScriptFunctions()) {
+				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
+					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
+						return std::addressof(command);
+			}
+
+			return nullptr;
 		}
 
 		static void SetProcessScripts(bool a_processScripts)

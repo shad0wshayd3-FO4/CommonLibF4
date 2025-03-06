@@ -5,8 +5,8 @@ namespace RE
 	class __declspec(novtable) hkBaseObject
 	{
 	public:
-		static constexpr auto RTTI{ RTTI::hkBaseObject };
-		static constexpr auto VTABLE{ VTABLE::hkBaseObject };
+		inline static constexpr auto RTTI{ RTTI::hkBaseObject };
+		inline static constexpr auto VTABLE{ VTABLE::hkBaseObject };
 
 		virtual ~hkBaseObject() = default;  // 00
 

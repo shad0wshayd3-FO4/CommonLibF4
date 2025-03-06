@@ -1,14 +1,15 @@
 #pragma once
 
+#include "RE/Bethesda/CRC.h"
+
 namespace RE
 {
-	template <class Integral, Integral N, class Discriminant>
+	template <class T, T N, class D>
 	struct hkHandle
 	{
-	public:
 		~hkHandle() noexcept {}  // intentional
 
 		// members
-		Integral value;  // 0
+		T value;  // 0
 	};
 }

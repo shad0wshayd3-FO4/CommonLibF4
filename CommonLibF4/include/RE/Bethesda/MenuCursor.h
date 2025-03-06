@@ -15,14 +15,14 @@ namespace RE
 
 		[[nodiscard]] static MenuCursor* GetSingleton()
 		{
-			static REL::Relocation<MenuCursor**> singleton{ REL::ID(695696) };
+			static REL::Relocation<MenuCursor**> singleton{ REL::ID(2696546) };
 			return *singleton;
 		}
 
 		void CenterCursor()
 		{
 			using func_t = decltype(&MenuCursor::CenterCursor);
-			static REL::Relocation<func_t> func{ REL::ID(1107298) };
+			static REL::Relocation<func_t> func{ REL::ID(2287473) };
 			return func(this);
 		}
 

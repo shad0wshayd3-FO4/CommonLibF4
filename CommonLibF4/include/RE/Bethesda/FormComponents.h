@@ -193,8 +193,17 @@ namespace RE
 	class __declspec(novtable) BGSOpenCloseForm
 	{
 	public:
-		static constexpr auto RTTI{ RTTI::BGSOpenCloseForm };
-		static constexpr auto VTABLE{ VTABLE::BGSOpenCloseForm };
+		inline static constexpr auto RTTI{ RTTI::BGSOpenCloseForm };
+		inline static constexpr auto VTABLE{ VTABLE::BGSOpenCloseForm };
+
+		enum class OPEN_STATE : std::int32_t
+		{
+			kNone = 0,
+			kOpen = 1,
+			kOpening = 2,
+			kClosed = 3,
+			kClosing = 4
+		};
 
 		virtual ~BGSOpenCloseForm() = default;  // 00
 
@@ -203,6 +212,55 @@ namespace RE
 		virtual void HandleCloseStart(TESObjectREFR*, TESObjectREFR*, bool) { return; }  // 02
 		virtual void HandleOpenFinish(TESObjectREFR*, TESObjectREFR*) { return; }        // 03
 		virtual void HandleCloseFinish(TESObjectREFR*, TESObjectREFR*) { return; }       // 04
+
+		inline static void AutoCloseRef(const TESObjectREFR* a_ref)
+		{
+			using func_t = decltype(&BGSOpenCloseForm::AutoCloseRef);
+			static REL::Relocation<func_t> func{ REL::ID(2192797) };
+			func(a_ref);
+		}
+
+		inline static OPEN_STATE GetOpenState(const TESObjectREFR* a_ref)
+		{
+			using func_t = decltype(&BGSOpenCloseForm::GetOpenState);
+			static REL::Relocation<func_t> func{ REL::ID(2192799) };
+			return func(a_ref);
+		}
+
+		inline static bool HasOnlyOpenCloseAnims(const TESObjectREFR* a_ref)
+		{
+			using func_t = decltype(&BGSOpenCloseForm::HasOnlyOpenCloseAnims);
+			static REL::Relocation<func_t> func{ REL::ID(2192796) };
+			return func(a_ref);
+		}
+
+		inline static bool IsAnimating(const TESObjectREFR* a_ref)
+		{
+			using func_t = decltype(&BGSOpenCloseForm::IsAnimating);
+			static REL::Relocation<func_t> func{ REL::ID(2192801) };
+			return func(a_ref);
+		}
+
+		inline static bool IsOpenCloseEvent(const BSFixedString& a_event, const bool& a_open)
+		{
+			using func_t = decltype(&BGSOpenCloseForm::IsOpenCloseEvent);
+			static REL::Relocation<func_t> func{ REL::ID(2192795) };
+			return func(a_event, a_open);
+		}
+
+		inline static bool IsOpenCloseForm(TESForm* a_form)
+		{
+			using func_t = decltype(&BGSOpenCloseForm::IsOpenCloseForm);
+			static REL::Relocation<func_t> func{ REL::ID(2192790) };
+			return func(a_form);
+		}
+
+		inline static bool SetOpenState(const TESObjectREFR* a_ref, bool a_open, bool a_snap)
+		{
+			using func_t = decltype(&BGSOpenCloseForm::SetOpenState);
+			static REL::Relocation<func_t> func{ REL::ID(2192798) };
+			return func(a_ref, a_open, a_snap);
+		}
 	};
 	static_assert(sizeof(BGSOpenCloseForm) == 0x8);
 
@@ -725,7 +783,8 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BGSBipedObjectForm };
 		static constexpr auto VTABLE{ VTABLE::BGSBipedObjectForm };
 
-		[[nodiscard]] std::uint32_t GetFilledSlots() const noexcept { return bipedModelData.bipedObjectSlots; }
+		// add
+		virtual bool FillsBipedSlot(std::int32_t a_bipedSlot) const;  // 06
 
 		// members
 		BIPED_MODEL bipedModelData;  // 08
@@ -1740,10 +1799,10 @@ namespace RE
 		virtual const char*  GetOverrideName() { return nullptr; }                     // 0A
 		virtual bool         GetCanContainFormsOfType(ENUM_FORM_ID a_type) const = 0;  // 0B
 
-		LEVELED_OBJECT* AddLeveledObject(std::uint16_t a_level, uint16_t a_count, int8_t a_chanceNone, TESForm* a_item, ContainerItemExtra* a_itemExtra)
+		LEVELED_OBJECT* AddLeveledObject(std::uint16_t a_level, std::uint16_t a_count, std::int8_t a_chanceNone, TESForm* a_item, ContainerItemExtra* a_itemExtra)
 		{
 			using func_t = decltype(&TESLeveledList::AddLeveledObject);
-			static REL::Relocation<func_t> func{ REL::ID(1163308) };
+			static REL::Relocation<func_t> func{ REL::ID(2193258) };
 			return func(this, a_level, a_count, a_chanceNone, a_item, a_itemExtra);
 		}
 

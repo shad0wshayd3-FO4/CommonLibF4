@@ -182,7 +182,7 @@ namespace REX::JSON
 					setting->Load(&result, true);
 				}
 			} catch (const std::exception& e) {
-				F4SE::log::error("{}", e.what());
+				F4SE::ERROR("{}", e.what());
 			}
 		}
 
@@ -194,7 +194,7 @@ namespace REX::JSON
 					setting->Load(&result, false);
 				}
 			} catch (const std::exception& e) {
-				F4SE::log::error("{}", e.what());
+				F4SE::ERROR("{}", e.what());
 			}
 		}
 	}

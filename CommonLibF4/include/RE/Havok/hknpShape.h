@@ -35,7 +35,6 @@ namespace RE
 
 	struct hknpCollisionDispatchType
 	{
-	public:
 		enum Enum
 		{
 			kNone,
@@ -49,7 +48,6 @@ namespace RE
 
 	struct hknpShapeType
 	{
-	public:
 		enum class Enum
 		{
 			kConvex,
@@ -145,6 +143,7 @@ namespace RE
 		float                                                 convexRadius;     // 14
 		std::uintptr_t                                        userData;         // 18
 		hkRefCountedProperties*                               properties;       // 20
+		std::byte                                             pad28[8];         // 28
 	};
 	static_assert(sizeof(hknpShape) == 0x30);
 }

@@ -18,6 +18,9 @@ target("commonlibf4-rttidump")
     add_files("src/**.cpp")
 
     -- add header files
+    add_headerfiles("src/**.h")
+
+    -- add include dirs
     add_includedirs("src")
 
     -- set precompiled header

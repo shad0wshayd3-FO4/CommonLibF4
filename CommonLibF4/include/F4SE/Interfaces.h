@@ -26,7 +26,7 @@ namespace F4SE
 	class ObjectRegistry;
 	class PersistentObjectStorage;
 
-	namespace detail
+	namespace Impl
 	{
 		struct F4SEInterface
 		{
@@ -84,6 +84,7 @@ namespace F4SE
 			std::uint32_t interfaceVersion;
 			void(F4SEAPI* AddTask)(void*);
 			void(F4SEAPI* AddUITask)(void*);
+			void(F4SEAPI* AddTaskPermanent)(void*);
 		};
 
 		struct F4SEObjectInterface
@@ -107,7 +108,7 @@ namespace F4SE
 	protected:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEInterface&>(*this);
 		}
 
 	private:
@@ -155,7 +156,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEMessagingInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEMessagingInterface&>(*this);
 		}
 
 	public:
@@ -206,7 +207,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEScaleformInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEScaleformInterface&>(*this);
 		}
 
 	public:
@@ -227,7 +228,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SESerializationInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SESerializationInterface&>(*this);
 		}
 
 	public:
@@ -319,7 +320,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEPapyrusInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEPapyrusInterface&>(*this);
 		}
 
 	public:
@@ -353,7 +354,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SETaskInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SETaskInterface&>(*this);
 		}
 
 		class TaskDelegate :
@@ -382,6 +383,8 @@ namespace F4SE
 		void AddTask(std::function<void()> a_task) const { AddTask(new TaskDelegate(std::move(a_task))); }
 		void AddUITask(ITaskDelegate* a_task) const { GetProxy().AddUITask(a_task); }
 		void AddUITask(std::function<void()> a_task) const { AddUITask(new TaskDelegate(std::move(a_task))); }
+		void AddTaskPermanent(ITaskDelegate* a_task) const { GetProxy().AddTaskPermanent(a_task); }
+		void AddTaskPermanent(std::function<void()> a_task) const { AddTaskPermanent(new TaskDelegate(std::move(a_task))); }
 	};
 
 	class ObjectInterface
@@ -389,7 +392,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SEObjectInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SEObjectInterface&>(*this);
 		}
 
 	public:
@@ -409,7 +412,7 @@ namespace F4SE
 	private:
 		[[nodiscard]] decltype(auto) GetProxy() const noexcept
 		{
-			return reinterpret_cast<const detail::F4SETrampolineInterface&>(*this);
+			return reinterpret_cast<const Impl::F4SETrampolineInterface&>(*this);
 		}
 
 	public:

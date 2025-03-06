@@ -13,7 +13,9 @@
 namespace RE
 {
 	class BGSObjectInstanceExtra;
+	class BGSPrimitive;
 	class BSExtraData;
+	class BSFadeNode;
 	class ExtraAliasInstanceArray;
 	class ExtraCellWaterType;
 	class ExtraInstanceData;
@@ -623,6 +625,13 @@ namespace RE
 			return func(this, a_mod, a_attachIndex);
 		}
 
+		std::uint32_t GetNumMods(bool a_ignoreCollections)
+		{
+			using func_t = decltype(&BGSObjectInstanceExtra::GetNumMods);
+			static REL::Relocation<func_t> func{ REL::ID(2189019) };
+			return func(this, a_ignoreCollections);
+		}
+
 		// members
 		const BSTDataBuffer<1>* values{ nullptr };  // 18
 		std::uint16_t           itemIndex{ 0 };     // 20
@@ -1112,6 +1121,13 @@ namespace RE
 			using func_t = decltype(&ExtraDataList::SetFavorite);
 			static REL::Relocation<func_t> func{ REL::ID(2190188) };
 			return func(this, a_quickkeyIndex);
+		}
+
+		BGSPrimitive* GetPrimitive()
+		{
+			using func_t = decltype(&ExtraDataList::GetPrimitive);
+			static REL::Relocation<func_t> func{ REL::ID(2190427) };
+			return func(this);
 		}
 
 		// members

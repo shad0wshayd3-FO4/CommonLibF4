@@ -170,12 +170,15 @@ set(SOURCES
 	include/RE/Bethesda/Console.h
 	include/RE/Bethesda/ControlMap.h
 	include/RE/Bethesda/Events.h
+	include/RE/Bethesda/ExteriorCellSingleton.h
 	include/RE/Bethesda/FavoritesManager.h
 	include/RE/Bethesda/FormComponents.h
 	include/RE/Bethesda/FormFactory.h
 	include/RE/Bethesda/FormUtil.h
 	include/RE/Bethesda/GamePlayFormulas.h
 	include/RE/Bethesda/GameScript.h
+	include/RE/Bethesda/GridArray.h
+	include/RE/Bethesda/GridCellArray.h
 	include/RE/Bethesda/HUDModes.h
 	include/RE/Bethesda/IMenu.h
 	include/RE/Bethesda/IMovementInterface.h
@@ -229,6 +232,7 @@ set(SOURCES
 	include/RE/Bethesda/SWFToCodeFunctionHandler.h
 	include/RE/Bethesda/Script.h
 	include/RE/Bethesda/SendHUDMessage.h
+	include/RE/Bethesda/SetCullMarkersFunctor.h
 	include/RE/Bethesda/Settings.h
 	include/RE/Bethesda/Sky.h
 	include/RE/Bethesda/SplineUtils.h

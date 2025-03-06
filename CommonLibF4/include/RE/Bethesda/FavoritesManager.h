@@ -53,6 +53,13 @@ namespace RE
 			return func(this, a_component);
 		}
 
+		[[nodiscard]] bool UseQuickkeyItem(std::uint32_t a_quickkeyIndex)
+		{
+			using func_t = decltype(&FavoritesManager::UseQuickkeyItem);
+			static REL::Relocation<func_t> func{ REL::ID(2248744) };
+			return func(this, a_quickkeyIndex);
+		}
+
 		// members
 		TESBoundObject*                                  storedFavTypes[12];         // 090
 		NiPointer<QueuedFile>                            bufferedFavGeometries[12];  // 0F0

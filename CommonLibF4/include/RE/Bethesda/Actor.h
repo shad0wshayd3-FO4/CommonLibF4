@@ -1101,6 +1101,13 @@ namespace RE
 			return currentProcess ? currentProcess->GetCurrentAmmo(a_equipIndex) : nullptr;
 		}
 
+		void SetCurrentAmmoCount(BGSEquipIndex a_equipIndex, std::uint32_t a_count)
+		{
+			using func_t = decltype(&Actor::SetCurrentAmmoCount);
+			static REL::Relocation<func_t> func{ REL::ID(2229952) };
+			return func(this, a_equipIndex, a_count);
+		}
+
 		std::uint32_t GetCurrentCollisionGroup()
 		{
 			using func_t = decltype(&Actor::GetCurrentCollisionGroup);
@@ -1310,6 +1317,13 @@ namespace RE
 			using func_t = decltype(&Actor::GetBodyPartData);
 			static REL::Relocation<func_t> func{ REL::ID(2229571) };
 			return func(this);
+		}
+
+		BGSObjectInstance* GetEquippedItem(BGSObjectInstance* a_result, BGSEquipIndex a_equipIndex)
+		{
+			using func_t = decltype(&Actor::GetEquippedItem);
+			static REL::Relocation<func_t> func{ REL::ID(2231089) };
+			return func(this, a_result, a_equipIndex);
 		}
 
 		// members

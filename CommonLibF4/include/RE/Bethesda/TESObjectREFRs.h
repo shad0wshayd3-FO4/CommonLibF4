@@ -274,7 +274,7 @@ namespace RE
 		BGSObjectInstance* ctor(TESForm* a_object, TBO_InstanceData* a_instanceData)
 		{
 			using func_t = decltype(&BGSObjectInstance::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(1095748) };
+			static REL::Relocation<func_t> func{ REL::ID(2197563) };
 			return func(this, a_object, a_instanceData);
 		}
 	};
@@ -378,7 +378,7 @@ namespace RE
 		void ctor(const TESContainer* a_container, std::uint32_t* a_owner)
 		{
 			using func_t = decltype(&BGSInventoryList::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(845050) };
+			static REL::Relocation<func_t> func{ REL::ID(2194153) };
 			return func(this, a_container, a_owner);
 		}
 	};
@@ -668,7 +668,7 @@ namespace RE
 		bool ActivateRef(TESObjectREFR* a_actionRef, TESBoundObject* a_objectToGet, std::int32_t a_count, bool a_defaultProcessingOnly, bool a_fromScript, bool a_looping)
 		{
 			using func_t = decltype(&TESObjectREFR::ActivateRef);
-			static REL::Relocation<func_t> func{ REL::ID(753531) };
+			static REL::Relocation<func_t> func{ REL::ID(2201147) };
 			return func(this, a_actionRef, a_objectToGet, a_count, a_defaultProcessingOnly, a_fromScript, a_looping);
 		}
 
@@ -864,11 +864,11 @@ namespace RE
 			return func(this, a_interior, a_world);
 		}
 
-		void RemoveKeyword(BGSKeyword* kwd)
+		void RemoveKeyword(BGSKeyword* a_keyworld)
 		{
 			using func_t = decltype(&TESObjectREFR::RemoveKeyword);
-			static REL::Relocation<func_t> func{ REL::ID(281170) };
-			return func(this, kwd);
+			static REL::Relocation<func_t> func{ REL::ID(2200861) };
+			return func(this, a_keyworld);
 		}
 
 		void SetAngleOnReference(const NiPoint3& a_point)
@@ -930,8 +930,22 @@ namespace RE
 		void SetScale(float scale)
 		{
 			using func_t = decltype(&TESObjectREFR::SetScale);
-			static REL::Relocation<func_t> func{ REL::ID(817930) };
+			static REL::Relocation<func_t> func{ REL::ID(2200893) };
 			return func(this, scale);
+		}
+
+		bool IsMarker()
+		{
+			using func_t = decltype(&TESObjectREFR::IsMarker);
+			static REL::Relocation<func_t> func{ REL::ID(2201157) };
+			return func(this);
+		}
+
+		bool IsDecalRef()
+		{
+			using func_t = decltype(&TESObjectREFR::IsDecalRef);
+			static REL::Relocation<func_t> func{ REL::ID(2200794) };
+			return func(this);
 		}
 
 		// members

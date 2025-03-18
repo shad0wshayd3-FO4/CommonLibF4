@@ -430,6 +430,10 @@ set(SOURCES
 	include/RE/VTABLE_IDs.h
 	include/RE/msvc/memory.h
 	include/RE/msvc/typeinfo.h
+	include/REL/ASM.h
+	include/REL/Hook.h
+	include/REL/HookObject.h
+	include/REL/HookStore.h
 	include/REL/IAT.h
 	include/REL/ID.h
 	include/REL/IDDB.h
@@ -439,6 +443,8 @@ set(SOURCES
 	include/REL/REL.h
 	include/REL/Relocation.h
 	include/REL/Segment.h
+	include/REL/Trampoline.h
+	include/REL/Utility.h
 	include/REL/Version.h
 	include/REX/PS4.h
 	include/REX/PS4/SCEPAD.h
@@ -447,6 +453,7 @@ set(SOURCES
 	include/REX/REX/EnumSet.h
 	include/REX/REX/INI.h
 	include/REX/REX/JSON.h
+	include/REX/REX/LOG.h
 	include/REX/REX/Setting.h
 	include/REX/REX/Singleton.h
 	include/REX/REX/TOML.h
@@ -483,7 +490,6 @@ set(SOURCES
 	src/F4SE/InputMap.cpp
 	src/F4SE/Interfaces.cpp
 	src/F4SE/Logger.cpp
-	src/F4SE/Trampoline.cpp
 	src/RE/Bethesda/Actor.cpp
 	src/RE/Bethesda/BGSInventoryItem.cpp
 	src/RE/Bethesda/BSExtraData.cpp
@@ -522,10 +528,13 @@ set(SOURCES
 	src/RE/NetImmerse/NiRect.cpp
 	src/RE/NetImmerse/NiTransform.cpp
 	src/RE/Scaleform/GFx/GFx_Player.cpp
+	src/REL/HookObject.cpp
+	src/REL/HookStore.cpp
 	src/REL/IAT.cpp
 	src/REL/IDDB.cpp
 	src/REL/Module.cpp
-	src/REL/Relocation.cpp
+	src/REL/Trampoline.cpp
+	src/REL/Utility.cpp
 	src/REL/Version.cpp
 	src/REX/REX.cpp
 	src/REX/W32.cpp

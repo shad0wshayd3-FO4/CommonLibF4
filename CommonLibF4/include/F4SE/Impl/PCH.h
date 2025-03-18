@@ -44,6 +44,7 @@ static_assert(
 
 #include "REX/REX/Enum.h"
 #include "REX/REX/EnumSet.h"
+#include "REX/REX/LOG.h"
 #include "REX/W32/KERNEL32.h"
 #include "REX/W32/USER32.h"
 

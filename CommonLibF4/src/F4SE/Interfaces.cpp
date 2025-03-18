@@ -1,7 +1,6 @@
 #include "F4SE/Interfaces.h"
 
 #include "F4SE/API.h"
-#include "F4SE/Logger.h"
 
 #include "REX/W32/KERNEL32.h"
 
@@ -15,7 +14,7 @@ namespace F4SE
 				a_sender.data(),
 				a_handler);
 		if (!success) {
-			F4SE::WARN("failed to register listener for {}"sv, a_sender);
+			REX::ERROR("failed to register listener for {}"sv, a_sender);
 		}
 		return success;
 	}
@@ -30,7 +29,7 @@ namespace F4SE
 				a_dataLen,
 				a_receiver);
 		if (!success) {
-			F4SE::WARN("failed to dispatch to {}"sv, (a_receiver ? a_receiver : "all listeners"));
+			REX::ERROR("failed to dispatch to {}"sv, (a_receiver ? a_receiver : "all listeners"));
 		}
 		return success;
 	}
@@ -42,7 +41,7 @@ namespace F4SE
 				a_name.data(),
 				a_callback);
 		if (!success) {
-			F4SE::WARN("failed to register {}"sv, a_name);
+			REX::ERROR("failed to register {}"sv, a_name);
 		}
 		return success;
 	}
@@ -91,7 +90,7 @@ namespace F4SE
 				a_buf,
 				a_length);
 		if (!success) {
-			F4SE::WARN("failed to write record"sv);
+			REX::ERROR("failed to write record"sv);
 		}
 		return success;
 	}
@@ -103,7 +102,7 @@ namespace F4SE
 				a_type,
 				a_version);
 		if (!success) {
-			F4SE::WARN("failed to open record"sv);
+			REX::ERROR("failed to open record"sv);
 		}
 		return success;
 	}
@@ -115,7 +114,7 @@ namespace F4SE
 				a_buf,
 				a_length);
 		if (!success) {
-			F4SE::WARN("failed to write record data"sv);
+			REX::ERROR("failed to write record data"sv);
 		}
 		return success;
 	}
@@ -135,7 +134,7 @@ namespace F4SE
 				a_buf,
 				a_length);
 		if (read != a_length) {
-			F4SE::WARN("failed to read full record data {}B of {}B"sv, read, a_length);
+			REX::ERROR("failed to read full record data {}B of {}B"sv, read, a_length);
 		}
 		return read;
 	}
@@ -144,7 +143,7 @@ namespace F4SE
 	{
 		const auto success = GetProxy().Register(a_callback);
 		if (!success) {
-			F4SE::WARN("failed to register callback"sv);
+			REX::ERROR("failed to register callback"sv);
 		}
 		return success;
 	}
@@ -156,7 +155,7 @@ namespace F4SE
 				GetPluginHandle(),
 				a_size);
 		if (!mem) {
-			F4SE::WARN("failed to allocate from branch pool"sv);
+			REX::ERROR("failed to allocate from branch pool"sv);
 		}
 		return mem;
 	}
@@ -168,7 +167,7 @@ namespace F4SE
 				GetPluginHandle(),
 				a_size);
 		if (!mem) {
-			F4SE::WARN("failed to allocate from local pool"sv);
+			REX::ERROR("failed to allocate from local pool"sv);
 		}
 		return mem;
 	}

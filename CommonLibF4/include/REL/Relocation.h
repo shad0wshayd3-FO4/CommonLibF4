@@ -159,8 +159,6 @@ namespace REL
 
 			return func(std::forward<First>(a_first), std::addressof(result), std::forward<Rest>(a_rest)...);
 		}
-
-		std::optional<std::string> sha512(std::span<const std::byte> a_data);
 	}
 
 	inline constexpr std::uint8_t NOP = 0x90;

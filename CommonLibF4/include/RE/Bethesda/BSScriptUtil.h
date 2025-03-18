@@ -61,7 +61,7 @@ namespace RE::BSScript
 				const auto game = GameVM::GetSingleton();
 				const auto vm = game ? game->GetVM() : nullptr;
 				if (!vm || !vm->CreateStruct(name, _proxy) || !_proxy) {
-					F4SE::ERROR("failed to create structure of type \"{}\"", name);
+					REX::ERROR("failed to create structure of type \"{}\"", name);
 					assert(false);
 				}
 			}
@@ -80,7 +80,7 @@ namespace RE::BSScript
 			}
 
 			if (!a_quiet) {
-				F4SE::WARN("failed to find var \"{}\" on structure \"{}\"", a_name, name);
+				REX::ERROR("failed to find var \"{}\" on structure \"{}\"", a_name, name);
 			}
 
 			return std::nullopt;
@@ -99,7 +99,7 @@ namespace RE::BSScript
 				}
 			}
 
-			F4SE::WARN("failed to pack var \"{}\" on structure \"{}\"", a_name, name);
+			REX::ERROR("failed to pack var \"{}\" on structure \"{}\"", a_name, name);
 			return false;
 		}
 
@@ -389,7 +389,7 @@ namespace RE::BSScript
 			!vm->GetScriptObjectType(GetVMTypeID<T>(), typeInfo) ||
 			!typeInfo) {
 			assert(false);
-			F4SE::ERROR("failed to get type info for object"sv);
+			REX::ERROR("failed to get type info for object"sv);
 			return std::nullopt;
 		} else {
 			return typeInfo.get();
@@ -406,7 +406,7 @@ namespace RE::BSScript
 			!vm->GetScriptObjectType(GetVMTypeID<T>(), typeInfo) ||
 			!typeInfo) {
 			assert(false);
-			F4SE::ERROR("failed to get type info for object"sv);
+			REX::ERROR("failed to get type info for object"sv);
 			return std::nullopt;
 		} else {
 			return typeInfo.get();
@@ -430,7 +430,7 @@ namespace RE::BSScript
 			!vm->GetScriptObjectType(*baseObjectName, typeInfo) ||
 			!typeInfo) {
 			assert(false);
-			F4SE::ERROR("failed to get type info for vm object"sv);
+			REX::ERROR("failed to get type info for vm object"sv);
 			return std::nullopt;
 		} else {
 			return typeInfo.get();
@@ -491,7 +491,7 @@ namespace RE::BSScript
 				!vm->GetScriptStructType(T::name, typeInfo) ||
 				!typeInfo) {
 				assert(false);
-				F4SE::ERROR("failed to get type info for structure"sv);
+				REX::ERROR("failed to get type info for structure"sv);
 				return std::nullopt;
 			} else {
 				return typeInfo.get();
@@ -562,7 +562,7 @@ namespace RE::BSScript
 
 		if (!success) {
 			assert(false);
-			F4SE::ERROR("failed to pack variable"sv);
+			REX::ERROR("failed to pack variable"sv);
 			a_var = nullptr;
 		}
 	}
@@ -609,7 +609,7 @@ namespace RE::BSScript
 
 		if (!success) {
 			assert(false);
-			F4SE::ERROR("failed to pack cobject"sv);
+			REX::ERROR("failed to pack cobject"sv);
 			a_var = nullptr;
 		}
 	}
@@ -692,7 +692,7 @@ namespace RE::BSScript
 
 		if (!success) {
 			assert(false);
-			F4SE::ERROR("failed to pack array"sv);
+			REX::ERROR("failed to pack array"sv);
 			a_var = nullptr;
 		}
 	}
@@ -762,7 +762,7 @@ namespace RE::BSScript
 
 		if (!result) {
 			assert(false);
-			F4SE::ERROR("failed to get object from variable"sv);
+			REX::ERROR("failed to get object from variable"sv);
 		}
 
 		return static_cast<T*>(result);
@@ -789,7 +789,7 @@ namespace RE::BSScript
 
 		if (!result) {
 			assert(false);
-			F4SE::ERROR("failed to get ActiveEffect from variable"sv);
+			REX::ERROR("failed to get ActiveEffect from variable"sv);
 		}
 
 		return static_cast<T*>(result);
@@ -826,7 +826,7 @@ namespace RE::BSScript
 
 		if (!result) {
 			assert(false);
-			F4SE::ERROR("failed to get cobject from variable"sv);
+			REX::ERROR("failed to get cobject from variable"sv);
 			return T();
 		} else {
 			return *result;
@@ -1152,7 +1152,7 @@ namespace RE::BSScript
 			const auto stack = a_stackFrame.parent;
 			if (!stack) {
 				assert(false);
-				F4SE::ERROR("native function called without relevant stack"sv);
+				REX::ERROR("native function called without relevant stack"sv);
 				return false;
 			}
 
@@ -1219,7 +1219,7 @@ namespace RE::BSScript
 				std::move(a_func),
 				a_isLatent));
 		if (!success) {
-			F4SE::WARN("failed to register method \"{}\" on object \"{}\"", a_function, a_object);
+			REX::ERROR("failed to register method \"{}\" on object \"{}\"", a_function, a_object);
 		}
 
 		if (success && a_taskletCallable) {

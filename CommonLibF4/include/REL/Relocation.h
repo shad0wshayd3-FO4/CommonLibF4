@@ -5,6 +5,7 @@
 #include "REL/ID.h"
 #include "REL/Module.h"
 #include "REL/Offset.h"
+#include "REL/Trampoline.h"
 #include "REL/Utility.h"
 
 #define REL_MAKE_MEMBER_FUNCTION_POD_TYPE_HELPER_IMPL(a_nopropQual, a_propQual, ...)              \
@@ -322,27 +323,31 @@ namespace REL
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0>
-		std::uintptr_t write_branch(const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_jmp(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_branch<N>(address() + O, a_dst);
+			return GetTrampoline().write_jmp<N>(address() + O, a_dst);
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0, class F>
-		std::uintptr_t write_branch(const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_jmp(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_branch<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
+			return GetTrampoline().write_jmp<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0>
-		std::uintptr_t write_call(const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_call(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_call<N>(address() + O, a_dst);
+			return GetTrampoline().write_call<N>(address() + O, a_dst);
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0, class F>
-		std::uintptr_t write_call(const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_call(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_call<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
+			return GetTrampoline().write_call<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
 		template <std::ptrdiff_t O = 0>
@@ -365,6 +370,23 @@ namespace REL
 		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc) requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return write_vfunc(a_idx, stl::unrestricted_cast<std::uintptr_t>(a_newFunc));
+		}
+
+	public:
+		// DEPRECATED: Use write_jump instead
+		template <std::size_t N, std::ptrdiff_t O = 0>
+		std::uintptr_t write_branch(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return GetTrampoline().write_jmp<N>(address() + O, a_dst);
+		}
+
+		// DEPRECATED: Use write_jump instead
+		template <std::size_t N, std::ptrdiff_t O = 0, class F>
+		std::uintptr_t write_branch(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return GetTrampoline().write_jmp<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
 	private:

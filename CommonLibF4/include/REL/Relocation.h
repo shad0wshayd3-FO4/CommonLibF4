@@ -5,6 +5,7 @@
 #include "REL/ID.h"
 #include "REL/Module.h"
 #include "REL/Offset.h"
+#include "REL/Utility.h"
 
 #define REL_MAKE_MEMBER_FUNCTION_POD_TYPE_HELPER_IMPL(a_nopropQual, a_propQual, ...)              \
 	template <                                                                                    \
@@ -183,22 +184,6 @@ namespace REL
 		}
 	}
 
-	void safe_write(std::uintptr_t a_dst, const void* a_src, std::size_t a_count);
-
-	template <std::integral T>
-	void safe_write(std::uintptr_t a_dst, const T& a_data)
-	{
-		safe_write(a_dst, std::addressof(a_data), sizeof(T));
-	}
-
-	template <class T>
-	void safe_write(std::uintptr_t a_dst, std::span<T> a_data)
-	{
-		safe_write(a_dst, a_data.data(), a_data.size_bytes());
-	}
-
-	void safe_fill(std::uintptr_t a_dst, std::uint8_t a_value, std::size_t a_count);
-
 	template <class T = std::uintptr_t>
 	class Relocation
 	{
@@ -302,31 +287,38 @@ namespace REL
 		}
 
 		template <std::ptrdiff_t O = 0, class F>
-		void replace_func(const std::size_t a_count, const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		void replace_func(const std::size_t a_count, const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			replace_func<O>(a_count, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
-		void write(const void* a_src, std::size_t a_count) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0>
+		void write(const void* a_src, std::size_t a_count)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_write(address(), a_src, a_count);
+			WriteSafe(address() + O, a_src, a_count);
 		}
 
-		template <std::integral U>
-		void write(const U& a_data) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0, std::integral U>
+		void write(const U& a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_write(address(), std::addressof(a_data), sizeof(U));
+			WriteSafe(address() + O, std::addressof(a_data), sizeof(U));
 		}
 
-		void write(const std::initializer_list<std::uint8_t> a_data) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0>
+		void write(const std::initializer_list<std::uint8_t> a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_write(address(), a_data.begin(), a_data.size());
+			WriteSafe(address() + O, a_data.begin(), a_data.size());
 		}
 
-		template <class U>
-		void write(const std::span<U> a_data) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0, class U>
+		void write(const std::span<U> a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_write(address(), a_data.data(), a_data.size_bytes());
+			WriteSafe(address() + O, a_data.data(), a_data.size_bytes());
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0>
@@ -353,9 +345,11 @@ namespace REL
 			return F4SE::GetTrampoline().write_call<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
-		void write_fill(const std::uint8_t a_value, const std::size_t a_count) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0>
+		void write_fill(const std::uint8_t a_value, const std::size_t a_count)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_fill(address(), a_value, a_count);
+			WriteSafeFill(address() + O, a_value, a_count);
 		}
 
 		template <class U = value_type>
@@ -363,7 +357,7 @@ namespace REL
 		{
 			const auto addr = address() + (sizeof(void*) * a_idx);
 			const auto result = *reinterpret_cast<std::uintptr_t*>(addr);
-			safe_write(addr, a_newFunc);
+			WriteSafe(addr, a_newFunc);
 			return result;
 		}
 

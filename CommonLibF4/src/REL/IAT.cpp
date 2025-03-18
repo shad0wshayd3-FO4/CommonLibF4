@@ -1,6 +1,6 @@
 #include "REL/IAT.h"
 #include "REL/Module.h"
-#include "REL/Relocation.h"
+#include "REL/Utility.h"
 
 #include "F4SE/Logger.h"
 
@@ -69,7 +69,7 @@ namespace REL
 		const auto oldFunc = GetIATAddr(a_dll, a_function);
 		if (oldFunc) {
 			origAddr = *reinterpret_cast<std::uintptr_t*>(oldFunc);
-			REL::safe_write(oldFunc, a_newFunc);
+			REL::WriteSafeData(oldFunc, a_newFunc);
 		} else {
 			REX::ERROR("Failed to patch {} ({})", a_dll, a_function);
 		}

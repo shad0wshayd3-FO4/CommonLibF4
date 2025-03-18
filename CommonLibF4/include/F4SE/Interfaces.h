@@ -132,6 +132,29 @@ namespace F4SE
 		[[nodiscard]] REL::Version     RuntimeVersion() const noexcept { return MakeVersion(GetProxy().runtimeVersion); }
 	};
 
+	class PreLoadInterface :
+		public QueryInterface
+	{
+	public:
+		enum : std::uint32_t
+		{
+			kInvalid = 0,
+			kTrampoline = 7
+		};
+
+		[[nodiscard]] void* QueryInterface(std::uint32_t a_id) const { return GetProxy().QueryInterface(a_id); }
+
+		template <class T>
+		T* QueryInterface(std::uint32_t a_id) const noexcept
+		{
+			auto result = static_cast<T*>(QueryInterface(a_id));
+			if (result && result->Version() > T::kVersion)
+				REX::ERROR("interface definition is out of date");
+
+			return result;
+		}
+	};
+
 	class LoadInterface :
 		public QueryInterface
 	{
@@ -139,16 +162,26 @@ namespace F4SE
 		enum : std::uint32_t
 		{
 			kInvalid = 0,
-			kMessaging,
-			kScaleform,
-			kPapyrus,
-			kSerialization,
-			kTask,
-			kObject,
-			kTrampoline
+			kMessaging = 1,
+			kScaleform = 2,
+			kPapyrus = 3,
+			kSerialization = 4,
+			kTask = 5,
+			kObject = 6,
+			kTrampoline = 7
 		};
 
 		[[nodiscard]] void* QueryInterface(std::uint32_t a_id) const { return GetProxy().QueryInterface(a_id); }
+
+		template <class T>
+		T* QueryInterface(std::uint32_t a_id) const noexcept
+		{
+			auto result = static_cast<T*>(QueryInterface(a_id));
+			if (result && result->Version() > T::kVersion)
+				REX::ERROR("interface definition is out of date");
+
+			return result;
+		}
 	};
 
 	class MessagingInterface
@@ -524,9 +557,9 @@ namespace F4SE
 }
 
 #define F4SE_EXPORT extern "C" [[maybe_unused]] __declspec(dllexport)
-#define F4SEPluginPreload(...) F4SE_EXPORT bool F4SEPlugin_Preload(__VA_ARGS__)
-#define F4SEPluginLoad(...) F4SE_EXPORT bool F4SEPlugin_Load(__VA_ARGS__)
-#define F4SEPluginVersion F4SE_EXPORT constinit F4SE::PluginVersionData F4SEPlugin_Version
-#define F4SE_PLUGIN_PRELOAD F4SEPluginPreload
-#define F4SE_PLUGIN_LOAD F4SEPluginLoad
-#define F4SE_PLUGIN_VERSION F4SEPluginVersion
+#define F4SE_PLUGIN_PRELOAD(...) F4SE_EXPORT bool F4SEPlugin_Preload(__VA_ARGS__)
+#define F4SE_PLUGIN_LOAD(...) F4SE_EXPORT bool F4SEPlugin_Load(__VA_ARGS__)
+#define F4SE_PLUGIN_VERSION F4SE_EXPORT constinit F4SE::PluginVersionData F4SEPlugin_Version
+#define F4SEPluginPreload F4SE_PLUGIN_PRELOAD
+#define F4SEPluginLoad F4SE_PLUGIN_LOAD
+#define F4SEPluginVersion F4SE_PLUGIN_VERSION

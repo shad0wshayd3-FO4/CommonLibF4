@@ -1,5 +1,9 @@
 #pragma once
 
+#include "REL/ASM.h"
+#include "REL/Hook.h"
+#include "REL/HookStore.h"
+#include "REL/HookObject.h"
 #include "REL/IAT.h"
 #include "REL/ID.h"
 #include "REL/IDDB.h"

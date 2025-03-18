@@ -1,7 +1,6 @@
 #pragma once
 
-#include "F4SE/Trampoline.h"
-
+#include "REL/ASM.h"
 #include "REL/ID.h"
 #include "REL/Module.h"
 #include "REL/Offset.h"
@@ -213,6 +212,10 @@ namespace REL
 			_impl{ a_id.address() + a_offset }
 		{}
 
+		explicit Relocation(ID a_id, Offset a_offset) :
+			_impl{ a_id.address() + a_offset.offset() }
+		{}
+
 		constexpr Relocation& operator=(std::uintptr_t a_address) noexcept
 		{
 			_impl = a_address;
@@ -245,6 +248,11 @@ namespace REL
 			return get();
 		}
 
+		[[nodiscard]] operator bool() const noexcept
+		{
+			return _impl != 0;
+		}
+
 		template <class... Args>
 		std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const
 			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>) requires(std::invocable<const value_type&, Args...>)
@@ -263,28 +271,13 @@ namespace REL
 		}
 
 		template <std::ptrdiff_t O = 0>
-		void replace_func(const std::size_t a_count, const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		void replace_func(const std::size_t a_count, const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-#pragma pack(push, 1)
-			struct Assembly
-			{
-				std::uint8_t  jmp;
-				std::uint8_t  modrm;
-				std::int32_t  disp;
-				std::uint64_t addr;
-			};
-			static_assert(sizeof(Assembly) == 0xE);
-#pragma pack(pop)
+			ASM::JMP14 assembly(a_dst);
 
-			Assembly assembly{
-				.jmp = static_cast<std::uint8_t>(0xFF),
-				.modrm = static_cast<std::uint8_t>(0x25),
-				.disp = static_cast<std::int32_t>(0),
-				.addr = static_cast<std::uint64_t>(a_dst),
-			};
-
-			safe_fill(address() + O, INT3, a_count);
-			safe_write(address() + O, &assembly, sizeof(assembly));
+			write_fill<O>(INT3, a_count);
+			write<O>(&assembly, sizeof(assembly));
 		}
 
 		template <std::ptrdiff_t O = 0, class F>

@@ -7,9 +7,6 @@ namespace REL
 	HookObject::HookObject(const std::uintptr_t a_address) :
 		m_address(a_address)
 	{
-		//if (!m_address)
-			//F4SE::FAIL("{}: address is null", *this);
-
 		m_handle = HookStore::GetSingleton()->Add(this);
 		m_name = std::to_string(m_handle);
 	}

@@ -2,8 +2,6 @@
 #include "REL/Module.h"
 #include "REL/Utility.h"
 
-#include "F4SE/Logger.h"
-
 #include "REX/W32/KERNEL32.h"
 
 namespace REL

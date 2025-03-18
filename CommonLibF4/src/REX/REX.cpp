@@ -3,10 +3,9 @@
 #include "REX/REX/LOG.h"
 #include "REX/REX/TOML.h"
 
-#include "F4SE/Logger.h"
-
 #ifdef REX_OPTION_INI
 #	include <SimpleIni.h>
+#	undef ERROR
 
 namespace REX::INI
 {

@@ -8,6 +8,7 @@
 // xbyak brings in <Windows.h>
 #ifdef F4SE_SUPPORT_XBYAK
 #	include <xbyak/xbyak.h>
+#   undef ERROR
 #	undef max
 #	undef MEM_COMMIT
 #	undef MEM_FREE

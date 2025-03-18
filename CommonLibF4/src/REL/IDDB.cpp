@@ -4,12 +4,8 @@
 
 #include "REX/W32/BCRYPT.h"
 
-#include "F4SE/Logger.h"
-
 namespace REL
 {
-	namespace log = F4SE::log;
-
 	std::optional<std::string> SHA512(std::span<const std::byte> a_data)
 	{
 		REX::W32::BCRYPT_ALG_HANDLE algorithm;

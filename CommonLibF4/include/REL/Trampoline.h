@@ -111,14 +111,14 @@ namespace REL
 		std::uintptr_t allocate_branch6(const std::uintptr_t a_dst);
 
 	public:
-		// DEPRECATED
+		// DEPRECATED: Use write_jmp instead
 		template <std::size_t N>
 		std::uintptr_t write_branch(std::uintptr_t a_src, std::uintptr_t a_dst)
 		{
 			return write_jmp<N>(a_src, a_dst);
 		}
 
-		// DEPRECATED
+		// DEPRECATED: Use write_jmp instead
 		template <std::size_t N, class F>
 		std::uintptr_t write_branch(std::uintptr_t a_src, F a_dst)
 		{

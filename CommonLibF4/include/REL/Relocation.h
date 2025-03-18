@@ -366,7 +366,7 @@ namespace REL
 		}
 
 	public:
-		// DEPRECATED: Use write_jump instead
+		// DEPRECATED: Use write_jmp instead
 		template <std::size_t N, std::ptrdiff_t O = 0>
 		std::uintptr_t write_branch(const std::uintptr_t a_dst)
 			requires(std::same_as<value_type, std::uintptr_t>)
@@ -374,7 +374,7 @@ namespace REL
 			return GetTrampoline().write_jmp<N>(address() + O, a_dst);
 		}
 
-		// DEPRECATED: Use write_jump instead
+		// DEPRECATED: Use write_jmp instead
 		template <std::size_t N, std::ptrdiff_t O = 0, class F>
 		std::uintptr_t write_branch(const F a_dst)
 			requires(std::same_as<value_type, std::uintptr_t>)

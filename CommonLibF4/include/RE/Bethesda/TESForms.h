@@ -716,7 +716,7 @@ namespace RE
 		static void AddCompileIndex(std::uint32_t& a_id, TESFile* a_file)
 		{
 			using func_t = decltype(&TESForm::AddCompileIndex);
-			static REL::Relocation<func_t> func{ REL::ID(1315637) };
+			static REL::Relocation<func_t> func{ REL::ID(2193152) };
 			return func(a_id, a_file);
 		}
 
@@ -1552,6 +1552,41 @@ namespace RE
 			return func(this, pd);
 		}
 
+		[[nodiscard]] void SetCullCellMarkers(bool a_cull)
+		{
+			using func_t = decltype(&TESObjectCELL::SetCullCellMarkers);
+			static REL::Relocation<func_t> func{ REL::ID(2192259) };
+			return func(this, a_cull);
+		}
+
+		[[nodiscard]] void UpdateAllRefsLoaded()
+		{
+			using func_t = decltype(&TESObjectCELL::UpdateAllRefsLoaded);
+			static REL::Relocation<func_t> func{ REL::ID(2200415) };
+			return func(this);
+		}
+
+		[[nodiscard]] void AttatchReference3D(TESObjectREFR* a_ref, bool a_onTop, bool a_queueAttatch)
+		{
+			using func_t = decltype(&TESObjectCELL::AttatchReference3D);
+			static REL::Relocation<func_t> func{ REL::ID(2200620) };
+			return func(this, a_ref, a_onTop, a_queueAttatch);
+		}
+
+		[[nodiscard]] void RemoveReference(TESObjectREFR* a_ref)
+		{
+			using func_t = decltype(&TESObjectCELL::RemoveReference);
+			static REL::Relocation<func_t> func{ REL::ID(2200299) };
+			return func(this, a_ref);
+		}
+
+		[[nodiscard]] void UpdateAllDecals()
+		{
+			using func_t = decltype(&TESObjectCELL::UpdateAllDecals);
+			static REL::Relocation<func_t> func{ REL::ID(2200643) };
+			return func(this);
+		}
+
 		[[nodiscard]] TESWaterForm* GetWaterType() const noexcept;
 		[[nodiscard]] bool          HasWater() const noexcept { return cellFlags.all(Flag::kHasWater); }
 		[[nodiscard]] bool          IsExterior() const noexcept { return !IsInterior(); }
@@ -1780,7 +1815,6 @@ namespace RE
 			CC_SUCCESS_NONE = -1,
 		};
 
-		// Returns nullptr if no parent.
 		TESTopicInfo* GetParentInfoGroup()
 		{
 			using func_t = decltype(&TESTopicInfo::GetParentInfoGroup);

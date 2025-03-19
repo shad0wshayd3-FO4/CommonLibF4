@@ -100,17 +100,17 @@ namespace RE
 		} else {
 			if (a_strict) {
 				switch (a_form.GetFormType()) {
-				case ENUM_FORM_ID::kKYWD:  // BGSKeyword
-				case ENUM_FORM_ID::kLCRT:  // BGSLocationRefType
-				case ENUM_FORM_ID::kAACT:  // BGSAction
-				case ENUM_FORM_ID::kLIGH:  // TESObjectLIGH
-				case ENUM_FORM_ID::kSTAT:  // TESObjectSTAT
-				case ENUM_FORM_ID::kSCOL:  // BGSStaticCollection
-				case ENUM_FORM_ID::kMSTT:  // BGSMovableStatic
-				case ENUM_FORM_ID::kFLST:  // BGSListForm
-					break;
-				default:
-					return ""sv;
+					case ENUM_FORM_ID::kKYWD:  // BGSKeyword
+					case ENUM_FORM_ID::kLCRT:  // BGSLocationRefType
+					case ENUM_FORM_ID::kAACT:  // BGSAction
+					case ENUM_FORM_ID::kLIGH:  // TESObjectLIGH
+					case ENUM_FORM_ID::kSTAT:  // TESObjectSTAT
+					case ENUM_FORM_ID::kSCOL:  // BGSStaticCollection
+					case ENUM_FORM_ID::kMSTT:  // BGSMovableStatic
+					case ENUM_FORM_ID::kFLST:  // BGSListForm
+						break;
+					default:
+						return ""sv;
 				}
 			}
 

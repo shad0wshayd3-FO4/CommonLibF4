@@ -3,8 +3,11 @@
 #include "RE/Havok/hkBaseTypes.h"
 #include "RE/Havok/hkBitField.h"
 #include "RE/Havok/hkBlockStream.h"
-#include "RE/Havok/hkcdRay.h"
 #include "RE/Havok/hkIntSpaceUtil.h"
+#include "RE/Havok/hkRefPtr.h"
+#include "RE/Havok/hkReferencedObject.h"
+#include "RE/Havok/hkSimdFloat.h"
+#include "RE/Havok/hkcdRay.h"
 #include "RE/Havok/hknpBodyManager.h"
 #include "RE/Havok/hknpConstraintManager.h"
 #include "RE/Havok/hknpContactSolver.h"
@@ -13,9 +16,6 @@
 #include "RE/Havok/hknpSolverInfo.h"
 #include "RE/Havok/hknpThreadSafetyCheck.h"
 #include "RE/Havok/hknpWorldSignals.h"
-#include "RE/Havok/hkReferencedObject.h"
-#include "RE/Havok/hkRefPtr.h"
-#include "RE/Havok/hkSimdFloat.h"
 
 namespace RE
 {

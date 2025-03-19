@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/Havok/hknpConvexPolytopeShape.h"
 #include "RE/Havok/hkVector4.h"
+#include "RE/Havok/hknpConvexPolytopeShape.h"
 
 namespace RE
 {

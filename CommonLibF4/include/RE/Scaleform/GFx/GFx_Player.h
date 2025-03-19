@@ -846,12 +846,12 @@ namespace RE::Scaleform::GFx
 		[[nodiscard]] bool IsObject() const noexcept
 		{
 			switch (GetType()) {
-			case ValueType::kObject:
-			case ValueType::kArray:
-			case ValueType::kDisplayObject:
-				return true;
-			default:
-				return false;
+				case ValueType::kObject:
+				case ValueType::kArray:
+				case ValueType::kDisplayObject:
+					return true;
+				default:
+					return false;
 			}
 		}
 

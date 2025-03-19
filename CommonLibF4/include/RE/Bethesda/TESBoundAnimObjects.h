@@ -497,7 +497,7 @@ namespace RE
 		{
 			TESNPC*         soundCreature;
 			CreatureSounds* creatureSounds;
-		};                                                                                      // 290
+		};  // 290
 		BGSLocalizedString                                       shortName;                     // 298
 		TESObjectARMO*                                           farSkin;                       // 2A0
 		TESFurniture*                                            powerArmorFurn;                // 2A8
@@ -614,12 +614,12 @@ struct std::formatter<RE::SEX>
 	constexpr auto format(const RE::SEX& a_sex, FormatContext& a_ctx) const
 	{
 		switch (a_sex) {
-		case RE::SEX::kNone:
-			return format_to(a_ctx.out(), "None");
-		case RE::SEX::kMale:
-			return format_to(a_ctx.out(), "Male");
-		case RE::SEX::kFemale:
-			return format_to(a_ctx.out(), "Female");
+			case RE::SEX::kNone:
+				return format_to(a_ctx.out(), "None");
+			case RE::SEX::kMale:
+				return format_to(a_ctx.out(), "Male");
+			case RE::SEX::kFemale:
+				return format_to(a_ctx.out(), "Female");
 		}
 
 		return format_to(a_ctx.out(), "Unknown");

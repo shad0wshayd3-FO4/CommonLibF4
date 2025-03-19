@@ -5,7 +5,7 @@ namespace RE
 	class hkBool
 	{
 	public:
-		hkBool() {};  // empty constructor
+		hkBool(){};  // empty constructor
 
 		hkBool(bool a_bool)
 		{

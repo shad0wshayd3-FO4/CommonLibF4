@@ -18,7 +18,7 @@ namespace RE
 			}
 
 			virtual bool ShouldProcess(TESBoundObject*) { return 1; };  // 00
-			virtual void PostPRocess(TESBoundObject*){};                // 01
+			virtual void PostPRocess(TESBoundObject*) {};               // 01
 
 			Actor* actor;          // 08
 			float  rating;         // 10

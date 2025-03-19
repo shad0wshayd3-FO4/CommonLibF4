@@ -255,7 +255,8 @@ namespace REL
 
 		template <class... Args>
 		std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const
-			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>) requires(std::invocable<const value_type&, Args...>)
+			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>)
+			requires(std::invocable<const value_type&, Args...>)
 		{
 			return REL::invoke(get(), std::forward<Args>(a_args)...);
 		}
@@ -351,7 +352,8 @@ namespace REL
 		}
 
 		template <class U = value_type>
-		std::uintptr_t write_vfunc(std::size_t a_idx, std::uintptr_t a_newFunc) requires(std::same_as<U, std::uintptr_t>)
+		std::uintptr_t write_vfunc(std::size_t a_idx, std::uintptr_t a_newFunc)
+			requires(std::same_as<U, std::uintptr_t>)
 		{
 			const auto addr = address() + (sizeof(void*) * a_idx);
 			const auto result = *reinterpret_cast<std::uintptr_t*>(addr);
@@ -360,7 +362,8 @@ namespace REL
 		}
 
 		template <class F>
-		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc) requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return write_vfunc(a_idx, stl::unrestricted_cast<std::uintptr_t>(a_newFunc));
 		}

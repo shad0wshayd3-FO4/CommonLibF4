@@ -1,12 +1,12 @@
 #pragma once
 
 #include "RE/Havok/hkArray.h"
+#include "RE/Havok/hkRefPtr.h"
+#include "RE/Havok/hkReferencedObject.h"
 #include "RE/Havok/hknpActivation.h"
 #include "RE/Havok/hknpBodyId.h"
 #include "RE/Havok/hknpConstraintId.h"
 #include "RE/Havok/hknpWorld.h"
-#include "RE/Havok/hkReferencedObject.h"
-#include "RE/Havok/hkRefPtr.h"
 
 namespace RE
 {

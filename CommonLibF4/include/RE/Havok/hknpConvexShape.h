@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/Havok/hknpShape.h"
 #include "RE/Havok/hkRelArray.h"
+#include "RE/Havok/hknpShape.h"
 
 namespace RE
 {

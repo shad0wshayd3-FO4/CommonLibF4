@@ -374,16 +374,16 @@ void dump_nirtti()
 void MessageHandler(F4SE::MessagingInterface::Message* a_message)
 {
 	switch (a_message->type) {
-	case F4SE::MessagingInterface::kGameDataReady:
-		try {
-			dump_rtti();
-			dump_nirtti();
-		} catch (const std::exception& e) {
-			REX::ERROR(e.what());
-		}
-		break;
-	default:
-		break;
+		case F4SE::MessagingInterface::kGameDataReady:
+			try {
+				dump_rtti();
+				dump_nirtti();
+			} catch (const std::exception& e) {
+				REX::ERROR(e.what());
+			}
+			break;
+		default:
+			break;
 	}
 }
 

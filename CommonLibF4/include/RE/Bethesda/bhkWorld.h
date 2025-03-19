@@ -3,9 +3,9 @@
 #include "RE/Bethesda/BSLock.h"
 #include "RE/Bethesda/BSTArray.h"
 #include "RE/Bethesda/BSTHashMap.h"
-#include "RE/Havok/hknpWorld.h"
 #include "RE/Havok/hkRefPtr.h"
 #include "RE/Havok/hkVector4.h"
+#include "RE/Havok/hknpWorld.h"
 #include "RE/NetImmerse/NiObject.h"
 #include "RE/NetImmerse/NiSmartPointer.h"
 

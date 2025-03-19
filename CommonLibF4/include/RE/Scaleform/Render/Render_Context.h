@@ -94,7 +94,7 @@ namespace RE::Scaleform::Render
 			{
 				Entry*      next;
 				std::size_t refCount;
-			};                        // 08
+			};  // 08
 			EntryData*     native;    // 10
 			TreeCacheNode* renderer;  // 18
 			Entry*         parent;    // 20

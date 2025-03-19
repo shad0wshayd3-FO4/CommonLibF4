@@ -8,7 +8,7 @@
 // xbyak brings in <Windows.h>
 #ifdef F4SE_SUPPORT_XBYAK
 #	include <xbyak/xbyak.h>
-#   undef ERROR
+#	undef ERROR
 #	undef max
 #	undef MEM_COMMIT
 #	undef MEM_FREE
@@ -117,7 +117,7 @@ namespace REL
 	void Trampoline::set_trampoline(void* a_trampoline, const std::size_t a_size, deleter_type a_deleter)
 	{
 		auto trampoline = static_cast<std::byte*>(a_trampoline);
-		if (trampoline) 
+		if (trampoline)
 			std::memset(trampoline, REL::INT3, a_size);
 
 		release();

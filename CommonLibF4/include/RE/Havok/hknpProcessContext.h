@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/Havok/hknpDefaultViewerColorScheme.h"
 #include "RE/Havok/hkProcessContext.h"
 #include "RE/Havok/hkReferencedObject.h"
+#include "RE/Havok/hknpDefaultViewerColorScheme.h"
 
 namespace RE
 {

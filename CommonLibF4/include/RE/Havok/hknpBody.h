@@ -1,12 +1,12 @@
 #pragma once
 
 #include "RE/Havok/hkAabb16.h"
+#include "RE/Havok/hkTransform.h"
 #include "RE/Havok/hknpBodyId.h"
 #include "RE/Havok/hknpBodyQualityId.h"
 #include "RE/Havok/hknpCollisionFlags.h"
 #include "RE/Havok/hknpMaterialId.h"
 #include "RE/Havok/hknpMotionId.h"
-#include "RE/Havok/hkTransform.h"
 
 namespace RE
 {

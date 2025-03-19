@@ -270,16 +270,16 @@ namespace RE
 		virtual UI_MESSAGE_RESULTS ProcessMessage(UIMessage& a_message)  // 03
 		{
 			switch (*a_message.type) {
-			case UI_MESSAGE_TYPE::kShow:
-			case UI_MESSAGE_TYPE::kHide:
-				return UI_MESSAGE_RESULTS::kHandled;
-			case UI_MESSAGE_TYPE::kScaleformEvent:
-				return ProcessScaleformEvent(uiMovie.get(), a_message.QData());
-			case UI_MESSAGE_TYPE::kUpdateController:
-				RefreshPlatform();
-				return UI_MESSAGE_RESULTS::kPassOn;
-			default:
-				return UI_MESSAGE_RESULTS::kPassOn;
+				case UI_MESSAGE_TYPE::kShow:
+				case UI_MESSAGE_TYPE::kHide:
+					return UI_MESSAGE_RESULTS::kHandled;
+				case UI_MESSAGE_TYPE::kScaleformEvent:
+					return ProcessScaleformEvent(uiMovie.get(), a_message.QData());
+				case UI_MESSAGE_TYPE::kUpdateController:
+					RefreshPlatform();
+					return UI_MESSAGE_RESULTS::kPassOn;
+				default:
+					return UI_MESSAGE_RESULTS::kPassOn;
 			}
 		}
 
@@ -1771,7 +1771,7 @@ namespace RE
 			{
 				BGSMod::Attachment::Mod* mod;
 				TESBoundObject*          object;
-			};                                                                              // 00
+			};  // 00
 			const BGSConstructibleObject*                                   recipe;         // 08
 			BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* requiredItems;  // 10
 			BSTArray<BSTTuple<BGSPerk*, std::uint32_t>>                     requiredPerks;  // 18

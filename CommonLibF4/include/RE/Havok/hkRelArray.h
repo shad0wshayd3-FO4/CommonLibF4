@@ -6,7 +6,7 @@ namespace RE
 	class hkRelArray
 	{
 	public:
-		hkRelArray() {};
+		hkRelArray(){};
 
 		T& operator[](const std::int32_t a_index)
 		{

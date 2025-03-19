@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/Havok/hknpBodyId.h"
 #include "RE/Bethesda/BSLock.h"
 #include "RE/Bethesda/BSTHashMap.h"
 #include "RE/Havok/hkMultiMap.h"
+#include "RE/Havok/hknpBodyId.h"
 
 #include "RE/Havok/hknpWorld.h"
 

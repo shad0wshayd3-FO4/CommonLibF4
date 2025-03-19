@@ -100,14 +100,13 @@ namespace F4SE
 			requires(
 				const K&                    a_transparent,
 				const typename C::key_type& a_key,
-				typename C::key_compare&    a_compare)
-		{
-			typename C::key_compare::is_transparent;
-			// clang-format off
+				typename C::key_compare&    a_compare) {
+				typename C::key_compare::is_transparent;
+				// clang-format off
 			{ a_compare(a_transparent, a_key) } -> std::convertible_to<bool>;
 			{ a_compare(a_key, a_transparent) } -> std::convertible_to<bool>;
-			// clang-format on
-		};
+				// clang-format on
+			};
 
 		namespace nttp
 		{
@@ -147,9 +146,9 @@ namespace F4SE
 			string(const CharT (&)[N]) -> string<CharT, N - 1>;
 		}
 
-		template <class EF>                                    //
-		requires(std::invocable<std::remove_reference_t<EF>>)  //
-			class scope_exit
+		template <class EF>                                        //
+			requires(std::invocable<std::remove_reference_t<EF>>)  //
+		class scope_exit
 		{
 		public:
 			// 1)
@@ -257,7 +256,7 @@ namespace F4SE
 			counted_function_iterator operator++(int) noexcept
 			{
 				counted_function_iterator tmp{ *this };
-										  operator++();
+				operator++();
 				return tmp;
 			}
 
@@ -285,9 +284,9 @@ namespace F4SE
 
 		template <class... Args>
 		enumeration(Args...) -> enumeration<
-			std::common_type_t<Args...>,
-			std::underlying_type_t<
-				std::common_type_t<Args...>>>;
+								 std::common_type_t<Args...>,
+								 std::underlying_type_t<
+									 std::common_type_t<Args...>>>;
 	}
 }
 

@@ -2043,7 +2043,7 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("db6f6ddb-ac77-4e88-8253-819df9bbf140"))
-		ID3D11Device : public IUnknown
+	ID3D11Device : public IUnknown
 	{
 		virtual HRESULT           CreateBuffer(const D3D11_BUFFER_DESC* a_desc, const D3D11_SUBRESOURCE_DATA* a_initialData, ID3D11Buffer** a_buffer) = 0;
 		virtual HRESULT           CreateTexture1D(const D3D11_TEXTURE1D_DESC* a_desc, const D3D11_SUBRESOURCE_DATA* a_initialData, ID3D11Texture1D** a_texture1D) = 0;
@@ -2088,7 +2088,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("1841e5c8-16b0-489b-bcc8-44cfb0d5deae"))
-		ID3D11DeviceChild : public IUnknown
+	ID3D11DeviceChild : public IUnknown
 	{
 		virtual void    GetDevice(ID3D11Device** a_device) = 0;
 		virtual HRESULT GetPrivateData(const GUID& a_guid, std::uint32_t* a_dataSize, void* a_data) = 0;
@@ -2097,7 +2097,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("c0bfa96c-e089-44fb-8eaf-26f8796190da"))
-		ID3D11DeviceContext : public ID3D11DeviceChild
+	ID3D11DeviceContext : public ID3D11DeviceChild
 	{
 		virtual void                      VSSetConstantBuffers(std::uint32_t a_startSlot, std::uint32_t a_numBuffers, ID3D11Buffer* const* a_constantBuffers) = 0;
 		virtual void                      PSSetShaderResources(std::uint32_t a_startSlot, std::uint32_t a_numViews, ID3D11ShaderResourceView* const* a_shaderResourceViews) = 0;
@@ -2210,13 +2210,13 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("4b35d0cd-1e15-4258-9c98-1b1333f6dd3b"))
-		ID3D11Asynchronous : public ID3D11DeviceChild
+	ID3D11Asynchronous : public ID3D11DeviceChild
 	{
 		virtual std::uint32_t GetDataSize(void) = 0;
 	};
 
 	struct __declspec(novtable, uuid("3015A308-DCBD-47aa-A747-192486D14D4A"))
-		ID3D11AuthenticatedChannel : public ID3D11DeviceChild
+	ID3D11AuthenticatedChannel : public ID3D11DeviceChild
 	{
 		virtual HRESULT GetCertificateSize(std::uint32_t* a_certificateSize) = 0;
 		virtual HRESULT GetCertificate(std::uint32_t a_certificateSize, std::uint8_t* a_certificate) = 0;
@@ -2224,13 +2224,13 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("75b68faa-347d-4159-8f45-a0640f01cd9a"))
-		ID3D11BlendState : public ID3D11DeviceChild
+	ID3D11BlendState : public ID3D11DeviceChild
 	{
 		virtual void GetDesc(D3D11_BLEND_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("a6cd7faa-b0b7-4a2f-9436-8662a65797cb"))
-		ID3D11ClassInstance : public ID3D11DeviceChild
+	ID3D11ClassInstance : public ID3D11DeviceChild
 	{
 		virtual void GetClassLinkage(ID3D11ClassLinkage** a_linkage) = 0;
 		virtual void GetDesc(D3D11_CLASS_INSTANCE_DESC* a_desc) = 0;
@@ -2239,30 +2239,30 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("ddf57cba-9543-46e4-a12b-f207a0fe7fed"))
-		ID3D11ClassLinkage : public ID3D11DeviceChild
+	ID3D11ClassLinkage : public ID3D11DeviceChild
 	{
 		virtual HRESULT GetClassInstance(const char* a_classInstanceName, std::uint32_t a_instanceIndex, ID3D11ClassInstance** a_instance) = 0;
 		virtual HRESULT CreateClassInstance(const char* a_classTypeName, std::uint32_t a_constantBufferOffset, std::uint32_t a_constantVectorOffset, std::uint32_t a_textureOffset, std::uint32_t a_samplerOffset, ID3D11ClassInstance** a_instance) = 0;
 	};
 
 	struct __declspec(novtable, uuid("a24bc4d1-769e-43f7-8013-98ff566c18e2"))
-		ID3D11CommandList : public ID3D11DeviceChild
+	ID3D11CommandList : public ID3D11DeviceChild
 	{
 		virtual std::uint32_t GetContextFlags(void) = 0;
 	};
 
 	struct __declspec(novtable, uuid("4f5b196e-c2bd-495e-bd01-1fded38e4969"))
-		ID3D11ComputeShader : public ID3D11DeviceChild
+	ID3D11ComputeShader : public ID3D11DeviceChild
 	{};
 
 	struct __declspec(novtable, uuid("6e8c49fb-a371-4770-b440-29086022b741"))
-		ID3D11Counter : public ID3D11Asynchronous
+	ID3D11Counter : public ID3D11Asynchronous
 	{
 		virtual void GetDesc(D3D11_COUNTER_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("9B32F9AD-BDCC-40a6-A39D-D5C865845720"))
-		ID3D11CryptoSession : public ID3D11DeviceChild
+	ID3D11CryptoSession : public ID3D11DeviceChild
 	{
 		virtual void    GetCryptoType(GUID* a_cryptoType) = 0;
 		virtual void    GetDecoderProfile(GUID* a_decoderProfile) = 0;
@@ -2272,39 +2272,39 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("03823efb-8d8f-4e1c-9aa2-f64bb2cbfdf1"))
-		ID3D11DepthStencilState : public ID3D11DeviceChild
+	ID3D11DepthStencilState : public ID3D11DeviceChild
 	{
 		virtual void GetDesc(D3D11_DEPTH_STENCIL_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("f582c508-0f36-490c-9977-31eece268cfa"))
-		ID3D11DomainShader : public ID3D11DeviceChild
+	ID3D11DomainShader : public ID3D11DeviceChild
 	{};
 
 	struct __declspec(novtable, uuid("38325b96-effb-4022-ba02-2e795b70275c"))
-		ID3D11GeometryShader : public ID3D11DeviceChild
+	ID3D11GeometryShader : public ID3D11DeviceChild
 	{};
 
 	struct __declspec(novtable, uuid("8e5c6061-628a-4c8e-8264-bbe45cb3d5dd"))
-		ID3D11HullShader : public ID3D11DeviceChild
+	ID3D11HullShader : public ID3D11DeviceChild
 	{};
 
 	struct __declspec(novtable, uuid("e4819ddc-4cf0-4025-bd26-5de82a3e07b7"))
-		ID3D11InputLayout : public ID3D11DeviceChild
+	ID3D11InputLayout : public ID3D11DeviceChild
 	{};
 
 	struct __declspec(novtable, uuid("ea82e40d-51dc-4f33-93d4-db7c9125ae8c"))
-		ID3D11PixelShader : public ID3D11DeviceChild
+	ID3D11PixelShader : public ID3D11DeviceChild
 	{};
 
 	struct __declspec(novtable, uuid("9bb4ab81-ab1a-4d8f-b506-fc04200b6ee7"))
-		ID3D11RasterizerState : public ID3D11DeviceChild
+	ID3D11RasterizerState : public ID3D11DeviceChild
 	{
 		virtual void GetDesc(D3D11_RASTERIZER_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("dc8e63f3-d12b-4952-b47b-5e45026a862d"))
-		ID3D11Resource : public ID3D11DeviceChild
+	ID3D11Resource : public ID3D11DeviceChild
 	{
 		virtual void          GetType(D3D11_RESOURCE_DIMENSION* a_resourceDimension) = 0;
 		virtual void          SetEvictionPriority(std::uint32_t a_evictionPriority) = 0;
@@ -2312,81 +2312,81 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("da6fea51-564c-4487-9810-f0d0f9b4e3a5"))
-		ID3D11SamplerState : public ID3D11DeviceChild
+	ID3D11SamplerState : public ID3D11DeviceChild
 	{
 		virtual void GetDesc(D3D11_SAMPLER_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("3b301d64-d678-4289-8897-22f8928b72f3"))
-		ID3D11VertexShader : public ID3D11DeviceChild
+	ID3D11VertexShader : public ID3D11DeviceChild
 	{};
 
 	struct __declspec(novtable, uuid("839d1216-bb2e-412b-b7f4-a9dbebe08ed1"))
-		ID3D11View : public ID3D11DeviceChild
+	ID3D11View : public ID3D11DeviceChild
 	{
 		virtual void GetResource(ID3D11Resource** a_resource) = 0;
 	};
 
 	struct __declspec(novtable, uuid("48570b85-d1ee-4fcd-a250-eb350722b037"))
-		ID3D11Buffer : public ID3D11Resource
+	ID3D11Buffer : public ID3D11Resource
 	{
 		virtual void GetDesc(D3D11_BUFFER_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("9fdac92a-1876-48c3-afad-25b94f84a9b6"))
-		ID3D11DepthStencilView : public ID3D11View
+	ID3D11DepthStencilView : public ID3D11View
 	{
 		virtual void GetDesc(D3D11_DEPTH_STENCIL_VIEW_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("d6c00747-87b7-425e-b84d-44d108560afd"))
-		ID3D11Query : public ID3D11Asynchronous
+	ID3D11Query : public ID3D11Asynchronous
 	{
 		virtual void GetDesc(D3D11_QUERY_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("9eb576dd-9f77-4d86-81aa-8bab5fe490e2"))
-		ID3D11Predicate : public ID3D11Query
+	ID3D11Predicate : public ID3D11Query
 	{};
 
 	struct __declspec(novtable, uuid("f8fb5c27-c6b3-4f75-a4c8-439af2ef564c"))
-		ID3D11Texture1D : public ID3D11Resource
+	ID3D11Texture1D : public ID3D11Resource
 	{
 		virtual void GetDesc(D3D11_TEXTURE1D_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("6f15aaf2-d208-4e89-9ab4-489535d34f9c"))
-		ID3D11Texture2D : public ID3D11Resource
+	ID3D11Texture2D : public ID3D11Resource
 	{
 		virtual void GetDesc(D3D11_TEXTURE2D_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("037e866e-f56d-4357-a8af-9dabbe6e250e"))
-		ID3D11Texture3D : public ID3D11Resource
+	ID3D11Texture3D : public ID3D11Resource
 	{
 		virtual void GetDesc(D3D11_TEXTURE3D_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("dfdba067-0b8d-4865-875b-d7b4516cc164"))
-		ID3D11RenderTargetView : public ID3D11View
+	ID3D11RenderTargetView : public ID3D11View
 	{
 		virtual void GetDesc(D3D11_RENDER_TARGET_VIEW_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("b0e06fe0-8192-4e1a-b1ca-36d7414710b2"))
-		ID3D11ShaderResourceView : public ID3D11View
+	ID3D11ShaderResourceView : public ID3D11View
 	{
 		virtual void GetDesc(D3D11_SHADER_RESOURCE_VIEW_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("28acf509-7f5c-48f6-8611-f316010a6380"))
-		ID3D11UnorderedAccessView : public ID3D11View
+	ID3D11UnorderedAccessView : public ID3D11View
 	{
 		virtual void GetDesc(D3D11_UNORDERED_ACCESS_VIEW_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("61F21C45-3C0E-4a74-9CEA-67100D9AD5E4"))
-		ID3D11VideoContext : public ID3D11DeviceChild
+	ID3D11VideoContext : public ID3D11DeviceChild
 	{
 		virtual HRESULT GetDecoderBuffer(ID3D11VideoDecoder* a_decoder, D3D11_VIDEO_DECODER_BUFFER_TYPE a_type, std::uint32_t* a_bufferSize, void** a_buffer) = 0;
 		virtual HRESULT ReleaseDecoderBuffer(ID3D11VideoDecoder* a_decoder, D3D11_VIDEO_DECODER_BUFFER_TYPE a_type) = 0;
@@ -2449,20 +2449,20 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("3C9C5B51-995D-48d1-9B8D-FA5CAEDED65C"))
-		ID3D11VideoDecoder : public ID3D11DeviceChild
+	ID3D11VideoDecoder : public ID3D11DeviceChild
 	{
 		virtual HRESULT GetCreationParameters(D3D11_VIDEO_DECODER_DESC* a_videoDesc, D3D11_VIDEO_DECODER_CONFIG* a_config) = 0;
 		virtual HRESULT GetDriverHandle(HANDLE* a_driverHandle) = 0;
 	};
 
 	struct __declspec(novtable, uuid("C2931AEA-2A85-4f20-860F-FBA1FD256E18"))
-		ID3D11VideoDecoderOutputView : public ID3D11View
+	ID3D11VideoDecoderOutputView : public ID3D11View
 	{
 		virtual void GetDesc(D3D11_VIDEO_DECODER_OUTPUT_VIEW_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("10EC4D5B-975A-4689-B9E4-D0AAC30FE333"))
-		ID3D11VideoDevice : public IUnknown
+	ID3D11VideoDevice : public IUnknown
 	{
 		virtual HRESULT       CreateVideoDecoder(const D3D11_VIDEO_DECODER_DESC* a_videoDesc, const D3D11_VIDEO_DECODER_CONFIG* a_config, ID3D11VideoDecoder** a_decoder) = 0;
 		virtual HRESULT       CreateVideoProcessor(ID3D11VideoProcessorEnumerator* a_enum, std::uint32_t a_rateConversionIndex, ID3D11VideoProcessor** a_videoProcessor) = 0;
@@ -2484,14 +2484,14 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("1D7B0652-185F-41c6-85CE-0C5BE3D4AE6C"))
-		ID3D11VideoProcessor : public ID3D11DeviceChild
+	ID3D11VideoProcessor : public ID3D11DeviceChild
 	{
 		virtual void GetContentDesc(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* a_desc) = 0;
 		virtual void GetRateConversionCaps(D3D11_VIDEO_PROCESSOR_RATE_CONVERSION_CAPS* a_caps) = 0;
 	};
 
 	struct __declspec(novtable, uuid("31627037-53AB-4200-9061-05FAA9AB45F9"))
-		ID3D11VideoProcessorEnumerator : public ID3D11DeviceChild
+	ID3D11VideoProcessorEnumerator : public ID3D11DeviceChild
 	{
 		virtual HRESULT GetVideoProcessorContentDesc(D3D11_VIDEO_PROCESSOR_CONTENT_DESC* a_contentDesc) = 0;
 		virtual HRESULT CheckVideoProcessorFormat(DXGI_FORMAT a_format, std::uint32_t* a_flags) = 0;
@@ -2502,13 +2502,13 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("11EC5A5F-51DC-4945-AB34-6E8C21300EA5"))
-		ID3D11VideoProcessorInputView : public ID3D11View
+	ID3D11VideoProcessorInputView : public ID3D11View
 	{
 		virtual void GetDesc(D3D11_VIDEO_PROCESSOR_INPUT_VIEW_DESC* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("A048285E-25A9-4527-BD93-D68B68C44254"))
-		ID3D11VideoProcessorOutputView : public ID3D11View
+	ID3D11VideoProcessorOutputView : public ID3D11View
 	{
 		virtual void GetDesc(D3D11_VIDEO_PROCESSOR_OUTPUT_VIEW_DESC* a_desc) = 0;
 	};

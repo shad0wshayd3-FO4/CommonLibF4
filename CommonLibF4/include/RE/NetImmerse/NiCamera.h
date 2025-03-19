@@ -34,7 +34,7 @@ namespace RE
 
 		static bool WorldPtToScreenPt3(const float a_matrix[4][4], const NiRect<float>& a_port, const NiPoint3& a_point, float& a_x, float& a_y, float& a_z, float a_zeroTolerance)
 		{
-			using func_t = bool(*)(const float[4][4], const NiRect<float>&, const NiPoint3&, float&, float&, float&, float);
+			using func_t = bool (*)(const float[4][4], const NiRect<float>&, const NiPoint3&, float&, float&, float&, float);
 			static REL::Relocation<func_t> func{ REL::ID(2270344) };
 			return func(a_matrix, a_port, a_point, a_x, a_y, a_z, a_zeroTolerance);
 		}

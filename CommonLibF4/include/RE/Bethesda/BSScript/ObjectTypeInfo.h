@@ -156,11 +156,11 @@ namespace RE
 			[[nodiscard]] constexpr bool IsLinked() const noexcept
 			{
 				switch (linkedValid) {
-				case LinkValidState::kLinkedInvalid:
-				case LinkValidState::kLinkedValid:
-					return true;
-				default:
-					return false;
+					case LinkValidState::kLinkedInvalid:
+					case LinkValidState::kLinkedValid:
+						return true;
+					default:
+						return false;
 				}
 			}
 

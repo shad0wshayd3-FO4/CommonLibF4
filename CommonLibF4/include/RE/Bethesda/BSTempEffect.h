@@ -139,8 +139,8 @@ namespace RE
 				F4SE_TEMPEFFECT_UTIL(ModelReferenceEffect);
 				F4SE_TEMPEFFECT_UTIL(ShaderReferenceEffect);
 				F4SE_TEMPEFFECT_UTIL(SummonPlacementEffect);
-			default:
-				break;
+				default:
+					break;
 			}
 
 			return nullptr;

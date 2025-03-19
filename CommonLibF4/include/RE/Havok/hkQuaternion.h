@@ -7,7 +7,7 @@ namespace RE
 	class hkQuaternionf
 	{
 	public:
-		hkQuaternionf() {};  // empty constructor
+		hkQuaternionf(){};  // empty constructor
 
 		// members
 		hkVector4f vec;

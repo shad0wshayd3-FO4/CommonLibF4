@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/Havok/hknpMotionPropertiesId.h"
 #include "RE/Havok/hkQuaternion.h"
 #include "RE/Havok/hkVector4.h"
+#include "RE/Havok/hknpMotionPropertiesId.h"
 
 namespace RE
 {
@@ -14,7 +14,7 @@ namespace RE
 	public:
 		hknpMotionCinfo()
 		{
-			using func_t = void(*)(hknpMotionCinfo*);
+			using func_t = void (*)(hknpMotionCinfo*);
 			static REL::Relocation<func_t> func{ REL::ID(2258369) };
 			func(this);
 		}

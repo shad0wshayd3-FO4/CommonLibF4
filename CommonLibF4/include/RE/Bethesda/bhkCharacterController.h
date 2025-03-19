@@ -1,18 +1,18 @@
 #pragma once
 
-#include "RE/Bethesda/bhkNPCollisionObject.h"
 #include "RE/Bethesda/BSBound.h"
 #include "RE/Bethesda/BSTArray.h"
 #include "RE/Bethesda/BSTEvent.h"
 #include "RE/Bethesda/BSTHashMap.h"
+#include "RE/Bethesda/bhkNPCollisionObject.h"
 #include "RE/Havok/hkBaseTypes.h"
 #include "RE/Havok/hkRefPtr.h"
+#include "RE/Havok/hkStepInfo.h"
 #include "RE/Havok/hkVector4.h"
 #include "RE/Havok/hknpBodyId.h"
 #include "RE/Havok/hknpCharacterContext.h"
 #include "RE/Havok/hknpCharacterState.h"
 #include "RE/Havok/hknpCharacterSurfaceInfo.h"
-#include "RE/Havok/hkStepInfo.h"
 #include "RE/NetImmerse/NiPoint.h"
 #include "RE/NetImmerse/NiSmartPointer.h"
 

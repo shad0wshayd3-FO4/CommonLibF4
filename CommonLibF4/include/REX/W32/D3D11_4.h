@@ -81,21 +81,21 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("8992ab71-02e6-4b8d-ba48-b056dcda42c4"))
-		ID3D11Device4 : public ID3D11Device3
+	ID3D11Device4 : public ID3D11Device3
 	{
 		virtual HRESULT RegisterDeviceRemovedEvent(HANDLE a_event, std::uint32_t* a_cookie) = 0;
 		virtual void    UnregisterDeviceRemoved(std::uint32_t a_cookie) = 0;
 	};
 
 	struct __declspec(novtable, uuid("8ffde202-a0e7-45df-9e01-e837801b5ea0"))
-		ID3D11Device5 : public ID3D11Device4
+	ID3D11Device5 : public ID3D11Device4
 	{
 		virtual HRESULT OpenSharedFence(HANDLE a_fenceHandle, const IID& a_returnedInterface, void** a_fence) = 0;
 		virtual HRESULT CreateFence(std::uint64_t a_initialValue, D3D11_FENCE_FLAG a_flags, const IID& a_returnedInterface, void** a_fence) = 0;
 	};
 
 	struct __declspec(novtable, uuid("9B7E4E00-342C-4106-A19F-4F2704F689F0"))
-		ID3D11Multithread : public IUnknown
+	ID3D11Multithread : public IUnknown
 	{
 		virtual void Enter(void) = 0;
 		virtual void Leave(void) = 0;
@@ -104,7 +104,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("C4E7374C-6243-4D1B-AE87-52B4F740E261"))
-		ID3D11VideoContext2 : public ID3D11VideoContext1
+	ID3D11VideoContext2 : public ID3D11VideoContext1
 	{
 		virtual void VideoProcessorSetOutputHDRMetaData(ID3D11VideoProcessor* a_videoProcessor, DXGI_HDR_METADATA_TYPE a_type, std::uint32_t a_size, const void* a_hdrMetaData) = 0;
 		virtual void VideoProcessorGetOutputHDRMetaData(ID3D11VideoProcessor* a_videoProcessor, DXGI_HDR_METADATA_TYPE* a_type, std::uint32_t a_size, void* a_hdrMetaData) = 0;
@@ -113,14 +113,14 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("A9E2FAA0-CB39-418F-A0B7-D8AAD4DE672E"))
-		ID3D11VideoContext3 : public ID3D11VideoContext2
+	ID3D11VideoContext3 : public ID3D11VideoContext2
 	{
 		virtual HRESULT DecoderBeginFrame1(ID3D11VideoDecoder* a_decoder, ID3D11VideoDecoderOutputView* a_view, std::uint32_t a_contentKeySize, const void* a_contentKey, std::uint32_t a_numComponentHistograms, const std::uint32_t* a_histogramOffsets, ID3D11Buffer* const* a_histogramBuffers) = 0;
 		virtual HRESULT SubmitDecoderBuffers2(ID3D11VideoDecoder* a_decoder, std::uint32_t a_numBuffers, const D3D11_VIDEO_DECODER_BUFFER_DESC2* a_bufferDesc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("59C0CB01-35F0-4A70-8F67-87905C906A53"))
-		ID3D11VideoDevice2 : public ID3D11VideoDevice1
+	ID3D11VideoDevice2 : public ID3D11VideoDevice1
 	{
 		virtual HRESULT CheckFeatureSupport(D3D11_FEATURE_VIDEO a_feature, void* a_featureSupportData, std::uint32_t a_featureSupportDataSize) = 0;
 		virtual HRESULT NegotiateCryptoSessionKeyExchangeMT(ID3D11CryptoSession* a_cryptoSession, D3D11_CRYPTO_SESSION_KEY_EXCHANGE_FLAGS a_flags, std::uint32_t a_dataSize, void* a_data) = 0;

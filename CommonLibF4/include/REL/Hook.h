@@ -3,8 +3,8 @@
 #include "REL/ASM.h"
 #include "REL/HookObject.h"
 #include "REL/ID.h"
-#include "REL/Utility.h"
 #include "REL/Trampoline.h"
+#include "REL/Utility.h"
 
 namespace REL
 {
@@ -83,7 +83,7 @@ namespace REL
 			}
 
 			REL::WriteSafe(m_address, std::span{ m_bytes });
-					
+
 			m_enabled = true;
 
 			return true;

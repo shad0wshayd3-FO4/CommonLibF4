@@ -2,10 +2,10 @@
 
 #include "RE/Bethesda/BSTArray.h"
 #include "RE/Havok/hkLocalArray.h"
+#include "RE/Havok/hkRefPtr.h"
 #include "RE/Havok/hknpBodyId.h"
 #include "RE/Havok/hknpPhysicsSystem.h"
 #include "RE/Havok/hknpPhysicsSystemData.h"
-#include "RE/Havok/hkRefPtr.h"
 #include "RE/NetImmerse/NiObject.h"
 
 namespace RE
@@ -23,7 +23,7 @@ namespace RE
 
 		bhkPhysicsSystem(hknpPhysicsSystemData* a_data)
 		{
-			using func_t = void(*)(bhkPhysicsSystem*, hknpPhysicsSystemData*);
+			using func_t = void (*)(bhkPhysicsSystem*, hknpPhysicsSystemData*);
 			static REL::Relocation<func_t> func{ REL::ID(2278008) };
 			func(this, a_data);
 		}

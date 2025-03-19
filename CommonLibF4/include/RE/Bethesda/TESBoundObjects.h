@@ -854,7 +854,7 @@ namespace RE
 		{
 			BGSSoundDescriptorForm* noteSound;
 			std::size_t             noteFormID;
-		};                        // 0F8
+		};  // 0F8
 		std::int8_t type;         // 100
 		bool        hasBeenRead;  // 101
 	};

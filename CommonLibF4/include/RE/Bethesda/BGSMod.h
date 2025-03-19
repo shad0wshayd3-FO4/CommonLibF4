@@ -76,8 +76,7 @@ namespace RE::BGSMod
 			union DATATYPE
 			{
 			public:
-				DATATYPE()
-				noexcept :
+				DATATYPE() noexcept :
 					form(nullptr)
 				{}
 

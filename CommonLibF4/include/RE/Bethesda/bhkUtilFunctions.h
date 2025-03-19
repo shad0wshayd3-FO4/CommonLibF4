@@ -2,9 +2,9 @@
 
 #include "RE/Bethesda/BSTArray.h"
 #include "RE/Havok/hkLocalArray.h"
+#include "RE/Havok/hkRefPtr.h"
 #include "RE/Havok/hknpPhysicsSystem.h"
 #include "RE/Havok/hknpPhysicsSystemData.h"
-#include "RE/Havok/hkRefPtr.h"
 #include "RE/NetImmerse/NiObject.h"
 
 namespace RE

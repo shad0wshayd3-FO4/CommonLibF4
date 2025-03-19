@@ -133,8 +133,7 @@ namespace RE
 			// members
 			union D
 			{
-				D()
-				noexcept :
+				D() noexcept :
 					complexTypeInfo(nullptr)
 				{}
 

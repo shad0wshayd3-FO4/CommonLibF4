@@ -204,7 +204,7 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("A05C8C37-D2C6-4732-B3A0-9CE0B0DC9AE6"))
-		ID3D11Device3 : public ID3D11Device2
+	ID3D11Device3 : public ID3D11Device2
 	{
 		virtual HRESULT CreateTexture2D1(const D3D11_TEXTURE2D_DESC1* a_desc1, const D3D11_SUBRESOURCE_DATA* a_initialData, ID3D11Texture2D1** a_texture2D) = 0;
 		virtual HRESULT CreateTexture3D1(const D3D11_TEXTURE3D_DESC1* a_desc1, const D3D11_SUBRESOURCE_DATA* a_initialData, ID3D11Texture3D1** a_texture3D) = 0;
@@ -220,7 +220,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("b4e3c01d-e79e-4637-91b2-510e9f4c9b8f"))
-		ID3D11DeviceContext3 : public ID3D11DeviceContext2
+	ID3D11DeviceContext3 : public ID3D11DeviceContext2
 	{
 		virtual void Flush1(D3D11_CONTEXT_TYPE a_contextType, HANDLE a_event) = 0;
 		virtual void SetHardwareProtectionState(BOOL a_hwProtectionEnable) = 0;
@@ -228,14 +228,14 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("917600da-f58c-4c33-98d8-3e15b390fa24"))
-		ID3D11DeviceContext4 : public ID3D11DeviceContext3
+	ID3D11DeviceContext4 : public ID3D11DeviceContext3
 	{
 		virtual HRESULT Signal(ID3D11Fence* a_fence, std::uint64_t a_value) = 0;
 		virtual HRESULT Wait(ID3D11Fence* a_fence, std::uint64_t a_value) = 0;
 	};
 
 	struct __declspec(novtable, uuid("affde9d1-1df7-4bb7-8a34-0f46251dab80"))
-		ID3D11Fence : public ID3D11DeviceChild
+	ID3D11Fence : public ID3D11DeviceChild
 	{
 		virtual HRESULT       CreateSharedHandle(const SECURITY_ATTRIBUTES* a_attributes, std::uint32_t a_access, const wchar_t* a_name, HANDLE* a_handle) = 0;
 		virtual std::uint64_t GetCompletedValue(void) = 0;
@@ -243,43 +243,43 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("631b4766-36dc-461d-8db6-c47e13e60916"))
-		ID3D11Query1 : public ID3D11Query
+	ID3D11Query1 : public ID3D11Query
 	{
 		virtual void GetDesc1(D3D11_QUERY_DESC1* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("6fbd02fb-209f-46c4-b059-2ed15586a6ac"))
-		ID3D11RasterizerState2 : public ID3D11RasterizerState1
+	ID3D11RasterizerState2 : public ID3D11RasterizerState1
 	{
 		virtual void GetDesc2(D3D11_RASTERIZER_DESC2* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("ffbe2e23-f011-418a-ac56-5ceed7c5b94b"))
-		ID3D11RenderTargetView1 : public ID3D11RenderTargetView
+	ID3D11RenderTargetView1 : public ID3D11RenderTargetView
 	{
 		virtual void GetDesc1(D3D11_RENDER_TARGET_VIEW_DESC1* a_desc1) = 0;
 	};
 
 	struct __declspec(novtable, uuid("91308b87-9040-411d-8c67-c39253ce3802"))
-		ID3D11ShaderResourceView1 : public ID3D11ShaderResourceView
+	ID3D11ShaderResourceView1 : public ID3D11ShaderResourceView
 	{
 		virtual void GetDesc1(D3D11_SHADER_RESOURCE_VIEW_DESC1* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("51218251-1E33-4617-9CCB-4D3A4367E7BB"))
-		ID3D11Texture2D1 : public ID3D11Texture2D
+	ID3D11Texture2D1 : public ID3D11Texture2D
 	{
 		virtual void GetDesc1(D3D11_TEXTURE2D_DESC1* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("0C711683-2853-4846-9BB0-F3E60639E46A"))
-		ID3D11Texture3D1 : public ID3D11Texture3D
+	ID3D11Texture3D1 : public ID3D11Texture3D
 	{
 		virtual void GetDesc1(D3D11_TEXTURE3D_DESC1* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("7b3b6153-a886-4544-ab37-6537c8500403"))
-		ID3D11UnorderedAccessView1 : public ID3D11UnorderedAccessView
+	ID3D11UnorderedAccessView1 : public ID3D11UnorderedAccessView
 	{
 		virtual void GetDesc1(D3D11_UNORDERED_ACCESS_VIEW_DESC1* a_desc) = 0;
 	};

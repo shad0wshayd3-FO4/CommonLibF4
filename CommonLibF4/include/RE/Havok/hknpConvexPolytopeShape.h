@@ -21,9 +21,9 @@ namespace RE
 		};
 
 		// members
-		hkRelArray<hkVector4f>   planes;    // 40
-		hkRelArray<Face>         faces;     // 44
-		hkRelArray<std::uint8_t> indices;   // 48
+		hkRelArray<hkVector4f>   planes;   // 40
+		hkRelArray<Face>         faces;    // 44
+		hkRelArray<std::uint8_t> indices;  // 48
 	};
 	static_assert(sizeof(hknpConvexPolytopeShape) == 0x50);
 }

@@ -1,6 +1,5 @@
 #include "F4SE/Logger.h"
 #include "F4SE/API.h"
-#include "F4SE/Interfaces.h"
 
 #include "REX/W32/OLE32.h"
 #include "REX/W32/SHELL32.h"

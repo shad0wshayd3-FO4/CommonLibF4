@@ -116,7 +116,7 @@ namespace RE
 		void RegisterMenu(const char* a_menu, Create_t* a_create, StaticUpdate_t* a_staticUpdate = nullptr)
 		{
 			using func_t = decltype(&UI::RegisterMenu);
-			static REL::Relocation<func_t> func{ REL::ID(1519575) };
+			static REL::Relocation<func_t> func{ REL::ID(2284766) };
 			return func(this, a_menu, a_create, a_staticUpdate);
 		}
 

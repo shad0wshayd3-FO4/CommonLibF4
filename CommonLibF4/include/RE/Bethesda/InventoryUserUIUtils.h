@@ -5,6 +5,8 @@
 
 namespace RE
 {
+	struct InventoryUserUIInterfaceEntry;
+
 	class EffectItem;
 	class MagicItem;
 
@@ -61,6 +63,7 @@ namespace RE
 			Scaleform::GFx::Value entry;
 			detail::AddItemCardInfoEntry(a_array, entry, a_name, a_value);
 		}
+
 	}
 
 	namespace StatsMenuUtils

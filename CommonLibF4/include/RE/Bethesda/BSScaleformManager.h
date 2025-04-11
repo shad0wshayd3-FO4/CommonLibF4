@@ -98,7 +98,7 @@ namespace RE
 			float                                  a_backgroundAlpha = 0.0F)
 		{
 			using func_t = decltype(&BSScaleformManager::LoadMovie);
-			static REL::Relocation<func_t> func{ REL::ID(1526234) };
+			static REL::Relocation<func_t> func{ REL::ID(2287422) };
 			return func(this, a_menu, a_movie, a_menuName, a_menuObjPath, a_scaleMode, a_backgroundAlpha);
 		}
 

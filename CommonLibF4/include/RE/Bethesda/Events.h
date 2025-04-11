@@ -545,7 +545,7 @@ namespace RE
 			const InventoryUserUIInterfaceEntry& a_entry)
 		{
 			using func_t = decltype(&InventoryItemDisplayData::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(679373) };
+			static REL::Relocation<func_t> func{ REL::ID(2222612) };
 			return func(this, a_inventoryRef, a_entry);
 		}
 	};

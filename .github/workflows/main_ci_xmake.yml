@@ -32,7 +32,7 @@ jobs:
           xmake-version: "latest"
 
       - name: Configure
-        run: xmake config -y --mode=${{ matrix.mode }} --vs_toolset=14
+        run: xmake config -y --mode=${{ matrix.mode }}
 
       - name: Build
         run: xmake build -y -vD

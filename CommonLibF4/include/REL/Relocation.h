@@ -357,7 +357,7 @@ namespace REL
 		{
 			const auto addr = address() + (sizeof(void*) * a_idx);
 			const auto result = *reinterpret_cast<std::uintptr_t*>(addr);
-			WriteSafe(addr, a_newFunc);
+			WriteSafeData(addr, a_newFunc);
 			return result;
 		}
 

@@ -61,7 +61,7 @@ namespace RE::BSScript
 				const auto game = GameVM::GetSingleton();
 				const auto vm = game ? game->GetVM() : nullptr;
 				if (!vm || !vm->CreateStruct(name, _proxy) || !_proxy) {
-					F4SE::ERROR("failed to create structure of type \"{}\"", name);
+					REX::ERROR("failed to create structure of type \"{}\"", name);
 					assert(false);
 				}
 			}
@@ -80,7 +80,7 @@ namespace RE::BSScript
 			}
 
 			if (!a_quiet) {
-				F4SE::WARN("failed to find var \"{}\" on structure \"{}\"", a_name, name);
+				REX::ERROR("failed to find var \"{}\" on structure \"{}\"", a_name, name);
 			}
 
 			return std::nullopt;
@@ -99,7 +99,7 @@ namespace RE::BSScript
 				}
 			}
 
-			F4SE::WARN("failed to pack var \"{}\" on structure \"{}\"", a_name, name);
+			REX::ERROR("failed to pack var \"{}\" on structure \"{}\"", a_name, name);
 			return false;
 		}
 
@@ -131,16 +131,14 @@ namespace RE::BSScript
 		class T,
 		class Allocator>
 	struct script_traits<
-		std::vector<T, Allocator>>
-		final
+		std::vector<T, Allocator>> final
 	{
 		using is_array = std::true_type;
 	};
 
 	template <class Traits>
 	struct script_traits<
-		std::basic_string_view<char, Traits>>
-		final
+		std::basic_string_view<char, Traits>> final
 	{
 		using is_string = std::true_type;
 	};
@@ -149,16 +147,14 @@ namespace RE::BSScript
 		class Traits,
 		class Allocator>
 	struct script_traits<
-		std::basic_string<char, Traits, Allocator>>
-		final
+		std::basic_string<char, Traits, Allocator>> final
 	{
 		using is_string = std::true_type;
 	};
 
 	template <class T>
 	struct script_traits<
-		std::optional<T>>
-		final
+		std::optional<T>> final
 	{
 		using is_nullable = std::true_type;
 	};
@@ -294,13 +290,12 @@ namespace RE::BSScript
 				std::true_type> &&
 			std::is_default_constructible_v<T> &&
 			((array<typename T::value_type> || wrapper<typename T::value_type>)) &&  //
-			requires(T a_nullable)
-		{
-			// clang-format off
+			requires(T a_nullable) {
+				// clang-format off
 			static_cast<bool>(a_nullable);
 			{ *static_cast<T&&>(a_nullable) } -> decays_to<typename T::value_type>;
-			// clang-format on
-		};
+				// clang-format on
+			};
 
 		template <class T>
 		concept valid_self =
@@ -389,7 +384,7 @@ namespace RE::BSScript
 			!vm->GetScriptObjectType(GetVMTypeID<T>(), typeInfo) ||
 			!typeInfo) {
 			assert(false);
-			F4SE::ERROR("failed to get type info for object"sv);
+			REX::ERROR("failed to get type info for object"sv);
 			return std::nullopt;
 		} else {
 			return typeInfo.get();
@@ -406,7 +401,7 @@ namespace RE::BSScript
 			!vm->GetScriptObjectType(GetVMTypeID<T>(), typeInfo) ||
 			!typeInfo) {
 			assert(false);
-			F4SE::ERROR("failed to get type info for object"sv);
+			REX::ERROR("failed to get type info for object"sv);
 			return std::nullopt;
 		} else {
 			return typeInfo.get();
@@ -430,7 +425,7 @@ namespace RE::BSScript
 			!vm->GetScriptObjectType(*baseObjectName, typeInfo) ||
 			!typeInfo) {
 			assert(false);
-			F4SE::ERROR("failed to get type info for vm object"sv);
+			REX::ERROR("failed to get type info for vm object"sv);
 			return std::nullopt;
 		} else {
 			return typeInfo.get();
@@ -491,7 +486,7 @@ namespace RE::BSScript
 				!vm->GetScriptStructType(T::name, typeInfo) ||
 				!typeInfo) {
 				assert(false);
-				F4SE::ERROR("failed to get type info for structure"sv);
+				REX::ERROR("failed to get type info for structure"sv);
 				return std::nullopt;
 			} else {
 				return typeInfo.get();
@@ -537,8 +532,8 @@ namespace RE::BSScript
 
 			const auto& handles = vm->GetObjectHandlePolicy();
 			const auto  handle = handles.GetHandleForObject(
-				 GetVMTypeID<T>(),
-				 const_cast<const void*>(
+                GetVMTypeID<T>(),
+                const_cast<const void*>(
                     static_cast<const volatile void*>(a_val)));
 			if (handle == handles.EmptyHandle()) {
 				return false;
@@ -562,7 +557,7 @@ namespace RE::BSScript
 
 		if (!success) {
 			assert(false);
-			F4SE::ERROR("failed to pack variable"sv);
+			REX::ERROR("failed to pack variable"sv);
 			a_var = nullptr;
 		}
 	}
@@ -609,7 +604,7 @@ namespace RE::BSScript
 
 		if (!success) {
 			assert(false);
-			F4SE::ERROR("failed to pack cobject"sv);
+			REX::ERROR("failed to pack cobject"sv);
 			a_var = nullptr;
 		}
 	}
@@ -692,7 +687,7 @@ namespace RE::BSScript
 
 		if (!success) {
 			assert(false);
-			F4SE::ERROR("failed to pack array"sv);
+			REX::ERROR("failed to pack array"sv);
 			a_var = nullptr;
 		}
 	}
@@ -762,7 +757,7 @@ namespace RE::BSScript
 
 		if (!result) {
 			assert(false);
-			F4SE::ERROR("failed to get object from variable"sv);
+			REX::ERROR("failed to get object from variable"sv);
 		}
 
 		return static_cast<T*>(result);
@@ -789,7 +784,7 @@ namespace RE::BSScript
 
 		if (!result) {
 			assert(false);
-			F4SE::ERROR("failed to get ActiveEffect from variable"sv);
+			REX::ERROR("failed to get ActiveEffect from variable"sv);
 		}
 
 		return static_cast<T*>(result);
@@ -826,7 +821,7 @@ namespace RE::BSScript
 
 		if (!result) {
 			assert(false);
-			F4SE::ERROR("failed to get cobject from variable"sv);
+			REX::ERROR("failed to get cobject from variable"sv);
 			return T();
 		} else {
 			return *result;
@@ -1132,7 +1127,8 @@ namespace RE::BSScript
 		template <class Fn>
 		NativeFunction(std::string_view a_object, std::string_view a_function, Fn a_func, bool a_isLatent)  //
 			requires(detail::invocable_r<Fn, R, S, Args...> ||
-					 detail::invocable_r<Fn, R, IVirtualMachine&, std::uint32_t, S, Args...>) :
+						detail::invocable_r<Fn, R, IVirtualMachine&, std::uint32_t, S, Args...>)
+			:
 			super(a_object, a_function, sizeof...(Args), detail::static_tag<S>, a_isLatent),
 			_stub(std::move(a_func))
 		{
@@ -1152,7 +1148,7 @@ namespace RE::BSScript
 			const auto stack = a_stackFrame.parent;
 			if (!stack) {
 				assert(false);
-				F4SE::ERROR("native function called without relevant stack"sv);
+				REX::ERROR("native function called without relevant stack"sv);
 				return false;
 			}
 
@@ -1219,7 +1215,7 @@ namespace RE::BSScript
 				std::move(a_func),
 				a_isLatent));
 		if (!success) {
-			F4SE::WARN("failed to register method \"{}\" on object \"{}\"", a_function, a_object);
+			REX::ERROR("failed to register method \"{}\" on object \"{}\"", a_function, a_object);
 		}
 
 		if (success && a_taskletCallable) {
@@ -1235,11 +1231,9 @@ namespace RE::BSScript
 			constexpr auto         size = sizeof...(a_args);
 			auto                   args = std::make_tuple(std::forward<Args>(a_args)...);
 			BSScrapArray<Variable> result{ size };
-			[&]<std::size_t... p>(std::index_sequence<p...>)
-			{
+			[&]<std::size_t... p>(std::index_sequence<p...>) {
 				((BSScript::PackVariable(result.at(p), std::get<p>(args))), ...);
-			}
-			(std::make_index_sequence<size>{});
+			}(std::make_index_sequence<size>{});
 			return result;
 		}
 	}

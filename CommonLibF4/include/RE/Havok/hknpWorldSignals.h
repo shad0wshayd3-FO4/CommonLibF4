@@ -1,10 +1,10 @@
 #pragma once
 
+#include "RE/Havok/hkRefPtr.h"
+#include "RE/Havok/hkSignalSlots.h"
 #include "RE/Havok/hknpBodyId.h"
 #include "RE/Havok/hknpConstraintId.h"
 #include "RE/Havok/hknpMotionId.h"
-#include "RE/Havok/hkSignalSlots.h"
-#include "RE/Havok/hkRefPtr.h"
 
 namespace RE
 {

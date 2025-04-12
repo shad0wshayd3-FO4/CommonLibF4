@@ -48,13 +48,15 @@ namespace RE::msvc
 
 			template <class... Args>
 			unique_ptr(pointer a_ptr, Args... a_args) noexcept  //
-				requires(std::is_nothrow_constructible_v<deleter_type, Args...>) :
+				requires(std::is_nothrow_constructible_v<deleter_type, Args...>)
+				:
 				_pointer(a_ptr),
 				_deleter(std::forward<Args>(a_args)...)
 			{}
 
 			unique_ptr(unique_ptr&& a_rhs) noexcept  //
-				requires(std::is_nothrow_move_constructible_v<deleter_type>) :
+				requires(std::is_nothrow_move_constructible_v<deleter_type>)
+				:
 				_pointer(std::move(a_rhs._pointer)),
 				_deleter(std::move(a_rhs._deleter))
 			{
@@ -65,7 +67,8 @@ namespace RE::msvc
 			template <class U, class E>
 			unique_ptr(unique_ptr<U, E>&& a_rhs) noexcept  //
 				requires((std::is_reference_v<E> &&
-						  std::is_nothrow_constructible_v<deleter_type, const E&>)) :
+							std::is_nothrow_constructible_v<deleter_type, const E&>))
+				:
 				_pointer(std::move(a_rhs._pointer)),
 				_deleter(a_rhs._deleter)
 			{
@@ -76,7 +79,8 @@ namespace RE::msvc
 			template <class U, class E>
 			unique_ptr(unique_ptr<U, E>&& a_rhs) noexcept  //
 				requires(!std::is_reference_v<E> &&
-						 std::is_nothrow_constructible_v<deleter_type, E&&>) :
+							std::is_nothrow_constructible_v<deleter_type, E &&>)
+				:
 				_pointer(std::move(a_rhs._pointer)),
 				_deleter(std::move(a_rhs._deleter))
 			{
@@ -121,13 +125,15 @@ namespace RE::msvc
 
 			template <class... Args>
 			unique_ptr(pointer a_ptr, Args... a_args) noexcept  //
-				requires(std::is_nothrow_constructible_v<deleter_type, Args...>) :
+				requires(std::is_nothrow_constructible_v<deleter_type, Args...>)
+				:
 				super(std::forward<Args>(a_args)...),
 				_pointer(a_ptr)
 			{}
 
 			unique_ptr(unique_ptr&& a_rhs) noexcept  //
-				requires(std::is_nothrow_move_constructible_v<deleter_type>) :
+				requires(std::is_nothrow_move_constructible_v<deleter_type>)
+				:
 				super(std::move(a_rhs)),
 				_pointer(std::move(a_rhs._pointer))
 			{
@@ -138,7 +144,8 @@ namespace RE::msvc
 			template <class U, class E>
 			unique_ptr(unique_ptr<U, E>&& a_rhs) noexcept  //
 				requires((std::is_reference_v<E> &&
-						  std::is_nothrow_constructible_v<deleter_type, const E&>)) :
+							std::is_nothrow_constructible_v<deleter_type, const E&>))
+				:
 				super(a_rhs),
 				_pointer(std::move(a_rhs._pointer))
 			{
@@ -149,7 +156,8 @@ namespace RE::msvc
 			template <class U, class E>
 			unique_ptr(unique_ptr<U, E>&& a_rhs) noexcept  //
 				requires(!std::is_reference_v<E> &&
-						 std::is_nothrow_constructible_v<deleter_type, E&&>) :
+							std::is_nothrow_constructible_v<deleter_type, E &&>)
+				:
 				super(std::move(a_rhs)),
 				_pointer(std::move(a_rhs._pointer))
 			{
@@ -224,65 +232,75 @@ namespace RE::msvc
 		// 1a
 		constexpr unique_ptr() noexcept  //
 			requires(std::is_nothrow_default_constructible_v<deleter_type> &&
-					 !std::is_pointer_v<deleter_type>) :
+					 !std::is_pointer_v<deleter_type>)
+			:
 			super(pointer())
 		{}
 
 		// 1b
 		constexpr unique_ptr(std::nullptr_t) noexcept  //
 			requires(std::is_nothrow_default_constructible_v<deleter_type> &&
-					 !std::is_pointer_v<deleter_type>) :
+					 !std::is_pointer_v<deleter_type>)
+			:
 			super(pointer())
 		{}
 
 		// 2
 		explicit unique_ptr(pointer a_ptr) noexcept  //
 			requires(std::is_nothrow_default_constructible_v<deleter_type> &&
-					 !std::is_pointer_v<deleter_type>) :
+					 !std::is_pointer_v<deleter_type>)
+			:
 			super(a_ptr)
 		{}
 
 		// 3a
 		unique_ptr(pointer a_ptr, const deleter_type& a_dtor) noexcept  //
 			requires(!std::is_reference_v<deleter_type> &&
-					 std::is_nothrow_copy_constructible_v<deleter_type>) :
+					 std::is_nothrow_copy_constructible_v<deleter_type>)
+			:
 			super(a_ptr, a_dtor)
 		{}
 
 		// 4a
 		unique_ptr(pointer a_ptr, deleter_type&& a_dtor) noexcept  //
 			requires(!std::is_reference_v<deleter_type> &&
-					 std::is_nothrow_move_constructible_v<deleter_type>) :
+					 std::is_nothrow_move_constructible_v<deleter_type>)
+			:
 			super(a_ptr, std::move(a_dtor))
 		{}
 
 		// 3b
 		unique_ptr(pointer a_ptr, deleter_type& a_dtor) noexcept  //
 			requires(std::is_lvalue_reference_v<deleter_type> &&
-					 !std::is_const_v<deleter_type>) :
+					 !std::is_const_v<deleter_type>)
+			:
 			super(a_ptr, a_dtor)
 		{}
 
 		// 4b
 		unique_ptr(pointer, deleter_type&&)  //
 			requires(std::is_lvalue_reference_v<deleter_type> &&
-					 !std::is_const_v<deleter_type>) = delete;
+						!std::is_const_v<deleter_type>)
+		= delete;
 
 		// 3c
 		unique_ptr(pointer a_ptr, const deleter_type& a_dtor) noexcept  //
 			requires((std::is_lvalue_reference_v<deleter_type> &&
-					  std::is_const_v<deleter_type>)) :
+					  std::is_const_v<deleter_type>))
+			:
 			super(a_ptr, a_dtor)
 		{}
 
 		// 4c
 		unique_ptr(pointer, const deleter_type&&)  //
 			requires((std::is_lvalue_reference_v<deleter_type> &&
-					  std::is_const_v<deleter_type>)) = delete;
+						std::is_const_v<deleter_type>))
+		= delete;
 
 		// 5
 		unique_ptr(unique_ptr&& a_rhs) noexcept  //
-			requires(std::is_nothrow_move_constructible_v<deleter_type>) :
+			requires(std::is_nothrow_move_constructible_v<deleter_type>)
+			:
 			super(std::move(a_rhs))
 		{}
 
@@ -294,7 +312,8 @@ namespace RE::msvc
 					 std::same_as<E, deleter_type> &&
 					 (std::is_reference_v<deleter_type> ?
 							 std::is_nothrow_constructible_v<deleter_type, const E&> :
-							 std::is_nothrow_constructible_v<deleter_type, E&&>)) :
+							 std::is_nothrow_constructible_v<deleter_type, E &&>))
+			:
 			super(std::move(a_rhs))
 		{}
 
@@ -331,7 +350,7 @@ namespace RE::msvc
 							 std::is_nothrow_move_assignable_v<deleter_type>)) &&
 					 !std::is_array_v<U> &&
 					 std::convertible_to<typename unique_ptr<U, E>::pointer, pointer> &&
-					 std::is_assignable_v<deleter_type, E&&>)
+					 std::is_assignable_v<deleter_type, E &&>)
 		{
 			reset(a_rhs.release());
 			get_deleter() = std::forward<E>(a_rhs.get_deleter());
@@ -427,14 +446,16 @@ namespace RE::msvc
 		// 1a
 		constexpr unique_ptr() noexcept  //
 			requires(std::is_nothrow_default_constructible_v<deleter_type> &&
-					 !std::is_pointer_v<deleter_type>) :
+					 !std::is_pointer_v<deleter_type>)
+			:
 			super(pointer())
 		{}
 
 		// 1b
 		constexpr unique_ptr(std::nullptr_t) noexcept  //
 			requires(std::is_nothrow_default_constructible_v<deleter_type> &&
-					 !std::is_pointer_v<deleter_type>) :
+					 !std::is_pointer_v<deleter_type>)
+			:
 			super(pointer())
 		{}
 
@@ -443,7 +464,8 @@ namespace RE::msvc
 		explicit unique_ptr(U a_ptr) noexcept  //
 			requires(std::is_nothrow_default_constructible_v<deleter_type> &&
 					 !std::is_pointer_v<deleter_type> &&
-					 detail::unique_ptr_array_convertible<U, unique_ptr>) :
+					 detail::unique_ptr_array_convertible<U, unique_ptr>)
+			:
 			super(a_ptr)
 		{}
 
@@ -452,7 +474,8 @@ namespace RE::msvc
 		unique_ptr(U a_ptr, const deleter_type& a_dtor) noexcept  //
 			requires(!std::is_reference_v<deleter_type> &&
 					 std::is_nothrow_copy_constructible_v<deleter_type> &&
-					 detail::unique_ptr_array_convertible<U, unique_ptr>) :
+					 detail::unique_ptr_array_convertible<U, unique_ptr>)
+			:
 			super(a_ptr, a_dtor)
 		{}
 
@@ -461,7 +484,8 @@ namespace RE::msvc
 		unique_ptr(U a_ptr, deleter_type&& a_dtor) noexcept  //
 			requires(!std::is_reference_v<deleter_type> &&
 					 std::is_nothrow_move_constructible_v<deleter_type> &&
-					 detail::unique_ptr_array_convertible<U, unique_ptr>) :
+					 detail::unique_ptr_array_convertible<U, unique_ptr>)
+			:
 			super(a_ptr, std::move(a_dtor))
 		{}
 
@@ -470,7 +494,8 @@ namespace RE::msvc
 		unique_ptr(U a_ptr, deleter_type& a_dtor) noexcept  //
 			requires(std::is_lvalue_reference_v<deleter_type> &&
 					 !std::is_const_v<deleter_type> &&
-					 detail::unique_ptr_array_convertible<U, unique_ptr>) :
+					 detail::unique_ptr_array_convertible<U, unique_ptr>)
+			:
 			super(a_ptr, a_dtor)
 		{}
 
@@ -478,15 +503,17 @@ namespace RE::msvc
 		template <class U>
 		unique_ptr(U, deleter_type&&) noexcept  //
 			requires(std::is_lvalue_reference_v<deleter_type> &&
-					 !std::is_const_v<deleter_type> &&
-					 detail::unique_ptr_array_convertible<U, unique_ptr>) = delete;
+						!std::is_const_v<deleter_type> &&
+						detail::unique_ptr_array_convertible<U, unique_ptr>)
+		= delete;
 
 		// 3c
 		template <class U>
 		unique_ptr(U a_ptr, const deleter_type& a_dtor) noexcept  //
 			requires((std::is_lvalue_reference_v<deleter_type> &&
 					  std::is_const_v<deleter_type> &&
-					  detail::unique_ptr_array_convertible<U, unique_ptr>)) :
+					  detail::unique_ptr_array_convertible<U, unique_ptr>))
+			:
 			super(a_ptr, a_dtor)
 		{}
 
@@ -494,12 +521,14 @@ namespace RE::msvc
 		template <class U>
 		unique_ptr(U, const deleter_type&&) noexcept  //
 			requires((std::is_lvalue_reference_v<deleter_type> &&
-					  std::is_const_v<deleter_type> &&
-					  detail::unique_ptr_array_convertible<U, unique_ptr>)) = delete;
+						std::is_const_v<deleter_type> &&
+						detail::unique_ptr_array_convertible<U, unique_ptr>))
+		= delete;
 
 		// 5
 		unique_ptr(unique_ptr&& a_rhs) noexcept  //
-			requires(std::is_nothrow_move_constructible_v<deleter_type>) :
+			requires(std::is_nothrow_move_constructible_v<deleter_type>)
+			:
 			super(std::move(a_rhs))
 		{}
 
@@ -512,7 +541,8 @@ namespace RE::msvc
 					  std::convertible_to<typename unique_ptr<U, E>::element_type (*)[], element_type (*)[]> &&
 					  (std::is_reference_v<deleter_type> ?
 							  std::same_as<E, deleter_type> && std::is_nothrow_constructible_v<deleter_type, const E&> :
-							  std::convertible_to<E, deleter_type> && std::is_nothrow_constructible_v<deleter_type, E&&>))) :
+							  std::convertible_to<E, deleter_type> && std::is_nothrow_constructible_v<deleter_type, E &&>)))
+			:
 			super(std::move(a_rhs))
 		{}
 
@@ -548,7 +578,7 @@ namespace RE::msvc
 					  std::same_as<pointer, element_type*> &&
 					  std::same_as<typename unique_ptr<U, E>::pointer, typename unique_ptr<U, E>::element_type*> &&
 					  std::convertible_to<typename unique_ptr<U, E>::element_type (*)[], element_type (*)[]> &&
-					  std::is_assignable_v<deleter_type&, E&&>))
+					  std::is_assignable_v<deleter_type&, E &&>))
 		{
 			if (this != std::addressof(a_rhs)) {
 				reset(a_rhs.release());
@@ -632,7 +662,8 @@ namespace RE::msvc
 	// 3
 	template <class T, class... Args>
 	void make_unique(Args&&...)  //
-		requires(std::is_bounded_array_v<T>) = delete;
+		requires(std::is_bounded_array_v<T>)
+	= delete;
 
 	// 4
 	template <class T, class... Args>
@@ -653,7 +684,8 @@ namespace RE::msvc
 	// 6
 	template <class T, class... Args>
 	void make_unique_for_overwrite(Args&&...)  //
-		requires(std::is_bounded_array_v<T>) = delete;
+		requires(std::is_bounded_array_v<T>)
+	= delete;
 
 	// 1
 	template <class T1, class D1, class T2, class D2>
@@ -668,9 +700,9 @@ namespace RE::msvc
 		-> std::compare_three_way_result_t<
 			typename unique_ptr<T1, D1>::pointer,
 			typename unique_ptr<T2, D2>::pointer>
-	requires(std::three_way_comparable_with<
-		typename unique_ptr<T1, D1>::pointer,
-		typename unique_ptr<T2, D2>::pointer>)
+		requires(std::three_way_comparable_with<
+			typename unique_ptr<T1, D1>::pointer,
+			typename unique_ptr<T2, D2>::pointer>)
 	{
 		return a_lhs.get() <=> a_rhs.get();
 	}
@@ -686,7 +718,7 @@ namespace RE::msvc
 	template <class T, class D>
 	[[nodiscard]] auto operator<=>(const unique_ptr<T, D>& a_lhs, std::nullptr_t)
 		-> std::compare_three_way_result_t<typename unique_ptr<T, D>::pointer>
-	requires(std::three_way_comparable<typename unique_ptr<T, D>::pointer>)
+		requires(std::three_way_comparable<typename unique_ptr<T, D>::pointer>)
 	{
 		return a_lhs.get() <=> nullptr;
 	}

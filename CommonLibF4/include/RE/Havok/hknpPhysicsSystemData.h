@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/Havok/hkArray.h"
-#include "RE/Havok/hkReferencedObject.h"
 #include "RE/Havok/hkRefPtr.h"
+#include "RE/Havok/hkReferencedObject.h"
 #include "RE/Havok/hkStringPtr.h"
 #include "RE/Havok/hknpBodyId.h"
 #include "RE/Havok/hknpConstraintId.h"

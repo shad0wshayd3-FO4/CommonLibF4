@@ -4,17 +4,13 @@
 
 #include "REX/W32/BCRYPT.h"
 
-#include "F4SE/Logger.h"
-
 namespace REL
 {
-	namespace log = F4SE::log;
-
 	std::optional<std::string> SHA512(std::span<const std::byte> a_data)
 	{
 		REX::W32::BCRYPT_ALG_HANDLE algorithm;
 		if (!REX::W32::NT_SUCCESS(REX::W32::BCryptOpenAlgorithmProvider(&algorithm, REX::W32::BCRYPT_SHA512_ALGORITHM))) {
-			F4SE::ERROR("failed to open algorithm provider");
+			REX::ERROR("failed to open algorithm provider");
 			return std::nullopt;
 		}
 
@@ -25,7 +21,7 @@ namespace REL
 
 		REX::W32::BCRYPT_HASH_HANDLE hash;
 		if (!REX::W32::NT_SUCCESS(REX::W32::BCryptCreateHash(algorithm, &hash))) {
-			F4SE::ERROR("failed to create hash");
+			REX::ERROR("failed to create hash");
 			return std::nullopt;
 		}
 
@@ -38,7 +34,7 @@ namespace REL
 				hash,
 				reinterpret_cast<std::uint8_t*>(const_cast<std::byte*>(a_data.data())),  // does not modify contents of buffer
 				static_cast<std::uint32_t>(a_data.size())))) {
-			F4SE::ERROR("failed to hash data");
+			REX::ERROR("failed to hash data");
 			return std::nullopt;
 		}
 
@@ -50,7 +46,7 @@ namespace REL
 				reinterpret_cast<std::uint8_t*>(&hashLen),
 				sizeof(hashLen),
 				&discard))) {
-			F4SE::ERROR("failed to get property");
+			REX::ERROR("failed to get property");
 			return std::nullopt;
 		}
 
@@ -59,7 +55,7 @@ namespace REL
 				hash,
 				buffer.data(),
 				static_cast<std::uint32_t>(buffer.size())))) {
-			F4SE::ERROR("failed to finish hash");
+			REX::ERROR("failed to finish hash");
 			return std::nullopt;
 		}
 
@@ -115,10 +111,10 @@ namespace REL
 
 		const mapping_t elem{ a_id, 0 };
 		const auto      it = std::lower_bound(
-				 _id2offset.begin(),
-				 _id2offset.end(),
-				 elem,
-				 [](auto&& a_lhs, auto&& a_rhs) {
+            _id2offset.begin(),
+            _id2offset.end(),
+            elem,
+            [](auto&& a_lhs, auto&& a_rhs) {
                 return a_lhs.id < a_rhs.id;
             });
 		if (it == _id2offset.end()) {

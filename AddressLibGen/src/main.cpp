@@ -223,8 +223,8 @@ void write_binaries(version_map& a_versionMap)
 	std::ofstream file;
 	const auto    binary_write = [&file](auto&& a_data) {
         file.write(
-			   reinterpret_cast<const char*>(std::addressof(a_data)),
-			   sizeof(std::remove_reference_t<decltype(a_data)>));
+            reinterpret_cast<const char*>(std::addressof(a_data)),
+            sizeof(std::remove_reference_t<decltype(a_data)>));
 	};
 
 	std::string                                    filename;

@@ -34,6 +34,5 @@ namespace RE
 		public hkMapBase<K, V, O>
 	{
 	public:
-
 	};
 }

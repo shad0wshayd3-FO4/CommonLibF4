@@ -23,7 +23,7 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           path: main
 
@@ -35,7 +35,7 @@ jobs:
           ./vcpkg --version > ${{ github.workspace }}/vcpkg-version.txt
 
       - name: Cache vcpkg
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: vcpkg-cache
         env:
           cache-name: vcpkg-cache

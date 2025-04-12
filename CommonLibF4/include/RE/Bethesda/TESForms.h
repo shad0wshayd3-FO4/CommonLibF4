@@ -832,7 +832,7 @@ namespace RE
 		template <class... Args>
 
 		[[nodiscard]] bool Is(Args... a_args) const noexcept  //
-			requires(std::same_as<Args, ENUM_FORM_ID>&&...)
+			requires(std::same_as<Args, ENUM_FORM_ID> && ...)
 		{
 			return (Is(a_args) || ...);
 		}
@@ -856,7 +856,7 @@ namespace RE
 		template <class... Args>
 
 		[[nodiscard]] bool IsNot(Args... a_args) const noexcept  //
-			requires(std::same_as<Args, ENUM_FORM_ID>&&...)
+			requires(std::same_as<Args, ENUM_FORM_ID> && ...)
 		{
 			return (IsNot(a_args) && ...);
 		}
@@ -1606,7 +1606,7 @@ namespace RE
 			void*          cellData;
 			EXTERIOR_DATA* cellDataExterior;
 			INTERIOR_DATA* cellDataInterior;
-		};                                                                               // 50
+		};  // 50
 		TESObjectLAND*                                                     cellLand;     // 58
 		float                                                              waterHeight;  // 60
 		NavMeshArray*                                                      navMeshes;    // 68
@@ -1618,7 +1618,7 @@ namespace RE
 		{
 			TESWorldSpace* worldSpace;
 			std::uint32_t  tempDataOffset;
-		};                                          // C8
+		};  // C8
 		LOADED_CELL_DATA*    loadedData;            // D0
 		BGSLightingTemplate* lightingTemplate;      // D8
 		void*                visibilityData;        // E0 - TODO
@@ -3216,7 +3216,7 @@ namespace RE
 		{
 			std::uint32_t color;
 			float         remappingIndex;
-		};                         // 30
+		};  // 30
 		TESCondition  conditions;  // 38
 		std::uint32_t flags;       // 40
 	};

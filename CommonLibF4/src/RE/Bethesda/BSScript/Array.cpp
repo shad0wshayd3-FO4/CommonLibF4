@@ -165,15 +165,15 @@ namespace RE
 		{
 			const stl::enumeration typeID = elementType.GetRawType();
 			switch (*typeID) {
-			case TypeInfo::RawType::kNone:
-			case TypeInfo::RawType::kObject:
-			case TypeInfo::RawType::kString:
-			case TypeInfo::RawType::kInt:
-			case TypeInfo::RawType::kFloat:
-			case TypeInfo::RawType::kBool:
-				return *(typeID + TypeInfo::RawType::kArrayStart);
-			default:
-				return *(typeID + TypeInfo::RawType::kObject);
+				case TypeInfo::RawType::kNone:
+				case TypeInfo::RawType::kObject:
+				case TypeInfo::RawType::kString:
+				case TypeInfo::RawType::kInt:
+				case TypeInfo::RawType::kFloat:
+				case TypeInfo::RawType::kBool:
+					return *(typeID + TypeInfo::RawType::kArrayStart);
+				default:
+					return *(typeID + TypeInfo::RawType::kObject);
 			}
 		}
 	}

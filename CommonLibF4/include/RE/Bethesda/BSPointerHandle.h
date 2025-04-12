@@ -74,7 +74,8 @@ namespace RE
 
 		template <class Y>
 		BSPointerHandle(BSPointerHandle<Y, Handle> a_rhs) noexcept
-			requires(std::convertible_to<Y*, T*>) :
+			requires(std::convertible_to<Y*, T*>)
+			:
 			_handle(a_rhs._handle)
 		{}
 

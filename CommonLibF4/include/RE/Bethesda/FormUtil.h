@@ -188,8 +188,8 @@ namespace RE
 			F4SE_FORMUTIL(BGSSoundTagSet);
 			F4SE_FORMUTIL(BGSLensFlare);
 			F4SE_FORMUTIL(BGSGodRays);
-		default:
-			break;
+			default:
+				break;
 		}
 
 		return nullptr;

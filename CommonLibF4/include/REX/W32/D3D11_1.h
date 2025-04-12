@@ -187,11 +187,11 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("5c1e0d8a-7c23-48f9-8c59-a92958ceff11"))
-		ID3DDeviceContextState : public ID3D11DeviceChild
+	ID3DDeviceContextState : public ID3D11DeviceChild
 	{};
 
 	struct __declspec(novtable, uuid("b2daad8b-03d4-4dbf-95eb-32ab4b63d0ab"))
-		ID3DUserDefinedAnnotation : public IUnknown
+	ID3DUserDefinedAnnotation : public IUnknown
 	{
 		virtual std::int32_t BeginEvent(const wchar_t* a_name) = 0;
 		virtual std::int32_t EndEvent(void) = 0;
@@ -200,13 +200,13 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("cc86fabe-da55-401d-85e7-e3c9de2877e9"))
-		ID3D11BlendState1 : public ID3D11BlendState
+	ID3D11BlendState1 : public ID3D11BlendState
 	{
 		virtual void GetDesc1(D3D11_BLEND_DESC1* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("a04bfb29-08ef-43d6-a49c-a9bdbdcbe686"))
-		ID3D11Device1 : public ID3D11Device
+	ID3D11Device1 : public ID3D11Device
 	{
 		virtual void    GetImmediateContext1(ID3D11DeviceContext1** a_immediateContext) = 0;
 		virtual HRESULT CreateDeferredContext1(std::uint32_t a_contextFlags, ID3D11DeviceContext1** a_deferredContext) = 0;
@@ -218,7 +218,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("bb2c6faa-b5fb-4082-8e6b-388b8cfa90e1"))
-		ID3D11DeviceContext1 : public ID3D11DeviceContext
+	ID3D11DeviceContext1 : public ID3D11DeviceContext
 	{
 		virtual void CopySubresourceRegion1(ID3D11Resource* a_dstResource, std::uint32_t a_dstSubresource, std::uint32_t a_dstX, std::uint32_t a_dstY, std::uint32_t a_dstZ, ID3D11Resource* a_srcResource, std::uint32_t a_srcSubresource, const D3D11_BOX* a_srcBox, std::uint32_t a_copyFlags) = 0;
 		virtual void UpdateSubresource1(ID3D11Resource* a_dstResource, std::uint32_t a_dstSubresource, const D3D11_BOX* a_dstBox, const void* a_srcData, std::uint32_t a_srcRowPitch, std::uint32_t a_srcDepthPitch, std::uint32_t a_copyFlags) = 0;
@@ -242,13 +242,13 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("1217d7a6-5039-418c-b042-9cbe256afd6e"))
-		ID3D11RasterizerState1 : public ID3D11RasterizerState
+	ID3D11RasterizerState1 : public ID3D11RasterizerState
 	{
 		virtual void GetDesc1(D3D11_RASTERIZER_DESC1* a_desc) = 0;
 	};
 
 	struct __declspec(novtable, uuid("A7F026DA-A5F8-4487-A564-15E34357651E"))
-		ID3D11VideoContext1 : public ID3D11VideoContext
+	ID3D11VideoContext1 : public ID3D11VideoContext
 	{
 		virtual HRESULT SubmitDecoderBuffers1(ID3D11VideoDecoder* a_decoder, std::uint32_t a_numBuffers, const D3D11_VIDEO_DECODER_BUFFER_DESC1* a_bufferDesc) = 0;
 		virtual HRESULT GetDataForNewHardwareKey(ID3D11CryptoSession* a_cryptoSession, std::uint32_t a_privateInputSize, const void* a_privateInputData, std::uint64_t* a_privateOutputData) = 0;
@@ -267,7 +267,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("29DA1D51-1321-4454-804B-F5FC9F861F0F"))
-		ID3D11VideoDevice1 : public ID3D11VideoDevice
+	ID3D11VideoDevice1 : public ID3D11VideoDevice
 	{
 		virtual HRESULT GetCryptoSessionPrivateDataSize(const GUID* a_cryptoType, const GUID* a_decoderProfile, const GUID* a_keyExchangeType, std::uint32_t* a_privateInputSize, std::uint32_t* a_privateOutputSize) = 0;
 		virtual HRESULT GetVideoDecoderCaps(const GUID* a_decoderProfile, std::uint32_t a_sampleWidth, std::uint32_t a_sampleHeight, const DXGI_RATIONAL* a_frameRate, std::uint32_t a_bitRate, const GUID* a_cryptoType, std::uint32_t* a_decoderCaps) = 0;
@@ -276,7 +276,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("465217F2-5568-43CF-B5B9-F61D54531CA1"))
-		ID3D11VideoProcessorEnumerator1 : public ID3D11VideoProcessorEnumerator
+	ID3D11VideoProcessorEnumerator1 : public ID3D11VideoProcessorEnumerator
 	{
 		virtual HRESULT CheckVideoProcessorFormatConversion(DXGI_FORMAT a_inputFormat, DXGI_COLOR_SPACE_TYPE a_inputColorSpace, DXGI_FORMAT a_outputFormat, DXGI_COLOR_SPACE_TYPE a_outputColorSpace, BOOL* a_supported) = 0;
 	};

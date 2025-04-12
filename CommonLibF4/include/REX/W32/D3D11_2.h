@@ -81,7 +81,7 @@ namespace REX::W32
 namespace REX::W32
 {
 	struct __declspec(novtable, uuid("9d06dffa-d1e5-4d07-83a8-1bb123f2f841"))
-		ID3D11Device2 : public ID3D11Device1
+	ID3D11Device2 : public ID3D11Device1
 	{
 		virtual void    GetImmediateContext2(ID3D11DeviceContext2** a_immediateContext) = 0;
 		virtual HRESULT CreateDeferredContext2(std::uint32_t a_contextFlags, ID3D11DeviceContext2** a_deferredContext) = 0;
@@ -90,7 +90,7 @@ namespace REX::W32
 	};
 
 	struct __declspec(novtable, uuid("420d5b32-b90c-4da4-bef0-359f6a24a83a"))
-		ID3D11DeviceContext2 : public ID3D11DeviceContext1
+	ID3D11DeviceContext2 : public ID3D11DeviceContext1
 	{
 		virtual HRESULT UpdateTileMappings(ID3D11Resource* a_tiledResource, std::uint32_t numTiledResourceRegions, const D3D11_TILED_RESOURCE_COORDINATE* a_tiledResourceRegionStartCoordinates, const D3D11_TILE_REGION_SIZE* a_tiledResourceRegionSizes, ID3D11Buffer* a_tilePool, std::uint32_t a_numRanges, const std::uint32_t* a_rangeFlags, const std::uint32_t* a_tilePoolStartOffsets, const std::uint32_t* a_rangeTileCounts, std::uint32_t a_flags) = 0;
 		virtual HRESULT CopyTileMappings(ID3D11Resource* a_destTiledResource, const D3D11_TILED_RESOURCE_COORDINATE* a_destRegionStartCoordinate, ID3D11Resource* a_sourceTiledResource, const D3D11_TILED_RESOURCE_COORDINATE* a_sourceRegionStartCoordinate, const D3D11_TILE_REGION_SIZE* a_tileRegionSize, std::uint32_t a_flags) = 0;

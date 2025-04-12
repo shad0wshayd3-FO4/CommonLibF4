@@ -127,7 +127,7 @@ namespace RE::BSResource::Archive2
 				Chunk     chunk;
 				Loose     loose;
 				std::byte buffer[std::max(sizeof(Chunk), sizeof(Loose))] = {};
-			};                         // 10
+			};  // 10
 			BSFixedString stringName;  // 20
 		};
 		static_assert(sizeof(Entry) == 0x28);
@@ -249,7 +249,7 @@ namespace RE::BSResource::Archive2
 		{
 			StandardContext* standardCtx = nullptr;
 			PlatformContext* platformCtx;
-		};                                              // 18
+		};  // 18
 		const std::uint64_t startOffset = 0;            // 02
 		BSFixedString       name;                       // 28
 		std::uint32_t       currentRelativeOffset = 0;  // 30

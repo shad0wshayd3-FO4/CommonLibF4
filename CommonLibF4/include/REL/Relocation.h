@@ -1,10 +1,11 @@
 #pragma once
 
-#include "F4SE/Trampoline.h"
-
+#include "REL/ASM.h"
 #include "REL/ID.h"
 #include "REL/Module.h"
 #include "REL/Offset.h"
+#include "REL/Trampoline.h"
+#include "REL/Utility.h"
 
 #define REL_MAKE_MEMBER_FUNCTION_POD_TYPE_HELPER_IMPL(a_nopropQual, a_propQual, ...)              \
 	template <                                                                                    \
@@ -159,8 +160,6 @@ namespace REL
 
 			return func(std::forward<First>(a_first), std::addressof(result), std::forward<Rest>(a_rest)...);
 		}
-
-		std::optional<std::string> sha512(std::span<const std::byte> a_data);
 	}
 
 	inline constexpr std::uint8_t NOP = 0x90;
@@ -184,22 +183,6 @@ namespace REL
 			return std::forward<F>(a_func)(std::forward<Args>(a_args)...);
 		}
 	}
-
-	void safe_write(std::uintptr_t a_dst, const void* a_src, std::size_t a_count);
-
-	template <std::integral T>
-	void safe_write(std::uintptr_t a_dst, const T& a_data)
-	{
-		safe_write(a_dst, std::addressof(a_data), sizeof(T));
-	}
-
-	template <class T>
-	void safe_write(std::uintptr_t a_dst, std::span<T> a_data)
-	{
-		safe_write(a_dst, a_data.data(), a_data.size_bytes());
-	}
-
-	void safe_fill(std::uintptr_t a_dst, std::uint8_t a_value, std::size_t a_count);
 
 	template <class T = std::uintptr_t>
 	class Relocation
@@ -227,6 +210,10 @@ namespace REL
 
 		explicit Relocation(ID a_id, std::ptrdiff_t a_offset) :
 			_impl{ a_id.address() + a_offset }
+		{}
+
+		explicit Relocation(ID a_id, Offset a_offset) :
+			_impl{ a_id.address() + a_offset.offset() }
 		{}
 
 		constexpr Relocation& operator=(std::uintptr_t a_address) noexcept
@@ -261,9 +248,15 @@ namespace REL
 			return get();
 		}
 
+		[[nodiscard]] operator bool() const noexcept
+		{
+			return _impl != 0;
+		}
+
 		template <class... Args>
 		std::invoke_result_t<const value_type&, Args...> operator()(Args&&... a_args) const
-			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>) requires(std::invocable<const value_type&, Args...>)
+			noexcept(std::is_nothrow_invocable_v<const value_type&, Args...>)
+			requires(std::invocable<const value_type&, Args...>)
 		{
 			return REL::invoke(get(), std::forward<Args>(a_args)...);
 		}
@@ -279,100 +272,117 @@ namespace REL
 		}
 
 		template <std::ptrdiff_t O = 0>
-		void replace_func(const std::size_t a_count, const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		void replace_func(const std::size_t a_count, const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-#pragma pack(push, 1)
-			struct Assembly
-			{
-				std::uint8_t  jmp;
-				std::uint8_t  modrm;
-				std::int32_t  disp;
-				std::uint64_t addr;
-			};
-			static_assert(sizeof(Assembly) == 0xE);
-#pragma pack(pop)
+			ASM::JMP14 assembly(a_dst);
 
-			Assembly assembly{
-				.jmp = static_cast<std::uint8_t>(0xFF),
-				.modrm = static_cast<std::uint8_t>(0x25),
-				.disp = static_cast<std::int32_t>(0),
-				.addr = static_cast<std::uint64_t>(a_dst),
-			};
-
-			safe_fill(address() + O, INT3, a_count);
-			safe_write(address() + O, &assembly, sizeof(assembly));
+			write_fill<O>(INT3, a_count);
+			write<O>(&assembly, sizeof(assembly));
 		}
 
 		template <std::ptrdiff_t O = 0, class F>
-		void replace_func(const std::size_t a_count, const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		void replace_func(const std::size_t a_count, const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			replace_func<O>(a_count, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
-		void write(const void* a_src, std::size_t a_count) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0>
+		void write(const void* a_src, std::size_t a_count)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_write(address(), a_src, a_count);
+			WriteSafe(address() + O, a_src, a_count);
 		}
 
-		template <std::integral U>
-		void write(const U& a_data) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0, std::integral U>
+		void write(const U& a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_write(address(), std::addressof(a_data), sizeof(U));
+			WriteSafe(address() + O, std::addressof(a_data), sizeof(U));
 		}
 
-		void write(const std::initializer_list<std::uint8_t> a_data) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0>
+		void write(const std::initializer_list<std::uint8_t> a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_write(address(), a_data.begin(), a_data.size());
+			WriteSafe(address() + O, a_data.begin(), a_data.size());
 		}
 
-		template <class U>
-		void write(const std::span<U> a_data) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::ptrdiff_t O = 0, class U>
+		void write(const std::span<U> a_data)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_write(address(), a_data.data(), a_data.size_bytes());
-		}
-
-		template <std::size_t N, std::ptrdiff_t O = 0>
-		std::uintptr_t write_branch(const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
-		{
-			return F4SE::GetTrampoline().write_branch<N>(address() + O, a_dst);
-		}
-
-		template <std::size_t N, std::ptrdiff_t O = 0, class F>
-		std::uintptr_t write_branch(const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
-		{
-			return F4SE::GetTrampoline().write_branch<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
+			WriteSafe(address() + O, a_data.data(), a_data.size_bytes());
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0>
-		std::uintptr_t write_call(const std::uintptr_t a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_jmp(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_call<N>(address() + O, a_dst);
+			return GetTrampoline().write_jmp<N>(address() + O, a_dst);
 		}
 
 		template <std::size_t N, std::ptrdiff_t O = 0, class F>
-		std::uintptr_t write_call(const F a_dst) requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_jmp(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			return F4SE::GetTrampoline().write_call<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
+			return GetTrampoline().write_jmp<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
-		void write_fill(const std::uint8_t a_value, const std::size_t a_count) requires(std::same_as<value_type, std::uintptr_t>)
+		template <std::size_t N, std::ptrdiff_t O = 0>
+		std::uintptr_t write_call(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
-			safe_fill(address(), a_value, a_count);
+			return GetTrampoline().write_call<N>(address() + O, a_dst);
+		}
+
+		template <std::size_t N, std::ptrdiff_t O = 0, class F>
+		std::uintptr_t write_call(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return GetTrampoline().write_call<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
+		}
+
+		template <std::ptrdiff_t O = 0>
+		void write_fill(const std::uint8_t a_value, const std::size_t a_count)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			WriteSafeFill(address() + O, a_value, a_count);
 		}
 
 		template <class U = value_type>
-		std::uintptr_t write_vfunc(std::size_t a_idx, std::uintptr_t a_newFunc) requires(std::same_as<U, std::uintptr_t>)
+		std::uintptr_t write_vfunc(std::size_t a_idx, std::uintptr_t a_newFunc)
+			requires(std::same_as<U, std::uintptr_t>)
 		{
 			const auto addr = address() + (sizeof(void*) * a_idx);
 			const auto result = *reinterpret_cast<std::uintptr_t*>(addr);
-			safe_write(addr, a_newFunc);
+			WriteSafe(addr, a_newFunc);
 			return result;
 		}
 
 		template <class F>
-		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc) requires(std::same_as<value_type, std::uintptr_t>)
+		std::uintptr_t write_vfunc(std::size_t a_idx, F a_newFunc)
+			requires(std::same_as<value_type, std::uintptr_t>)
 		{
 			return write_vfunc(a_idx, stl::unrestricted_cast<std::uintptr_t>(a_newFunc));
+		}
+
+	public:
+		// DEPRECATED: Use write_jmp instead
+		template <std::size_t N, std::ptrdiff_t O = 0>
+		std::uintptr_t write_branch(const std::uintptr_t a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return GetTrampoline().write_jmp<N>(address() + O, a_dst);
+		}
+
+		// DEPRECATED: Use write_jmp instead
+		template <std::size_t N, std::ptrdiff_t O = 0, class F>
+		std::uintptr_t write_branch(const F a_dst)
+			requires(std::same_as<value_type, std::uintptr_t>)
+		{
+			return GetTrampoline().write_jmp<N>(address() + O, stl::unrestricted_cast<std::uintptr_t>(a_dst));
 		}
 
 	private:

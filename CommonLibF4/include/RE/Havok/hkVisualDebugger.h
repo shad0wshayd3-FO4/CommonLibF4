@@ -21,11 +21,11 @@ namespace RE
 		inline static constexpr auto RTTI{ RTTI::hkVisualDebugger };
 		inline static constexpr auto VTABLE{ VTABLE::hkVisualDebugger };
 
-		using TrackCallback = void(*)(void*, const hkClass*, hkBool, std::uint64_t, void*);
+		using TrackCallback = void (*)(void*, const hkClass*, hkBool, std::uint64_t, void*);
 
 		hkVisualDebugger(const hkArray<hkProcessContext*>& a_contexts, const hkVtableClassRegistry* a_classReg = nullptr)
 		{
-			using func_t = void(*)(hkVisualDebugger*, const hkArray<hkProcessContext*>&, const hkVtableClassRegistry*);
+			using func_t = void (*)(hkVisualDebugger*, const hkArray<hkProcessContext*>&, const hkVtableClassRegistry*);
 			static REL::Relocation<func_t> func{ REL::ID(2263295) };
 			func(this, a_contexts, a_classReg);
 		}

@@ -29,7 +29,7 @@ namespace RE
 		return NiPoint3(((rotate * a_rhs) * scale) + translate);
 	}
 
-    NiTransform NiTransform::Invert() const noexcept
+	NiTransform NiTransform::Invert() const noexcept
 	{
 		NiTransform transform(*this);
 		return transform.MakeInvert();
@@ -43,7 +43,7 @@ namespace RE
 		return *this;
 	}
 
-    NiTransform& NiTransform::MakeInvert() noexcept
+	NiTransform& NiTransform::MakeInvert() noexcept
 	{
 		rotate = rotate.Transpose();
 		scale = 1.0f / scale;

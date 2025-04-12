@@ -25,7 +25,7 @@ BinPackArguments: 'true'
 BinPackParameters: 'true'
 BitFieldColonSpacing: After
 BraceWrapping:
-    AfterCaseLabel: 'true'
+    AfterCaseLabel: 'false'
     AfterClass: 'true'
     AfterControlStatement: 'false'
     AfterEnum: 'true'
@@ -59,8 +59,8 @@ DerivePointerAlignment: 'false'
 DisableFormat: 'false'
 FixNamespaceComments: 'false'
 IncludeBlocks: Preserve
-IndentCaseBlocks: 'true'
-IndentCaseLabels: 'false'
+IndentCaseBlocks: 'false'
+IndentCaseLabels: 'true'
 IndentExternBlock: Indent
 IndentGotoLabels: 'false'
 IndentPPDirectives: AfterHash

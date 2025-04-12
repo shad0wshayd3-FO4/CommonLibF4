@@ -231,7 +231,7 @@ namespace RE::Scaleform::GFx::AS3
 		{
 			const RefCountBaseGC<STAT>* prev;
 			const RefCountBaseGC<STAT>* prevRoot;
-		};                       // 18
+		};  // 18
 		std::uint32_t refCount;  // 20
 	};
 	static_assert(sizeof(RefCountBaseGC<328>) == 0x28);

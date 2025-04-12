@@ -107,7 +107,7 @@ namespace RE
 			iterator_base operator++(int) noexcept
 			{
 				iterator_base tmp{ *this };
-							  operator++();
+				operator++();
 				return tmp;
 			}
 

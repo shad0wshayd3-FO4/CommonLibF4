@@ -54,7 +54,7 @@ namespace RE
 		{
 			TESGlobal* global;
 			float      value;
-		};                                                                         // 00
+		};  // 00
 		ObjectRefHandle                                 runOnRef;                  // 08
 		std::uint32_t                                   dataID;                    // 0C
 		FUNCTION_DATA                                   functionData;              // 10

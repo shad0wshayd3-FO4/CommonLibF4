@@ -19,7 +19,8 @@ namespace RE
 		// 3)
 		template <class Y>
 		NiPointer(Y* a_rhs)
-			requires(std::convertible_to<Y*, element_type*>) :
+			requires(std::convertible_to<Y*, element_type*>)
+			:
 			_ptr(static_cast<element_type*>(a_rhs))
 		{
 			TryAttach();
@@ -35,7 +36,8 @@ namespace RE
 		// 9b)
 		template <class Y>
 		NiPointer(const NiPointer<Y>& a_rhs)
-			requires(std::convertible_to<Y*, element_type*>) :
+			requires(std::convertible_to<Y*, element_type*>)
+			:
 			_ptr(static_cast<element_type*>(a_rhs._ptr))
 		{
 			TryAttach();
@@ -49,7 +51,8 @@ namespace RE
 		// 10b)
 		template <class Y>
 		NiPointer(NiPointer<Y>&& a_rhs) noexcept
-			requires(std::convertible_to<Y*, element_type*>) :
+			requires(std::convertible_to<Y*, element_type*>)
+			:
 			_ptr(static_cast<element_type*>(std::exchange(a_rhs._ptr, nullptr)))
 		{}
 

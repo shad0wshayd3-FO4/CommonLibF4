@@ -32,7 +32,7 @@ namespace RE::Scaleform::GFx
 		{
 			ASStringNode* lower;
 			ASStringNode* next;
-		};                        // 10
+		};  // 10
 		std::uint32_t refCount;   // 18
 		std::uint32_t hashFlags;  // 1C
 		std::uint32_t size;       // 20

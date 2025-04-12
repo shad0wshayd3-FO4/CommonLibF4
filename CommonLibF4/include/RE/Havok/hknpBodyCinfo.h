@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/Havok/hknpBody.h"
 #include "RE/Havok/hkQuaternion.h"
 #include "RE/Havok/hkRefPtr.h"
 #include "RE/Havok/hkStringPtr.h"
 #include "RE/Havok/hkVector4.h"
+#include "RE/Havok/hknpBody.h"
 
 namespace RE
 {
@@ -15,7 +15,7 @@ namespace RE
 	public:
 		hknpBodyCinfo()
 		{
-			using func_t = void(*)(hknpBodyCinfo*);
+			using func_t = void (*)(hknpBodyCinfo*);
 			static REL::Relocation<func_t> func{ REL::ID(2255967) };
 			func(this);
 		}

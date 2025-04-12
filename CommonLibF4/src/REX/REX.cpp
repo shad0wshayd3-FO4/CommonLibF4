@@ -1,11 +1,11 @@
 #include "REX/REX/INI.h"
 #include "REX/REX/JSON.h"
+#include "REX/REX/LOG.h"
 #include "REX/REX/TOML.h"
-
-#include "F4SE/Logger.h"
 
 #ifdef REX_OPTION_INI
 #	include <SimpleIni.h>
+#	undef ERROR
 
 namespace REX::INI
 {
@@ -182,7 +182,7 @@ namespace REX::JSON
 					setting->Load(&result, true);
 				}
 			} catch (const std::exception& e) {
-				F4SE::ERROR("{}", e.what());
+				REX::ERROR("{}", e.what());
 			}
 		}
 
@@ -194,7 +194,7 @@ namespace REX::JSON
 					setting->Load(&result, false);
 				}
 			} catch (const std::exception& e) {
-				F4SE::ERROR("{}", e.what());
+				REX::ERROR("{}", e.what());
 			}
 		}
 	}
@@ -373,3 +373,31 @@ namespace REX::TOML
 	}
 }
 #endif
+
+namespace REX
+{
+	void LOG(const std::source_location a_loc, const LOG_LEVEL a_level, const std::string_view a_fmt)
+	{
+		const auto loc = spdlog::source_loc{ a_loc.file_name(), static_cast<std::int32_t>(a_loc.line()), a_loc.function_name() };
+		switch (a_level) {
+			case LOG_LEVEL::TRACE:
+				spdlog::default_logger_raw()->log(loc, spdlog::level::trace, a_fmt);
+				break;
+			case LOG_LEVEL::DEBUG:
+				spdlog::default_logger_raw()->log(loc, spdlog::level::debug, a_fmt);
+				break;
+			case LOG_LEVEL::INFO:
+				spdlog::default_logger_raw()->log(loc, spdlog::level::info, a_fmt);
+				break;
+			case LOG_LEVEL::WARN:
+				spdlog::default_logger_raw()->log(loc, spdlog::level::warn, a_fmt);
+				break;
+			case LOG_LEVEL::ERROR:
+				spdlog::default_logger_raw()->log(loc, spdlog::level::err, a_fmt);
+				break;
+			case LOG_LEVEL::CRITICAL:
+				spdlog::default_logger_raw()->log(loc, spdlog::level::critical, a_fmt);
+				break;
+		}
+	}
+}

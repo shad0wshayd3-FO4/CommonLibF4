@@ -6,7 +6,7 @@ namespace RE::HUDMenuUtils
 {
 	inline void WorldPtToScreenPt3(const NiPoint3& a_world, NiPoint3& a_screen)
 	{
-		using func_t = void(*)(const NiPoint3&, NiPoint3&);
+		using func_t = void (*)(const NiPoint3&, NiPoint3&);
 		static REL::Relocation<func_t> func{ REL::ID(2222464) };
 		func(a_world, a_screen);
 	}

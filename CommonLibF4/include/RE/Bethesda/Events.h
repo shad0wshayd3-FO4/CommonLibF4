@@ -810,7 +810,7 @@ namespace RE
 	public:
 		// members
 		NiPointer<TESObjectREFR> refr;
-		bool isAttaching;
+		bool                     isAttaching;
 	};
 	static_assert(sizeof(TESCellAttachDetachEvent) == 0x10);
 

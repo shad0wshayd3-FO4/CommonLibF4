@@ -127,7 +127,8 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESObjectCONT };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kCONT };
 
-		enum class Flags : std::int8_t {
+		enum class Flags : std::int8_t
+		{
 			kRespawn = 0x2,
 			kShowOwner = 0x4
 		};

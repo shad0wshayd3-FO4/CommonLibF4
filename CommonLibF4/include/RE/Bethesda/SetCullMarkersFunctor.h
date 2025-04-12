@@ -6,7 +6,7 @@ namespace RE
 	{
 	public:
 		// members
-		bool cull;	// 00
+		bool cull;  // 00
 	};
 	static_assert(sizeof(SetCullMarkersFunctor) == 0x1);
 }

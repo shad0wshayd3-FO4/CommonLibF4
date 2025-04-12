@@ -13,8 +13,8 @@ namespace RE
 		TESObjectCELL* cell;
 	};
 
-	class __declspec(novtable) GridCellArray : 
-		public GridArray // 00
+	class __declspec(novtable) GridCellArray :
+		public GridArray  // 00
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::GridCellArray };
@@ -29,10 +29,11 @@ namespace RE
 				PROGRESSIVE_ATTATCH_REGISTER_COMBINED_OBJECT_VISIBILITY = 0x2,
 				PROGRESSIVE_ATTATCH_DONE = 0x3
 			};
+
 		public:
 			// members
-			TESObjectCELL* cell;												// 00
-			GridCellArray::QueuedAttatch::ProgressiveAttatchState attatchState;	// 08
+			TESObjectCELL*                                        cell;          // 00
+			GridCellArray::QueuedAttatch::ProgressiveAttatchState attatchState;  // 08
 		};
 		static_assert(sizeof(QueuedAttatch) == 0x10);
 
@@ -45,10 +46,11 @@ namespace RE
 				PROGRESSIVE_DETATCH_COMBINED_ART_NEXT = 0x2,
 				PROGRESSIVE_DETATCH_DONE = 0x3
 			};
+
 		public:
 			// members
-			TESObjectCELL* cell;												// 00
-			GridCellArray::QueuedDetach::ProgressiveDetachState detachState;	// 08
+			TESObjectCELL*                                      cell;         // 00
+			GridCellArray::QueuedDetach::ProgressiveDetachState detachState;  // 08
 		};
 		static_assert(sizeof(QueuedDetach) == 0x10);
 
@@ -56,10 +58,10 @@ namespace RE
 		{
 		public:
 			// members
-			GridCellArray* grid;	// 00
+			GridCellArray* grid;  // 00
 		};
 
-		~GridCellArray() override;	// 00
+		~GridCellArray() override;  // 00
 
 		// override
 		void KillAll() override;                                                                                         // 02
@@ -77,12 +79,12 @@ namespace RE
 		}
 
 		// members
-		GridCell* gridCell;
-		std::uint32_t cellAttachDetatchQueueDisabled;
+		GridCell*                                                     gridCell;
+		std::uint32_t                                                 cellAttachDetatchQueueDisabled;
 		BSTArray<GridCellArray::QueuedAttatch, BSTArrayHeapAllocator> queuedAttach;
-		BSTArray<GridCellArray::QueuedDetach, BSTArrayHeapAllocator> queuedDetach;
-		NiPoint3 worldCenter;
-		bool landAttached;
+		BSTArray<GridCellArray::QueuedDetach, BSTArrayHeapAllocator>  queuedDetach;
+		NiPoint3                                                      worldCenter;
+		bool                                                          landAttached;
 	};
 	static_assert(sizeof(GridCellArray) == 0x68);
 }

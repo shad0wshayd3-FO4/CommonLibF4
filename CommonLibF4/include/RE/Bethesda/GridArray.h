@@ -8,7 +8,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::GridArray };
 		static constexpr auto VTABLE{ VTABLE::GridArray };
 
-		virtual ~GridArray(); // 00
+		virtual ~GridArray();  // 00
 
 		// add
 		virtual void DetachAll();                                                                                           // 01
@@ -21,9 +21,9 @@ namespace RE
 		virtual void SwapItem(std::uint32_t a_fromX, std::uint32_t a_fromY, std::uint32_t a_toX, std::uint32_t a_toY) = 0;  // 08
 
 		// members
-		std::int32_t centerX;	 // 08
-		std::int32_t centerY;	 // 0C
-		std::uint32_t dimension; // 10
+		std::int32_t  centerX;    // 08
+		std::int32_t  centerY;    // 0C
+		std::uint32_t dimension;  // 10
 	};
 	static_assert(sizeof(GridArray) == 0x18);
 }

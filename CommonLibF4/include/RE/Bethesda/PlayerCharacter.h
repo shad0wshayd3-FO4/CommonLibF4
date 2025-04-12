@@ -387,7 +387,7 @@ namespace RE
 		bool ReloadWeapon(const BGSObjectInstanceT<TESObjectWEAP>* a_weapon, BGSEquipIndex a_equipIndex)
 		{
 			using func_t = decltype(&PlayerCharacter::ReloadWeapon);
-			static REL::Relocation<func_t>	func{ REL::ID(2232907) };
+			static REL::Relocation<func_t> func{ REL::ID(2232907) };
 			return func(this, a_weapon, a_equipIndex);
 		}
 

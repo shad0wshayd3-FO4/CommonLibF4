@@ -7,8 +7,8 @@ namespace RE
 {
 	class bhkWorldM;
 
-	class ExteriorCellSingleton:
-	public BSTSingletonExplicit<ExteriorCellSingleton>
+	class ExteriorCellSingleton :
+		public BSTSingletonExplicit<ExteriorCellSingleton>
 	{
 	public:
 		[[nodiscard]] static ExteriorCellSingleton* GetSingleton()

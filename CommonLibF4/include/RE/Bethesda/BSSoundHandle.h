@@ -10,14 +10,14 @@ namespace RE
 		bool FadeInPlay(std::uint16_t a_milliseconds)
 		{
 			using func_t = decltype(&BSSoundHandle::FadeInPlay);
-			static REL::Relocation<func_t> func{ REL::ID(353528) };
+			static REL::Relocation<func_t> func{ REL::ID(2267075) };
 			return func(this, a_milliseconds);
 		}
 
 		bool FadeOutAndRelease(std::uint16_t a_milliseconds)
 		{
 			using func_t = decltype(&BSSoundHandle::FadeOutAndRelease);
-			static REL::Relocation<func_t> func{ REL::ID(260328) };
+			static REL::Relocation<func_t> func{ REL::ID(2267076) };
 			return func(this, a_milliseconds);
 		}
 

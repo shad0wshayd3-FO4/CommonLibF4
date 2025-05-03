@@ -4,44 +4,32 @@ includes("xmake-rules.lua")
 -- define options
 option("f4se_xbyak", function()
     set_default(false)
-    set_description("Enable trampoline support for Xbyak")
+    set_description("enable xbyak support for trampoline")
     add_defines("F4SE_SUPPORT_XBYAK=1")
 end)
 
 option("rex_ini", function()
     set_default(false)
-    set_description("Enable ini config support for REX")
-    add_defines("REX_OPTION_INI=1")
+    set_description("enable ini config support for REX")
 end)
 
 option("rex_json", function()
     set_default(false)
-    set_description("Enable json config support for REX")
-    add_defines("REX_OPTION_JSON=1")
+    set_description("enable json config support for REX")
 end)
 
 option("rex_toml", function()
     set_default(false)
-    set_description("Enable toml config support for REX")
-    add_defines("REX_OPTION_TOML=1")
+    set_description("enable toml config support for REX")
 end)
 
 -- require packages
-if has_config("f4se_xbyak") then
-    add_requires("xbyak")
-end
-
-if has_config("rex_ini") then
-    add_requires("simpleini")
-end
-
-if has_config("rex_json") then
-    add_requires("nlohmann_json")
-end
-
-if has_config("rex_toml") then
-    add_requires("toml11")
-end
+add_requires("commonlib-shared", { configs = {
+    rex_ini = has_config("rex_ini"),
+    rex_json = has_config("rex_json"),
+    rex_toml = has_config("rex_toml"),
+    xse_xbyak = has_config("obse_xbyak")
+} })
 
 -- define targets
 target("commonlibf4", function()
@@ -54,29 +42,10 @@ target("commonlibf4", function()
     set_group("commonlibf4")
 
     -- add packages
-    add_packages("rsm-binary-io", "rsm-mmio", "spdlog", { public = true })
-
-    if has_config("f4se_xbyak") then
-        add_packages("xbyak", { public = true })
-    end
-
-    if has_config("rex_ini") then
-        add_packages("simpleini", { public = true })
-    end
-
-    if has_config("rex_json") then
-        add_packages("nlohmann_json", { public = true })
-    end
-
-    if has_config("rex_toml") then
-        add_packages("toml11", { public = true })
-    end
+    add_packages("commonlib-shared", "rsm-binary-io", { public = true })
 
     -- add options
     add_options("f4se_xbyak", "rex_ini", "rex_json", "rex_toml", { public = true })
-
-    -- add system links
-    add_syslinks("advapi32", "bcrypt", "d3d11", "d3dcompiler", "dbghelp", "dxgi", "ole32", "shell32", "user32", "version")
 
     -- add source files
     add_files("src/**.cpp")
@@ -85,9 +54,7 @@ target("commonlibf4", function()
     add_includedirs("include", { public = true })
     add_headerfiles(
         "include/(F4SE/**.h)",
-        "include/(RE/**.h)",
-        "include/(REL/**.h)",
-        "include/(REX/**.h)"
+        "include/(RE/**.h)"
     )
 
     -- set precompiled header
@@ -107,7 +74,7 @@ target("commonlibf4", function()
         "cl::/guard:cf-",
         "cl::/Zc:preprocessor",
         "cl::/Zc:templateScope"
-    ) 
+    )
 
     -- add flags (cl: disable warnings)
     add_cxxflags(

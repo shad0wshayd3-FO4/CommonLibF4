@@ -7,6 +7,9 @@ set_languages("c++23")
 set_warnings("allextra")
 set_encodings("utf-8")
 
+-- add repositories
+add_repositories("libxse-xrepo https://github.com/libxse/libxse-xrepo")
+
 -- add rules
 add_rules("mode.debug", "mode.releasedbg")
 

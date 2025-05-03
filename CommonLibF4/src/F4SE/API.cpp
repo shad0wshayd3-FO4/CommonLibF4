@@ -46,13 +46,14 @@ namespace F4SE
 		{
 			info = a_info;
 
-			REL::Module::set_info(L"F4SE_RUNTIME"sv, L"Fallout4.exe"sv);
-			(void)REL::Module::get();
-			REL::IDDB::set_info("Data/F4SE/Plugins/version-{}.bin"sv);
-			(void)REL::IDDB::get();
-
 			static std::once_flag once;
 			std::call_once(once, [&]() {
+				const auto mod = REL::Module::GetSingleton();
+				mod->load(L"Fallout4.exe"sv, L"F4SE_RUNTIME"sv);
+
+				const auto iddb = REL::IDDB::GetSingleton();
+				iddb->load("Data/F4SE/Plugins/version-{}.bin"sv);
+
 				if (const auto data = PluginVersionData::GetSingleton()) {
 					pluginName = data->GetPluginName();
 					pluginAuthor = data->GetAuthorName();

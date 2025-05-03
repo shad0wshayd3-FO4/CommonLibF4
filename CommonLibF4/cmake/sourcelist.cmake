@@ -434,61 +434,6 @@ set(SOURCES
 	include/RE/VTABLE_IDs.h
 	include/RE/msvc/memory.h
 	include/RE/msvc/typeinfo.h
-	include/REL/ASM.h
-	include/REL/Hook.h
-	include/REL/HookObject.h
-	include/REL/HookStore.h
-	include/REL/IAT.h
-	include/REL/ID.h
-	include/REL/IDDB.h
-	include/REL/Module.h
-	include/REL/Offset.h
-	include/REL/Offset2ID.h
-	include/REL/REL.h
-	include/REL/Relocation.h
-	include/REL/Segment.h
-	include/REL/Trampoline.h
-	include/REL/Utility.h
-	include/REL/Version.h
-	include/REX/PS4.h
-	include/REX/PS4/SCEPAD.h
-	include/REX/REX.h
-	include/REX/REX/Enum.h
-	include/REX/REX/EnumSet.h
-	include/REX/REX/INI.h
-	include/REX/REX/JSON.h
-	include/REX/REX/LOG.h
-	include/REX/REX/Setting.h
-	include/REX/REX/Singleton.h
-	include/REX/REX/TOML.h
-	include/REX/W32.h
-	include/REX/W32/ADVAPI32.h
-	include/REX/W32/BASE.h
-	include/REX/W32/BCRYPT.h
-	include/REX/W32/COM.h
-	include/REX/W32/COMPTR.h
-	include/REX/W32/D3D.h
-	include/REX/W32/D3D11.h
-	include/REX/W32/D3D11_1.h
-	include/REX/W32/D3D11_2.h
-	include/REX/W32/D3D11_3.h
-	include/REX/W32/D3D11_4.h
-	include/REX/W32/D3DCOMPILER.h
-	include/REX/W32/DBGHELP.h
-	include/REX/W32/DINPUT.h
-	include/REX/W32/DXGI.h
-	include/REX/W32/DXGI_2.h
-	include/REX/W32/DXGI_3.h
-	include/REX/W32/DXGI_4.h
-	include/REX/W32/DXGI_5.h
-	include/REX/W32/DXGI_6.h
-	include/REX/W32/KERNEL32.h
-	include/REX/W32/NT.h
-	include/REX/W32/OLE32.h
-	include/REX/W32/SHELL32.h
-	include/REX/W32/USER32.h
-	include/REX/W32/VERSION.h
-	include/REX/W32/XINPUT.h
 	src/F4SE/API.cpp
 	src/F4SE/Impl/PCH.cpp
 	src/F4SE/InputMap.cpp
@@ -532,14 +477,4 @@ set(SOURCES
 	src/RE/NetImmerse/NiRect.cpp
 	src/RE/NetImmerse/NiTransform.cpp
 	src/RE/Scaleform/GFx/GFx_Player.cpp
-	src/REL/HookObject.cpp
-	src/REL/HookStore.cpp
-	src/REL/IAT.cpp
-	src/REL/IDDB.cpp
-	src/REL/Module.cpp
-	src/REL/Trampoline.cpp
-	src/REL/Utility.cpp
-	src/REL/Version.cpp
-	src/REX/REX.cpp
-	src/REX/W32.cpp
 )

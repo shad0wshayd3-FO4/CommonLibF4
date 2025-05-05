@@ -45,7 +45,12 @@ namespace RE
 		inline static constexpr auto RTTI{ RTTI::bhkCharacterController };
 		inline static constexpr auto VTABLE{ VTABLE::bhkCharacterController };
 
-		enum class CHARACTER_SIZE;
+		enum class CHARACTER_SIZE
+		{
+			kNormal = 0x0,
+			kSized = 0x1,
+			kSizing = 0x2
+		};
 
 		// add
 		virtual float           GetKeepDistanceImpl() const = 0;                                                                              // 31

@@ -41,7 +41,6 @@ namespace RE
 {
 	enum class ContainerMenuMode;
 	enum class DIFFICULTY_LEVEL;
-	enum class EQUIP_TYPE;
 
 	namespace Workshop
 	{
@@ -80,6 +79,16 @@ namespace RE
 	struct RevertPlayerCharacterEvent;
 	struct SaveLoadMessageTypeEvent;
 	struct UIAdvanceMenusFunctionCompleteEvent;
+
+	enum class EQUIP_TYPE
+	{
+		kNone = 0x0,
+		kEquipped = 0x1,
+		kLeftHandEquip = 0x2,
+		kRightHandEquip = 0x3,
+		kBothHandEquip = 0x4,
+		kWillEquipAgain = 0x5
+	};
 
 	enum class HUDColorTypes
 	{
@@ -245,7 +254,7 @@ namespace RE
 		bool ShouldHandleEvent(const InputEvent* a_event) override  // 01
 		{
 			using func_t = decltype(&IMenu::ShouldHandleEvent);
-			static REL::Relocation<func_t> func{ REL::ID(1241790) };
+			static REL::Relocation<func_t> func{ REL::ID(2287392) };
 			return func(this, a_event);
 		}
 
@@ -349,7 +358,7 @@ namespace RE
 		void OnSetSafeRect()
 		{
 			using func_t = decltype(&IMenu::OnSetSafeRect);
-			static REL::Relocation<func_t> func{ REL::ID(964859) };
+			static REL::Relocation<func_t> func{ REL::ID(2287375) };
 			return func(this);
 		}
 
@@ -358,14 +367,14 @@ namespace RE
 		UI_MESSAGE_RESULTS ProcessScaleformEvent(Scaleform::GFx::Movie* a_movie, const IUIMessageData* a_data)
 		{
 			using func_t = decltype(&IMenu::ProcessScaleformEvent);
-			static REL::Relocation<func_t> func{ REL::ID(150211) };
+			static REL::Relocation<func_t> func{ REL::ID(2287395) };
 			return func(this, a_movie, a_data);
 		}
 
 		void RefreshPlatform()
 		{
 			using func_t = decltype(&IMenu::RefreshPlatform);
-			static REL::Relocation<func_t> func{ REL::ID(1071829) };
+			static REL::Relocation<func_t> func{ REL::ID(2287374) };
 			return func(this);
 		}
 
@@ -497,7 +506,7 @@ namespace RE
 		Scaleform::GFx::Value* AcquireFlashObjectByPath(const Scaleform::GFx::Movie& a_parentMovie, const char* a_absolutePathToMember)
 		{
 			using func_t = decltype(&BSGFxObject::AcquireFlashObjectByPath);
-			static REL::Relocation<func_t> func{ REL::ID(1065592) };
+			static REL::Relocation<func_t> func{ REL::ID(2287015) };
 			return func(this, a_parentMovie, a_absolutePathToMember);
 		}
 	};
@@ -721,14 +730,14 @@ namespace RE
 		virtual void SetIsTopButtonBar(bool a_isTopButtonBar) override  // 08
 		{
 			using func_t = decltype(&GameMenuBase::SetIsTopButtonBar);
-			static REL::Relocation<func_t> func{ REL::ID(1367353) };
+			static REL::Relocation<func_t> func{ REL::ID(2223204) };
 			return func(this, a_isTopButtonBar);
 		}
 
 		virtual void OnMenuDisplayStateChanged() override  // 0A
 		{
 			using func_t = decltype(&GameMenuBase::OnMenuDisplayStateChanged);
-			static REL::Relocation<func_t> func{ REL::ID(1274450) };
+			static REL::Relocation<func_t> func{ REL::ID(2223205) };
 			return func(this);
 		}
 
@@ -751,7 +760,7 @@ namespace RE
 		virtual bool CacheShaderFXQuadsForRenderer_Impl() override  // 10
 		{
 			using func_t = decltype(&GameMenuBase::CacheShaderFXQuadsForRenderer_Impl);
-			static REL::Relocation<func_t> func{ REL::ID(863029) };
+			static REL::Relocation<func_t> func{ REL::ID(2223200) };
 			return func(this);
 		}
 
@@ -765,7 +774,7 @@ namespace RE
 		virtual void SetViewportRect(const NiRect<float>& a_viewportRect) override  // 12
 		{
 			using func_t = decltype(&GameMenuBase::SetViewportRect);
-			static REL::Relocation<func_t> func{ REL::ID(1554334) };
+			static REL::Relocation<func_t> func{ REL::ID(2223202) };
 			return func(this, a_viewportRect);
 		}
 
@@ -773,14 +782,14 @@ namespace RE
 		virtual void AppendShaderFXInfos(BSTAlignedArray<UIShaderFXInfo>& a_colorFXInfos, BSTAlignedArray<UIShaderFXInfo>& a_backgroundFXInfos) const  // 13
 		{
 			using func_t = decltype(&GameMenuBase::AppendShaderFXInfos);
-			static REL::Relocation<func_t> func{ REL::ID(583584) };
+			static REL::Relocation<func_t> func{ REL::ID(2223203) };
 			return func(this, a_colorFXInfos, a_backgroundFXInfos);
 		}
 
 		void SetUpButtonBar(BSGFxShaderFXTarget& a_parentObject, const char* a_buttonBarPath, HUDColorTypes a_colorType)
 		{
 			using func_t = decltype(&GameMenuBase::SetUpButtonBar);
-			static REL::Relocation<func_t> func{ REL::ID(531584) };
+			static REL::Relocation<func_t> func{ REL::ID(2223197) };
 			func(this, a_parentObject, a_buttonBarPath, a_colorType);
 		}
 
@@ -990,7 +999,7 @@ namespace RE
 		void Begin3D()
 		{
 			using func_t = decltype(&Inventory3DManager::Begin3D);
-			static REL::Relocation<func_t> func{ REL::ID(662659) };
+			static REL::Relocation<func_t> func{ REL::ID(2249084) };
 			return func(this);
 		}
 
@@ -1032,7 +1041,7 @@ namespace RE
 		void SetModelScreenPosition(const NiPoint3& a_position, bool a_screenCoords)
 		{
 			using func_t = decltype(&Inventory3DManager::SetModelScreenPosition);
-			static REL::Relocation<func_t> func{ REL::ID(2967) };
+			static REL::Relocation<func_t> func{ REL::ID(2249096) };
 			return func(this, a_position, a_screenCoords);
 		}
 
@@ -1357,7 +1366,7 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyMapMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(92696) };
+			static REL::Relocation<func_t> func{ REL::ID(2224074) };
 			return func(this);
 		}
 

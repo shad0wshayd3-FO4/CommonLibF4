@@ -43,7 +43,7 @@ namespace RE
 		void Initialize()
 		{
 			using func_t = decltype(&BSScaleformRenderer::Initialize);
-			static REL::Relocation<func_t> func{ REL::ID(1403529) };
+			static REL::Relocation<func_t> func{ REL::ID(2284938) };
 			return func(this);
 		}
 
@@ -127,7 +127,7 @@ namespace RE
 		void InitMovieViewport(Scaleform::GFx::Movie& a_movie, const float a_dynamicWidthRatio, const float a_dynamicHeightRatio)
 		{
 			using func_t = decltype(&BSScaleformManager::InitMovieViewport);
-			static REL::Relocation<func_t> func{ REL::ID(206895) };
+			static REL::Relocation<func_t> func{ REL::ID(2287430) };
 			return func(this, a_movie, a_dynamicWidthRatio, a_dynamicHeightRatio);
 		}
 	};

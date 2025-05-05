@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class HUDModeType;
+
 	namespace SendHUDMessage
 	{
 		inline void PopHUDMode(const HUDModeType& a_hudMode)

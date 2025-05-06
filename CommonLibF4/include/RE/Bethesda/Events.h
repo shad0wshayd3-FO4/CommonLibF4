@@ -771,7 +771,6 @@ namespace RE
 
 	struct TESActivateEvent
 	{
-	public:
 		[[nodiscard]] static BSTEventSource<TESActivateEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESActivateEvent::GetEventSource);
@@ -787,7 +786,6 @@ namespace RE
 
 	struct TESContainerChangedEvent
 	{
-	public:
 		[[nodiscard]] static BSTEventSource<TESContainerChangedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESContainerChangedEvent::GetEventSource);
@@ -807,7 +805,13 @@ namespace RE
 
 	struct TESCellAttachDetachEvent
 	{
-	public:
+		[[nodiscard]] static BSTEventSource<TESCellAttachDetachEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESCellAttachDetachEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(2201823) };
+			return func();
+		}
+
 		// members
 		NiPointer<TESObjectREFR> refr;
 		bool                     isAttaching;
@@ -816,7 +820,13 @@ namespace RE
 
 	struct TESCellFullyLoadedEvent
 	{
-	public:
+		[[nodiscard]] static BSTEventSource<TESCellFullyLoadedEvent>* GetEventSource()
+		{
+			using func_t = decltype(&TESCellFullyLoadedEvent::GetEventSource);
+			static REL::Relocation<func_t> func{ REL::ID(2201824) };
+			return func();
+		}
+
 		// members
 		TESObjectCELL* cell;
 	};
@@ -824,7 +834,6 @@ namespace RE
 
 	struct TESDeathEvent
 	{
-	public:
 		[[nodiscard]] static BSTEventSource<TESDeathEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESDeathEvent::GetEventSource);
@@ -855,7 +864,6 @@ namespace RE
 
 	struct TESEquipEvent
 	{
-	public:
 		// members
 		NiPointer<TESObjectREFR> actor;         // 00
 		std::uint32_t            baseObject;    // 08
@@ -867,7 +875,6 @@ namespace RE
 
 	struct TESFormDeleteEvent
 	{
-	public:
 		[[nodiscard]] static BSTEventSource<TESFormDeleteEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESFormDeleteEvent::GetEventSource);
@@ -882,7 +889,6 @@ namespace RE
 
 	struct TESFurnitureEvent
 	{
-	public:
 		enum class FurnitureEventType : std::int32_t
 		{
 			kEnter = 0x0,
@@ -908,7 +914,6 @@ namespace RE
 
 	struct DamageImpactData
 	{
-	public:
 		// members
 		NiPoint3A                       location;  // 00
 		NiPoint3A                       normal;    // 10

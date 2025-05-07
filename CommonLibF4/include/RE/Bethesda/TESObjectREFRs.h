@@ -823,6 +823,13 @@ namespace RE
 			return func(this);
 		}
 
+		bool GetEditorDead() const
+		{
+			using func_t = decltype(&TESObjectREFR::GetEditorDead);
+			static REL::Relocation<func_t> func{ REL::ID(2200781) };
+			return func(this);
+		}
+
 		[[nodiscard]] TESBoundObject* GetObjectReference() const noexcept { return data.objectReference; }
 
 		[[nodiscard]] TESForm* GetOwner()

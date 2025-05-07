@@ -49,6 +49,23 @@ namespace RE
 			kPFM = 8,
 		};
 
+		enum class TextureFilterMode
+		{
+			kNearest = 0x0,
+			kBilerp = 0x1,
+			kTrilerp = 0x2,
+			kAniso = 0x3,
+			kCompBilerp = 0x4,
+		};
+
+		enum class TextureAddressMode
+		{
+			kClamp_S_Clamp_T = 0x0,
+			kClamp_S_Wrap_T = 0x1,
+			kWrap_S_Clamp_T = 0x2,
+			kWrap_S_Wrap_T = 0x3,
+		};
+
 		struct Buffer
 		{
 			// members

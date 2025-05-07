@@ -17,7 +17,6 @@
 
 namespace RE
 {
-	enum class BIPED_OBJECT;
 	enum class IO_TASK_PRIORITY;
 
 	namespace MagicSystem
@@ -894,7 +893,14 @@ namespace RE
 		[[nodiscard]] float GetWeightInContainer()
 		{
 			using func_t = decltype(&TESObjectREFR::GetWeightInContainer);
-			static REL::Relocation<func_t> func{ REL::ID(1377567) };
+			static REL::Relocation<func_t> func{ REL::ID(2201001) };
+			return func(this);
+		}
+
+		BaseFormComponent* HasContainer()
+		{
+			using func_t = decltype(&TESObjectREFR::HasContainer);
+			static REL::Relocation<func_t> func{ REL::ID(2201022) };
 			return func(this);
 		}
 
@@ -908,7 +914,7 @@ namespace RE
 		[[nodiscard]] bool IsCrimeToActivate()
 		{
 			using func_t = decltype(&TESObjectREFR::IsCrimeToActivate);
-			static REL::Relocation<func_t> func{ REL::ID(836011) };
+			static REL::Relocation<func_t> func{ REL::ID(2201180) };
 			return func(this);
 		}
 

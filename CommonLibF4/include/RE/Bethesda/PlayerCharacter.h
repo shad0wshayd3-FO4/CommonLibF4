@@ -3,6 +3,7 @@
 #include "RE/Bethesda/AITimeStamp.h"
 #include "RE/Bethesda/Actor.h"
 #include "RE/Bethesda/BGSCharacterTint.h"
+#include "RE/Bethesda/BGSStoryManagerTreeForm.h"
 #include "RE/Bethesda/BSLock.h"
 #include "RE/Bethesda/BSPointerHandle.h"
 #include "RE/Bethesda/BSSoundHandle.h"
@@ -23,8 +24,6 @@ namespace RE
 {
 	enum class DEFAULT_OBJECT;
 	enum class DIFFICULTY_LEVEL;
-	enum class PLAYER_ACTION;
-	enum class QUEST_OBJECTIVE_STATE;
 	enum class SCENE_ACTION_PLAYER_RESPONSE_TYPE;
 
 	class BGSQuestObjective;
@@ -60,6 +59,26 @@ namespace RE
 	{
 		struct PerkEntryUpdatedEvent;
 	}
+
+	enum class PLAYER_ACTION
+	{
+		kNone = 0x0,
+		kSwingMeleeWeapon = 0x1,
+		kCastProjectileSpell = 0x2,
+		kShootBow = 0x3,
+		kZKeyObject = 0x4,
+		kJumping = 0x5,
+		kKnockingOverObjects = 0x6,
+		kStandOnTableChair = 0x7,
+		kIronSights = 0x8,
+		kDestroyObject = 0x9,
+		kLockedObject = 0xA,
+		kPickpocket = 0xB,
+		kCastSelfSpell = 0xC,
+		kShout = 0xD,
+		kActorCollision = 0xE,
+		kInvalidMarker = 0x10,
+	};
 
 	enum class COMMAND_TYPE
 	{
@@ -389,6 +408,13 @@ namespace RE
 			using func_t = decltype(&PlayerCharacter::ReloadWeapon);
 			static REL::Relocation<func_t> func{ REL::ID(2232907) };
 			return func(this, a_weapon, a_equipIndex);
+		}
+
+		void SetPerkCount(std::uint8_t a_count)
+		{
+			using func_t = decltype(&PlayerCharacter::SetPerkCount);
+			static REL::Relocation<func_t> func{ REL::ID(2233187) };
+			return func(this, a_count);
 		}
 
 		// members

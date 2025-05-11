@@ -53,7 +53,7 @@ def make_cmake():
 	sources.sort()
 
 	def do_make(a_filename, a_varname, a_files):
-		with open("cmake/{}.cmake".format(a_filename), "w", encoding="utf-8") as out:
+		with open("res/cmake/{}.cmake".format(a_filename), "w", encoding="utf-8") as out:
 			out.write("set({}\n".format(a_varname))
 			for file in a_files:
 				out.write("\t{}\n".format(file))
@@ -62,7 +62,7 @@ def make_cmake():
 	do_make("sourcelist", "SOURCES", sources)
 
 def main():
-	root = os.path.split(os.path.dirname(os.path.realpath(__file__)))[0]
+	root = pathlib.Path(os.path.dirname(os.path.realpath(__file__))).parent.parent
 	os.chdir(root)
 	make_cmake()
 

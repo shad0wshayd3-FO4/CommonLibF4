@@ -60,10 +60,11 @@ end
 
 -- define targets
 target("commonlibf4", function()
+    -- set target kind
     set_kind("static")
 
     -- set build by default
-    set_default(path.directory(os.scriptdir()) == os.projectdir())
+    set_default(os.scriptdir() == os.projectdir())
 
     -- set build group
     set_group("commonlibf4")
@@ -104,6 +105,9 @@ target("commonlibf4", function()
         "include/(REL/**.h)",
         "include/(REX/**.h)"
     )
+
+    -- add extra files
+    add_extrafiles("res/commonlibf4.natvis")
 
     -- set precompiled header
     set_pcxxheader("include/F4SE/Impl/PCH.h")

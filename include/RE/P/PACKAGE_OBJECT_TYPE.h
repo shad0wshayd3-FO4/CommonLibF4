@@ -1,0 +1,38 @@
+#pragma once
+
+namespace RE
+{
+	enum class PACKAGE_OBJECT_TYPE
+	{
+		kNone = 0x0,
+		kActi = 0x1,
+		kArmo = 0x2,
+		kBook = 0x3,
+		kCont = 0x4,
+		kDoor = 0x5,
+		kIngr = 0x6,
+		kLigh = 0x7,
+		kMisc = 0x8,
+		kFlor = 0x9,
+		kFurn = 0xA,
+		kWeap = 0xB,
+		kAmmo = 0xC,
+		kKeym = 0xD,
+		kAlch = 0xE,
+		kFood = 0xF,
+		kClot = 0x10,
+		kWear = 0x11,
+		kWeapNone = 0x12,
+		kWeapMelee = 0x13,
+		kWeapRanged = 0x14,
+		kSpell = 0x15,
+		kSpellRanged = 0x16,
+		kSpellTouch = 0x17,
+		kSpellSelf = 0x18,
+		kActor = 0x19,
+		kFurnBed = 0x1A,
+		kFurnChair = 0x1B,
+		kShout = 0x1C,
+		kHeadtrack = 0x1D,
+	};
+}

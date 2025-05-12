@@ -1,0 +1,20 @@
+#pragma once
+
+namespace RE
+{
+	class __declspec(novtable) BGSDialogueBranch :
+		public TESForm  // 00
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::BGSDialogueBranch };
+		static constexpr auto VTABLE{ VTABLE::BGSDialogueBranch };
+		static constexpr auto FORM_ID{ ENUM_FORM_ID::kDLBR };
+
+		// members
+		std::uint32_t                             flags;          // 20
+		TESQuest*                                 quest;          // 28
+		TESTopic*                                 startingTopic;  // 30
+		REX::EnumSet<DIALOGUE_TYPE, std::int32_t> type;           // 38
+	};
+	static_assert(sizeof(BGSDialogueBranch) == 0x40);
+}

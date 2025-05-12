@@ -1,0 +1,19 @@
+#pragma once
+
+namespace RE
+{
+	struct BGSActorCellEvent : public BGSActorEvent
+	{
+	public:
+		enum class CellFlag
+		{
+			kEnter = 0x0,
+			kLeave = 0x1
+		};
+
+		// members
+		std::uint32_t                         cellID;  // 04
+		REX::EnumSet<CellFlag, std::uint32_t> flags;   // 08
+	};
+	static_assert(sizeof(BGSActorCellEvent) == 0xC);
+}

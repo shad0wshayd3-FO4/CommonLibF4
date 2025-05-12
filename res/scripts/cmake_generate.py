@@ -1,4 +1,5 @@
 import os
+import pathlib
 
 HEADER_TYPES = (".h", ".hpp", ".hxx")
 SOURCE_TYPES = (".c", ".cpp", ".cxx")
@@ -68,7 +69,7 @@ def main():
 
 	os.chdir(os.path.join(root, "include"))
 	make_header("F4SE", "F4SE.h", { "Impl" })
-	make_header("RE", "Fallout.h", { "NiRTTI_IDs.h", "RTTI_IDs.h", "VTABLE_IDs.h", "msvc" })
+	make_header("RE", "Fallout.h", { "IDs.h", "NiRTTI_IDs.h", "RTTI_IDs.h", "VTABLE_IDs.h" })
 
 if __name__ == "__main__":
 	main()

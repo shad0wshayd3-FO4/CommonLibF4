@@ -2,6 +2,15 @@
 
 namespace RE
 {
+	namespace detail
+	{
+		template <class T>
+		concept ExtraDataListConstraint =
+			std::derived_from<T, BSExtraData> &&
+			!std::is_pointer_v<T> &&
+			!std::is_reference_v<T>;
+	}
+
 	class ExtraDataList :
 		public BSIntrusiveRefCounted  // 00
 	{

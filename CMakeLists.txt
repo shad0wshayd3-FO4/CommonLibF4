@@ -30,8 +30,8 @@ add_library(
 	"${PROJECT_NAME}"
 	STATIC
 	${SOURCES}
-	res/.clang-format
-	res/CommonLibF4.natvis
+	.clang-format
+	res/commonlibf4.natvis
 )
 
 add_library("${PROJECT_NAME}::${PROJECT_NAME}" ALIAS "${PROJECT_NAME}")

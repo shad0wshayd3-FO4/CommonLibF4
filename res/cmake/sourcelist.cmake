@@ -1370,44 +1370,48 @@ set(SOURCES
 	src/F4SE/InputMap.cpp
 	src/F4SE/Interfaces.cpp
 	src/F4SE/Logger.cpp
-	src/RE/Bethesda/Actor.cpp
-	src/RE/Bethesda/BGSInventoryItem.cpp
-	src/RE/Bethesda/BSExtraData.cpp
-	src/RE/Bethesda/BSResource.cpp
-	src/RE/Bethesda/BSResource/Stream.cpp
-	src/RE/Bethesda/BSResource/StreamBase.cpp
-	src/RE/Bethesda/BSResourceNiBinaryStream.cpp
-	src/RE/Bethesda/BSScaleformManager.cpp
-	src/RE/Bethesda/BSScript.cpp
-	src/RE/Bethesda/BSScript/Array.cpp
-	src/RE/Bethesda/BSScript/Internal/VirtualMachine.cpp
-	src/RE/Bethesda/BSScript/Object.cpp
-	src/RE/Bethesda/BSScript/ObjectTypeInfo.cpp
-	src/RE/Bethesda/BSScript/PackedInstructionStream.cpp
-	src/RE/Bethesda/BSScript/StackFrame.cpp
-	src/RE/Bethesda/BSScript/Struct.cpp
-	src/RE/Bethesda/BSScript/StructTypeInfo.cpp
-	src/RE/Bethesda/BSScript/TypeInfo.cpp
-	src/RE/Bethesda/BSScript/Variable.cpp
-	src/RE/Bethesda/BSVisit.cpp
-	src/RE/Bethesda/CRC.cpp
-	src/RE/Bethesda/Calendar.cpp
-	src/RE/Bethesda/FormComponents.cpp
-	src/RE/Bethesda/IMenu.cpp
-	src/RE/Bethesda/MenuCursor.cpp
-	src/RE/Bethesda/PlayerCharacter.cpp
-	src/RE/Bethesda/TESBoundAnimObjects.cpp
-	src/RE/Bethesda/TESForms.cpp
-	src/RE/Bethesda/TESObjectREFRs.cpp
+	src/RE/A/Actor.cpp
+	src/RE/A/Array.cpp
+	src/RE/B/BGSInventoryItem.cpp
+	src/RE/B/BGSKeywordForm.cpp
+	src/RE/B/BGSLocation.cpp
+	src/RE/B/BGSObjectInstanceExtra.cpp
+	src/RE/B/BSResource.cpp
+	src/RE/B/BSResourceNiBinaryStream.cpp
+	src/RE/B/BSScaleformManager.cpp
+	src/RE/B/BSVisit.cpp
+	src/RE/C/Calendar.cpp
+	src/RE/E/ExtraInstanceData.cpp
 	src/RE/Fallout.cpp
-	src/RE/NetImmerse/NiAVObject.cpp
-	src/RE/NetImmerse/NiBinaryStream.cpp
-	src/RE/NetImmerse/NiMatrix3.cpp
-	src/RE/NetImmerse/NiObjectNET.cpp
-	src/RE/NetImmerse/NiPoint.cpp
-	src/RE/NetImmerse/NiRect.cpp
-	src/RE/NetImmerse/NiTransform.cpp
-	src/RE/Scaleform/GFx/GFx_Player.cpp
+	src/RE/G/GFxPlayer.cpp
+	src/RE/I/InventoryInterface.cpp
+	src/RE/M/MenuCursor.cpp
+	src/RE/N/NiAVObject.cpp
+	src/RE/N/NiBinaryStream.cpp
+	src/RE/N/NiMatrix3.cpp
+	src/RE/N/NiObjectNET.cpp
+	src/RE/N/NiPoint2.cpp
+	src/RE/N/NiPoint3.cpp
+	src/RE/N/NiPoint4.cpp
+	src/RE/N/NiRect.cpp
+	src/RE/N/NiTransform.cpp
+	src/RE/O/Object.cpp
+	src/RE/O/ObjectTypeInfo.cpp
+	src/RE/P/PackedInstructionStream.cpp
+	src/RE/P/PlayerCharacter.cpp
+	src/RE/S/StackFrame.cpp
+	src/RE/S/Stream.cpp
+	src/RE/S/StreamBase.cpp
+	src/RE/S/Struct.cpp
+	src/RE/S/StructTypeInfo.cpp
+	src/RE/T/TESFullName.cpp
+	src/RE/T/TESNPC.cpp
+	src/RE/T/TESObjectCELL.cpp
+	src/RE/T/TESValueForm.cpp
+	src/RE/T/TypeInfo.cpp
+	src/RE/V/Variable.cpp
+	src/RE/V/VirtualMachine.cpp
+	src/RE/W/WorkbenchMenuBase.cpp
 	src/REL/HookObject.cpp
 	src/REL/HookStore.cpp
 	src/REL/IAT.cpp

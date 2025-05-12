@@ -17,11 +17,11 @@ namespace RE
 		}
 
 		// members
-		TESAmmo* ammo;                     // 10
+		TESAmmo*                                                                     ammo;                     // 10
 		std::uint32_t                                                                ammoCount;                // 18
-		AimModel* aimModel;                 // 20
-		MuzzleFlash* muzzleFlash;              // 28
-		NiAVObject* fireNode;                 // 30
+		AimModel*                                                                    aimModel;                 // 20
+		MuzzleFlash*                                                                 muzzleFlash;              // 28
+		NiAVObject*                                                                  fireNode;                 // 30
 		ATTACK_STATE_ENUM                                                            attackState;              // 38
 		BSTArray<BSTTuple<std::uint32_t, AnimationStanceFireLocationData<NiPoint3>>> fireLocations;            // 40
 		NiPointer<QueuedFile>                                                        weaponPreload;            // 58
@@ -32,7 +32,7 @@ namespace RE
 		BSSoundHandle                                                                reverbSound;              // 80
 		BSSoundHandle                                                                prevAttack;               // 88
 		BSSoundHandle                                                                prevReverb;               // 90
-		const BGSSoundKeywordMapping* attackSoundData;          // 98
+		const BGSSoundKeywordMapping*                                                attackSoundData;          // 98
 		bool                                                                         reverbSoundIsTail;        // A0
 	};
 	static_assert(sizeof(EquippedWeaponData) == 0xA8);

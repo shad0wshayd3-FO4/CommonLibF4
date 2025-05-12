@@ -2,7 +2,7 @@
 
 namespace RE
 {
-		class __declspec(novtable) TESNPC :
+	class __declspec(novtable) TESNPC :
 		public TESActorBase,                     // 000
 		public TESRaceForm,                      // 1B0
 		public BGSOverridePackCollection,        // 1C0

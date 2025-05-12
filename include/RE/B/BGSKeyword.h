@@ -32,8 +32,7 @@ namespace RE
 			if (keywords) {
 				const auto& arr = (*keywords)[std::to_underlying(a_type)];
 				return a_index < arr.size() ? arr[a_index] : nullptr;
-			}
-			else {
+			} else {
 				return nullptr;
 			}
 		}
@@ -44,8 +43,7 @@ namespace RE
 			static REL::Relocation<BSTArray<BGSKeyword*>(*)[std::to_underlying(KeywordType::kTotal)]> keywords{ REL::ID(1095775) };
 			if (*keywords) {
 				return { *keywords };
-			}
-			else {
+			} else {
 				return std::nullopt;
 			}
 		}

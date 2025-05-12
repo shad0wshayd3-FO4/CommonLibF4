@@ -10,9 +10,9 @@ namespace RE
 		static constexpr auto VTABlE{ VTABLE::BGSSceneActionPlayerDialogue };
 
 		std::uint64_t dialogueTarget;                  // 90
-		TESTopic* pNPCResponseTopics[4];           // 98
-		BGSKeyword* pNPCResponseSubtypeKeywords[4];  // B8
-		TESTopic* pTopic;                          // D8
+		TESTopic*     pNPCResponseTopics[4];           // 98
+		BGSKeyword*   pNPCResponseSubtypeKeywords[4];  // B8
+		TESTopic*     pTopic;                          // D8
 		std::uint32_t playerInput;                     // E0
 
 		TESTopicInfo* GetCurrentTopicInfo(BGSScene* a_parentScene, TESObjectREFR* a_target, std::uint32_t a_type)

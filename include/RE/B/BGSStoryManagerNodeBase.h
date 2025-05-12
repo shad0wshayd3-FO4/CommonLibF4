@@ -15,7 +15,7 @@ namespace RE
 
 		// members
 		BGSStoryManagerBranchNode* parent;       // 28
-		BGSStoryManagerNodeBase* prevSibling;  // 30
+		BGSStoryManagerNodeBase*   prevSibling;  // 30
 		std::uint32_t              maxQuests;    // 38
 		std::uint32_t              flags;        // 3C
 		TESCondition               conditions;   // 40

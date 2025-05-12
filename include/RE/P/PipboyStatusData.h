@@ -33,7 +33,7 @@ namespace RE
 
 		// members
 		PipboyObject* statusObject;
-		PipboyArray* pipboyEffectColorArray;
+		PipboyArray*  pipboyEffectColorArray;
 	};
 	static_assert(sizeof(PipboyStatusData) == 0xE0);
 }

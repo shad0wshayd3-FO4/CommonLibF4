@@ -88,7 +88,7 @@ namespace RE
 		BSTArray<BSLightingShaderPropertyColorController*>         lightingColorControllers;                       // 0F8
 		BSTArray<BSEffectShaderPropertyFloatController*>           effectFloatControllers;                         // 110
 		BSTArray<BSEffectShaderPropertyColorController*>           effectColorControllers;                         // 128
-		BSNiAlphaPropertyTestRefController* alphaRefTestController;                         // 140
+		BSNiAlphaPropertyTestRefController*                        alphaRefTestController;                         // 140
 		bool                                                       parallax;                                       // 148
 		bool                                                       parallaxOcclusion;                              // 149
 		bool                                                       multiLayerParallax;                             // 14A

@@ -8,7 +8,7 @@ namespace RE
 		struct CellData;
 
 		// members
-		hknpBodyManager* bodyManager;
+		hknpBodyManager*    bodyManager;
 		hkArray<hknpMotion> motions;
 		hkBool              motionBufferIsUserOwned;
 		hknpMotionId        firstFreeMotionId;

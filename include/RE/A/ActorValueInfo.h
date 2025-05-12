@@ -18,9 +18,9 @@ namespace RE
 		// members
 		std::function<ModifiedCallback_t>              modifiedCallback;          // 048
 		BSStringT<char>                                formEditorID;              // 088
-		ActorValueInfo* dependentActorValues[15];  // 098
+		ActorValueInfo*                                dependentActorValues[15];  // 098
 		std::function<DerivationFunction_t>            derivationFunction;        // 110
-		const char* enumNames[10];             // 150
+		const char*                                    enumNames[10];             // 150
 		BGSLocalizedString                             abbreviation;              // 1A0
 		std::int32_t                                   oldActorValue;             // 1A8
 		REX::EnumSet<ActorValue::Flags, std::int32_t>  flags;                     // 1AC

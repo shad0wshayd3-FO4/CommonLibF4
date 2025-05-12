@@ -17,7 +17,7 @@ namespace RE
 		Scaleform::Ptr<Scaleform::Render::Renderer2D>     renderer;            // 058
 		Scaleform::Ptr<Scaleform::Render::HAL>            renderConfig;        // 060
 		Scaleform::Ptr<Scaleform::Render::TextureManager> textureManager;      // 068
-		Scaleform::Render::RenderTarget* renderTargets[100];  // 070
+		Scaleform::Render::RenderTarget*                  renderTargets[100];  // 070
 		bool                                              initialized;         // 390
 	};
 	static_assert(sizeof(BSScaleformRenderer) == 0x398);

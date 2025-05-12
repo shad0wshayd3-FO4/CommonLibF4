@@ -139,7 +139,7 @@ namespace RE
 			virtual bool      CopyData(const Entry entry);                              // 10
 			virtual bool      SetFromTemplateDefault(const Template::Entry* entry);     // 18
 			virtual bool      GetMatchesTemplateDefault(const Template::Entry* entry);  // 20
-			virtual EntryType GetType();                                                                  // 28
+			virtual EntryType GetType();                                                // 28
 
 			// Members
 			Entry*              templateEntry;  // 08

@@ -14,7 +14,7 @@ namespace RE
 
 		// members
 		TESCondition       conditions;   // 20
-		LoadNIFData* loadNIFData;  // 28
+		LoadNIFData*       loadNIFData;  // 28
 		BGSLocalizedString loadingText;  // 30
 	};
 	static_assert(sizeof(TESLoadScreen) == 0x38);

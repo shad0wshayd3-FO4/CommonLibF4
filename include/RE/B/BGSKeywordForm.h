@@ -53,8 +53,7 @@ namespace RE
 		{
 			if (a_idx < numKeywords) {
 				return std::make_optional(keywords[a_idx]);
-			}
-			else {
+			} else {
 				return std::nullopt;
 			}
 		}
@@ -83,7 +82,7 @@ namespace RE
 		bool RemoveKeywords(const std::vector<BGSKeyword*>& a_keywords);
 
 		// members
-		BGSKeyword** keywords;     // 10
+		BGSKeyword**  keywords;     // 10
 		std::uint32_t numKeywords;  // 18
 	};
 	static_assert(sizeof(BGSKeywordForm) == 0x20);

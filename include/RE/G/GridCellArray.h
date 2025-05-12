@@ -21,7 +21,7 @@ namespace RE
 
 		public:
 			// members
-			TESObjectCELL* cell;          // 00
+			TESObjectCELL*                                        cell;          // 00
 			GridCellArray::QueuedAttatch::ProgressiveAttatchState attatchState;  // 08
 		};
 		static_assert(sizeof(QueuedAttatch) == 0x10);
@@ -38,7 +38,7 @@ namespace RE
 
 		public:
 			// members
-			TESObjectCELL* cell;         // 00
+			TESObjectCELL*                                      cell;         // 00
 			GridCellArray::QueuedDetach::ProgressiveDetachState detachState;  // 08
 		};
 		static_assert(sizeof(QueuedDetach) == 0x10);
@@ -68,7 +68,7 @@ namespace RE
 		}
 
 		// members
-		GridCell* gridCell;
+		GridCell*                                                     gridCell;
 		std::uint32_t                                                 cellAttachDetatchQueueDisabled;
 		BSTArray<GridCellArray::QueuedAttatch, BSTArrayHeapAllocator> queuedAttach;
 		BSTArray<GridCellArray::QueuedDetach, BSTArrayHeapAllocator>  queuedDetach;

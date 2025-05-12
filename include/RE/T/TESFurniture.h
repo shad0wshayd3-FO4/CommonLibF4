@@ -31,7 +31,7 @@ namespace RE
 		BGSAttachParentArray        attachParents;        // 160
 		WorkbenchData               wbData;               // 178
 		std::uint32_t               furnFlags;            // 17C
-		TESForm* associatedForm;       // 180
+		TESForm*                    associatedForm;       // 180
 		BSTArray<BSFurnitureMarker> markersArray;         // 188
 	};
 	static_assert(sizeof(TESFurniture) == 0x1A0);

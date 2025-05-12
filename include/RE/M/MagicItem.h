@@ -16,7 +16,7 @@ namespace RE
 		{
 		public:
 			// members
-			EffectItem* effect;     // 00
+			EffectItem*     effect;     // 00
 			ActorValueInfo* skill;      // 08
 			float           magnitude;  // 10
 			bool            custom;     // 14
@@ -52,21 +52,21 @@ namespace RE
 		virtual void                     AdjustCost(float&, Actor*) const { return; }                                                           // 77
 		virtual float                    GetChargeTime() const { return 0.0F; }                                                                 // 78
 		virtual std::uint32_t            GetMaxEffectCount() const { return 0; }                                                                // 79
-		virtual ActorValueInfo* GetAssociatedSkill() const { return nullptr; }                                                         // 7A
+		virtual ActorValueInfo*          GetAssociatedSkill() const { return nullptr; }                                                         // 7A
 		virtual bool                     IsTwoHanded() const { return false; }                                                                  // 7B
 		virtual CHUNK_ID                 GetChunkID() = 0;                                                                                      // 7C
 		virtual void                     CopyMagicItemData(MagicItem* a_copy) = 0;                                                              // 7D
 		virtual void                     LoadMagicItemChunk([[maybe_unused]] TESFile* a_file, [[maybe_unused]] CHUNK_ID a_chunkID) { return; }  // 7E
 		virtual void                     LoadChunkDataPostProcess([[maybe_unused]] TESFile* a_file) { return; }                                 // 7F
-		virtual Data* GetData() = 0;                                                                                         // 81
-		virtual const Data* GetData() const = 0;                                                                                   // 80
+		virtual Data*                    GetData() = 0;                                                                                         // 81
+		virtual const Data*              GetData() const = 0;                                                                                   // 80
 		virtual std::size_t              GetDataSize() const = 0;                                                                               // 82
 		virtual void                     InitFromChunk(TESFile* a_file) = 0;                                                                    // 83
 
 		// members
 		BSTArray<EffectItem*>                                        listOfEffects;    // 98
 		std::int32_t                                                 hostileCount;     // B0
-		EffectSetting* avEffectSetting;  // B8
+		EffectSetting*                                               avEffectSetting;  // B8
 		std::uint32_t                                                preloadCount;     // C0
 		BSTSmartPointer<QueuedFile, BSTSmartPointerGamebryoRefCount> preloadedItem;    // C8
 	};

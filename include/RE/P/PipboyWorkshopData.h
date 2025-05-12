@@ -22,7 +22,7 @@ namespace RE
 		virtual void DoClearSink() override;          // 05
 
 		// members
-		PipboyArray* workshopArray;          // A8
+		PipboyArray*                               workshopArray;          // A8
 		BSTHashMap<std::uint32_t, PipboyObject*>   workshopMap;            // B0
 		BSTHashMap<BSFixedStringCS, std::int32_t>  ratingUpdateFunctions;  // E0
 		BSTHashMap<BSFixedStringCS, std::uint32_t> getValueFunctions;      // 110

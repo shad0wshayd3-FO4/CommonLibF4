@@ -40,7 +40,7 @@ namespace RE
 		// members
 		std::int32_t                            boneCount{ 0 };
 		std::int32_t                            boneCountExpanded{ 0 };
-		FlattenedBone* bone{ nullptr };
+		FlattenedBone*                          bone{ nullptr };
 		BSTHashMap<BSFixedString, std::int32_t> boneMap;
 	};
 	static_assert(sizeof(BSFlattenedBoneTree) == 0x180);

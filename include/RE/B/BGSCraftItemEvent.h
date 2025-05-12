@@ -21,8 +21,8 @@ namespace RE
 
 		// members
 		ObjectRefHandle workbench;        // 00
-		BGSLocation* location;         // 08
-		TESForm* createdItemBase;  // 10
+		BGSLocation*    location;         // 08
+		TESForm*        createdItemBase;  // 10
 	};
 	static_assert(sizeof(BGSCraftItemEvent) == 0x18);
 }

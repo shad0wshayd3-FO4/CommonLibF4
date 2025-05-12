@@ -30,8 +30,8 @@ namespace RE
 		virtual void DoClearSink() override;          // 09
 
 		// members
-		PipboyObject* playerStatsObject;       // C8
-		PipboyArray* activeEffectsArray;      // D0
+		PipboyObject*                                                                              playerStatsObject;       // C8
+		PipboyArray*                                                                               activeEffectsArray;      // D0
 		BSTHashMap<MagicItem*, PipboyObject*>                                                      activeEffectsMap;        // D8
 		BSTHashMap<BSTSmartPointer<ActiveEffect, BSTSmartPointerIntrusiveRefCount>, PipboyObject*> activeEffectEntriesMap;  // 108
 	};

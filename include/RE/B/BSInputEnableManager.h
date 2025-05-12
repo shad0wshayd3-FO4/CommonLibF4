@@ -57,8 +57,7 @@ namespace RE
 			BSAutoLock locker(cacheLock);
 			if (a_enable) {
 				forceEnableInputUserEventsFlags.set(a_userEventFlags);
-			}
-			else {
+			} else {
 				forceEnableInputUserEventsFlags.reset(a_userEventFlags);
 			}
 		}
@@ -68,8 +67,7 @@ namespace RE
 			BSAutoLock locker(cacheLock);
 			if (a_enable) {
 				forceOtherInputEventsFlags.set(a_otherEventFlags);
-			}
-			else {
+			} else {
 				forceOtherInputEventsFlags.reset(a_otherEventFlags);
 			}
 		}

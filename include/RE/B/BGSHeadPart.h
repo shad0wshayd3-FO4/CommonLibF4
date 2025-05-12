@@ -42,11 +42,11 @@ namespace RE
 		REX::EnumSet<Flag, std::uint8_t>         flags;              // 070
 		REX::EnumSet<HeadPartType, std::int32_t> type;               // 074
 		BSTArray<BGSHeadPart*>                   extraParts;         // 078
-		BGSTextureSet* textureSet;         // 090
+		BGSTextureSet*                           textureSet;         // 090
 		TESModel                                 ChargenModel;       // 098
 		TESModelTri                              morphs[3];          // 0C8
-		BGSColorForm* colorForm;          // 158
-		BGSListForm* validRaces;         // 160
+		BGSColorForm*                            colorForm;          // 158
+		BGSListForm*                             validRaces;         // 160
 		TESCondition                             chargenConditions;  // 168
 		BSFixedString                            formEditorID;       // 170
 	};

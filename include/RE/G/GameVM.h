@@ -44,10 +44,10 @@ namespace RE
 
 		void SendEventToObjectAndRelated(
 			std::size_t                                                                   a_object,
-			const BSFixedString& a_eventName,
-			const BSTThreadScrapFunction<bool(BSScrapArray<BSScript::Variable>&)>& a_args,
+			const BSFixedString&                                                          a_eventName,
+			const BSTThreadScrapFunction<bool(BSScrapArray<BSScript::Variable>&)>&        a_args,
 			const BSTThreadScrapFunction<bool(const BSTSmartPointer<BSScript::Object>&)>& a_filter,
-			const BSTSmartPointer<BSScript::IStackCallbackFunctor>& a_callback)
+			const BSTSmartPointer<BSScript::IStackCallbackFunctor>&                       a_callback)
 		{
 			using func_t = decltype(&GameVM::SendEventToObjectAndRelated);
 			static REL::Relocation<func_t> func{ REL::ID(367992) };
@@ -56,8 +56,8 @@ namespace RE
 
 		// members
 		BSTSmartPointer<BSScript::IVirtualMachine>                          impl;                           // 00B0
-		BSScript::IVMSaveLoadInterface* saveLoadInterface;              // 00B8
-		BSScript::IVMDebugInterface* debugInterface;                 // 00C0
+		BSScript::IVMSaveLoadInterface*                                     saveLoadInterface;              // 00B8
+		BSScript::IVMDebugInterface*                                        debugInterface;                 // 00C0
 		BSScript::SimpleAllocMemoryPagePolicy                               memoryPagePolicy;               // 00C8
 		BSScript::CompiledScriptLoader                                      scriptLoader;                   // 00F8
 		GameScript::Logger                                                  logger;                         // 0130

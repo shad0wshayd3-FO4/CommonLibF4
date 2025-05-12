@@ -22,15 +22,15 @@ namespace RE
 		{
 			assert(a_obj < DEFAULT_OBJECT::kTotal);
 			return objectInitArray[std::to_underlying(a_obj)] ?
-				objectArray[std::to_underlying(a_obj)] :
-				nullptr;
+			           objectArray[std::to_underlying(a_obj)] :
+			           nullptr;
 		}
 
 		template <class T>
 		[[nodiscard]] T* GetDefaultObject(DEFAULT_OBJECT a_obj) const  //
 			requires(std::derived_from<T, TESForm> &&
-		!std::is_pointer_v<T> &&
-			!std::is_reference_v<T>)
+					 !std::is_pointer_v<T> &&
+					 !std::is_reference_v<T>)
 		{
 			const auto obj = GetDefaultObject(a_obj);
 			return obj ? obj->As<T>() : nullptr;

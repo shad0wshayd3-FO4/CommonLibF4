@@ -5,7 +5,7 @@ namespace RE
 	class hkTransformf
 	{
 	public:
-		hkTransformf() {};
+		hkTransformf(){};
 
 		void SetIdentity()
 		{

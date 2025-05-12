@@ -2,9 +2,9 @@
 
 namespace RE
 {
-    namespace BSResource::Archive2
-    {
-        class __declspec(novtable) Index :
+	namespace BSResource::Archive2
+	{
+		class __declspec(novtable) Index :
 			public BSTEventSink<RegisteredEvent>,    // 0000
 			public BSTEventSink<ClearRegistryEvent>  // 0008
 		{
@@ -91,5 +91,5 @@ namespace RE
 			BSReadWriteLock                                                       lock;                  // 1C58
 		};
 		static_assert(sizeof(Index) == 0x1C60);
-    }
+	}
 }

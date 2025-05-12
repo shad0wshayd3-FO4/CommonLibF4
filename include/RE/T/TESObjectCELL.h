@@ -145,13 +145,13 @@ namespace RE
 		BSTSmartPointer<ExtraDataList>         extraList;        // 48
 		union
 		{
-			void* cellData;
+			void*          cellData;
 			EXTERIOR_DATA* cellDataExterior;
 			INTERIOR_DATA* cellDataInterior;
 		};  // 50
-		TESObjectLAND* cellLand;     // 58
+		TESObjectLAND*                                                     cellLand;     // 58
 		float                                                              waterHeight;  // 60
-		NavMeshArray* navMeshes;    // 68
+		NavMeshArray*                                                      navMeshes;    // 68
 		BSTArray<NiPointer<TESObjectREFR>>                                 references;   // 70
 		BSTSmartPointer<BGSWaterCollisionManager::AutoWater>               autoWater;    // 77
 		BSTSet<BSTSmartPointer<BGSWaterCollisionManager::BGSWaterUpdateI>> waterSet;     // 80
@@ -161,9 +161,9 @@ namespace RE
 			TESWorldSpace* worldSpace;
 			std::uint32_t  tempDataOffset;
 		};  // C8
-		LOADED_CELL_DATA* loadedData;            // D0
+		LOADED_CELL_DATA*    loadedData;            // D0
 		BGSLightingTemplate* lightingTemplate;      // D8
-		void* visibilityData;        // E0 - TODO
+		void*                visibilityData;        // E0 - TODO
 		std::uint32_t        rootVisibilityCellID;  // E8
 		std::uint16_t        visCalcDate;           // EC
 		std::uint16_t        preCombineDate;        // F0

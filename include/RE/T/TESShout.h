@@ -19,7 +19,7 @@ namespace RE
 		public:
 			// members
 			TESWordOfPower* word;          // 00
-			SpellItem* spell;         // 08
+			SpellItem*      spell;         // 08
 			float           recoveryTime;  // 10
 		};
 		static_assert(sizeof(Variation) == 0x18);

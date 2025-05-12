@@ -34,7 +34,7 @@ namespace RE
 		}
 
 		// members
-		TESBoundObject* storedFavTypes[12];         // 090
+		TESBoundObject*                                  storedFavTypes[12];         // 090
 		NiPointer<QueuedFile>                            bufferedFavGeometries[12];  // 0F0
 		BSTSet<const BGSConstructibleObject*>            favoriteMods;               // 150
 		BSTHashMap<const TESBoundObject*, std::uint32_t> favoritedComponents;        // 180

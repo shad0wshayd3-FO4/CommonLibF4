@@ -24,10 +24,10 @@ namespace RE
 		public:
 			union USelectionResult
 			{
-				BGSTerminal* subMenu;
+				BGSTerminal*        subMenu;
 				BGSLocalizedString* displayText;
-				TESTexture* displayImage;
-				BGSNote* holotape;
+				TESTexture*         displayImage;
+				BGSNote*            holotape;
 			};
 			static_assert(sizeof(USelectionResult) == 0x8);
 

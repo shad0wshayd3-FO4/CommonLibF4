@@ -12,7 +12,7 @@ namespace RE
 		virtual ~hknpBSWorld() override;  // 00
 
 		// members
-		void* userData;
+		void*                     userData;
 		BSReadWriteLock           worldLock;
 		std::byte                 activateBodyPostCollideSet[48];  // BSTSet<hknpBodyId>
 		BSSpinLock                activateBodyPostCollideLock;

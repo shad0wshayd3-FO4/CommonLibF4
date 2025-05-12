@@ -17,8 +17,7 @@ namespace RE
 				assert(_tail != nullptr);
 				*_tail = a_extra;
 				_tail = std::addressof(a_extra->next);
-			}
-			else {
+			} else {
 				a_extra->next = _head;
 				_head = a_extra;
 			}
@@ -47,8 +46,7 @@ namespace RE
 			if (!flags.empty() && idx < flags.size()) {
 				const auto pos = static_cast<std::uint8_t>(1u << (std::to_underlying(a_type) % 8));
 				return (flags[idx] & pos) != 0;
-			}
-			else {
+			} else {
 				return false;
 			}
 		}
@@ -61,8 +59,7 @@ namespace RE
 					if (iter->GetExtraType() == a_type) {
 						if (prev) {
 							prev->next = iter->next;
-						}
-						else {
+						} else {
 							_head = iter->next;
 						}
 
@@ -93,8 +90,7 @@ namespace RE
 		{
 			if (_flags) {
 				return { _flags, N };
-			}
-			else {
+			} else {
 				return {};
 			}
 		}
@@ -116,14 +112,13 @@ namespace RE
 			const auto flags = GetOrCreateFlags();
 			if (a_set) {
 				flags[idx] |= pos;
-			}
-			else {
+			} else {
 				flags[idx] &= ~pos;
 			}
 		}
 
 		// members
-		BSExtraData* _head{ nullptr };                // 00
+		BSExtraData*  _head{ nullptr };                // 00
 		BSExtraData** _tail{ std::addressof(_head) };  // 08
 		std::uint8_t* _flags{ nullptr };               // 10
 	};

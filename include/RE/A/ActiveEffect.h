@@ -49,12 +49,12 @@ namespace RE
 		BSSoundHandle                                           persistentSound;      // 30
 		ActorHandle                                             caster;               // 38
 		NiPointer<NiNode>                                       sourceNode;           // 40
-		MagicItem* spell;                // 48
-		EffectItem* effect;               // 50
-		MagicTarget* target;               // 58
-		TESBoundObject* source;               // 60
-		BSSimpleList<ReferenceEffect*>* hitEffects;           // 68
-		MagicItem* displacementSpell;    // 70
+		MagicItem*                                              spell;                // 48
+		EffectItem*                                             effect;               // 50
+		MagicTarget*                                            target;               // 58
+		TESBoundObject*                                         source;               // 60
+		BSSimpleList<ReferenceEffect*>*                         hitEffects;           // 68
+		MagicItem*                                              displacementSpell;    // 70
 		float                                                   elapsedSeconds;       // 74
 		float                                                   duration;             // 78
 		float                                                   magnitude;            // 7C

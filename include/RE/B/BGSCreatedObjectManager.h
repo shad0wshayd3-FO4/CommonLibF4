@@ -35,7 +35,7 @@ namespace RE
 		{
 		public:
 			// members
-			MagicItem* createdItem;  // 00
+			MagicItem*    createdItem;  // 00
 			std::uint32_t count;        // 08
 		};
 		static_assert(sizeof(CreatedMagicItemData) == 0x10);

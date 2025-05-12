@@ -15,9 +15,9 @@ namespace RE
 
 		// members
 		OBJ_LAND              data;            // 28
-		TESObjectCELL* parentCell;      // 30
+		TESObjectCELL*        parentCell;      // 30
 		NiPointer<QueuedFile> queuedTextures;  // 38
-		LoadedLandData* loadedData;      // 40
+		LoadedLandData*       loadedData;      // 40
 	};
 	static_assert(sizeof(TESObjectLAND) == 0x48);
 }

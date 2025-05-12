@@ -22,16 +22,16 @@ namespace RE
 		}
 
 		// members
-		const char* functionName{ "" };                                                                // 00
-		const char* shortName{ "" };                                                                   // 08
+		const char*                               functionName{ "" };                                                                // 00
+		const char*                               shortName{ "" };                                                                   // 08
 		REX::EnumSet<SCRIPT_OUTPUT, std::int32_t> output;                                                                            // 10
-		const char* helpString{ "" };                                                                  // 18
+		const char*                               helpString{ "" };                                                                  // 18
 		bool                                      referenceFunction{ false };                                                        // 20
 		std::uint16_t                             paramCount{ 0 };                                                                   // 22
-		SCRIPT_PARAMETER* parameters{ nullptr };                                                             // 28
-		ExecuteFunction_t* executeFunction{ nullptr };                                                        // 30
-		CompileFunction_t* compileFunction{ REL::Relocation<CompileFunction_t*>{ REL::ID(2204343) }.get() };  // 38
-		ConditionFunction_t* conditionFunction{ nullptr };                                                      // 40
+		SCRIPT_PARAMETER*                         parameters{ nullptr };                                                             // 28
+		ExecuteFunction_t*                        executeFunction{ nullptr };                                                        // 30
+		CompileFunction_t*                        compileFunction{ REL::Relocation<CompileFunction_t*>{ REL::ID(2204343) }.get() };  // 38
+		ConditionFunction_t*                      conditionFunction{ nullptr };                                                      // 40
 		bool                                      editorFilter{ false };                                                             // 48
 		bool                                      invalidatesCellList{ false };                                                      // 49
 	};

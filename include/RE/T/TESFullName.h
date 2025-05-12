@@ -11,7 +11,7 @@ namespace RE
 
 		// add
 		virtual std::uint32_t GetFullNameLength() const { return fullName.length(); }  // 07
-		virtual const char* GetFullName() const { return fullName.c_str(); }         // 08
+		virtual const char*   GetFullName() const { return fullName.c_str(); }         // 08
 
 		[[nodiscard]] static std::string_view GetFullName(const TESForm& a_form, bool a_strict = false);
 

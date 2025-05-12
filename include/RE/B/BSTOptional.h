@@ -2,7 +2,7 @@
 
 namespace RE
 {
-		template <class T>
+	template <class T>
 	class BSTOptional
 	{
 	public:

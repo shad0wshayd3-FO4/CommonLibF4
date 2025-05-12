@@ -18,9 +18,9 @@ namespace RE
 		virtual void         Revert() = 0;                                                           // 04
 
 		// members
-		PeriodicUpdateTimer* timer;               // 08
+		PeriodicUpdateTimer*               timer;               // 08
 		std::int32_t                       currentCursorDepth;  // 10
-		BGSStoryManagerQuestNode* lastQuestParent;     // 18
+		BGSStoryManagerQuestNode*          lastQuestParent;     // 18
 		BSTArray<BGSStoryManagerTreeForm*> cursorAncestry;      // 20
 		std::uint32_t                      queryID;             // 38
 	};

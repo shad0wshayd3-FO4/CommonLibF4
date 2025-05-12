@@ -21,7 +21,7 @@ namespace RE
 			bhkCollisionQueryResultHandle                          impactDecalQuery;        // 18
 			ObjectRefHandle                                        collidee;                // 20
 			NiPointer<bhkNPCollisionObject>                        colObj;                  // 28
-			BGSMaterialType* materialType;            // 30
+			BGSMaterialType*                                       materialType;            // 30
 			REX::EnumSet<BGSBodyPartDefs::LIMB_ENUM, std::int32_t> damageLimb;              // 38
 			REX::EnumSet<COL_LAYER, std::int32_t>                  collisionLayer;          // 3C
 			NiPointer<NiNode>                                      closestBone;             // 40
@@ -65,7 +65,7 @@ namespace RE
 		virtual bool          TargetsWholeBody() const { return false; }                                                          // DE
 		virtual bool          GetAllowMovement() const;                                                                           // DF
 		virtual std::uint32_t GetCollisionGroup() const;                                                                          // E0
-		virtual hknpShape* GetCollisionShape();                                                                                // E1
+		virtual hknpShape*    GetCollisionShape();                                                                                // E1
 		virtual void          InitializeImpl() { return; }                                                                        // E2
 		virtual void          Relaunch() { return; }                                                                              // E3
 		virtual std::uint32_t AddImpact(const ImpactCreation& a_data);                                                            // E4
@@ -88,17 +88,17 @@ namespace RE
 		ObjectRefHandle                                        desiredTarget;        // 1AC
 		BSSoundHandle                                          sndHandle;            // 1B0
 		BSSoundHandle                                          sndCountdown;         // 1B8
-		BGSExplosion* explosion;            // 1C0
-		MagicItem* spell;                // 1C8
+		BGSExplosion*                                          explosion;            // 1C0
+		MagicItem*                                             spell;                // 1C8
 		REX::EnumSet<MagicSystem::CastingSource, std::int32_t> castingSource;        // 1D0
-		EffectSetting* avEffect;             // 1D8
+		EffectSetting*                                         avEffect;             // 1D8
 		NiPointer<QueuedFile>                                  projectileDBFiles;    // 1E0
-		void* muzzleFlashDBHandle;  // 1E8 - TODO
+		void*                                                  muzzleFlashDBHandle;  // 1E8 - TODO
 		NiPointer<NiNode>                                      muzzleFlashArt;       // 1F0
-		BSMagicShaderParticles* particles;            // 1F8
+		BSMagicShaderParticles*                                particles;            // 1F8
 		REX::EnumSet<BGSBodyPartDefs::LIMB_ENUM, std::int32_t> targetLimb;           // 200
 		NiPointer<NiAVObject>                                  targetLimbObj;        // 208
-		NiAVObject* clonePoolKey;         // 210
+		NiAVObject*                                            clonePoolKey;         // 210
 		float                                                  power;                // 218
 		float                                                  speedMult;            // 21C
 		float                                                  range;                // 220
@@ -108,7 +108,7 @@ namespace RE
 		float                                                  explosionTimer;       // 230
 		float                                                  blinkTimer;           // 234
 		BGSObjectInstanceT<TESObjectWEAP>                      weaponSource;         // 238
-		TESAmmo* ammoSource;           // 248
+		TESAmmo*                                               ammoSource;           // 248
 		BGSEquipIndex                                          equipIndex;           // 250
 		float                                                  distanceMoved;        // 254
 		float                                                  movementDelta;        // 258

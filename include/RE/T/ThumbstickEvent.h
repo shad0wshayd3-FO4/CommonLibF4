@@ -27,6 +27,6 @@ namespace RE
 	};
 	static_assert(sizeof(ThumbstickEvent) == 0x48);
 
-	extern template ThumbstickEvent* InputEvent::As() noexcept;
+	extern template ThumbstickEvent*       InputEvent::As() noexcept;
 	extern template const ThumbstickEvent* InputEvent::As() const noexcept;
 }

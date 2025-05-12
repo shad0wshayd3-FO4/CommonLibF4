@@ -2,7 +2,7 @@
 
 namespace RE
 {
-		class BGSLocalizedString
+	class BGSLocalizedString
 	{
 	public:
 		using size_type = typename BSFixedStringCS::size_type;

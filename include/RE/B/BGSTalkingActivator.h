@@ -15,7 +15,7 @@ namespace RE
 
 		// members
 		TESObjectREFR* tempRef;    // 148
-		BGSVoiceType* voiceType;  // 150
+		BGSVoiceType*  voiceType;  // 150
 	};
 	static_assert(sizeof(BGSTalkingActivator) == 0x158);
 }

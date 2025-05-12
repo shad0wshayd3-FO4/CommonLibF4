@@ -25,17 +25,17 @@ namespace RE
 		bool IsParent(const BGSLocation* a_possibleParent) const;
 
 		// members
-		BGSLocation* parentLoc;               // 050
-		TESFaction* unreportedCrimeFaction;  // 058
-		BGSMusicType* musicType;               // 060
-		BGSEncounterZone* zone;                    // 068
+		BGSLocation*                                           parentLoc;               // 050
+		TESFaction*                                            unreportedCrimeFaction;  // 058
+		BGSMusicType*                                          musicType;               // 060
+		BGSEncounterZone*                                      zone;                    // 068
 		ObjectRefHandle                                        worldLocMarker;          // 070
 		float                                                  worldLocRadius;          // 074
 		float                                                  actorFadeMult;           // 078
 		ObjectRefHandle                                        horseLocMarker;          // 07C
 		BSTArray<SpecialRefData>                               specialRefs;             // 080
 		BSTArray<UniqueNPCData>                                uniqueNPCs;              // 098
-		OverrideData* overrideData;            // 0B0
+		OverrideData*                                          overrideData;            // 0B0
 		BSTArray<std::uint32_t>                                newUnloadedRefs;         // 0B8
 		BSTArray<BSTTuple<BGSLocationRefType*, std::uint32_t>> newSpecialRefs;          // 0D0
 		NiPointer<QueuedPromoteLocationReferencesTask>         promoteRefsTask;         // 0E8

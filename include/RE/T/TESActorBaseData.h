@@ -42,12 +42,12 @@ namespace RE
 		// members
 		ACTOR_BASE_DATA        actorData;         // 08
 		std::int32_t           changeFlags;       // 1C
-		TESLevItem* deathItem;         // 20
-		BGSVoiceType* voiceType;         // 28
-		TESForm* baseTemplateForm;  // 30
-		TESForm** templateForms;     // 38
-		TESGlobal* legendChance;      // 40
-		TESForm* legendTemplate;    // 48
+		TESLevItem*            deathItem;         // 20
+		BGSVoiceType*          voiceType;         // 28
+		TESForm*               baseTemplateForm;  // 30
+		TESForm**              templateForms;     // 38
+		TESGlobal*             legendChance;      // 40
+		TESForm*               legendTemplate;    // 48
 		BSTArray<FACTION_RANK> factions;          // 50
 	};
 	static_assert(sizeof(TESActorBaseData) == 0x68);

@@ -10,7 +10,7 @@ namespace RE
 
 		virtual ~UIMessage() = default;  // 00
 
-		virtual IUIMessageData* QData() { return nullptr; }        // 02
+		virtual IUIMessageData*       QData() { return nullptr; }        // 02
 		virtual const IUIMessageData* QData() const { return nullptr; }  // 01
 
 		F4_HEAP_REDEFINE_NEW(UIMessage);

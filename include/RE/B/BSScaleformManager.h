@@ -19,10 +19,10 @@ namespace RE
 		}
 
 		bool LoadMovie(
-			IMenu& a_menu,
+			IMenu&                                 a_menu,
 			Scaleform::Ptr<Scaleform::GFx::Movie>& a_movie,
-			const char* a_menuName,
-			const char* a_menuObjPath = nullptr,
+			const char*                            a_menuName,
+			const char*                            a_menuObjPath = nullptr,
 			ScaleModeType                          a_scaleMode = ScaleModeType::kShowAll,
 			float                                  a_backgroundAlpha = 0.0F)
 		{
@@ -32,15 +32,15 @@ namespace RE
 		}
 
 		bool LoadMovieEx(
-			IMenu& a_menu,
+			IMenu&        a_menu,
 			stl::zstring  a_filePath,
 			stl::zstring  a_menuObjPath = ""sv,
 			ScaleModeType a_scaleMode = ScaleModeType::kShowAll,
 			float         a_backgroundAlpha = 0.0F);
 
 		// members
-		Scaleform::GFx::Loader* loader;          // 10
-		BSScaleformRenderer* renderer;        // 18
+		Scaleform::GFx::Loader*                         loader;          // 10
+		BSScaleformRenderer*                            renderer;        // 18
 		Scaleform::Ptr<Scaleform::GFx::DrawTextManager> textManager;     // 20
 		Scaleform::Ptr<BSScaleformImageLoader>          imageLoader;     // 28
 		BSStringT<char>                                 validNameChars;  // 30

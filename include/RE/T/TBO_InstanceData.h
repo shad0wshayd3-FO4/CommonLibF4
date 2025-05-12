@@ -12,10 +12,10 @@ namespace RE
 		virtual ~TBO_InstanceData() = default;  // 00
 
 		// add
-		virtual BGSKeywordForm* GetKeywordData() const { return nullptr; }                                    // 01
+		virtual BGSKeywordForm*             GetKeywordData() const { return nullptr; }                                    // 01
 		virtual void                        DeleteKeywordData() { return; }                                               // 02
 		virtual void                        CreateKeywordData() { return; }                                               // 03
-		virtual BGSBlockBashData* GetBlockBashData() const { return nullptr; }                                  // 04
+		virtual BGSBlockBashData*           GetBlockBashData() const { return nullptr; }                                  // 04
 		virtual void                        DeleteBlockBashData() { return; }                                             // 05
 		virtual void                        CreateBlockBashData() { return; }                                             // 06
 		virtual BSTArray<EnchantmentItem*>* GetEnchantmentArray() const { return nullptr; }                               // 07

@@ -17,7 +17,7 @@ namespace RE
 		void                           SetBaseEnchanting(EnchantmentItem* a_ench) noexcept { formEnchanting = a_ench; }
 
 		// members
-		EnchantmentItem* formEnchanting;       // 08
+		EnchantmentItem*                                      formEnchanting;       // 08
 		REX::EnumSet<MagicSystem::CastingType, std::uint16_t> castingType;          // 10
 		std::uint16_t                                         amountOfEnchantment;  // 12
 	};

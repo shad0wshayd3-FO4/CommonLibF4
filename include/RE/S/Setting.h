@@ -129,30 +129,29 @@ namespace RE
 		{
 			if (_key) {
 				switch (_key[0]) {
-				case 'b':
-					return SETTING_TYPE::kBinary;
-				case 'c':
-					return SETTING_TYPE::kChar;
-				case 'h':
-					return SETTING_TYPE::kUChar;
-				case 'i':
-					return SETTING_TYPE::kInt;
-				case 'u':
-					return SETTING_TYPE::kUInt;
-				case 'f':
-					return SETTING_TYPE::kFloat;
-				case 's':
-				case 'S':
-					return SETTING_TYPE::kString;
-				case 'r':
-					return SETTING_TYPE::kRGB;
-				case 'a':
-					return SETTING_TYPE::kRGBA;
-				default:
-					return SETTING_TYPE::kNone;
+					case 'b':
+						return SETTING_TYPE::kBinary;
+					case 'c':
+						return SETTING_TYPE::kChar;
+					case 'h':
+						return SETTING_TYPE::kUChar;
+					case 'i':
+						return SETTING_TYPE::kInt;
+					case 'u':
+						return SETTING_TYPE::kUInt;
+					case 'f':
+						return SETTING_TYPE::kFloat;
+					case 's':
+					case 'S':
+						return SETTING_TYPE::kString;
+					case 'r':
+						return SETTING_TYPE::kRGB;
+					case 'a':
+						return SETTING_TYPE::kRGBA;
+					default:
+						return SETTING_TYPE::kNone;
 				}
-			}
-			else {
+			} else {
 				return SETTING_TYPE::kNone;
 			}
 		}
@@ -232,7 +231,7 @@ namespace RE
 	private:
 		// members
 		SETTING_VALUE _value;  // 08
-		const char* _key;    // 10
+		const char*   _key;    // 10
 	};
 	static_assert(sizeof(Setting) == 0x18);
 

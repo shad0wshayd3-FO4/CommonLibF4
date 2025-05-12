@@ -11,9 +11,9 @@ namespace RE
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kLTEX };
 
 		// members
-		BGSTextureSet* textureSet;          // 20
+		BGSTextureSet*          textureSet;          // 20
 		TEXTURE_HAVOK_DATA      havokData;           // 28
-		BGSMaterialType* materialType;        // 30
+		BGSMaterialType*        materialType;        // 30
 		std::int8_t             specularExponent;    // 38
 		std::int32_t            shaderTextureIndex;  // 3C
 		BSSimpleList<TESGrass*> textureGrassList;    // 40

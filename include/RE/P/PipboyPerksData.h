@@ -19,7 +19,7 @@ namespace RE
 		virtual void DoClearData() override;          // 03
 		virtual void DoClearSink() override;          // 04
 
-		PipboyArray* perkChains;      // A0
+		PipboyArray*             perkChains;      // A0
 		BSTArray<const BGSPerk*> perkChainRoots;  // A8
 		BSTArray<PipboyObject*>  perksArray;      // C0
 	};

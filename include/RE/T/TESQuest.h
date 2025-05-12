@@ -37,8 +37,8 @@ namespace RE
 		BSTHashMap<std::uint32_t, BGSLocation*>                                       aliasedLocMap;           // 088
 		BSTArray<BSTSmallArray<ObjectRefHandle>>                                      aliasedHandles;          // 0B8
 		BSReadWriteLock                                                               aliasAccessLock;         // 0D0
-		BGSLocation* nonDormantLocation;      // 0D8
-		TESGlobal* questCompleteXPGlobal;   // 0E0
+		BGSLocation*                                                                  nonDormantLocation;      // 0D8
+		TESGlobal*                                                                    questCompleteXPGlobal;   // 0E0
 		BSFixedString                                                                 swfFile;                 // 0E8
 		QUEST_DATA                                                                    data;                    // 0F0
 		std::uint32_t                                                                 eventID;                 // 0F8
@@ -52,12 +52,12 @@ namespace RE
 		BSTHashMap<BGSDialogueBranch*, BSTArray<TESTopic*>*>                          branchedDialogues[2];    // 1A0
 		BSTArray<TESTopic*>                                                           topics[6];               // 200
 		BSTArray<BGSScene*>                                                           scenes;                  // 290
-		BSTArray<TESGlobal*>* textGlobal;              // 2A8
+		BSTArray<TESGlobal*>*                                                         textGlobal;              // 2A8
 		std::uint32_t                                                                 totalRefsAliased;        // 2B0
 		std::uint16_t                                                                 currentStage;            // 2B4
 		bool                                                                          alreadyRun;              // 2B6
 		BSStringT<char>                                                               formEditorID;            // 2B8
-		const BGSStoryEvent* startEventData;          // 2C8
+		const BGSStoryEvent*                                                          startEventData;          // 2C8
 		NiPointer<QueuedPromoteQuestTask>                                             promoteTask;             // 2D0
 		BSTArray<ObjectRefHandle>                                                     promotedRefsArray;       // 2D8
 	};

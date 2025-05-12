@@ -2,7 +2,7 @@
 
 namespace RE
 {
-    template <std::size_t S, std::size_t A>
+	template <std::size_t S, std::size_t A>
 	struct BSTScatterTableHeapAllocator
 	{
 	public:

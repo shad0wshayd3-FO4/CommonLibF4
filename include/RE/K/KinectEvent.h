@@ -18,7 +18,7 @@ namespace RE
 	};
 	static_assert(sizeof(KinectEvent) == 0x40);
 
-	extern template KinectEvent* InputEvent::As() noexcept;
+	extern template KinectEvent*       InputEvent::As() noexcept;
 	extern template const KinectEvent* InputEvent::As() const noexcept;
 
 }

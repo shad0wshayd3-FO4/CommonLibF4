@@ -29,12 +29,12 @@ namespace RE
 
 		// members
 		IMPACT_DATA_DATA        data;                     // 50
-		BGSTextureSet* decalTextureSet;          // 68
-		BGSTextureSet* decalTextureSet2;         // 70
+		BGSTextureSet*          decalTextureSet;          // 68
+		BGSTextureSet*          decalTextureSet2;         // 70
 		BGSSoundDescriptorForm* sound1;                   // 78
 		BGSSoundDescriptorForm* sound2;                   // 80
-		BGSExplosion* explosion;                // 88
-		BGSHazard* hazard;                   // 90
+		BGSExplosion*           explosion;                // 88
+		BGSHazard*              hazard;                   // 90
 		DecalData               decalData;                // 98
 		float                   maxFootstepParticleDist;  // BC
 	};

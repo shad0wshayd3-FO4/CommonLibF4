@@ -29,7 +29,7 @@ namespace RE
 
 		// Members
 		BGSLocalizedString                                    responseText;
-		TESResponse* pNext;
+		TESResponse*                                          pNext;
 		TESResponse::RespData                                 data;
 		BGSTypedKeywordValue<KeywordType::kAnimFaceArchetype> faceArcheType;
 	};

@@ -47,15 +47,15 @@ namespace RE
 		BSTValueEventSink<CurrentRadsDisplayMagnitude> radsCount;                   // 080
 		BSTValueEventSink<CurrentRadsPercentOfLethal>  radsPercentOfLethal;         // 0A0
 		BSTValueEventSink<CurrentRadiationSourceCount> radiationSourceCount;        // 0C0
-		TESImageSpaceModifier* paPipboyEffect;              // 0E0
+		TESImageSpaceModifier*                         paPipboyEffect;              // 0E0
 		NiPointer<NiNode>                              paDashDials;                 // 0E8
 		NiPointer<NiNode>                              pipboyPAGlass;               // 0F0
-		NiAVObject* paDashLightSpot;             // 0F8
-		NiAVObject* paDashLightScope;            // 100
-		NiAVObject* paDashLightAux;              // 108
-		NiAVObject* paDash;                      // 110
-		NiAVObject* plane;                       // 118
-		NiAVObject* compass;                     // 120
+		NiAVObject*                                    paDashLightSpot;             // 0F8
+		NiAVObject*                                    paDashLightScope;            // 100
+		NiAVObject*                                    paDashLightAux;              // 108
+		NiAVObject*                                    paDash;                      // 110
+		NiAVObject*                                    plane;                       // 118
+		NiAVObject*                                    compass;                     // 120
 		BSTArray<void*>                                queued3D;                    // 128
 		HUDModes                                       validHUDModes;               // 140
 		float                                          radiationSmoother;           // 160

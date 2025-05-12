@@ -63,9 +63,9 @@ namespace RE
 		[[nodiscard]] bool StartSceneOnEnd() const noexcept { return data.flags.all(TOPIC_INFO_DATA::TOPIC_INFO_FLAGS::kStartSceneOnEnd); }
 
 		// members
-		TESTopic* parentTopic;       // 20
-		TESGlobal* resetGlobal;       // 28
-		TESTopicInfo* dataInfo;          // 30
+		TESTopic*           parentTopic;       // 20
+		TESGlobal*          resetGlobal;       // 28
+		TESTopicInfo*       dataInfo;          // 30
 		TESCondition        objConditions;     // 38
 		std::uint16_t       infoIndex;         // 40
 		std::int8_t         subtitlePriority;  // 42

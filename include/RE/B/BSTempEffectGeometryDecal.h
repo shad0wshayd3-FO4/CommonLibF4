@@ -14,11 +14,11 @@ namespace RE
 		~BSTempEffectGeometryDecal() override;
 
 		// members
-		SkinnedDecalCSData* CSData;         // 30
+		SkinnedDecalCSData*   CSData;         // 30
 		TextureDBHandle       baseTexture;    // 38
 		NiPointer<BSGeometry> decalGeometry;  // 40
 		NiPointer<BSTriShape> geometry;       // 48
-		std::uint16_t* oldIndex;       // 50
+		std::uint16_t*        oldIndex;       // 50
 		NiPointer<NiNode>     parent;         // 58
 		NiPointer<NiNode>     decalParent;    // 68
 		alignas(0x10) NiMatrix3 projection;   // 70

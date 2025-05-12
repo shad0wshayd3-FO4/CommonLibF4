@@ -14,9 +14,9 @@ namespace RE
 		NiColorA                          projectedUVParams;           // 70
 		NiColorA                          projectedUVColor;            // 80
 		BSShaderProperty::RenderPassArray depthMapRenderPassListA[3];  // 90
-		BSRenderPass* depthRenderPass;             // A8
+		BSRenderPass*                     depthRenderPass;             // A8
 		BSShaderProperty::RenderPassArray forwardPassList;             // B0
-		NiColor* emitColor;                   // B8
+		NiColor*                          emitColor;                   // B8
 		BSFixedString                     rootName;                    // C0
 		float                             emitColorScale;              // C8
 		float                             forcedDarkness;              // CC

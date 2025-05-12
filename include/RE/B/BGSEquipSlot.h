@@ -13,7 +13,7 @@ namespace RE
 		// members
 		BSTArray<BGSEquipSlot*> parentSlots;          // 20
 		std::uint32_t           flags;                // 38
-		ActorValueInfo* conditionActorValue;  // 40
+		ActorValueInfo*         conditionActorValue;  // 40
 	};
 	static_assert(sizeof(BGSEquipSlot) == 0x48);
 }

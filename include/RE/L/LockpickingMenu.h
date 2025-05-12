@@ -33,17 +33,17 @@ namespace RE
 		// members
 		NiMatrix3             origPickRotate;           // 0E0
 		NiPoint3              origPickTranslate;        // 110
-		NiControllerManager* lockAnimManager;          // 120
+		NiControllerManager*  lockAnimManager;          // 120
 		NiControllerSequence* lockIntroAnim;            // 128
 		NiControllerSequence* lockRotateAnim;           // 130
-		NiControllerManager* pickAnimManager;          // 138
+		NiControllerManager*  pickAnimManager;          // 138
 		NiControllerSequence* pickIntroAnim;            // 140
 		NiControllerSequence* pickBendAnim;             // 148
 		NiControllerSequence* pickBreakAnim;            // 150
 		NiControllerSequence* currPickAnim;             // 158
 		NiControllerSequence* currLockAnim;             // 160
-		void* lockModel;                // 168
-		void* pickModel;                // 170
+		void*                 lockModel;                // 168
+		void*                 pickModel;                // 170
 		NiPointer<NiNode>     lockRoot;                 // 178
 		float                 currPickAnimElapsedSecs;  // 180
 		float                 currLockAnimElapsedSecs;  // 184

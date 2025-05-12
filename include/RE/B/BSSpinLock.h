@@ -26,8 +26,7 @@ namespace RE
 			if (lockCount == expected) {
 				_owningThread = 0;
 				lockCount.compare_exchange_strong(expected, 0);
-			}
-			else {
+			} else {
 				--lockCount;
 			}
 		}

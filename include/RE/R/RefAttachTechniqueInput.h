@@ -11,8 +11,8 @@ namespace RE
 
 		// members
 		TESObjectREFR* object;           // 20
-		TESRace* race;             // 28
-		bhkWorld* havokWorld;       // 30
+		TESRace*       race;             // 28
+		bhkWorld*      havokWorld;       // 30
 		std::uint32_t  collisionGroup;   // 38
 		BSFixedString  techniqueSuffix;  // 40
 	};

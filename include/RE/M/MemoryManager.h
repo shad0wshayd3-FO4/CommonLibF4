@@ -89,16 +89,16 @@ namespace RE
 		bool                    initialized{ false };                    // 000
 		std::uint16_t           numHeaps{ 0 };                           // 002
 		std::uint16_t           numPhysicalHeaps{ 0 };                   // 004
-		IMemoryHeap** heaps{ nullptr };                        // 008
-		bool* allowOtherContextAllocs{ nullptr };      // 010
-		IMemoryHeap* heapsByContext[127]{ nullptr };          // 018
-		ThreadScrapHeap* threadScrapHeap{ nullptr };              // 410
-		IMemoryHeap** physicalHeaps{ nullptr };                // 418
-		IMemoryHeap* bigAllocHeap{ nullptr };                 // 420
-		IMemoryHeap* emergencyHeap{ nullptr };                // 428
-		BSSmallBlockAllocator* smallBlockAllocator{ nullptr };          // 430
+		IMemoryHeap**           heaps{ nullptr };                        // 008
+		bool*                   allowOtherContextAllocs{ nullptr };      // 010
+		IMemoryHeap*            heapsByContext[127]{ nullptr };          // 018
+		ThreadScrapHeap*        threadScrapHeap{ nullptr };              // 410
+		IMemoryHeap**           physicalHeaps{ nullptr };                // 418
+		IMemoryHeap*            bigAllocHeap{ nullptr };                 // 420
+		IMemoryHeap*            emergencyHeap{ nullptr };                // 428
+		BSSmallBlockAllocator*  smallBlockAllocator{ nullptr };          // 430
 		CompactingStore::Store* compactingStore{ nullptr };              // 438
-		IMemoryHeap* externalHavokAllocator{ nullptr };       // 440
+		IMemoryHeap*            externalHavokAllocator{ nullptr };       // 440
 		bool                    specialHeaps{ false };                   // 448
 		bool                    allowPoolUse{ true };                    // 449
 		std::uint32_t           sysAllocBytes{ 0 };                      // 44C
@@ -108,7 +108,7 @@ namespace RE
 		std::size_t             failedAllocationSize{ 0 };               // 460
 		std::uint32_t           numMemoryProblemPassesRun{ 0 };          // 468
 		std::size_t             timeOfLastMemoryProblemPass{ 0 };        // 470
-		IMemoryHeap* defaultHeap{ nullptr };                  // 478
+		IMemoryHeap*            defaultHeap{ nullptr };                  // 478
 	};
 	static_assert(sizeof(MemoryManager) == 0x480);
 

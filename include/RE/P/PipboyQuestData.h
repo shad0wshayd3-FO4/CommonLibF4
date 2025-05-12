@@ -22,7 +22,7 @@ namespace RE
 
 		// members
 		std::uint32_t sortIndex;   // A8
-		PipboyArray* questArray;  // B0
+		PipboyArray*  questArray;  // B0
 		//BSTHashMap<BSTTuple<TESQuest*, std::uint64_t>, BSTArray<BGSInstancedQuestObjective>*> objectivesByQuest;	// B8
 		void* unk[6];
 	};

@@ -35,6 +35,6 @@ namespace RE
 	};
 	static_assert(sizeof(IDEvent) == 0x38);
 
-	extern template IDEvent* InputEvent::As();
+	extern template IDEvent*       InputEvent::As();
 	extern template const IDEvent* InputEvent::As() const;
 }

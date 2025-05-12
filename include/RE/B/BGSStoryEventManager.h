@@ -14,7 +14,7 @@ namespace RE
 
 		std::uint32_t AddEvent(std::uint32_t a_index, const void* a_event)
 		{
-			using func_t = std::uint32_t(BGSStoryEventManager::*)(std::uint32_t, const void*);
+			using func_t = std::uint32_t (BGSStoryEventManager::*)(std::uint32_t, const void*);
 			static REL::Relocation<func_t> func{ REL::ID(2214088) };
 			return func(this, a_index, a_event);
 		}

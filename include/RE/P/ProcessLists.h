@@ -48,7 +48,7 @@ namespace RE
 					return BSContainer::ForEachResult::kStop;
 				}
 				return BSContainer::ForEachResult::kContinue;
-				});
+			});
 		}
 
 		void ForEachShaderEffect(std::function<BSContainer::ForEachResult(ShaderReferenceEffect*)> a_callback)
@@ -59,7 +59,7 @@ namespace RE
 					return BSContainer::ForEachResult::kStop;
 				}
 				return BSContainer::ForEachResult::kContinue;
-				});
+			});
 		}
 
 		[[nodiscard]] bool IsActorTargetingREFinPackage(const TESObjectREFR* a_actor, PTYPE a_type, bool a_onlyHigh)
@@ -98,8 +98,8 @@ namespace RE
 		BSTArray<ActorHandle>                   lowActorHandles;                // 058
 		BSTArray<ActorHandle>                   middleHighActorHandles;         // 070
 		BSTArray<ActorHandle>                   middleLowActorHandles;          // 088
-		BSTArray<ActorHandle>* allProcesss[4];                 // 0A0
-		BSSimpleList<Crime*>* globalCrimes[7];                // 0C0
+		BSTArray<ActorHandle>*                  allProcesss[4];                 // 0A0
+		BSSimpleList<Crime*>*                   globalCrimes[7];                // 0C0
 		BSTArray<NiPointer<BSTempEffect>>       globalTempEffects;              // 0F8
 		BSSpinLock                              globalEffectsLock;              // 110
 		BSTArray<NiPointer<BSTempEffect>>       magicEffects;                   // 118

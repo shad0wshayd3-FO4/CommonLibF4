@@ -41,7 +41,7 @@ namespace RE
 
 		struct StackEntry
 		{
-			PipboyObject* linkedObject;     // 00
+			PipboyObject*                    linkedObject;     // 00
 			const InventoryInterface::Handle inventoryHandle;  // 08
 		};
 		static_assert(sizeof(StackEntry) == 0x10);
@@ -93,7 +93,7 @@ namespace RE
 		}
 
 		// members
-		PipboyObject* inventoryObject;             // E8
+		PipboyObject*                                             inventoryObject;             // E8
 		BSTHashMap<std::uint32_t, PipboyInventoryData::ItemEntry> itemEntries;                 // F0
 		BSTHashMap<const BGSComponent*, PipboyObject*>            invComponents;               // 120
 		BSTArray<PipboyObject*>                                   sortedItems;                 // 150

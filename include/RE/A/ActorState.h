@@ -20,28 +20,28 @@ namespace RE
 		[[nodiscard]] bool GetWeaponMagicDrawn() const noexcept { return weaponState >= WEAPON_STATE::kDrawn; }
 
 		// members
-		std::uint32_t     moveMode : 14;            // 08:00
-		std::uint32_t     flyState : 3;             // 08:14
-		std::uint32_t     lifeState : 4;            // 08:17
-		std::uint32_t     knockState : 4;           // 08:21
-		std::uint32_t     meleeAttackState : 3;     // 08:25
-		std::uint32_t     talkingToPlayer : 1;      // 08:28
-		std::uint32_t     forceRun : 1;             // 08:29
-		std::uint32_t     forceSneak : 1;           // 08:30
-		std::uint32_t     headTracking : 1;         // 08:31
-		std::uint32_t     reanimating : 1;          // 0C:00
-		WEAPON_STATE      weaponState : 3;          // 0C:01
-		std::uint32_t     wantBlocking : 1;         // 0C:04
-		std::uint32_t     flightBlocked : 1;        // 0C:05
-		std::uint32_t     recoil : 2;               // 0C:06
-		std::uint32_t     allowFlying : 1;          // 0C:08
-		std::uint32_t     staggered : 1;            // 0C:09
-		std::uint32_t     inWrongProcessLevel : 1;  // 0C:10
-		std::uint32_t     stance : 3;               // 0C:11
-		GUN_STATE         gunState : 4;             // 0C:14
-		INTERACTING_STATE interactingState : 2;     // 0C:18
-		std::uint32_t     headTrackRotation : 1;    // 0C:20
-		std::uint32_t     inSyncAnim : 1;           // 0C:21
+		std::uint32_t     moveMode: 14;            // 08:00
+		std::uint32_t     flyState: 3;             // 08:14
+		std::uint32_t     lifeState: 4;            // 08:17
+		std::uint32_t     knockState: 4;           // 08:21
+		std::uint32_t     meleeAttackState: 3;     // 08:25
+		std::uint32_t     talkingToPlayer: 1;      // 08:28
+		std::uint32_t     forceRun: 1;             // 08:29
+		std::uint32_t     forceSneak: 1;           // 08:30
+		std::uint32_t     headTracking: 1;         // 08:31
+		std::uint32_t     reanimating: 1;          // 0C:00
+		WEAPON_STATE      weaponState: 3;          // 0C:01
+		std::uint32_t     wantBlocking: 1;         // 0C:04
+		std::uint32_t     flightBlocked: 1;        // 0C:05
+		std::uint32_t     recoil: 2;               // 0C:06
+		std::uint32_t     allowFlying: 1;          // 0C:08
+		std::uint32_t     staggered: 1;            // 0C:09
+		std::uint32_t     inWrongProcessLevel: 1;  // 0C:10
+		std::uint32_t     stance: 3;               // 0C:11
+		GUN_STATE         gunState: 4;             // 0C:14
+		INTERACTING_STATE interactingState: 2;     // 0C:18
+		std::uint32_t     headTrackRotation: 1;    // 0C:20
+		std::uint32_t     inSyncAnim: 1;           // 0C:21
 	};
 	static_assert(sizeof(ActorState) == 0x10);
 }

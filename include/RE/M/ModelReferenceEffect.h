@@ -17,8 +17,8 @@ namespace RE
 
 		// members
 		RefAttachTechniqueInput          hitEffectArtData;     // 70
-		void* loadedDataSubBuffer;  // B8
-		BGSArtObject* artObject;            // C0
+		void*                            loadedDataSubBuffer;  // B8
+		BGSArtObject*                    artObject;            // C0
 		NiPointer<BGSArtObjectCloneTask> cloneTask;            // C8
 		NiPointer<NiAVObject>            artObject3D;          // D0
 		std::uint32_t                    flags;                // D4

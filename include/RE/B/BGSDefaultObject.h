@@ -28,7 +28,7 @@ namespace RE
 		}
 
 		// members
-		TESForm* form;          // 20
+		TESForm*      form;          // 20
 		ENUM_FORM_ID  type;          // 28
 		BSFixedString formEditorID;  // 30
 

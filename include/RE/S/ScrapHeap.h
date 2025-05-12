@@ -14,7 +14,7 @@ namespace RE
 		public:
 			// members
 			std::size_t sizeFlags;  // 00
-			Block* prev;       // 08
+			Block*      prev;       // 08
 		};
 		static_assert(sizeof(Block) == 0x10);
 
@@ -34,8 +34,8 @@ namespace RE
 		public:
 			// members
 			FreeTreeNode** root;            // 20
-			FreeTreeNode* leftNode;        // 28
-			FreeTreeNode* rightNode;       // 30
+			FreeTreeNode*  leftNode;        // 28
+			FreeTreeNode*  rightNode;       // 30
 			std::size_t    parentAndBlack;  // 38
 		};
 		static_assert(sizeof(FreeTreeNode) == 0x40);
@@ -47,7 +47,7 @@ namespace RE
 		std::size_t Size(void const* a_mem) const override { return *static_cast<const std::size_t*>(a_mem) & ~(std::size_t{ 3 } << 62); }  // 01
 		void        GetMemoryStats(MemoryStats*) override { return; }                                                                       // 02
 		bool        ContainsBlockImpl(const void* a_block) const override { return baseAddress <= a_block && a_block <= endAddress; }       // 03
-		void* AllocateAlignImpl(std::size_t a_size, std::uint32_t a_alignment) override { return Allocate(a_size, a_alignment); }     // 04
+		void*       AllocateAlignImpl(std::size_t a_size, std::uint32_t a_alignment) override { return Allocate(a_size, a_alignment); }     // 04
 		void        DeallocateAlignImpl(void*& a_block) override { Deallocate(a_block), a_block = nullptr; }                                // 05
 
 		void* Allocate(std::size_t a_size, std::size_t a_alignment)
@@ -65,12 +65,12 @@ namespace RE
 		}
 
 		// members
-		FreeBlock* smallBlocks[6]{ nullptr };  // 08
+		FreeBlock*    smallBlocks[6]{ nullptr };  // 08
 		FreeTreeNode* freeList{ nullptr };        // 38
-		Block* lastBlock{ nullptr };       // 40
-		std::byte* baseAddress{ nullptr };     // 48
-		std::byte* endAddress{ nullptr };      // 50
-		std::byte* commitEnd{ nullptr };       // 58
+		Block*        lastBlock{ nullptr };       // 40
+		std::byte*    baseAddress{ nullptr };     // 48
+		std::byte*    endAddress{ nullptr };      // 50
+		std::byte*    commitEnd{ nullptr };       // 58
 		std::size_t   reserveSize;                // 60
 		std::size_t   minCommit{ 1u << 17 };      // 68
 		std::size_t   totalAllocated{ 0 };        // 70

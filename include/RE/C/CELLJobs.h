@@ -19,7 +19,7 @@ namespace RE
 		{
 		public:
 			const CELLJobs::AnimatedRefJobData* data;
-			NiUpdateData* updateData;
+			NiUpdateData*                       updateData;
 		};
 		static_assert(sizeof(TransUpdateFunctor) == 0x10);
 	};

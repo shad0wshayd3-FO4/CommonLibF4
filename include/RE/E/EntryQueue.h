@@ -2,8 +2,8 @@
 
 namespace RE
 {
-    namespace BSResource
-    {
+	namespace BSResource
+	{
 		template <class T>
 		class EntryQueue
 		{
@@ -14,5 +14,5 @@ namespace RE
 			T**                    tail;  // 10
 		};
 		static_assert(sizeof(EntryQueue<void>) == 0x18);
-    }
+	}
 }

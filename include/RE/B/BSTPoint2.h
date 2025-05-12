@@ -5,7 +5,7 @@ namespace RE
 	template <
 		class T,
 		class Ops = BSTPointDefaultOps<T>>
-		class BSTPoint2 :
+	class BSTPoint2 :
 		public BSTPoint2Base<T>,
 		public BSTPointDefaultOps<T>
 	{

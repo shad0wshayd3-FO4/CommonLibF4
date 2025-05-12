@@ -2,8 +2,8 @@
 
 namespace RE
 {
-    namespace BSResource
-    {
+	namespace BSResource
+	{
 		class EntryDBBaseUtil
 		{
 		public:
@@ -20,5 +20,5 @@ namespace RE
 			bool          allowDeadLoadSkipping;  // 0C
 		};
 		static_assert(sizeof(EntryDBBaseUtil) == 0x10);
-    }
+	}
 }

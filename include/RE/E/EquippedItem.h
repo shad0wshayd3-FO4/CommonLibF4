@@ -7,7 +7,7 @@ namespace RE
 	public:
 		// members
 		BGSObjectInstance           item;        // 00
-		const BGSEquipSlot* equipSlot;   // 10
+		const BGSEquipSlot*         equipSlot;   // 10
 		BGSEquipIndex               equipIndex;  // 18
 		NiPointer<EquippedItemData> data;        // 20
 	};

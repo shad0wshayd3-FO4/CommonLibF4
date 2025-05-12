@@ -24,14 +24,14 @@ namespace RE
 
 		// members
 		BSTArray<BSInputEventUser*> handlers;              // 18
-		GFxConvertHandler* convertHandler;        // 30
-		DisconnectHandler* disconnectHandler;     // 38
-		ClickHandler* clickHandler;          // 40
-		QuickSaveLoadHandler* quickSaveLoadHandler;  // 48
-		MenuOpenHandler* menuOpenHandler;       // 50
-		ScreenshotHandler* screenshotHandler;     // 58
-		CameraZoomHandler* cameraZoomHandler;     // 60
-		PipboyHandler* pipboyHandler;         // 68
+		GFxConvertHandler*          convertHandler;        // 30
+		DisconnectHandler*          disconnectHandler;     // 38
+		ClickHandler*               clickHandler;          // 40
+		QuickSaveLoadHandler*       quickSaveLoadHandler;  // 48
+		MenuOpenHandler*            menuOpenHandler;       // 50
+		ScreenshotHandler*          screenshotHandler;     // 58
+		CameraZoomHandler*          cameraZoomHandler;     // 60
+		PipboyHandler*              pipboyHandler;         // 68
 	};
 	static_assert(sizeof(MenuControls) == 0x70);
 }

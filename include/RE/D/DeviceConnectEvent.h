@@ -18,6 +18,6 @@ namespace RE
 	};
 	static_assert(sizeof(DeviceConnectEvent) == 0x30);
 
-	extern template DeviceConnectEvent* InputEvent::As() noexcept;
+	extern template DeviceConnectEvent*       InputEvent::As() noexcept;
 	extern template const DeviceConnectEvent* InputEvent::As() const noexcept;
 }

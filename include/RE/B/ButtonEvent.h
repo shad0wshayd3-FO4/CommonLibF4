@@ -17,10 +17,10 @@ namespace RE
 		{
 			REX::EnumSet<BS_BUTTON_CODE> result{ static_cast<BS_BUTTON_CODE>(idCode) };
 			switch (device.get()) {
-			case INPUT_DEVICE::kGamepad:
-				result.set(BS_BUTTON_CODE::kGamepad);
-			default:
-				return result.get();
+				case INPUT_DEVICE::kGamepad:
+					result.set(BS_BUTTON_CODE::kGamepad);
+				default:
+					return result.get();
 			}
 		}
 
@@ -39,6 +39,6 @@ namespace RE
 	};
 	static_assert(sizeof(ButtonEvent) == 0x40);
 
-	extern template ButtonEvent* InputEvent::As() noexcept;
+	extern template ButtonEvent*       InputEvent::As() noexcept;
 	extern template const ButtonEvent* InputEvent::As() const noexcept;
 }

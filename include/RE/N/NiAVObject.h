@@ -43,7 +43,7 @@ namespace RE
 		void                        Update(NiUpdateData& a_data);
 
 		// members
-		NiNode* parent{ nullptr };          // 027
+		NiNode*                             parent{ nullptr };          // 027
 		NiTransform                         local;                      // 030
 		NiTransform                         world;                      // 070
 		NiBound                             worldBound;                 // 0B0

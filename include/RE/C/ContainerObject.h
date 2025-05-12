@@ -23,7 +23,7 @@ namespace RE
 
 		// members
 		std::int32_t        count;      // 00
-		TESBoundObject* obj;        // 08
+		TESBoundObject*     obj;        // 08
 		ContainerItemExtra* itemExtra;  // 10
 	};
 	static_assert(sizeof(ContainerObject) == 0x18);

@@ -26,7 +26,7 @@ namespace RE
 		virtual bool            GetHasPLSpecTex() const { return false; }    // 67
 		virtual TESCombatStyle* GetCombatStyle() { return nullptr; }         // 68
 		virtual void            SetCombatStyle(TESCombatStyle*) { return; }  // 69
-		virtual TESForm* GetAsForm() { return nullptr; }              // 6A
+		virtual TESForm*        GetAsForm() { return nullptr; }              // 6A
 	};
 	static_assert(sizeof(TESActorBase) == 0x1B0);
 }

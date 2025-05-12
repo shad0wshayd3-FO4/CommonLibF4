@@ -55,13 +55,13 @@ namespace RE
 		bool                                              freezeTime;                   // 2A
 		bool                                              freezeNextFrame;              // 2B
 		REX::W32::HWND                                    hwnd;                         // 30
-		void* instance;                     // 38
+		void*                                             instance;                     // 38
 		std::uint32_t                                     threadID;                     // 40
 		ScrapHeap                                         packedTaskHeap;               // 48
 		BSPackedTaskQueue                                 taskQueue;                    // D8
 		ScrapHeap                                         secondaryPackedTaskHeap;      // 108
 		BSPackedTaskQueue                                 secondaryTaskQueue;           // 198
-		TESPageCache* pageCache;                    // 1C8
+		TESPageCache*                                     pageCache;                    // 1C8
 		bool                                              inMenuMode;                   // 1D0
 		bool                                              inDialog;                     // 1D1
 		bool                                              renderingMenuBG;              // 1D2

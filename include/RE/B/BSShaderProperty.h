@@ -109,12 +109,12 @@ namespace RE
 		static_assert(sizeof(RenderPassArray) == 0x8);
 
 		// add
-		virtual RenderPassArray* GetRenderPasses(BSGeometry* a_geom, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator) = 0;  // 2B
-		virtual RenderPassArray* GetRenderPasses_ShadowMapOrMask(BSGeometry*, std::uint32_t, BSShaderAccumulator*) { return nullptr; }     // 2C
-		virtual RenderPassArray* GetRenderPasses_LocalMap(BSGeometry*, std::uint32_t, BSShaderAccumulator*) { return nullptr; }            // 2D
-		virtual BSRenderPass* CreateVatsMaskRenderPass(BSGeometry*) { return nullptr; }                                                 // 2E
+		virtual RenderPassArray*     GetRenderPasses(BSGeometry* a_geom, std::uint32_t a_renderMode, BSShaderAccumulator* a_accumulator) = 0;  // 2B
+		virtual RenderPassArray*     GetRenderPasses_ShadowMapOrMask(BSGeometry*, std::uint32_t, BSShaderAccumulator*) { return nullptr; }     // 2C
+		virtual RenderPassArray*     GetRenderPasses_LocalMap(BSGeometry*, std::uint32_t, BSShaderAccumulator*) { return nullptr; }            // 2D
+		virtual BSRenderPass*        CreateVatsMaskRenderPass(BSGeometry*) { return nullptr; }                                                 // 2E
 		virtual std::uint16_t        GetNumberofPasses([[maybe_unused]] BSGeometry* a_geom) { return 1; }                                      // 2F
-		virtual BSRenderPass* GetRenderDepthPass(BSGeometry*) { return nullptr; }                                                       // 30
+		virtual BSRenderPass*        GetRenderDepthPass(BSGeometry*) { return nullptr; }                                                       // 30
 		virtual bool                 CanMerge(const BSShaderProperty* a_prop);                                                                 // 31
 		virtual void                 SetMaterialAlpha(float) { return; }                                                                       // 32
 		virtual float                QMaterialAlpha() const { return 1.0F; }                                                                   // 33
@@ -122,9 +122,9 @@ namespace RE
 		virtual std::int32_t         ForEachTexture(ForEachVisitor&) { return 1; }                                                             // 35
 		virtual std::int32_t         QShader() const { return 0; }                                                                             // 36
 		virtual void                 ClearUnusedMaterialValues() { return; }                                                                   // 37
-		virtual BSShaderProperty* ClarifyShader(BSGeometry*, bool, bool) { return nullptr; }                                                // 38
-		virtual NiTexture* GetBaseTexture() const { return nullptr; }                                                                // 39
-		virtual RenderPassArray* GetWaterFogPassList(BSGeometry*) { return nullptr; }                                                      // 3A
+		virtual BSShaderProperty*    ClarifyShader(BSGeometry*, bool, bool) { return nullptr; }                                                // 38
+		virtual NiTexture*           GetBaseTexture() const { return nullptr; }                                                                // 39
+		virtual RenderPassArray*     GetWaterFogPassList(BSGeometry*) { return nullptr; }                                                      // 3A
 		virtual bool                 AcceptsEffectData() const { return false; }                                                               // 3B
 		virtual void                 PrecacheTextures() { return; }                                                                            // 3C
 		virtual std::uint32_t        DetermineUtilityShaderDecl() const { return 0; }                                                          // 3D
@@ -144,9 +144,9 @@ namespace RE
 		REX::EnumSet<EShaderPropertyFlag, std::uint64_t> flags;                  // 30
 		RenderPassArray                                  renderPassList;         // 38
 		RenderPassArray                                  debugRenderPassList;    // 40
-		BSFadeNode* fadeNode;               // 48
-		BSEffectShaderData* effectData;             // 50
-		BSShaderMaterial* material;               // 58
+		BSFadeNode*                                      fadeNode;               // 48
+		BSEffectShaderData*                              effectData;             // 50
+		BSShaderMaterial*                                material;               // 58
 		std::uint32_t                                    lastAccumTime;          // 60
 		float                                            lodFade;                // 64
 		BSNonReentrantSpinLock                           clearRenderPassesLock;  // 68

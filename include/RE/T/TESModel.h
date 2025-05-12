@@ -15,7 +15,7 @@ namespace RE
 		void CopyComponent(BaseFormComponent*) override;  // 06
 
 		// add
-		virtual const char* GetModel() const { return model.c_str(); }          // 07
+		virtual const char*           GetModel() const { return model.c_str(); }          // 07
 		virtual void                  SetModel(const char* a_model) { model = a_model; }  // 08
 		virtual BGSModelMaterialSwap* GetAsModelMaterialSwap() { return nullptr; }        // 09
 
@@ -23,7 +23,7 @@ namespace RE
 		BSFixedString   model;            // 08
 		BSResource::ID* textures;         // 10
 		BSResource::ID* materials;        // 18
-		std::uint32_t* addons;           // 20
+		std::uint32_t*  addons;           // 20
 		std::int8_t     numTextures;      // 28
 		std::int8_t     numTexturesSRGB;  // 29
 		std::int8_t     numAddons;        // 2A

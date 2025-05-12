@@ -16,7 +16,7 @@ namespace RE
 
 		// add
 		virtual bool              AddTarget(AddTargetData& a_data);                                                                                                                              // 01
-		virtual TESObjectREFR* GetTargetStatsObject() { return nullptr; }                                                                                                                     // 02
+		virtual TESObjectREFR*    GetTargetStatsObject() { return nullptr; }                                                                                                                     // 02
 		virtual bool              MagicTargetIsActor() { return false; }                                                                                                                         // 03
 		virtual bool              IsInvulnerable() const { return false; }                                                                                                                       // 04
 		virtual void              InvalidateCommandedActorEffect([[maybe_unused]] ActiveEffect* a_effect) { return; }                                                                            // 05

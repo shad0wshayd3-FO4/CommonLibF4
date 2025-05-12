@@ -6,8 +6,8 @@ namespace RE
 	{
 	public:
 		// members
-		hknpWorld* world;
-		hknpConstraint* constraintBuffer;
+		hknpWorld*       world;
+		hknpConstraint*  constraintBuffer;
 		std::uint32_t    capacity;
 		hkBool           constraintBufferIsUserOwned;
 		hknpConstraintId firstDestroyedConstraintId;

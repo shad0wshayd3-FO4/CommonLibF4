@@ -12,7 +12,7 @@ namespace RE
 
 		// add
 		virtual std::uint32_t QEffectCount() const = 0;                                                 // 01
-		virtual char const* GetDebugID() const = 0;                                                   // 02
+		virtual char const*   GetDebugID() const = 0;                                                   // 02
 		virtual void          ForEachEffectImpl(const BSIAudioEffectVisitorBase& a_visitor) const = 0;  // 03
 	};
 	static_assert(sizeof(BSIAudioEffectChain) == 0x8);

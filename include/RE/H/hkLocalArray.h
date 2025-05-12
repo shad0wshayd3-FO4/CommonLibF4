@@ -27,7 +27,7 @@ namespace RE
 			return m_localMemory != this->m_data;
 		}
 
-		T* m_localMemory;
+		T*           m_localMemory;
 		std::int32_t m_initialCapacity;
 	};
 }

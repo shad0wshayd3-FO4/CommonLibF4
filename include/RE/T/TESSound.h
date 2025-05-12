@@ -11,7 +11,7 @@ namespace RE
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kSOUN };
 
 		// members
-		BGSSoundDescriptorForm* descriptor;  // 68
+		BGSSoundDescriptorForm*    descriptor;  // 68
 		TESSoundDefs::RepeaterData repeatData;  // 70
 	};
 	static_assert(sizeof(TESSound) == 0x78);

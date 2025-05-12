@@ -2,7 +2,7 @@
 
 namespace RE
 {
-		template <class T, class Allocator>
+	template <class T, class Allocator>
 	class NiTArray
 	{
 	public:

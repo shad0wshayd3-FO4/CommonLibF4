@@ -38,7 +38,7 @@ namespace RE
 		virtual void DoClearSink() override;          // 0D
 
 		// members
-		PipboyObject* mapObject;                   // E8
+		PipboyObject*                                                                            mapObject;                   // E8
 		BSTHashMap<const MapMarkerData*, PipboyObject*>                                          travelLocationsMarkers;      // F0
 		BSTHashMap<std::uint32_t, BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>>> travelLocationRefrHandles;   // 120
 		BSTArray<PipboyObject*>                                                                  doorMarkers;                 // 150
@@ -47,14 +47,14 @@ namespace RE
 		BSTHashMap<BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>>, PipboyObject*> worldQuestMarkers;           // 1B0
 		NiPoint3                                                                                 playerLastLocationPosition;  // 1E0
 		NiPoint3                                                                                 playerLastWorldPosition;     // 1EC
-		PipboyObject* localPlayerMarker;           // 1F8
-		PipboyObject* worldPlayerMarker;           // 200
-		PipboyObject* localCustomMarker;           // 208
-		PipboyObject* worldCustomMarker;           // 210
-		PipboyObject* localPowerArmorMarker;       // 218
-		PipboyObject* worldPowerArmorMarker;       // 220
-		PipboyObject* worldMapExtents;             // 230
-		PipboyObject* localMapExtents;             // 238
+		PipboyObject*                                                                            localPlayerMarker;           // 1F8
+		PipboyObject*                                                                            worldPlayerMarker;           // 200
+		PipboyObject*                                                                            localCustomMarker;           // 208
+		PipboyObject*                                                                            worldCustomMarker;           // 210
+		PipboyObject*                                                                            localPowerArmorMarker;       // 218
+		PipboyObject*                                                                            worldPowerArmorMarker;       // 220
+		PipboyObject*                                                                            worldMapExtents;             // 230
+		PipboyObject*                                                                            localMapExtents;             // 238
 	};
 	static_assert(sizeof(PipboyMapData) == 0x238);
 }

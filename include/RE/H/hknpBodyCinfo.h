@@ -13,7 +13,7 @@ namespace RE
 		}
 
 		// members
-		const hknpShape* shape;
+		const hknpShape*                              shape;
 		hknpBodyId                                    reservedBodyId;
 		hknpMotionId                                  motionId;
 		hknpBodyQualityId                             qualityId;

@@ -16,7 +16,7 @@ namespace RE
 			std::uint32_t     lastEffect;    // 04
 			ImageSpaceEffect* parentEffect;  // 08
 			std::uint64_t     labelWait;     // 10
-			std::uint64_t* writeLabel;    // 18
+			std::uint64_t*    writeLabel;    // 18
 		};
 		static_assert(sizeof(EffectDesc) == 0x20);
 

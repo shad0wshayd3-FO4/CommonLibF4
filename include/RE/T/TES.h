@@ -18,7 +18,7 @@ namespace RE
 			// members
 			NiPointer<NiAVObject>  model;   // 00
 			NiPointer<NiAVObject>* clones;  // 08
-			ParticleObjectCache* next;    // 10
+			ParticleObjectCache*   next;    // 10
 		};
 		static_assert(sizeof(ParticleObjectCache) == 0x18);
 
@@ -37,28 +37,28 @@ namespace RE
 		}
 
 		// members
-		GridDistantArray* gridDistant;                    // 010
-		GridCellArray* gridCells;                      // 018
-		NiNode* objRoot;                        // 020
-		NiNode* lodLandRoot;                    // 028
-		NiNode* objLODWaterRoot;                // 030
-		NiDirectionalLight* objLight;                       // 038
-		NiFogProperty* objFog;                         // 040
+		GridDistantArray*                                   gridDistant;                    // 010
+		GridCellArray*                                      gridCells;                      // 018
+		NiNode*                                             objRoot;                        // 020
+		NiNode*                                             lodLandRoot;                    // 028
+		NiNode*                                             objLODWaterRoot;                // 030
+		NiDirectionalLight*                                 objLight;                       // 038
+		NiFogProperty*                                      objFog;                         // 040
 		std::int32_t                                        currentGridX;                   // 044
 		std::int32_t                                        currentGridY;                   // 048
 		std::int32_t                                        currentQueuedX;                 // 04C
 		std::int32_t                                        currentQueuedY;                 // 050
-		TESObjectCELL* interiorCell;                   // 058
-		TESObjectCELL** interiorBuffer;                 // 060
-		TESObjectCELL** exteriorBuffer;                 // 068
+		TESObjectCELL*                                      interiorCell;                   // 058
+		TESObjectCELL**                                     interiorBuffer;                 // 060
+		TESObjectCELL**                                     exteriorBuffer;                 // 068
 		std::uint32_t                                       tempInteriorBufferSize;         // 070
 		std::uint32_t                                       tempExteriorBufferSize;         // 074
 		std::int32_t                                        saveGridX;                      // 078
 		std::int32_t                                        saveGridY;                      // 07C
-		TACCallbackFunc_t* tacCallbackFunc;                // 080
-		void* tacCallbackData;                // 088
-		TESRegion* tacRegionFilter;                // 090
-		Sky* sky;                            // 098
+		TACCallbackFunc_t*                                  tacCallbackFunc;                // 080
+		void*                                               tacCallbackData;                // 088
+		TESRegion*                                          tacRegionFilter;                // 090
+		Sky*                                                sky;                            // 098
 		BSSimpleList<NiPointer<ImageSpaceModifierInstance>> activeImageSpaceModifiers;      // 0A0
 		std::uint32_t                                       totalToLoad;                    // 0B0
 		std::uint32_t                                       loaded;                         // 0B4
@@ -76,15 +76,15 @@ namespace RE
 		bool                                                allowUnusedPurge;               // 0CA
 		float                                               cellDeltaX;                     // 0D0
 		float                                               cellDeltaY;                     // 0D4
-		TESWorldSpace* worldSpace;                     // 0D8
+		TESWorldSpace*                                      worldSpace;                     // 0D8
 		BSTArray<BSTTuple<TESActorBase*, std::uint16_t>>    deadCount;                      // 0E0
 		NiPointer<QueuedFile>                               preloadedAddonNodes;            // 0F8
 		NiPointer<NiTexture>                                bloodDecalPreload1;             // 100
 		NiPointer<QueuedFile>                               preloadedForms;                 // 108
 		NiPointer<QueuedFile>                               preloadedDefaultModels;         // 110
-		TES::ParticleObjectCache* particleCacheHead;              // 118
+		TES::ParticleObjectCache*                           particleCacheHead;              // 118
 		std::uint32_t                                       placeableWaterCount;            // 120
-		NavMeshInfoMap* navMeshInfoMap;                 // 128
+		NavMeshInfoMap*                                     navMeshInfoMap;                 // 128
 		NiPointer<LoadedAreaBound>                          loadedAreaBound;                // 130
 	};
 	static_assert(sizeof(TES) == 0x138);

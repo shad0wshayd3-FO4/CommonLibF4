@@ -54,8 +54,8 @@ namespace RE
 		BSTArray<std::uint32_t>           actorFlags;              // 60
 		BSTArray<std::uint32_t>           actorProgressionFlags;   // 78
 		BSTArray<BGSSceneAction*>         actions;                 // 90
-		TESQuest* parentQuest;             // A8
-		BGSScene* templateScene;           // B0
+		TESQuest*                         parentQuest;             // A8
+		BGSScene*                         templateScene;           // B0
 		std::uint32_t                     flags;                   // B8
 		TESCondition                      repeatConditions;        // C0
 		std::uint32_t                     speakerID;               // C8

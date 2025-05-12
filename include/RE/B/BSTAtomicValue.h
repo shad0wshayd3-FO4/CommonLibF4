@@ -41,7 +41,7 @@ namespace RE
 			return value--;
 		}
 
-		[[nodiscard]] value_type& load_unchecked() noexcept { return _value; }
+		[[nodiscard]] value_type&       load_unchecked() noexcept { return _value; }
 		[[nodiscard]] const value_type& load_unchecked() const noexcept { return _value; }
 
 	private:

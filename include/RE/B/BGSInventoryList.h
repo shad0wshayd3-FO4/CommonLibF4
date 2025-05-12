@@ -14,15 +14,15 @@ namespace RE
 
 		F4_HEAP_REDEFINE_NEW(BGSInventoryList)
 
-			[[nodiscard]] static bool StandardObjectCompareCallbackFn(TESBoundObject* a_lhs, TESBoundObject* a_rhs)
+		[[nodiscard]] static bool StandardObjectCompareCallbackFn(TESBoundObject* a_lhs, TESBoundObject* a_rhs)
 		{
 			return a_lhs == a_rhs;
 		}
 
 		void FindAndWriteStackDataForItem(
-			TESBoundObject* a_object,
+			TESBoundObject*                            a_object,
 			BGSInventoryItem::StackDataCompareFunctor& a_compareFunc,
-			BGSInventoryItem::StackDataWriteFunctor& a_writeFunc,
+			BGSInventoryItem::StackDataWriteFunctor&   a_writeFunc,
 			bool (*a_objCompFn)(TESBoundObject*, TESBoundObject*) = StandardObjectCompareCallbackFn,
 			bool a_alwaysContinue = false)
 		{

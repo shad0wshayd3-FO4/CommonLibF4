@@ -21,8 +21,8 @@ namespace RE
 
 		// members
 		REX::W32::CRITICAL_SECTION pipboyDataMutex;  // 60
-		PipboyThrottleManager* throttleManager;  // 88
-		PipboyValue* rootValue;        // 90
+		PipboyThrottleManager*     throttleManager;  // 88
+		PipboyValue*               rootValue;        // 90
 	};
 	static_assert(sizeof(PipboyDataGroup) == 0x98);
 }

@@ -58,7 +58,7 @@ namespace RE
 				std::vector<TESLevSpell*> copiedData{ levSpells, levSpells + numLevSpells };
 				std::ranges::remove_copy_if(a_levSpells, std::back_inserter(copiedData), [&](auto& spell) {
 					return std::ranges::find(copiedData, spell) != copiedData.end();
-					});
+				});
 				CopySpellList(copiedData);
 				return true;
 			}
@@ -68,7 +68,7 @@ namespace RE
 				std::vector<SpellItem*> copiedData{ spells, spells + numSpells };
 				std::ranges::remove_copy_if(a_spells, std::back_inserter(copiedData), [&](auto& spell) {
 					return std::ranges::find(copiedData, spell) != copiedData.end();
-					});
+				});
 				CopySpellList(copiedData);
 				return true;
 			}
@@ -118,9 +118,9 @@ namespace RE
 			}
 
 			// members
-			SpellItem** spells;        // 00
+			SpellItem**   spells;        // 00
 			TESLevSpell** levSpells;     // 08
-			TESShout** shouts;        // 10
+			TESShout**    shouts;        // 10
 			std::uint32_t numSpells;     // 18
 			std::uint32_t numLevSpells;  // 1C
 			std::uint32_t numShouts;     // 20

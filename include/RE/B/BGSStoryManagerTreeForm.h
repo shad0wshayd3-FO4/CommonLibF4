@@ -12,8 +12,8 @@ namespace RE
 
 		// add
 		virtual std::uint32_t                            QChildCount() const { return 0; }                                           // 4A
-		virtual BGSStoryManagerTreeForm* GetChild([[maybe_unused]] std::uint32_t a_index) const { return nullptr; }  // 4B
-		virtual TESCondition* QConditions() = 0;                                                          // 4C
+		virtual BGSStoryManagerTreeForm*                 GetChild([[maybe_unused]] std::uint32_t a_index) const { return nullptr; }  // 4B
+		virtual TESCondition*                            QConditions() = 0;                                                          // 4C
 		virtual BGSStoryManagerTreeVisitor::VisitControl AcceptVisitor(BGSStoryManagerTreeVisitor& a_visitor) = 0;                   // 4D
 
 		// members

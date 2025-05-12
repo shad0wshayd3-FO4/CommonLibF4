@@ -25,7 +25,7 @@ namespace RE
 		virtual float         GetMinFrequencyMult() const = 0;                                                                  // 0C
 		virtual bool          GetBlockSpeedChange() const = 0;                                                                  // 0D
 		virtual bool          GetSkipOPMOverrides() const = 0;                                                                  // 0E
-		virtual const char* GetDebugID() const = 0;                                                                           // 0F
+		virtual const char*   GetDebugID() const = 0;                                                                           // 0F
 	};
 	static_assert(sizeof(BSISoundCategory) == 0x8);
 }

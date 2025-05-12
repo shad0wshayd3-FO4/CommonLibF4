@@ -33,7 +33,7 @@ namespace RE
 		BGSSoundDescriptorForm* openSound;         // 150
 		BGSSoundDescriptorForm* closeSound;        // 158
 		BGSSoundDescriptorForm* takeAllSound;      // 160
-		BGSListForm* containsOnlyList;  // 168
+		BGSListForm*            containsOnlyList;  // 168
 	};
 	static_assert(sizeof(TESObjectCONT) == 0x170);
 }

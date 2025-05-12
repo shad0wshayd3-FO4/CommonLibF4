@@ -15,9 +15,9 @@ namespace RE
 
 			F4_HEAP_REDEFINE_NEW(Conditional);
 
-			TESGlobal* ownerGlobal;
+			TESGlobal*   ownerGlobal;
 			std::int32_t ownerRank;
-			void* u;
+			void*        u;
 		};
 		static_assert(sizeof(Conditional) == 0x8);
 
@@ -37,7 +37,7 @@ namespace RE
 		F4_HEAP_REDEFINE_NEW(ContainerItemExtra);
 
 		// members
-		TESForm* ownerForm;    // 00
+		TESForm*    ownerForm;    // 00
 		Conditional conditional;  // 08
 		float       healthMult;   // 10
 	};

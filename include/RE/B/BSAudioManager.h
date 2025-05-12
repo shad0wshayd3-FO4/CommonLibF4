@@ -29,9 +29,9 @@ namespace RE
 		// members
 		std::int32_t                                              messageListIndex;            // 000
 		std::int32_t                                              messageProcessingListIndex;  // 004
-		SoundMessageList* messages[2];                 // 008
-		SoundMessageStack* freeMessages;                // 018
-		SoundMessageStack* garbageMessages;             // 020
+		SoundMessageList*                                         messages[2];                 // 008
+		SoundMessageStack*                                        freeMessages;                // 018
+		SoundMessageStack*                                        garbageMessages;             // 020
 		BSTHashMap<std::uint32_t, BSGameSound*>                   soundMap;                    // 028
 		BSTHashMap<std::uint32_t, BSSoundInfo*>                   soundStateMap;               // 058
 		BSTHashMap<std::uint32_t, NiPointer<NiAVObject>>          movingRefrMap;               // 088
@@ -40,10 +40,10 @@ namespace RE
 		BSTHashMap<std::uint32_t, BSMultisound*>                  multisoundMap;               // 118
 		BSTHashMap<const NiAVObject*, NiPoint3>                   locationOverrideMap;         // 148
 		SyncedPlaybackManager                                     syncManager;                 // 178
-		void* cachedSoundList;             // 190 - BSTList<BSGameSound*>
+		void*                                                     cachedSoundList;             // 190 - BSTList<BSGameSound*>
 		std::uint32_t                                             currentCacheSize;            // 198
 		std::uint32_t                                             audioThreadID;               // 19C
-		BSAudioManagerThread* updateThread;                // 1A0
+		BSAudioManagerThread*                                     updateThread;                // 1A0
 		std::uint32_t                                             audioThreadSleepTime;        // 1A8
 		std::uint32_t                                             audioHWThread;               // 1AC
 		BSAudioInit                                               initSettings;                // 1B0

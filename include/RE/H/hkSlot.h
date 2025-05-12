@@ -14,6 +14,6 @@ namespace RE
 
 		// members
 		mutable hkSlot* next;
-		void* object;
+		void*           object;
 	};
 }

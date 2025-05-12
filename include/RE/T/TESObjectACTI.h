@@ -23,7 +23,7 @@ namespace RE
 		// members
 		BGSSoundDescriptorForm* soundLoop;      // 128
 		BGSSoundDescriptorForm* soundActivate;  // 130
-		TESWaterForm* waterForm;      // 138
+		TESWaterForm*           waterForm;      // 138
 		std::uint16_t           flags;          // 140
 	};
 	static_assert(sizeof(TESObjectACTI) == 0x148);

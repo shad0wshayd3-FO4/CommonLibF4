@@ -43,7 +43,7 @@ namespace RE
 		};
 
 		// members
-		BGSBodyPart* partArray[26];           // 058
+		BGSBodyPart*                     partArray[26];           // 058
 		BGSBodyPartDefs::HitReactionData defaultHitReactionData;  // 128
 	};
 	static_assert(sizeof(BGSBodyPartData) == 0x150);

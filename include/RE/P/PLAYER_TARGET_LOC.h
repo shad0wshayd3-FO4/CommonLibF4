@@ -8,14 +8,14 @@ namespace RE
 		using ArrivalFunc_t = void(void*);
 
 		// members
-		TESWorldSpace* world;             // 00
-		TESObjectCELL* interior;          // 08
+		TESWorldSpace*    world;             // 00
+		TESObjectCELL*    interior;          // 08
 		DoorTeleportData* transitionTel;     // 10
 		NiPoint3          location;          // 18
 		NiPoint3          angle;             // 24
-		TESObjectREFR* walkThroughDoor;   // 30
-		ArrivalFunc_t* arrivalFunc;       // 38
-		void* arrivalFuncData;   // 40
+		TESObjectREFR*    walkThroughDoor;   // 30
+		ArrivalFunc_t*    arrivalFunc;       // 38
+		void*             arrivalFuncData;   // 40
 		ObjectRefHandle   furnitureRef;      // 48
 		ObjectRefHandle   fastTravelMarker;  // 4C
 		float             fastTravelDist;    // 50

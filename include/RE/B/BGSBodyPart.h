@@ -14,11 +14,11 @@ namespace RE
 		BSFixedString                    goreObjectName;                // 048
 		TESModel                         explosionSpecialDebris;        // 050
 		PART_DATA                        data;                          // 080
-		BGSArtObject* dismemberBlood;                // 128
-		BGSMaterialType* bloodImpactMaterial;           // 130
-		BGSMaterialType* onCrippleBloodImpactMaterial;  // 138
-		BGSTextureSet* meatCapTextureSet;             // 140
-		BGSTextureSet* meatCollarTextureSet;          // 148
+		BGSArtObject*                    dismemberBlood;                // 128
+		BGSMaterialType*                 bloodImpactMaterial;           // 130
+		BGSMaterialType*                 onCrippleBloodImpactMaterial;  // 138
+		BGSTextureSet*                   meatCapTextureSet;             // 140
+		BGSTextureSet*                   meatCollarTextureSet;          // 148
 	};
 	static_assert(sizeof(BGSBodyPart) == 0x150);
 }

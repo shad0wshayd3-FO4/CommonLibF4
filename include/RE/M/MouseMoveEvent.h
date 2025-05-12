@@ -19,6 +19,6 @@ namespace RE
 	};
 	static_assert(sizeof(MouseMoveEvent) == 0x40);
 
-	extern template MouseMoveEvent* InputEvent::As() noexcept;
+	extern template MouseMoveEvent*       InputEvent::As() noexcept;
 	extern template const MouseMoveEvent* InputEvent::As() const noexcept;
 }

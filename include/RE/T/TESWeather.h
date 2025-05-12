@@ -37,7 +37,7 @@ namespace RE
 		{
 		public:
 			// members
-			BGSSoundDescriptorForm* soundForm;  // 00
+			BGSSoundDescriptorForm*               soundForm;  // 00
 			REX::EnumSet<SoundType, std::int32_t> type;       // 08
 		};
 		static_assert(sizeof(WeatherSound) == 0x10);
@@ -65,15 +65,15 @@ namespace RE
 		WeatherSoundList                         soundList;                            // DC8
 		BSTArray<TESObjectSTAT*>                 skyStatics;                           // DD8
 		std::uint32_t                            numCloudLayers;                       // DF0
-		TESImageSpace* imageSpace[8];                        // DF8
-		BGSGodRays* godRays[8];                           // E38
+		TESImageSpace*                           imageSpace[8];                        // DF8
+		BGSGodRays*                              godRays[8];                           // E38
 		BGSDirectionalAmbientLightingColors      directionalAmbientLightingColors[8];  // E78
 		TESModel                                 aurora;                               // F78
-		BGSLensFlare* sunGlareLensFlare;                    // FA8
+		BGSLensFlare*                            sunGlareLensFlare;                    // FA8
 		float                                    volatilityMult;                       // FB0
 		float                                    visibilityMult;                       // FB4
-		BGSShaderParticleGeometryData* precipitationData;                    // FB8
-		BGSReferenceEffect* referenceEffect;                      // FC0
+		BGSShaderParticleGeometryData*           precipitationData;                    // FB8
+		BGSReferenceEffect*                      referenceEffect;                      // FC0
 	};
 	static_assert(sizeof(TESWeather) == 0xFC8);
 }

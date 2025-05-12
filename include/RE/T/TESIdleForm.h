@@ -28,9 +28,9 @@ namespace RE
 		// members
 		TESCondition    conditions;         // 20
 		IDLE_DATA       data;               // 28
-		NiFormArray* childIdles;         // 30
-		TESIdleForm* parentIdle;         // 38
-		TESIdleForm* prevIdle;           // 40
+		NiFormArray*    childIdles;         // 30
+		TESIdleForm*    parentIdle;         // 38
+		TESIdleForm*    prevIdle;           // 40
 		BSFixedString   behaviorGraphName;  // 48
 		BSFixedString   animEventName;      // 50
 		BSFixedString   animFileName;       // 58

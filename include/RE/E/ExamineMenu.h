@@ -17,7 +17,7 @@ namespace RE
 		public:
 			// members
 			BSTArray<BSTTuple<BGSComponent*, std::uint8_t>> components;  // 00
-			TESObjectMISC* a_object;    // 18
+			TESObjectMISC*                                  a_object;    // 18
 			std::uint32_t                                   a_index;     // 20
 		};
 		static_assert(sizeof(ComponentBuilderFunctor) == 0x28);
@@ -42,7 +42,7 @@ namespace RE
 		// add
 		virtual EQUIP_TYPE              GetInventoryEntryEquipState(const InventoryUserUIInterfaceEntry& a_entry);                                                          // 1C
 		virtual void                    ShowCurrent3D();                                                                                                                    // 1D
-		virtual TESBoundObject* GetCurrentObj();                                                                                                                    // 1E
+		virtual TESBoundObject*         GetCurrentObj();                                                                                                                    // 1E
 		virtual void                    FindWeaponMods(TESBoundObject* a_object, Scaleform::GFx::Value& a_modList);                                                         // 1F
 		virtual void                    BuildPossibleModList(TESBoundObject* a_object);                                                                                     // 20
 		virtual void                    SwitchMod(std::int32_t a_index, Scaleform::GFx::Value& a_entryList);                                                                // 21
@@ -51,22 +51,22 @@ namespace RE
 		virtual void                    AttachModToPreview(bool a_storeModelPosition);                                                                                      // 24
 		virtual BGSObjectInstanceExtra* GetInitialObjectInstanceExtra();                                                                                                    // 25
 		virtual BGSObjectInstanceExtra* GetObjectInstanceExtra();                                                                                                           // 26
-		virtual const ExtraDataList* GetItemExtraDataList();                                                                                                             // 27
+		virtual const ExtraDataList*    GetItemExtraDataList();                                                                                                             // 27
 		virtual void                    HighlightWeaponPart();                                                                                                              // 28
 		virtual void                    ResetHighlight();                                                                                                                   // 29
 		virtual void                    CreateModdedInventoryItem();                                                                                                        // 2A
 		virtual void                    RevertToInventoryItem();                                                                                                            // 2B
-		virtual const char* GetCurrentName();                                                                                                                   // 2C
+		virtual const char*             GetCurrentName();                                                                                                                   // 2C
 		virtual void                    RenameCurrent(const char* a_newName);                                                                                               // 2D
 		virtual void                    UpdateItemCard(bool a_compare);                                                                                                     // 2E
 		virtual void                    UpdateItemList(std::int32_t a_indexToSelect);                                                                                       // 2F
-		virtual const char* GetBuildConfirmButtonLabel();                                                                                                       // 30
+		virtual const char*             GetBuildConfirmButtonLabel();                                                                                                       // 30
 		virtual void                    GetBuildConfirmQuestion(char* a_buffer, std::uint32_t a_bufferLength);                                                              // 31
 		virtual bool                    GetCanRepairSelectedItem();                                                                                                         // 32
-		virtual NiAVObject* GetCurrent3D();                                                                                                                     // 33
+		virtual NiAVObject*             GetCurrent3D();                                                                                                                     // 33
 		virtual bool                    GetCurrent3DLoaded();                                                                                                               // 34
 		virtual bool                    GetIsValidInventoryItem(const BGSInventoryItem& a_item, std::uint32_t a_stackID);                                                   // 35
-		virtual const char* GetMenuName();                                                                                                                      // 36
+		virtual const char*             GetMenuName();                                                                                                                      // 36
 		virtual void                    OnSwitchBaseItem();                                                                                                                 // 37
 		virtual void                    PopulateInventoryItemObj(ObjectRefHandle a_owner, const InventoryUserUIInterfaceEntry& a_entry, Scaleform::GFx::Value& a_itemObj);  // 38
 		virtual void                    RegisterMenuComponents(const Scaleform::GFx::FunctionHandler::Params& a_params);                                                    // 39
@@ -76,7 +76,7 @@ namespace RE
 		virtual void                    ToggleItemEquipped();                                                                                                               // 3D
 		virtual void                    UpdateModSlotList();                                                                                                                // 3E
 		virtual void                    UpdateModChoiceList();                                                                                                              // 3F
-		virtual const char* GetRankSuffix(std::uint32_t a_rank);                                                                                                // 40
+		virtual const char*             GetRankSuffix(std::uint32_t a_rank);                                                                                                // 40
 		virtual bool                    QIgnoreRank();                                                                                                                      // 41
 		virtual bool                    ShouldInitToFirstMod();                                                                                                             // 42
 		virtual void                    SetDataForConditionCheck();                                                                                                         // 43
@@ -140,10 +140,10 @@ namespace RE
 		float                                              menuCursorBottomPct;                 // 570
 		BSTArray<BGSComponent*>                            queuedSoundArray;                    // 578
 		std::byte                                          attachPointSource3D[0x598 - 0x590];  // 590 - TODO
-		const BGSMod::Attachment::Mod* nullMod;                             // 598
+		const BGSMod::Attachment::Mod*                     nullMod;                             // 598
 		Scaleform::GFx::Value                              requirementsList;                    // 5A0
 		Scaleform::GFx::Value                              itemSelectList;                      // 5C0
-		const BGSKeyword* keyword;                             // 5E0
+		const BGSKeyword*                                  keyword;                             // 5E0
 		bool                                               queueChangeCameraPosition;           // 5E8
 		bool                                               returnToInspect;                     // 5E9
 		bool                                               highlightStoredItem;                 // 5EA

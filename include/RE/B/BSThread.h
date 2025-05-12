@@ -12,8 +12,8 @@ namespace RE
 
 		// members
 		REX::W32::CRITICAL_SECTION criticalSection;  // 08
-		void* threadHandle;     // 30
-		void* parentHandle;     // 38
+		void*                      threadHandle;     // 30
+		void*                      parentHandle;     // 38
 		std::uint32_t              threadID;         // 40
 		std::uint32_t              parentID;         // 44
 		volatile bool              threadIsActive;   // 48

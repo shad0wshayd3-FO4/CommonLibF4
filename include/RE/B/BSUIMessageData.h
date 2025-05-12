@@ -43,7 +43,7 @@ namespace RE
 		union
 		{
 			std::uint32_t u;
-			void* p{ nullptr };
+			void*         p{ nullptr };
 			float         f;
 			bool          b;
 		} data;  // 28

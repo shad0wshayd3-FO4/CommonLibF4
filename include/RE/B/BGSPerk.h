@@ -17,7 +17,7 @@ namespace RE
 		PerkData                data;            // 58
 		TESCondition            perkConditions;  // 60
 		BSTArray<BGSPerkEntry*> perkEntries;     // 68
-		BGSPerk* nextPerk;        // 80
+		BGSPerk*                nextPerk;        // 80
 		BGSSoundDescriptorForm* sound;           // 88
 		BSFixedStringCS         swfFile;         // 90
 	};

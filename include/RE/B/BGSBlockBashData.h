@@ -11,7 +11,7 @@ namespace RE
 
 		// members
 		BGSImpactDataSet* blockBashImpactDataSet;  // 08
-		BGSMaterialType* altBlockMaterialType;    // 10
+		BGSMaterialType*  altBlockMaterialType;    // 10
 	};
 	static_assert(sizeof(BGSBlockBashData) == 0x18);
 }

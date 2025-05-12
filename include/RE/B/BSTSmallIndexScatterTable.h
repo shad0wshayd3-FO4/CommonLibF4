@@ -18,7 +18,7 @@ namespace RE
 		};
 
 		std::uint64_t pad;       // 00
-		entry_type* table;     // 08
+		entry_type*   table;     // 08
 		std::uint32_t size;      // 10
 		std::uint32_t mask;      // 14
 		std::uint32_t avail;     // 18

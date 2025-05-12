@@ -76,12 +76,12 @@ namespace RE
 
 		// members
 		SCRIPT_HEADER                           header;                       // 20
-		char* text;                         // 38
-		std::byte* data;                         // 40
+		char*                                   text;                         // 38
+		std::byte*                              data;                         // 40
 		float                                   profilerTimer;                // 48
 		float                                   questScriptDelay;             // 4C
 		float                                   questScriptGetSecondsBuffer;  // 50
-		TESQuest* parentQuest;                  // 58
+		TESQuest*                               parentQuest;                  // 58
 		BSSimpleList<SCRIPT_REFERENCED_OBJECT*> refObjects;                   // 60
 		BSSimpleList<ScriptVariable*>           variables;                    // 70
 	};

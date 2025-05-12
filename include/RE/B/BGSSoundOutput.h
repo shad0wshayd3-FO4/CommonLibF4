@@ -17,9 +17,9 @@ namespace RE
 		struct SpeakerArrays;
 
 		// members
-		DynamicAttenuationCharacteristics* attenuation;          // 28
-		SpeakerArrays* speakerOutputArrays;  // 30
-		BGSAudioEffectChain* effectChain;          // 38
+		DynamicAttenuationCharacteristics*              attenuation;          // 28
+		SpeakerArrays*                                  speakerOutputArrays;  // 30
+		BGSAudioEffectChain*                            effectChain;          // 38
 		std::uint32_t                                   flags;                // 40
 		REX::EnumSet<SPEAKER_OUTPUT_MODE, std::int32_t> mode;                 // 44
 		std::uint16_t                                   staticAttenuation;    // 48

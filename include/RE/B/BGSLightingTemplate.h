@@ -12,7 +12,7 @@ namespace RE
 
 		// members
 		INTERIOR_DATA                       data;                              // 20
-		BGSGodRays* godRays;                           // B0
+		BGSGodRays*                         godRays;                           // B0
 		BGSDirectionalAmbientLightingColors directionalAmbientLightingColors;  // B8
 	};
 	static_assert(sizeof(BGSLightingTemplate) == 0xD8);

@@ -14,7 +14,7 @@ namespace RE
 		ExtraInstanceData(const TESBoundObject* a_base, BSTSmartPointer<TBO_InstanceData> a_data);
 
 		// members
-		const TESBoundObject* base{ nullptr };  // 18
+		const TESBoundObject*             base{ nullptr };  // 18
 		BSTSmartPointer<TBO_InstanceData> data;             // 20
 	};
 	static_assert(sizeof(ExtraInstanceData) == 0x28);

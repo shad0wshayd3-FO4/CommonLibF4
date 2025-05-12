@@ -20,8 +20,8 @@ namespace RE
 			REX::EnumSet<MagicSystem::Delivery, std::int32_t>    delivery;          // 10
 			REX::EnumSet<MagicSystem::SpellType, std::int32_t>   spellType;         // 14
 			float                                                chargeTime;        // 18
-			EnchantmentItem* baseEnchantment;   // 20
-			BGSListForm* wornRestrictions;  // 28
+			EnchantmentItem*                                     baseEnchantment;   // 20
+			BGSListForm*                                         wornRestrictions;  // 28
 		};
 		static_assert(sizeof(Data) == 0x30);
 

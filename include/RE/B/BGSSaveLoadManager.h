@@ -59,10 +59,10 @@ namespace RE
 		bool                                     autosaveDisabledForDiskspace;  // 03D
 		std::uint32_t                            queuedTasks;                   // 040
 		std::uint32_t                            saveOperationDelayCounter;     // 044
-		BGSSaveLoadFileEntry* queuedEntryToLoad;             // 048
+		BGSSaveLoadFileEntry*                    queuedEntryToLoad;             // 048
 		std::uint64_t                            lastSaveTime;                  // 050
 		bool                                     savingAllowed;                 // 058
-		char* mostRecentSaveGame;            // 060
+		char*                                    mostRecentSaveGame;            // 060
 		std::int32_t                             mostRecentSaveGameDeviceID;    // 068
 		BSTHashMap<std::uint64_t, BSFixedString> playerIDNameMap;               // 070
 		BSTHashMap<BSFixedString, BSFixedString> editorIdLocationMap;           // 0A0
@@ -73,7 +73,7 @@ namespace RE
 		BSFixedString                            quicksaveFileName;             // 118
 		BSFixedString                            exitsaveFileName;              // 120
 		bool                                     hasSaveData;                   // 128
-		BGSSaveLoadFile* saveLoadFile;                  // 130
+		BGSSaveLoadFile*                         saveLoadFile;                  // 130
 		bool                                     returnedFromSysUtil;           // 138
 		bool                                     sysUtilLoadDataComplete;       // 139
 		SaveCompleteCallback_t                   sysUtilSaveCompleteCallback;   // 140

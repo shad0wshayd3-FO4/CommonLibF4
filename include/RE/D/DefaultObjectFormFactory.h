@@ -17,9 +17,9 @@ namespace RE
 			return new BGSDefaultObject("", ENUM_FORM_ID::kNONE, "");
 		}
 
-		[[nodiscard]] const char* GetFormName() const override { return "DefaultObject"; }    // 02
+		[[nodiscard]] const char*          GetFormName() const override { return "DefaultObject"; }    // 02
 		[[nodiscard]] ENUM_FORM_ID         GetFormID() const override { return ENUM_FORM_ID::kDFOB; }  // 03
-		[[nodiscard]] const char* GetObjectName() const override { return "DefaultObject"; }  // 04
+		[[nodiscard]] const char*          GetObjectName() const override { return "DefaultObject"; }  // 04
 		[[nodiscard]] OBJECT_TYPE          GetObjectType() const override;                             // 05
 		[[nodiscard]] OBJECT_CATEGORY_TYPE GetObjectCategory() const override;                         // 06
 

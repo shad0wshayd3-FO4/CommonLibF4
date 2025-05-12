@@ -16,7 +16,7 @@ namespace RE
 		{
 		public:
 			// members
-			std::int8_t* nuffer;      // 00
+			std::int8_t*  nuffer;      // 00
 			std::uint32_t bufferSize;  // 08
 		};
 		static_assert(sizeof(FILE_DATA) == 0x10);

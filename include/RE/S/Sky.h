@@ -2,7 +2,7 @@
 
 namespace RE
 {
-		class __declspec(novtable) Sky
+	class __declspec(novtable) Sky
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::Sky };

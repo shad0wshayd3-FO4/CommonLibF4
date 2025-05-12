@@ -59,12 +59,12 @@ namespace RE
 		}
 
 		// members
-		bool     useBoundForScale : 1;                                                            // 010:0
-		bool     startedZoomThisFrame : 1;                                                        // 010:1
-		bool     useStoredModelPosition : 1;                                                      // 010:2
-		bool     rotating : 1;                                                                    // 010:3
-		bool     modelPositionInScreenCoords : 1;                                                 // 010:4
-		bool     centerOnBoundCenter : 1;                                                         // 010:5
+		bool     useBoundForScale: 1;                                                            // 010:0
+		bool     startedZoomThisFrame: 1;                                                        // 010:1
+		bool     useStoredModelPosition: 1;                                                      // 010:2
+		bool     rotating: 1;                                                                    // 010:3
+		bool     modelPositionInScreenCoords: 1;                                                 // 010:4
+		bool     centerOnBoundCenter: 1;                                                         // 010:5
 		NiPoint3 modelPosition;                                                                  // 014
 		float    modelScale;                                                                     // 020
 		alignas(0x10) BSTArray<LoadedInventoryModel> loadedModels;                               // 030
@@ -74,12 +74,12 @@ namespace RE
 		NiQuaternion                                                  storedRotation;            // 090
 		NiPoint2                                                      previousInput;             // 0A0
 		NiPointer<nsInventory3DManager::NewInventoryMenuItemLoadTask> loadTask;                  // 0A8
-		TESObjectREFR* tempRef;                   // 0B0
+		TESObjectREFR*                                                tempRef;                   // 0B0
 		BSTSmartPointer<ExtraDataList>                                originalExtra;             // 0B8
 		BSFixedString                                                 str3DRendererName;         // 0C0
 		BGSInventoryItem                                              queuedDisplayItem;         // 0C8
 		std::uint32_t                                                 itemExtraIndex;            // 0D8
-		TESForm* itemBase;                  // 0E0
+		TESForm*                                                      itemBase;                  // 0E0
 		std::int8_t                                                   disableInputUserCount;     // 0E8
 		BSTSet<BSFixedString>                                         disableRendererUsers;      // 0F0
 		float                                                         storedXRotation;           // 120

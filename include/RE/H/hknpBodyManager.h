@@ -9,8 +9,8 @@ namespace RE
 		struct ScheduledBodyChange;
 
 		// members
-		hknpWorld* world;
-		hknpMotionManager* motionManager;
+		hknpWorld*                            world;
+		hknpMotionManager*                    motionManager;
 		hkArray<hknpBody>                     bodies;
 		hkBool                                bodyBufferIsUserOwned;
 		hknpBodyId                            firstFreeBodyId;

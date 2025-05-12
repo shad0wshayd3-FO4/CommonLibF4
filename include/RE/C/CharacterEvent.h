@@ -18,6 +18,6 @@ namespace RE
 	};
 	static_assert(sizeof(CharacterEvent) == 0x30);
 
-	extern template CharacterEvent* InputEvent::As() noexcept;
+	extern template CharacterEvent*       InputEvent::As() noexcept;
 	extern template const CharacterEvent* InputEvent::As() const noexcept;
 }

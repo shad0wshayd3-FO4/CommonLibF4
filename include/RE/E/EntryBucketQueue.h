@@ -2,8 +2,8 @@
 
 namespace RE
 {
-    namespace BSResource
-    {
+	namespace BSResource
+	{
 		template <class T, std::uint32_t N>
 		class EntryBucketQueue
 		{
@@ -13,5 +13,5 @@ namespace RE
 			volatile std::uint32_t step;        // ??
 		};
 		static_assert(sizeof(EntryBucketQueue<void, 8>) == 0xC8);
-    }
+	}
 }

@@ -28,8 +28,7 @@ namespace RE
 		{
 			if (a_compare && type == a_compare->type) {
 				return CompareImpl(*a_compare);
-			}
-			else {
+			} else {
 				return true;
 			}
 		}
@@ -39,7 +38,7 @@ namespace RE
 		[[nodiscard]] EXTRA_DATA_TYPE GetExtraType() const noexcept { return *type; }
 
 		// members
-		BSExtraData* next{ nullptr };                 // 08
+		BSExtraData*                                next{ nullptr };                 // 08
 		std::uint16_t                               flags{ 0 };                      // 10
 		REX::EnumSet<EXTRA_DATA_TYPE, std::uint8_t> type{ EXTRA_DATA_TYPE::kNone };  // 12
 	};

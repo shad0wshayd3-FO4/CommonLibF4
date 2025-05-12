@@ -2,7 +2,7 @@
 
 namespace RE
 {
-    ExtraInstanceData::ExtraInstanceData() :
+	ExtraInstanceData::ExtraInstanceData() :
 		ExtraInstanceData(nullptr, nullptr)
 	{}
 

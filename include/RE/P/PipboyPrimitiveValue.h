@@ -2,7 +2,7 @@
 
 namespace RE
 {
-		template <class T>
+	template <class T>
 	class PipboyPrimitiveValue;  // Forward declaration for specialization **only**
 
 	template <>

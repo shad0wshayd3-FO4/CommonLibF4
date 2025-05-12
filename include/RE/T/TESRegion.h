@@ -14,10 +14,10 @@ namespace RE
 		virtual bool Validate();  // 49
 
 		// members
-		TESRegionDataList* dataList;             // 20
+		TESRegionDataList*                 dataList;             // 20
 		BSSimpleList<TESRegionPointList*>* pointLists;           // 28
-		TESWorldSpace* worldSpace;           // 30
-		TESWeather* currentWeather;       // 38
+		TESWorldSpace*                     worldSpace;           // 30
+		TESWeather*                        currentWeather;       // 38
 		NiColor                            emittanceColor;       // 40
 		float                              lodDistanceModifier;  // 4C
 		float                              occlusionAccuracy;    // 50

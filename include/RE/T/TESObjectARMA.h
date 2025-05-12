@@ -17,11 +17,11 @@ namespace RE
 		BGSModelMaterialSwap                 bipedModel[2];            // 050
 		BGSModelMaterialSwap                 bipedModelFacebones[2];   // 0D0
 		BGSModelMaterialSwap                 bipedModel1stPerson[2];   // 150
-		BGSTextureSet* skinTextures[2];          // 1D0
-		BGSListForm* skinTextureSwapLists[2];  // 1E0
+		BGSTextureSet*                       skinTextures[2];          // 1D0
+		BGSListForm*                         skinTextureSwapLists[2];  // 1E0
 		BSTArray<TESRace*>                   additionalRaces;          // 1F0
-		BGSFootstepSet* footstepSet;              // 208
-		BGSArtObject* artObject;                // 210
+		BGSFootstepSet*                      footstepSet;              // 208
+		BGSArtObject*                        artObject;                // 210
 		BSTHashMap<BSFixedString, NiPoint3>* scaleModifiers[2];        // 218
 	};
 	static_assert(sizeof(TESObjectARMA) == 0x228);

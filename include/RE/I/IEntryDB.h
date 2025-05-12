@@ -2,8 +2,8 @@
 
 namespace RE
 {
-    namespace BSResource
-    {
+	namespace BSResource
+	{
 		class IEntryDB
 		{
 		public:
@@ -45,5 +45,5 @@ namespace RE
 			EntryBucketQueue<PostFlushNotify, 8> postFlushNotifyQueue;
 		};
 		static_assert(sizeof(IEntryDB) == 0xD0);
-    }
+	}
 }

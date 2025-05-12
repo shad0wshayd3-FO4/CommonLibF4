@@ -17,10 +17,10 @@ namespace RE
 		DIALOGUE_DATA      data;                     // 30
 		std::uint32_t      priorityAndJournalIndex;  // 34
 		BGSDialogueBranch* ownerBranch;              // 38
-		TESQuest* ownerQuest;               // 40
-		BGSKeyword* subtypeKeyword;           // 48
-		TESTopicInfo** topicInfos;               // 50
-		InfoTree* infoTree;                 // 58
+		TESQuest*          ownerQuest;               // 40
+		BGSKeyword*        subtypeKeyword;           // 48
+		TESTopicInfo**     topicInfos;               // 50
+		InfoTree*          infoTree;                 // 58
 		std::uint32_t      numTopicInfos;            // 60
 		std::uint32_t      topicInfoAllocSize;       // 64
 		std::uint32_t      firstFileOffset;          // 68

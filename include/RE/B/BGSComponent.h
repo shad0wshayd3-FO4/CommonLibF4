@@ -15,7 +15,7 @@ namespace RE
 
 		// members
 		TESObjectMISC* scrapItem;       // 98
-		TESGlobal* modScrapScalar;  // 90
+		TESGlobal*     modScrapScalar;  // 90
 	};
 	static_assert(sizeof(BGSComponent) == 0xA8);
 }

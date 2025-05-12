@@ -7,9 +7,9 @@ namespace RE
 	public:
 		struct State
 		{
-			std::uint32_t numReaders : 5;
-			std::uint32_t numWriters : 3;
-			std::uint32_t writerThreadId : 24;
+			std::uint32_t numReaders: 5;
+			std::uint32_t numWriters: 3;
+			std::uint32_t writerThreadId: 24;
 		};
 
 		// members

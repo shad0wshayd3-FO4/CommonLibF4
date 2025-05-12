@@ -42,16 +42,16 @@ namespace RE
 		virtual bool                               Load() = 0;                           // 01
 		virtual void                               InitItem() = 0;                       // 02
 		[[nodiscard]] virtual const BSFixedString& QType() const = 0;                    // 03
-		[[nodiscard]] virtual TESQuest* QExternalQuest() const = 0;           // 04
+		[[nodiscard]] virtual TESQuest*            QExternalQuest() const = 0;           // 04
 		virtual void                               ClearExternalQuest() = 0;             // 05
 		virtual void                               UpdateFromExternalAlias() const = 0;  // 06
-		[[nodiscard]] virtual BGSBaseAlias* GetLinkedAlias() const = 0;           // 07
+		[[nodiscard]] virtual BGSBaseAlias*        GetLinkedAlias() const = 0;           // 07
 
 		[[nodiscard]] bool IsQuestObject() const noexcept { return flags.all(FLAGS::kQuestObject); }
 
 		// mmebers
 		BSFixedString                      aliasName;    // 08
-		TESQuest* owningQuest;  // 10
+		TESQuest*                          owningQuest;  // 10
 		std::uint32_t                      aliasID;      // 18
 		REX::EnumSet<FLAGS, std::uint32_t> flags;        // 1C
 		std::uint16_t                      fillType;     // 20

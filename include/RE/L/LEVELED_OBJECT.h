@@ -6,7 +6,7 @@ namespace RE
 	{
 	public:
 		// members
-		TESForm* form;        // 00
+		TESForm*            form;        // 00
 		ContainerItemExtra* itemExtra;   // 08
 		std::uint16_t       count;       // 10
 		std::uint16_t       level;       // 12

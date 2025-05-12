@@ -22,8 +22,8 @@ namespace RE
 		BSFixedString                                   debounceEvent;               // 30
 		REX::EnumSet<POWER_ATTACK_STATE, std::uint32_t> checkForPowerAttack;         // 38
 		std::uint32_t                                   numPowerAttacks;             // 3C
-		SettingT<INISettingCollection>* initialDelay;                // 40
-		SettingT<INISettingCollection>* subsequentDelay;             // 48
+		SettingT<INISettingCollection>*                 initialDelay;                // 40
+		SettingT<INISettingCollection>*                 subsequentDelay;             // 48
 		float                                           attackTimer;                 // 50
 		std::uint64_t                                   rightAttackTimestamp;        // 58
 		float                                           rightAttackHeldSeconds;      // 60

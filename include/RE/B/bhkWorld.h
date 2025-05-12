@@ -49,10 +49,10 @@ namespace RE
 		bhkCharProxyManager              charProxyManager;
 		bhkCharRigidBodyManager          charRigidBodyManager;
 		hkRefPtr<hclBSWorld>             clothWorld;
-		char* clothStepBuffer;
+		char*                            clothStepBuffer;
 		std::int32_t                     clothStepBufferSize;
 		hknpWorld::AdditionMode          additionMode;
-		bhkTrapListener* trapListener;
+		bhkTrapListener*                 trapListener;
 		float                            originalTau;
 		float                            originalDamping;
 		bool                             globalWindActivated;

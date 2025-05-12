@@ -45,7 +45,7 @@ namespace RE
 		std::uint32_t id;                  // 08
 		bool          isDirtyGame;         // 0C
 		bool          isDirtyToCompanion;  // 0D
-		PipboyValue* parentValue;         // 10
+		PipboyValue*  parentValue;         // 10
 	};
 	static_assert(sizeof(PipboyValue) == 0x18);
 }

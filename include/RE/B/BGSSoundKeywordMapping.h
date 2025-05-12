@@ -13,9 +13,9 @@ namespace RE
 		// members
 		BSTSet<BGSKeyword*>                                keywordSet;         // 20
 		BSTHashMap<std::uint32_t, BGSSoundDescriptorForm*> reverbDescMap;      // 50
-		BGSSoundDescriptorForm* descriptor;         // 80
-		BGSSoundDescriptorForm* exteriorTail;       // 88
-		BGSSoundDescriptorForm* vatsDescriptor;     // 90
+		BGSSoundDescriptorForm*                            descriptor;         // 80
+		BGSSoundDescriptorForm*                            exteriorTail;       // 88
+		BGSSoundDescriptorForm*                            vatsDescriptor;     // 90
 		float                                              vatsDescThreshold;  // 98
 	};
 	static_assert(sizeof(BGSSoundKeywordMapping) == 0xA0);

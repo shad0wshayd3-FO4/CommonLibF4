@@ -27,8 +27,8 @@ namespace RE
 		}
 
 		// members
-		BGSMenuIcon* icon;         // 48
-		TESQuest* ownerQuest;   // 50
+		BGSMenuIcon*                     icon;         // 48
+		TESQuest*                        ownerQuest;   // 50
 		BSSimpleList<MESSAGEBOX_BUTTON*> buttonList;   // 58
 		BSFixedStringCS                  swfFile;      // 68
 		BGSLocalizedString               shortName;    // 70

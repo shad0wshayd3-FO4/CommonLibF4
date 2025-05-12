@@ -10,9 +10,9 @@ namespace RE
 
 		struct STARTSCENEACTIONDATA
 		{
-			BGSScene* pScene;
+			BGSScene*     pScene;
 			std::uint16_t sceneStartPhase;
-			TESQuest* parentQuest;
+			TESQuest*     parentQuest;
 			TESCondition  sceneConditions;
 		};
 

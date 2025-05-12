@@ -23,9 +23,9 @@ namespace RE
 		NiPointer<NiSourceTexture>                                 textureShaderTexture;    // 0D0
 		NiPointer<NiSourceTexture>                                 textureBlockOutTexture;  // 0D8
 		NiPointer<NiSourceTexture>                                 texturePaletteTexture;   // 0E0
-		TESBoundObject* wornObject;              // 0E8
-		TESEffectShader* effectData;              // 0F0
-		BSEffectShaderData* effectShaderData;        // 0F8
+		TESBoundObject*                                            wornObject;              // 0E8
+		TESEffectShader*                                           effectData;              // 0F0
+		BSEffectShaderData*                                        effectShaderData;        // 0F8
 		NiPointer<NiAVObject>                                      lastRootNode;            // 100
 		float                                                      alphaTimer;              // 104
 		float                                                      addonAlpha;              // 108

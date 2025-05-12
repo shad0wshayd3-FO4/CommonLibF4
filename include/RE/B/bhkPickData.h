@@ -7,7 +7,7 @@ namespace RE
 	public:
 		bhkPickData()
 		{
-			typedef bhkPickData* func_t(bhkPickData*);
+			typedef bhkPickData*           func_t(bhkPickData*);
 			static REL::Relocation<func_t> func{ REL::ID(526783) };
 			func(this);
 		}

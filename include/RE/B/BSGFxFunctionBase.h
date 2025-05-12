@@ -16,7 +16,7 @@ namespace RE
 		// members
 		Scaleform::Ptr<BSGFxFunctionHandler> handler;   // 08
 		BSFixedStringCS                      funcName;  // 10
-		UsesBSGFXFunctionHandler* owner;     // 18
+		UsesBSGFXFunctionHandler*            owner;     // 18
 	};
 	static_assert(sizeof(BSGFxFunctionBase) == 0x20);
 }

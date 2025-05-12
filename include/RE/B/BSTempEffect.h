@@ -23,7 +23,7 @@ namespace RE
 		virtual void                           Attach();                                         // 26 - { return; }
 		virtual void                           Detach();                                         // 27 - { return; }
 		virtual bool                           Update(float a_arg1);                             // 28
-		[[nodiscard]] virtual NiAVObject* Get3D() const;                                    // 29 - { return 0; }
+		[[nodiscard]] virtual NiAVObject*      Get3D() const;                                    // 29 - { return 0; }
 		[[nodiscard]] virtual bool             GetManagerHandlesSaveLoad() const;                // 2A - { return true; }
 		[[nodiscard]] virtual bool             GetClearWhenCellIsUnloaded() const;               // 2B - { return true; }
 		[[nodiscard]] virtual TEMP_EFFECT_TYPE GetType() const;                                  // 2C - { return 7; }
@@ -41,13 +41,13 @@ namespace RE
 		template <
 			class T,
 			class = std::enable_if_t<
-			std::negation_v<
-			std::disjunction<
-			std::is_pointer<T>,
-			std::is_reference<T>,
-			std::is_const<T>,
-			std::is_volatile<T>>>>>
-			[[nodiscard]] T* As() noexcept
+				std::negation_v<
+					std::disjunction<
+						std::is_pointer<T>,
+						std::is_reference<T>,
+						std::is_const<T>,
+						std::is_volatile<T>>>>>
+		[[nodiscard]] T* As() noexcept
 		{
 			return const_cast<T*>(static_cast<const BSTempEffect*>(this)->As<T>());
 		}
@@ -55,13 +55,13 @@ namespace RE
 		template <
 			class T,
 			class = std::enable_if_t<
-			std::negation_v<
-			std::disjunction<
-			std::is_pointer<T>,
-			std::is_reference<T>,
-			std::is_const<T>,
-			std::is_volatile<T>>>>>
-			[[nodiscard]] const T* As() const noexcept
+				std::negation_v<
+					std::disjunction<
+						std::is_pointer<T>,
+						std::is_reference<T>,
+						std::is_const<T>,
+						std::is_volatile<T>>>>>
+		[[nodiscard]] const T* As() const noexcept
 		{
 			switch (GetType()) {
 				F4SE_TEMPEFFECT_UTIL(BSTerrainEffect);
@@ -76,8 +76,8 @@ namespace RE
 				F4SE_TEMPEFFECT_UTIL(ModelReferenceEffect);
 				F4SE_TEMPEFFECT_UTIL(ShaderReferenceEffect);
 				F4SE_TEMPEFFECT_UTIL(SummonPlacementEffect);
-			default:
-				break;
+				default:
+					break;
 			}
 
 			return nullptr;

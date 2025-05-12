@@ -32,12 +32,12 @@ namespace RE
 		}
 
 		// members
-		BGSLocation* loadLocation;                      // 0E0
-		TESLoadScreen* artScreen;                         // 0E8
+		BGSLocation*             loadLocation;                      // 0E0
+		TESLoadScreen*           artScreen;                         // 0E8
 		std::byte                upgrader[0x10];                    // 0F0 - TODO
 		BSTArray<TESLoadScreen*> validScreens;                      // 100
 		BSModelDB::Handle        foregroundModel;                   // 118
-		NiAVObject* zoomTarget;                        // 120
+		NiAVObject*              zoomTarget;                        // 120
 		ImageSpaceLUTData        LUT;                               // 128
 		std::uint32_t            numNonDefaultScreens;              // 198
 		float                    modelAggregateRotation;            // 19C

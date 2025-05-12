@@ -16,7 +16,7 @@ namespace RE
 		// members
 		BSFixedString  materialName;       // 078
 		TESTexture     textures[8];        // 080
-		DecalData* decalData;          // 100
+		DecalData*     decalData;          // 100
 		std::uint16_t  flags;              // 108
 		BSResource::ID textureFileIDs[8];  // 10C
 		BSShaderData   materialData;       // 170

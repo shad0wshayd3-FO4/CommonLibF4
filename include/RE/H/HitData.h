@@ -37,10 +37,10 @@ namespace RE
 		ObjectRefHandle                                                 sourceRef;               // 48
 		NiPointer<BGSAttackData>                                        attackData;              // 50
 		BGSObjectInstanceT<TESObjectWEAP>                               weapon;                  // 58
-		SpellItem* criticalEffect;          // 68
-		SpellItem* hitEffect;               // 70
+		SpellItem*                                                      criticalEffect;          // 68
+		SpellItem*                                                      hitEffect;               // 70
 		BSTSmartPointer<VATSCommand>                                    VATSCommand;             // 78
-		const TESAmmo* ammo;                    // 80
+		const TESAmmo*                                                  ammo;                    // 80
 		BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* damageTypes;             // 88
 		float                                                           healthDamage;            // 90
 		float                                                           totalDamage;             // 94

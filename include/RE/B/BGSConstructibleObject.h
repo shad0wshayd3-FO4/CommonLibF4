@@ -21,14 +21,14 @@ namespace RE
 		};
 		static_assert(sizeof(ConstructibleObjectData) == 0x4);
 
-		[[nodiscard]] TESForm* GetCreatedItem() const noexcept { return createdItem; }
+		[[nodiscard]] TESForm*      GetCreatedItem() const noexcept { return createdItem; }
 		[[nodiscard]] std::uint16_t GetWorkshopPriority() const noexcept { return data.workshopPriority; }
 
 		// members
 		BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* requiredItems;   // 50
 		TESCondition                                                    conditions;      // 58
-		TESForm* createdItem;     // 60
-		BGSKeyword* benchKeyword;    // 68
+		TESForm*                                                        createdItem;     // 60
+		BGSKeyword*                                                     benchKeyword;    // 68
 		BGSConstructibleObject::ConstructibleObjectData                 data;            // 70
 		BGSTypedKeywordValueArray<KeywordType::kRecipeFilter>           filterKeywords;  // 78
 	};

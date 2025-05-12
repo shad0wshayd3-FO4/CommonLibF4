@@ -2,7 +2,7 @@
 
 namespace RE
 {
-    template <
+	template <
 		class Key,
 		class T,
 		std::uint32_t N,

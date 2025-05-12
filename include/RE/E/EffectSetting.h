@@ -44,14 +44,14 @@ namespace RE
 			// members
 			REX::EnumSet<Flag, std::uint32_t>                         flags;                  // 000
 			float                                                     baseCost;               // 004
-			TESForm* associatedForm;         // 008
-			ActorValueInfo* associatedSkill;        // 010
-			ActorValueInfo* resistVariable;         // 018
+			TESForm*                                                  associatedForm;         // 008
+			ActorValueInfo*                                           associatedSkill;        // 010
+			ActorValueInfo*                                           resistVariable;         // 018
 			std::int16_t                                              numCounterEffects;      // 020
-			TESObjectLIGH* light;                  // 028
+			TESObjectLIGH*                                            light;                  // 028
 			float                                                     taperWeight;            // 030
-			TESEffectShader* effectShader;           // 038
-			TESEffectShader* enchantEffect;          // 040
+			TESEffectShader*                                          effectShader;           // 038
+			TESEffectShader*                                          enchantEffect;          // 040
 			std::int32_t                                              minimumSkill;           // 048
 			std::int32_t                                              spellmakingArea;        // 04C
 			float                                                     spellmakingChargeTime;  // 050
@@ -59,24 +59,24 @@ namespace RE
 			float                                                     taperDuration;          // 058
 			float                                                     secondaryAVWeight;      // 05C
 			REX::EnumSet<EffectArchetypes::ArchetypeID, std::int32_t> archetype;              // 060
-			ActorValueInfo* primaryAV;              // 068
-			BGSProjectile* projectileBase;         // 070
-			BGSExplosion* explosion;              // 078
+			ActorValueInfo*                                           primaryAV;              // 068
+			BGSProjectile*                                            projectileBase;         // 070
+			BGSExplosion*                                             explosion;              // 078
 			REX::EnumSet<MagicSystem::CastingType, std::int32_t>      castingType;            // 080
 			REX::EnumSet<MagicSystem::Delivery, std::int32_t>         delivery;               // 084
-			ActorValueInfo* secondaryAV;            // 088
-			BGSArtObject* castingArt;             // 090
-			BGSArtObject* hitEffectArt;           // 098
-			BGSImpactDataSet* impactDataSet;          // 0A0
+			ActorValueInfo*                                           secondaryAV;            // 088
+			BGSArtObject*                                             castingArt;             // 090
+			BGSArtObject*                                             hitEffectArt;           // 098
+			BGSImpactDataSet*                                         impactDataSet;          // 0A0
 			float                                                     skillUsageMult;         // 0A8
-			BGSDualCastData* dualCastData;           // 0B0
+			BGSDualCastData*                                          dualCastData;           // 0B0
 			float                                                     dualCastScale;          // 0B8
-			BGSArtObject* enchantEffectArt;       // 0C0
-			BGSReferenceEffect* hitVisuals;             // 0C8
-			BGSReferenceEffect* enchantVisuals;         // 0D0
-			SpellItem* equipAbility;           // 0D8
-			TESImageSpaceModifier* imageSpaceMod;          // 0E0
-			BGSPerk* perk;                   // 0E8
+			BGSArtObject*                                             enchantEffectArt;       // 0C0
+			BGSReferenceEffect*                                       hitVisuals;             // 0C8
+			BGSReferenceEffect*                                       enchantVisuals;         // 0D0
+			SpellItem*                                                equipAbility;           // 0D8
+			TESImageSpaceModifier*                                    imageSpaceMod;          // 0E0
+			BGSPerk*                                                  perk;                   // 0E8
 			REX::EnumSet<SOUND_LEVEL, std::int32_t>                   castingSoundLevel;      // 0F0
 			float                                                     aiScore;                // 0F4
 			float                                                     aiDelayTime;            // 0F8
@@ -88,13 +88,13 @@ namespace RE
 		public:
 			// members
 			REX::EnumSet<MagicSystem::SoundID, std::int32_t> id;     // 00
-			BGSSoundDescriptorForm* sound;  // 08
+			BGSSoundDescriptorForm*                          sound;  // 08
 		};
 		static_assert(sizeof(SoundPair) == 0x10);
 
 		// members
-		FilterValidationFunction_t* filterValidationFunction;   // 060
-		void* filterValidationItem;       // 068
+		FilterValidationFunction_t*        filterValidationFunction;   // 060
+		void*                              filterValidationItem;       // 068
 		EffectSettingData                  data;                       // 070
 		BSSimpleList<EffectSetting*>       counterEffects;             // 170
 		BSTArray<EffectSetting::SoundPair> effectSounds;               // 180

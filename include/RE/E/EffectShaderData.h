@@ -33,7 +33,7 @@ namespace RE
 		float                                   alphaTestEndTime;            // 60
 		float                                   alphaTestStartValue;         // 64
 		float                                   alphaTestEndValue;           // 68
-		BGSSoundDescriptorForm* ambientSound;                // 70
+		BGSSoundDescriptorForm*                 ambientSound;                // 70
 		std::uint32_t                           fillColor2;                  // 78
 		std::uint32_t                           fillColor3;                  // 7C
 		float                                   fillColorScaleA[3];          // 80

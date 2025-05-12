@@ -7,22 +7,22 @@ namespace RE
 	public:
 		// members
 		float             damageMult;                    // 00
-		BGSDebris* explosionGenericDebris;        // 08
-		BGSExplosion* explosion;                     // 10
+		BGSDebris*        explosionGenericDebris;        // 08
+		BGSExplosion*     explosion;                     // 10
 		float             explosionGenericDebrisScale;   // 18
-		BGSDebris* dismemberGenericDebris;        // 20
-		BGSExplosion* dismemberExplosion;            // 28
+		BGSDebris*        dismemberGenericDebris;        // 20
+		BGSExplosion*     dismemberExplosion;            // 28
 		float             dismemberGenericDebrisScale;   // 30
-		BGSDebris* onCrippleGenericDebris;        // 38
-		BGSExplosion* onCrippleExplosion;            // 40
+		BGSDebris*        onCrippleGenericDebris;        // 38
+		BGSExplosion*     onCrippleExplosion;            // 40
 		float             onCrippleGenericDebrisScale;   // 48
 		NiPoint3          goreTranslate;                 // 4C
 		NiPoint3          goreRotate;                    // 58
 		BGSImpactDataSet* dismemberImpactDataSet;        // 68
 		BGSImpactDataSet* explosionImpactDataSet;        // 70
 		BGSImpactDataSet* onCrippleImpactDataSet;        // 78
-		ActorValueInfo* actorValue;                    // 80
-		BGSArtObject* artObject;                     // 88
+		ActorValueInfo*   actorValue;                    // 80
+		BGSArtObject*     artObject;                     // 88
 		float             explosionSpecialDebrisScale;   // 90
 		std::uint8_t      flags;                         // 94
 		std::uint8_t      type;                          // 95

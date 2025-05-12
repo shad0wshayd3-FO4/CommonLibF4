@@ -8,8 +8,8 @@ namespace RE
 		union Teaches
 		{
 			ActorValueInfo* actorValueToAdvance;
-			SpellItem* spell;
-			BGSPerk* perk;
+			SpellItem*      spell;
+			BGSPerk*        perk;
 		};
 		static_assert(sizeof(Teaches) == 0x8);
 

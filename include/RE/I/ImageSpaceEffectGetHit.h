@@ -22,7 +22,7 @@ namespace RE
 		inline static REL::Relocation<bool*> bDisable{ REL::ID(2713237) };
 
 		// members
-		float* data;       // B0
+		float*            data;       // B0
 		ImageSpaceTexture buffer[2];  // B8
 	};
 	static_assert(sizeof(ImageSpaceEffectGetHit) == 0x108);

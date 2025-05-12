@@ -9,7 +9,7 @@ namespace RE
 		float         f;
 		std::uint8_t  h;
 		std::int32_t  i;
-		char* s;
+		char*         s;
 		std::uint32_t u;
 		std::uint32_t r;
 		std::uint32_t a;

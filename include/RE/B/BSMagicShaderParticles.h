@@ -14,7 +14,7 @@ namespace RE
 		bool              attached;            // 11
 		bool              stopped;             // 12
 		bool              useSizeAdjustments;  // 13
-		Filter* filterFunction;      // 18
+		Filter*           filterFunction;      // 18
 	};
 	static_assert(sizeof(BSMagicShaderParticles) == 0x20);
 }

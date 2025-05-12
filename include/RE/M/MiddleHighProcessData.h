@@ -20,19 +20,19 @@ namespace RE
 		REX::EnumSet<MagicSystem::WardState, std::int32_t>                                         wardState;                                      // 0F8
 		BSTSmartPointer<BSResponse<BSFixedString, Actor, BSFixedString, DoNothingUnhandledPolicy>> animResponse;                                   // 100
 		BSTArray<CommandedActorData>                                                               commandedActors;                                // 108
-		NiNode* damageRootNode[26];                             // 120
-		NiNode* weaponBone;                                     // 1F0
-		NiAVObject* headNode;                                       // 1F8
-		NiAVObject* torsoNode;                                      // 200
-		NiAVObject* faceTargetSourceNode;                           // 208
-		BSFaceGenNiNode* faceNodeSkinned;                                // 210
+		NiNode*                                                                                    damageRootNode[26];                             // 120
+		NiNode*                                                                                    weaponBone;                                     // 1F0
+		NiAVObject*                                                                                headNode;                                       // 1F8
+		NiAVObject*                                                                                torsoNode;                                      // 200
+		NiAVObject*                                                                                faceTargetSourceNode;                           // 208
+		BSFaceGenNiNode*                                                                           faceNodeSkinned;                                // 210
 		NiPointer<BSLightingShaderProperty>                                                        lightingProperty;                               // 218
-		QueuedItem* listItemstoEquipUnequip;                        // 220
-		HitData* lastHitData;                                    // 228
-		DeferredHideLimb* headDeferredHideLimb;                           // 230
+		QueuedItem*                                                                                listItemstoEquipUnequip;                        // 220
+		HitData*                                                                                   lastHitData;                                    // 228
+		DeferredHideLimb*                                                                          headDeferredHideLimb;                           // 230
 		ActiveEffectList                                                                           activeEffects;                                  // 238
 		BSTSmartPointer<BSAnimationGraphManager>                                                   animationGraphManager;                          // 258
-		BSAnimationGraphVariableCache* animationVariableCache;                         // 260
+		BSAnimationGraphVariableCache*                                                             animationVariableCache;                         // 260
 		BSTArray<SubGraphIdleRootData>                                                             subGraphIdleManagerRoots;                       // 268
 		BSSpinLock                                                                                 equippedItemsLock;                              // 280
 		BSTArray<EquippedItem>                                                                     equippedItems;                                  // 288
@@ -48,17 +48,17 @@ namespace RE
 		float                                                                                      headHeightOffset;                               // 3A0
 		ObjectRefHandle                                                                            currentFurniture;                               // 3A4
 		ObjectRefHandle                                                                            occupiedFurniture;                              // 3A8
-		TESIdleForm* currentIdle;                                    // 3B0
+		TESIdleForm*                                                                               currentIdle;                                    // 3B0
 		ActorHandle                                                                                commandingActor;                                // 3B8
-		const TESIdleForm* furnitureIdle;                                  // 3C0
-		BSFaceGenAnimationData* faceAnimationData;                              // 3C8
-		MagicItem* currentPackageSpell;                            // 3D0
-		TESObjectWEAP* lastBoundWeapon;                                // 3D8
+		const TESIdleForm*                                                                         furnitureIdle;                                  // 3C0
+		BSFaceGenAnimationData*                                                                    faceAnimationData;                              // 3C8
+		MagicItem*                                                                                 currentPackageSpell;                            // 3D0
+		TESObjectWEAP*                                                                             lastBoundWeapon;                                // 3D8
 		NiPointer<bhkCharacterController>                                                          charController;                                 // 3E0
 		BSTSmartPointer<bhkRagdollPenetrationUtil>                                                 penetrationDetectUtil;                          // 3E8
 		NiPointer<QueuedFile>                                                                      bodyPartPreload;                                // 3F0
-		TESIdleForm* lastIdlePlayed;                                 // 3F8
-		AIPerkData* perkData;                                       // 400
+		TESIdleForm*                                                                               lastIdlePlayed;                                 // 3F8
+		AIPerkData*                                                                                perkData;                                       // 400
 		NiPoint3                                                                                   lookAtLocation;                                 // 408
 		float                                                                                      pursueTimer;                                    // 414
 		float                                                                                      furnitureAngle;                                 // 418

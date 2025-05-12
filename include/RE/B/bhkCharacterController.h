@@ -35,7 +35,7 @@ namespace RE
 		virtual void            FinishMoveImpl(const MoveData& a_moveData) = 0;                                                               // 3D
 		virtual void            CheckSupportImpl() = 0;                                                                                       // 3E
 		virtual void            SetWorldImpl(bhkWorld* a_newWorld) = 0;                                                                       // 3F
-		virtual bhkWorld* GetWorldImpl() const = 0;                                                                                     // 40
+		virtual bhkWorld*       GetWorldImpl() const = 0;                                                                                     // 40
 		virtual hknpBodyId      GetBodyIdImpl() const = 0;                                                                                    // 41
 		virtual const hknpBody* GetBodyImpl() const = 0;                                                                                      // 42
 		virtual bool            SetShapeImpl(hknpShape* a_shape, const hkVector4f&) = 0;                                                      // 43
@@ -65,7 +65,7 @@ namespace RE
 		BSBound                                                                bumperCollisionBound;       // 220
 		NiPoint3                                                               cachedLinearVelocity;       // 250
 		NiPoint3                                                               remainderDeltaWS;           // 24C
-		bhkICharOrientationController* orientationCtrl;            // 268
+		bhkICharOrientationController*                                         orientationCtrl;            // 268
 		hknpCharacterSurfaceInfo                                               surfaceInfo;                // 270
 		hknpCharacterContext                                                   context;                    // 2A0
 		std::uint32_t                                                          flags;                      // 300
@@ -104,7 +104,7 @@ namespace RE
 		NiPointer<bhkNPCollisionObject>                                        bumpedBody;                 // 3A0
 		NiPointer<bhkNPCollisionObject>                                        bumpedCharCollisionObject;  // 3A8
 		BSTHashMap<std::uint32_t, float>                                       bumpedBodyIdExpirationM;    // 3B0
-		void* userData;                   // 3E0
+		void*                                                                  userData;                   // 3E0
 		BSTHashMap<bhkNPCollisionObject*, DamageImpactData*>                   damageImpacts;              // 3E8
 		float                                                                  maxSlope;                   // 418
 		std::uint32_t                                                          supportMaterial;            // 41C

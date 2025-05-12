@@ -45,8 +45,7 @@ namespace RE
 			if (_lock == 0x80000001) {
 				_writerThread = 0;
 				lock.exchange(0);
-			}
-			else {
+			} else {
 				--lock;
 			}
 		}

@@ -277,13 +277,13 @@ namespace RE
 		bool                                 enablePartialRender;       // 048
 		std::int32_t                         mainTarget;                // 04C
 		NiColorA                             refractionTint;            // 050
-		const ImageSpaceBaseData* baseData;                  // 060
-		const ImageSpaceBaseData* overRideBaseData;          // 068
-		const ImageSpaceBaseData* underwaterBaseData;        // 070
-		ImageSpaceBaseData* consoleBaseData;           // 078
+		const ImageSpaceBaseData*            baseData;                  // 060
+		const ImageSpaceBaseData*            overRideBaseData;          // 068
+		const ImageSpaceBaseData*            underwaterBaseData;        // 070
+		ImageSpaceBaseData*                  consoleBaseData;           // 078
 		ImageSpaceData                       currentEOFData;            // 080
 		ImageSpaceLUTData                    lutData;                   // 130
-		ImageSpaceLUTData* overrideLUTData;           // 1A0
+		ImageSpaceLUTData*                   overrideLUTData;           // 1A0
 		float                                motionBlurIntensity;       // 1A8
 		float                                motionBlurMaxBlur;         // 1AC
 		std::uint32_t                        forceNoBokehDepthOfField;  // 1B0

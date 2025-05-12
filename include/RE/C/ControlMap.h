@@ -58,7 +58,7 @@ namespace RE
 			assert(a_context < InputContextID::kTotal);
 
 			if (controlMaps[std::to_underlying(a_context)]) {
-				const auto& mappings = controlMaps[std::to_underlying(a_context)]->deviceMappings[std::to_underlying(a_device)];
+				const auto&   mappings = controlMaps[std::to_underlying(a_context)]->deviceMappings[std::to_underlying(a_device)];
 				BSFixedString eventID(a_eventID);
 				for (auto& mapping : mappings) {
 					if (mapping.eventID == eventID) {
@@ -108,7 +108,7 @@ namespace RE
 		void SetIgnoreKeyboardMouse(bool a_value) noexcept { ignoreKeyboardMouse = a_value; }
 
 		// members
-		InputContext* controlMaps[std::to_underlying(UserEvents::INPUT_CONTEXT_ID::kTotal)];  // 008
+		InputContext*                                                      controlMaps[std::to_underlying(UserEvents::INPUT_CONTEXT_ID::kTotal)];  // 008
 		BSTArray<LinkedMapping>                                            linkedMappings;                                                         // 110
 		BSTArray<REX::EnumSet<UserEvents::INPUT_CONTEXT_ID, std::int32_t>> contextPriorityStack;                                                   // 128
 		std::int8_t                                                        byTextEntryCount;                                                       // 140

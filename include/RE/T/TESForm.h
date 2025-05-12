@@ -33,7 +33,7 @@ namespace RE
 		virtual bool                     Load([[maybe_unused]] TESFile* a_file) { return true; }                                                                                                                                                          // 09
 		virtual bool                     LoadPartial([[maybe_unused]] TESFile* a_file) { return true; }                                                                                                                                                   // 0A
 		virtual bool                     LoadEdit(TESFile* a_file) { return Load(a_file); }                                                                                                                                                               // 0B
-		virtual TESForm* CreateDuplicateForm(bool a_createEditorID, BSTHashMap<TESForm*, TESForm*>* a_copyMap);                                                                                                                           // 0C
+		virtual TESForm*                 CreateDuplicateForm(bool a_createEditorID, BSTHashMap<TESForm*, TESForm*>* a_copyMap);                                                                                                                           // 0C
 		virtual bool                     AddChange(std::uint32_t a_changeFlags);                                                                                                                                                                          // 0D
 		virtual void                     RemoveChange(std::uint32_t a_changeFlags);                                                                                                                                                                       // 0E
 		virtual bool                     FindInFileFast([[maybe_unused]] TESFile* a_file) { return false; }                                                                                                                                               // 0F
@@ -44,8 +44,8 @@ namespace RE
 		virtual void                     FinishLoadGame([[maybe_unused]] BGSLoadFormBuffer* a_loadGameBuffer) { return; }                                                                                                                                 // 14
 		virtual void                     Revert([[maybe_unused]] BGSLoadFormBuffer* a_loadGameBuffer) { return; }                                                                                                                                         // 15
 		virtual void                     InitItemImpl() { return; }                                                                                                                                                                                       // 16
-		virtual TESFile* GetRevertFile() const;                                                                                                                                                                                           // 17
-		virtual TESFile* GetDescriptionOwnerFile() const;                                                                                                                                                                                 // 18
+		virtual TESFile*                 GetRevertFile() const;                                                                                                                                                                                           // 17
+		virtual TESFile*                 GetDescriptionOwnerFile() const;                                                                                                                                                                                 // 18
 		virtual ENUM_FORM_ID             GetSavedFormType() const { return *formType; }                                                                                                                                                                   // 19
 		virtual void                     GetFormDetailedString(char* a_dest, std::uint32_t a_size) const;                                                                                                                                                 // 1A
 		virtual bool                     GetKnown() const { return (formFlags >> 6) & 1; }                                                                                                                                                                // 1B
@@ -71,15 +71,15 @@ namespace RE
 		virtual bool                     IsObject() const { return false; }                                                                                                                                                                               // 2F
 		virtual bool                     IsMagicItem() const { return false; }                                                                                                                                                                            // 30
 		virtual bool                     IsWater() const { return false; }                                                                                                                                                                                // 31
-		virtual TESObjectREFR* IsReference() { return nullptr; }                                                                                                                                                                                // 33
-		virtual const TESObjectREFR* IsReference() const { return nullptr; }                                                                                                                                                                          // 32
+		virtual TESObjectREFR*           IsReference() { return nullptr; }                                                                                                                                                                                // 33
+		virtual const TESObjectREFR*     IsReference() const { return nullptr; }                                                                                                                                                                          // 32
 		virtual std::uint32_t            GetRefCount() const { return 0; }                                                                                                                                                                                // 34
-		virtual const char* GetTextForParsedSubTag(const BSFixedString& a_subTag) const;                                                                                                                                                     // 35
+		virtual const char*              GetTextForParsedSubTag(const BSFixedString& a_subTag) const;                                                                                                                                                     // 35
 		virtual void                     Copy([[maybe_unused]] TESForm* a_copy) { return; }                                                                                                                                                               // 36
 		virtual bool                     BelongsInGroup(FORM* a_groupFORM, bool a_allowParentGroups, bool a_currentOnly);                                                                                                                                 // 37
 		virtual void                     CreateGroupData(FORM* a_outGroupFORM, FORM_GROUP* a_parentGroup);                                                                                                                                                // 38
 		virtual std::uint32_t            GetFormEditorIDLength() const;                                                                                                                                                                                   // 39
-		virtual const char* GetFormEditorID() const { return ""; }                                                                                                                                                                           // 3A
+		virtual const char*              GetFormEditorID() const { return ""; }                                                                                                                                                                           // 3A
 		virtual bool                     SetFormEditorID([[maybe_unused]] const char* a_editorID) { return true; }                                                                                                                                        // 3B
 		virtual bool                     IsParentForm() { return false; }                                                                                                                                                                                 // 3C
 		virtual bool                     IsParentFormTree() { return false; }                                                                                                                                                                             // 3D
@@ -87,11 +87,11 @@ namespace RE
 		virtual bool                     LoopingActivate(TESObjectREFR* a_itemActivated, TESObjectREFR* a_actionRef) { return Activate(a_itemActivated, a_actionRef, nullptr, 1); }                                                                       // 3F
 		virtual bool                     Activate([[maybe_unused]] TESObjectREFR* a_itemActivated, [[maybe_unused]] TESObjectREFR* a_actionRef, [[maybe_unused]] TESBoundObject* a_objectToGet, [[maybe_unused]] std::int32_t a_count) { return false; }  // 40
 		virtual void                     SetFormID(TESFormID a_formID, bool a_updateFile);                                                                                                                                                                // 41
-		virtual const char* GetObjectTypeName() const { return ""; }                                                                                                                                                                         // 42
+		virtual const char*              GetObjectTypeName() const { return ""; }                                                                                                                                                                         // 42
 		virtual bool                     QAvailableInGame() const { return true; }                                                                                                                                                                        // 43
 		virtual BGSMod::Template::Items* GetObjectTemplate() { return nullptr; }                                                                                                                                                                          // 44
-		virtual BGSPreviewTransform* GetPreviewTransform() { return nullptr; }                                                                                                                                                                        // 45
-		virtual BGSSoundTagComponent* GetSoundTagComponent() { return nullptr; }                                                                                                                                                                       // 46
+		virtual BGSPreviewTransform*     GetPreviewTransform() { return nullptr; }                                                                                                                                                                        // 45
+		virtual BGSSoundTagComponent*    GetSoundTagComponent() { return nullptr; }                                                                                                                                                                       // 46
 		virtual std::uint32_t            GetFilledSlots() const;                                                                                                                                                                                          // 47
 		virtual std::uint32_t            GetFilledSlotsImpl() const { return static_cast<std::uint32_t>(-1); }                                                                                                                                            // 48
 		virtual float                    GetDesirability([[maybe_unused]] TBO_InstanceData* a_instanceData, [[maybe_unused]] const TESForm* a_user) const { return 0.0F; }                                                                                // 49
@@ -105,8 +105,8 @@ namespace RE
 
 		[[nodiscard]] static auto GetAllForms()
 			-> std::pair<
-			BSTHashMap<std::uint32_t, TESForm*>*,
-			std::reference_wrapper<BSReadWriteLock>>
+				BSTHashMap<std::uint32_t, TESForm*>*,
+				std::reference_wrapper<BSReadWriteLock>>
 		{
 			static REL::Relocation<BSTHashMap<std::uint32_t, TESForm*>**> allForms{ REL::ID(2689178) };
 			static REL::Relocation<BSReadWriteLock*>                      allFormsMapLock{ REL::ID(2689189) };
@@ -115,8 +115,8 @@ namespace RE
 
 		[[nodiscard]] static auto GetAllFormsByEditorID()
 			-> std::pair<
-			BSTHashMap<BSFixedString, TESForm*>*,
-			std::reference_wrapper<BSReadWriteLock>>
+				BSTHashMap<BSFixedString, TESForm*>*,
+				std::reference_wrapper<BSReadWriteLock>>
 		{
 			static REL::Relocation<BSTHashMap<BSFixedString, TESForm*>**> allFormsByEditorID{ REL::ID(2689179) };
 			static REL::Relocation<BSReadWriteLock*>                      allFormsEditorIDMapLock{ REL::ID(2689190) };
@@ -142,8 +142,7 @@ namespace RE
 			if (map) {
 				const auto it = map->find(a_formID);
 				return it != map->end() ? it->second : nullptr;
-			}
-			else {
+			} else {
 				return nullptr;
 			}
 		}
@@ -162,8 +161,7 @@ namespace RE
 			if (map) {
 				const auto it = map->find(a_editorID);
 				return it != map->end() ? it->second : nullptr;
-			}
-			else {
+			} else {
 				return nullptr;
 			}
 		}
@@ -225,8 +223,8 @@ namespace RE
 		template <class T>
 		[[nodiscard]] bool Is() const noexcept  //
 			requires(std::derived_from<T, TESForm> &&
-		!std::is_pointer_v<T> &&
-			!std::is_reference_v<T>)
+					 !std::is_pointer_v<T> &&
+					 !std::is_reference_v<T>)
 		{
 			return Is(T::FORM_ID);
 		}
@@ -255,8 +253,7 @@ namespace RE
 			if (a_value) {
 				inGameFormFlags |= a_flags;
 				AddChange(1);
-			}
-			else {
+			} else {
 				inGameFormFlags &= ~a_flags;
 				AddChange(1);
 			}
@@ -272,24 +269,24 @@ namespace RE
 		template <
 			class T,
 			class = std::enable_if_t<
-			std::negation_v<
-			std::disjunction<
-			std::is_pointer<T>,
-			std::is_reference<T>,
-			std::is_const<T>,
-			std::is_volatile<T>>>>>
-			[[nodiscard]] T* As() noexcept;
+				std::negation_v<
+					std::disjunction<
+						std::is_pointer<T>,
+						std::is_reference<T>,
+						std::is_const<T>,
+						std::is_volatile<T>>>>>
+		[[nodiscard]] T* As() noexcept;
 
 		template <
 			class T,
 			class = std::enable_if_t<
-			std::negation_v<
-			std::disjunction<
-			std::is_pointer<T>,
-			std::is_reference<T>,
-			std::is_const<T>,
-			std::is_volatile<T>>>>>
-			[[nodiscard]] const T* As() const noexcept;
+				std::negation_v<
+					std::disjunction<
+						std::is_pointer<T>,
+						std::is_reference<T>,
+						std::is_const<T>,
+						std::is_volatile<T>>>>>
+		[[nodiscard]] const T* As() const noexcept;
 
 		// members
 		TESFileContainer                         sourceFiles;      // 08

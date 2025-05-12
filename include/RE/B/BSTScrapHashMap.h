@@ -2,7 +2,7 @@
 
 namespace RE
 {
-    template <
+	template <
 		class Key,
 		class T,
 		class Hash = BSCRC32<Key>,

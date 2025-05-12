@@ -14,8 +14,8 @@ namespace RE
 		};
 
 		// members
-		TESForm* zoneOwner;  // 00
-		BGSLocation* location;   // 08
+		TESForm*                         zoneOwner;  // 00
+		BGSLocation*                     location;   // 08
 		std::int8_t                      ownerRank;  // 10
 		std::int8_t                      minLevel;   // 11
 		REX::EnumSet<FLAG, std::uint8_t> flags;      // 12

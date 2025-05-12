@@ -17,7 +17,7 @@ namespace RE
 		}
 
 		// members
-		hkVisualDebugger* owner{ nullptr };     // 08
+		hkVisualDebugger*              owner{ nullptr };     // 08
 		hkInplaceArray<const char*, 6> monitorStreamBegins;  // 10
 		hkInplaceArray<const char*, 6> monitorStreamEnds;    // 50
 	};

@@ -25,7 +25,7 @@ namespace RE
 		PipboyRadioData       radioData;        // A28
 		PipboyPlayerInfoData  playerInfoData;   // AD8
 		PipboyStatusData      statusData;       // BE0
-		PipboyDataGroup* dataGroups[11];   // CC0
+		PipboyDataGroup*      dataGroups[11];   // CC0
 		PipboyThrottleManager throttleManager;  // D18
 	};
 	static_assert(sizeof(PipboyDataManager) == 0xD48);

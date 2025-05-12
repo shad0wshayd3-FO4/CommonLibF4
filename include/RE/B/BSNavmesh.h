@@ -42,7 +42,7 @@ namespace RE
 		BSTHashMap<std::uint32_t, std::uint32_t>                     portalSwaps;            // 198
 		BSTArray<BSNavmesh::DisabledLink>                            disabledLinks;          // 1C8
 		BSTSmartPointer<BSPathingCell>                               parentCell;             // 1E0
-		BSNavmeshInfo* navmeshInfo;            // 1E8
+		BSNavmeshInfo*                                               navmeshInfo;            // 1E8
 		BSTArray<BSNavmeshWaypoint>                                  waypoints;              // 1F0
 	};
 	static_assert(sizeof(BSNavmesh) == 0x208);

@@ -46,8 +46,8 @@ namespace RE
 		{
 		public:
 			// members
-			std::byte* buffer[1u << 13];  // 00000
-			std::byte** currentBuffer;     // 10000
+			std::byte*               buffer[1u << 13];  // 00000
+			std::byte**              currentBuffer;     // 10000
 			CommandBufferPassesData* next;              // 10008
 			std::uint32_t            frame;             // 10010
 			std::uint32_t            ownerIndex;        // 10014
@@ -67,7 +67,7 @@ namespace RE
 		{
 		public:
 			// members
-			BSBatchRenderer* batchRenderer;  // 00
+			BSBatchRenderer*   batchRenderer;  // 00
 			PersistentPassList passList;       // 08
 			float              depth;          // 18
 			std::uint32_t      count;          // 1C
@@ -95,15 +95,15 @@ namespace RE
 		std::uint32_t                                                                                   currentFirstPass;                                                 // 348
 		std::uint32_t                                                                                   currentLastPass;                                                  // 34C
 		bool                                                                                            autoClearPasses;                                                  // 350
-		GeometryGroup* geometryGroups[std::to_underlying(GEOMETRY_GROUP_ENUM::kTotal)];  // 358
-		GeometryGroup* alphaGroup;                                                       // 410
+		GeometryGroup*                                                                                  geometryGroups[std::to_underlying(GEOMETRY_GROUP_ENUM::kTotal)];  // 358
+		GeometryGroup*                                                                                  alphaGroup;                                                       // 410
 		std::uint32_t                                                                                   groupingAlphasGroupCount;                                         // 418
-		GeometryGroup* groupingAlphasGroup;                                              // 420
+		GeometryGroup*                                                                                  groupingAlphasGroup;                                              // 420
 		BSTArray<CommandBufferPassesDataEntry>                                                          commandBufferPasses;                                              // 428
 		BSTSmallIndexScatterTable<BSTArray<CommandBufferPassesDataEntry>, CommandBufferPassesMapAccess> commandBufferPassMap;                                             // 440
-		CommandBufferPassesData* bufferPassesCurr;                                                 // 460
-		CommandBufferPassesData* bufferPassesHead;                                                 // 468
-		CommandBufferPassesData** bufferPassesTail;                                                 // 470
+		CommandBufferPassesData*                                                                        bufferPassesCurr;                                                 // 460
+		CommandBufferPassesData*                                                                        bufferPassesHead;                                                 // 468
+		CommandBufferPassesData**                                                                       bufferPassesTail;                                                 // 470
 		std::uint32_t                                                                                   bufferPassesCurrAllocFrame;                                       // 478
 	};
 	static_assert(sizeof(BSBatchRenderer) == 0x480);

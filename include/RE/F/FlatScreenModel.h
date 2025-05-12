@@ -18,7 +18,7 @@ namespace RE
 
 		// members
 		BSFixedString customRendererName;  // 10
-		void* model;               // 18 - TODO
+		void*         model;               // 18 - TODO
 	};
 	static_assert(sizeof(FlatScreenModel) == 0x20);
 }

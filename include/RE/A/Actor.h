@@ -115,12 +115,12 @@ namespace RE
 		virtual bool                 ReloadWeapon(const BGSObjectInstanceT<TESObjectWEAP>& a_weapon, BGSEquipIndex a_equipIndex);                                                                                        // 0EF
 		virtual std::uint32_t        UseAmmo(const BGSObjectInstanceT<TESObjectWEAP>& a_weapon, BGSEquipIndex a_equipIndex, std::uint32_t a_shotCount);                                                                  // 0F0
 		virtual bool                 CalculateCachedOwnerIsInCombatantFaction() const;                                                                                                                                   // 0F1
-		virtual CombatGroup* GetCombatGroup() const;                                                                                                                                                             // 0F2
+		virtual CombatGroup*         GetCombatGroup() const;                                                                                                                                                             // 0F2
 		virtual void                 SetCombatGroup(CombatGroup* a_group);                                                                                                                                               // 0F3
 		virtual bool                 CheckValidTarget(TESObjectREFR& a_ref) const;                                                                                                                                       // 0F4
 		virtual bool                 InitiateDialogue(Actor* a_target, PackageLocation* a_packLoc, PackageLocation* a_packSecondLoc);                                                                                    // 0F5
 		virtual void                 EndDialogue();                                                                                                                                                                      // 0F6
-		virtual Actor* SetUpTalkingActivatorActor(Actor* a_target, Actor*& a_talkingactivator);                                                                                                            // 0F7
+		virtual Actor*               SetUpTalkingActivatorActor(Actor* a_target, Actor*& a_talkingactivator);                                                                                                            // 0F7
 		virtual void                 InitiateFlee(TESObjectREFR* a_fleeRef, bool a_runonce, bool a_knows, bool a_combatMode, TESObjectCELL* a_cell, TESObjectREFR* a_ref, float a_fleeFromDist, float a_fleeToDist);     // 0F8
 		virtual void                 InitiateGetUpPackage();                                                                                                                                                             // 0F9
 		virtual void                 PutCreatedPackage(TESPackage* a_pack, bool a_tempPack, bool a_isACreatedPackage, bool a_allowFromFurniture);                                                                        // 0FA
@@ -151,7 +151,7 @@ namespace RE
 		virtual NiPoint3             CalculateLOSLocation(ACTOR_LOS_LOCATION a_location) const;                                                                                                                          // 113
 		virtual void                 CreateMovementController();                                                                                                                                                         // 114
 		virtual bool                 ShouldPivotToFaceCamera() const { return false; }                                                                                                                                   // 115
-		virtual BGSKeyword* GetSpeakingAnimArchType() { return speakingAnimArchType; }                                                                                                                          // 116
+		virtual BGSKeyword*          GetSpeakingAnimArchType() { return speakingAnimArchType; }                                                                                                                          // 116
 		virtual void                 KillImpl(Actor* a_attacker, float a_damage, bool a_sendEvent, bool a_ragdollInstant);                                                                                               // 117
 		virtual void                 DoReparentWeapon(const TESObjectWEAP* a_weapon, BGSEquipIndex a_equipIndex, bool a_weaponDrawn);                                                                                    // 118
 		virtual bool                 DrinkPotion(AlchemyItem* a_potion, std::uint32_t a_stackID);                                                                                                                        // 119
@@ -493,17 +493,17 @@ namespace RE
 		float                                            updateTargetTimer;            // 2D4
 		NiPoint3                                         editorLocCoord;               // 2D8
 		NiPoint3                                         editorLocRot;                 // 2E4
-		TESForm* editorLocForm;                // 2F0
-		BGSLocation* editorLocation;               // 2F8
-		AIProcess* currentProcess;               // 300
-		ActorMover* actorMover;                   // 308
-		BGSKeyword* speakingAnimArchType;         // 310
+		TESForm*                                         editorLocForm;                // 2F0
+		BGSLocation*                                     editorLocation;               // 2F8
+		AIProcess*                                       currentProcess;               // 300
+		ActorMover*                                      actorMover;                   // 308
+		BGSKeyword*                                      speakingAnimArchType;         // 310
 		BSTSmartPointer<MovementControllerNPC>           movementController;           // 318
-		TESPackage* initialPackage;               // 320
-		CombatController* combatController;             // 328
-		TESFaction* vendorFaction;                // 330
+		TESPackage*                                      initialPackage;               // 320
+		CombatController*                                combatController;             // 328
+		TESFaction*                                      vendorFaction;                // 330
 		ActorValueStorage                                avStorage;                    // 338
-		BGSDialogueBranch* exclusiveBranch;              // 370
+		BGSDialogueBranch*                               exclusiveBranch;              // 370
 		REX::EnumSet<ACTOR_CRITICAL_STAGE, std::int32_t> criticalStage;                // 378
 		ObjectRefHandle                                  dialogueItemTarget;           // 37C
 		ActorHandle                                      currentCombatTarget;          // 380
@@ -519,12 +519,12 @@ namespace RE
 		std::uint32_t                                    intimidateBribeDayStamp;      // 3A8
 		float                                            equippedWeight;               // 3AC
 		BSTSmallArray<SpellItem*>                        addedSpells;                  // 3B0
-		ActorMagicCaster* magicCasters[4];              // 3C8
-		MagicItem* selectedSpell[4];             // 3E8
-		CastPowerItem* castPowerItems;               // 408
-		TESForm* selectedPower;                // 410
-		TESRace* race;                         // 418
-		Perks* perks;                        // 420
+		ActorMagicCaster*                                magicCasters[4];              // 3C8
+		MagicItem*                                       selectedSpell[4];             // 3E8
+		CastPowerItem*                                   castPowerItems;               // 408
+		TESForm*                                         selectedPower;                // 410
+		TESRace*                                         race;                         // 418
+		Perks*                                           perks;                        // 420
 		BSTSmartPointer<BipedAnim>                       biped;                        // 428
 		BSNonReentrantSpinLock                           addingToOrRemovingFromScene;  // 430
 		BSReadWriteLock                                  perkArrayLock;                // 434
@@ -538,8 +538,8 @@ namespace RE
 		std::uint32_t                                    lastSeenTime;                 // 478
 		float                                            armorRating;                  // 47C
 		float                                            armorBaseFactorSum;           // 480
-		std::uint32_t                                    visFlags : 4;                  // 484:00
-		std::int8_t                                      raceSwitchPending : 1;         // 488:0
+		std::uint32_t                                    visFlags: 4;                  // 484:00
+		std::int8_t                                      raceSwitchPending: 1;         // 488:0
 		std::int8_t                                      soundCallBackSet;             // 489
 		bool                                             trespassing;                  // 48A
 	};

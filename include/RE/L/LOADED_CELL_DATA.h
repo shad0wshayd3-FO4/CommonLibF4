@@ -28,7 +28,7 @@ namespace RE
 		BSTArray<ObjectRefHandle>                                skyActors;                  // 150
 		BSTArray<ObjectRefHandle>                                flightAvoidAreas;           // 168
 		BSReadWriteLock                                          waterLock;                  // 180
-		void* combinedGeometry;           // 188 - TODO
+		void*                                                    combinedGeometry;           // 188 - TODO
 		NiPointer<QueuedFile>                                    combinedGeometryTask;       // 190
 		BSSimpleList<ObjectRefHandle>                            activatingRefs;             // 198
 		BSSimpleList<ObjectRefHandle>                            waterRefs;                  // 1A8
@@ -39,7 +39,7 @@ namespace RE
 		NiPointer<NiNode>                                        multiBoundNode;             // 1D8
 		NiPointer<NiNode>                                        combinedObjects;            // 1E0
 		NiPointer<NiNode>                                        combinedStaticCollision;    // 1E8
-		BGSEncounterZone* encounterZone;              // 1F0
+		BGSEncounterZone*                                        encounterZone;              // 1F0
 		std::size_t                                              visibleDistantFadeInTime;   // 1F8
 		std::int32_t                                             criticalQueuedRefCount;     // 200
 		std::int32_t                                             queuedRefCount;             // 204

@@ -22,8 +22,8 @@ namespace RE
 		{
 		public:
 			// members
-			BGSArtObject* artObject;     // 00
-			TESEffectShader* effectShader;  // 08
+			BGSArtObject*                     artObject;     // 00
+			TESEffectShader*                  effectShader;  // 08
 			REX::EnumSet<Flag, std::uint32_t> flags;         // 10
 		};
 		static_assert(sizeof(Data) == 0x18);

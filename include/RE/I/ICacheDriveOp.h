@@ -2,12 +2,12 @@
 
 namespace RE
 {
-    namespace BSResource
-    {
+	namespace BSResource
+	{
 		class __declspec(novtable) ICacheDriveOp :
 			public BSIntrusiveRefCounted
 		{
-        public:
+		public:
 			virtual ~ICacheDriveOp() = default;
 			virtual void OnValid(BSResource::CacheDrive& p_cache_drive) = 0;
 			virtual void OnInit(BSResource::CacheDrive& p_cache_drive) = 0;
@@ -20,5 +20,5 @@ namespace RE
 			std::uint32_t unk08;  // 08
 		};
 		static_assert(sizeof(ICacheDriveOp) == 0x10);
-    }
+	}
 }

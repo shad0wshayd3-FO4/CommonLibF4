@@ -127,8 +127,8 @@ namespace RE
 
 			// members
 			BGSMod::Attachment::Mod* mod;                   // 10
-			TESBoundObject* foundObj{ nullptr };   // 18
-			bool* success;               // 20
+			TESBoundObject*          foundObj{ nullptr };   // 18
+			bool*                    success;               // 20
 			const std::int8_t        slotIndex;             // 28
 			const bool               attach;                // 29
 			bool                     equipLocked{ false };  // 2A
@@ -164,7 +164,7 @@ namespace RE
 		}
 
 		[[nodiscard]] std::uint32_t GetCount() const noexcept;
-		[[nodiscard]] Stack* GetStackByID(std::uint32_t a_stackID) const
+		[[nodiscard]] Stack*        GetStackByID(std::uint32_t a_stackID) const
 		{
 			auto iter = stackData.get();
 			while (a_stackID--) {
@@ -217,7 +217,7 @@ namespace RE
 		}
 
 		// members
-		TESBoundObject* object;     // 00
+		TESBoundObject*        object;     // 00
 		BSTSmartPointer<Stack> stackData;  // 08
 	};
 	static_assert(sizeof(BGSInventoryItem) == 0x10);

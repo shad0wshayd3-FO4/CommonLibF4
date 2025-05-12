@@ -13,14 +13,14 @@ namespace RE
 		}
 
 		void Create(
-			const char* a_headerText,
-			const char* a_bodyText,
+			const char*          a_headerText,
+			const char*          a_bodyText,
 			IMessageBoxCallback* a_callback,
 			WARNING_TYPES        a_warningContext,
-			const char* a_button1Text = nullptr,
-			const char* a_button2Text = nullptr,
-			const char* a_button3Text = nullptr,
-			const char* a_button4Text = nullptr,
+			const char*          a_button1Text = nullptr,
+			const char*          a_button2Text = nullptr,
+			const char*          a_button3Text = nullptr,
+			const char*          a_button4Text = nullptr,
 			bool                 a_ensureUnique = false)
 		{
 			using func_t = decltype(&MessageMenuManager::Create);

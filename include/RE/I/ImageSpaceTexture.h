@@ -7,7 +7,7 @@ namespace RE
 	public:
 		// members
 		bool                           forceAniso;      // 00
-		NiTexture* texture;         // 08
+		NiTexture*                     texture;         // 08
 		std::int32_t                   renderTarget;    // 10
 		std::int32_t                   depthBuffer;     // 14
 		std::int32_t                   stencilBuffer;   // 18

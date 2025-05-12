@@ -13,7 +13,7 @@ namespace RE
 		};
 
 		// members
-		TESObjectCELL* transitionCell;  // 00
+		TESObjectCELL*  transitionCell;  // 00
 		ObjectRefHandle linkedDoor;      // 08
 		NiPoint3        position;        // 0C
 		NiPoint3        rotation;        // 18

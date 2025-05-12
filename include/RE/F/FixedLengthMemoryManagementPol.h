@@ -14,8 +14,7 @@ namespace RE
 		{
 			if (a_count <= N) {
 				return _buffer;
-			}
-			else {
+			} else {
 				stl::report_and_fail("failed to satisfy allocation request"sv);
 			}
 		}

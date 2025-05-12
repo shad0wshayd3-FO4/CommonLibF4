@@ -18,7 +18,7 @@ namespace RE
 		Scaleform::GFx::Value flashTarget;                 // 10
 		Scaleform::GFx::Value originalFunctionDefinition;  // 30
 		BSFixedStringCS       funcName;                    // 50
-		BSGFxFunctionBase* owner;                       // 58
+		BSGFxFunctionBase*    owner;                       // 58
 	};
 	static_assert(sizeof(BSGFxFunctionHandler) == 0x60);
 }

@@ -24,7 +24,7 @@ namespace RE
 		{
 		public:
 			// members
-			SpellItem* addictionItem;     // 08
+			SpellItem*              addictionItem;     // 08
 			float                   addictionChance;   // 10
 			BGSSoundDescriptorForm* consumptionSound;  // 18
 			BGSLocalizedString      addictionName;     // 20

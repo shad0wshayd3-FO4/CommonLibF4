@@ -40,7 +40,7 @@ namespace RE
 
 		// members
 		BSTSmartPointer<BSResource::Stream> stream;     // 10
-		BufferType* buffer;     // 18
+		BufferType*                         buffer;     // 18
 		std::size_t                         pos;        // 20
 		BSResource::ErrorCode               lastError;  // 28
 

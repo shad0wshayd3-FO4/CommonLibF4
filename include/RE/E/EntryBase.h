@@ -2,8 +2,8 @@
 
 namespace RE
 {
-    namespace BSResource
-    {
+	namespace BSResource
+	{
 		class EntryBase
 		{
 		public:
@@ -13,5 +13,5 @@ namespace RE
 			BSTSmartPointer<Stream>       stream;  // 10
 		};
 		static_assert(sizeof(EntryBase) == 0x18);
-    }
+	}
 }

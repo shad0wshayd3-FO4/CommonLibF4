@@ -18,8 +18,8 @@ namespace RE
 		}
 
 		// members
-		BGSObjectInstanceExtra* extra;             // 10
-		TESBoundObject* object;            // 18
+		BGSObjectInstanceExtra*        extra;             // 10
+		TESBoundObject*                object;            // 18
 		const BGSMod::Attachment::Mod* mod;               // 20
 		std::uint8_t                   rank;              // 28
 		bool                           remove;            // 29

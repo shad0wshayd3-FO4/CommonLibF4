@@ -42,9 +42,9 @@ namespace RE
 			union
 			{
 				BGSMod::Attachment::Mod* mod;
-				TESBoundObject* object;
+				TESBoundObject*          object;
 			};  // 00
-			const BGSConstructibleObject* recipe;         // 08
+			const BGSConstructibleObject*                                   recipe;         // 08
 			BSTArray<BSTTuple<TESForm*, BGSTypedFormValuePair::SharedVal>>* requiredItems;  // 10
 			BSTArray<BSTTuple<BGSPerk*, std::uint32_t>>                     requiredPerks;  // 18
 			std::uint8_t                                                    rank;           // 30

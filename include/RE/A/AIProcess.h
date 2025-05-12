@@ -109,29 +109,29 @@ namespace RE
 		}
 
 		// members
-		MiddleLowProcessData* middleLow;                   // 00
-		MiddleHighProcessData* middleHigh;                  // 08
-		HighProcessData* high;                        // 10
+		MiddleLowProcessData*           middleLow;                   // 00
+		MiddleHighProcessData*          middleHigh;                  // 08
+		HighProcessData*                high;                        // 10
 		ActorPackage                    currentPackage;              // 18
 		float                           hourLastProcessed;           // 48
 		float                           timeAdjustmentsMade;         // 4C
 		std::uint32_t                   dateLastProcessed;           // 50
-		CachedValues* cachedValues;                // 58
+		CachedValues*                   cachedValues;                // 58
 		std::int32_t                    numberItemsActivate;         // 60
 		BSSimpleList<ObjectstoAcquire*> objectList;                  // 68
 		BSSimpleList<TESObjectREFR*>    genericLocationsList;        // 78
-		ObjectstoAcquire* acquireObject;               // 88
-		ObjectstoAcquire* savedAcquireObject;          // 90
+		ObjectstoAcquire*               acquireObject;               // 88
+		ObjectstoAcquire*               savedAcquireObject;          // 90
 		float                           essentialDownTimer;          // 98
 		float                           deathTime;                   // 9C
 		float                           trackedDamage;               // A0
-		TESBoundObject* itemBeingUsed;               // A8
+		TESBoundObject*                 itemBeingUsed;               // A8
 		AITimer                         combatDelayTimer;            // B0
 		ObjectRefHandle                 followTarget;                // B8
 		ObjectRefHandle                 target;                      // BC
 		ObjectRefHandle                 genericLocation;             // C0
 		ObjectRefHandle                 genericSecondLocation;       // C4
-		BGSListForm* targetFormList;              // C8
+		BGSListForm*                    targetFormList;              // C8
 		std::uint32_t                   currentSpeakingTopicID;      // D0
 		ObjectRefHandle                 patrolLocation;              // D4
 		ObjectRefHandle                 idleTarget;                  // D8

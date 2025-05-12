@@ -2,7 +2,7 @@
 
 namespace RE
 {
-    template <class Key>
+	template <class Key>
 	class BSTSetTraits
 	{
 	public:

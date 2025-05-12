@@ -11,7 +11,7 @@ namespace RE
 
 		// members
 		BGSSoundDescriptorForm* harvestSound;      // 08
-		TESBoundObject* produceItem;       // 10
+		TESBoundObject*         produceItem;       // 10
 		std::int8_t             produceChance[4];  // 18
 	};
 	static_assert(sizeof(TESProduceForm) == 0x20);

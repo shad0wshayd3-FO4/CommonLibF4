@@ -15,8 +15,8 @@ namespace RE
 		};
 
 		// members
-		NiTListItem<T>* head;       // 00
-		NiTListItem<T>* tail;       // 08
+		NiTListItem<T>*    head;       // 00
+		NiTListItem<T>*    tail;       // 08
 		AntiBloatAllocator allocator;  // 10
 	};
 }

@@ -75,8 +75,7 @@ namespace RE
 				if (entry) {
 					assert(!entry->wide());
 					return reinterpret_cast<const char*>(entry + 1);
-				}
-				else {
+				} else {
 					return nullptr;
 				}
 			}
@@ -87,8 +86,7 @@ namespace RE
 				if (entry) {
 					assert(entry->wide());
 					return reinterpret_cast<const wchar_t*>(entry + 1);
-				}
-				else {
+				} else {
 					return nullptr;
 				}
 			}
@@ -96,13 +94,13 @@ namespace RE
 			[[nodiscard]] bool wide() const noexcept { return _flags & kWide; }
 
 			// members
-			Entry* _left;   // 00
+			Entry*                 _left;   // 00
 			std::uint16_t          _flags;  // 08
 			volatile std::uint16_t _crc;    // 08
 			union
 			{
 				std::uint32_t _length;
-				Entry* _right;
+				Entry*        _right;
 			};  // 10
 		};
 		static_assert(sizeof(Entry) == 0x18);

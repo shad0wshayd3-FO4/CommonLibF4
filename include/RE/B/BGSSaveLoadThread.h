@@ -13,7 +13,7 @@ namespace RE
 
 			// members
 			std::uint32_t          taskTypeID;            // 00
-			BGSSaveLoadFile* savefile;              // 08
+			BGSSaveLoadFile*       savefile;              // 08
 			TaskFinishedCallback_t taskFinishedCallback;  // 10
 			BSFixedString          previousSaveToDelete;  // 18
 		};

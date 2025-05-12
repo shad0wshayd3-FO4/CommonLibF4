@@ -24,7 +24,7 @@ namespace RE
 			REX::EnumSet<MagicSystem::Delivery, std::int32_t>    delivery;      // 14
 			float                                                castDuration;  // 18
 			float                                                range;         // 1C
-			BGSPerk* castingPerk;   // 20
+			BGSPerk*                                             castingPerk;   // 20
 		};
 		static_assert(sizeof(Data) == 0x28);
 

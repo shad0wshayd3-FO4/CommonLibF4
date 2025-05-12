@@ -2,7 +2,7 @@
 
 namespace RE
 {
-    template <std::uint32_t N>
+	template <std::uint32_t N>
 	struct BSTStaticHashMapBase
 	{
 	public:

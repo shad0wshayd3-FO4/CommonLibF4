@@ -19,7 +19,7 @@ namespace RE
 		virtual void DoClearSink() override;          // 04
 
 		// members
-		PipboyArray* statTypeArray;  // A0
+		PipboyArray*                             statTypeArray;  // A0
 		BSTHashMap<BSFixedString, PipboyObject*> statMap;        // A8
 	};
 	static_assert(sizeof(PipboyLogData) == 0xD8);

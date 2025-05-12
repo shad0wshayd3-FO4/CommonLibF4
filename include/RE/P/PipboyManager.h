@@ -208,14 +208,14 @@ namespace RE
 		BSTPoint2<float>                         newInput;                // 02C
 		NiPointer<BSTriShape>                    debugModeGeom;           // 038
 		Inventory3DManager                       inv3DModelManager;       // 040
-		BGSNote* holotapeToLoad;          // 180
-		BGSTerminal* terminalToLoad;          // 188
+		BGSNote*                                 holotapeToLoad;          // 180
+		BGSTerminal*                             terminalToLoad;          // 188
 		BSFixedString                            menuToOpen;              // 190
 		BSFixedString                            openAnimEvent;           // 198
 		BSFixedString                            closeAnimEvent;          // 1A0
 		REX::EnumSet<LOWER_REASON, std::int32_t> loweringReason;          // 1A8
 		PipboyRadioController                    radioController;         // 1AC
-		TESBoundObject* itemAnimOnClose;         // 1B0
+		TESBoundObject*                          itemAnimOnClose;         // 1B0
 		ObjectRefHandle                          fastTravelLocation;      // 1B8
 		InventoryInterface::Handle               inspectRequestItem;      // 1BC
 		std::uint32_t                            inspectRequestStack;     // 1C0

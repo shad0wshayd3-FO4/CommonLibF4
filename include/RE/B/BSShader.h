@@ -30,7 +30,7 @@ namespace RE
 		BSShaderTechniqueIDMap::MapType<BSGraphics::DomainShader*>  domainShaders;   // 080
 		BSShaderTechniqueIDMap::MapType<BSGraphics::PixelShader*>   pixelShaders;    // 0B0
 		BSShaderTechniqueIDMap::MapType<BSGraphics::ComputeShader*> computeShaders;  // 0E0
-		const char* fxpFilename;     // 110
+		const char*                                                 fxpFilename;     // 110
 	};
 	static_assert(sizeof(BSShader) == 0x118);
 }

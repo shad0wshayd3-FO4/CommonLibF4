@@ -7,7 +7,7 @@ namespace RE
 	public:
 		// members
 		BSSpinLock        packageLock;            // 00
-		TESPackage* package;                // 08
+		TESPackage*       package;                // 08
 		ActorPackageData* data;                   // 10
 		ObjectRefHandle   target;                 // 18
 		std::int32_t      currentProcedureIndex;  // 1C

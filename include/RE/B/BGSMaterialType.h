@@ -12,7 +12,7 @@ namespace RE
 
 		// members
 		TESModel          breakableFXModel;    // 20
-		BGSMaterialType* parentType;          // 50
+		BGSMaterialType*  parentType;          // 50
 		BGSImpactDataSet* havokImpactDataSet;  // 58
 		BSFixedString     materialName;        // 60
 		std::uint32_t     materialID;          // 68

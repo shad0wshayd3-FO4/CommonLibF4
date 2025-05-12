@@ -26,8 +26,8 @@ namespace RE
 		BGSSoundDescriptorForm* sound;           // 188
 		TESTexture              goboTexture;     // 190
 		NiColor                 emittanceColor;  // 1A0
-		BGSLensFlare* lensFlare;       // 1B0
-		BGSGodRays* godRays;         // 1B8
+		BGSLensFlare*           lensFlare;       // 1B0
+		BGSGodRays*             godRays;         // 1B8
 	};
 	static_assert(sizeof(TESObjectLIGH) == 0x1C0);
 }

@@ -47,20 +47,20 @@ namespace RE
 		float                         graphPoints[3][10][2];   // 0CC
 		BSTArray<ActorHandle>         actionInterestedActors;  // 1C0
 		BSSpinLock                    actorArraySpinLock;      // 1D8
-		MovementHandler* movementHandler;         // 1E0
-		LookHandler* lookHandler;             // 1E8
-		SprintHandler* sprintHandler;           // 1F0
-		ReadyWeaponHandler* readyWeaponHandler;      // 1F8
-		AutoMoveHandler* autoMoveHandler;         // 200
-		ToggleRunHandler* toggleRunHandler;        // 208
-		ActivateHandler* activateHandler;         // 210
-		JumpHandler* jumpHandler;             // 218
-		AttackBlockHandler* attackHandler;           // 220
-		RunHandler* runHandler;              // 228
-		SneakHandler* sneakHandler;            // 230
-		TogglePOVHandler* togglePOVHandler;        // 238
-		MeleeThrowHandler* meleeThrowHandler;       // 240
-		GrabRotationHandler* grabRotationHandler;     // 248
+		MovementHandler*              movementHandler;         // 1E0
+		LookHandler*                  lookHandler;             // 1E8
+		SprintHandler*                sprintHandler;           // 1F0
+		ReadyWeaponHandler*           readyWeaponHandler;      // 1F8
+		AutoMoveHandler*              autoMoveHandler;         // 200
+		ToggleRunHandler*             toggleRunHandler;        // 208
+		ActivateHandler*              activateHandler;         // 210
+		JumpHandler*                  jumpHandler;             // 218
+		AttackBlockHandler*           attackHandler;           // 220
+		RunHandler*                   runHandler;              // 228
+		SneakHandler*                 sneakHandler;            // 230
+		TogglePOVHandler*             togglePOVHandler;        // 238
+		MeleeThrowHandler*            meleeThrowHandler;       // 240
+		GrabRotationHandler*          grabRotationHandler;     // 248
 		bool                          notifyingHandlers;       // 250
 		bool                          blockPlayerInput;        // 251
 		float                         cameraAutoRotationX;     // 254

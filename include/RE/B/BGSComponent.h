@@ -1,9 +1,9 @@
 #pragma once
 
+#include "RE/B/BGSCraftingUseSound.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESValueForm.h"
-#include "RE/B/BGSCraftingUseSound.h"
 
 namespace RE
 {

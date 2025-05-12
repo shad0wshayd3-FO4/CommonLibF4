@@ -1,13 +1,13 @@
 #pragma once
 
-#include "RE/M/MagicItem.h"
-#include "RE/B/BGSModelMaterialSwap.h"
-#include "RE/T/TESIcon.h"
-#include "RE/T/TESWeightForm.h"
-#include "RE/B/BGSEquipType.h"
 #include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSEquipType.h"
+#include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/M/MagicItem.h"
+#include "RE/T/TESIcon.h"
 #include "RE/T/TESValueForm.h"
+#include "RE/T/TESWeightForm.h"
 
 namespace RE
 {

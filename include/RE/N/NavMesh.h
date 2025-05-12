@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
-#include "RE/T/TESChildCell.h"
 #include "RE/B/BSNavmesh.h"
+#include "RE/T/TESChildCell.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

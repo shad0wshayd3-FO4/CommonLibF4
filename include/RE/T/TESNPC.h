@@ -1,11 +1,11 @@
 #pragma once
 
-#include "RE/T/TESActorBase.h"
-#include "RE/T/TESRaceForm.h"
-#include "RE/B/BGSOverridePackCollection.h"
 #include "RE/B/BGSForcedLocRefType.h"
 #include "RE/B/BGSNativeTerminalForm.h"
+#include "RE/B/BGSOverridePackCollection.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/T/TESActorBase.h"
+#include "RE/T/TESRaceForm.h"
 
 namespace RE
 {

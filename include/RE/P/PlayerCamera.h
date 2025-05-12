@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/T/TESCamera.h"
 #include "RE/B/BSInputEventReceiver.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/T/TESCamera.h"
 
 namespace RE
 {

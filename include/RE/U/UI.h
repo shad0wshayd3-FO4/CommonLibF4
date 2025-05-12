@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/B/BSInputEventReceiver.h"
-#include "RE/B/BSTSingleton.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
 
 namespace RE
 {

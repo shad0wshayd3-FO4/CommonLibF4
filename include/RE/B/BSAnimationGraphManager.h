@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTEvent.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTEvent.h"
 
 namespace RE
 {

@@ -1,16 +1,16 @@
 #pragma once
 
-#include "RE/T/TESBoundAnimObject.h"
-#include "RE/B/BGSModelMaterialSwap.h"
-#include "RE/T/TESIcon.h"
-#include "RE/B/BGSMessageIcon.h"
-#include "RE/T/TESWeightForm.h"
-#include "RE/T/TESValueForm.h"
 #include "RE/B/BGSDestructibleObjectForm.h"
 #include "RE/B/BGSEquipType.h"
-#include "RE/B/BGSPropertySheet.h"
-#include "RE/B/BGSOpenCloseForm.h"
 #include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSMessageIcon.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSOpenCloseForm.h"
+#include "RE/B/BGSPropertySheet.h"
+#include "RE/T/TESBoundAnimObject.h"
+#include "RE/T/TESIcon.h"
+#include "RE/T/TESValueForm.h"
+#include "RE/T/TESWeightForm.h"
 
 namespace RE
 {

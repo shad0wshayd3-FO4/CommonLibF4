@@ -1,10 +1,10 @@
 #pragma once
 
+#include "RE/B/BGSPreloadable.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESFullName.h"
-#include "RE/T/TESModel.h"
-#include "RE/B/BGSPreloadable.h"
 #include "RE/T/TESImageSpaceModifiableForm.h"
+#include "RE/T/TESModel.h"
 
 namespace RE
 {

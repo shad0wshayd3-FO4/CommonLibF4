@@ -1,14 +1,14 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
-#include "RE/E/ErrorLogger.h"
-#include "RE/I/IObjectHandlePolicy.h"
-#include "RE/O/ObjectBindPolicy.h"
-#include "RE/I/IProfilePolicy.h"
-#include "RE/I/ISavePatcherInterface.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/E/ErrorLogger.h"
 #include "RE/I/IHandleReaderWriter.h"
+#include "RE/I/IObjectHandlePolicy.h"
+#include "RE/I/IProfilePolicy.h"
+#include "RE/I/ISavePatcherInterface.h"
+#include "RE/O/ObjectBindPolicy.h"
 
 namespace RE
 {

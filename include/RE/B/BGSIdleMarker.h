@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/T/TESBoundObject.h"
-#include "RE/B/BGSKeywordForm.h"
-#include "RE/T/TESModel.h"
 #include "RE/B/BGSIdleCollection.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESModel.h"
 
 namespace RE
 {

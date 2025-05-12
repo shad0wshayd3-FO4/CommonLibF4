@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSISoundCategory.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/B/BSISoundCategory.h"
 
 namespace RE
 {

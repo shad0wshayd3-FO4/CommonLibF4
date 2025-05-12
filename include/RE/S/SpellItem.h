@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/M/MagicItem.h"
 #include "RE/B/BGSEquipType.h"
 #include "RE/B/BGSMenuDisplayObject.h"
+#include "RE/M/MagicItem.h"
 #include "RE/T/TESDescription.h"
 
 namespace RE

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
 #include "RE/R/ReferenceEffect.h"
 #include "RE/S/SimpleAnimationGraphManagerHolder.h"
-#include "RE/B/BSTEvent.h"
 
 namespace RE
 {

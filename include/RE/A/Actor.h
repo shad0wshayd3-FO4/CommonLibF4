@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/T/TESObjectREFR.h"
-#include "RE/M/MagicTarget.h"
 #include "RE/A/ActorState.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
+#include "RE/M/MagicTarget.h"
+#include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {

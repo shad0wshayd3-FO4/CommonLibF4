@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/T/TESObjectSTAT.h"
 #include "RE/B/BGSDestructibleObjectForm.h"
 #include "RE/B/BGSKeywordForm.h"
+#include "RE/T/TESObjectSTAT.h"
 
 namespace RE
 {

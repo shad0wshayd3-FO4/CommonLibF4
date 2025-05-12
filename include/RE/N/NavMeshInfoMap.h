@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
 #include "RE/B/BSNavmeshInfoMap.h"
 #include "RE/P/PrecomputedNavmeshInfoPathMap.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

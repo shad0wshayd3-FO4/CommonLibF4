@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/T/TESBoundAnimObject.h"
 #include "RE/T/TESLeveledList.h"
-#include "RE/B/BGSModelMaterialSwap.h"
 
 namespace RE
 {

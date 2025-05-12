@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BaseFormComponent.h"
 #include "RE/B/BGSTypedKeywordValueArray.h"
+#include "RE/B/BaseFormComponent.h"
 
 namespace RE
 {

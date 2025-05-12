@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
 #include "RE/B/BGSPickupPutdownSounds.h"
 #include "RE/T/TESDescription.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/N/NiRefObject.h"
 #include "RE/B/BSReloadShaderI.h"
+#include "RE/N/NiRefObject.h"
 
 namespace RE
 {

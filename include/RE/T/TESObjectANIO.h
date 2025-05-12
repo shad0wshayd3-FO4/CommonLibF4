@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
 #include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

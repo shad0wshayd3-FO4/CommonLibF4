@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSMaterialObject.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESModel.h"
-#include "RE/B/BSMaterialObject.h"
 
 namespace RE
 {

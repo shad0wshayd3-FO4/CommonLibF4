@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/T/TESBoundObject.h"
 #include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/T/TESBoundObject.h"
 
 namespace RE
 {

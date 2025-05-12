@@ -1,9 +1,9 @@
 #pragma once
 
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSMenuDisplayObject.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/B/BGSMenuDisplayObject.h"
-#include "RE/B/BGSKeywordForm.h"
 
 namespace RE
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/H/hkReferencedObject.h"
 #include "RE/H/hkProcessContext.h"
+#include "RE/H/hkReferencedObject.h"
 
 namespace RE
 {

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSKeywordForm.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESFullName.h"
-#include "RE/B/BGSKeywordForm.h"
 
 namespace RE
 {

@@ -1,11 +1,11 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
 #include "RE/B/BSTMessageQueue.h"
-#include "RE/I/IVirtualMachine.h"
+#include "RE/I/IVMDebugInterface.h"
 #include "RE/I/IVMObjectBindInterface.h"
 #include "RE/I/IVMSaveLoadInterface.h"
-#include "RE/I/IVMDebugInterface.h"
-#include "RE/B/BSTEvent.h"
+#include "RE/I/IVirtualMachine.h"
 
 namespace RE
 {

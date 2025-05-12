@@ -2,8 +2,8 @@
 
 #include "RE/B/BSInputEventReceiver.h"
 #include "RE/B/BSTEvent.h"
-#include "RE/I/IMovementPlayerControls.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/I/IMovementPlayerControls.h"
 
 namespace RE
 {

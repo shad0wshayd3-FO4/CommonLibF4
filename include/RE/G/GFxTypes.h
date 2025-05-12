@@ -1,11 +1,11 @@
 #pragma once
 
-#include "RE/S/SFTypes.h"
 #include "RE/S/SFRenderColor.h"
 #include "RE/S/SFRenderMatrix2x4.h"
 #include "RE/S/SFRenderMatrix3x4.h"
 #include "RE/S/SFRenderMatrix4x4.h"
 #include "RE/S/SFRenderTypes2D.h"
+#include "RE/S/SFTypes.h"
 
 namespace RE::Scaleform::GFx
 {

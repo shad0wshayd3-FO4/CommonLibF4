@@ -1,19 +1,19 @@
 #pragma once
 
-#include "RE/T/TESBoundObject.h"
-#include "RE/T/TESFullName.h"
-#include "RE/B/BGSModelMaterialSwap.h"
-#include "RE/T/TESIcon.h"
-#include "RE/T/TESEnchantableForm.h"
+#include "RE/B/BGSBlockBashData.h"
 #include "RE/B/BGSDestructibleObjectForm.h"
 #include "RE/B/BGSEquipType.h"
-#include "RE/B/BGSPreloadable.h"
-#include "RE/B/BGSMessageIcon.h"
-#include "RE/B/BGSPickupPutdownSounds.h"
-#include "RE/B/BGSBlockBashData.h"
-#include "RE/B/BGSKeywordForm.h"
-#include "RE/T/TESDescription.h"
 #include "RE/B/BGSInstanceNamingRulesForm.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSMessageIcon.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BGSPreloadable.h"
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESEnchantableForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESIcon.h"
 
 namespace RE
 {

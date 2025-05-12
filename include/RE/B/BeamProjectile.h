@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/P/Projectile.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/P/Projectile.h"
 
 namespace RE
 {

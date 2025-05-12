@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSBipedObjectForm.h"
 #include "RE/T/TESObject.h"
 #include "RE/T/TESRaceForm.h"
-#include "RE/B/BGSBipedObjectForm.h"
 
 namespace RE
 {

@@ -1,11 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BSTDataBuffer.h"
+#include "RE/B/BaseFormComponent.h"
+#include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/T/TESDescription.h"
-#include "RE/B/BGSModelMaterialSwap.h"
-#include "RE/B/BaseFormComponent.h"
 
 namespace RE
 {

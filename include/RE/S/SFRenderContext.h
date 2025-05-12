@@ -3,9 +3,9 @@
 #include "RE/S/SFList.h"
 #include "RE/S/SFMemory.h"
 #include "RE/S/SFRefCount.h"
-#include "RE/S/SFThreads.h"
 #include "RE/S/SFRenderContainers.h"
 #include "RE/S/SFRenderThreadCommandQueue.h"
+#include "RE/S/SFThreads.h"
 
 namespace RE::Scaleform::Render
 {

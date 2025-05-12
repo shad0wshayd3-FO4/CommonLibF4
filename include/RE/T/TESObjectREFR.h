@@ -1,11 +1,11 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
+#include "RE/A/ActorValueOwner.h"
 #include "RE/B/BSHandleRefObject.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/I/IAnimationGraphManagerHolder.h"
 #include "RE/I/IKeywordFormBase.h"
-#include "RE/A/ActorValueOwner.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

@@ -1289,7 +1289,48 @@ set(SOURCES
 	src/F4SE/InputMap.cpp
 	src/F4SE/Interfaces.cpp
 	src/F4SE/Logger.cpp
+	src/RE/A/Actor.cpp
+	src/RE/A/Array.cpp
+	src/RE/B/BGSInventoryItem.cpp
+	src/RE/B/BGSKeywordForm.cpp
+	src/RE/B/BGSLocation.cpp
+	src/RE/B/BGSObjectInstanceExtra.cpp
+	src/RE/B/BSResource.cpp
+	src/RE/B/BSResourceNiBinaryStream.cpp
+	src/RE/B/BSScaleformManager.cpp
+	src/RE/B/BSVisit.cpp
+	src/RE/C/Calendar.cpp
+	src/RE/E/ExtraInstanceData.cpp
 	src/RE/Fallout.cpp
+	src/RE/G/GFxPlayer.cpp
+	src/RE/I/InventoryInterface.cpp
+	src/RE/M/MenuCursor.cpp
+	src/RE/N/NiAVObject.cpp
+	src/RE/N/NiBinaryStream.cpp
+	src/RE/N/NiMatrix3.cpp
+	src/RE/N/NiObjectNET.cpp
+	src/RE/N/NiPoint2.cpp
+	src/RE/N/NiPoint3.cpp
+	src/RE/N/NiPoint4.cpp
+	src/RE/N/NiRect.cpp
+	src/RE/N/NiTransform.cpp
+	src/RE/O/Object.cpp
+	src/RE/O/ObjectTypeInfo.cpp
+	src/RE/P/PackedInstructionStream.cpp
+	src/RE/P/PlayerCharacter.cpp
+	src/RE/S/StackFrame.cpp
+	src/RE/S/Stream.cpp
+	src/RE/S/StreamBase.cpp
+	src/RE/S/Struct.cpp
+	src/RE/S/StructTypeInfo.cpp
+	src/RE/T/TESFullName.cpp
+	src/RE/T/TESNPC.cpp
+	src/RE/T/TESObjectCELL.cpp
+	src/RE/T/TESValueForm.cpp
+	src/RE/T/TypeInfo.cpp
+	src/RE/V/Variable.cpp
+	src/RE/V/VirtualMachine.cpp
+	src/RE/W/WorkbenchMenuBase.cpp
 	src/REL/HookObject.cpp
 	src/REL/HookStore.cpp
 	src/REL/IAT.cpp

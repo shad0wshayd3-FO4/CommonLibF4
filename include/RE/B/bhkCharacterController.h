@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/bhkNPCollisionObjectUnlinked.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/bhkNPCollisionObjectUnlinked.h"
 
 namespace RE
 {

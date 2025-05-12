@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSThread.h"
+
 namespace RE
 {
 	class alignas(0x80) BGSSaveLoadThread :

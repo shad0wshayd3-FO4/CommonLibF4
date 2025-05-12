@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/Scaleform/GFx/GFx_ASMovieRootBase.h"
-#include "RE/Scaleform/GFx/GFx_ASString.h"
-#include "RE/Scaleform/Kernel/SF_Allocator.h"
-#include "RE/Scaleform/Kernel/SF_ArrayPaged.h"
-#include "RE/Scaleform/Kernel/SF_Memory.h"
+#include "RE/G/GFxASMovieRootBase.h"
+#include "RE/G/GFxASString.h"
+#include "RE/S/SFAllocator.h"
+#include "RE/S/SFArrayPaged.h"
+#include "RE/S/SFMemory.h"
 
 namespace RE::Scaleform
 {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSNavmeshCoverEdgeBase.h"
+
 namespace RE
 {
 	class BSNavmeshCoverEdge :

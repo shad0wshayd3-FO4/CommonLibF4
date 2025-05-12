@@ -137,8 +137,8 @@ namespace RE
 		REX::W32::FILETIME                          deletedFormTime;                  // 368
 		std::uint8_t                                compileIndex;                     // 370
 		std::uint16_t                               smallFileCompileIndex;            // 372
-		BSStringT<char>                             createdBy;                        // 378
-		BSStringT<char>                             summary;                          // 388
+		BSString                                    createdBy;                        // 378
+		BSString                                    summary;                          // 388
 		char*                                       decompressedFormBuffer;           // 398
 		std::uint32_t                               decompressedFormBufferSize;       // 3A0
 		void*                                       reservedDecompressionBuffer;      // 3A8

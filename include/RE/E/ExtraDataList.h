@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSIntrusiveRefCounted.h"
+
 namespace RE
 {
 	namespace detail
@@ -144,11 +146,11 @@ namespace RE
 			return func(this, a_compare, a_qualifier);
 		}
 
-		void SetFavorite(char a_quickkeyIndex)
+		void SetFavorite(char a_quickKeyIndex)
 		{
 			using func_t = decltype(&ExtraDataList::SetFavorite);
 			static REL::Relocation<func_t> func{ REL::ID(2190188) };
-			return func(this, a_quickkeyIndex);
+			return func(this, a_quickKeyIndex);
 		}
 
 		BGSPrimitive* GetPrimitive()

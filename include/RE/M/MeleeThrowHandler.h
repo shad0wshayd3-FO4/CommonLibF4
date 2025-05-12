@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/HeldStateHandler.h"
+
 namespace RE
 {
 	class MeleeThrowHandler :

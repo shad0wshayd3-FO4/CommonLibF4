@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/I/IClientVM.h"
+#include "RE/I/IStackCallbackSaveInterface.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
 	class __declspec(novtable) GameVM :

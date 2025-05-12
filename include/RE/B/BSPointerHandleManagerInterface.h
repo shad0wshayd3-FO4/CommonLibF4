@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
 	template <class T, class Manager>

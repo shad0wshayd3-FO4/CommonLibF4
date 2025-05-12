@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/Scaleform/Render/Render_Containers.h"
-#include "RE/Scaleform/Render/Render_Context.h"
+#include "RE/S/SFRenderContainers.h"
+#include "RE/S/SFRenderContext.h"
 
 namespace RE::Scaleform::Render
 {

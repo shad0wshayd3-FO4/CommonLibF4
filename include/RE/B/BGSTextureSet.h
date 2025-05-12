@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/B/BSTextureSet.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSTextureSet :

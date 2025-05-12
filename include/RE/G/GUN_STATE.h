@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class GUN_STATE : std::uint32_t
+	enum class GUN_STATE : std::int32_t
 	{
 		kDrawn = 0x0,
 		kRelaxed = 0x1,

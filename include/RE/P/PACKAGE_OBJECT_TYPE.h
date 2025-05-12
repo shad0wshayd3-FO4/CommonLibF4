@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class PACKAGE_OBJECT_TYPE
+	enum class PACKAGE_OBJECT_TYPE : std::int32_t
 	{
 		kNone = 0x0,
 		kActi = 0x1,

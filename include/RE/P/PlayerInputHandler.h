@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSInputEventUser.h"
+
 namespace RE
 {
 	class PlayerInputHandler :

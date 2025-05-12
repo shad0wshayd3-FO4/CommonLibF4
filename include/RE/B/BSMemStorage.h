@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSStorage.h"
+
 namespace RE
 {
 	class BSMemStorage :

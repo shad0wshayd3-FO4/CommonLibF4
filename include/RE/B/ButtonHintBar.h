@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSGFxShaderFXTarget.h"
+
 namespace RE
 {
 	class __declspec(novtable) ButtonHintBar :

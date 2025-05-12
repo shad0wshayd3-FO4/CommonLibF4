@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class WEAPON_TYPE : std::uint8_t
+	enum class WEAPON_TYPE : std::int32_t
 	{
 		kNone = 0xFF,
 		kHandToHand = 0x0,

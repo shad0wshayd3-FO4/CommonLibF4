@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/T/TESObjectSTAT.h"
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSKeywordForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSMovableStatic :

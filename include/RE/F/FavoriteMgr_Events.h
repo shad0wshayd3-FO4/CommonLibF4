@@ -6,6 +6,7 @@ namespace RE
 	{
 		struct ComponentFavoriteEvent
 		{
+			// members
 			BGSComponent* component;    // 00
 			bool          isFavorited;  // 08
 		};

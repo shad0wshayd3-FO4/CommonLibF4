@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IFuncCallQuery.h"
+
 namespace RE
 {
 	namespace BSScript

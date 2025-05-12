@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
 	struct __declspec(novtable) MapMarkerData :

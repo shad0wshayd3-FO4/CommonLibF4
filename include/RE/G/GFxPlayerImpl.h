@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/Scaleform/GFx/GFx_Player.h"
-#include "RE/Scaleform/Render/Render_ScreenToWorld.h"
+#include "RE/G/GFxPlayer.h"
+#include "RE/S/SFRenderScreenToWorld.h"
 
 namespace RE::Scaleform
 {

@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/Scaleform/Kernel/SF_AllocInfo.h"
-#include "RE/Scaleform/Kernel/SF_Atomic.h"
-#include "RE/Scaleform/Kernel/SF_List.h"
-#include "RE/Scaleform/Kernel/SF_Stats.h"
-#include "RE/Scaleform/Kernel/SF_SysAlloc.h"
+#include "RE/S/SFAllocInfo.h"
+#include "RE/S/SFAtomic.h"
+#include "RE/S/SFList.h"
+#include "RE/S/SFStats.h"
+#include "RE/S/SFSysAlloc.h"
 
 namespace RE::Scaleform
 {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/C/ContainerMenuBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) BarterMenu :

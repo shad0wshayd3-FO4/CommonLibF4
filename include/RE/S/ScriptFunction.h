@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IFunction.h"
+
 namespace RE
 {
 	namespace BSScript
@@ -8,7 +10,8 @@ namespace RE
 
 		namespace Internal
 		{
-			class __declspec(novtable) ScriptFunction : public IFunction  // 00
+			class __declspec(novtable) ScriptFunction :
+				public IFunction  // 00
 			{
 			public:
 				static constexpr auto RTTI{ RTTI::BSScript__Internal__ScriptFunction };

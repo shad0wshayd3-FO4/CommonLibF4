@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSBTreeFile.h"
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	namespace BSResource::Archive2

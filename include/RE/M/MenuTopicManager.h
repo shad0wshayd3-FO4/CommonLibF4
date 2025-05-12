@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
 	class __declspec(novtable) MenuTopicManager :

@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSActorEvent.h"
+
 namespace RE
 {
-	struct BGSActorCellEvent : public BGSActorEvent
+	struct BGSActorCellEvent :
+		public BGSActorEvent
 	{
 	public:
 		enum class CellFlag

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/Scaleform/Kernel/SF_Array.h"
-#include "RE/Scaleform/Kernel/SF_Atomic.h"
-#include "RE/Scaleform/Kernel/SF_RefCount.h"
+#include "RE/S/SFArray.h"
+#include "RE/S/SFAtomic.h"
+#include "RE/S/SFRefCount.h"
 
 namespace RE::Scaleform
 {

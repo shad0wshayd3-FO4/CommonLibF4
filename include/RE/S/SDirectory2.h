@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/Index.h"
+
 namespace RE::BSResource::SDirectory2
 {
 	class Cursor :

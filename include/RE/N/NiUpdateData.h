@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class NiCamera;
+
 	class NiUpdateData
 	{
 	public:

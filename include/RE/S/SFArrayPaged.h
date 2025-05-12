@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/Scaleform/Kernel/SF_Allocator.h"
+#include "RE/S/SFAllocator.h"
 
 namespace RE::Scaleform
 {

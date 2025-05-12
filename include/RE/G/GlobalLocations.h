@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/L/Location.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
 	namespace BSResource

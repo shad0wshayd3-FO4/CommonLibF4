@@ -1,5 +1,19 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESRaceForm.h"
+#include "RE/T/TESEnchantableForm.h"
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/T/TESBipedModelForm.h"
+#include "RE/B/BGSEquipType.h"
+#include "RE/B/BGSBipedObjectForm.h"
+#include "RE/B/BGSBlockBashData.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/T/TESDescription.h"
+#include "RE/B/BGSInstanceNamingRulesForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESObjectARMO :

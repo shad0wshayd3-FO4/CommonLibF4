@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class COMMAND_TYPE
+	enum class COMMAND_TYPE : std::int32_t
 	{
 		kNone = 0x0,
 		kCall = 0x1,

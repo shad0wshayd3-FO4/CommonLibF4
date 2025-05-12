@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/W/WorkbenchMenuBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) ExamineMenu :

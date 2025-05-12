@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hkReferencedObject.h"
+
 namespace RE
 {
 	class hkVtableClassRegistry :

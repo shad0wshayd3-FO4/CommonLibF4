@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/ILoader.h"
+
 namespace RE
 {
 	namespace BSScript

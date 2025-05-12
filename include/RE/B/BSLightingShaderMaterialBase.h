@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSShaderMaterial.h"
+
 namespace RE
 {
 	struct __declspec(novtable) BSLightingShaderMaterialBase :

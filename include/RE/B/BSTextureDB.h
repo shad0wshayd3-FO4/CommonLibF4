@@ -8,8 +8,6 @@ namespace RE
 		struct DBTraits
 		{
 		public:
-			using U_Type = NiPointer<NiTexture>;
-
 			struct ArgsType
 			{
 			public:
@@ -22,12 +20,6 @@ namespace RE
 				bool          allowDegrade;      // 08
 			};
 			static_assert(sizeof(ArgsType) == 0x0C);
-
-			static BSResource::EntryDB<BSTextureDB::DBTraits>* GetSingleton()
-			{
-				static REL::Relocation<BSResource::EntryDB<BSTextureDB::DBTraits>**> singleton{ REL::ID(1126862) };
-				return *singleton;
-			}
 		};
 		static_assert(std::is_empty_v<DBTraits>);
 	};

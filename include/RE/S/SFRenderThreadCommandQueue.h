@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/Scaleform/Kernel/SF_RefCount.h"
-#include "RE/Scaleform/Kernel/SF_Threads.h"
+#include "RE/S/SFRefCount.h"
+#include "RE/S/SFThreads.h"
 
 namespace RE::Scaleform::Render
 {

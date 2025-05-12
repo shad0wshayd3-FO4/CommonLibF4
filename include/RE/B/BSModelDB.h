@@ -6,8 +6,6 @@ namespace RE
 	{
 		struct DBTraits
 		{
-			using U_Type = NiPointer<NiNode>;
-
 			struct ArgsType
 			{
 				// members
@@ -21,16 +19,8 @@ namespace RE
 				std::uint8_t                              loadTextures: 1;      // 08:05
 			};
 			static_assert(sizeof(ArgsType) == 0x0C);
-
-			static BSResource::EntryDB<BSModelDB::DBTraits>* GetSingleton()
-			{
-				static REL::Relocation<BSResource::EntryDB<BSModelDB::DBTraits>**> singleton{ REL::ID(45807) };
-				return *singleton;
-			}
 		};
 		static_assert(std::is_empty_v<DBTraits>);
-
-		using Handle = BSResource::RHandleType<BSResource::Entry<NiPointer<NiNode>, BSResource::EntryDBTraits<BSModelDB::DBTraits, BSResource::EntryDB<BSModelDB::DBTraits>>::CArgs>, BSResource::EntryDB<BSModelDB::DBTraits>>;
 
 		struct HandelListHead
 		{

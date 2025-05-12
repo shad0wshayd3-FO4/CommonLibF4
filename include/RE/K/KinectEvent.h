@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IDEvent.h"
+
 namespace RE
 {
 	class __declspec(novtable) KinectEvent :
@@ -20,5 +22,4 @@ namespace RE
 
 	extern template KinectEvent*       InputEvent::As() noexcept;
 	extern template const KinectEvent* InputEvent::As() const noexcept;
-
 }

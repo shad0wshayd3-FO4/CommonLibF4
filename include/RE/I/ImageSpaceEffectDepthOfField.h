@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/ImageSpaceEffectOption.h"
+
 namespace RE
 {
 	class __declspec(novtable) ImageSpaceEffectDepthOfField :

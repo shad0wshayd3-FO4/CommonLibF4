@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/B/BSIReverbType.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSReverbParameters :

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/A/AsyncStream.h"
+
 namespace RE
 {
 	namespace BSResource::Archive2

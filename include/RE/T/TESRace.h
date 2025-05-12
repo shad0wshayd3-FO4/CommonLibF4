@@ -1,5 +1,16 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESSpellList.h"
+#include "RE/B/BGSSkinForm.h"
+#include "RE/B/BGSBipedObjectForm.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSAttackDataForm.h"
+#include "RE/B/BGSPropertySheet.h"
+#include "RE/B/BGSPreloadable.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESRace :

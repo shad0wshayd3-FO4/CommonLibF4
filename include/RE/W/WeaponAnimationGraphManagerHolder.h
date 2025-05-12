@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/I/IAnimationGraphManagerHolder.h"
+
 namespace RE
 {
 	class __declspec(novtable) WeaponAnimationGraphManagerHolder :

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IFormFactory.h"
+
 namespace RE
 {
 	class DefaultObjectFormFactory :

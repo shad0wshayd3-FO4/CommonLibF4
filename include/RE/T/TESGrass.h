@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESModel.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESGrass :

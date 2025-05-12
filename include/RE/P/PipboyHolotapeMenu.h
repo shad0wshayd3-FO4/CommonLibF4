@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/HolotapeMenu.h"
+
 namespace RE
 {
 	class __declspec(novtable) PipboyHolotapeMenu :

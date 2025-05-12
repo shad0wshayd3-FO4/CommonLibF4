@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSInventoryItem.h"
+
 namespace RE
 {
 	class __declspec(novtable) ApplyChangesFunctor :

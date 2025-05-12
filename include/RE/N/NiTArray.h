@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiMemManager.h"
+
 namespace RE
 {
 	template <class T, class Allocator>

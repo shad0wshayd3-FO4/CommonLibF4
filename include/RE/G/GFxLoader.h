@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/Scaleform/GFx/GFx_Resource.h"
-#include "RE/Scaleform/Kernel/SF_RefCount.h"
-#include "RE/Scaleform/Kernel/SF_System.h"
-#include "RE/Scaleform/Kernel/SF_Types.h"
+#include "RE/G/GFxResource.h"
+#include "RE/S/SFRefCount.h"
+#include "RE/S/SFSystem.h"
+#include "RE/S/SFTypes.h"
 
 namespace RE::Scaleform::GFx
 {

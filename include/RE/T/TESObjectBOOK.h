@@ -1,5 +1,18 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESFullName.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/T/TESIcon.h"
+#include "RE/T/TESValueForm.h"
+#include "RE/T/TESWeightForm.h"
+#include "RE/T/TESDescription.h"
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSMessageIcon.h"
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSFeaturedItemMessage.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESObjectBOOK :

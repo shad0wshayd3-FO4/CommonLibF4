@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/ImageSpaceEffect.h"
+
 namespace RE
 {
 	class __declspec(novtable) ImageSpaceEffectFullScreenBlur :

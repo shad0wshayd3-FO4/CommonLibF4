@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/P/PipboyValue.h"
+
 namespace RE
 {
 	class PipboyArray :

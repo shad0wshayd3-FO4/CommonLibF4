@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/Scaleform/Render/Render_Matrix2x4.h"
-#include "RE/Scaleform/Render/Render_Types2D.h"
+#include "RE/S/SFRenderMatrix2x4.h"
+#include "RE/S/SFRenderTypes2D.h"
 
 namespace RE::Scaleform::Render
 {

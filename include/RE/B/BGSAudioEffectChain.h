@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/B/BSIAudioEffectChain.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSAudioEffectChain :

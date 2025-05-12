@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSSystemFile.h"
+#include "RE/N/NiBinaryStream.h"
+
 namespace RE
 {
 	class __declspec(novtable) NiFile :

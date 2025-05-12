@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hkHandle.h"
+
 namespace RE
 {
 	struct hknpMotionPropertiesId :

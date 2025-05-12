@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/Scaleform/Render/Render_Matrix4x4.h"
+#include "RE/S/SFRenderMatrix4x4.h"
 
 namespace RE::Scaleform::Render
 {

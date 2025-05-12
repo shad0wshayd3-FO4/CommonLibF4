@@ -1,12 +1,15 @@
 #pragma once
 
+#include "RE/P/PipboyValue.h"
+
 namespace RE
 {
 	template <class T>
 	class PipboyPrimitiveValue;  // Forward declaration for specialization **only**
 
 	template <>
-	class __declspec(novtable) PipboyPrimitiveValue<std::uint32_t> : public PipboyValue
+	class __declspec(novtable) PipboyPrimitiveValue<std::uint32_t> :
+		public PipboyValue
 	{
 	public:
 		virtual ~PipboyPrimitiveValue() {}  // 00
@@ -38,7 +41,8 @@ namespace RE
 	static_assert(sizeof(PipboyPrimitiveValue<std::uint32_t>) == 0x20);
 
 	template <>
-	class __declspec(novtable) PipboyPrimitiveValue<bool> : public PipboyValue
+	class __declspec(novtable) PipboyPrimitiveValue<bool> :
+		public PipboyValue
 	{
 	public:
 		virtual ~PipboyPrimitiveValue() {}  // 00

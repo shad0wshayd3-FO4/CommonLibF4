@@ -1,11 +1,11 @@
 #pragma once
 
-#include "RE/Scaleform/Kernel/SF_List.h"
-#include "RE/Scaleform/Kernel/SF_Memory.h"
-#include "RE/Scaleform/Kernel/SF_RefCount.h"
-#include "RE/Scaleform/Kernel/SF_Threads.h"
-#include "RE/Scaleform/Render/Render_Containers.h"
-#include "RE/Scaleform/Render/Render_ThreadCommandQueue.h"
+#include "RE/S/SFList.h"
+#include "RE/S/SFMemory.h"
+#include "RE/S/SFRefCount.h"
+#include "RE/S/SFThreads.h"
+#include "RE/S/SFRenderContainers.h"
+#include "RE/S/SFRenderThreadCommandQueue.h"
 
 namespace RE::Scaleform::Render
 {

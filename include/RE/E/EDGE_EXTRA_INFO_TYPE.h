@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class EDGE_EXTRA_INFO_TYPE
+	enum class EDGE_EXTRA_INFO_TYPE : std::int32_t
 	{
 		kInvalid = -1,
 		kPortal = 0x0,

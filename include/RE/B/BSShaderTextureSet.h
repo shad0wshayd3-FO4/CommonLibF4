@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTextureSet.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSShaderTextureSet :

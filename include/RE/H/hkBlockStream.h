@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hkBlockStreamBase.h"
+
 namespace RE
 {
 	template <class T>

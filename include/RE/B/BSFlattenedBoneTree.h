@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiNode.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSFlattenedBoneTree :

@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiObject.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class NiExtraData;
+	class NiExtraDataContainer;
+	class NiTimeController;
+
 	class __declspec(novtable) NiObjectNET :
 		public NiObject  // 00
 	{

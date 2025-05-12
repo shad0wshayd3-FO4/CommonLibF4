@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class ACTOR_VALUE_MODIFIER
+	enum class ACTOR_VALUE_MODIFIER : std::int32_t
 	{
 		kPermanent = 0,
 		kTemporary = 1,

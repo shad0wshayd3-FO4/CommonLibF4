@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class DIFFICULTY_LEVEL
+	enum class DifficultyLevel : std::int32_t
 	{
 		kVeryEasy = 0x0,
 		kLow = 0x0,
@@ -14,5 +14,4 @@ namespace RE
 		kTrueSurvival = 0x6,
 		kHigh = 0x6,
 	};
-
 }

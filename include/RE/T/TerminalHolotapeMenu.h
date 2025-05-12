@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/G/GameMenuBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) TerminalHolotapeMenu :

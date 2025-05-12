@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESModel.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSBehaviorGraphModel :

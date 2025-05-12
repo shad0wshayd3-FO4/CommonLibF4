@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
 	namespace CellAttachDetachEventSource

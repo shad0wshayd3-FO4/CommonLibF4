@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiShadeProperty.h"
+
 namespace RE
 {
 	struct __declspec(novtable) BSShaderProperty :

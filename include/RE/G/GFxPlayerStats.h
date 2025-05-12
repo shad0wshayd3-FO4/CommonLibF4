@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/Scaleform/GFx/GFx_Stats.h"
+#include "RE/G/GFxStats.h"
 
 namespace RE::Scaleform::GFx
 {

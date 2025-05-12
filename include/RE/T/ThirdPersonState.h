@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESCameraState.h"
+
 namespace RE
 {
 	class __declspec(novtable) ThirdPersonState :

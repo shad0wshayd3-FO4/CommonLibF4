@@ -1,7 +1,18 @@
 #pragma once
 
+#include "RE/N/NiBound.h"
+#include "RE/N/NiObjectNET.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTFlags.h"
+#include "RE/N/NiTransform.h"
+
 namespace RE
 {
+	class NiAlphaProperty;
+	class NiCullingProcess;
+	class NiUpdateData;
+	class PerformOpFunc;
+
 	class __declspec(novtable) NiAVObject :
 		public NiObjectNET  // 000
 	{

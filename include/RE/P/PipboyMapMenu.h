@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/P/PipboySubMenu.h"
+
 namespace RE
 {
 	class __declspec(novtable) PipboyMapMenu :

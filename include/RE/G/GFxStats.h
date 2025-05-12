@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/Scaleform/Kernel/SF_Stats.h"
+#include "RE/S/SFStats.h"
 
 namespace RE::Scaleform
 {

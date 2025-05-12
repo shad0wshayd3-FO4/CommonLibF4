@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint4.h"
+
 namespace RE
 {
 	class alignas(0x10) NiMatrix3

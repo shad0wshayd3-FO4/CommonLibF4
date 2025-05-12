@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IMovementState.h"
+
 namespace RE
 {
 	class __declspec(novtable) ActorState :

@@ -11,6 +11,5 @@ namespace RE
 		kDisintegrateEnd = 0x4,
 		kFreezeStart = 0x5,
 		kFreezeEnd = 0x6,
-		kCount = 0x7
 	};
 }

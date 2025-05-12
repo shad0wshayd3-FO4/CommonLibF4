@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/S/StreamBase.h"
+
 namespace RE
 {
 	namespace BSResource

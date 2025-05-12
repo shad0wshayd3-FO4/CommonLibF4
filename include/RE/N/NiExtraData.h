@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) NiExtraData :

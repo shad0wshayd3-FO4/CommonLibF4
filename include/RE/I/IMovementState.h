@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IMovementInterface.h"
+
 namespace RE
 {
 	struct __declspec(novtable) IMovementState :

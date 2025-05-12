@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiProperty.h"
+#include "RE/N/NiTFlags.h"
+
 namespace RE
 {
 	class __declspec(novtable) NiAlphaProperty :

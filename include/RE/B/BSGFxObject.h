@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/G/GFxPlayer.h"
+#include "RE/U/UsesBSGFXFunctionHandler.h"
+
 namespace RE
 {
 	class BSGFxObject :

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESObjectREFR.h"
+
 namespace RE
 {
 	class __declspec(novtable) Projectile :

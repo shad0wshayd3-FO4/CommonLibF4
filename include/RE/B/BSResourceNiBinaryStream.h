@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiBinaryStream.h"
+
 namespace RE
 {
 	class BSResourceNiBinaryStream :

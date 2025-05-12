@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/BGSPreloadable.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSDebris :

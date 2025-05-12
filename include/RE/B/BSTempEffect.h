@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiObject.h"
+
 #define F4SE_TEMPEFFECT_UTIL(a_elem)                                    \
 	case a_elem::TYPE:                                                  \
 		if constexpr (std::is_convertible_v<const a_elem*, const T*>) { \

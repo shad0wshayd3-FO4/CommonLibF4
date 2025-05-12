@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/G/GridArray.h"
+
 namespace RE
 {
 	class __declspec(novtable) GridCellArray :

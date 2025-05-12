@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class ITEM_REMOVE_REASON
+	enum class ITEM_REMOVE_REASON : std::int32_t
 	{
 		kNone = 0x0,
 		kStealing = 0x1,

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESModel.h"
+#include "RE/B/BGSPreloadable.h"
+#include "RE/B/BGSDestructibleObjectForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSProjectile :

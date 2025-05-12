@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESBoundAnimObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESSound :

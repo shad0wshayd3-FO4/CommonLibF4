@@ -6,9 +6,9 @@ namespace RE
 	{
 	public:
 		// members
-		BSStringT<char> editorID;    // 00
-		TESForm*        form;        // 10
-		std::uint32_t   variableID;  // 18
+		BSString      editorID;    // 00
+		TESForm*      form;        // 10
+		std::uint32_t variableID;  // 18
 	};
 	static_assert(sizeof(SCRIPT_REFERENCED_OBJECT) == 0x20);
 }

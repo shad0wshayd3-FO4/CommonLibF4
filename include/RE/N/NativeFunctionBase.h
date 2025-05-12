@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IFunction.h"
+
 namespace RE
 {
 	namespace BSScript

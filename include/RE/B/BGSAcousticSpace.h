@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/TTESBoundObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSAcousticSpace :

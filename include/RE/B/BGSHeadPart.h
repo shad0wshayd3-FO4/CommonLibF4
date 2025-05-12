@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSHeadPart :

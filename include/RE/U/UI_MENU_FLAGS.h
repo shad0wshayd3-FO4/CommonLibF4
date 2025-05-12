@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class UI_MENU_FLAGS : std::uint32_t
+	enum class UI_MENU_FLAGS : std::int32_t
 	{
 		kPausesGame = 1 << 0,
 		kAlwaysOpen = 1 << 1,

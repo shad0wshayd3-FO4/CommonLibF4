@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESFurniture.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSTerminal :

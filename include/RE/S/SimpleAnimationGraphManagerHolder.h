@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IAnimationGraphManagerHolder.h"
+
 namespace RE
 {
 	class __declspec(novtable) SimpleAnimationGraphManagerHolder :

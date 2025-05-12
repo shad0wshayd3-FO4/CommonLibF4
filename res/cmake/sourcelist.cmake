@@ -136,8 +136,6 @@ set(SOURCES
 	include/RE/B/BGSLightingTemplate.h
 	include/RE/B/BGSListForm.h
 	include/RE/B/BGSLocalizedString.h
-	include/RE/B/BGSLocalizedStringDL.h
-	include/RE/B/BGSLocalizedStrings.h
 	include/RE/B/BGSLocation.h
 	include/RE/B/BGSLocationRefType.h
 	include/RE/B/BGSMaterialObject.h
@@ -231,10 +229,6 @@ set(SOURCES
 	include/RE/B/BSAudioInit.h
 	include/RE/B/BSAudioManager.h
 	include/RE/B/BSAudioUtil.h
-	include/RE/B/BSAutoLock.h
-	include/RE/B/BSAutoLockDefaultPolicy.h
-	include/RE/B/BSAutoLockReadLockPolicy.h
-	include/RE/B/BSAutoLockWriteLockPolicy.h
 	include/RE/B/BSAwardsSystemUtility.h
 	include/RE/B/BSBTreeFile.h
 	include/RE/B/BSBatchRenderer.h
@@ -242,9 +236,7 @@ set(SOURCES
 	include/RE/B/BSCRC32.h
 	include/RE/B/BSContainer.h
 	include/RE/B/BSCoreTypes.h
-	include/RE/B/BSCriticalSection.h
 	include/RE/B/BSEventFlag.h
-	include/RE/B/BSEventNotifyControl.h
 	include/RE/B/BSExtraData.h
 	include/RE/B/BSFadeNode.h
 	include/RE/B/BSFile.h
@@ -295,7 +287,6 @@ set(SOURCES
 	include/RE/B/BSNavmeshTriangleEdgePortal.h
 	include/RE/B/BSNavmeshVertex.h
 	include/RE/B/BSNavmeshWaypoint.h
-	include/RE/B/BSNonReentrantSpinLock.h
 	include/RE/B/BSPackedTaskQueue.h
 	include/RE/B/BSPointerAllocator.h
 	include/RE/B/BSPointerHandle.h
@@ -303,7 +294,6 @@ set(SOURCES
 	include/RE/B/BSPreCulledObjects.h
 	include/RE/B/BSPrecomputedNavmeshInfoPathMap.h
 	include/RE/B/BSRandom.h
-	include/RE/B/BSReadWriteLock.h
 	include/RE/B/BSReloadShaderI.h
 	include/RE/B/BSResource.h
 	include/RE/B/BSResourceNiBinaryStream.h
@@ -313,10 +303,8 @@ set(SOURCES
 	include/RE/B/BSScaleformManager.h
 	include/RE/B/BSScaleformRenderer.h
 	include/RE/B/BSScaleformTranslator.h
-	include/RE/B/BSScrapArrayAllocator.h
 	include/RE/B/BSScriptUtil.h
 	include/RE/B/BSSemaphore.h
-	include/RE/B/BSSemaphoreBase.h
 	include/RE/B/BSShader.h
 	include/RE/B/BSShaderData.h
 	include/RE/B/BSShaderMaterial.h
@@ -327,7 +315,6 @@ set(SOURCES
 	include/RE/B/BSSimpleList.h
 	include/RE/B/BSSoundHandle.h
 	include/RE/B/BSSpinLock.h
-	include/RE/B/BSStaticArray.h
 	include/RE/B/BSSteamAwardsSystemUtility.h
 	include/RE/B/BSStorage.h
 	include/RE/B/BSStorageDefs.h
@@ -336,63 +323,24 @@ set(SOURCES
 	include/RE/B/BSStringT.h
 	include/RE/B/BSSystemFile.h
 	include/RE/B/BSSystemFileStreamer.h
-	include/RE/B/BSTAlignedHeapArrayAllocator.h
 	include/RE/B/BSTArray.h
-	include/RE/B/BSTArrayHeapAllocator.h
 	include/RE/B/BSTAtomicValue.h
 	include/RE/B/BSTBTree.h
-	include/RE/B/BSTCommonLLMessageQueue.h
-	include/RE/B/BSTCommonMessageQueue.h
-	include/RE/B/BSTCommonScrapHeapMessageQueue.h
-	include/RE/B/BSTCommonStaticMessageQueue.h
 	include/RE/B/BSTDataBuffer.h
-	include/RE/B/BSTEventSink.h
-	include/RE/B/BSTEventSource.h
+	include/RE/B/BSTEvent.h
 	include/RE/B/BSTFreeList.h
-	include/RE/B/BSTFreeListElem.h
-	include/RE/B/BSTGlobalEvent.h
 	include/RE/B/BSTHashMap.h
 	include/RE/B/BSTInterpolator.h
 	include/RE/B/BSTLocklessQueue.h
 	include/RE/B/BSTMessageQueue.h
 	include/RE/B/BSTObjectArena.h
-	include/RE/B/BSTObjectArenaScrapAlloc.h
-	include/RE/B/BSTObjectArenaScrapAllocBase.h
 	include/RE/B/BSTOptional.h
-	include/RE/B/BSTPoint2.h
-	include/RE/B/BSTPoint2Base.h
-	include/RE/B/BSTPoint3.h
-	include/RE/B/BSTPoint3Base.h
-	include/RE/B/BSTPointDefaultOps.h
+	include/RE/B/BSTPoint.h
 	include/RE/B/BSTPointerAndFlags.h
-	include/RE/B/BSTSDMTraits.h
-	include/RE/B/BSTScatterTable.h
-	include/RE/B/BSTScatterTableHeapAllocator.h
-	include/RE/B/BSTScatterTableScrapAllocator.h
-	include/RE/B/BSTScatterTableTraits.h
-	include/RE/B/BSTScrapHashMap.h
-	include/RE/B/BSTSet.h
-	include/RE/B/BSTSetTraits.h
-	include/RE/B/BSTSingletonExplicit.h
-	include/RE/B/BSTSingletonImplicit.h
-	include/RE/B/BSTSingletonSDM.h
-	include/RE/B/BSTSingletonSDMBase.h
-	include/RE/B/BSTSingletonSDMOpStaticBuffer.h
-	include/RE/B/BSTSmallArrayHeapAllocator.h
+	include/RE/B/BSTSingleton.h
 	include/RE/B/BSTSmallIndexScatterTable.h
-	include/RE/B/BSTSmallSharedArray.h
 	include/RE/B/BSTSmartPointer.h
-	include/RE/B/BSTSmartPointerAutoPtr.h
-	include/RE/B/BSTSmartPointerGamebryoRefCount.h
-	include/RE/B/BSTSmartPointerIntrusiveRefCount.h
-	include/RE/B/BSTStaticFreeList.h
-	include/RE/B/BSTStaticHashMap.h
-	include/RE/B/BSTStaticHashMapBase.h
 	include/RE/B/BSTTuple.h
-	include/RE/B/BSTValueEvent.h
-	include/RE/B/BSTValueEventSink.h
-	include/RE/B/BSTValueEventSource.h
-	include/RE/B/BSTValueRequestEvent.h
 	include/RE/B/BSTempEffect.h
 	include/RE/B/BSTempEffectDebris.h
 	include/RE/B/BSTempEffectGeometryDecal.h
@@ -412,7 +360,6 @@ set(SOURCES
 	include/RE/B/BSTriShape.h
 	include/RE/B/BSUIMessageData.h
 	include/RE/B/BSUIScaleformData.h
-	include/RE/B/BSUntypedPointerHandle.h
 	include/RE/B/BSUtilities.h
 	include/RE/B/BSUtilityShader.h
 	include/RE/B/BSVisit.h
@@ -504,7 +451,6 @@ set(SOURCES
 	include/RE/D/DIALOGUE_DATA.h
 	include/RE/D/DIALOGUE_SUBTYPE.h
 	include/RE/D/DIALOGUE_TYPE.h
-	include/RE/D/DIFFICULTY_LEVEL.h
 	include/RE/D/DIRECTION_VAL.h
 	include/RE/D/DamageImpactData.h
 	include/RE/D/DataReader.h
@@ -515,12 +461,12 @@ set(SOURCES
 	include/RE/D/DeviceConnectEvent.h
 	include/RE/D/DialogueMenu.h
 	include/RE/D/DialoguePackage.h
+	include/RE/D/DifficultyLevel.h
 	include/RE/D/DisableHeavyItemsFunc.h
 	include/RE/D/DisconnectHandler.h
 	include/RE/D/DisplayItemModel.h
 	include/RE/D/DoBeforeNewOrLoadCompletedEvent.h
 	include/RE/D/DoorTeleportData.h
-	include/RE/D/DynamicMemoryManagementPol.h
 	include/RE/E/EDGE_EXTRA_INFO_TYPE.h
 	include/RE/E/ENCOUNTER_ZONE_DATA.h
 	include/RE/E/ENCOUNTER_ZONE_GAME_DATA.h
@@ -583,7 +529,6 @@ set(SOURCES
 	include/RE/F/FatmanDeaths.h
 	include/RE/F/FavoriteMgr_Events.h
 	include/RE/F/FavoritesManager.h
-	include/RE/F/FixedLengthMemoryManagementPol.h
 	include/RE/F/FlameProjectile.h
 	include/RE/F/FlatScreenModel.h
 	include/RE/F/FleePackage.h
@@ -608,7 +553,6 @@ set(SOURCES
 	include/RE/G/GameMenuBase.h
 	include/RE/G/GamePlayFormulas.h
 	include/RE/G/GameScript.h
-	include/RE/G/GameSettingCollection.h
 	include/RE/G/GameUIModel.h
 	include/RE/G/GameVM.h
 	include/RE/G/GetCurrentPositionFunctor.h
@@ -635,7 +579,6 @@ set(SOURCES
 	include/RE/H/hkAabb.h
 	include/RE/H/hkAabb16.h
 	include/RE/H/hkArray.h
-	include/RE/H/hkArrayBase.h
 	include/RE/H/hkBaseObject.h
 	include/RE/H/hkBitField.h
 	include/RE/H/hkBlockStream.h
@@ -649,20 +592,13 @@ set(SOURCES
 	include/RE/H/hkHalf.h
 	include/RE/H/hkHandle.h
 	include/RE/H/hkHardwareInfo.h
-	include/RE/H/hkInplaceArray.h
-	include/RE/H/hkInplaceArrayAligned16.h
 	include/RE/H/hkIntSpaceUtil.h
 	include/RE/H/hkLifoAllocator.h
-	include/RE/H/hkLocalArray.h
 	include/RE/H/hkMap.h
-	include/RE/H/hkMapBase.h
-	include/RE/H/hkMapOperations.h
 	include/RE/H/hkMemoryAllocator.h
 	include/RE/H/hkMemoryRouter.h
 	include/RE/H/hkMemorySystem.h
 	include/RE/H/hkMonitorStream.h
-	include/RE/H/hkMultiMap.h
-	include/RE/H/hkMultiMapOperations.h
 	include/RE/H/hkPadSpu.h
 	include/RE/H/hkProcessContext.h
 	include/RE/H/hkProcessFactory.h
@@ -753,8 +689,6 @@ set(SOURCES
 	include/RE/I/IMovementPlayerControls.h
 	include/RE/I/IMovementPlayerControlsFilter.h
 	include/RE/I/IMovementState.h
-	include/RE/I/INIPrefSettingCollection.h
-	include/RE/I/INISettingCollection.h
 	include/RE/I/INPUT_DEVICE.h
 	include/RE/I/INPUT_DEVICE_LIGHT_STATE.h
 	include/RE/I/INPUT_EVENT_TYPE.h
@@ -890,7 +824,6 @@ set(SOURCES
 	include/RE/N/NiObjectNET.h
 	include/RE/N/NiPoint2.h
 	include/RE/N/NiPoint3.h
-	include/RE/N/NiPoint3A.h
 	include/RE/N/NiPoint4.h
 	include/RE/N/NiPointer.h
 	include/RE/N/NiProperty.h
@@ -906,16 +839,7 @@ set(SOURCES
 	include/RE/N/NiTFlags.h
 	include/RE/N/NiTLargeArray.h
 	include/RE/N/NiTList.h
-	include/RE/N/NiTListBase.h
-	include/RE/N/NiTListItem.h
-	include/RE/N/NiTMallocInterface.h
 	include/RE/N/NiTMap.h
-	include/RE/N/NiTMapBase.h
-	include/RE/N/NiTMapItem.h
-	include/RE/N/NiTNewInterface.h
-	include/RE/N/NiTPointerAllocator.h
-	include/RE/N/NiTPointerListBase.h
-	include/RE/N/NiTPointerMap.h
 	include/RE/N/NiTexture.h
 	include/RE/N/NiTimeController.h
 	include/RE/N/NiTransform.h
@@ -1056,7 +980,6 @@ set(SOURCES
 	include/RE/S/SCRIPT_PARAM_TYPE.h
 	include/RE/S/SCRIPT_REFERENCED_OBJECT.h
 	include/RE/S/SDirectory2.h
-	include/RE/S/SETTING_VALUE.h
 	include/RE/S/SEX.h
 	include/RE/S/SFAllocInfo.h
 	include/RE/S/SFAllocator.h
@@ -1105,9 +1028,6 @@ set(SOURCES
 	include/RE/S/SendHUDMessage.h
 	include/RE/S/SetCullMarkersFunctor.h
 	include/RE/S/Setting.h
-	include/RE/S/SettingCollection.h
-	include/RE/S/SettingCollectionList.h
-	include/RE/S/SettingCollectionMap.h
 	include/RE/S/ShaderReferenceEffect.h
 	include/RE/S/ShowingDialogueSpeechChallengeAnim.h
 	include/RE/S/SimpleAllocMemoryPagePolicy.h
@@ -1190,7 +1110,6 @@ set(SOURCES
 	include/RE/T/TESImageSpaceModifiableForm.h
 	include/RE/T/TESImageSpaceModifier.h
 	include/RE/T/TESInitScriptEvent.h
-	include/RE/T/TESInitScriptEventSource.h
 	include/RE/T/TESKey.h
 	include/RE/T/TESLandTexture.h
 	include/RE/T/TESLevCharacter.h
@@ -1370,48 +1289,7 @@ set(SOURCES
 	src/F4SE/InputMap.cpp
 	src/F4SE/Interfaces.cpp
 	src/F4SE/Logger.cpp
-	src/RE/A/Actor.cpp
-	src/RE/A/Array.cpp
-	src/RE/B/BGSInventoryItem.cpp
-	src/RE/B/BGSKeywordForm.cpp
-	src/RE/B/BGSLocation.cpp
-	src/RE/B/BGSObjectInstanceExtra.cpp
-	src/RE/B/BSResource.cpp
-	src/RE/B/BSResourceNiBinaryStream.cpp
-	src/RE/B/BSScaleformManager.cpp
-	src/RE/B/BSVisit.cpp
-	src/RE/C/Calendar.cpp
-	src/RE/E/ExtraInstanceData.cpp
 	src/RE/Fallout.cpp
-	src/RE/G/GFxPlayer.cpp
-	src/RE/I/InventoryInterface.cpp
-	src/RE/M/MenuCursor.cpp
-	src/RE/N/NiAVObject.cpp
-	src/RE/N/NiBinaryStream.cpp
-	src/RE/N/NiMatrix3.cpp
-	src/RE/N/NiObjectNET.cpp
-	src/RE/N/NiPoint2.cpp
-	src/RE/N/NiPoint3.cpp
-	src/RE/N/NiPoint4.cpp
-	src/RE/N/NiRect.cpp
-	src/RE/N/NiTransform.cpp
-	src/RE/O/Object.cpp
-	src/RE/O/ObjectTypeInfo.cpp
-	src/RE/P/PackedInstructionStream.cpp
-	src/RE/P/PlayerCharacter.cpp
-	src/RE/S/StackFrame.cpp
-	src/RE/S/Stream.cpp
-	src/RE/S/StreamBase.cpp
-	src/RE/S/Struct.cpp
-	src/RE/S/StructTypeInfo.cpp
-	src/RE/T/TESFullName.cpp
-	src/RE/T/TESNPC.cpp
-	src/RE/T/TESObjectCELL.cpp
-	src/RE/T/TESValueForm.cpp
-	src/RE/T/TypeInfo.cpp
-	src/RE/V/Variable.cpp
-	src/RE/V/VirtualMachine.cpp
-	src/RE/W/WorkbenchMenuBase.cpp
 	src/REL/HookObject.cpp
 	src/REL/HookStore.cpp
 	src/REL/IAT.cpp

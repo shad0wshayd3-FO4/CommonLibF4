@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IComplexType.h"
+
 namespace RE
 {
 	namespace BSScript

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IMemoryPagePolicy.h"
+
 namespace RE
 {
 	namespace BSScript

@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/N/NiObjectNET.h"
+
 namespace RE
 {
+	class NiUpdateData;
+
 	class __declspec(novtable) NiProperty :
 		public NiObjectNET  // 00
 	{

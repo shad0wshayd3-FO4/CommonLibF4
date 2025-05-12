@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/U/UserEvents.h"
+
 namespace RE
 {
 	class UserEventEnabledEvent

@@ -4,25 +4,7 @@ namespace RE
 {
 	namespace UserEvents
 	{
-		enum class USER_EVENT_FLAG
-		{
-			kAll = static_cast<std::underlying_type_t<USER_EVENT_FLAG>>(-1),
-
-			kMovement = 1 << 0,
-			kLooking = 1 << 1,
-			kActivate = 1 << 2,
-			kMenu = 1 << 3,
-			kConsole = 1 << 4,
-			kPOVSwitch = 1 << 5,
-			kFighting = 1 << 6,
-			kSneaking = 1 << 7,
-			kMainFour = 1 << 8,
-			kWheelZoom = 1 << 9,
-			kJumping = 1 << 10,
-			kVATS = 1 << 11
-		};
-
-		enum class INPUT_CONTEXT_ID
+		enum class INPUT_CONTEXT_ID : std::int32_t
 		{
 			kMainGameplay = 0x0,
 			kBasicMenuNav = 0x1,
@@ -63,12 +45,30 @@ namespace RE
 			kNone = 0x22
 		};
 
-		enum class SENDER_ID
+		enum class SENDER_ID : std::int32_t
 		{
 			kNone = 0x0,
 			kGameplay = 0x1,
 			kMenu = 0x2,
 			kScript = 0x3
+		};
+
+		enum class USER_EVENT_FLAG : std::int32_t
+		{
+			kAll = static_cast<std::underlying_type_t<USER_EVENT_FLAG>>(-1),
+
+			kMovement = 1 << 0,
+			kLooking = 1 << 1,
+			kActivate = 1 << 2,
+			kMenu = 1 << 3,
+			kConsole = 1 << 4,
+			kPOVSwitch = 1 << 5,
+			kFighting = 1 << 6,
+			kSneaking = 1 << 7,
+			kMainFour = 1 << 8,
+			kWheelZoom = 1 << 9,
+			kJumping = 1 << 10,
+			kVATS = 1 << 11
 		};
 	}
 	using UEFlag = UserEvents::USER_EVENT_FLAG;

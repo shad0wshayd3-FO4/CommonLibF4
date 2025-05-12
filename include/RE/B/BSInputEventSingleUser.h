@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSInputEventReceiver.h"
+#include "RE/B/BSInputEventUser.h"
+
 namespace RE
 {
 	class BSInputEventSingleUser :

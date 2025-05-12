@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/InputEvent.h"
+
 namespace RE
 {
 	class __declspec(novtable) IDEvent :

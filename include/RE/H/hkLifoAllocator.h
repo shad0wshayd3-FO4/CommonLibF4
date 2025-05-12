@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hkMemoryAllocator.h"
+
 namespace RE
 {
 	class __declspec(novtable) hkLifoAllocator :

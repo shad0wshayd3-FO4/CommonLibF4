@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IObjectProcessor.h"
+
 namespace RE
 {
 	namespace BSScript

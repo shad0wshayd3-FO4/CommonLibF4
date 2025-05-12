@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiObject.h"
+
 namespace RE
 {
 	class ImageSpaceModifierInstance :

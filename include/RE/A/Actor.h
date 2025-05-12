@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/T/TESObjectREFR.h"
+#include "RE/M/MagicTarget.h"
+#include "RE/A/ActorState.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/I/IPostAnimationChannelUpdateFunctor.h"
+
 namespace RE
 {
 	class __declspec(novtable) Actor :

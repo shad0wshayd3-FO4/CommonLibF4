@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSCRC32.h"
+#include "RE/B/BSStringPool.h"
+
 namespace RE
 {
 	namespace detail

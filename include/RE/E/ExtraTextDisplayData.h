@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+
 namespace RE
 {
 	class __declspec(novtable) ExtraTextDisplayData :

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/bhkWorld.h"
+
 namespace RE
 {
 	class __declspec(novtable) bhkWorldM :

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/Scaleform/Render/Render_TreeNode.h"
+#include "RE/S/SFRenderTreeNode.h"
 
 namespace RE::Scaleform::Render
 {

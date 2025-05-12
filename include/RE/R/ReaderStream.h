@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/S/Stream.h"
+
 namespace RE
 {
 	namespace BSResource::Archive2

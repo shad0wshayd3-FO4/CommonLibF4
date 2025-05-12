@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSInputEventSingleUser.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
 	class __declspec(novtable) MenuCursor :

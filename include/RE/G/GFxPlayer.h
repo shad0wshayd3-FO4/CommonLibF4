@@ -1,14 +1,14 @@
 #pragma once
 
-#include "RE/Scaleform/GFx/GFx_Loader.h"
-#include "RE/Scaleform/GFx/GFx_Log.h"
-#include "RE/Scaleform/GFx/GFx_PlayerStats.h"
-#include "RE/Scaleform/GFx/GFx_Types.h"
-#include "RE/Scaleform/Kernel/SF_RefCount.h"
-#include "RE/Scaleform/Render/Render_Constants.h"
-#include "RE/Scaleform/Render/Render_Context.h"
-#include "RE/Scaleform/Render/Render_TreeNode.h"
-#include "RE/Scaleform/Render/Render_Viewport.h"
+#include "RE/G/GFxLoader.h"
+#include "RE/G/GFxLog.h"
+#include "RE/G/GFxPlayerStats.h"
+#include "RE/G/GFxTypes.h"
+#include "RE/S/SFRefCount.h"
+#include "RE/S/SFRenderConstants.h"
+#include "RE/S/SFRenderContext.h"
+#include "RE/S/SFRenderTreeNode.h"
+#include "RE/S/SFRenderViewport.h"
 
 namespace RE::Scaleform::GFx
 {

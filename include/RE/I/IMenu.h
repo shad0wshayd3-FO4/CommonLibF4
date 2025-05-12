@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSInputEventUser.h"
+#include "RE/S/SWFToCodeFunctionHandler.h"
+
 namespace RE
 {
 	class IMenu :

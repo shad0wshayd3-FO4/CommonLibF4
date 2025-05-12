@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IMenu.h"
+
 namespace RE
 {
 	class GameMenuBase :

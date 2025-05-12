@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/A/AttachTechniqueInput.h"
+
 namespace RE
 {
 	class __declspec(novtable) RefAttachTechniqueInput :

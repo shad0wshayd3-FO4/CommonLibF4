@@ -1,5 +1,12 @@
 #pragma once
 
+#include "RE/S/SpellItem.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/T/TESWeightForm.h"
+#include "RE/T/TESValueForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) ScrollItem :

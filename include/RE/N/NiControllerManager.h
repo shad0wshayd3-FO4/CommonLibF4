@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTArray.h"
+#include "RE/N/NiTimeController.h"
+
 namespace RE
 {
+	class BSAnimNoteListener;
+	class NiAVObjectPalette;
+	class NiControllerSequence;
+
 	class NiControllerManager :
 		public NiTimeController  // 00
 	{
@@ -48,5 +58,4 @@ namespace RE
 		NiPointer<NiAVObjectPalette>                     objectPalette;                 // C0
 	};
 	static_assert(sizeof(NiControllerManager) == 0xC8);
-
 }

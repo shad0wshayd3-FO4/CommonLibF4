@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSPropertySheet.h"
+#include "RE/B/BGSForcedLocRefType.h"
+#include "RE/B/BGSNavmeshableObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESObjectSTAT :

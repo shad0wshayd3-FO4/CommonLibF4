@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/T/TESModel.h"
+#include "RE/B/BGSIdleCollection.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSIdleMarker :

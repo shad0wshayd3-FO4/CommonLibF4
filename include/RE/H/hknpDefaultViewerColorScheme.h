@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hknpViewerColorScheme.h"
+
 namespace RE
 {
 	class hknpDefaultViewerColorScheme :

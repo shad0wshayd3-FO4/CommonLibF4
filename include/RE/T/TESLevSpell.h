@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESLeveledList.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESLevSpell :

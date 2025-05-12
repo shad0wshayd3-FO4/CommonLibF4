@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class SCRIPT_OUTPUT
+	enum class SCRIPT_OUTPUT : std::int32_t
 	{
 		START_OF_FLOW_SECTION = 0x10,
 		FLOW_BEGIN = 0x10,

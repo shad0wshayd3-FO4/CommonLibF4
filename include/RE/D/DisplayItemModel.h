@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BaseLoadedInventoryModel.h"
+
 namespace RE
 {
 	struct DisplayItemModel :

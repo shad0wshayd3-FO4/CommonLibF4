@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESForm :
@@ -297,3 +299,47 @@ namespace RE
 	};
 	static_assert(sizeof(TESForm) == 0x20);
 }
+
+namespace std
+{
+	[[nodiscard]] inline std::string to_string(RE::ENUM_FORM_ID a_formType)
+	{
+		return RE::TESForm::GetFormTypeString(a_formType);
+	}
+}
+
+#ifdef FMT_VERSION
+namespace fmt
+{
+	template <>
+	struct formatter<RE::ENUM_FORM_ID>
+	{
+		template <class ParseContext>
+		constexpr auto parse(ParseContext& a_ctx)
+		{
+			return a_ctx.begin();
+		}
+
+		template <class FormatContext>
+		auto format(const RE::ENUM_FORM_ID& a_formType, FormatContext& a_ctx)
+		{
+			return fmt::format_to(a_ctx.out(), "{}", RE::TESForm::GetFormTypeString(a_formType));
+		}
+	};
+}
+#endif
+
+#ifdef __cpp_lib_format
+namespace std
+{
+	template <class CharT>
+	struct formatter<RE::ENUM_FORM_ID, CharT> : std::formatter<std::string_view, CharT>
+	{
+		template <class FormatContext>
+		auto format(RE::ENUM_FORM_ID a_formType, FormatContext& a_ctx)
+		{
+			return formatter<std::string_view, CharT>::format(RE::TESForm::GetFormTypeString(a_formType), a_ctx);
+		}
+	};
+}
+#endif

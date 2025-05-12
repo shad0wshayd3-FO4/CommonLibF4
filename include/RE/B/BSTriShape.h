@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSGeometry.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSTriShape :

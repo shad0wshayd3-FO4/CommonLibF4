@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/TESChildCell.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESObjectLAND :

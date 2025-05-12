@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/G/GameMenuBase.h"
+
 namespace RE
 {
 	struct __declspec(novtable) Console :

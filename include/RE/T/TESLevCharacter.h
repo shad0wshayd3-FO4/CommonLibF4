@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/T/TESBoundAnimObject.h"
+#include "RE/T/TESLeveledList.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESLevCharacter :

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class WARNING_TYPES
+	enum class WARNING_TYPES : std::int32_t
 	{
 		kDefault = 0x0,
 		kSystem = 0x1,

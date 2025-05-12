@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESProduceForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESObjectTREE :

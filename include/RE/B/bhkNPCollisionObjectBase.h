@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiCollisionObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) bhkNPCollisionObjectBase :

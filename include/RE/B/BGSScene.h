@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/I/IKeywordFormBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSScene :

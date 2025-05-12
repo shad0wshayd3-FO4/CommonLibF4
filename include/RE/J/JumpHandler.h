@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/P/PlayerInputHandler.h"
+
 namespace RE
 {
 	class JumpHandler :

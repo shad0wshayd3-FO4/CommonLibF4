@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTempEffect.h"
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSTerrainEffect :

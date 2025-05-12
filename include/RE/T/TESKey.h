@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESObjectMISC.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESKey :

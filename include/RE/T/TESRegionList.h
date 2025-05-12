@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+
 namespace RE
 {
 	struct __declspec(novtable) TESRegionList :

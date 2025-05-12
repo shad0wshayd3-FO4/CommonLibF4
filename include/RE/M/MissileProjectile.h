@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/P/Projectile.h"
+
 namespace RE
 {
 	class __declspec(novtable) MissileProjectile :

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+#include "RE/I/IKeywordFormBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSKeywordForm :

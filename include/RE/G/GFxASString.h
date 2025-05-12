@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/Scaleform/Kernel/SF_RefCount.h"
+#include "RE/S/SFRefCount.h"
 
 namespace RE::Scaleform::GFx
 {

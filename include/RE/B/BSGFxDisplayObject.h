@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSGFxObject.h"
+
 namespace RE
 {
 	class BSGFxDisplayObject :

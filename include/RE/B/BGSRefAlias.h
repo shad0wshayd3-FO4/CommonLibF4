@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSBaseAlias.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSRefAlias :

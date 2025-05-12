@@ -1,7 +1,39 @@
 #pragma once
 
+#include "RE/B/BSCRC32.h"
+
 namespace RE
 {
+	template <class T>
+	struct BSTSmartPointerIntrusiveRefCount
+	{
+	public:
+		static void Acquire(stl::not_null<T*> a_ptr) { a_ptr->IncRef(); }
+
+		static void Release(stl::not_null<T*> a_ptr)
+		{
+			if (a_ptr->DecRef() == 0) {
+				delete a_ptr;
+			}
+		}
+	};
+
+	template <class T>
+	struct BSTSmartPointerAutoPtr
+	{
+	public:
+		constexpr static void Acquire(stl::not_null<T*> a_ptr) { return; }
+		static void           Release(stl::not_null<T*> a_ptr) { delete a_ptr; }
+	};
+
+	template <class T>
+	struct BSTSmartPointerGamebryoRefCount
+	{
+	public:
+		constexpr static void Acquire(stl::not_null<T*> a_ptr) { a_ptr->IncRefCount(); }
+		static void           Release(stl::not_null<T*> a_ptr) { a_ptr->DecRefCount(); }
+	};
+
 	template <class T, template <class> class RefManager = BSTSmartPointerIntrusiveRefCount>
 	class BSTSmartPointer
 	{

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hkMemoryAllocator.h"
+
 namespace RE
 {
 	struct hkContainerHeapAllocator

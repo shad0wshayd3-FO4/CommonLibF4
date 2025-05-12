@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/G/GFxPlayer.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSScaleformTranslator :

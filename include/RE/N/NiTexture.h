@@ -1,7 +1,28 @@
 #pragma once
 
+//#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiObject.h"
+
 namespace RE
 {
+	namespace BSGraphics
+	{
+		class Texture;
+	}
+
+	namespace BSResource
+	{
+		class Stream;
+	}
+
+	namespace BSTextureArray
+	{
+		class Texture;
+	}
+
+	class NiTexture;
+
 	class __declspec(novtable) NiTexture :
 		public NiObject  // 00
 	{

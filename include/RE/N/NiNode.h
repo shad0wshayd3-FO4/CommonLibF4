@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiAVObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) NiNode :

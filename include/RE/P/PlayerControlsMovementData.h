@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/M/MovementData.h"
+
 namespace RE
 {
 	struct PlayerControlsMovementData :

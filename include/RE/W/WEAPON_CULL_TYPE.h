@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class WEAPON_CULL_TYPE
+	enum class WEAPON_CULL_TYPE : std::int32_t
 	{
 		kGeneral = 0x0,
 		kAnimation = 0x1,

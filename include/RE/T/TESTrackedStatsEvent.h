@@ -4,6 +4,7 @@ namespace RE
 {
 	struct TESTrackedStatsEvent
 	{
+		// members
 		BSFixedString stat;   // 00
 		std::int32_t  value;  // 08
 	};

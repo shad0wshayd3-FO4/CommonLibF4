@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/S/ScrapHeap.h"
+
 namespace RE
 {
+	namespace CompactingStore
+	{
+		class Store;
+	}
+
+	class BSSmallBlockAllocator;
+	class IMemoryHeap;
+
 	class MemoryManager
 	{
 	public:

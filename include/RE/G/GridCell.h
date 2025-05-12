@@ -4,6 +4,8 @@ namespace RE
 {
 	struct GridCell
 	{
-		TESObjectCELL* cell;
+		// members
+		TESObjectCELL* cell;  // 00
 	};
+	static_assert(sizeof(GridCell) == 0x08);
 }

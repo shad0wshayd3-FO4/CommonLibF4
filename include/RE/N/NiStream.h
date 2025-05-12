@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BSStreamHeader.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTArray.h"
+
 namespace RE
 {
+	class NiBinaryStream;
+	class NiObject;
+	class NiObjectGroup;
+	class NiSearchPath;
+
 	class __declspec(novtable) NiStream
 	{
 	public:

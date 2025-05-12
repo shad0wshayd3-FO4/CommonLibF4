@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSIntrusiveRefCounted.h"
+
 namespace RE
 {
 	class BSAnimationGraphManager :

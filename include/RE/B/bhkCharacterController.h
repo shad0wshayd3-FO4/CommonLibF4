@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/bhkNPCollisionObjectUnlinked.h"
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	class __declspec(novtable) bhkCharacterController :

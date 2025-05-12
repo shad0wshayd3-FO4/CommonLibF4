@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTempEffect.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSTempEffectParticle :

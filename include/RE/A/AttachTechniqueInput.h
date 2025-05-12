@@ -2,12 +2,6 @@
 
 namespace RE
 {
-	class bhkWorld;
-	class NiAVObject;
-	class NiNode;
-	class TESObjectREFR;
-	class TESRace;
-
 	namespace BSAttachTechniques
 	{
 		struct __declspec(novtable) AttachTechniqueInput

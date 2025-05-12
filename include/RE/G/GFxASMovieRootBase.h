@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/Scaleform/GFx/GFx_Player.h"
+#include "RE/G/GFxPlayer.h"
 
 namespace RE::Scaleform
 {

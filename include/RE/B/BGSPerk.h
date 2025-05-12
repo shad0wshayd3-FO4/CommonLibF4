@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESIcon.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSPerk :

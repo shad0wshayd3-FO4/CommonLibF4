@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
+	class TESObjectREFR;
+
 	struct TESSwitchRaceCompleteEvent
 	{
 		[[nodiscard]] static BSTEventSource<TESSwitchRaceCompleteEvent>* GetEventSource()

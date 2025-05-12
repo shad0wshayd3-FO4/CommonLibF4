@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSShader.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSUtilityShader :

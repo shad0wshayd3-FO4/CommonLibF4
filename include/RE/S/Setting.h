@@ -2,6 +2,19 @@
 
 namespace RE
 {
+	union SETTING_VALUE
+	{
+		std::int8_t   c;
+		bool          b;
+		float         f;
+		std::uint8_t  h;
+		std::int32_t  i;
+		char*         s;
+		std::uint32_t u;
+		std::uint32_t r;
+		std::uint32_t a;
+	};
+
 	class __declspec(novtable) Setting
 	{
 	public:
@@ -253,4 +266,129 @@ namespace RE
 	extern template class SettingT<INISettingCollection>;
 	extern template class SettingT<LipSynchroSettingCollection>;
 	extern template class SettingT<RegSettingCollection>;
+
+	template <class T>
+	class __declspec(novtable) SettingCollection
+	{
+	public:
+		virtual ~SettingCollection() = default;  // 00
+
+		// add
+		virtual void Add(T* a_setting) = 0;                                 // 01
+		virtual void Remove(T* a_setting) = 0;                              // 02
+		virtual bool WriteSetting(T& a_setting) = 0;                        // 03
+		virtual bool ReadSetting(T& a_setting) = 0;                         // 04
+		virtual bool Open([[maybe_unused]] bool a_write) { return false; }  // 05
+		virtual bool Close() { return true; }                               // 06
+		virtual bool ReadSettingsFromProfile() { return false; }            // 07
+		virtual bool WriteSettings() { return handle != nullptr; }          // 08
+		virtual bool ReadSettings() { return handle != nullptr; }           // 09
+
+		// members
+		char  settingFile[260];  // 008
+		void* handle;            // 110
+	};
+
+	extern template class SettingCollection<Setting>;
+
+	template <class T>
+	class __declspec(novtable) SettingCollectionList :
+		public SettingCollection<T>
+	{
+	public:
+		// members
+		BSSimpleList<T*> settings;  // 118
+	};
+
+	extern template class SettingCollectionList<Setting>;
+
+	class __declspec(novtable) INISettingCollection :
+		public SettingCollectionList<Setting>  // 000
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::INISettingCollection };
+		static constexpr auto VTABLE{ VTABLE::INISettingCollection };
+
+		[[nodiscard]] static INISettingCollection* GetSingleton()
+		{
+			static REL::Relocation<INISettingCollection**> singleton{ REL::ID(2704108) };
+			return *singleton;
+		}
+
+		[[nodiscard]] Setting* GetSetting(std::string_view a_name)
+		{
+			for (auto& setting : settings) {
+				if (setting->GetKey() == a_name) {
+					return setting;
+				}
+			}
+			return nullptr;
+		}
+	};
+	static_assert(sizeof(INISettingCollection) == 0x128);
+
+	class __declspec(novtable) INIPrefSettingCollection :
+		public INISettingCollection  // 000
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::INIPrefSettingCollection };
+		static constexpr auto VTABLE{ VTABLE::INIPrefSettingCollection };
+
+		[[nodiscard]] static INIPrefSettingCollection* GetSingleton()
+		{
+			static REL::Relocation<INIPrefSettingCollection**> singleton{ REL::ID(2703234) };
+			return *singleton;
+		}
+	};
+	static_assert(sizeof(INIPrefSettingCollection) == 0x128);
+
+	namespace detail
+	{
+		struct SettingCollectionMapCompare
+		{
+			[[nodiscard]] bool operator()(const RE::BSFixedString& a_lhs, const RE::BSFixedString& a_rhs) const noexcept
+			{
+				return a_lhs.c_str() < a_rhs.c_str();
+			}
+		};
+	}
+
+	template <class T>
+	class __declspec(novtable) SettingCollectionMap :
+		public SettingCollection<T>  // 000
+	{
+	public:
+		// members
+		BSTBTree<BSFixedString, T*, detail::SettingCollectionMapCompare> settings;  // 118
+	};
+
+	extern template class SettingCollectionMap<Setting>;
+
+	class __declspec(novtable) GameSettingCollection :
+		public SettingCollectionMap<Setting>  // 000
+	{
+	public:
+		static constexpr auto RTTI{ RTTI::GameSettingCollection };
+		static constexpr auto VTABLE{ VTABLE::GameSettingCollection };
+
+		[[nodiscard]] static void InitCollection()
+		{
+			using func_t = decltype(&GameSettingCollection::InitCollection);
+			static REL::Relocation<func_t> func{ REL::ID(2188690) };
+			return func();
+		}
+
+		[[nodiscard]] static GameSettingCollection* GetSingleton()
+		{
+			static REL::Relocation<GameSettingCollection**> singleton{ REL::ID(2690301) };
+			return *singleton;
+		}
+
+		[[nodiscard]] Setting* GetSetting(std::string_view a_name)
+		{
+			auto it = settings.find(a_name);
+			return it != settings.end() ? it->second : nullptr;
+		}
+	};
+	static_assert(sizeof(GameSettingCollection) == 0x138);
 }

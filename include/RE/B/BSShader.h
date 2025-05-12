@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiRefObject.h"
+#include "RE/B/BSReloadShaderI.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSShader :

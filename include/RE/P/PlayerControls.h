@@ -1,16 +1,21 @@
 #pragma once
 
+#include "RE/B/BSInputEventReceiver.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/I/IMovementPlayerControls.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
 	class __declspec(novtable) PlayerControls :
-		BSInputEventReceiver,                    // 000
-		BSTEventSink<MenuOpenCloseEvent>,        // 010
-		BSTEventSink<MenuModeChangeEvent>,       // 018
-		BSTEventSink<TESFurnitureEvent>,         // 020
-		BSTEventSink<UserEventEnabledEvent>,     // 028
-		IMovementPlayerControls,                 // 030
-		BSTEventSink<QuickContainerStateEvent>,  // 038
-		BSTSingletonSDM<PlayerControls>          // 040
+		public BSInputEventReceiver,                    // 000
+		public BSTEventSink<MenuOpenCloseEvent>,        // 010
+		public BSTEventSink<MenuModeChangeEvent>,       // 018
+		public BSTEventSink<TESFurnitureEvent>,         // 020
+		public BSTEventSink<UserEventEnabledEvent>,     // 028
+		public IMovementPlayerControls,                 // 030
+		public BSTEventSink<QuickContainerStateEvent>,  // 038
+		public BSTSingletonSDM<PlayerControls>          // 040
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::PlayerControls };

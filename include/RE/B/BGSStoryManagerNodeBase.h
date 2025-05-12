@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSStoryManagerTreeForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSStoryManagerNodeBase :

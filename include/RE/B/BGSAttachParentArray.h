@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+#include "RE/B/BGSTypedKeywordValueArray.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSAttachParentArray :

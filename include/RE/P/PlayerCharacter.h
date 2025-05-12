@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/A/Actor.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/I/IMovementPlayerControlsFilter.h"
+
 namespace RE
 {
 	class __declspec(novtable) PlayerCharacter :

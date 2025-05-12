@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESValueForm.h"
+#include "RE/B/BGSCraftingUseSound.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSComponent :

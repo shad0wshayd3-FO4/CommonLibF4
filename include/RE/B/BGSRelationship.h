@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSRelationship :

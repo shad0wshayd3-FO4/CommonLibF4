@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/ImageSpaceModifierInstanceTemp.h"
+
 namespace RE
 {
 	class ImageSpaceModifierInstanceRB :

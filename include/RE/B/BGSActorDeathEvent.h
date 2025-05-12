@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSActorEvent.h"
+
 namespace RE
 {
-	struct BGSActorDeathEvent : public BGSActorEvent
+	struct BGSActorDeathEvent :
+		public BGSActorEvent
 	{
 	public:
 		// members

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class UI_DEPTH_PRIORITY
+	enum class UI_DEPTH_PRIORITY : std::int32_t
 	{
 		kUndefined = 0x0,
 		k3DUnderHUD = 0x1,  // WorkshopMenu3D

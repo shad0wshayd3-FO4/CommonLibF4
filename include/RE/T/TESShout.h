@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/B/BGSMenuDisplayObject.h"
+#include "RE/B/BGSEquipType.h"
+#include "RE/T/TESDescription.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESShout :

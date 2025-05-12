@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTPointerAndFlags.h"
+
 namespace RE
 {
 	namespace BSScript

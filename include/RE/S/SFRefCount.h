@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/Scaleform/Kernel/SF_Memory.h"
+#include "RE/S/SFMemory.h"
 
 namespace RE::Scaleform
 {

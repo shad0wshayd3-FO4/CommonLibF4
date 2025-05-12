@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/G/GameMenuBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) WorkshopMenu :

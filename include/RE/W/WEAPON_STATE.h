@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class WEAPON_STATE : std::uint32_t
+	enum class WEAPON_STATE : std::int32_t
 	{
 		kSheathed = 0x0,
 		kWantToDraw = 0x1,

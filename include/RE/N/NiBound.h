@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiPoint3.h"
+
 namespace RE
 {
 	class NiBound

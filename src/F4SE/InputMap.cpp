@@ -1,6 +1,6 @@
 #include "F4SE/InputMap.h"
 
-#include "RE/Bethesda/ControlMap.h"
+#include "RE/C/ControlMap.h"
 
 #include "REX/PS4/SCEPAD.h"
 #include "REX/W32/DINPUT.h"

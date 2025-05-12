@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTSingleton.h"
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	class ActorEquipManager :

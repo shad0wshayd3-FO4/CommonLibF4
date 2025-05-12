@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hknpConvexShape.h"
+
 namespace RE
 {
 	class __declspec(novtable) hknpConvexPolytopeShape :

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/B/BGSMenuDisplayObject.h"
+#include "RE/B/BGSKeywordForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) EffectSetting :

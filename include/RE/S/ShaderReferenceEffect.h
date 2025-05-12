@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/R/ReferenceEffect.h"
+
 namespace RE
 {
 	class __declspec(novtable) ShaderReferenceEffect :

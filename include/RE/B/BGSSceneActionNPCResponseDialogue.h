@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSSceneActionConversationBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSSceneActionNPCResponseDialogue :

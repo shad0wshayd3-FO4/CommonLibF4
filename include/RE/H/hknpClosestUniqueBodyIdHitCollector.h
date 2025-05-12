@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hknpUniqueBodyIdHitCollector.h"
+
 namespace RE
 {
 	class __declspec(novtable) hknpClosestUniqueBodyIdHitCollector :

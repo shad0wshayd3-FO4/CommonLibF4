@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/H/hknpWorld.h"
+
 namespace RE
 {
 	class __declspec(novtable) hknpBSWorld :

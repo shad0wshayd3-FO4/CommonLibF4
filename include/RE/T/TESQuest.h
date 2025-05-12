@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSStoryManagerTreeForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESQuest :

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSInputEventUser.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESCameraState :

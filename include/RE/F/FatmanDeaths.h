@@ -6,7 +6,8 @@ namespace RE
 	{
 		struct Event
 		{
-			Actor* victim;
+			// members
+			Actor* victim;  // 00
 		};
 		static_assert(sizeof(Event) == 0x8);
 	}

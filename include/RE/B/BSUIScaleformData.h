@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IUIMessageData.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSUIScaleformData :

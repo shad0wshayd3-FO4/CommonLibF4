@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/V/VATS.h"
+
 namespace RE
 {
 	namespace VATSEvents

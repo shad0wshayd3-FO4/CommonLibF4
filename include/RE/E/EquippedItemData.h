@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiRefObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) EquippedItemData :

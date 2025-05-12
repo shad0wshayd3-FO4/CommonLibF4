@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiFrustum.h"
+#include "RE/N/NiRect.h"
+
 namespace RE
 {
 	class __declspec(novtable) NiCamera :

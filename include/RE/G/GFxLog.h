@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/Scaleform/GFx/GFx_Loader.h"
-#include "RE/Scaleform/Kernel/SF_Log.h"
+#include "RE/G/GFxLoader.h"
+#include "RE/S/SFLog.h"
 
 namespace RE::Scaleform::GFx
 {

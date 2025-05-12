@@ -2,5 +2,8 @@
 
 namespace RE
 {
-
+	struct GridCell
+	{
+		TESObjectCELL* cell;
+	};
 }

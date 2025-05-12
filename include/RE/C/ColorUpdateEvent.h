@@ -2,5 +2,20 @@
 
 namespace RE
 {
+	struct ColorUpdateEvent
+	{
+	private:
+		using EventSource_t = BSTGlobalEvent::EventSource<ColorUpdateEvent>;
 
+	public:
+		[[nodiscard]] static EventSource_t* GetEventSource()
+		{
+			static REL::Relocation<EventSource_t**> singleton{ REL::ID(1226590) };
+			if (!*singleton) {
+				*singleton = new EventSource_t(&BSTGlobalEvent::GetSingleton()->eventSourceSDMKiller);
+			}
+			return *singleton;
+		}
+	};
+	static_assert(std::is_empty_v<ColorUpdateEvent>);
 }

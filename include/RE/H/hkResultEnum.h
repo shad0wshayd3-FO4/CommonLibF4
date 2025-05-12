@@ -2,5 +2,9 @@
 
 namespace RE
 {
-
+	enum class hkResultEnum
+	{
+		kSuccess,
+		kFailure
+	};
 }

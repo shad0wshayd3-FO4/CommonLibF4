@@ -2,5 +2,59 @@
 
 namespace RE
 {
+	class BSAudioManager
+	{
+	public:
+		struct SyncedPlaybackManager
+		{
+		public:
+			// members
+			BSTArray<BSTSmallArray<std::uint32_t, 2>*> syncFamilies;  // 00
+		};
+		static_assert(sizeof(SyncedPlaybackManager) == 0x18);
 
+		[[nodiscard]] static BSAudioManager* GetSingleton()
+		{
+			static REL::Relocation<BSAudioManager**> singleton{ REL::ID(1321158) };
+			return *singleton;
+		}
+
+		void GetSoundHandleByName(BSSoundHandle& a_handle, const char* a_soundName, float a_distance, std::uint32_t a_usageFlags, BSISoundDescriptor::ExtraResolutionData* a_data)
+		{
+			using func_t = decltype(&BSAudioManager::GetSoundHandleByName);
+			static REL::Relocation<func_t> func{ REL::ID(196484) };
+			return func(this, a_handle, a_soundName, a_distance, a_usageFlags, a_data);
+		}
+
+		// members
+		std::int32_t                                              messageListIndex;            // 000
+		std::int32_t                                              messageProcessingListIndex;  // 004
+		SoundMessageList* messages[2];                 // 008
+		SoundMessageStack* freeMessages;                // 018
+		SoundMessageStack* garbageMessages;             // 020
+		BSTHashMap<std::uint32_t, BSGameSound*>                   soundMap;                    // 028
+		BSTHashMap<std::uint32_t, BSSoundInfo*>                   soundStateMap;               // 058
+		BSTHashMap<std::uint32_t, NiPointer<NiAVObject>>          movingRefrMap;               // 088
+		BSTHashMap<const NiAVObject*, const BSISoundOutputModel*> outputOverrideMap;           // 0B8
+		BSTHashMap<const BSISoundOutputModel*, float>             opmFrequencyOverrideMap;     // 0E8
+		BSTHashMap<std::uint32_t, BSMultisound*>                  multisoundMap;               // 118
+		BSTHashMap<const NiAVObject*, NiPoint3>                   locationOverrideMap;         // 148
+		SyncedPlaybackManager                                     syncManager;                 // 178
+		void* cachedSoundList;             // 190 - BSTList<BSGameSound*>
+		std::uint32_t                                             currentCacheSize;            // 198
+		std::uint32_t                                             audioThreadID;               // 19C
+		BSAudioManagerThread* updateThread;                // 1A0
+		std::uint32_t                                             audioThreadSleepTime;        // 1A8
+		std::uint32_t                                             audioHWThread;               // 1AC
+		BSAudioInit                                               initSettings;                // 1B0
+		std::uint32_t                                             audioCacheSize;              // 200
+		std::uint32_t                                             maxAudioCacheSize;           // 204
+		std::uint32_t                                             maxSizeForCachedSound;       // 208
+		std::uint32_t                                             stateFlags;                  // 20C
+		float                                                     masterVolume;                // 210
+		std::uint8_t                                              asyncPriorityThreshold;      // 214
+		float                                                     invSpeedInUnitsPerMS;        // 218
+		BSAudioCallbacks                                          audioCallbacks;              // 220
+	};
+	static_assert(sizeof(BSAudioManager) == 0x238);
 }

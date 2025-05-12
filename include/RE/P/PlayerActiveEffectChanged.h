@@ -1,0 +1,20 @@
+#pragma once
+
+namespace RE
+{
+	namespace PlayerActiveEffectChanged
+	{
+		enum Status : std::int32_t
+		{
+			kAdded = 0x0,
+			kRemoved = 0x1,
+			kStatusChanged = 0x2
+		};
+
+		struct Event
+		{
+			BSTSmartPointer<ActiveEffect, BSTSmartPointerIntrusiveRefCount> effect;  // 00
+			PlayerActiveEffectChanged::Status                               status;  // 08
+		};
+	}
+}

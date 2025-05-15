@@ -1,13 +1,16 @@
 #pragma once
 
 #include "RE/I/IFunction.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/T/TypeInfo.h"
+#include "RE/V/VDescTable.h"
+#include "RE/P/PackedInstructionStream.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
-		class TypeInfo;
-
 		namespace Internal
 		{
 			class __declspec(novtable) ScriptFunction :

@@ -1,10 +1,21 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSTAtomicValue.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiTexture.h"
+#include "RE/N/NiRect.h"
+#include "RE/B/BSCriticalSection.h"
+
 #include "REX/W32/D3D11.h"
 
 namespace RE
 {
 	class BSD3DResourceCreator;
+	class BSEventFlag;
 	class NiCamera;
 
 	namespace BSGraphics

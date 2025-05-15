@@ -11,16 +11,6 @@
 		<DisplayString Optional="true">{static_cast&lt;$T1&gt;(_impl),en}</DisplayString>
 	</Type>
 
-	<Type Name="RE::msvc::unique_ptr&lt;*&gt;">
-		<Intrinsic Name="empty" Expression="_pointer == nullptr"/>
-		<SmartPointer Usage="Minimal">_pointer</SmartPointer>
-		<DisplayString Condition="empty()">empty</DisplayString>
-		<DisplayString Condition="!empty">unique_ptr {*_pointer}</DisplayString>
-		<Expand>
-			<Item Name="[ptr]" Condition="!empty()">_pointer</Item>
-		</Expand>
-	</Type>
-
 	<Type Name="RE::RTTI::RVA&lt;*&gt;">
 		<Intrinsic Name="good" Expression="_rva != 0"/>
 		<DisplayString Condition="good()">{($T1*)(REL::Module::_natvis + _rva)}</DisplayString>

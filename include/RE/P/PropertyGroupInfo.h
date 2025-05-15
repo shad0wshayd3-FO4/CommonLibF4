@@ -1,6 +1,8 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

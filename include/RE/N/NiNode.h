@@ -1,6 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTAtomicValue.h"
 #include "RE/N/NiAVObject.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTArray.h"
 
 namespace RE
 {

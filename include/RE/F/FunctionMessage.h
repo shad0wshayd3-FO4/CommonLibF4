@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
 	namespace BSScript
@@ -8,7 +10,7 @@ namespace RE
 
 		namespace Internal
 		{
-			class RawFuncCallQuery;
+			class IFuncCallQuery;
 
 			struct FunctionMessage
 			{

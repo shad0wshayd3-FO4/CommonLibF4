@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/N/NiStringExtraData.h"
+#include "RE/N/NiExtraData.h"
 
 namespace RE
 {

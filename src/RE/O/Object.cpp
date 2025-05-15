@@ -1,5 +1,8 @@
 #include "RE/O/Object.h"
 
+#include "RE/I/IObjectHandlePolicy.h"
+#include "RE/V/VirtualMachine.h"
+
 namespace RE::BSScript
 {
 	Object::~Object()

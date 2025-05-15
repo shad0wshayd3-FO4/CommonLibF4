@@ -1,13 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/I/IFuncCallQuery.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/V/Variable.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
-		class ObjectTypeInfo;
-
 		namespace Internal
 		{
 			class __declspec(novtable) RawFuncCallQuery :

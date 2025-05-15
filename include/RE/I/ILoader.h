@@ -1,15 +1,16 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
 	namespace BSScript
 	{
-		class IStore;  // stub
-		class Object;
+		class IStore;
 
 		namespace UnlinkedTypes
 		{
-			struct Object;  // stub
+			struct Object;
 		}
 
 		struct __declspec(novtable) ILoader

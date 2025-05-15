@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/E/ErrorLogger.h"
+#include "RE/I/ICachedErrorMessage.h"
+
 namespace RE
 {
 	namespace BSScript

@@ -1,12 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/O/ObjectTypeInfo.h"
+#include "RE/V/Variable.h"
+
 namespace RE
 {
 	namespace BSScript
 	{
-		class ObjectTypeInfo;
-		class Variable;
-
 		class Object
 		{
 		public:

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTObjectArena.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
 	namespace BSScript
@@ -35,9 +39,9 @@ namespace RE
 				static_assert(sizeof(StringTableScrapPage) == 0x1010);
 
 				// members
-				msvc::unique_ptr<BSTObjectArena<StringTableScrapPage, BSTObjectArenaScrapAlloc, 1>> scrapPages;  // 00
-				msvc::unique_ptr<BSScrapArray<StringEntry>>                                         entries;     // 08
-				REX::EnumSet<StringIndexSize, std::int32_t>                                         indexSize;   // 10
+				std::unique_ptr<BSTObjectArena<StringTableScrapPage, BSTObjectArenaScrapAlloc, 1>> scrapPages;  // 00
+				std::unique_ptr<BSScrapArray<StringEntry>>                                         entries;     // 08
+				REX::EnumSet<StringIndexSize, std::int32_t>                                        indexSize;   // 10
 			};
 			static_assert(sizeof(ReadableStringTable) == 0x18);
 		}

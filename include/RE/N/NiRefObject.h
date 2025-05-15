@@ -47,7 +47,7 @@ namespace RE
 		}
 
 		// members
-		std::uint32_t refCount;  // 08
+		std::uint32_t refCount{ 0 };  // 08
 	};
 	static_assert(sizeof(NiRefObject) == 0x10);
 }

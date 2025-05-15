@@ -1,26 +1,27 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
 	class BSStorage;
 
 	namespace BSScript
 	{
-		class Object;
 		class Array;
-		class TypeInfo;
+		class Object;
 		class Stack;
 		class Struct;
-
+		class TypeInfo;
 		struct IHandleReaderWriter;
 
 		namespace Internal
 		{
+			class CodeTasklet;
 			class ReadableStringTable;
 			class ReadableTypeTable;
 			class WritableStringTable;
 			class WritableTypeTable;
-			class CodeTasklet;
 		}
 
 		class __declspec(novtable) IVMSaveLoadInterface

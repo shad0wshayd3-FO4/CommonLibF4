@@ -1,13 +1,18 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/I/IComplexType.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/T/TypeInfo.h"
+#include "RE/V/Variable.h"
+#include "RE/P/PropertyTypeInfo.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
 		class IFunction;
-		class IComplexType;
 		class PropertyGroupInfo;
 
 		class __declspec(novtable) ObjectTypeInfo :
@@ -35,6 +40,7 @@ namespace RE
 			}
 
 			[[nodiscard]] bool Valid() const noexcept { return linkedValid == LinkValidState::kLinkedValid; }
+
 			struct UnlinkedNativeFunction
 			{
 			public:

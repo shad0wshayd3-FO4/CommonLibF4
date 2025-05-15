@@ -3,13 +3,12 @@
 #include "RE/B/BSFixedString.h"
 #include "RE/N/NiObject.h"
 #include "RE/N/NiPointer.h"
+#include "RE/N/NiTimeController.h"
+#include "RE/N/NiExtraData.h"
+#include "RE/N/NiExtraDataContainer.h"
 
 namespace RE
 {
-	class NiExtraData;
-	class NiExtraDataContainer;
-	class NiTimeController;
-
 	class __declspec(novtable) NiObjectNET :
 		public NiObject  // 00
 	{

@@ -1,5 +1,6 @@
+#include "RE/T/TypeInfo.h"
 
-#include "RE/Bethesda/T/TypeInfo.h"
+#include "RE/I/IComplexType.h"
 
 namespace RE::BSScript
 {
@@ -28,13 +29,14 @@ namespace RE::BSScript
 								 ~static_cast<std::uintptr_t>(1)) :
 		                     nullptr;
 	}
+
 	ObjectTypeInfo* TypeInfo::GetObjectTypeInfo() const
 	{
 		return IsObject() || IsObjectArray() ? reinterpret_cast<ObjectTypeInfo*>(GetComplexType()) : nullptr;
 	}
+
 	StructTypeInfo* TypeInfo::GetStructTypeInfo() const
 	{
 		return IsStruct() || IsStructArray() ? reinterpret_cast<StructTypeInfo*>(GetComplexType()) : nullptr;
 	}
-
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/R/ReadableStringTable.h"
 #include "RE/I/ILoader.h"
 
 namespace RE
@@ -7,20 +9,6 @@ namespace RE
 	namespace BSScript
 	{
 		class ErrorLogger;
-		class IStore;  // stub
-		class Object;
-
-		struct ILoader;
-
-		namespace Internal
-		{
-			class ReadableStringTable;
-
-		}
-		namespace UnlinkedTypes
-		{
-			struct Object;  // stub
-		}
 
 		class __declspec(novtable) CompiledScriptLoader :
 			public ILoader  // 00

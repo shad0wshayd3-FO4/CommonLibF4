@@ -37,7 +37,7 @@ namespace RE
 		};
 		static_assert(sizeof(RVA<void*>) == 0x4);
 
-		using TypeDescriptor = msvc::type_info;
+		using TypeDescriptor = std::type_info;
 
 		struct PMD
 		{
@@ -113,7 +113,7 @@ namespace RE
 	inline void* RTDynamicCast(void* a_inptr, std::int32_t a_vfDelta, void* a_srcType, void* a_targetType, std::int32_t a_isReference)
 	{
 		using func_t = decltype(&RTDynamicCast);
-		REL::Relocation<func_t> func{ REL::ID(2725673) };
+		static REL::Relocation<func_t> func{ REL::ID(2725673) };
 		return func(a_inptr, a_vfDelta, a_srcType, a_targetType, a_isReference);
 	}
 

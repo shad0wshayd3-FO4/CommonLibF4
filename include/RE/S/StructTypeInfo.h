@@ -1,15 +1,18 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/I/IComplexType.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/V/Variable.h"
+#include "RE/T/TypeInfo.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
-		class IComplexType;
 		class ObjectTypeInfo;
-		class TypeInfo;
-		class Variable;
 
 		class __declspec(novtable) StructTypeInfo :
 			public IComplexType  // 00

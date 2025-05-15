@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/O/Object.h"
+#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSTPointerAndFlags.h"
 
 namespace RE

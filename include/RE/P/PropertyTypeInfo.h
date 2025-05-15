@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/T/TypeInfo.h"
+
 namespace RE
 {
 	namespace BSScript
@@ -9,9 +13,7 @@ namespace RE
 		struct PropertyTypeInfo
 		{
 		public:
-			enum class Permissions
-			{
-			};
+			enum class Permissions;
 
 			// members
 			BSFixedString                            parentObjName;  // 00

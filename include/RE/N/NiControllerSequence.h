@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
+	class BSAnimNote;
+	class NiControllerManager;
+	class NiStringPalette;
+	class NiTextKeyExtraData;
+
 	class NiControllerSequence :
 		public NiObject  // 00
 	{

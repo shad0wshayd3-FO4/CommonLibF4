@@ -1,49 +1,40 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/B/BSTMessageQueue.h"
+#include "RE/B/BSTObjectArena.h"
 #include "RE/I/IVMDebugInterface.h"
 #include "RE/I/IVMObjectBindInterface.h"
 #include "RE/I/IVMSaveLoadInterface.h"
 #include "RE/I/IVirtualMachine.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/V/VirtualMachine.h"
+#include "RE/W/WritableStringTable.h"
+#include "RE/W/WritableTypeTable.h"
+#include "RE/B/BSTFreeList.h"
+#include "RE/F/FunctionMessage.h"
+#include "RE/E/EventRelay.h"
+#include "RE/A/AttachedScript.h"
+#include "RE/R/ReadableStringTable.h"
+#include "RE/R/ReadableTypeTable.h"
+#include "RE/L/LinkerProcessor.h"
 
 namespace RE
 {
-	namespace
-	{
-		class __declspec(novtable) alignas(0x80) BSTCommonStaticMessageQueue_SuspendedStack_128 :
-			public BSTMessageQueue<BSScript::Internal::SuspendedStack>  //00
-		{
-		public:
-			virtual ~BSTCommonStaticMessageQueue_SuspendedStack_128();  // 00
-
-			// override (BSTMessageQueue<T>)
-			bool Push(const BSScript::Internal::SuspendedStack& a_message) override;     // 01
-			bool TryPush(const BSScript::Internal::SuspendedStack& a_message) override;  // 02
-			bool Pop(BSScript::Internal::SuspendedStack& a_message) override;            // 03
-			bool TryPop(BSScript::Internal::SuspendedStack& a_message) override;         // 04
-
-			// members
-			alignas(0x80) char queueBuffer[7168];                                                           // 0010
-			BSTLocklessQueue::ObjMultiProdCons<BSScript::Internal::SuspendedStack, 128, 0>* locklessQueue;  // 1C80
-		};
-		static_assert(sizeof(BSTCommonStaticMessageQueue_SuspendedStack_128) == 0x1D00);
-		static_assert(offsetof(BSTCommonStaticMessageQueue_SuspendedStack_128, queueBuffer) == 0x80);
-		static_assert(offsetof(BSTCommonStaticMessageQueue_SuspendedStack_128, locklessQueue) == 0x1C80);
-	}
-
 	namespace BSScript
 	{
 		class Array;
 		class ErrorLogger;
-		class IFreezeQuery;
+		class IClientVM;
 		class IProfilePolicy;
 		class ISavePatcherInterface;
 		class IStackCallbackFunctor;
 		class IStackCallbackSaveInterface;
 		class ObjectBindPolicy;
 		class Stack;
-
 		struct IMemoryPagePolicy;
 		struct IObjectHandlePolicy;
 		struct StatsEvent;
@@ -51,6 +42,7 @@ namespace RE
 		namespace Internal
 		{
 			class CodeTasklet;
+			struct SuspendedStack;
 
 			class VirtualMachine :
 				public IVirtualMachine,  // 0000
@@ -210,11 +202,11 @@ namespace RE
 				virtual bool                                           CreateEmptyTasklet(BSScript::Stack* a_Stack, BSTSmartPointer<BSScript::Internal::CodeTasklet, BSTSmartPointerIntrusiveRefCount>& a_tasklet_pointer) override;                      //14307DA00 	// 19
 
 				// override (IVMDebugInterface)
-				virtual void DumpRunningStacksToLog() override;                                                                                // 01   // 14307DA18
-				virtual void DumpStackFrameToLog(unsigned int a_v, unsigned int b_v, bool a_flag) override;                                    // 02   // 14307DA20
-				virtual void GetStackFrame(unsigned int a_v, unsigned int b_v, bool a_flag, BSFixedString& a_identifier) override;             // 03   // 14307DA28
-				virtual void DumpPersistenceInformationToLog(char const* logfile, uint64_t a_v) const override;                                // 04   // 14307DA30
-				virtual void DumpEventRelayInformationToLog(char const* logfile, uint64_t a_v, BSFixedString const& a_string) const override;  // 05   // 14307DA38
+				virtual void DumpRunningStacksToLog() override;                                                                                // 01
+				virtual void DumpStackFrameToLog(unsigned int a_v, unsigned int b_v, bool a_flag) override;                                    // 02
+				virtual void GetStackFrame(unsigned int a_v, unsigned int b_v, bool a_flag, BSFixedString& a_identifier) override;             // 03
+				virtual void DumpPersistenceInformationToLog(char const* logfile, uint64_t a_v) const override;                                // 04
+				virtual void DumpEventRelayInformationToLog(char const* logfile, uint64_t a_v, BSFixedString const& a_string) const override;  // 05
 
 				static VirtualMachine* GetSingleton();
 
@@ -244,23 +236,21 @@ namespace RE
 				std::uint32_t                                              uiWaitingFunctionMessages;   // 82B8
 				bool                                                       overstressed;                // 82BC
 				bool                                                       initialized;                 // 82BD
-				std::byte                                                  pad82BE[0x8300 - 0x82BE];    // 82BE
-				BSTCommonStaticMessageQueue_SuspendedStack_128             suspendQueue1;               // 8300
-				BSTCommonStaticMessageQueue_SuspendedStack_128             suspendQueue2;               // A000
+				std::byte                                                  pad82BE[0xBD00 - 0x82BE];    // 82BE
 				BSTArray<SuspendedStack>                                   overflowSuspendArray1;       // BD00
 				BSTArray<SuspendedStack>                                   overflowSuspendArray2;       // BD18
 				mutable BSSpinLock                                         suspendQueueLock;            // BD30
-				BSTCommonStaticMessageQueue_SuspendedStack_128*            stacksToResume;              // BD38 - ref to suspendQueue2 @ 8300
-				BSTArray<SuspendedStack>*                                  stacksToResumeOverflow;      // BD40 - ref to overflowSuspendArray2 @BD00
-				BSTCommonStaticMessageQueue_SuspendedStack_128*            stacksToSuspend;             // BD48 - ref to suspendQueue1 @A000
-				BSTArray<SuspendedStack>*                                  stacksToSuspendOverflow;     // BD50 - ref to overflowSuspendArray1 @BD18
+				std::byte                                                  padBD38[0xBD40 - 0xBD38];    // BD38
+				BSTArray<SuspendedStack>*                                  stacksToResumeOverflow;      // BD40
+				std::byte                                                  padBD48[0xBD50 - 0xBD48];    // BD48
+				BSTArray<SuspendedStack>*                                  stacksToSuspendOverflow;     // BD50
 				mutable BSSpinLock                                         runningStacksLock;           // BD58
 				BSTHashMap<std::uint32_t, BSTSmartPointer<Stack>>          allRunningStacks;            // BD60
 				BSTHashMap<std::uint32_t, BSTSmartPointer<Stack>>          waitingLatentReturns;        // BD90
 				std::uint32_t                                              nextStackID;                 // BDC0
 				mutable BSSpinLock                                         frozenStacksLock;            // BDC4
 				std::byte                                                  padBDCC[0xBDD0 - 0xBDCC];    // BDCC
-				BSTArray<msvc::unique_ptr<PendingLatentReturn>>            pendingLatentReturns;        // BDD0
+				BSTArray<std::unique_ptr<PendingLatentReturn>>             pendingLatentReturns;        // BDD0
 				BSTSmartPointer<BSScript::Stack>                           frozenStacksHead;            // BDE8
 				std::uint32_t                                              frozenStacksCount;           // BDF0
 				REX::EnumSet<FreezeState, std::uint32_t>                   freezeState;                 // BDF4

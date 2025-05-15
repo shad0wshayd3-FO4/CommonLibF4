@@ -4,6 +4,9 @@
 #include "RE/B/BSTArray.h"
 #include "RE/N/NiPointer.h"
 #include "RE/N/NiTArray.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiTPointerMap.h"
+#include "RE/N/NiTLargeArray.h"
 
 namespace RE
 {

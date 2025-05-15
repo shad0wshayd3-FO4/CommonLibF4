@@ -1,11 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/V/Variable.h"
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	namespace BSScript
 	{
 		class IVirtualMachine;
-		class Variable;
 
 		template <typename T>
 		class ArrayWrapper

@@ -1,8 +1,8 @@
 #pragma once
 
-//#include "RE/B/BSFixedString.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/N/NiObject.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {
@@ -20,8 +20,6 @@ namespace RE
 	{
 		class Texture;
 	}
-
-	class NiTexture;
 
 	class __declspec(novtable) NiTexture :
 		public NiObject  // 00

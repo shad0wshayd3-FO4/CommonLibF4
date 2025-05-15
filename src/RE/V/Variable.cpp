@@ -1,5 +1,9 @@
 #include "RE/V/Variable.h"
 
+#include "RE/A/Array.h"
+#include "RE/O/Object.h"
+#include "RE/S/Struct.h"
+
 namespace RE::BSScript
 {
 	Variable& Variable::operator=(BSTSmartPointer<Object> a_object)
@@ -132,5 +136,4 @@ namespace RE::BSScript
 
 		varType = a_rhs.varType;
 	}
-
 }

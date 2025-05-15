@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/V/Variable.h"
+
 namespace RE
 {
 	namespace BSScript
@@ -7,7 +10,6 @@ namespace RE
 		class IFunction;
 		class ObjectTypeInfo;
 		class Stack;
-		class Variable;
 
 		class StackFrame
 		{

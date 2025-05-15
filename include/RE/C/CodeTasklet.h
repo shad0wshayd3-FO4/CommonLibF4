@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
 #include "RE/I/IFuncCallQuery.h"
 
 namespace RE

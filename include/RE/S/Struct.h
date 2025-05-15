@@ -1,14 +1,15 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/V/Variable.h"
+#include "RE/S/StructTypeInfo.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
-		class StructTypeInfo;
-		class Variable;
-
 		class Struct :
 			public BSIntrusiveRefCounted  // 00
 		{

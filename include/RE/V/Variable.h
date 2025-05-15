@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/M/MemoryManager.h"
+#include "RE/T/TypeInfo.h"
+
 namespace RE
 {
 	namespace BSScript
@@ -7,17 +12,10 @@ namespace RE
 		class Array;
 		class Object;
 		class Struct;
-		class TypeInfo;
-		class Variable;
 
 		namespace detail
 		{
 			struct variable_raw_accessor;
-		}
-
-		namespace UnlinkedTypes
-		{
-			struct Object;  // stub
 		}
 
 		class Variable

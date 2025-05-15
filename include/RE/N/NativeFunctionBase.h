@@ -1,17 +1,24 @@
 #pragma once
 
 #include "RE/I/IFunction.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/T/TypeInfo.h"
+#include "RE/V/VDescTable.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
 		class ErrorLogger;
-		class IFunction;
 		class Stack;
 		class StackFrame;
-		class TypeInfo;
 		class Variable;
+
+		namespace Internal
+		{
+			class VirtualMachine;
+		}
 
 		namespace NF_util
 		{

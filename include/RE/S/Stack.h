@@ -1,6 +1,9 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSTArray.h"
+#include "RE/V/Variable.h"
 
 namespace RE
 {
@@ -8,21 +11,14 @@ namespace RE
 	{
 		class IProfilePolicy;
 		class IStackCallbackFunctor;
-		class MemoryPage;  // stub
+		class MemoryPage;
 		class Object;
 		class StackFrame;
-		class Variable;
-
 		struct IMemoryPagePolicy;
 
 		namespace Internal
 		{
 			class CodeTasklet;
-		}
-
-		namespace UnlinkedTypes
-		{
-			struct Object;  // stub
 		}
 
 		class Stack :

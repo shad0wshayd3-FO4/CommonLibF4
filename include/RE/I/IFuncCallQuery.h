@@ -1,11 +1,17 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
+		class ObjectTypeInfo;
+		class Variable;
+
 		namespace Internal
 		{
 			class __declspec(novtable) IFuncCallQuery :
@@ -14,6 +20,7 @@ namespace RE
 			public:
 				static constexpr auto RTTI{ RTTI::BSScript__Internal__IFuncCallQuery };
 				static constexpr auto VTABLE{ VTABLE::BSScript__Internal__IFuncCallQuery };
+
 				enum class CallType
 				{
 					kMember,
@@ -21,6 +28,7 @@ namespace RE
 					kGetter,
 					kSetter
 				};
+
 				virtual ~IFuncCallQuery();  // 00
 
 				// add

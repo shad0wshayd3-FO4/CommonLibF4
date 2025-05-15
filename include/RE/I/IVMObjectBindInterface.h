@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
 	namespace BSScript

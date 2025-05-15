@@ -1,6 +1,15 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTObjectArena.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TypeInfo.h"
+#include "RE/B/BSContainer.h"
+#include "RE/E/ErrorLogger.h"
+#include "RE/I/ICachedErrorMessage.h"
 
 namespace RE
 {
@@ -10,31 +19,22 @@ namespace RE
 	namespace BSScript
 	{
 		class Array;
-		class BoundScript;  // stub
-		class ErrorLogger;
-		class ICachedErrorMessage;
+		class BoundScript;
 		class IFunction;
 		class ISavePatcherInterface;
 		class IStackCallbackFunctor;
-		class ITypeLinkedCallback;  // stub
-		class JobList;              // stub
+		class ITypeLinkedCallback;
+		class JobList;
 		class Object;
 		class ObjectBindPolicy;
 		class ObjectTypeInfo;
 		class Struct;
 		class StructTypeInfo;
-		class TypeInfo;
 		class Variable;
-
 		struct ILoader;
 		struct IObjectHandlePolicy;
 		struct LogEvent;
 		struct StatsEvent;
-
-		namespace UnlinkedTypes
-		{
-			struct Object;  // stub
-		}
 
 		class __declspec(novtable) IVirtualMachine :
 			public BSIntrusiveRefCounted  // 08

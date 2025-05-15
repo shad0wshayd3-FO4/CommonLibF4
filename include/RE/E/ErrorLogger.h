@@ -1,13 +1,15 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSpinLock.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
 		class ICachedErrorMessage;
-
 		struct LogEvent;
 
 		class __declspec(novtable) ErrorLogger :
@@ -42,9 +44,9 @@ namespace RE
 			virtual void ResetImpl() { return; }                                                       // 02
 
 			// members
-			const BSFixedString                                          logName;       // 60
-			BSSpinLock                                                   dataLock;      // 68
-			BSTHashMap<std::uint32_t, ErrorLogger::PerThreadErrorCounts> threadErrors;  // 70
+			const BSFixedString                             logName;       // 60
+			BSSpinLock                                      dataLock;      // 68
+			BSTHashMap<std::uint32_t, PerThreadErrorCounts> threadErrors;  // 70
 		};
 		static_assert(sizeof(ErrorLogger) == 0xA0);
 	}

@@ -1,24 +1,24 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
 	class BSStorage;
 
 	namespace BSScript
 	{
-		class BoundScript;  // stub
+		class BoundScript;
 		class IVirtualMachine;
 		class MergedBoundScript;
 		class Object;
 		class Variable;
-
 		struct IHandleReaderWriter;
 		struct IVMObjectBindInterface;
-
-		namespace UnlinkedTypes
-		{
-			struct Object;  // stub
-		}
 
 		class __declspec(novtable) ObjectBindPolicy
 		{

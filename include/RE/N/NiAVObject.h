@@ -5,11 +5,13 @@
 #include "RE/N/NiPointer.h"
 #include "RE/N/NiTFlags.h"
 #include "RE/N/NiTransform.h"
+#include "RE/N/NiCollisionObject.h"
 
 namespace RE
 {
 	class NiAlphaProperty;
 	class NiCullingProcess;
+	class NiNode;
 	class NiUpdateData;
 	class PerformOpFunc;
 

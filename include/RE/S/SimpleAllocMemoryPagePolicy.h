@@ -1,15 +1,13 @@
 #pragma once
 
 #include "RE/I/IMemoryPagePolicy.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
-		class MemoryPage;  // stub
-
-		struct IMemoryPagePolicy;
-
 		class __declspec(novtable) SimpleAllocMemoryPagePolicy :
 			public IMemoryPagePolicy
 		{

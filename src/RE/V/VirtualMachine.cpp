@@ -1,5 +1,7 @@
 #include "RE/V/VirtualMachine.h"
 
+#include "RE/G/GameScript.h"
+
 namespace RE
 {
 	namespace BSScript

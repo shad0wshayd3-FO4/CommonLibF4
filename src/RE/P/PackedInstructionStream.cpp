@@ -13,6 +13,7 @@ namespace RE
 				memberVariableBitCount(0),
 				instructions(nullptr)
 			{}
+
 			PackedInstructionStream::PackedInstructionStream(
 				void*         a_instructions,
 				std::uint32_t a_numInstrBits,

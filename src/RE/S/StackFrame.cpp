@@ -1,5 +1,7 @@
 #include "RE/S/StackFrame.h"
 
+#include "RE/S/Stack.h"
+
 namespace RE
 {
 	namespace BSScript

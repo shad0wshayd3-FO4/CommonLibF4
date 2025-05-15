@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
 	namespace BSScript

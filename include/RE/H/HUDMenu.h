@@ -5,6 +5,10 @@
 
 namespace RE
 {
+	class HUDComponentBase;
+	class RequestHUDModesEvent;
+	class UserEventEnabledEvent;
+	
 	struct __declspec(novtable) HUDMenu :
 		public GameMenuBase,                         // 000
 		public BSTEventSink<UserEventEnabledEvent>,  // 0E0
@@ -24,7 +28,7 @@ namespace RE
 		};
 
 		// members
-		BSTSmallArray<msvc::unique_ptr<HUDComponentBase>, 32> hudObjects;        // 0F0
+		BSTSmallArray<std::unique_ptr<HUDComponentBase>, 32>  hudObjects;        // 0F0
 		BSTArray<HUDModeType>                                 hudModes;          // 200
 		REX::EnumSet<ShowMenuState, std::uint32_t>            hudShowMenuState;  // 218
 	};

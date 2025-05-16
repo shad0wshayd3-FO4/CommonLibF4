@@ -1,9 +1,15 @@
 #pragma once
 
 #include "RE/G/GameMenuBase.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/H/HUDPerkVaultBoySwfDisplayEvent.h"
+#include "RE/S/ShowingDialogueSpeechChallengeAnim.h"
 
 namespace RE
 {
+	class BSInputEnableLayer;
+
 	class __declspec(novtable) DialogueMenu :
 		public GameMenuBase  // 00
 	{
@@ -13,8 +19,8 @@ namespace RE
 		static constexpr auto MENU_NAME{ "DialogueMenu"sv };
 
 		// Members
-		msvc::unique_ptr<BSGFxShaderFXTarget>                   dialogueButtonOBJs[4];
-		msvc::unique_ptr<BSGFxShaderFXTarget>                   speechChallengeAnimObj;
+		std::unique_ptr<BSGFxShaderFXTarget>                    dialogueButtonOBJs[4];
+		std::unique_ptr<BSGFxShaderFXTarget>                    speechChallengeAnimObj;
 		BSTValueEventSink<HUDPerkVaultBoySwfDisplayEvent>       CurrentVBPerk;
 		BSTValueEventSource<ShowingDialogueSpeechChallengeAnim> ShowingSpeechChallenge;
 		BSTSmartPointer<BSInputEnableLayer>                     inputLayer;

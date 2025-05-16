@@ -1,10 +1,62 @@
 #pragma once
 
-#include "RE/B/BSTEvent.h"
 #include "RE/P/PipboyDataGroup.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/I/InventoryInterface.h"
+#include "RE/E/ENUM_FORM_ID.h"
+#include "RE/B/BGSInventoryItem.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {
+	namespace ActorEquipManagerEvent
+	{
+		struct Event;
+	}
+
+	namespace ActorValueEvents
+	{
+		struct ActorValueChangedEvent;
+	}
+
+	namespace BGSInventoryItemEvent
+	{
+		struct Event;
+	}
+
+	namespace BGSInventoryListEvent
+	{
+		struct Event;
+	}
+
+	namespace HolotapeStateChanged
+	{
+		struct Event;
+	}
+
+	namespace InventoryInterface
+	{
+		struct FavoriteChangedEvent;
+	}
+
+	namespace FavoriteMgr_Events
+	{
+		struct ComponentFavoriteEvent;
+	}
+
+	namespace PerkValueEvents
+	{
+		struct PerkValueChangedEvent;
+		struct PerkEntryUpdatedEvent;
+	}
+
+	namespace PlayerDifficultySettingChanged
+	{
+		struct Event;
+	}
+
 	class PipboyInventoryData :
 		public PipboyDataGroup,                                           // 00
 		public BSTEventSink<BGSInventoryListEvent::Event>,                // 98

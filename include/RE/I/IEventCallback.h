@@ -1,9 +1,12 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {
+	class BSStorage;
+
 	namespace REFREventCallbacks
 	{
 		class IEventCallback :

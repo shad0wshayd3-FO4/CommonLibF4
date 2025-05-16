@@ -1,7 +1,21 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSScaleformExternalTexture.h"
+#include "RE/B/BSSoundHandle.h"
+
 namespace RE
 {
+	class NiAVObject;
+
+	namespace REFREventCallbacks
+	{
+		class IEventCallback;
+	}
+
 	class __declspec(novtable) TerminalMenu :
 		public GameMenuBase  // 00
 	{

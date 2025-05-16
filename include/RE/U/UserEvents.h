@@ -71,5 +71,4 @@ namespace RE
 			kVATS = 1 << 11
 		};
 	}
-	using UEFlag = UserEvents::USER_EVENT_FLAG;
 }

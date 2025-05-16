@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "Scaleform/G/GFx_Value.h"
+
 namespace RE
 {
 	namespace InventoryUserUIUtils

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/G/GameMenuBase.h"
+#include "RE/H/HolotapeMenu.h"
 
 namespace RE
 {

@@ -1,9 +1,20 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
+#include "Scaleform/P/Ptr.h"
+
+namespace Scaleform::Render
+{
+	class HAL;
+	class Renderer2D;
+	class RenderTarget;
+	class TextureManager;
+}
 
 namespace RE
 {
+	struct SFRendererInitializedEvent;
+
 	struct BSScaleformRenderer :
 		public BSTEventSource<SFRendererInitializedEvent>  // 000
 	{

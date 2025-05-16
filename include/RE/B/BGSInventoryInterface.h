@@ -1,10 +1,18 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {
+	namespace InventoryInterface
+	{
+		struct CountChangedEvent;
+		struct FavoriteChangedEvent;
+	}
+
 	class BGSInventoryInterface :
 		BSTSingletonSDM<BGSInventoryInterface>,                   // 00
 		BSTEventSource<InventoryInterface::CountChangedEvent>,    // 08

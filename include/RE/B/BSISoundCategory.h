@@ -4,7 +4,7 @@ namespace RE
 {
 	namespace BSISoundCategoryUtils
 	{
-		class FadeType;
+		enum class FadeType;
 	}
 
 	class __declspec(novtable) BSISoundCategory

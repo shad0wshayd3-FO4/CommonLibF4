@@ -2,9 +2,24 @@
 
 #include "RE/B/BSInputEventUser.h"
 #include "RE/S/SWFToCodeFunctionHandler.h"
+#include "RE/B/ButtonEvent.h"
+#include "RE/U/UI_MESSAGE_TYPE.h"
+#include "RE/U/UI_MESSAGE_RESULTS.h"
+#include "RE/U/UI_MENU_FLAGS.h"
+#include "RE/U/UI_DEPTH_PRIORITY.h"
+#include "RE/N/NiRect.h"
+#include "RE/B/BSFixedString.h"
+#include "Scaleform/M/MemoryHeap.h"
+#include "Scaleform/P/Ptr.h"
+#include "Scaleform/T/ThreadId.h"
+#include "RE/B/BSTAtomicValue.h"
+#include "RE/U/UserEvents.h"
+#include "RE/U/UIMessage.h"
 
 namespace RE
 {
+	enum class MENU_RENDER_CONTEXT;
+
 	class IMenu :
 		public SWFToCodeFunctionHandler,  // 00
 		public BSInputEventUser           // 10

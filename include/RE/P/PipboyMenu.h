@@ -2,9 +2,22 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/G/GameMenuBase.h"
+#include "RE/P/PipboyInventoryMenu.h"
+#include "RE/P/PipboyLogMenu.h"
+#include "RE/P/PipboyMapMenu.h"
+#include "RE/P/PipboyPerksMenu.h"
+#include "RE/P/PipboyPlayerInfoMenu.h"
+#include "RE/P/PipboyQuestMenu.h"
+#include "RE/P/PipboyRadioMenu.h"
+#include "RE/P/PipboySpecialMenu.h"
+#include "RE/P/PipboyStatsMenu.h"
+#include "RE/P/PipboyWorkshopMenu.h"
 
 namespace RE
 {
+	class IdleInputEvent;
+	class MenuOpenCloseEvent;
+
 	class __declspec(novtable) PipboyMenu :
 		public GameMenuBase,                      // 000
 		public BSTEventSink<MenuOpenCloseEvent>,  // 0E0

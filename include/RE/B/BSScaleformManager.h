@@ -2,9 +2,23 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSStringT.h"
+#include "Scaleform/G/GFx_Movie.h"
+#include "Scaleform/P/Ptr.h"
+
+namespace Scaleform::GFx
+{
+	class DrawTextManager;
+	class Loader;
+}
 
 namespace RE
 {
+	class BSScaleformImageLoader;
+	class IMenu;
+	struct BSScaleformRenderer;
+	struct SFRendererInitializedEvent;
+
 	class __declspec(novtable) BSScaleformManager :
 		public BSTEventSink<SFRendererInitializedEvent>,  // 00
 		public BSTSingletonSDM<BSScaleformManager>        // 08
@@ -46,7 +60,7 @@ namespace RE
 		BSScaleformRenderer*                            renderer;        // 18
 		Scaleform::Ptr<Scaleform::GFx::DrawTextManager> textManager;     // 20
 		Scaleform::Ptr<BSScaleformImageLoader>          imageLoader;     // 28
-		BSStringT<char>                                 validNameChars;  // 30
+		BSString                                        validNameChars;  // 30
 
 	private:
 		[[nodiscard]] bool GetMovieFilename(char const* a_menuName, BSStaticStringT<260>& a_filePath)

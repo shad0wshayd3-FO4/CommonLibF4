@@ -1,6 +1,10 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {
@@ -71,4 +75,10 @@ namespace RE
 		BSSpinLock                                      dataLock;                // C8
 	};
 	static_assert(sizeof(BGSCreatedObjectManager) == 0xD0);
+
+	extern template struct BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<AlchemyItem>;
+	extern template struct BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<TESForm>;
+
+	template <class T>
+	using CreatedObjPtr = BSTSmartPointer<T, BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy>;
 }

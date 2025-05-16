@@ -1,7 +1,26 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiColor.h"
+#include "Scaleform/G/GFx_Movie.h"
+#include "RE/U/UIShaderFXInfo.h"
+#include "RE/B/BSSpinLock.h"
+
 namespace RE
 {
+	enum class UI_DEPTH_PRIORITY;
+
+	class BSGeometry;
+	class BSShaderAccumulator;
+	class NiAVObject;
+	class NiCamera;
+	class NiDirectionalLight;
+	class NiLight;
+	class ShadowSceneNode;
+
 	namespace Interface3D
 	{
 		enum class BackgroundMode
@@ -104,7 +123,7 @@ namespace RE
 			};
 			static_assert(sizeof(LightParams) == 0x28);
 
-			static Renderer* Create(const BSFixedString& a_name, RE::UI_DEPTH_PRIORITY a_depth, float a_fov, bool a_alwaysRenderWhenEnabled)
+			static Renderer* Create(const BSFixedString& a_name, UI_DEPTH_PRIORITY a_depth, float a_fov, bool a_alwaysRenderWhenEnabled)
 			{
 				using func_t = decltype(&Renderer::Create);
 				static REL::Relocation<func_t> func{ REL::ID(88488) };
@@ -367,7 +386,7 @@ namespace RE
 				return func(this);
 			}
 
-			void SetViewport(RE::Scaleform::GFx::Movie& a_ui, const NiRect<float>& a_renderArea)
+			void SetViewport(Scaleform::GFx::Movie& a_ui, const NiRect<float>& a_renderArea)
 			{
 				using func_t = decltype(&Renderer::SetViewport);
 				static REL::Relocation<func_t> func{ REL::ID(825410) };

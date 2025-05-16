@@ -1,7 +1,12 @@
 #pragma once
 
 #include "RE/B/BSGFxDisplayObject.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/A/ApplyColorUpdateEvent.h"
+#include "RE/H/HUDColorTypes.h"
+#include "RE/U/UIShaderColors.h"
+#include "RE/U/UIShaderFXInfo.h"
 
 namespace RE
 {

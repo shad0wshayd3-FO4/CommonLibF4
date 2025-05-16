@@ -1,9 +1,14 @@
 #pragma once
 
 #include "RE/W/WorkbenchMenuBase.h"
+#include "RE/E/ExamineConfirmMenu.h"
 
 namespace RE
 {
+	class BGSObjectInstanceExtra;
+	class BSInputEnableLayer;
+	class NiAVObject;
+
 	class __declspec(novtable) ExamineMenu :
 		public WorkbenchMenuBase  // 00
 	{

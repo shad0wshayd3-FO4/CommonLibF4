@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/I/IDEvent.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

@@ -1,9 +1,13 @@
 #pragma once
 
-#include "RE/G/GFxPlayer.h"
+#include "RE/B/BSFixedString.h"
+#include "Scaleform/G/GFx_FunctionHandler.h"
+#include "Scaleform/G/GFx_Value.h"
 
 namespace RE
 {
+	class BSGFxFunctionBase;
+
 	class __declspec(novtable) BSGFxFunctionHandler :
 		public Scaleform::GFx::FunctionHandler  // 00
 	{

@@ -1,12 +1,40 @@
 #pragma once
 
 #include "RE/B/BSInputEventReceiver.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
 #include "RE/I/IMovementPlayerControls.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/A/ActionInput.h"
+#include "RE/P/PlayerInputHandler.h"
+#include "RE/H/HeldStateHandler.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
+	enum class DEFAULT_OBJECT;
+
+	class ActivateHandler;
+	class AttackBlockHandler;
+	class AutoMoveHandler;
+	class GrabRotationHandler;
+	class JumpHandler;
+	class LookHandler;
+	class MeleeThrowHandler;
+	class MenuModeChangeEvent;
+	class MenuOpenCloseEvent;
+	class MovementHandler;
+	class QuickContainerStateEvent;
+	class ReadyWeaponHandler;
+	class RunHandler;
+	class SneakHandler;
+	class SprintHandler;
+	class TogglePOVHandler;
+	class ToggleRunHandler;
+	class UserEventEnabledEvent;
+	struct TESFurnitureEvent;
+
 	class __declspec(novtable) PlayerControls :
 		public BSInputEventReceiver,                    // 000
 		public BSTEventSink<MenuOpenCloseEvent>,        // 010

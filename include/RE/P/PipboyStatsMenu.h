@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/P/PipboySubMenu.h"
+#include "RE/B/BSSoundHandle.h"
 
 namespace RE
 {
@@ -23,5 +24,4 @@ namespace RE
 		BSSoundHandle perkSound;  // 18
 	};
 	static_assert(sizeof(PipboyStatsMenu) == 0x20);
-
 }

@@ -1,11 +1,25 @@
 #pragma once
 
-#include "RE/B/BSInputEventUser.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSInputEventUser.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/N/NiRect.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSTPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/I/Inventory3DManager.h"
+#include "RE/P/PipboyRadioController.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/I/InventoryInterface.h"
 
 namespace RE
 {
+	class BSTriShape;
+	class IMenu;
+	class IsPipboyActiveEvent;
+	struct BSAnimationGraphEvent;
+
 	class __declspec(novtable) PipboyManager :
 		public BSTEventSink<BSAnimationGraphEvent>,  // 00
 		public BSInputEventUser,                     // 08
@@ -143,7 +157,7 @@ namespace RE
 			return func(this, a_holotape, a_noAnim);
 		}
 
-		void PlayPipboyOpenAnim(const RE::BSFixedString& a_menuName)
+		void PlayPipboyOpenAnim(const BSFixedString& a_menuName)
 		{
 			using func_t = decltype(&PipboyManager::PlayPipboyOpenAnim);
 			static REL::Relocation<func_t> func{ REL::ID(663900) };

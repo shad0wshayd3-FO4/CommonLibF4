@@ -1,5 +1,7 @@
 #include "RE/C/Calendar.h"
 
+#include "RE/T/TESGlobal.h"
+
 namespace RE
 {
 	float Calendar::GetHoursPassed() const noexcept

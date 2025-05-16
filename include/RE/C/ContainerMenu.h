@@ -30,7 +30,7 @@ namespace RE
 		}
 
 		// members
-		msvc::unique_ptr<BSGFxShaderFXTarget> pickpocketInfo_mc;         // 430
+		std::unique_ptr<BSGFxShaderFXTarget>  pickpocketInfo_mc;         // 430
 		std::uint32_t                         valueStolenFromContainer;  // 438
 		bool                                  containerAccessed;         // 43C
 		bool                                  addedTempItems;            // 43D

@@ -1,11 +1,10 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
+#include "RE/Q/QuickContainerStateData.h"
 
 namespace RE
 {
-	struct QuickContainerStateData;
-
 	class QuickContainerStateEvent :
 		public BSTValueEvent<QuickContainerStateData>  // 00
 	{

@@ -2,9 +2,18 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/G/GameMenuBase.h"
+#include "RE/I/InventoryUserUIInterface.h"
+#include "RE/I/Inventory3DManager.h"
+#include "RE/R/Rumble.h"
+#include "RE/D/DisableHeavyItemsFunc.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {
+	enum class ContainerMenuMode;
+
+	class MenuOpenCloseEvent;
+
 	class __declspec(novtable) ContainerMenuBase :
 		public GameMenuBase,                                // 000
 		public BSTEventSink<InvInterfaceStateChangeEvent>,  // 0E0
@@ -88,13 +97,13 @@ namespace RE
 		// members
 		ItemSorter                                     containerItemSorter;            // 0F0
 		ItemSorter                                     playerItemSorter;               // 12C
-		msvc::unique_ptr<BSGFxShaderFXTarget>          playerBracketBackground_mc;     // 168
-		msvc::unique_ptr<BSGFxShaderFXTarget>          containerBracketBackground_mc;  // 170
-		msvc::unique_ptr<BSGFxShaderFXTarget>          containerList_mc;               // 178
-		msvc::unique_ptr<BSGFxShaderFXTarget>          playerInventory_mc;             // 180
-		msvc::unique_ptr<BSGFxShaderFXTarget>          containerInventory_mc;          // 188
-		msvc::unique_ptr<BSGFxShaderFXTarget>          itemCard_mc;                    // 190
-		msvc::unique_ptr<FXQuantityMenu>               quantityMenu_mc;                // 198
+		std::unique_ptr<BSGFxShaderFXTarget>           playerBracketBackground_mc;     // 168
+		std::unique_ptr<BSGFxShaderFXTarget>           containerBracketBackground_mc;  // 170
+		std::unique_ptr<BSGFxShaderFXTarget>           containerList_mc;               // 178
+		std::unique_ptr<BSGFxShaderFXTarget>           playerInventory_mc;             // 180
+		std::unique_ptr<BSGFxShaderFXTarget>           containerInventory_mc;          // 188
+		std::unique_ptr<BSGFxShaderFXTarget>           itemCard_mc;                    // 190
+		std::unique_ptr<FXQuantityMenu>                quantityMenu_mc;                // 198
 		InventoryUserUIInterface                       playerInv;                      // 1A0
 		InventoryUserUIInterface                       containerInv;                   // 220
 		Inventory3DManager                             inv3DModelManager;              // 2A0

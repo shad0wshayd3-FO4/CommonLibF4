@@ -3,11 +3,10 @@
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSPointerHandle.h"
 #include "Scaleform/G/GFx_Value.h"
+#include "RE/I/InventoryUserUIInterfaceEntry.h"
 
 namespace RE
 {
-	class InventoryUserUIInterfaceEntry;
-
 	struct InventoryItemDisplayData
 	{
 	public:

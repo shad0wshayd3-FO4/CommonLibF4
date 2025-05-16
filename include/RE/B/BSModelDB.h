@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	enum class ENUM_LOD_MULT;
+
 	struct BSModelDB
 	{
 		struct DBTraits
@@ -21,6 +25,8 @@ namespace RE
 			static_assert(sizeof(ArgsType) == 0x0C);
 		};
 		static_assert(std::is_empty_v<DBTraits>);
+
+		using Handle = void*;
 
 		struct HandelListHead
 		{

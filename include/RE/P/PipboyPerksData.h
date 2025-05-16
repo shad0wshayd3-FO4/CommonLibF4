@@ -1,10 +1,16 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/P/PipboyDataGroup.h"
 
 namespace RE
 {
+	namespace PerkValueEvents
+	{
+		struct PerkValueChangedEvent;
+	}
+
 	class __declspec(novtable) PipboyPerksData :
 		public PipboyDataGroup,                                      // 00
 		public BSTEventSink<PerkValueEvents::PerkValueChangedEvent>  // 98

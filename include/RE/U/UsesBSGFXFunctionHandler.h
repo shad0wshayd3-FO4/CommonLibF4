@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSGFxFunctionBase.h"
+
 namespace RE
 {
 	class UsesBSGFXFunctionHandler
@@ -8,7 +11,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::UsesBSGFXFunctionHandler };
 
 		// members
-		BSTArray<msvc::unique_ptr<BSGFxFunctionBase>> functions;  // 00
+		BSTArray<std::unique_ptr<BSGFxFunctionBase>> functions;  // 00
 	};
 	static_assert(sizeof(UsesBSGFXFunctionHandler) == 0x18);
 }

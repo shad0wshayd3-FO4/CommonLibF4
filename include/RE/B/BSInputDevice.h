@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
+	enum class INPUT_DEVICE;
+
 	class __declspec(novtable) BSInputDevice
 	{
 	public:

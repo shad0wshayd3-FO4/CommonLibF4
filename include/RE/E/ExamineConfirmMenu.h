@@ -1,9 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
 #include "RE/G/GameMenuBase.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/S/Setting.h"
+#include "RE/B/BGSTypedFormValuePair.h"
 
 namespace RE
 {
+	class ExamineMenu;
+
 	class __declspec(novtable) ExamineConfirmMenu :
 		public GameMenuBase  // 00
 	{

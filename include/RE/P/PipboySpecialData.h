@@ -5,6 +5,11 @@
 
 namespace RE
 {
+	namespace ActorValueEvent
+	{
+		struct ActorValueChangedEvent;
+	}
+
 	class __declspec(novtable) PipboySpecialData :
 		public PipboyDataGroup,                                        // 00
 		public BSTEventSink<ActorValueEvents::ActorValueChangedEvent>  // 98

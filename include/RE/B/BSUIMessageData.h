@@ -1,6 +1,8 @@
 #pragma once
 
 #include "RE/I/IUIMessageData.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSStringT.h"
 
 namespace RE
 {
@@ -40,7 +42,7 @@ namespace RE
 		}
 
 		// members
-		BSStringT<char>* string{ nullptr };  // 18
+		BSString* string{ nullptr };  // 18
 		BSFixedString    fixedString;        // 20
 		union
 		{

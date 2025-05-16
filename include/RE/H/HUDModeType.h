@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
 	class HUDModeType
@@ -7,8 +9,7 @@ namespace RE
 	public:
 		HUDModeType(const char* a_modeString) :
 			modeString(a_modeString)
-		{
-		}
+		{}
 
 		// members
 		BSFixedString modeString;  // 0

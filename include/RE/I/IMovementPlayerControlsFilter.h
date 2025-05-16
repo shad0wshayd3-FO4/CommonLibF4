@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	struct MovementData;
+
 	class __declspec(novtable) IMovementPlayerControlsFilter :
 		public IMovementInterface  // 00
 	{

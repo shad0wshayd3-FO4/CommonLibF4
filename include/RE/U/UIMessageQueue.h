@@ -1,6 +1,10 @@
 #pragma once
 
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/U/UIMessage.h"
 
 namespace RE
 {

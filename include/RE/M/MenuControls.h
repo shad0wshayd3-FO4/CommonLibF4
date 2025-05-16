@@ -1,10 +1,21 @@
 #pragma once
 
 #include "RE/B/BSInputEventReceiver.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/S/ScreenshotHandler.h"
 
 namespace RE
 {
+	class BSInputEventUser;
+	class CameraZoomHandler;
+	class ClickHandler;
+	class GFxConvertHandler;
+	class PipboyHandler;
+	class QuickSaveLoadHandler;
+	struct DisconnectHandler;
+	struct MenuOpenHandler;
+
 	class MenuControls :
 		public BSInputEventReceiver,          // 00
 		public BSTSingletonSDM<MenuControls>  // 10

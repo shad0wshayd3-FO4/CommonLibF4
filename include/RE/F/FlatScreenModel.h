@@ -2,9 +2,12 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {
+	struct UIAdvanceMenusFunctionCompleteEvent;
+
 	class __declspec(novtable) FlatScreenModel :
 		public BSTEventSink<UIAdvanceMenusFunctionCompleteEvent>,  // 00
 		public BSTSingletonSDM<FlatScreenModel>                    // 08

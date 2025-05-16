@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiRect.h"
+#include "RE/N/NiColor.h"
+
 namespace RE
 {
 	struct UIShaderColors

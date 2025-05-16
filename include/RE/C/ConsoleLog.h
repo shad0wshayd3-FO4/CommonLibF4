@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSStringT.h"
 
 namespace RE
 {
@@ -52,8 +53,8 @@ namespace RE
 		}
 
 		// members
-		BSStringT<char> buffer;             // 08
-		bool            useConsoleOverlay;  // 18
+		BSString buffer;             // 08
+		bool     useConsoleOverlay;  // 18
 	};
 	static_assert(sizeof(ConsoleLog) == 0x20);
 }

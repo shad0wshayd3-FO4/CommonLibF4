@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
 	class __declspec(novtable) ActionInput

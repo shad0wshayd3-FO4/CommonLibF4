@@ -1,10 +1,39 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/P/PipboyDataGroup.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {
+	struct ConditionBoyEvent;
+
+	namespace ActorItemEquipped
+	{
+		struct Event;
+	}
+
+	namespace ActorValueEvents
+	{
+		struct ActorValueChangedEvent;
+	}
+
+	namespace BGSInventoryItemEvent
+	{
+		struct Event;
+	}
+
+	namespace BGSInventoryListEvent
+	{
+		struct Event;
+	}
+
+	namespace PlayerActiveEffectChanged
+	{
+		struct Event;
+	}
+
 	class __declspec(novtable) PipboyStatsData :
 		public PipboyDataGroup,                                         // 00
 		public BSTEventSink<ActorValueEvents::ActorValueChangedEvent>,  // 98
@@ -33,10 +62,10 @@ namespace RE
 		virtual void DoClearSink() override;          // 09
 
 		// members
-		PipboyObject*                                                                              playerStatsObject;       // C8
-		PipboyArray*                                                                               activeEffectsArray;      // D0
-		BSTHashMap<MagicItem*, PipboyObject*>                                                      activeEffectsMap;        // D8
-		BSTHashMap<BSTSmartPointer<ActiveEffect, BSTSmartPointerIntrusiveRefCount>, PipboyObject*> activeEffectEntriesMap;  // 108
+		PipboyObject*                                            playerStatsObject;       // C8
+		PipboyArray*                                             activeEffectsArray;      // D0
+		BSTHashMap<MagicItem*, PipboyObject*>                    activeEffectsMap;        // D8
+		BSTHashMap<BSTSmartPointer<ActiveEffect>, PipboyObject*> activeEffectEntriesMap;  // 108
 	};
 	static_assert(sizeof(PipboyStatsData) == 0x138);
 }

@@ -5,6 +5,9 @@
 
 namespace RE
 {
+	class MenuModeChangeEvent;
+	class MessageBoxData;
+
 	class __declspec(novtable) MessageBoxMenu :
 		public GameMenuBase,                      // 00
 		public BSTEventSink<MenuModeChangeEvent>  // E0

@@ -5,6 +5,12 @@
 
 namespace RE
 {
+	namespace RadioManager
+	{
+		struct PipboyFrequencyDetectionEvent;
+		struct PipboyRadioTuningEvent;
+	}
+
 	class __declspec(novtable) PipboyRadioData :
 		public PipboyDataGroup,                                            // 00
 		public BSTEventSink<RadioManager::PipboyFrequencyDetectionEvent>,  // 98

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
 	struct BSTranslator

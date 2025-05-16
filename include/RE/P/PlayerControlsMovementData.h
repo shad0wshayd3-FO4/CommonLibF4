@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/M/MovementData.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {

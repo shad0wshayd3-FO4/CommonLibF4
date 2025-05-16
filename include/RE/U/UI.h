@@ -1,11 +1,21 @@
 #pragma once
 
 #include "RE/B/BSInputEventReceiver.h"
-#include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/U/UIMenuEntry.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/I/IMenu.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTimer.h"
 
 namespace RE
 {
+	class MenuModeChangeEvent;
+	class MenuOpenCloseEvent;
+	class MenuModeCounterChangedEvent;
+	class TutorialEvent;
+
 	class __declspec(novtable) UI :
 		public BSInputEventReceiver,                         // 000
 		public BSTSingletonSDM<UI>,                          // 010

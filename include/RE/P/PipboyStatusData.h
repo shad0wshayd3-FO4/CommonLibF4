@@ -5,6 +5,34 @@
 
 namespace RE
 {
+	class MenuOpenCloseEvent;
+	class UserEventEnabledEvent;
+
+	namespace BGSInventoryListEvent
+	{
+		struct Event;
+	}
+
+	namespace LoadingStatusChanged
+	{
+		struct Event;
+	}
+
+	namespace PlayerInDialogueChanged
+	{
+		struct Event;
+	}
+
+	namespace PlayerLifeStateChanged
+	{
+		struct Event;
+	}
+
+	namespace VATSEvents
+	{
+		struct ModeChange;
+	}
+
 	class __declspec(novtable) PipboyStatusData :
 		public PipboyDataGroup,                               // 00
 		public BSTEventSink<PlayerLifeStateChanged::Event>,   // 98

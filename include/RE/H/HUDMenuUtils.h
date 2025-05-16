@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	namespace HUDMenuUtils

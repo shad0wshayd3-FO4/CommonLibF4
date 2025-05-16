@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/I/InventoryInterface.h"
+
 namespace RE
 {
 	struct InventoryUserUIInterfaceEntry

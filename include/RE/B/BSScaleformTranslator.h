@@ -1,6 +1,7 @@
 #pragma once
 
-#include "RE/G/GFxPlayer.h"
+#include "RE/B/BSTranslator.h"
+#include "Scaleform/G/GFX_Translator.h"
 
 namespace RE
 {

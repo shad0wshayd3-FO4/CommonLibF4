@@ -1,7 +1,12 @@
 #pragma once
 
+#include "Scaleform/P/Ptr.h"
+
 namespace RE
 {
+	class IMenu;
+	class UIMessage;
+
 	struct UIMenuEntry
 	{
 	public:

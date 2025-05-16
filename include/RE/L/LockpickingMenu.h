@@ -1,9 +1,17 @@
 #pragma once
 
 #include "RE/G/GameMenuBase.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiMatrix3.h"
+#include "RE/B/BSSoundHandle.h"
 
 namespace RE
 {
+	class NiControllerManager;
+	class NiControllerSequence;
+	class NiNode;
+
 	class __declspec(novtable) LockpickingMenu :
 		public GameMenuBase  // 00
 	{

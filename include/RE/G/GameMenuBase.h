@@ -1,6 +1,13 @@
 #pragma once
 
 #include "RE/I/IMenu.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/S/SendHUDMessage.h"
+#include "RE/B/BSGFxShaderFXTarget.h"
+#include "RE/B/BSTOptional.h"
+#include "RE/H/HUDModeType.h"
+#include "RE/B/ButtonHintBar.h"
 
 namespace RE
 {
@@ -87,8 +94,8 @@ namespace RE
 
 		// members
 		BSTArray<BSGFxShaderFXTarget*>        shaderFXObjects;              // 70
-		msvc::unique_ptr<BSGFxShaderFXTarget> filterHolder;                 // 88
-		msvc::unique_ptr<ButtonHintBar>       buttonHintBar;                // 90
+		std::unique_ptr<BSGFxShaderFXTarget>  filterHolder;                 // 88
+		std::unique_ptr<ButtonHintBar>        buttonHintBar;                // 90
 		BSTAlignedArray<UIShaderFXInfo>       cachedColorFXInfos;           // 98
 		BSTAlignedArray<UIShaderFXInfo>       cachedBackgroundFXInfos;      // B0
 		BSReadWriteLock                       cachedQuadsLock;              // C8

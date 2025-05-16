@@ -13,8 +13,7 @@ namespace RE
 
 		explicit constexpr AutoMoveHandler(PlayerControlsData& a_data) noexcept :
 			PlayerInputHandler(a_data)
-		{
-		}
+		{}
 	};
 	static_assert(sizeof(AutoMoveHandler) == 0x20);
 }

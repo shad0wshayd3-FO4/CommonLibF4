@@ -1,14 +1,11 @@
 #pragma once
 
 #include "RE/B/BSPointerHandle.h"
-#include "RE/N/NiPoint3.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {
 	class DoorTeleportData;
-	class TESObjectCELL;
-	class TESObjectREFR;
-	class TESWorldSpace;
 
 	struct PLAYER_TARGET_LOC
 	{

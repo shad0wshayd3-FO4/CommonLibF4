@@ -1,7 +1,14 @@
 #pragma once
 
+namespace Json
+{
+	class Value;
+}
+
 namespace RE
 {
+	class BSBinarySerializer;
+
 	class __declspec(novtable) PipboyValue
 	{
 	public:
@@ -37,7 +44,7 @@ namespace RE
 		void ctor(PipboyValue* a_parentValue)
 		{
 			using func_t = decltype(&PipboyValue::ctor);
-			REL::Relocation<func_t> func{ REL::ID(2225915) };
+			static REL::Relocation<func_t> func{ REL::ID(2225915) };
 			return func(this, a_parentValue);
 		}
 

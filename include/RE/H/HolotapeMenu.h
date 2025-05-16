@@ -2,9 +2,12 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/G/GameMenuBase.h"
+#include "RE/B/BSSoundHandle.h"
 
 namespace RE
 {
+	class MenuOpenCloseEvent;
+
 	class __declspec(novtable) HolotapeMenu :
 		public GameMenuBase,                     // 00
 		public BSTEventSink<MenuOpenCloseEvent>  // E0

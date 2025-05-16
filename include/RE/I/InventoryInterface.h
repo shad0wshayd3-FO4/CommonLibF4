@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSCRC32.h"
+
 namespace RE
 {
 	class BGSInventoryItem;

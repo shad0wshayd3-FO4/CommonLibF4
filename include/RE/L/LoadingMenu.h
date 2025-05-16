@@ -1,9 +1,16 @@
 #pragma once
 
 #include "RE/G/GameMenuBase.h"
+#include "RE/I/ImageSpaceLUTData.h"
+#include "RE/B/BSModelDB.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiMatrix3.h"
+#include "RE/B/BSSoundHandle.h"
 
 namespace RE
 {
+	class NiAVObject;
+
 	class __declspec(novtable) LoadingMenu :
 		public GameMenuBase  // 00
 	{

@@ -1,6 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/P/PipboyValue.h"
+#include "RE/B/BSTHashMap.h"
 
 namespace RE
 {

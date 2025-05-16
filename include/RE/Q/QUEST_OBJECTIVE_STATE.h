@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum QUEST_OBJECTIVE_STATE : std::int32_t
+	enum class QUEST_OBJECTIVE_STATE : std::int32_t
 	{
 		kDormant = 0x0,
 		kDisplayed = 0x1,

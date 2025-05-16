@@ -1,9 +1,12 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
+#include "Scaleform/G/GFx_Value.h"
 
 namespace RE
 {
+	class PipboyValueChangedEvent;
+
 	class __declspec(novtable) PipboySubMenu :
 		public BSTEventSink<PipboyValueChangedEvent>  // 00
 	{

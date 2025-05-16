@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/ButtonEvent.h"
 #include "RE/P/PlayerInputHandler.h"
 
 namespace RE
@@ -13,8 +14,7 @@ namespace RE
 
 		explicit constexpr HeldStateHandler(PlayerControlsData& a_data) noexcept :
 			PlayerInputHandler(a_data)
-		{
-		}
+		{}
 
 		// NOLINTNEXTLINE(modernize-use-override)
 		virtual ~HeldStateHandler() = default;  // 00

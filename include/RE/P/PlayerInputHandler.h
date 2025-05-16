@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSInputEventUser.h"
+#include "RE/P/PlayerControlsData.h"
 
 namespace RE
 {

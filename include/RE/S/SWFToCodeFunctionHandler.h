@@ -1,6 +1,8 @@
 #pragma once
 
-#include "RE/G/GFxPlayer.h"
+#include "Scaleform/G/GFx_Value.h"
+#include "Scaleform/G/GFx_Movie.h"
+#include "Scaleform/G/GFx_FunctionHandler.h"
 
 namespace RE
 {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/F/FIGHT_REACTION.h"
+
 namespace RE
 {
 	struct GROUP_REACTION

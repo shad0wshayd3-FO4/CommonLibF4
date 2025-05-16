@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	enum class SCRIPT_OUTPUT;
+
 	struct FUNCTION_DATA
 	{
 	public:

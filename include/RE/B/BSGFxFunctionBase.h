@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSGFxFunctionHandler.h"
+#include "Scaleform/P/Ptr.h"
+
 namespace RE
 {
+	class UsesBSGFXFunctionHandler;
+
 	class __declspec(novtable) BSGFxFunctionBase
 	{
 	public:

@@ -1,6 +1,8 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
 #include "RE/G/GameMenuBase.h"
+#include "RE/R/Rumble.h"
 
 namespace RE
 {

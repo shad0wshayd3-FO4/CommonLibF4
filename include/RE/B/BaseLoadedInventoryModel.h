@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BGSCreatedObjectManager.h"
+
 namespace RE
 {
+	class NiAVObject;
+
 	struct BaseLoadedInventoryModel
 	{
 	public:

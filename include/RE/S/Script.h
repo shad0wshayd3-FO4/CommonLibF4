@@ -1,9 +1,20 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
 #include "RE/T/TESForm.h"
+#include "RE/S/SCRIPT_HEADER.h"
 
 namespace RE
 {
+	enum class COMPILER_NAME;
+
+	class ScriptCompiler;
+	class ScriptLocals;
+	struct SCRIPT_FUNCTION;
+	struct SCRIPT_PARAMETER;
+	struct SCRIPT_REFERENCED_OBJECT;
+	struct ScriptVariable;
+
 	class __declspec(novtable) Script :
 		public TESForm  // 00
 	{
@@ -33,28 +44,6 @@ namespace RE
 			using func_t = decltype(&Script::GetProcessScripts);
 			static REL::Relocation<func_t> func{ REL::ID(2204310) };
 			return func();
-		}
-
-		static SCRIPT_FUNCTION* LocateConsoleCommand(const std::string_view a_longName)
-		{
-			for (auto& command : SCRIPT_FUNCTION::GetConsoleFunctions()) {
-				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
-					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
-						return std::addressof(command);
-			}
-
-			return nullptr;
-		}
-
-		static SCRIPT_FUNCTION* LocateScriptCommand(const std::string_view a_longName)
-		{
-			for (auto& command : SCRIPT_FUNCTION::GetScriptFunctions()) {
-				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
-					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
-						return std::addressof(command);
-			}
-
-			return nullptr;
 		}
 
 		static void SetProcessScripts(bool a_processScripts)

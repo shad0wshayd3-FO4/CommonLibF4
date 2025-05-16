@@ -2,11 +2,26 @@
 
 #include "RE/B/BGSKeywordForm.h"
 #include "RE/B/BGSMenuDisplayObject.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
+#include "RE/T/TESCondition.h"
 
 namespace RE
 {
+	namespace EffectArchetypes
+	{
+		enum class ArchetypeID;
+	}
+
+	namespace MagicSystem
+	{
+		enum class CastingType;
+		enum class Delivery;
+		enum class SoundID;
+	}
+
 	class __declspec(novtable) EffectSetting :
 		public TESForm,               // 000
 		public TESFullName,           // 020

@@ -1,6 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESForm.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

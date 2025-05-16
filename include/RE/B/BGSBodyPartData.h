@@ -3,6 +3,7 @@
 #include "RE/B/BGSPreloadable.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESModel.h"
+#include "RE/B/BGSBodyPartDefs.h"
 
 namespace RE
 {

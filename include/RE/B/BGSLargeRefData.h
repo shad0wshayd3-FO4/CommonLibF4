@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class QueuedPromoteLargeReferencesTask;
+
 	class BGSLargeRefData
 	{
 	public:

@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
+	class NiProperty;
+
 	class __declspec(novtable) BSMaterialObject
 	{
 	public:

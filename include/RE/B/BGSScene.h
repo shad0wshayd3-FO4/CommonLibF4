@@ -1,10 +1,17 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/I/IKeywordFormBase.h"
 #include "RE/T/TESForm.h"
+#include "RE/T/TESCondition.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/N/NiTFlags.h"
 
 namespace RE
 {
+	class BGSSceneAction;
+	struct BGSScenePhase;
+
 	class __declspec(novtable) BGSScene :
 		public TESForm,          // 00
 		public IKeywordFormBase  // 20

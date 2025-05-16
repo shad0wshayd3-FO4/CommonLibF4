@@ -1,11 +1,16 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BGSLocalizedString.h"
 
 namespace RE
 {
+	struct MESSAGEBOX_BUTTON;
+
 	class __declspec(novtable) BGSMessage :
 		public TESForm,        // 00
 		public TESFullName,    // 20

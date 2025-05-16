@@ -1,10 +1,14 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
 #include "RE/T/TESChildCell.h"
 #include "RE/T/TESForm.h"
+#include "RE/O/OBJ_LAND.h"
 
 namespace RE
 {
+	class QueuedFile;
+
 	class __declspec(novtable) TESObjectLAND :
 		public TESForm,      // 00
 		public TESChildCell  // 20

@@ -6,13 +6,29 @@
 #include "RE/B/BGSPreloadable.h"
 #include "RE/B/BGSPropertySheet.h"
 #include "RE/B/BGSSkinForm.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESSpellList.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiPoint.h"
+#include "RE/M/Movement.h"
+#include "RE/B/BGSCharacterTint.h"
+#include "RE/B/BGSCharacterMorph.h"
+#include "RE/R/RACE_DATA.h"
+#include "RE/T/TESModel.h"
+#include "RE/B/BGSTextureModel.h"
+#include "RE/B/BGSBehaviorGraphModel.h"
+#include "RE/B/BGSSoundTagComponent.h"
+#include "RE/B/BGSAttachParentArray.h"
+#include "RE/T/TESTexture.h"
 
 namespace RE
 {
+	struct EquipSlotData;
+
 	class __declspec(novtable) TESRace :
 		public TESForm,             // 000
 		public TESFullName,         // 020
@@ -101,7 +117,7 @@ namespace RE
 		BSTHashMap<std::uint32_t, BGSCharacterMorph::Slider*> morphSliders;                 // 648
 		BGSMovementType*                                      baseMoveTypes[4];             // 678
 		FaceRelatedData*                                      faceRelatedData[2];           // 698
-		TESRace::BodyMorphData*                               bodyMorphData[2];             // 6A8
+		BodyMorphData*                                        bodyMorphData[2];             // 6A8
 		TESTexture                                            hairColorLookupTexture;       // 6B8
 		TESTexture                                            hairColorLookupTextureExt;    // 6C8
 	};

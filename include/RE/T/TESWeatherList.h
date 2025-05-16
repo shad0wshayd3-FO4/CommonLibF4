@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class WeatherEntry;
+
 	class TESWeatherList :
 		BSSimpleList<WeatherEntry*>
 	{

@@ -1,9 +1,19 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BSExtraData.h"
+#include "RE/E/EXTRA_DATA_TYPE.h"
+#include "RE/B/BaseExtraList.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/M/MemoryManager.h"
 
 namespace RE
 {
+	class BGSObjectInstanceExtra;
+	class BGSPrimitive;
+
 	namespace detail
 	{
 		template <class T>
@@ -142,7 +152,7 @@ namespace RE
 		bool CompareList(const ExtraDataList* a_compare, ComparisonQualifier a_qualifier)
 		{
 			using func_t = decltype(&ExtraDataList::CompareList);
-			REL::Relocation<func_t> func{ REL::ID(2190098) };
+			static REL::Relocation<func_t> func{ REL::ID(2190098) };
 			return func(this, a_compare, a_qualifier);
 		}
 

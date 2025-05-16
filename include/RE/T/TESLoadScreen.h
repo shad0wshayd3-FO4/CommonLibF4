@@ -1,9 +1,13 @@
 #pragma once
 
 #include "RE/T/TESForm.h"
+#include "RE/T/TESCondition.h"
+#include "RE/B/BGSLocalizedString.h"
 
 namespace RE
 {
+	class LoadNIFData;
+
 	class __declspec(novtable) TESLoadScreen :
 		public TESForm  // 00
 	{
@@ -11,8 +15,6 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::TESLoadScreen };
 		static constexpr auto VTABLE{ VTABLE::TESLoadScreen };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kLSCR };
-
-		struct LoadNIFData;
 
 		// members
 		TESCondition       conditions;   // 20

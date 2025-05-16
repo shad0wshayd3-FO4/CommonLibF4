@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTBTree.h"
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	union SETTING_VALUE

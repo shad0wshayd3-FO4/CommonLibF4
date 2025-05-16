@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/T/TESForm.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

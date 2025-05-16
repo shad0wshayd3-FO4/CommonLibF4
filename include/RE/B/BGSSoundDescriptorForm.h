@@ -5,6 +5,8 @@
 
 namespace RE
 {
+	class BGSSoundDescriptor;
+
 	class __declspec(novtable) BGSSoundDescriptorForm :
 		public TESForm,            // 00
 		public BSISoundDescriptor  // 20

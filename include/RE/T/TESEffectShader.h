@@ -1,10 +1,15 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESModel.h"
+#include "RE/T/TESTexture.h"
+#include "RE/E/EffectShaderData.h"
 
 namespace RE
 {
+	class BSGeometry;
+
 	class __declspec(novtable) TESEffectShader :
 		public TESForm,  // 000
 		public TESModel  // 020

@@ -2,6 +2,7 @@
 
 #include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/T/TESForm.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

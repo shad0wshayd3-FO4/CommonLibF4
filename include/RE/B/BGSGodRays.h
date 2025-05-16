@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/N/NiColor.h"
 #include "RE/T/TESForm.h"
 
 namespace RE

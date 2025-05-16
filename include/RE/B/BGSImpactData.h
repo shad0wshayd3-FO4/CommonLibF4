@@ -1,10 +1,13 @@
 #pragma once
 
+#include "RE/D/DecalData.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESModel.h"
 
 namespace RE
 {
+	enum class SOUND_LEVEL;
+
 	class __declspec(novtable) BGSImpactData :
 		public TESForm,  // 00
 		public TESModel  // 20

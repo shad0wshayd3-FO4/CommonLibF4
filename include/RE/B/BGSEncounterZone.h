@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/C/CHANGE_TYPES.h"
+#include "RE/E/ENCOUNTER_ZONE_DATA.h"
+#include "RE/E/ENCOUNTER_ZONE_GAME_DATA.h"
 #include "RE/T/TESForm.h"
 
 namespace RE

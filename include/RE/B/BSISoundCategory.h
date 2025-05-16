@@ -2,6 +2,11 @@
 
 namespace RE
 {
+	namespace BSISoundCategoryUtils
+	{
+		class FadeType;
+	}
+
 	class __declspec(novtable) BSISoundCategory
 	{
 	public:

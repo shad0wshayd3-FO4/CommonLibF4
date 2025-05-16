@@ -1,9 +1,25 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BGSCharacterTint.h"
+#include "RE/B/BGSHeadPart.h"
+
 namespace RE
 {
 	namespace BGSCharacterMorph
 	{
+		struct BoneBaseScales
+		{
+		public:
+			// members
+			NiPoint3 scales[3];  // 00
+		};
+		static_assert(sizeof(BoneBaseScales) == 0x24);
+
 		struct BONE_MODIFIER_MIN_MAX
 		{
 		public:
@@ -14,52 +30,6 @@ namespace RE
 			float maxZ;  // 0C
 		};
 		static_assert(sizeof(BONE_MODIFIER_MIN_MAX) == 0x10);
-
-		struct BoneBaseScales
-		{
-		public:
-			// members
-			NiPoint3 scales[3];  // 00
-		};
-		static_assert(sizeof(BoneBaseScales) == 0x24);
-
-		class FacialBoneRegion
-		{
-		public:
-			// members
-			Transform                                   defaultTransform;          // 00
-			BGSLocalizedString                          name;                      // 28
-			BSFixedString                               associatedMorphGroupName;  // 30
-			BGSCharacterTint::EntrySlot                 associatedTintSlot;        // 38
-			BGSHeadPart::HeadPartType                   associatedHeadPartType;    // 3C
-			BSTHashMap<BSFixedString, TransformMinMax*> boneMinMaxMap;             // 40
-			BSTArray<std::uint32_t>                     associatedMorphSliders;    // 70
-			const std::uint32_t                         id;                        // 88
-		};
-		static_assert(sizeof(FacialBoneRegion) == 0x90);
-
-		struct Group
-		{
-		public:
-			// members
-			BSFixedString           name;          // 00
-			BSTArray<Preset>        presets;       // 08
-			BSTArray<std::uint32_t> sliders;       // 20
-			std::uint16_t           presetMaskID;  // 38
-		};
-		static_assert(sizeof(Group) == 0x40);
-
-		struct Preset
-		{
-		public:
-			// members
-			BGSLocalizedString name;        // 00
-			BSFixedString      morph;       // 08
-			BGSTextureSet*     textureSet;  // 10
-			std::int8_t        flags;       // 18
-			std::uint32_t      id;          // 1C
-		};
-		static_assert(sizeof(Preset) == 0x20);
 
 		struct Slider
 		{
@@ -88,5 +58,43 @@ namespace RE
 			Transform maxima;  // 24
 		};
 		static_assert(sizeof(TransformMinMax) == 0x48);
+
+		class FacialBoneRegion
+		{
+		public:
+			// members
+			Transform                                   defaultTransform;          // 00
+			BGSLocalizedString                          name;                      // 28
+			BSFixedString                               associatedMorphGroupName;  // 30
+			BGSCharacterTint::EntrySlot                 associatedTintSlot;        // 38
+			BGSHeadPart::HeadPartType                   associatedHeadPartType;    // 3C
+			BSTHashMap<BSFixedString, TransformMinMax*> boneMinMaxMap;             // 40
+			BSTArray<std::uint32_t>                     associatedMorphSliders;    // 70
+			const std::uint32_t                         id;                        // 88
+		};
+		static_assert(sizeof(FacialBoneRegion) == 0x90);
+
+		struct Preset
+		{
+		public:
+			// members
+			BGSLocalizedString name;        // 00
+			BSFixedString      morph;       // 08
+			BGSTextureSet*     textureSet;  // 10
+			std::int8_t        flags;       // 18
+			std::uint32_t      id;          // 1C
+		};
+		static_assert(sizeof(Preset) == 0x20);
+
+		struct Group
+		{
+		public:
+			// members
+			BSFixedString           name;          // 00
+			BSTArray<Preset>        presets;       // 08
+			BSTArray<std::uint32_t> sliders;       // 20
+			std::uint16_t           presetMaskID;  // 38
+		};
+		static_assert(sizeof(Group) == 0x40);
 	}
 }

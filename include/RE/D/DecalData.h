@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/D/DECAL_DATA_DATA.h"
+
 namespace RE
 {
 	class DecalData

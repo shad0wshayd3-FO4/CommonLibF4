@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
+
 namespace RE
 {
 	struct SCRIPT_REFERENCED_OBJECT

@@ -1,9 +1,26 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSNavmeshGrid.h"
 
 namespace RE
 {
+	class BSNavmeshClosedDoorInfo;
+	class BSNavmeshCoverEdge;
+	class BSNavmeshEdgeExtraInfo;
+	class BSNavmeshInfo;
+	class BSNavmeshObstacleData;
+	class BSNavmeshObstacleUndoData;
+	class BSNavmeshTriangle;
+	class BSNavmeshTriangleDoorPortal;
+	class BSNavmeshVertex;
+	class BSNavmeshWaypoint;
+	class BSPathingCell;
+
 	class __declspec(novtable) BSNavmesh :
 		public BSIntrusiveRefCounted  // 008
 	{

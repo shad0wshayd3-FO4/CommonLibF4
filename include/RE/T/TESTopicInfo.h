@@ -1,6 +1,9 @@
 #pragma once
 
 #include "RE/T/TESForm.h"
+#include "RE/T/TOPIC_INFO_DATA.h"
+#include "RE/T/TESCondition.h"
+#include "RE/R/ResponseListWrapper.h"
 
 namespace RE
 {

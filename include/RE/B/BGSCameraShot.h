@@ -3,6 +3,7 @@
 #include "RE/T/TESForm.h"
 #include "RE/T/TESImageSpaceModifiableForm.h"
 #include "RE/T/TESModel.h"
+#include "RE/T/TESCondition.h"
 
 namespace RE
 {

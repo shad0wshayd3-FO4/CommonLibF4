@@ -6,9 +6,60 @@
 #include "RE/I/IAnimationGraphManagerHolder.h"
 #include "RE/I/IKeywordFormBase.h"
 #include "RE/T/TESForm.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPoint.h"
+#include "RE/I/ITEM_REMOVE_REASON.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BGSInventoryItem.h"
+#include "RE/B/BGSInventoryList.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/O/OBJ_REFR.h"
+#include "RE/B/BGSEquipIndex.h"
 
 namespace RE
 {
+	enum class BIPED_OBJECT;
+	enum class RESET_3D_FLAGS;
+
+	class ActorCause;
+	class BipedAnim;
+	class BGSAnimationSequencer;
+	class BGSDecalGroup;
+	class BSAnimationUpdateData;
+	class BSFaceGenNiNode;
+	class DialogueResponse;
+	class hknpBodyId;
+	class hkVector4f;
+	class MagicCaster;
+	class MagicTarget;
+	class ModelReferenceEffect;
+	class ShaderReferenceEffect;
+	class TargetEntry;
+	class TrapData;
+	class TrapEntry;
+	struct BGSBehaviorRootData;
+	struct BSActiveGraphIfInactiveEvent;
+	struct BSAnimationGraphEvent;
+	struct LOADED_REF_DATA;
+	struct REFR_LOCK;
+
+	namespace ActorValueEvents
+	{
+		struct ActorValueChangedEvent;
+	}
+
+	namespace BGSInventoryListEvent
+	{
+		struct Event;
+	}
+
+	namespace MagicSystem
+	{
+		enum class CastingSource;
+	}
+
 	class __declspec(novtable) TESObjectREFR :
 		public TESForm,                                                  // 000
 		public BSHandleRefObject,                                        // 020

@@ -1,10 +1,29 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
+	class bhkWorldM;
+	class NavMeshArray;
+	struct bhkPickData;
+	struct EXTERIOR_DATA;
+	struct INTERIOR_DATA;
+	struct LOADED_CELL_DATA;
+	struct TESRegionList;
+
+	namespace BGSWaterCollisionManager
+	{
+		class AutoWater;
+		class BGSWaterUpdateI;
+	}
+
 	class __declspec(novtable) TESObjectCELL :
 		public TESForm,     // 00
 		public TESFullName  // 20

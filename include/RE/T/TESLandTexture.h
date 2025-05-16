@@ -1,6 +1,8 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
 #include "RE/T/TESForm.h"
+#include "RE/T/TEXTURE_HAVOK_DATA.h"
 
 namespace RE
 {

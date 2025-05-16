@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
+	class BSAnimationGraphChannel;
+	class BSAnimationGraphManager;
+	class BShkbAnimationGraph;
+
 	class __declspec(novtable) IAnimationGraphManagerHolder
 	{
 	public:

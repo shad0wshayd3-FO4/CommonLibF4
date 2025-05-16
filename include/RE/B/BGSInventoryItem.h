@@ -1,6 +1,9 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/E/ExtraDataList.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

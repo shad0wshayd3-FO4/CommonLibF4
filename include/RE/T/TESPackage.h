@@ -1,9 +1,19 @@
 #pragma once
 
 #include "RE/T/TESForm.h"
+#include "RE/P/PackageEventAction.h"
+#include "RE/P/PackageSchedule.h"
+#include "RE/P/PACKAGE_DATA.h"
+#include "RE/T/TESCondition.h"
 
 namespace RE
 {
+	enum class PACKAGE_PROCEDURE_TYPE;
+
+	class PackageLocation;
+	class PackageTarget;
+	class TESPackageData;
+
 	class __declspec(novtable) TESPackage :
 		public TESForm  // 00
 	{

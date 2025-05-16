@@ -2,6 +2,11 @@
 
 namespace RE
 {
+	enum class SCRIPT_OUTPUT;
+	
+	class TESConditionItem;
+	struct ConditionCheckParams;
+
 	class TESCondition
 	{
 	public:

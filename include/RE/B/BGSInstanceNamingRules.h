@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESForm.h"
 
 namespace RE

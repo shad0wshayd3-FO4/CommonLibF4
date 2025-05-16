@@ -2,6 +2,14 @@
 
 namespace RE
 {
+	enum class SCRIPT_OUTPUT;
+
+	class ScriptCompileData;
+	class ScriptLocals;
+	struct ConditionCheckParams;
+	struct SCRIPT_LINE;
+	struct SCRIPT_PARAMETER;
+
 	struct SCRIPT_FUNCTION
 	{
 	public:
@@ -15,10 +23,32 @@ namespace RE
 			return std::span{ *functions };
 		}
 
+		static SCRIPT_FUNCTION* LocateConsoleCommand(const std::string_view a_longName)
+		{
+			for (auto& command : GetConsoleFunctions()) {
+				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
+					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
+						return std::addressof(command);
+			}
+
+			return nullptr;
+		}
+
 		[[nodiscard]] static auto GetScriptFunctions()
 		{
 			static REL::Relocation<SCRIPT_FUNCTION(*)[819]> functions{ REL::ID(75173) };
 			return std::span{ *functions };
+		}
+
+		static SCRIPT_FUNCTION* LocateScriptCommand(const std::string_view a_longName)
+		{
+			for (auto& command : GetScriptFunctions()) {
+				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
+					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
+						return std::addressof(command);
+			}
+
+			return nullptr;
 		}
 
 		// members

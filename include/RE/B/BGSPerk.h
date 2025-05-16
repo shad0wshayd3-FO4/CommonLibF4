@@ -1,12 +1,18 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESIcon.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/P/PerkData.h"
+#include "RE/T/TESCondition.h"
 
 namespace RE
 {
+	class BGSPerkEntry;
+
 	class __declspec(novtable) BGSPerk :
 		public TESForm,         // 00
 		public TESFullName,     // 20

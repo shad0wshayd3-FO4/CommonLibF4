@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSSpinLock.h"
+
 namespace RE
 {
+	class BSLensFlareSpriteRenderData;
+
 	class BSLensFlareRenderData
 	{
 	public:

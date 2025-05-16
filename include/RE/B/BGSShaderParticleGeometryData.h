@@ -1,6 +1,10 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESForm.h"
+#include "RE/T/TESTexture.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/S/Setting.h"
 
 namespace RE
 {

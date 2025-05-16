@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSTopicSubtypeUnion.h"
+
 namespace RE
 {
+	enum class PACK_EVENT_ACTION_TYPE;
+
 	class PackageEventAction
 	{
 	public:

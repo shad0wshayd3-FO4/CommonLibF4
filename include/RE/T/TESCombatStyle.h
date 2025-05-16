@@ -1,5 +1,12 @@
 #pragma once
 
+#include "RE/C/CombatStyleGeneralData.h"
+#include "RE/C/CombatStyleMeleeData.h"
+#include "RE/C/CombatStyleRangedData.h"
+#include "RE/C/CombatStyleCloseRangeData.h"
+#include "RE/C/CombatStyleLongRangeData.h"
+#include "RE/C/CombatStyleCoverData.h"
+#include "RE/C/CombatStyleFlightData.h"
 #include "RE/T/TESForm.h"
 
 namespace RE

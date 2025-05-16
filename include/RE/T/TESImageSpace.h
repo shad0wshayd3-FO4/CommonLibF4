@@ -1,9 +1,14 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
 #include "RE/T/TESForm.h"
+#include "RE/T/TESTexture.h"
+#include "RE/I/ImageSpaceBaseData.h"
 
 namespace RE
 {
+	class NiTexture;
+
 	class __declspec(novtable) TESImageSpace :
 		public TESForm  // 00
 	{

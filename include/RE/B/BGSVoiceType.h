@@ -1,6 +1,8 @@
 #pragma once
 
 #include "RE/T/TESForm.h"
+#include "RE/V/VOICE_TYPE_DATA.h"
+#include "RE/B/BSStringT.h"
 
 namespace RE
 {
@@ -14,7 +16,7 @@ namespace RE
 
 		// members
 		VOICE_TYPE_DATA data;          // 20
-		BSStringT<char> formEditorID;  // 28
+		BSString formEditorID;  // 28
 	};
 	static_assert(sizeof(BGSVoiceType) == 0x38);
 }

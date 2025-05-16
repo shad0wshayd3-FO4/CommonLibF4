@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/P/PACK_SCHED_DATA.h"
+
 namespace RE
 {
 	class PackageSchedule

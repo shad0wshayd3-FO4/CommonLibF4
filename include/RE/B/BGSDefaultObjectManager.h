@@ -2,6 +2,7 @@
 
 #include "RE/B/BSTSingleton.h"
 #include "RE/T/TESForm.h"
+#include "RE/D/DEFAULT_OBJECT.h"
 
 namespace RE
 {

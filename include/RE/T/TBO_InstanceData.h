@@ -1,9 +1,12 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {
+	class NiAVObject;
+
 	class __declspec(novtable) TBO_InstanceData :
 		public BSIntrusiveRefCounted  // 08
 	{

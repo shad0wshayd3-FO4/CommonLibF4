@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	enum class DIALOGUE_TYPE;
+
 	class __declspec(novtable) BGSDialogueBranch :
 		public TESForm  // 00
 	{

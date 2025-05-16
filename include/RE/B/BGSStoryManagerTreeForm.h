@@ -1,9 +1,12 @@
 #pragma once
 
+#include "RE/B/BGSStoryManagerTreeVisitor.h"
 #include "RE/T/TESForm.h"
 
 namespace RE
 {
+	class TESCondition;
+
 	class __declspec(novtable) BGSStoryManagerTreeForm :
 		public TESForm  // 00
 	{

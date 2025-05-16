@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSMaterialObject.h"
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESModel.h"
 

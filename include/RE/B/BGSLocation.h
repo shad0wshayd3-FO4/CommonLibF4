@@ -1,11 +1,21 @@
 #pragma once
 
 #include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
+	class OverrideData;
+	class QueuedPromoteLocationReferencesTask;
+	struct SpecialRefData;
+	struct UniqueNPCData;
+
 	class __declspec(novtable) BGSLocation :
 		public TESForm,        // 000
 		public TESFullName,    // 020

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/T/TESForm.h"
+#include "RE/B/BSStringT.h"
 
 namespace RE
 {
@@ -15,7 +16,7 @@ namespace RE
 		[[nodiscard]] float GetValue() const noexcept { return value; }
 
 		// members
-		BSStringT<char> formEditorID;  // 20
+		BSString formEditorID;  // 20
 		float           value;         // 30
 	};
 	static_assert(sizeof(TESGlobal) == 0x38);

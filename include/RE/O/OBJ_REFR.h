@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	struct OBJ_REFR

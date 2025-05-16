@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/E/EXTRA_DATA_TYPE.h"
+#include "RE/M/MemoryManager.h"
 
 namespace RE
 {
@@ -13,8 +14,7 @@ namespace RE
 
 		BSExtraData() :
 			BSExtraData(EXTRA_DATA_TYPE::kNone)
-		{
-		}
+		{}
 
 		BSExtraData(EXTRA_DATA_TYPE a_type) :
 			type(a_type)

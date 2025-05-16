@@ -2,6 +2,8 @@
 
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/D/DIALOGUE_DATA.h"
 
 namespace RE
 {

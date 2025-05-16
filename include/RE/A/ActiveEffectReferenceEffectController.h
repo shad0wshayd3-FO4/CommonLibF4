@@ -1,6 +1,9 @@
 #pragma once
 
 #include "RE/R/ReferenceEffectController.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

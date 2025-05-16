@@ -7,6 +7,13 @@
 
 namespace RE
 {
+	namespace MagicSystem
+	{
+		enum class CastingType;
+		enum class Delivery;
+		enum class SpellType;
+	}
+
 	class __declspec(novtable) SpellItem :
 		public MagicItem,             // 000
 		public BGSEquipType,          // 0D0

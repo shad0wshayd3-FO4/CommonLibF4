@@ -10,6 +10,7 @@
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESIcon.h"
 #include "RE/T/TESWeightForm.h"
+#include "RE/B/BGSLocalizedString.h"
 
 namespace RE
 {

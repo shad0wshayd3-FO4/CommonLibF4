@@ -7,6 +7,7 @@
 #include "RE/T/TESModel.h"
 #include "RE/T/TESValueForm.h"
 #include "RE/T/TESWeightForm.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

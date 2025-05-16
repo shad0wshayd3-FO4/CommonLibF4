@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class ActiveEffectList;
+
 	class __declspec(novtable) MagicTarget
 	{
 	public:

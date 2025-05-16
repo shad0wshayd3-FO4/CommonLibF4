@@ -17,10 +17,12 @@
 #include "RE/B/BGSObjectInstance.h"
 #include "RE/O/OBJ_REFR.h"
 #include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BSStringT.h"
 
 namespace RE
 {
 	enum class BIPED_OBJECT;
+	enum class IO_TASK_PRIORITY;
 	enum class RESET_3D_FLAGS;
 
 	class ActorCause;
@@ -35,13 +37,18 @@ namespace RE
 	class MagicCaster;
 	class MagicTarget;
 	class ModelReferenceEffect;
+	class NiAVObject;
+	class NiNode;
+	class NiTransform;
 	class ShaderReferenceEffect;
 	class TargetEntry;
+	class TESModel;
 	class TrapData;
 	class TrapEntry;
 	struct BGSBehaviorRootData;
 	struct BSActiveGraphIfInactiveEvent;
 	struct BSAnimationGraphEvent;
+	struct INSTANCE_FILTER;
 	struct LOADED_REF_DATA;
 	struct REFR_LOCK;
 

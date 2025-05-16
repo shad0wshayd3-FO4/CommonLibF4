@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSSpinLock.h"
+
 namespace RE
 {
 	namespace BSResource

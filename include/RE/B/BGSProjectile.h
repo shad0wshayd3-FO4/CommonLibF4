@@ -5,9 +5,12 @@
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESModel.h"
+#include "RE/B/BGSProjectileData.h"
 
 namespace RE
 {
+	enum class SOUND_LEVEL;
+
 	class __declspec(novtable) BGSProjectile :
 		public TESBoundObject,            // 000
 		public TESFullName,               // 068

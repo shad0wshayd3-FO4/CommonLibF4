@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/E/EntryBucketQueue.h"
+
 namespace RE
 {
 	namespace BSResource

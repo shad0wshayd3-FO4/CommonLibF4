@@ -10,6 +10,8 @@
 
 namespace RE
 {
+	enum class SOUND_LEVEL;
+
 	namespace EffectArchetypes
 	{
 		enum class ArchetypeID;

@@ -2,9 +2,15 @@
 
 #include "RE/B/BSTextureSet.h"
 #include "RE/T/TESBoundObject.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSShaderData.h"
+#include "RE/B/BSResource.h"
+#include "RE/T/TESTexture.h"
 
 namespace RE
 {
+	class DecalData;
+
 	class __declspec(novtable) BGSTextureSet :
 		public TESBoundObject,  // 000
 		public BSTextureSet     // 068

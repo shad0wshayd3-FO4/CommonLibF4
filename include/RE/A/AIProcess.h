@@ -1,7 +1,27 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/D/DEFAULT_OBJECT.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/A/ActorPackage.h"
+#include "RE/A/AITimer.h"
+#include "RE/B/BGSObjectInstance.h"
+
 namespace RE
 {
+	enum class COMMAND_TYPE;
+	enum class DIALOGUE_SUBTYPE;
+	enum class DIALOGUE_TYPE;
+	enum class WEAPON_CULL_TYPE;
+
+	class CachedValues;
+	class HighProcessData;
+	class MiddleHighProcessData;
+	class MiddleLowProcessData;
+	class ObjectstoAcquire;
+
 	class AIProcess
 	{
 	public:

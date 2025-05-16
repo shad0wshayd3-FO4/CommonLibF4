@@ -9,6 +9,7 @@ namespace RE
 	class BSAnimationGraphChannel;
 	class BSAnimationGraphManager;
 	class BShkbAnimationGraph;
+	class NiAVObject;
 
 	class __declspec(novtable) IAnimationGraphManagerHolder
 	{

@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
+	enum class SOUND_LEVEL;
+	enum class STAGGER_MAGNITUDE;
+
 	struct BGSExplosionData
 	{
 	public:

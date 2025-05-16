@@ -4,6 +4,9 @@ namespace RE
 {
 	namespace BSResource
 	{
+		class EntryBase;
+		class Location;
+
 		class EntryDBBaseUtil
 		{
 		public:

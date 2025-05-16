@@ -1,9 +1,17 @@
 #pragma once
 
 #include "RE/N/NiShadeProperty.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
+	class BSEffectShaderData;
+	class BSRenderPass;
+	class BSShaderAccumulator;
+	class BSShaderMaterial;
+	class NiTexture;
+
 	struct __declspec(novtable) BSShaderProperty :
 		public NiShadeProperty  // 00
 	{

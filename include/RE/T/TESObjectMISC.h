@@ -6,11 +6,14 @@
 #include "RE/B/BGSMessageIcon.h"
 #include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESIcon.h"
 #include "RE/T/TESValueForm.h"
 #include "RE/T/TESWeightForm.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BGSTypedFormValuePair.h"
 
 namespace RE
 {

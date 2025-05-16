@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
 	namespace BSResource
@@ -23,6 +25,9 @@ namespace RE
 			kCurrent = 0x1,
 			kEnd = 0x2
 		};
+
+		class Location;
+		class Stream;
 
 		struct FileID
 		{

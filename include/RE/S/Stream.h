@@ -1,11 +1,18 @@
 #pragma once
 
 #include "RE/S/StreamBase.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSResource.h"
+#include "RE/B/BSEventFlag.h"
 
 namespace RE
 {
 	namespace BSResource
 	{
+		class AsyncStream;
+		class ICacheDriveOp;
+
 		class __declspec(novtable) Stream :
 			public StreamBase
 		{

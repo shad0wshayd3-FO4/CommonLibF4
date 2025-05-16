@@ -5,6 +5,7 @@
 #include "RE/B/BGSNavmeshableObject.h"
 #include "RE/B/BGSPropertySheet.h"
 #include "RE/T/TESBoundObject.h"
+#include "RE/T/TESObjectSTATData.h"
 
 namespace RE
 {

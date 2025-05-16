@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/T/TESBoundObject.h"
+#include "RE/B/BGSDualCastDataDEF.h"
 
 namespace RE
 {

@@ -1,9 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESObjectACTI.h"
+#include "RE/B/BGSAttachParentArray.h"
+#include "RE/W/WorkbenchData.h"
 
 namespace RE
 {
+	class BSFurnitureMarker;
+	class TESContianer;
+
 	class __declspec(novtable) TESFurniture :
 		public TESObjectACTI  // 000
 	{

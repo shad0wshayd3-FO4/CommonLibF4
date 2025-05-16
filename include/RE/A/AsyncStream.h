@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSResource.h"
 #include "RE/S/StreamBase.h"
 
 namespace RE

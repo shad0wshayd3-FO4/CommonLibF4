@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/T/TESBoundObject.h"
+#include "RE/N/NiColor.h"
 
 namespace RE
 {

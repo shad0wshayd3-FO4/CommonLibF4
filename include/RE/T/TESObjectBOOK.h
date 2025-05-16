@@ -12,6 +12,7 @@
 #include "RE/T/TESIcon.h"
 #include "RE/T/TESValueForm.h"
 #include "RE/T/TESWeightForm.h"
+#include "RE/O/OBJ_BOOK.h"
 
 namespace RE
 {

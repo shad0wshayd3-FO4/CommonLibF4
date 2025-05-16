@@ -5,10 +5,12 @@
 #include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BGSNativeTerminalForm.h"
 #include "RE/B/BGSOpenCloseForm.h"
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESBoundAnimObject.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESMagicCasterForm.h"
 #include "RE/T/TESMagicTargetForm.h"
+#include "RE/B/BGSLocalizedString.h"
 
 namespace RE
 {

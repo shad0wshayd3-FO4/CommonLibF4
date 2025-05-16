@@ -190,7 +190,7 @@ namespace RE
 		}
 	};
 
-	//extern template class BSPointerHandleManagerInterface<Actor>;
-	//extern template class BSPointerHandleManagerInterface<Projectile>;
+	extern template class BSPointerHandleManagerInterface<Actor>;
+	extern template class BSPointerHandleManagerInterface<Projectile>;
 	extern template class BSPointerHandleManagerInterface<TESObjectREFR>;
 }

@@ -5,6 +5,7 @@
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESImageSpaceModifiableForm.h"
 #include "RE/T/TESModel.h"
+#include "RE/B/BGSHazardData.h"
 
 namespace RE
 {

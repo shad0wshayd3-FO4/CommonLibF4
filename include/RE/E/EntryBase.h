@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSTAtomicValue.h"
+#include "RE/B/BSResource.h"
+
 namespace RE
 {
 	namespace BSResource

@@ -1,9 +1,37 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
 #include "RE/T/TESObjectREFR.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/bhkCollisionQueryResultHandle.h"
+#include "RE/B/BGSBodyPartDefs.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/C/CELLJobs.h"
+#include "RE/N/NiTransform.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BGSEquipIndex.h"
 
 namespace RE
 {
+	enum class COL_LAYER;
+	enum class ImpactResult;
+
+	class bhkNPCollisionObject;
+	class BSMagicShaderParticles;
+	class hknpAllHitsCollector;
+	class hknpShape;
+	class NiAVObject;
+	class NiLight;
+	class NiNode;
+	class QueuedFile;
+
+	namespace MagicSystem
+	{
+		enum class CastingSource;
+	}
+
 	class __declspec(novtable) Projectile :
 		public TESObjectREFR  // 000
 	{

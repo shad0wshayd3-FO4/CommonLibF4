@@ -9,14 +9,25 @@
 #include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BGSPickupPutdownSounds.h"
 #include "RE/B/BGSPreloadable.h"
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESEnchantableForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESIcon.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/W/WEAPON_FLAGS.h"
+#include "RE/W/WEAPON_TYPE.h"
+#include "RE/M/MELEE_ATTACK_SPEED.h"
+#include "RE/B/BGSAttachParentArray.h"
 
 namespace RE
 {
+	enum class SOUND_LEVEL;
+	enum class WEAPON_RUMBLE_PATTERN;
+	enum class WEAPONHITBEHAVIOR;
+
 	class __declspec(novtable) TESObjectWEAP :
 		public TESBoundObject,             // 000
 		public TESFullName,                // 068

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSResource.h"
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	namespace BSResource

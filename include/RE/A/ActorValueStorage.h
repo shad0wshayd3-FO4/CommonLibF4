@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/M/Modifiers.h"
+
 namespace RE
 {
 	class ActorValueStorage

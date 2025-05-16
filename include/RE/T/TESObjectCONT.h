@@ -13,6 +13,7 @@
 #include "RE/T/TESMagicCasterForm.h"
 #include "RE/T/TESMagicTargetForm.h"
 #include "RE/T/TESWeightForm.h"
+#include "RE/C/CONT_DATA.h"
 
 namespace RE
 {

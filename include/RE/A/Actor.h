@@ -1,13 +1,68 @@
 #pragma once
 
 #include "RE/A/ActorState.h"
+#include "RE/A/ActorValueStorage.h"
+#include "RE/A/ACTOR_VISIBILITY_MASK.h"
+#include "RE/A/AIProcess.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/C/CFilter.h"
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/M/MagicTarget.h"
 #include "RE/T/TESObjectREFR.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPoint.h"
+#include "RE/M/Modifiers.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/N/NiTFlags.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {
+	enum class ACTOR_CRITICAL_STAGE;
+	enum class ACTOR_LIFE_STATE;
+	enum class ACTOR_LOS_LOCATION;
+	enum class GUN_STATE;
+	enum class POWER_ATTACK_TYPE;
+
+	template <class>
+	class BSPointerHandleSmartPointer;
+
+	class ActorMagicCaster;
+	class ActorMotionFeedbackData;
+	class ActorMotionFeedbackOutput;
+	class ActorMover;
+	class bhkCharacterController;
+	class CastPowerItem;
+	class CombatController;
+	class CombatGroup;
+	class MovementControllerNPC;
+	class MovementMessageActorCollision;
+	class MovementMessageNewPath;
+	class PackageLocation;
+	class PerkEntryVisitor;
+	class Perks;
+	struct ActorCPMEvent;
+	struct MovementMessageUpdateRequestImmediate;
+	struct BSMovementDataChangedEvent;
+	struct BSTransformDeltaEvent;
+	struct BSSubGraphActivationUpdate;
+	struct bhkCharacterMoveFinishEvent;
+	struct bhkNonSupportContactEvent;
+	struct bhkCharacterStateChangeEvent;
+
+	namespace MagicSystem
+	{
+		enum class CannotCastReason;
+	}
+
+	namespace PerkValueEvents
+	{
+		struct PerkEntryUpdatedEvent;
+		struct PerkValueChangedEvent;
+	}
+
 	class __declspec(novtable) Actor :
 		public TESObjectREFR,                                           // 000
 		public MagicTarget,                                             // 110
@@ -163,7 +218,7 @@ namespace RE
 		virtual bool                 DrinkPotion(AlchemyItem* a_potion, std::uint32_t a_stackID);                                                                                                                        // 119
 		virtual bool                 CheckCast(MagicItem* a_spell, bool a_dualCast, MagicSystem::CannotCastReason* a_reason);                                                                                            // 11A
 		virtual void                 CheckTempModifiers() { return; }                                                                                                                                                    // 11B
-		virtual void                 SetLastRiddenMount(ActorHandle a_mount) { return; }                                                                                                                                 // 11C
+		virtual void                 SetLastRiddenMount([[maybe_unused]] ActorHandle a_mount) { return; }                                                                                                                // 11C
 		virtual ActorHandle          QLastRiddenMount() const;                                                                                                                                                           // 11D
 		virtual bool                 CalculateCachedOwnerIsUndead() const;                                                                                                                                               // 11E
 		virtual bool                 CalculateCachedOwnerIsNPC() const;                                                                                                                                                  // 11F

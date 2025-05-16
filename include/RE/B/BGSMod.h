@@ -10,6 +10,7 @@
 #include "RE/T/TESFullName.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BGSTypedKeywordValue.h"
+#include "RE/B/BGSAttachParentArray.h"
 
 namespace RE
 {

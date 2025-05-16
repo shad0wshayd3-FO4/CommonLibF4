@@ -1,7 +1,10 @@
 #pragma once
 
 #include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/T/TESBoundObject.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {

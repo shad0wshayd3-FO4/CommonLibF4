@@ -2,6 +2,7 @@
 
 #include "RE/B/BSTSingleton.h"
 #include "RE/L/Location.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {

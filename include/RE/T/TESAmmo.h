@@ -11,6 +11,9 @@
 #include "RE/T/TESIcon.h"
 #include "RE/T/TESValueForm.h"
 #include "RE/T/TESWeightForm.h"
+#include "RE/A/AMMO_DATA.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/T/TESModel.h"
 
 namespace RE
 {

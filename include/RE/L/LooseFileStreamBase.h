@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSystemFile.h"
+#include "RE/B/BSSystemFileStreamer.h"
+
 namespace RE
 {
 	namespace BSResource

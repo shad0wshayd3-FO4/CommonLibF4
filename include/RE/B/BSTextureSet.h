@@ -1,9 +1,14 @@
 #pragma once
 
 #include "RE/N/NiObject.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSShaderProperty.h"
 
 namespace RE
 {
+	class NiTexture;
+
 	class __declspec(novtable) BSTextureSet :
 		public NiObject  // 00
 	{

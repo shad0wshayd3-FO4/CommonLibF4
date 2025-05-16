@@ -1,5 +1,8 @@
 #include "RE/B/BGSObjectInstanceExtra.h"
 
+#include "RE/B/BGSMod.h"
+#include "RE/T/TESBoundObject.h"
+
 namespace RE
 {
 	void BGSObjectInstanceExtra::CreateBaseInstanceData(const TESBoundObject& a_object, BSTSmartPointer<TBO_InstanceData>& a_instanceData) const

@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class DoorTeleportData;
+
 	class __declspec(novtable) ExtraTeleport :
 		public BSExtraData  // 00
 	{

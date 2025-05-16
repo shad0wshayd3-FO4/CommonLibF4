@@ -12,11 +12,15 @@
 #include "RE/W/WORLD_MAP_OFFSET_DATA.h"
 #include "RE/B/BGSLargeRefData.h"
 #include "RE/B/BSStringT.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/N/NiTMap.h"
 
 namespace RE
 {
 	class BGSTerrainManager;
+	class BSMultiBoundNode;
 	class BSPortalGraph;
+	class NiNode;
 
 	class __declspec(novtable) TESWorldSpace :
 		public TESForm,      // 000
@@ -110,7 +114,7 @@ namespace RE
 		BGSMusicType*                                                  musicType;                // 1D0
 		NiPoint2                                                       minimumCoords;            // 1D8
 		NiPoint2                                                       maximumCoords;            // 1E0
-		NiTMap<TESFile*, TESWorldSpace::OFFSET_DATA*>                  offsetDataMap;            // 1E8
+		NiTMap<TESFile*, OFFSET_DATA*>                                 offsetDataMap;            // 1E8
 		BSString                                                       editorID;                 // 208
 		float                                                          defaultLandHeight;        // 218
 		float                                                          defaultWaterHeight;       // 21C

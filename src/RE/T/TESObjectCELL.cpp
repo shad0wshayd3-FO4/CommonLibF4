@@ -1,5 +1,9 @@
 #include "RE/T/TESObjectCELL.h"
 
+#include "RE/E/ExtraCellWaterType.h"
+#include "RE/E/ExtraDataList.h"
+#include "RE/T/TESWorldSpace.h"
+
 namespace RE
 {
 	TESWaterForm* TESObjectCELL::GetWaterType() const noexcept
@@ -9,7 +13,7 @@ namespace RE
 		if (!water) {
 			water = IsExterior() && worldSpace ? worldSpace->GetWaterType() : nullptr;
 			if (!water) {
-				REL::Relocation<TESWaterForm**> defaultWater{ REL::ID(289864) };
+				static REL::Relocation<TESWaterForm**> defaultWater{ REL::ID(289864) };
 				water = *defaultWater;
 			}
 		}

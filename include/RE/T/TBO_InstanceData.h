@@ -5,6 +5,8 @@
 
 namespace RE
 {
+	class BGSBlockBashData;
+	class BGSKeywordForm;
 	class NiAVObject;
 
 	class __declspec(novtable) TBO_InstanceData :

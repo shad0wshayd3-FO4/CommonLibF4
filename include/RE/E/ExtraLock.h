@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	struct REFR_LOCK;
+
 	class __declspec(novtable) ExtraLock :
 		public BSExtraData  // 00
 	{

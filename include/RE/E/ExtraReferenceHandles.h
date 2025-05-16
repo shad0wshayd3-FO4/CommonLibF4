@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSExtraData.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

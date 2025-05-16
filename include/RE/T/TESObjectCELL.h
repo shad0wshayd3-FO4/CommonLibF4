@@ -12,6 +12,7 @@ namespace RE
 {
 	class bhkWorldM;
 	class NavMeshArray;
+	class NiAVObject;
 	struct bhkPickData;
 	struct EXTERIOR_DATA;
 	struct INTERIOR_DATA;

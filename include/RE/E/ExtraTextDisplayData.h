@@ -1,6 +1,9 @@
 #pragma once
 
 #include "RE/B/BSExtraData.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTTuple.h"
 
 namespace RE
 {

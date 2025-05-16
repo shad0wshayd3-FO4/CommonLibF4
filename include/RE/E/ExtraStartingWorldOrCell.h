@@ -14,8 +14,7 @@ namespace RE
 
 		ExtraStartingWorldOrCell() :
 			ExtraStartingWorldOrCell(nullptr)
-		{
-		}
+		{}
 
 		ExtraStartingWorldOrCell(TESForm* a_form) :
 			BSExtraData(TYPE),

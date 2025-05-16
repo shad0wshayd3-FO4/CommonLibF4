@@ -1,9 +1,19 @@
 #pragma once
 
 #include "RE/B/BSExtraData.h"
+#include "RE/B/BSTDataBuffer.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {
+	class BGSAttachParentArray;
+	struct INSTANCE_FILTER;
+
+	namespace BGSMod
+	{
+		struct ObjectIndexData;
+	}
+
 	class __declspec(novtable) BGSObjectInstanceExtra :
 		public BSExtraData  // 00
 	{

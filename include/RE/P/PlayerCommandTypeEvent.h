@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	enum class COMMAND_TYPE;
+
 	class PlayerCommandTypeEvent :
 		public BSTValueEvent<COMMAND_TYPE>  // 0
 	{

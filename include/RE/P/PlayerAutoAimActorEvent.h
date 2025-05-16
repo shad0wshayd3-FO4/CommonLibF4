@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

@@ -4,6 +4,10 @@
 
 namespace RE
 {
+	enum class MEM_CONTEXT;
+
+	class HeapStats;
+
 	class __declspec(novtable) IMemoryHeap :
 		public IMemoryStore  // 00
 	{

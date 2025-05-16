@@ -1,9 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 
 namespace RE
 {
+	class HUDModeType;
+
 	struct HUDModeEvent
 	{
 	private:

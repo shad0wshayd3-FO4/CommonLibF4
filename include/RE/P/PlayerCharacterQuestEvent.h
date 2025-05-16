@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class BGSInstancedQuestObjective;
+
 	namespace PlayerCharacterQuestEvent
 	{
 		enum Type : std::int32_t

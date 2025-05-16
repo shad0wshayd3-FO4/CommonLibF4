@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	struct QuickContainerStateData;
+
 	class QuickContainerStateEvent :
 		public BSTValueEvent<QuickContainerStateData>  // 00
 	{

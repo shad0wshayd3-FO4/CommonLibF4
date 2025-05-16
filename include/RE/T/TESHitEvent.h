@@ -1,6 +1,9 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/H/HitData.h"
 
 namespace RE
 {

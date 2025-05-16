@@ -1,6 +1,9 @@
 #pragma once
 
 #include "Scaleform/N/NewOverrideBase.h"
+#include "Scaleform/R/Render_Matrix.h"
+#include "Scaleform/R/Render_EdgeAAMode.h"
+#include "Scaleform/F/Flags.h"
 
 namespace Scaleform::GFx
 {

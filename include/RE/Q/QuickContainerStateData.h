@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/I/InventoryItemDisplayData.h"
+
 namespace RE
 {
+	enum class QuickContainerMode;
+
 	struct QuickContainerStateData
 	{
 	public:

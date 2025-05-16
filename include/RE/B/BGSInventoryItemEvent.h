@@ -1,13 +1,20 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+
 namespace RE
 {
+	namespace InventoryInterface
+	{
+		struct Handle;
+	}
+
 	namespace BGSInventoryItemEvent
 	{
 		struct Event
 		{
-			BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>> owner;  // 00
-			InventoryInterface::Handle*                                   item;   // 04
+			ObjectRefHandle             owner;  // 00
+			InventoryInterface::Handle* item;   // 04
 		};
 	}
 }

@@ -1,9 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/G/GridArray.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {
+	struct GridCell;
+
 	class __declspec(novtable) GridCellArray :
 		public GridArray  // 00
 	{
@@ -23,8 +27,8 @@ namespace RE
 
 		public:
 			// members
-			TESObjectCELL*                                        cell;          // 00
-			GridCellArray::QueuedAttatch::ProgressiveAttatchState attatchState;  // 08
+			TESObjectCELL*          cell;          // 00
+			ProgressiveAttatchState attatchState;  // 08
 		};
 		static_assert(sizeof(QueuedAttatch) == 0x10);
 
@@ -40,8 +44,8 @@ namespace RE
 
 		public:
 			// members
-			TESObjectCELL*                                      cell;         // 00
-			GridCellArray::QueuedDetach::ProgressiveDetachState detachState;  // 08
+			TESObjectCELL*         cell;         // 00
+			ProgressiveDetachState detachState;  // 08
 		};
 		static_assert(sizeof(QueuedDetach) == 0x10);
 
@@ -70,12 +74,12 @@ namespace RE
 		}
 
 		// members
-		GridCell*                                                     gridCell;
-		std::uint32_t                                                 cellAttachDetatchQueueDisabled;
-		BSTArray<GridCellArray::QueuedAttatch, BSTArrayHeapAllocator> queuedAttach;
-		BSTArray<GridCellArray::QueuedDetach, BSTArrayHeapAllocator>  queuedDetach;
-		NiPoint3                                                      worldCenter;
-		bool                                                          landAttached;
+		GridCell*               gridCell;
+		std::uint32_t           cellAttachDetatchQueueDisabled;
+		BSTArray<QueuedAttatch> queuedAttach;
+		BSTArray<QueuedDetach>  queuedDetach;
+		NiPoint3                worldCenter;
+		bool                    landAttached;
 	};
 	static_assert(sizeof(GridCellArray) == 0x68);
 }

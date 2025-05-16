@@ -17,10 +17,10 @@ namespace RE
 	enum class WEAPON_CULL_TYPE;
 
 	class CachedValues;
-	class HighProcessData;
-	class MiddleHighProcessData;
-	class MiddleLowProcessData;
-	class ObjectstoAcquire;
+	struct HighProcessData;
+	struct MiddleHighProcessData;
+	struct MiddleLowProcessData;
+	struct ObjectstoAcquire;
 
 	class AIProcess
 	{

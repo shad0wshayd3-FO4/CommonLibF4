@@ -1,9 +1,12 @@
 #pragma once
 
 #include "RE/I/ImageSpaceEffect.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {
+	class NiTexture;
+
 	class __declspec(novtable) ImageSpaceEffectPipboyScreen :
 		public ImageSpaceEffect  // 00
 	{

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	class TESResponse;
+	struct TESResponse;
 
 	class ResponseListWrapper
 	{

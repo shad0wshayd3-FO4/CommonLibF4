@@ -1,9 +1,18 @@
 #pragma once
 
 #include "RE/B/BSTempEffect.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiMatrix3.h"
+#include "RE/N/NiTransform.h"
+#include "RE/B/BSSoundHandle.h"
 
 namespace RE
 {
+	class BGSDecalEmitter;
+	class BGSParticleObjectCloneTask;
+	class NiNode;
+
 	class __declspec(novtable) BSTempEffectParticle :
 		public BSTempEffect  // 00
 	{
@@ -18,7 +27,7 @@ namespace RE
 		// members
 		NiPointer<NiAVObject>                 particleObject;   // 30
 		NiPointer<BGSParticleObjectCloneTask> cloneTask;        // 38
-		BSModelDB::Handle                     modelHandle;      // 40
+		void*                                 modelHandle;      // 40 - BSModelDB::Handle
 		NiPointer<NiNode>                     parentNode;       // 48
 		NiMatrix3                             rotation;         // 50
 		NiPoint3                              position;         // 80

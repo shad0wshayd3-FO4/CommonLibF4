@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/I/ImageSpaceBaseData.h"
+#include "RE/I/ImageSpaceModData.h"
+
 namespace RE
 {
 	struct ImageSpaceData

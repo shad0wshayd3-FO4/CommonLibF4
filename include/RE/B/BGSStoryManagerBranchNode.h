@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BGSStoryManagerNodeBase.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {

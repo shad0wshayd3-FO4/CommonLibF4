@@ -9,7 +9,7 @@
 namespace RE
 {
 	enum class PACKAGE_PROCEDURE_TYPE;
-
+	class BGSIdleCollection;
 	class PackageLocation;
 	class PackageTarget;
 	class TESPackageData;

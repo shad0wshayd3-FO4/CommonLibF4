@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/C/CONDITION_ITEM_DATA.h"
+#include "RE/C/ConditionCheckParams.h"
+
 namespace RE
 {
 	class TESConditionItem

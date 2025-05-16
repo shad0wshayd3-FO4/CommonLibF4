@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/I/ImageSpaceEffect.h"
+#include "RE/I/ImageSpaceTexture.h"
 
 namespace RE
 {

@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BGSTypedFormValuePair.h"
+
 namespace RE
 {
+	class DestructibleObjectStage;
+	class QueuedFile;
+
 	struct DestructibleObjectData
 	{
 	public:

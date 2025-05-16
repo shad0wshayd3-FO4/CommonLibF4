@@ -45,7 +45,7 @@ namespace RE
 		TESLoadScreen*           artScreen;                         // 0E8
 		std::byte                upgrader[0x10];                    // 0F0 - TODO
 		BSTArray<TESLoadScreen*> validScreens;                      // 100
-		BSModelDB::Handle        foregroundModel;                   // 118
+		void*                    foregroundModel;                   // 118 - BDModelDB::Handle
 		NiAVObject*              zoomTarget;                        // 120
 		ImageSpaceLUTData        LUT;                               // 128
 		std::uint32_t            numNonDefaultScreens;              // 198

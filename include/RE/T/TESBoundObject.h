@@ -8,6 +8,7 @@
 #include "RE/B/BGSPreviewTransform.h"
 #include "RE/B/BGSSoundTagComponent.h"
 #include "RE/B/BGSMod.h"
+#include "RE/T/TBO_InstanceData.h"
 
 namespace RE
 {

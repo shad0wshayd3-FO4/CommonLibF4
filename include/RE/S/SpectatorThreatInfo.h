@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BSPointerHandle.h"
+
 namespace RE
 {
+	class NiAVObject;
+
 	class SpectatorThreatInfo
 	{
 	public:

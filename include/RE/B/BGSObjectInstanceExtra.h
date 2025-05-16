@@ -3,6 +3,7 @@
 #include "RE/B/BSExtraData.h"
 #include "RE/B/BSTDataBuffer.h"
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/T/TBO_InstanceData.h"
 
 namespace RE
 {

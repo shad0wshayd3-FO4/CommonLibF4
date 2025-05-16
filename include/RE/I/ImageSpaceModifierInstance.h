@@ -1,9 +1,13 @@
 #pragma once
 
 #include "RE/N/NiObject.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {
+	class ImageSpaceModifierInstanceForm;
+	class NiAVObject;
+
 	class ImageSpaceModifierInstance :
 		public NiObject  // 00
 	{

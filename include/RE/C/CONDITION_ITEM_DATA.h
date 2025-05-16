@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/F/FUNCTION_DATA.h"
+
 namespace RE
 {
+	enum class CONDITIONITEMOBJECT;
+
 	struct CONDITION_ITEM_DATA
 	{
 	public:

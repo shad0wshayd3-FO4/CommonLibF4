@@ -1,9 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
+	class QueuedPromoteReferencesTask;
+
 	class BGSDynamicPersistenceManager :
 		public BSTSingletonExplicit<BGSDynamicPersistenceManager>
 	{

@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
+	class TESFile;
+
 	struct TESFileCollection
 	{
 	public:

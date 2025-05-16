@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTSingleton.h"
+#include "RE/T/TESGlobal.h"
 
 namespace RE
 {

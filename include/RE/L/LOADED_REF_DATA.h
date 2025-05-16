@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class NiAVObject;
+
 	struct LOADED_REF_DATA
 	{
 	public:

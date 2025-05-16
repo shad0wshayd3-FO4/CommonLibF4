@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/D/DEFAULT_OBJECT_TYPE.h"
+#include "RE/E/ENUM_FORM_ID.h"
+
 namespace RE
 {
 	struct DEFAULT_OBJECT_DATA

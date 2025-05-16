@@ -2,9 +2,26 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTempEffect.h"
+#include "RE/M/ModelReferenceEffect.h"
+#include "RE/S/ShaderReferenceEffect.h"
+#include "RE/B/BSContainer.h"
+#include "RE/B/BSSemaphore.h"
+#include "RE/P/PTYPE.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {
+	class Crime;
+	class MuzzleFlash;
+	class SyncQueueObj;
+	struct PositionPlayerEvent;
+
 	class __declspec(novtable) ProcessLists :
 		public BSTEventSink<PositionPlayerEvent>,  // 000
 		public BSTSingletonSDM<ProcessLists>       // 008

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BGSTypedKeywordValue.h"
+
 namespace RE
 {
 	struct TESResponse
@@ -27,10 +30,10 @@ namespace RE
 			return func(this);
 		}
 
-		// Members
+		// members
 		BGSLocalizedString                                    responseText;
 		TESResponse*                                          pNext;
-		TESResponse::RespData                                 data;
+		RespData                                              data;
 		BGSTypedKeywordValue<KeywordType::kAnimFaceArchetype> faceArcheType;
 	};
 	static_assert(sizeof(TESResponse) == 0x18);

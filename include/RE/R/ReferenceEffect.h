@@ -1,9 +1,13 @@
 #pragma once
 
 #include "RE/B/BSTempEffect.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {
+	class NiAVObject;
+	class ReferenceEffectController;
+
 	class __declspec(novtable) ReferenceEffect :
 		public BSTempEffect  // 00
 	{

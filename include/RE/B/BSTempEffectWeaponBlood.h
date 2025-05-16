@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTempEffect.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

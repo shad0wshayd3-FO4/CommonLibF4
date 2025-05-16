@@ -1,9 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
 #include "RE/T/TESPackage.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {
+	class NiAVObject;
+	class SpectatorThreatInfo;
+
 	class __declspec(novtable) SpectatorPackage :
 		public TESPackage  // 000
 	{

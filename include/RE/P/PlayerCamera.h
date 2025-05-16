@@ -1,12 +1,22 @@
 #pragma once
 
+#include "RE/T/TESCamera.h"
 #include "RE/B/BSInputEventReceiver.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/T/TESCamera.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/T/TESCameraState.h"
+#include "RE/C/CameraStates.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {
+	class IdleInputEvent;
+	class OtherEventEnabledEvent;
+	class UserEventEnabledEvent;
+
 	class __declspec(novtable) PlayerCamera :
 		public TESCamera,                             // 000
 		public BSInputEventReceiver,                  // 038
@@ -97,9 +107,9 @@ namespace RE
 		ActorHandle                                                          cameraTarget;                        // 064
 		BSTSmallArray<BSTSmartPointer<TESCameraState>, CameraStates::kTotal> tempReturnStates;                    // 068
 		BSTSmartPointer<TESCameraState>                                      cameraStates[CameraStates::kTotal];  // 0E0
-		hknpBodyId                                                           cameraBodyID;                        // 148
-		hkRefPtr<hknpShape>                                                  cameraShape;                         // 150
-		hkRefPtr<hknpBSWorld>                                                physicsWorld;                        // 158
+		void*                                                                cameraBodyID;                        // 148 - hknpBodyId
+		void*                                                                cameraShape;                         // 150 - hkRefPtr<hknpShape>
+		void*                                                                physicsWorld;                        // 158 - hkRefPtr<hknpBSWorld>
 		ActorHandle                                                          savedCollidedActor;                  // 160
 		ObjectRefHandle                                                      collisionIgnoredReference;           // 164
 		float                                                                worldFOV;                            // 168

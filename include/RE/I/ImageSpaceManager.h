@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiRect.h"
+#include "RE/N/NiTArray.h"
+#include "RE/N/NiColor.h"
+#include "RE/I/ImageSpaceData.h"
+#include "RE/I/ImageSpaceLUTData.h"
+
 namespace RE
 {
+	class BSTriShape;
+
 	class ImageSpaceManager
 	{
 	public:

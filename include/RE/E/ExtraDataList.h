@@ -8,6 +8,7 @@
 #include "RE/B/BaseExtraList.h"
 #include "RE/B/BSSpinLock.h"
 #include "RE/M/MemoryManager.h"
+#include "RE/T/TBO_InstanceData.h"
 
 namespace RE
 {

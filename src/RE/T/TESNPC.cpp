@@ -1,5 +1,8 @@
 #include "RE/T/TESNPC.h"
 
+#include "RE/P/PlayerCharacter.h"
+#include "RE/T/TESRace.h"
+
 namespace RE
 {
 	void TESNPC::CopyPerkRankArray(const std::vector<PerkRankData>& a_copiedData)

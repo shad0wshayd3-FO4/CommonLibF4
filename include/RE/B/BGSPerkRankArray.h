@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	class PerkRankData;
+	struct PerkRankData;
 
 	class __declspec(novtable) BGSPerkRankArray :
 		public BaseFormComponent  // 00

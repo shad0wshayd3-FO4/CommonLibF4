@@ -1,9 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESFurniture.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/T/TESCondition.h"
 
 namespace RE
 {
+	enum class LOCK_LEVEL;
+
 	class __declspec(novtable) BGSTerminal :
 		public TESFurniture  // 000
 	{

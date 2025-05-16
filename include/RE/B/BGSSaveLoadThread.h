@@ -1,9 +1,13 @@
 #pragma once
 
 #include "RE/B/BSThread.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSEventFlag.h"
 
 namespace RE
 {
+	class BGSSaveLoadFile;
+
 	class alignas(0x80) BGSSaveLoadThread :
 		public BSThread  // 00
 	{
@@ -24,11 +28,10 @@ namespace RE
 		virtual ~BGSSaveLoadThread();  // 00
 
 		// members
-		bool        running;   // 50
-		bool        busy;      // 51
-		BSEventFlag haveTask;  // 58
-		// BSTCommonStaticMessageQueue<AsyncRequest, 8> asyncSaveLoadOperationQueue;  // 80
-		std::byte pad80[0x780 - 0x80];
+		bool        running;                                    // 50
+		bool        busy;                                       // 51
+		BSEventFlag haveTask;                                   // 58
+		std::byte   asyncSaveLoadOperationQueue[0x780 - 0x80];  // 80 - BSTCommonStaticMessageQueue<AsyncRequest, 8>
 	};
 	static_assert(sizeof(BGSSaveLoadThread) == 0x780);
 }

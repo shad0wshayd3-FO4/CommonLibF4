@@ -1,14 +1,29 @@
 #pragma once
 
-#include "RE/B/BGSForcedLocRefType.h"
-#include "RE/B/BGSNativeTerminalForm.h"
-#include "RE/B/BGSOverridePackCollection.h"
-#include "RE/B/BSTEvent.h"
 #include "RE/T/TESActorBase.h"
 #include "RE/T/TESRaceForm.h"
+#include "RE/B/BGSOverridePackCollection.h"
+#include "RE/B/BGSForcedLocRefType.h"
+#include "RE/B/BGSNativeTerminalForm.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/P/PerkRankData.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTArray.h"
+#include "RE/S/SEX.h"
+#include "RE/T/TESSpellList.h"
+#include "RE/B/BGSAttachParentArray.h"
+#include "RE/N/NPC_DATA.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BGSCharacterMorph.h"
+#include "RE/B/BGSCharacterTint.h"
 
 namespace RE
 {
+	class BGSRelationship;
+	class CreatureSounds;
+	class MenuOpenCloseEvent;
+
 	class __declspec(novtable) TESNPC :
 		public TESActorBase,                     // 000
 		public TESRaceForm,                      // 1B0

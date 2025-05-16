@@ -1,7 +1,19 @@
 #pragma once
 
+#include "RE/N/NiTArray.h"
+
 namespace RE
 {
+	class BSTriShape;
+	class ImageSpaceManager;
+	class ImageSpaceEffectParam;
+	class ImageSpaceTexture;
+
+	namespace BSGraphics
+	{
+		enum class TextureFilterMode;
+	}
+
 	class __declspec(novtable) ImageSpaceEffect
 	{
 	public:

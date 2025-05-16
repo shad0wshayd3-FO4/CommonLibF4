@@ -1,6 +1,8 @@
 #pragma once
 
 #include "RE/T/TESCameraState.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BSTPoint.h"
 
 namespace RE
 {

@@ -1,9 +1,13 @@
 #pragma once
 
 #include "RE/N/NiRefObject.h"
+#include "RE/E/EquippedItem.h"
 
 namespace RE
 {
+	class BGSLoadFormBuffer;
+	class BGSSaveFormBuffer;
+
 	class __declspec(novtable) EquippedItemData :
 		public NiRefObject  // 00
 	{

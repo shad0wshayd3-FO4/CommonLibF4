@@ -2,9 +2,23 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/E/ENUM_FORM_ID.h"
+#include "RE/N/NiTArray.h"
+#include "RE/N/NiTList.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/T/TESFileCollection.h"
 
 namespace RE
 {
+	class NEW_REFR_DATA;
+	class TESFile;
+	class TESObjectList;
+	class TESRegionDataManager;
+	struct BGSHotloadCompletedEvent;
+	struct TESRegionList;
+
 	class TESDataHandler :
 		public BSTEventSource<BGSHotloadCompletedEvent>,  // 0000
 		public BSTSingletonSDM<TESDataHandler>            // 0058

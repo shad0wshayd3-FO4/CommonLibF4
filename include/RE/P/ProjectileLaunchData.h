@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BGSBodyPartDefs.h"
+
 namespace RE
 {
+	namespace MagicSystem
+	{
+		enum class CastingSource;
+	}
+
 	class ProjectileLaunchData
 	{
 	public:

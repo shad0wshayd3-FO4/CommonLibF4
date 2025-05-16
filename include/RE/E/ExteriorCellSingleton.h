@@ -1,9 +1,12 @@
 #pragma once
 
 #include "RE/B/BSTSingleton.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {
+	class bhkWorldM;
+
 	class ExteriorCellSingleton :
 		public BSTSingletonExplicit<ExteriorCellSingleton>
 	{

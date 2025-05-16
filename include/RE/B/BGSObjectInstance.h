@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/T/TBO_InstanceData.h"
 
 namespace RE
 {

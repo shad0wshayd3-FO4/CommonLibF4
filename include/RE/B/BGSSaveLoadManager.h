@@ -1,9 +1,26 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSaveDataSystemUtility.h"
+#include "RE/B/BSSaveDataSystemUtilityImage.h"
+#include "RE/B/BGSSaveLoadThread.h"
 
 namespace RE
 {
+	class BSSaveDataSystemUtilityFile;
+	class BGSSaveLoadFile;
+	class BGSSaveLoadFileEntry;
+	class NiTexture;
+
+	namespace SPECIALMenuEvent
+	{
+		struct NameChangedEvent;
+	}
+
 	class BGSSaveLoadManager :
 		public BSTEventSink<SPECIALMenuEvent::NameChangedEvent>  // 00
 	{

@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class TESCondition;
+
 	class __declspec(novtable) BGSRefAlias :
 		public BGSBaseAlias  // 00
 	{

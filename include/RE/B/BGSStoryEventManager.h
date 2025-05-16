@@ -1,9 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/B/BSTSingleton.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
+	class BGSRegisteredStoryEvent;
+	class BGSStoryEvent;
+
 	class BGSStoryEventManager :
 		public BSTSingletonImplicit<BGSStoryEventManager>
 	{

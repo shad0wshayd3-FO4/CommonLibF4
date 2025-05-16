@@ -1,6 +1,8 @@
 #pragma once
 
 #include "RE/I/ImageSpaceModifierInstance.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

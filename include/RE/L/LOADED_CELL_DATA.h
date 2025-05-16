@@ -1,7 +1,21 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSTAtomicValue.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSpinLock.h"
+
 namespace RE
 {
+	class AnimatedRefObject;
+	class BSMultiBoundNode;
+	class BSPortalGraph;
+	class NiNode;
+	class QueuedFile;
+
 	struct LOADED_CELL_DATA
 	{
 	public:

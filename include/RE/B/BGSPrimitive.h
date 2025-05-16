@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiColor.h"
+
 namespace RE
 {
+	class BSMultiBoundShape;
+	class BSFadeNode;
+
 	class __declspec(novtable) BGSPrimitive
 	{
 	public:

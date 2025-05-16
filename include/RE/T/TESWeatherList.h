@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	class WeatherEntry;
+	struct WeatherEntry;
 
 	class TESWeatherList :
 		BSSimpleList<WeatherEntry*>

@@ -1,6 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESPackage.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

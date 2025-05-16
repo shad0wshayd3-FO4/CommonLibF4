@@ -1,11 +1,17 @@
 #pragma once
 
 #include "RE/B/BSTEvent.h"
+#include "RE/N/NiPointer.h"
 #include "RE/R/ReferenceEffect.h"
 #include "RE/S/SimpleAnimationGraphManagerHolder.h"
+#include "RE/R/RefAttachTechniqueInput.h"
 
 namespace RE
 {
+	class BGSArtObjectCloneTask;
+	class NiAVObject;
+	struct BSAnimationGraphEvent;
+
 	class __declspec(novtable) ModelReferenceEffect :
 		public ReferenceEffect,                     // 00
 		public SimpleAnimationGraphManagerHolder,   // 48

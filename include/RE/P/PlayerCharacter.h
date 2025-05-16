@@ -1,11 +1,72 @@
 #pragma once
 
 #include "RE/A/Actor.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/I/IMovementPlayerControlsFilter.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/C/CrimeGoldStruct.h"
+#include "RE/S/StolenItemValueStruct.h"
+#include "RE/F/FriendshipFactionsStruct.h"
+#include "RE/A/AITimeStamp.h"
+#include "RE/S/SayOnceTimeStampStruct.h"
+#include "RE/N/NiTMap.h"
+#include "RE/S/SubgraphHandle.h"
+#include "RE/P/PLAYER_TARGET_LOC.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/X/XPChangeData.h"
+#include "RE/P/PlayerCoverData.h"
+#include "RE/P/PlayerCommandTypeEvent.h"
+#include "RE/P/PlayerAutoAimActorEvent.h"
+#include "RE/B/BGSCharacterTint.h"
 
 namespace RE
 {
+	enum class DEFAULT_OBJECT;
+	enum class DifficultyLevel;
+	enum class PLAYER_ACTION;
+	enum class SCENE_ACTION_PLAYER_RESPONSE_TYPE;
+
+	class BGSInstancedQuestObjective;
+	class BipedAnim;
+	class BSLight;
+	class BSPathingSolution;
+	class Crime;
+	class EquippedItem;
+	class ImageSpaceModifierInstanceDOF;
+	class ImageSpaceModifierInstanceForm;
+	class ItemChange;
+	class NiAVObject;
+	class NiLight;
+	class NiNode;
+	class MenuModeChangeEvent;
+	class MenuOpenCloseEvent;
+	class OtherEventEnabledEvent;
+	class PickRefUpdateEvent;
+	class PlayerActionObject;
+	class QuestTargetArray;
+	class TeleportPath;
+	class TESHitEvent;
+	class TESQuestStageItem;
+	class UserEventEnabledEvent;
+	struct BGSActorCellEvent;
+	struct BGSActorDeathEvent;
+	struct PositionPlayerEvent;
+
+	namespace PerkValueEvents
+	{
+		struct PerkEntryUpdatedEvent;
+	}
+
 	class __declspec(novtable) PlayerCharacter :
 		public Actor,                                                 // 000
 		public BSTEventSource<BGSActorCellEvent>,                     // 4C8
@@ -90,7 +151,7 @@ namespace RE
 			return *singleton;
 		}
 
-		DIFFICULTY_LEVEL GetDifficultyLevel()
+		DifficultyLevel GetDifficultyLevel()
 		{
 			using func_t = decltype(&PlayerCharacter::GetDifficultyLevel);
 			static REL::Relocation<func_t> func{ REL::ID(2233056) };
@@ -272,7 +333,7 @@ namespace RE
 		REX::EnumSet<PLAYER_ACTION, std::int32_t>                     mostRecentAction;                     // B18
 		ActorHandle                                                   actorDoingPlayerCommand;              // B1C
 		BSTValueEventSource<PlayerCommandTypeEvent>                   playerCurrentCommandType;             // B20
-		BSTArray<hkRefPtr<hknpBSMouseSpringAction>>                   grabSprings;                          // B38
+		BSTArray<void*>                                               grabSprings;                          // B38 - hkRefPtr<hknpBSMouseSpringAction>
 		NiPoint3                                                      grabUserRotation;                     // B50
 		ObjectRefHandle                                               grabbedObject;                        // B5C
 		float                                                         grabObjectWeight;                     // B60

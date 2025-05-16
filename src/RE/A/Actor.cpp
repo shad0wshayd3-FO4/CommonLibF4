@@ -1,5 +1,8 @@
 #include "RE/A/Actor.h"
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESNPC.h"
+
 namespace RE
 {
 	TESNPC* Actor::GetNPC() const noexcept

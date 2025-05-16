@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BGSEquipIndex.h"
+
 namespace RE
 {
+	class EquippedItemData;
+
 	class EquippedItem
 	{
 	public:

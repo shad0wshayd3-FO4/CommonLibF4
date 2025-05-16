@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESCondition.h"
+
 namespace RE
 {
 	struct BGSScenePhase

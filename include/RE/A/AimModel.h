@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+#include "RE/S/SpringState.h"
+#include "RE/B/BGSAimModel.h"
+
 namespace RE
 {
 	class __declspec(novtable) AimModel

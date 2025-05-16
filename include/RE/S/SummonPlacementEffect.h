@@ -1,11 +1,17 @@
 #pragma once
 
-#include "RE/B/BSTEvent.h"
 #include "RE/R/ReferenceEffect.h"
 #include "RE/S/SimpleAnimationGraphManagerHolder.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {
+	class BGSArtObjectCloneTask;
+	class NiAVObject;
+	struct BSAnimationGraphEvent;
+
 	class __declspec(novtable) SummonPlacementEffect :
 		public ReferenceEffect,                     // 00
 		public SimpleAnimationGraphManagerHolder,   // 48

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/C/ContainerItemExtra.h"
+#include "RE/I/INSTANCE_FILTER.h"
+
 namespace RE
 {
 	struct CALCED_OBJECT

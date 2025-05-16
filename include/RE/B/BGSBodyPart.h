@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BGSBodyPartDefs.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/T/TESModel.h"
+#include "RE/P/PART_DATA.h"
+
 namespace RE
 {
 	class BGSBodyPart

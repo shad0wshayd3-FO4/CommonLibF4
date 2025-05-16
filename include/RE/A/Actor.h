@@ -17,6 +17,7 @@
 #include "RE/B/BGSEquipIndex.h"
 #include "RE/N/NiTFlags.h"
 #include "RE/B/BSPointerHandle.h"
+#include "RE/A/AITimeStamp.h"
 
 namespace RE
 {

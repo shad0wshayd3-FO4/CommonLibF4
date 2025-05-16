@@ -1,6 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/P/Projectile.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

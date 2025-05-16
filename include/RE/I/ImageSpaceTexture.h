@@ -2,6 +2,14 @@
 
 namespace RE
 {
+	class NiTexture;
+
+	namespace BSGraphics
+	{
+		enum class TextureAddressMode;
+		enum class TextureFilterMode;
+	}
+
 	class ImageSpaceTexture
 	{
 	public:

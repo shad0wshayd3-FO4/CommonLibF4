@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTempEffect.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {
@@ -16,8 +17,8 @@ namespace RE
 		~BSTempEffectScreenSpaceDecal() override;
 
 		// members
-		bool                                  permanent;  // 30
-		NiPointer<BSDeferredDecal::BSDFDecal> decal;      // 38
+		bool             permanent;  // 30
+		NiPointer<void*> decal;      // 38 - BSDeferredDecal::BSDFDecal
 	};
 	static_assert(sizeof(BSTempEffectScreenSpaceDecal) == 0x40);
 }

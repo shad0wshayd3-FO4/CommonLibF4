@@ -103,7 +103,8 @@ target("commonlibf4", function()
         "include/(F4SE/**.h)",
         "include/(RE/**.h)",
         "include/(REL/**.h)",
-        "include/(REX/**.h)"
+        "include/(REX/**.h)",
+        "include/(Scaleform/**.h)"
     )
 
     -- add extra files

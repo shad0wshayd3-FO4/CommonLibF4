@@ -531,6 +531,12 @@ namespace REL
 	namespace stl = F4SE::stl;
 }
 
+namespace Scaleform
+{
+	using namespace std::literals;
+	namespace stl = F4SE::stl;
+}
+
 #include "REL/REL.h"
 
 #include "RE/NiRTTI_IDs.h"

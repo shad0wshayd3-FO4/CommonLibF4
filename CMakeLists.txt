@@ -145,5 +145,6 @@ install(
 		"include/RE"
 		"include/REL"
 		"include/REX"
+		"include/Scaleform"
 	DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
 )

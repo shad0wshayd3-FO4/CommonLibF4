@@ -1,6 +1,8 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/T/TESIcon.h"
 
 namespace RE
 {

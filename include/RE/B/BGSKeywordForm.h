@@ -2,6 +2,9 @@
 
 #include "RE/B/BaseFormComponent.h"
 #include "RE/I/IKeywordFormBase.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSContainer.h"
+#include "RE/B/BGSKeyword.h"
 
 namespace RE
 {
@@ -26,7 +29,7 @@ namespace RE
 		// add
 		virtual BGSKeyword* GetDefaultKeyword() const { return nullptr; }  // 07
 
-		void CopyKeywords(const std::vector<RE::BGSKeyword*>& a_copiedData);
+		void CopyKeywords(const std::vector<BGSKeyword*>& a_copiedData);
 
 		void AddKeyword(BGSKeyword* a_keyword)
 		{

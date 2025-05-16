@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/B/BGSTypedKeywordValueArray.h"
+#include "RE/B/BGSTypedKeywordValue.h"
 #include "RE/B/BaseFormComponent.h"
 
 namespace RE

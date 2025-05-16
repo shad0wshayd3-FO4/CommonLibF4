@@ -1,7 +1,25 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFile.h"
+#include "RE/N/NiFile.h"
+#include "RE/F/FORM.h"
+#include "RE/F/FILE_HEADER.h"
+#include "RE/B/BSStringT.h"
+#include "RE/B/BSSystemFile.h"
+
 namespace RE
 {
+	enum class CHUNK_ID;
+	enum class TES_RETURN_CODE;
+
+	class TESBitArrayFile;
+	struct _ULARGE_INTEGER;
+	struct FORM_GROUP;
+
 	class TESFile
 	{
 	public:

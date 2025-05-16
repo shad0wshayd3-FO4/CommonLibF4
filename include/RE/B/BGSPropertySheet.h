@@ -1,6 +1,9 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BGSTypedFormValuePair.h"
 
 namespace RE
 {

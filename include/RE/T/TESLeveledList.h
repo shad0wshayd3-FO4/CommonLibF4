@@ -1,9 +1,16 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BGSTypedFormValuePair.h"
 
 namespace RE
 {
+	class ContainerItemExtra;
+	struct CALCED_OBJECT;
+	struct LEVELED_OBJECT;
+
 	class __declspec(novtable) TESLeveledList :
 		public BaseFormComponent  // 00
 	{

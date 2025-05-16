@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class DestructibleObjectData;
+
 	class __declspec(novtable) BGSDestructibleObjectForm :
 		public BaseFormComponent  // 00
 	{

@@ -7,13 +7,13 @@
 #include "RE/T/TypeInfo.h"
 #include "RE/V/Variable.h"
 #include "RE/P/PropertyTypeInfo.h"
+#include "RE/P/PropertyGroupInfo.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
 		class IFunction;
-		class PropertyGroupInfo;
 
 		class __declspec(novtable) ObjectTypeInfo :
 			public IComplexType  // 00

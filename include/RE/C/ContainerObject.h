@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/C/ContainerItemExtra.h"
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	class ContainerObject

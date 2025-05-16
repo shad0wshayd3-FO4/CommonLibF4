@@ -1,6 +1,9 @@
 #pragma once
 
+#include "RE/A/ACTOR_BASE_DATA.h"
 #include "RE/B/BaseFormComponent.h"
+#include "RE/B/BSTArray.h"
+#include "RE/F/FACTION_RANK.h"
 
 namespace RE
 {

@@ -4,6 +4,10 @@
 
 namespace RE
 {
+	enum class IO_TASK_PRIORITY;
+
+	class QueuedFile;
+
 	class __declspec(novtable) BGSPreloadable :
 		public BaseFormComponent  // 00
 	{

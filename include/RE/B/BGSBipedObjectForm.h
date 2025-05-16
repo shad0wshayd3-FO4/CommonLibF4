@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
+#include "RE/B/BIPED_MODEL.h"
 
 namespace RE
 {

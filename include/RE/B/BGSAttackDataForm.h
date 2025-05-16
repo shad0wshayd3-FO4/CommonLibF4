@@ -1,9 +1,12 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {
+	class BGSAttackDataMap;
+
 	class __declspec(novtable) BGSAttackDataForm :
 		public BaseFormComponent  // 00
 	{

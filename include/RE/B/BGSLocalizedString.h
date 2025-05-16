@@ -1,10 +1,51 @@
 #pragma once
 
+#include "RE/B/BSCRC32.h"
 #include "RE/B/BSFixedString.h"
+#include "RE/B/BSStringT.h"
 #include "RE/M/MemoryManager.h"
 
 namespace RE
 {
+	class TESFile;
+
+	struct BGSLocalizedStrings
+	{
+		struct ScrapStringBuffer
+		{
+		public:
+			[[nodiscard]] const char* GetString() const noexcept { return static_cast<const char*>(buffer.GetPtr()) + offset; }
+
+			// members
+			MemoryManager::AutoScrapBuffer buffer;  // 00
+			std::size_t                    offset;  // 08
+		};
+		static_assert(sizeof(ScrapStringBuffer) == 0x10);
+	};
+	static_assert(std::is_empty_v<BGSLocalizedStrings>);
+
+	struct BGSLocalizedStringDL
+	{
+	public:
+		void GetDescription(BSString& a_out, const TESForm* a_form) const
+		{
+			using func_t = decltype(&BGSLocalizedStringDL::GetDescription);
+			static REL::Relocation<func_t> func{ REL::ID(523613) };
+			return func(this, a_out, a_form);
+		}
+
+		[[nodiscard]] BGSLocalizedStrings::ScrapStringBuffer GetText(TESFile& a_file) const
+		{
+			using func_t = decltype(&BGSLocalizedStringDL::GetText);
+			static REL::Relocation<func_t> func{ REL::ID(472297) };
+			return func(this, a_file);
+		}
+
+		// members
+		std::uint32_t id{ 0 };  // 0
+	};
+	static_assert(sizeof(BGSLocalizedStringDL) == 0x4);
+
 	class BGSLocalizedString
 	{
 	public:
@@ -64,41 +105,4 @@ namespace RE
 			return BSCRC32<BSFixedStringCS>()(a_key.hash_accessor());
 		}
 	};
-
-	struct BGSLocalizedStringDL
-	{
-	public:
-		void GetDescription(BSStringT<char>& a_out, const TESForm* a_form) const
-		{
-			using func_t = decltype(&BGSLocalizedStringDL::GetDescription);
-			static REL::Relocation<func_t> func{ REL::ID(523613) };
-			return func(this, a_out, a_form);
-		}
-
-		[[nodiscard]] BGSLocalizedStrings::ScrapStringBuffer GetText(TESFile& a_file) const
-		{
-			using func_t = decltype(&BGSLocalizedStringDL::GetText);
-			static REL::Relocation<func_t> func{ REL::ID(472297) };
-			return func(this, a_file);
-		}
-
-		// members
-		std::uint32_t id{ 0 };  // 0
-	};
-	static_assert(sizeof(BGSLocalizedStringDL) == 0x4);
-
-	struct BGSLocalizedStrings
-	{
-		struct ScrapStringBuffer
-		{
-		public:
-			[[nodiscard]] const char* GetString() const noexcept { return static_cast<const char*>(buffer.GetPtr()) + offset; }
-
-			// members
-			MemoryManager::AutoScrapBuffer buffer;  // 00
-			std::size_t                    offset;  // 08
-		};
-		static_assert(sizeof(ScrapStringBuffer) == 0x10);
-	};
-	static_assert(std::is_empty_v<BGSLocalizedStrings>);
 }

@@ -1,6 +1,8 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSStringT.h"
 
 namespace RE
 {

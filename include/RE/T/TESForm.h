@@ -1,9 +1,21 @@
 #pragma once
 
 #include "RE/B/BaseFormComponent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/T/TESFile.h"
+#include "RE/T/TESFileContainer.h"
+#include "RE/E/ENUM_FORM_ID.h"
+#include "RE/F/FORM_ENUM_STRING.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
+	class BGSLoadFormBuffer;
+	class BGSPreviewTransform;
+	class BGSSaveFormBuffer;
+	class BGSSoundTagComponent;
+
 	class __declspec(novtable) TESForm :
 		public BaseFormComponent  // 00
 	{

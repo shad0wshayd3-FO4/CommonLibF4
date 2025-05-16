@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class TESFileArray;
+
 	struct TESFileContainer
 	{
 	public:

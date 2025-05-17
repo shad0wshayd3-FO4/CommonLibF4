@@ -9,10 +9,10 @@
 #include "RE/B/BSTSingleton.h"
 #include "RE/I/Inventory3DManager.h"
 #include "RE/I/InventoryInterface.h"
+#include "RE/I/IsPipboyActiveEvent.h"
 #include "RE/N/NiPointer.h"
 #include "RE/N/NiRect.h"
 #include "RE/P/PipboyRadioController.h"
-#include "RE/I/IsPipboyActiveEvent.h"
 
 namespace RE
 {

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSInventoryItem.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTTuple.h"
-#include "RE/B/BGSInventoryItem.h"
 
 namespace RE
 {

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/N/NiPoint.h"
 #include "RE/E/ExtraDataList.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {

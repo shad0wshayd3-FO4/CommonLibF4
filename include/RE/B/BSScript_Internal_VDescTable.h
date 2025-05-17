@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/B/BSFixedString.h"
-#include "RE/B/BSTTuple.h"
 #include "RE/B/BSScript_TypeInfo.h"
+#include "RE/B/BSTTuple.h"
 
 namespace RE
 {

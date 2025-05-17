@@ -9,6 +9,7 @@
 #include "RE/B/BSScript_IObjectHandlePolicy.h"
 #include "RE/B/BSScript_ISavePatcherInterface.h"
 #include "RE/B/BSScript_IStackCallbackSaveInterface.h"
+#include "RE/B/BSScript_IVirtualMachine.h"
 #include "RE/B/BSScript_Internal_IProfilePolicy.h"
 #include "RE/B/BSScript_MergedBoundScript.h"
 #include "RE/B/BSScript_ObjectBindPolicy.h"
@@ -25,7 +26,6 @@
 #include "RE/B/BSTTuple.h"
 #include "RE/B/BSTimer.h"
 #include "RE/M/MemoryManager.h"
-#include "RE/B/BSScript_IVirtualMachine.h"
 
 namespace RE
 {

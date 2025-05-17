@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
 #include "RE/B/BSStringT.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {

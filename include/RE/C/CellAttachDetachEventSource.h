@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTSingleton.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
 #include "RE/C/CellAttachDetachEvent.h"
 
 namespace RE

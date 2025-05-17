@@ -1302,9 +1302,11 @@ set(SOURCES
 	src/RE/B/BSScript_StructTypeInfo.cpp
 	src/RE/B/BSScript_TypeInfo.cpp
 	src/RE/B/BSScript_Variable.cpp
+	src/RE/B/BSTempEffectUtil.cpp
 	src/RE/B/BSVisit.cpp
 	src/RE/C/Calendar.cpp
 	src/RE/E/ExtraInstanceData.cpp
+	src/RE/F/FormUtil.cpp
 	src/RE/Fallout.cpp
 	src/RE/I/InventoryInterface.cpp
 	src/RE/M/MenuCursor.cpp

@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSInputDevice.h"
 #include "RE/B/BSTSingleton.h"
 #include "RE/I/INPUT_DEVICE.h"
-#include "RE/B/BSInputDevice.h"
 
 namespace RE
 {

@@ -1,8 +1,8 @@
 #pragma once
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource::Archive2
+	namespace Archive2
 	{
 		struct ClearRegistryEvent
 		{

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSResource_ErrorCode.h"
 #include "RE/N/NiPointer.h"
 
 namespace RE

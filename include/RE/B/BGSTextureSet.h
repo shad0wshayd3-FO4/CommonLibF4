@@ -4,7 +4,7 @@
 #include "RE/T/TESBoundObject.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSShaderData.h"
-#include "RE/B/BSResource.h"
+#include "RE/B/BSResource_ID.h"
 #include "RE/T/TESTexture.h"
 
 namespace RE

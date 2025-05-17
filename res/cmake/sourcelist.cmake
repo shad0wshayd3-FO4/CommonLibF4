@@ -48,8 +48,6 @@ set(SOURCES
 	include/RE/A/Array.h
 	include/RE/A/ArrayWrapper.h
 	include/RE/A/ArrowProjectile.h
-	include/RE/A/AsyncReaderStream.h
-	include/RE/A/AsyncStream.h
 	include/RE/A/AttachTechniqueInput.h
 	include/RE/A/AttachedScript.h
 	include/RE/A/AttackBlockHandler.h
@@ -216,7 +214,6 @@ set(SOURCES
 	include/RE/B/BGSTransform.h
 	include/RE/B/BGSTypedFormValuePair.h
 	include/RE/B/BGSTypedKeywordValue.h
-	include/RE/B/BGSTypedKeywordValueArray.h
 	include/RE/B/BGSVoiceType.h
 	include/RE/B/BGSZoomData.h
 	include/RE/B/BIPED_MODEL.h
@@ -236,6 +233,7 @@ set(SOURCES
 	include/RE/B/BSCRC32.h
 	include/RE/B/BSContainer.h
 	include/RE/B/BSCoreTypes.h
+	include/RE/B/BSCriticalSection.h
 	include/RE/B/BSEventFlag.h
 	include/RE/B/BSExtraData.h
 	include/RE/B/BSFadeNode.h
@@ -290,13 +288,38 @@ set(SOURCES
 	include/RE/B/BSPackedTaskQueue.h
 	include/RE/B/BSPointerAllocator.h
 	include/RE/B/BSPointerHandle.h
-	include/RE/B/BSPointerHandleManagerInterface.h
 	include/RE/B/BSPreCulledObjects.h
 	include/RE/B/BSPrecomputedNavmeshInfoPathMap.h
 	include/RE/B/BSRandom.h
 	include/RE/B/BSReloadShaderI.h
 	include/RE/B/BSResource.h
 	include/RE/B/BSResourceNiBinaryStream.h
+	include/RE/B/BSResource_Archive2_AsyncReaderStream.h
+	include/RE/B/BSResource_Archive2_ClearRegistryEvent.h
+	include/RE/B/BSResource_Archive2_DataReader.h
+	include/RE/B/BSResource_Archive2_Index.h
+	include/RE/B/BSResource_Archive2_ReaderStream.h
+	include/RE/B/BSResource_Archive2_RegisteredEvent.h
+	include/RE/B/BSResource_Archive2_StreamOpenedEvent.h
+	include/RE/B/BSResource_AsyncStream.h
+	include/RE/B/BSResource_EntryBase.h
+	include/RE/B/BSResource_EntryBucketQueue.h
+	include/RE/B/BSResource_EntryDBBaseUtil.h
+	include/RE/B/BSResource_EntryQueue.h
+	include/RE/B/BSResource_ErrorCode.h
+	include/RE/B/BSResource_FileID.h
+	include/RE/B/BSResource_GlobalLocations.h
+	include/RE/B/BSResource_GlobalPaths.h
+	include/RE/B/BSResource_ICacheDriveOp.h
+	include/RE/B/BSResource_ID.h
+	include/RE/B/BSResource_IEntryDB.h
+	include/RE/B/BSResource_Info.h
+	include/RE/B/BSResource_Location.h
+	include/RE/B/BSResource_LooseFileStreamBase.h
+	include/RE/B/BSResource_SDirectory2.h
+	include/RE/B/BSResource_SeekMode.h
+	include/RE/B/BSResource_Stream.h
+	include/RE/B/BSResource_StreamBase.h
 	include/RE/B/BSSaveDataSystemUtility.h
 	include/RE/B/BSSaveDataSystemUtilityImage.h
 	include/RE/B/BSScaleformExternalTexture.h
@@ -331,7 +354,6 @@ set(SOURCES
 	include/RE/B/BSTFreeList.h
 	include/RE/B/BSTHashMap.h
 	include/RE/B/BSTInterpolator.h
-	include/RE/B/BSTLocklessQueue.h
 	include/RE/B/BSTMessageQueue.h
 	include/RE/B/BSTObjectArena.h
 	include/RE/B/BSTOptional.h
@@ -376,22 +398,9 @@ set(SOURCES
 	include/RE/B/Bleedout.h
 	include/RE/B/BobbleheadCollected.h
 	include/RE/B/BooksRead.h
-	include/RE/B/BucketTable.h
 	include/RE/B/ButtonEvent.h
 	include/RE/B/ButtonHintBar.h
-	include/RE/B/bhkCharProxyManager.h
-	include/RE/B/bhkCharRigidBodyManager.h
-	include/RE/B/bhkCharacterController.h
 	include/RE/B/bhkCollisionQueryResultHandle.h
-	include/RE/B/bhkIWorldStepListener.h
-	include/RE/B/bhkNPCollisionObject.h
-	include/RE/B/bhkNPCollisionObjectBase.h
-	include/RE/B/bhkNPCollisionObjectUnlinked.h
-	include/RE/B/bhkPhysicsSystem.h
-	include/RE/B/bhkPickData.h
-	include/RE/B/bhkUtilFunctions.h
-	include/RE/B/bhkWorld.h
-	include/RE/B/bhkWorldM.h
 	include/RE/C/CALCED_OBJECT.h
 	include/RE/C/CELLJobs.h
 	include/RE/C/CFilter.h
@@ -410,7 +419,6 @@ set(SOURCES
 	include/RE/C/CellAttachDetachEvent.h
 	include/RE/C/CellAttachDetachEventSource.h
 	include/RE/C/CharacterEvent.h
-	include/RE/C/ClearRegistryEvent.h
 	include/RE/C/CodeTasklet.h
 	include/RE/C/ColorUpdateEvent.h
 	include/RE/C/CombatFormulas.h
@@ -453,7 +461,6 @@ set(SOURCES
 	include/RE/D/DIALOGUE_TYPE.h
 	include/RE/D/DIRECTION_VAL.h
 	include/RE/D/DamageImpactData.h
-	include/RE/D/DataReader.h
 	include/RE/D/DecalData.h
 	include/RE/D/DefaultObjectFormFactory.h
 	include/RE/D/DestructibleObjectData.h
@@ -482,10 +489,6 @@ set(SOURCES
 	include/RE/E/EffectSetting.h
 	include/RE/E/EffectShaderData.h
 	include/RE/E/EnchantmentItem.h
-	include/RE/E/EntryBase.h
-	include/RE/E/EntryBucketQueue.h
-	include/RE/E/EntryDBBaseUtil.h
-	include/RE/E/EntryQueue.h
 	include/RE/E/EquipSlotData.h
 	include/RE/E/EquippedItem.h
 	include/RE/E/EquippedItemData.h
@@ -537,27 +540,13 @@ set(SOURCES
 	include/RE/F/FriendshipFactionsStruct.h
 	include/RE/F/FunctionMessage.h
 	include/RE/Fallout.h
-	include/RE/G/GFxAS3.h
-	include/RE/G/GFxASMovieRootBase.h
-	include/RE/G/GFxASString.h
-	include/RE/G/GFxLoader.h
-	include/RE/G/GFxLog.h
-	include/RE/G/GFxPlayer.h
-	include/RE/G/GFxPlayerImpl.h
-	include/RE/G/GFxPlayerStats.h
-	include/RE/G/GFxResource.h
-	include/RE/G/GFxStats.h
-	include/RE/G/GFxTypes.h
 	include/RE/G/GROUP_REACTION.h
 	include/RE/G/GUN_STATE.h
 	include/RE/G/GameMenuBase.h
 	include/RE/G/GamePlayFormulas.h
 	include/RE/G/GameScript.h
 	include/RE/G/GameUIModel.h
-	include/RE/G/GameVM.h
 	include/RE/G/GetCurrentPositionFunctor.h
-	include/RE/G/GlobalLocations.h
-	include/RE/G/GlobalPaths.h
 	include/RE/G/GrenadeProjectile.h
 	include/RE/G/GridArray.h
 	include/RE/G/GridCell.h
@@ -576,102 +565,12 @@ set(SOURCES
 	include/RE/H/HolotapeMenu.h
 	include/RE/H/HolotapeStateChanged.h
 	include/RE/H/HourPassed.h
-	include/RE/H/hkAabb.h
-	include/RE/H/hkAabb16.h
-	include/RE/H/hkArray.h
-	include/RE/H/hkBaseObject.h
-	include/RE/H/hkBitField.h
-	include/RE/H/hkBlockStream.h
-	include/RE/H/hkBlockStreamBase.h
-	include/RE/H/hkBool.h
-	include/RE/H/hkContainerHeapAllocator.h
-	include/RE/H/hkCriticalSection.h
-	include/RE/H/hkCriticalSectionLock.h
-	include/RE/H/hkEnum.h
-	include/RE/H/hkFlags.h
-	include/RE/H/hkHalf.h
-	include/RE/H/hkHandle.h
-	include/RE/H/hkHardwareInfo.h
-	include/RE/H/hkIntSpaceUtil.h
-	include/RE/H/hkLifoAllocator.h
-	include/RE/H/hkMap.h
-	include/RE/H/hkMemoryAllocator.h
-	include/RE/H/hkMemoryRouter.h
-	include/RE/H/hkMemorySystem.h
-	include/RE/H/hkMonitorStream.h
-	include/RE/H/hkPadSpu.h
-	include/RE/H/hkProcessContext.h
-	include/RE/H/hkProcessFactory.h
-	include/RE/H/hkQuaternionf.h
-	include/RE/H/hkReal.h
-	include/RE/H/hkRefPtr.h
-	include/RE/H/hkReferencedObject.h
-	include/RE/H/hkRelArray.h
-	include/RE/H/hkResult.h
-	include/RE/H/hkResultEnum.h
-	include/RE/H/hkSignal.h
-	include/RE/H/hkSimdFloat32.h
-	include/RE/H/hkSlot.h
-	include/RE/H/hkStepInfo.h
-	include/RE/H/hkStopwatch.h
-	include/RE/H/hkStringPtr.h
-	include/RE/H/hkTransformf.h
-	include/RE/H/hkVector4f.h
-	include/RE/H/hkVisualDebugger.h
-	include/RE/H/hkVtableClassRegistry.h
-	include/RE/H/hkcdRayQueryFlags.h
-	include/RE/H/hknpActivationMode.h
-	include/RE/H/hknpAllHitsCollector.h
-	include/RE/H/hknpBSWorld.h
-	include/RE/H/hknpBody.h
-	include/RE/H/hknpBodyCinfo.h
-	include/RE/H/hknpBodyId.h
-	include/RE/H/hknpBodyManager.h
-	include/RE/H/hknpBodyQualityId.h
-	include/RE/H/hknpCapsuleShape.h
-	include/RE/H/hknpCharacterContext.h
-	include/RE/H/hknpCharacterState.h
-	include/RE/H/hknpCharacterSurfaceInfo.h
-	include/RE/H/hknpClosestHitCollector.h
-	include/RE/H/hknpClosestUniqueBodyIdHitCollector.h
-	include/RE/H/hknpCollisionDispatchType.h
-	include/RE/H/hknpCollisionFlags.h
-	include/RE/H/hknpCollisionFlagsEnum.h
-	include/RE/H/hknpCollisionQueryCollector.h
-	include/RE/H/hknpCollisionQueryType.h
-	include/RE/H/hknpCollisionResult.h
-	include/RE/H/hknpConstraintId.h
-	include/RE/H/hknpConstraintManager.h
-	include/RE/H/hknpContactSolverType.h
-	include/RE/H/hknpConvexPolytopeShape.h
-	include/RE/H/hknpConvexShape.h
-	include/RE/H/hknpDefaultViewerColorScheme.h
-	include/RE/H/hknpMaterialId.h
-	include/RE/H/hknpMotionCinfo.h
-	include/RE/H/hknpMotionId.h
-	include/RE/H/hknpMotionManager.h
-	include/RE/H/hknpMotionPropertiesId.h
-	include/RE/H/hknpPhysicsSystem.h
-	include/RE/H/hknpPhysicsSystemData.h
-	include/RE/H/hknpProcessContext.h
-	include/RE/H/hknpShape.h
-	include/RE/H/hknpShapeManager.h
-	include/RE/H/hknpShapeType.h
-	include/RE/H/hknpSolverInfo.h
-	include/RE/H/hknpThreadSafetyCheck.h
-	include/RE/H/hknpUniqueBodyIdHitCollector.h
-	include/RE/H/hknpViewerColorScheme.h
-	include/RE/H/hknpWorld.h
-	include/RE/H/hknpWorldCinfo.h
-	include/RE/H/hknpWorldSignals.h
 	include/RE/I/IAnimationGraphManagerHolder.h
-	include/RE/I/ICacheDriveOp.h
 	include/RE/I/ICachedErrorMessage.h
 	include/RE/I/IClientVM.h
 	include/RE/I/IComplexType.h
 	include/RE/I/IDEvent.h
 	include/RE/I/IDLE_DATA.h
-	include/RE/I/IEntryDB.h
 	include/RE/I/IEventCallback.h
 	include/RE/I/IFormFactory.h
 	include/RE/I/IFuncCallQuery.h
@@ -733,7 +632,6 @@ set(SOURCES
 	include/RE/I/ImageSpaceModifierInstanceTemp.h
 	include/RE/I/ImageSpaceTexture.h
 	include/RE/I/ImpactResult.h
-	include/RE/I/Index.h
 	include/RE/I/IngredientItem.h
 	include/RE/I/InputEvent.h
 	include/RE/I/Interface3D.h
@@ -758,13 +656,11 @@ set(SOURCES
 	include/RE/L/LoadingMenu.h
 	include/RE/L/LoadingStatusChanged.h
 	include/RE/L/LocalMapCameraUpdate.h
-	include/RE/L/Location.h
 	include/RE/L/LocationMarkerArrayUpdate.h
 	include/RE/L/LockpickingMenu.h
 	include/RE/L/LocksPicked.h
 	include/RE/L/LogEvent.h
 	include/RE/L/LookHandler.h
-	include/RE/L/LooseFileStreamBase.h
 	include/RE/M/MELEE_ATTACK_SPEED.h
 	include/RE/M/MENU_RENDER_CONTEXT.h
 	include/RE/M/MESSAGEBOX_BUTTON.h
@@ -808,7 +704,6 @@ set(SOURCES
 	include/RE/N/NiCloningProcess.h
 	include/RE/N/NiCollisionObject.h
 	include/RE/N/NiColor.h
-	include/RE/N/NiColorA.h
 	include/RE/N/NiControllerManager.h
 	include/RE/N/NiControllerSequence.h
 	include/RE/N/NiExtraData.h
@@ -822,9 +717,7 @@ set(SOURCES
 	include/RE/N/NiNode.h
 	include/RE/N/NiObject.h
 	include/RE/N/NiObjectNET.h
-	include/RE/N/NiPoint2.h
-	include/RE/N/NiPoint3.h
-	include/RE/N/NiPoint4.h
+	include/RE/N/NiPoint.h
 	include/RE/N/NiPointer.h
 	include/RE/N/NiProperty.h
 	include/RE/N/NiQuaternion.h
@@ -840,6 +733,8 @@ set(SOURCES
 	include/RE/N/NiTLargeArray.h
 	include/RE/N/NiTList.h
 	include/RE/N/NiTMap.h
+	include/RE/N/NiTPointerAllocator.h
+	include/RE/N/NiTPointerMap.h
 	include/RE/N/NiTexture.h
 	include/RE/N/NiTimeController.h
 	include/RE/N/NiTransform.h
@@ -958,12 +853,10 @@ set(SOURCES
 	include/RE/R/RawFuncCallQuery.h
 	include/RE/R/ReadableStringTable.h
 	include/RE/R/ReadableTypeTable.h
-	include/RE/R/ReaderStream.h
 	include/RE/R/ReadyWeaponHandler.h
 	include/RE/R/RefAttachTechniqueInput.h
 	include/RE/R/ReferenceEffect.h
 	include/RE/R/ReferenceEffectController.h
-	include/RE/R/RegisteredEvent.h
 	include/RE/R/RepairFailureCallback.h
 	include/RE/R/RepeaterData.h
 	include/RE/R/ResponseListWrapper.h
@@ -979,37 +872,8 @@ set(SOURCES
 	include/RE/S/SCRIPT_PARAMETER.h
 	include/RE/S/SCRIPT_PARAM_TYPE.h
 	include/RE/S/SCRIPT_REFERENCED_OBJECT.h
-	include/RE/S/SDirectory2.h
 	include/RE/S/SEX.h
-	include/RE/S/SFAllocInfo.h
-	include/RE/S/SFAllocator.h
-	include/RE/S/SFArray.h
-	include/RE/S/SFArrayPaged.h
-	include/RE/S/SFAtomic.h
-	include/RE/S/SFList.h
-	include/RE/S/SFLog.h
-	include/RE/S/SFMemory.h
-	include/RE/S/SFMemoryHeap.h
-	include/RE/S/SFRefCount.h
-	include/RE/S/SFRenderColor.h
-	include/RE/S/SFRenderConstants.h
-	include/RE/S/SFRenderContainers.h
-	include/RE/S/SFRenderContext.h
-	include/RE/S/SFRenderMatrix2x4.h
-	include/RE/S/SFRenderMatrix3x4.h
-	include/RE/S/SFRenderMatrix4x4.h
-	include/RE/S/SFRenderScreenToWorld.h
-	include/RE/S/SFRenderThreadCommandQueue.h
-	include/RE/S/SFRenderTreeNode.h
-	include/RE/S/SFRenderTreeShape.h
-	include/RE/S/SFRenderTypes2D.h
-	include/RE/S/SFRenderViewport.h
 	include/RE/S/SFRendererInitializedEvent.h
-	include/RE/S/SFStats.h
-	include/RE/S/SFSysAlloc.h
-	include/RE/S/SFSystem.h
-	include/RE/S/SFThreads.h
-	include/RE/S/SFTypes.h
 	include/RE/S/SIT_SLEEP_STATE.h
 	include/RE/S/SOUND_LEVEL.h
 	include/RE/S/SPECIALMenuEvent.h
@@ -1047,9 +911,6 @@ set(SOURCES
 	include/RE/S/StartMenuBase.h
 	include/RE/S/StatsEvent.h
 	include/RE/S/StolenItemValueStruct.h
-	include/RE/S/Stream.h
-	include/RE/S/StreamBase.h
-	include/RE/S/StreamOpenedEvent.h
 	include/RE/S/Struct.h
 	include/RE/S/StructTypeInfo.h
 	include/RE/S/SubGraphIdleRootData.h
@@ -1284,6 +1145,137 @@ set(SOURCES
 	include/REX/W32/USER32.h
 	include/REX/W32/VERSION.h
 	include/REX/W32/XINPUT.h
+	include/Scaleform/A/AcquireInterface.h
+	include/Scaleform/A/AllocInfo.h
+	include/Scaleform/A/Allocator.h
+	include/Scaleform/A/Array.h
+	include/Scaleform/A/ArrayPaged.h
+	include/Scaleform/A/Atomic.h
+	include/Scaleform/A/AutoPtr.h
+	include/Scaleform/E/Event.h
+	include/Scaleform/F/Flags.h
+	include/Scaleform/G/GFx_AS3_ASVM.h
+	include/Scaleform/G/GFx_AS3_Abc_ClassTable.h
+	include/Scaleform/G/GFx_AS3_Abc_ConstPool.h
+	include/Scaleform/G/GFx_AS3_Abc_File.h
+	include/Scaleform/G/GFx_AS3_Abc_MbiInd.h
+	include/Scaleform/G/GFx_AS3_Abc_MetadataTable.h
+	include/Scaleform/G/GFx_AS3_Abc_MethodBodyTable.h
+	include/Scaleform/G/GFx_AS3_Abc_MethodTable.h
+	include/Scaleform/G/GFx_AS3_Abc_NamespaceInfo.h
+	include/Scaleform/G/GFx_AS3_Abc_NamespaceKind.h
+	include/Scaleform/G/GFx_AS3_Abc_ScriptTable.h
+	include/Scaleform/G/GFx_AS3_Abc_TraitTable.h
+	include/Scaleform/G/GFx_AS3_CallFrame.h
+	include/Scaleform/G/GFx_AS3_FlashUI.h
+	include/Scaleform/G/GFx_AS3_GASRefCountBase.h
+	include/Scaleform/G/GFx_AS3_MovieRoot.h
+	include/Scaleform/G/GFx_AS3_RefCountBaseGC.h
+	include/Scaleform/G/GFx_AS3_SPtr.h
+	include/Scaleform/G/GFx_AS3_StringManager.h
+	include/Scaleform/G/GFx_AS3_TypeInfo.h
+	include/Scaleform/G/GFx_AS3_VM.h
+	include/Scaleform/G/GFx_AS3_VMAbcFile.h
+	include/Scaleform/G/GFx_AS3_VMFile.h
+	include/Scaleform/G/GFx_AS3_Value.h
+	include/Scaleform/G/GFx_ASConstString.h
+	include/Scaleform/G/GFx_ASIntervalTimerIntf.h
+	include/Scaleform/G/GFx_ASMovieRootBase.h
+	include/Scaleform/G/GFx_ASString.h
+	include/Scaleform/G/GFx_ASStringBuiltinManagerT.h
+	include/Scaleform/G/GFx_ASStringManager.h
+	include/Scaleform/G/GFx_ASStringNode.h
+	include/Scaleform/G/GFx_ASStringNodeHolder.h
+	include/Scaleform/G/GFx_ActionControl.h
+	include/Scaleform/G/GFx_ExporterInfo.h
+	include/Scaleform/G/GFx_ExternalInterface.h
+	include/Scaleform/G/GFx_ExternalLibPtr.h
+	include/Scaleform/G/GFx_FSCommandHandler.h
+	include/Scaleform/G/GFx_FileTypeConstants.h
+	include/Scaleform/G/GFx_FocusGroupDescr.h
+	include/Scaleform/G/GFx_FocusMovedType.h
+	include/Scaleform/G/GFx_FunctionHandler.h
+	include/Scaleform/G/GFx_HeapId.h
+	include/Scaleform/G/GFx_KeyboardState.h
+	include/Scaleform/G/GFx_Loader.h
+	include/Scaleform/G/GFx_Log.h
+	include/Scaleform/G/GFx_LogBase.h
+	include/Scaleform/G/GFx_LogState.h
+	include/Scaleform/G/GFx_MemoryContext.h
+	include/Scaleform/G/GFx_MemoryParams.h
+	include/Scaleform/G/GFx_Movie.h
+	include/Scaleform/G/GFx_MovieDef.h
+	include/Scaleform/G/GFx_MovieImpl.h
+	include/Scaleform/G/GFx_MultitouchInterface.h
+	include/Scaleform/G/GFx_PlayState.h
+	include/Scaleform/G/GFx_Resource.h
+	include/Scaleform/G/GFx_ResourceId.h
+	include/Scaleform/G/GFx_ResourceKey.h
+	include/Scaleform/G/GFx_ResourceLibBase.h
+	include/Scaleform/G/GFx_StatAmp.h
+	include/Scaleform/G/GFx_StatFontCache.h
+	include/Scaleform/G/GFx_StatGroup.h
+	include/Scaleform/G/GFx_StatIME.h
+	include/Scaleform/G/GFx_StatMovieData.h
+	include/Scaleform/G/GFx_StatMovieView.h
+	include/Scaleform/G/GFx_State.h
+	include/Scaleform/G/GFx_StateBag.h
+	include/Scaleform/G/GFx_System.h
+	include/Scaleform/G/GFx_Translator.h
+	include/Scaleform/G/GFx_UserEventHandler.h
+	include/Scaleform/G/GFx_Value.h
+	include/Scaleform/G/GFx_Viewport.h
+	include/Scaleform/L/List.h
+	include/Scaleform/L/Lock.h
+	include/Scaleform/L/Log.h
+	include/Scaleform/L/LogMessageId.h
+	include/Scaleform/M/Memory.h
+	include/Scaleform/M/MemoryHeap.h
+	include/Scaleform/M/Mutex.h
+	include/Scaleform/N/NewOverrideBase.h
+	include/Scaleform/P/Ptr.h
+	include/Scaleform/R/RefCountBase.h
+	include/Scaleform/R/Render_Color.h
+	include/Scaleform/R/Render_ContextImpl_Context.h
+	include/Scaleform/R/Render_ContextImpl_ContextCaptureNotify.h
+	include/Scaleform/R/Render_ContextImpl_ContextData_ImplMixin.h
+	include/Scaleform/R/Render_ContextImpl_ContextLock.h
+	include/Scaleform/R/Render_ContextImpl_DisplayHandle.h
+	include/Scaleform/R/Render_ContextImpl_Entry.h
+	include/Scaleform/R/Render_ContextImpl_EntryChange.h
+	include/Scaleform/R/Render_ContextImpl_EntryData.h
+	include/Scaleform/R/Render_ContextImpl_EntryListAccessor.h
+	include/Scaleform/R/Render_ContextImpl_EntryPage.h
+	include/Scaleform/R/Render_ContextImpl_EntryPageBase.h
+	include/Scaleform/R/Render_ContextImpl_EntryTable.h
+	include/Scaleform/R/Render_ContextImpl_RTHandle.h
+	include/Scaleform/R/Render_ContextImpl_RenderNotify.h
+	include/Scaleform/R/Render_ContextImpl_SnapshotPage.h
+	include/Scaleform/R/Render_EdgeAAMode.h
+	include/Scaleform/R/Render_Interfaces.h
+	include/Scaleform/R/Render_LinearHeap.h
+	include/Scaleform/R/Render_Matrix.h
+	include/Scaleform/R/Render_PagedItemBuffer.h
+	include/Scaleform/R/Render_Point.h
+	include/Scaleform/R/Render_Rect.h
+	include/Scaleform/R/Render_ScreenToWorld.h
+	include/Scaleform/R/Render_ThreadCommand.h
+	include/Scaleform/R/Render_ThreadCommandQueue.h
+	include/Scaleform/R/Render_TreeContainer.h
+	include/Scaleform/R/Render_TreeNode.h
+	include/Scaleform/R/Render_TreeRoot.h
+	include/Scaleform/R/Render_TreeShape.h
+	include/Scaleform/R/Render_Viewport.h
+	include/Scaleform/S/StatBag.h
+	include/Scaleform/S/StatBasicValues.h
+	include/Scaleform/S/String.h
+	include/Scaleform/S/StringDataPtr.h
+	include/Scaleform/S/SysAlloc.h
+	include/Scaleform/S/System.h
+	include/Scaleform/Scaleform.h
+	include/Scaleform/T/ThreadId.h
+	include/Scaleform/W/WaitCondition.h
+	include/Scaleform/W/Waitable.h
 	src/F4SE/API.cpp
 	src/F4SE/Impl/PCH.cpp
 	src/F4SE/InputMap.cpp
@@ -1292,26 +1284,26 @@ set(SOURCES
 	src/RE/A/Actor.cpp
 	src/RE/A/Array.cpp
 	src/RE/B/BGSInventoryItem.cpp
+	src/RE/B/BGSKeyword.cpp
 	src/RE/B/BGSKeywordForm.cpp
 	src/RE/B/BGSLocation.cpp
 	src/RE/B/BGSObjectInstanceExtra.cpp
 	src/RE/B/BSResource.cpp
 	src/RE/B/BSResourceNiBinaryStream.cpp
+	src/RE/B/BSResource_Stream.cpp
+	src/RE/B/BSResource_StreamBase.cpp
 	src/RE/B/BSScaleformManager.cpp
 	src/RE/B/BSVisit.cpp
 	src/RE/C/Calendar.cpp
 	src/RE/E/ExtraInstanceData.cpp
 	src/RE/Fallout.cpp
-	src/RE/G/GFxPlayer.cpp
 	src/RE/I/InventoryInterface.cpp
 	src/RE/M/MenuCursor.cpp
 	src/RE/N/NiAVObject.cpp
 	src/RE/N/NiBinaryStream.cpp
 	src/RE/N/NiMatrix3.cpp
 	src/RE/N/NiObjectNET.cpp
-	src/RE/N/NiPoint2.cpp
-	src/RE/N/NiPoint3.cpp
-	src/RE/N/NiPoint4.cpp
+	src/RE/N/NiPoint.cpp
 	src/RE/N/NiRect.cpp
 	src/RE/N/NiTransform.cpp
 	src/RE/O/Object.cpp
@@ -1319,8 +1311,6 @@ set(SOURCES
 	src/RE/P/PackedInstructionStream.cpp
 	src/RE/P/PlayerCharacter.cpp
 	src/RE/S/StackFrame.cpp
-	src/RE/S/Stream.cpp
-	src/RE/S/StreamBase.cpp
 	src/RE/S/Struct.cpp
 	src/RE/S/StructTypeInfo.cpp
 	src/RE/T/TESFullName.cpp
@@ -1341,4 +1331,6 @@ set(SOURCES
 	src/REL/Version.cpp
 	src/REX/REX.cpp
 	src/REX/W32.cpp
+	src/Scaleform/G/GFx_Movie.cpp
+	src/Scaleform/Scaleform.cpp
 )

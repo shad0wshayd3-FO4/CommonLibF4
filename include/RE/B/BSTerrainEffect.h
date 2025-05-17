@@ -7,7 +7,7 @@
 #include "RE/N/NiPoint.h"
 #include "RE/N/NiMatrix3.h"
 #include "RE/N/NiQuaternion.h"
-#include "RE/B/BSResource.h"
+#include "RE/B/BSResource_ID.h"
 #include "RE/B/BSPointerHandle.h"
 
 namespace RE

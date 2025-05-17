@@ -1,12 +1,12 @@
 #pragma once
 
-#include "RE/A/AsyncStream.h"
+#include "RE/B/BSResource_AsyncStream.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSFixedString.h"
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource::Archive2
+	namespace Archive2
 	{
 		class __declspec(novtable) AsyncReaderStream :
 			public AsyncStream  // 00
@@ -15,7 +15,10 @@ namespace RE
 			static constexpr auto RTTI{ RTTI::BSResource__Archive2__AsyncReaderStream };
 			static constexpr auto VTABLE{ VTABLE::BSResource__Archive2__AsyncReaderStream };
 
-			AsyncReaderStream() { stl::emplace_vtable<AsyncReaderStream>(this); }
+			AsyncReaderStream()
+			{
+				stl::emplace_vtable<AsyncReaderStream>(this);
+			}
 
 			// override
 			ErrorCode DoOpen() override  // 01
@@ -32,8 +35,7 @@ namespace RE
 				return func(this);
 			}
 
-			void DoClone(
-				BSTSmartPointer<AsyncStream>& a_result) const override  // 05
+			void DoClone(BSTSmartPointer<AsyncStream>& a_result) const override  // 05
 			{
 				using func_t = decltype(&AsyncReaderStream::DoClone);
 				static REL::Relocation<func_t> func{ REL::ID(803750) };
@@ -60,23 +62,17 @@ namespace RE
 				return func(this, a_buffer, a_bytes, a_offset);
 			}
 
-			ErrorCode DoStartWrite(
-				const void*,
-				std::uint64_t,
-				std::uint64_t) const override  // 08
+			ErrorCode DoStartWrite(const void*, std::uint64_t, std::uint64_t) const override  // 08
 			{
 				return ErrorCode::kUnsupported;
 			}
 
-			ErrorCode DoTruncate(
-				std::uint64_t) const override  // 09
+			ErrorCode DoTruncate(std::uint64_t) const override  // 09
 			{
 				return ErrorCode::kUnsupported;
 			}
 
-			ErrorCode DoWait(
-				std::uint64_t& a_transferred,
-				bool           a_block) override  // 0B
+			ErrorCode DoWait(std::uint64_t& a_transferred, bool a_block) override  // 0B
 			{
 				using func_t = decltype(&AsyncReaderStream::DoWait);
 				static REL::Relocation<func_t> func{ REL::ID(2269399) };

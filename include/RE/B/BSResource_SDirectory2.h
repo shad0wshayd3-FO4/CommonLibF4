@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RE/I/Index.h"
+#include "RE/B/BSResource_Archive2_Index.h"
 
 namespace RE::BSResource::SDirectory2
 {

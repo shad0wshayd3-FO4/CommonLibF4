@@ -1,12 +1,12 @@
 #pragma once
 
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSResource_Stream.h"
 #include "RE/M/MemoryManager.h"
-#include "RE/S/Stream.h"
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource::Archive2
+	namespace Archive2
 	{
 		class DataReader
 		{

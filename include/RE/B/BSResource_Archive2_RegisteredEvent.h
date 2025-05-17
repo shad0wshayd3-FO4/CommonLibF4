@@ -1,11 +1,11 @@
 #pragma once
 
-#include "RE/D/DataReader.h"
-#include "RE/B/BSResource.h"
+#include "RE/B/BSResource_Archive2_DataReader.h"
+#include "RE/B/BSResource_ID.h"
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource::Archive2
+	namespace Archive2
 	{
 		class RegisteredEvent
 		{

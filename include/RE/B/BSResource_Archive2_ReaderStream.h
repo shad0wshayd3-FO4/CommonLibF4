@@ -1,12 +1,12 @@
 #pragma once
 
-#include "RE/S/Stream.h"
+#include "RE/B/BSResource_Stream.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSFixedString.h"
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource::Archive2
+	namespace Archive2
 	{
 		class __declspec(novtable) ReaderStream :
 			public Stream  // 00

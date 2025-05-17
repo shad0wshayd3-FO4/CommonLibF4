@@ -1,7 +1,7 @@
 #pragma once
 
 #include "RE/B/BSFixedString.h"
-#include "RE/B/BSResource.h"
+#include "RE/B/BSResource_ID.h"
 
 namespace RE
 {

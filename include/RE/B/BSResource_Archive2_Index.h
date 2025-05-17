@@ -5,14 +5,16 @@
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSTSmallIndexScatterTable.h"
-#include "RE/B/BSResource.h"
 #include "RE/B/BSSpinLock.h"
-#include "RE/S/Stream.h"
-#include "RE/A/AsyncStream.h"
+#include "RE/B/BSResource_ID.h"
+#include "RE/B/BSResource_AsyncStream.h"
+#include "RE/B/BSResource_Stream.h"
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource::Archive2
+	class Location;
+
+	namespace Archive2
 	{
 		struct RegisteredEvent;
 		struct ClearRegistryEvent;

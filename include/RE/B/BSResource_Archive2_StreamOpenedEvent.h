@@ -2,9 +2,9 @@
 
 #include "RE/B/BSFixedString.h"
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource::Archive2
+	namespace Archive2
 	{
 		class StreamOpenedEvent
 		{

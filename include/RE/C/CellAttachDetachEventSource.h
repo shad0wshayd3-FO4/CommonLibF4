@@ -7,7 +7,7 @@ namespace RE
 {
 	namespace CellAttachDetachEventSource
 	{
-		struct CellAttachDetachEventSourceSingleton :
+		class CellAttachDetachEventSourceSingleton :
 			public BSTSingletonImplicit<CellAttachDetachEventSourceSingleton>
 		{
 		public:

@@ -16,10 +16,10 @@ namespace RE
 	class NiNode;
 	class QueuedFile;
 
-	struct LOADED_CELL_DATA
+	class LOADED_CELL_DATA
 	{
 	public:
-		struct AnimatedRefObject
+		class AnimatedRefObject
 		{
 		public:
 			// members

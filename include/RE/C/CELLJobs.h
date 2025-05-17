@@ -7,9 +7,9 @@ namespace RE
 {
 	class NiUpdateData;
 
-	struct CELLJobs
+	namespace CELLJobs
 	{
-		struct AnimatedRefJobData
+		class AnimatedRefJobData
 		{
 		public:
 			// members
@@ -21,7 +21,7 @@ namespace RE
 		};
 		static_assert(sizeof(AnimatedRefJobData) == 0x18);
 
-		struct TransUpdateFunctor
+		class TransUpdateFunctor
 		{
 		public:
 			// members

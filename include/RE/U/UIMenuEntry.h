@@ -7,7 +7,7 @@ namespace RE
 	class IMenu;
 	class UIMessage;
 
-	struct UIMenuEntry
+	class UIMenuEntry
 	{
 	public:
 		using Create_t = IMenu*(const UIMessage&);

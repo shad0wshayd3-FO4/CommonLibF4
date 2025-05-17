@@ -27,7 +27,7 @@
 
 namespace RE
 {
-	struct EquipSlotData;
+	class EquipSlotData;
 
 	class __declspec(novtable) TESRace :
 		public TESForm,             // 000
@@ -46,7 +46,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESRace };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kRACE };
 
-		struct MOVEMENT_SPEED_OVERRIDE
+		class MOVEMENT_SPEED_OVERRIDE
 		{
 		public:
 			// members
@@ -55,7 +55,7 @@ namespace RE
 		};
 		static_assert(sizeof(MOVEMENT_SPEED_OVERRIDE) == 0x78);
 
-		struct FaceRelatedData
+		class FaceRelatedData
 		{
 		public:
 			// members
@@ -74,7 +74,7 @@ namespace RE
 		};
 		static_assert(sizeof(FaceRelatedData) == 0x68);
 
-		struct BodyMorphData
+		class BodyMorphData
 		{
 		public:
 			// members

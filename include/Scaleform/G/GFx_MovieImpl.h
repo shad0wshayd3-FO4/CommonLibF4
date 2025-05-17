@@ -79,16 +79,18 @@ namespace Scaleform
 			};
 			static_assert(sizeof(DragState) == 0x30);
 
-			struct FontDesc
+			class FontDesc
 			{
+			public:
 				// members
 				Ptr<MovieDef>     movieDef;
 				Ptr<FontResource> font;
 			};
 			static_assert(sizeof(FontDesc) == 0x10);
 
-			struct IndirectTransPair
+			class IndirectTransPair
 			{
+			public:
 				// members
 				Ptr<Render::TreeNode>    transformParent;
 				Ptr<DisplayObjectBase>   obj;
@@ -97,25 +99,28 @@ namespace Scaleform
 			};
 			static_assert(sizeof(IndirectTransPair) == 0x20);
 
-			struct LevelInfo
+			class LevelInfo
 			{
+			public:
 				// members
 				std::int32_t           level;
 				Ptr<InteractiveObject> sprite;
 			};
 			static_assert(sizeof(IndirectTransPair) == 0x20);
 
-			struct MDKillListEntry
+			class MDKillListEntry
 			{
+			public:
 				// members
 				std::uint64_t     killFrameId;
 				Ptr<MovieDefImpl> movieDef;
 			};
 			static_assert(sizeof(MDKillListEntry) == 0x10);
 
-			struct ReturnValueHolder :
+			class ReturnValueHolder :
 				public NewOverrideBase<kStatMV_ActionScript_Mem>
 			{
+			public:
 				// members
 				char*                                       charBuffer;      // 00
 				std::uint32_t                               charBufferSize;  // 08

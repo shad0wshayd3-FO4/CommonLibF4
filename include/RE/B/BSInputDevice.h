@@ -13,7 +13,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSInputDevice };
 		static constexpr auto VTABLE{ VTABLE::BSInputDevice };
 
-		struct InputButton
+		class InputButton
 		{
 		public:
 			// members

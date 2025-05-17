@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct StolenItemValueStruct
+	class StolenItemValueStruct
 	{
 	public:
 		// members

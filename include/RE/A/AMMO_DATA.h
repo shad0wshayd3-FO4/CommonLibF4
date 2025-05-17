@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct AMMO_DATA
+	class AMMO_DATA
 	{
 	public:
 		// members

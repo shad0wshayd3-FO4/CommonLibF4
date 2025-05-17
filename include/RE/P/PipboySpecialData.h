@@ -7,7 +7,7 @@ namespace RE
 {
 	namespace ActorValueEvent
 	{
-		struct ActorValueChangedEvent;
+		class ActorValueChangedEvent;
 	}
 
 	class __declspec(novtable) PipboySpecialData :

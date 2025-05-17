@@ -4,7 +4,7 @@ namespace RE
 {
 	enum class SCRIPT_PARAM_TYPE;
 
-	struct SCRIPT_PARAMETER
+	class SCRIPT_PARAMETER
 	{
 	public:
 		// members

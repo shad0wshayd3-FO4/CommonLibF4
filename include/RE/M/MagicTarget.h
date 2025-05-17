@@ -10,8 +10,8 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::MagicTarget };
 		static constexpr auto VTABLE{ VTABLE::MagicTarget };
 
-		struct AddTargetData;
-		struct SpellDispelData;
+		class AddTargetData;
+		class SpellDispelData;
 
 		// members
 		virtual ~MagicTarget();  // 00

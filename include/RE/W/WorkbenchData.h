@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct WorkbenchData
+	class WorkbenchData
 	{
 	public:
 		enum class Type

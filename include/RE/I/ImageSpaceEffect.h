@@ -20,7 +20,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::ImageSpaceEffect };
 		static constexpr auto VTABLE{ VTABLE::ImageSpaceEffect };
 
-		struct EffectDesc
+		class EffectDesc
 		{
 		public:
 			// members
@@ -32,7 +32,7 @@ namespace RE
 		};
 		static_assert(sizeof(EffectDesc) == 0x20);
 
-		struct EffectInput
+		class EffectInput
 		{
 		public:
 			// members

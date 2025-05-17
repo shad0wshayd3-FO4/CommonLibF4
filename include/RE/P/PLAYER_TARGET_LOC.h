@@ -7,7 +7,7 @@ namespace RE
 {
 	class DoorTeleportData;
 
-	struct PLAYER_TARGET_LOC
+	class PLAYER_TARGET_LOC
 	{
 	public:
 		using ArrivalFunc_t = void(void*);

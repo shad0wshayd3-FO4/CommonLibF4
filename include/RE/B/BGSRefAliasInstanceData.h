@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct BGSRefAliasInstanceData
+	class BGSRefAliasInstanceData
 	{
 	public:
 		// members

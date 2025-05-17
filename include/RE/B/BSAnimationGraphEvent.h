@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct BSAnimationGraphEvent
+	class BSAnimationGraphEvent
 	{
 	public:
 		// members

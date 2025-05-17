@@ -9,8 +9,9 @@ namespace RE
 		enum class ErrorCode;
 		enum class SeekMode;
 
-		struct StreamBuffer
+		class StreamBuffer
 		{
+		public:
 			// members
 			std::size_t                    size;    // 00
 			MemoryManager::AutoScrapBuffer buffer;  // 08

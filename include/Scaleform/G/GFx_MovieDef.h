@@ -18,10 +18,10 @@ namespace Scaleform
 	namespace GFx
 	{
 		class ActionControl;
+		class ExporterInfo;
 		class MemoryContext;
 		class Movie;
 		class ResourceId;
-		struct ExporterInfo;
 
 		class __declspec(novtable) MovieDef :
 			public Resource,  // 00
@@ -50,7 +50,7 @@ namespace Scaleform
 				kAllImages = (kBitmaps | kGradientImages | kNestedMovies)
 			};
 
-			struct __declspec(novtable) ImportVisitor
+			class __declspec(novtable) ImportVisitor
 			{
 			public:
 				virtual ~ImportVisitor() = default;  // 00
@@ -60,7 +60,7 @@ namespace Scaleform
 			};
 			static_assert(sizeof(ImportVisitor) == 0x8);
 
-			struct __declspec(novtable) ResourceVisitor :
+			class __declspec(novtable) ResourceVisitor :
 				public FileTypeConstants  // 00
 			{
 			public:

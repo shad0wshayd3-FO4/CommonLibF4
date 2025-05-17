@@ -7,7 +7,7 @@ namespace RE
 {
 	class HUDModeType;
 
-	struct HUDModeEvent
+	class HUDModeEvent
 	{
 	private:
 		using EventSource_t = BSTGlobalEvent::EventSource<HUDModeEvent>;

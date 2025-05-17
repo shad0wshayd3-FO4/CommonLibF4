@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct BGSScenePhase
+	class BGSScenePhase
 	{
 	public:
 		// members

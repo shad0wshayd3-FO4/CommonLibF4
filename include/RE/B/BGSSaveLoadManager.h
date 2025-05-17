@@ -18,7 +18,7 @@ namespace RE
 
 	namespace SPECIALMenuEvent
 	{
-		struct NameChangedEvent;
+		class NameChangedEvent;
 	}
 
 	class BGSSaveLoadManager :

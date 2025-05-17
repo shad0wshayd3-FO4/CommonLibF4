@@ -8,11 +8,11 @@
 namespace RE
 {
 	class BGSAttachParentArray;
-	struct INSTANCE_FILTER;
+	class INSTANCE_FILTER;
 
 	namespace BGSMod
 	{
-		struct ObjectIndexData;
+		class ObjectIndexData;
 	}
 
 	class __declspec(novtable) BGSObjectInstanceExtra :

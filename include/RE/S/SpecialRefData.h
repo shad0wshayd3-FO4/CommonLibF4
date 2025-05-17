@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct SpecialRefData
+	class SpecialRefData
 	{
 	public:
 		// members

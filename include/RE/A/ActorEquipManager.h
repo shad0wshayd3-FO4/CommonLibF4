@@ -11,7 +11,7 @@ namespace RE
 
 	namespace ActorEquipManagerEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	class ActorEquipManager :

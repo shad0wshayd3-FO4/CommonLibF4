@@ -2,8 +2,9 @@
 
 namespace RE
 {
-	struct CHANGE_TYPES
+	class CHANGE_TYPES
 	{
+	public:
 		enum CHANGE_TYPE : std::uint32_t
 		{
 			kFormCreated = 0,

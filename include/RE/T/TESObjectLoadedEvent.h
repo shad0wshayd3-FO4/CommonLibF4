@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct TESObjectLoadedEvent
+	class TESObjectLoadedEvent
 	{
 	public:
 		[[nodiscard]] static BSTEventSource<TESObjectLoadedEvent>* GetEventSource()

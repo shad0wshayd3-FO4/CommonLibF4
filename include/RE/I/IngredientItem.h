@@ -26,7 +26,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::IngredientItem };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kINGR };
 
-		struct GameData
+		class GameData
 		{
 		public:
 			// members

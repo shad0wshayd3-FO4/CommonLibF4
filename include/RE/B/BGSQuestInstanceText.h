@@ -7,7 +7,7 @@ namespace RE
 	class BGSQuestInstanceText
 	{
 	public:
-		struct StringData
+		class StringData
 		{
 		public:
 			// members
@@ -16,7 +16,7 @@ namespace RE
 		};
 		static_assert(sizeof(StringData) == 0x8);
 
-		struct GlobabValueData
+		class GlobabValueData
 		{
 		public:
 			// members

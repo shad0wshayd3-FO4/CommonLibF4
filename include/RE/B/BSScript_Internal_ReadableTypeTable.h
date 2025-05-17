@@ -15,7 +15,7 @@ namespace RE
 			class ReadableTypeTable
 			{
 			public:
-				struct SaveTypeInfo :
+				class SaveTypeInfo :
 					public BSIntrusiveRefCounted  // 00
 				{
 				public:

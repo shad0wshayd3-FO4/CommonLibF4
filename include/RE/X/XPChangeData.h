@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct XPChangeData
+	class XPChangeData
 	{
 	public:
 		// members

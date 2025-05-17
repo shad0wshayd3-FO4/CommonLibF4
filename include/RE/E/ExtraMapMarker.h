@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct MapMarkerData;
+	class MapMarkerData;
 
 	class __declspec(novtable) ExtraMapMarker :
 		public BSExtraData  // 00

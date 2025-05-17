@@ -23,7 +23,7 @@ namespace RE
 		enum class TextureAddressMode;
 	}
 
-	struct BSShaderData :
+	class BSShaderData :
 		public BSIntrusiveRefCounted  // 000
 	{
 	public:

@@ -9,12 +9,12 @@ namespace RE
 {
 	namespace ActorValueEvents
 	{
-		struct ActorValueChangedEvent;
+		class ActorValueChangedEvent;
 	}
 
 	namespace Workshop
 	{
-		struct WorkshopModeEvent;
+		class WorkshopModeEvent;
 	}
 
 	class __declspec(novtable) PipboyWorkshopData :

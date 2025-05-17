@@ -6,7 +6,7 @@ namespace RE
 	{
 		namespace ByteCode
 		{
-			struct PackedInstructionStream
+			class PackedInstructionStream
 			{
 			public:
 				PackedInstructionStream();

@@ -71,7 +71,7 @@ namespace Scaleform
 	static_assert(std::is_empty_v<ConstructorPagedMovCC<void*>>);
 
 	template <class T, std::int32_t SID = kStat_Default_Mem>
-	struct AllocatorGH :
+	class AllocatorGH :
 		public AllocatorBaseGH<SID>,
 		public ConstructorMov<T>
 	{
@@ -80,7 +80,7 @@ namespace Scaleform
 	static_assert(std::is_empty_v<AllocatorGH<void*, kStat_Default_Mem>>);
 
 	template <class T, std::int32_t SID = kStat_Default_Mem>
-	struct AllocatorLH :
+	class AllocatorLH :
 		public AllocatorBaseLH<SID>,
 		public ConstructorMov<T>
 	{
@@ -89,7 +89,7 @@ namespace Scaleform
 	static_assert(std::is_empty_v<AllocatorLH<void*, kStat_Default_Mem>>);
 
 	template <class T, std::int32_t SID = kStat_Default_Mem>
-	struct AllocatorDH :
+	class AllocatorDH :
 		public AllocatorBaseDH<SID>,
 		public ConstructorMov<T>
 	{
@@ -98,7 +98,7 @@ namespace Scaleform
 	static_assert(std::is_empty_v<AllocatorDH<void*, kStat_Default_Mem>>);
 
 	template <class T, std::int32_t SID = kStat_Default_Mem>
-	struct AllocatorGH_POD :
+	class AllocatorGH_POD :
 		public AllocatorBaseGH<SID>,
 		public ConstructorPOD<T>
 	{
@@ -107,7 +107,7 @@ namespace Scaleform
 	static_assert(std::is_empty_v<AllocatorGH_POD<void*, kStat_Default_Mem>>);
 
 	template <class T, int SID>
-	struct AllocatorPagedGH :
+	class AllocatorPagedGH :
 		AllocatorBaseGH<SID>,
 		ConstructorPagedMov<T>
 	{
@@ -116,7 +116,7 @@ namespace Scaleform
 	static_assert(std::is_empty_v<AllocatorPagedGH<void*, kStat_Default_Mem>>);
 
 	template <class T, int SID>
-	struct AllocatorPagedLH :
+	class AllocatorPagedLH :
 		AllocatorBaseLH<SID>,
 		ConstructorPagedMov<T>
 	{
@@ -125,7 +125,7 @@ namespace Scaleform
 	static_assert(std::is_empty_v<AllocatorPagedLH<void*, kStat_Default_Mem>>);
 
 	template <typename T, int SID>
-	struct AllocatorPagedCC :
+	class AllocatorPagedCC :
 		AllocatorBaseLH<SID>,
 		ConstructorPagedMovCC<T>
 	{
@@ -134,8 +134,8 @@ namespace Scaleform
 	static_assert(std::is_empty_v<AllocatorPagedCC<void*, kStat_Default_Mem>>);
 
 	template <class T, int SID>
-	struct AllocatorPagedGH_POD :
-		AllocatorBaseGH<SID>, 
+	class AllocatorPagedGH_POD :
+		AllocatorBaseGH<SID>,
 		ConstructorPagedPOD<T>
 	{
 	public:
@@ -143,8 +143,8 @@ namespace Scaleform
 	static_assert(std::is_empty_v<AllocatorPagedGH_POD<void*, kStat_Default_Mem>>);
 
 	template <class T, int SID>
-	struct AllocatorPagedLH_POD : 
-		AllocatorBaseLH<SID>, 
+	class AllocatorPagedLH_POD :
+		AllocatorBaseLH<SID>,
 		ConstructorPagedPOD<T>
 	{
 	public:

@@ -8,8 +8,9 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BGSSceneAction };
 		static constexpr auto VTABLE{ VTABLE::BGSSceneAction };
 
-		struct STARTSCENEACTIONDATA
+		class STARTSCENEACTIONDATA
 		{
+		public:
 			BGSScene*     pScene;
 			std::uint16_t sceneStartPhase;
 			TESQuest*     parentQuest;

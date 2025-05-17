@@ -6,7 +6,7 @@ namespace RE
 {
 	enum class EDGE_EXTRA_INFO_TYPE;
 
-	struct BSNavmeshEdgeExtraInfo
+	class BSNavmeshEdgeExtraInfo
 	{
 	public:
 		// members

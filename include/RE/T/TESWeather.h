@@ -34,7 +34,7 @@ namespace RE
 			kThunder = 0x3
 		};
 
-		struct SpellData
+		class SpellData
 		{
 		public:
 			// members
@@ -43,7 +43,7 @@ namespace RE
 		};
 		static_assert(sizeof(SpellData) == 0x10);
 
-		struct WeatherSound
+		class WeatherSound
 		{
 		public:
 			// members
@@ -52,7 +52,7 @@ namespace RE
 		};
 		static_assert(sizeof(WeatherSound) == 0x10);
 
-		struct WeatherSoundList :
+		class WeatherSoundList :
 			public BSSimpleList<WeatherSound*>
 		{
 		public:

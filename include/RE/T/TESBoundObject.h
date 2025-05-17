@@ -24,7 +24,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESBoundObject };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kNONE };
 
-		struct BOUND_DATA
+		class BOUND_DATA
 		{
 		public:
 			// members

@@ -10,8 +10,8 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSISoundDescriptor };
 		static constexpr auto VTABLE{ VTABLE::BSISoundDescriptor };
 
-		struct ExtraResolutionData;
-		struct Resolution;
+		class ExtraResolutionData;
+		class Resolution;
 
 		virtual ~BSISoundDescriptor() = default;  // 00
 

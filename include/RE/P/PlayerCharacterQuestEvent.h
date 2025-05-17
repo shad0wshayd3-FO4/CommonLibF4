@@ -15,8 +15,10 @@ namespace RE
 			kUpdateQuestTarget = 0x4
 		};
 
-		struct Event
+		class Event
 		{
+		public:
+			// members
 			PlayerCharacterQuestEvent::Type changeType;      // 00
 			BGSInstancedQuestObjective*     questObjective;  // 08
 		};

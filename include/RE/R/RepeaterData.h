@@ -4,7 +4,7 @@ namespace RE
 {
 	namespace TESSoundDefs
 	{
-		struct RepeaterData
+		class RepeaterData
 		{
 		public:
 			// members

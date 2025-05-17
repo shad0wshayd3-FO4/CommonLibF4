@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct CombatStyleCoverData
+	class CombatStyleCoverData
 	{
 	public:
 		// members

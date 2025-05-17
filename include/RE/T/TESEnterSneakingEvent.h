@@ -5,8 +5,9 @@
 
 namespace RE
 {
-	struct TESEnterSneakingEvent
+	class TESEnterSneakingEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESEnterSneakingEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESEnterSneakingEvent::GetEventSource);

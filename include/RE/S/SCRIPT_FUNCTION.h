@@ -3,14 +3,13 @@
 namespace RE
 {
 	enum class SCRIPT_OUTPUT;
-
+	class ConditionCheckParams;
+	class SCRIPT_LINE;
+	class SCRIPT_PARAMETER;
 	class ScriptCompileData;
 	class ScriptLocals;
-	struct ConditionCheckParams;
-	struct SCRIPT_LINE;
-	struct SCRIPT_PARAMETER;
 
-	struct SCRIPT_FUNCTION
+	class SCRIPT_FUNCTION
 	{
 	public:
 		using ConditionFunction_t = bool(ConditionCheckParams& a_data, void* a_param2, void* a_param1, float& a_returnValue);

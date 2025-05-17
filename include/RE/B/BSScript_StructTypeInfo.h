@@ -29,7 +29,7 @@ namespace RE
 				kLinkedValid = 0x3
 			};
 
-			struct StructVar
+			class StructVar
 			{
 			public:
 				// members

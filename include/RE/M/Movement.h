@@ -6,7 +6,7 @@ namespace RE
 {
 	namespace Movement
 	{
-		struct MaxSpeeds
+		class MaxSpeeds
 		{
 		public:
 			// members
@@ -14,7 +14,7 @@ namespace RE
 		};
 		static_assert(sizeof(MaxSpeeds) == 0x70);
 
-		struct TypeData
+		class TypeData
 		{
 		public:
 			// members

@@ -5,11 +5,11 @@
 
 namespace RE
 {
-	struct ApplyColorUpdateEvent;
-	struct RevertPlayerCharacterEvent;
-	struct DoBeforeNewOrLoadCompletedEvent;
-	struct SaveLoadMessageTypeEvent;
-	struct QueueSurvivalBumpDownMessage;
+	class ApplyColorUpdateEvent;
+	class DoBeforeNewOrLoadCompletedEvent;
+	class QueueSurvivalBumpDownMessage;
+	class RevertPlayerCharacterEvent;
+	class SaveLoadMessageTypeEvent;
 
 	class __declspec(novtable) GameUIModel :
 		public BSTSingletonSDM<GameUIModel>,

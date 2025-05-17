@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BSStringPool
+	class BSStringPool
 	{
 	public:
 		class Entry

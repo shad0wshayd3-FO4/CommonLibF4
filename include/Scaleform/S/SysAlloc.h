@@ -58,7 +58,7 @@ namespace Scaleform
 		static constexpr auto RTTI{ RE::RTTI::Scaleform__SysAllocPaged };
 		static constexpr auto VTABLE{ RE::VTABLE::Scaleform__SysAllocPaged };
 
-		struct Info
+		class Info
 		{
 		public:
 			// members

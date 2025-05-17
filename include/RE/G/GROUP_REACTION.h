@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct GROUP_REACTION
+	class GROUP_REACTION
 	{
 	public:
 		// members

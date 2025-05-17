@@ -17,7 +17,7 @@ namespace RE
 	class NiTListBase
 	{
 	public:
-		struct AntiBloatAllocator :
+		class AntiBloatAllocator :
 			public Allocator
 		{
 		public:

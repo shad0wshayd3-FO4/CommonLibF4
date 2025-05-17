@@ -23,7 +23,7 @@ namespace RE
 	class BSAudioManager
 	{
 	public:
-		struct SyncedPlaybackManager
+		class SyncedPlaybackManager
 		{
 		public:
 			// members

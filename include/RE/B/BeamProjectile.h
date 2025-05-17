@@ -6,8 +6,8 @@
 
 namespace RE
 {
-	struct BeamProjectileImpactEvent;
-	struct BSProceduralGeomEvent;
+	class BeamProjectileImpactEvent;
+	class BSProceduralGeomEvent;
 
 	class __declspec(novtable) BeamProjectile :
 		public Projectile,                                 // 000

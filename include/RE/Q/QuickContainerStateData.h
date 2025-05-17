@@ -9,7 +9,7 @@ namespace RE
 {
 	enum class QuickContainerMode;
 
-	struct QuickContainerStateData
+	class QuickContainerStateData
 	{
 	public:
 		// members

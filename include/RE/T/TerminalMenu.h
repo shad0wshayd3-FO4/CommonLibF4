@@ -36,7 +36,7 @@ namespace RE
 			kWaitingForPapyrus = 0x7,
 		};
 
-		struct ListItem
+		class ListItem
 		{
 		public:
 			// members

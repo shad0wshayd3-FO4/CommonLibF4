@@ -19,6 +19,7 @@
 namespace RE
 {
 	enum class PACKAGE_OBJECT_TYPE;
+	class ActorInventoryEvent;
 	class AIPerkData;
 	class bhkNPCollisionObject;
 	class bhkRagdollPenetrationUtil;
@@ -28,6 +29,7 @@ namespace RE
 	class BSFaceGenAnimationData;
 	class BSFaceGenNiNode;
 	class BSLightingShaderProperty;
+	class CommandedActorData;
 	class DeferredHideLimb;
 	class EquippedItem;
 	class HitData;
@@ -36,16 +38,14 @@ namespace RE
 	class NiNode;
 	class QueuedFile;
 	class QueuedItem;
-	struct ActorInventoryEvent;
-	struct CommandedActorData;
-	struct SubGraphIdleRootData;
+	class SubGraphIdleRootData;
 
 	namespace MagicSystem
 	{
 		enum class WardState;
 	}
 
-	struct MiddleHighProcessData
+	class MiddleHighProcessData
 	{
 	public:
 		// members

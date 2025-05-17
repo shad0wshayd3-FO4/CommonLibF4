@@ -10,10 +10,10 @@ namespace RE
 
 		namespace UnlinkedTypes
 		{
-			struct Object;
+			class Object;
 		}
 
-		struct __declspec(novtable) ILoader
+		class __declspec(novtable) ILoader
 		{
 		public:
 			static constexpr auto RTTI{ RTTI::BSScript__ILoader };

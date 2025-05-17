@@ -604,7 +604,7 @@ namespace RE
 	};
 
 	template <std::size_t S, std::size_t A>
-	struct BSTScatterTableHeapAllocator
+	class BSTScatterTableHeapAllocator
 	{
 	public:
 		using size_type = std::uint32_t;
@@ -649,13 +649,13 @@ namespace RE
 	};
 
 	template <std::uint32_t N>
-	struct BSTStaticHashMapBase
+	class BSTStaticHashMapBase
 	{
 	public:
 		static_assert(N > 0 && std::has_single_bit(N));
 
 		template <std::size_t S, std::size_t A>
-		struct Allocator
+		class Allocator
 		{
 		public:
 			using size_type = std::uint32_t;

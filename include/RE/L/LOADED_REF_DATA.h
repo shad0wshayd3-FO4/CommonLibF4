@@ -6,7 +6,7 @@ namespace RE
 {
 	class NiAVObject;
 
-	struct LOADED_REF_DATA
+	class LOADED_REF_DATA
 	{
 	public:
 		// members

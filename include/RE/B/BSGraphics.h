@@ -69,8 +69,9 @@ namespace RE
 			kWrap_S_Wrap_T = 0x3,
 		};
 
-		struct Buffer
+		class Buffer
 		{
+		public:
 			// members
 			REX::W32::ID3D11Buffer*              buffer;              // 00
 			void*                                data;                // 08
@@ -91,16 +92,23 @@ namespace RE
 		};
 		static_assert(sizeof(Buffer) == 0x50);
 
-		struct VertexBuffer : public Buffer
-		{};
+		class VertexBuffer :
+			public Buffer
+		{
+		public:
+		};
 		static_assert(sizeof(VertexBuffer) == 0x50);
 
-		struct IndexBuffer : public Buffer
-		{};
+		class IndexBuffer :
+			public Buffer
+		{
+		public:
+		};
 		static_assert(sizeof(IndexBuffer) == 0x50);
 
-		struct TextureHeader
+		class TextureHeader
 		{
+		public:
 			// members
 			std::uint16_t height = 0;    // 0
 			std::uint16_t width = 0;     // 2
@@ -397,8 +405,9 @@ namespace RE
 		};
 		static_assert(sizeof(Context) == 0x2FF0);
 
-		struct Vertex
+		class Vertex
 		{
+		public:
 			enum Attribute : std::uint8_t
 			{
 				VA_POSITION = 0x0,
@@ -498,8 +507,9 @@ namespace RE
 		};
 		static_assert(sizeof(VertexDesc) == 0x8);
 
-		struct TriShape
+		class TriShape
 		{
+		public:
 			VertexDesc    vertexDesc;    // 00
 			VertexBuffer* vertexBuffer;  // 08
 			IndexBuffer*  indexBuffer;   // 10
@@ -507,8 +517,9 @@ namespace RE
 		};
 		static_assert(sizeof(TriShape) == 0x20);
 
-		struct FogStateType
+		class FogStateType
 		{
+		public:
 			// members
 			NiPoint4 rangeData;         // 00
 			NiColor  nearLowColor;      // 10
@@ -523,8 +534,9 @@ namespace RE
 		};
 		static_assert(sizeof(FogStateType) == 0x60);
 
-		struct ViewData
+		class ViewData
 		{
+		public:
 			// members
 			NiRect<float> viewPort;                       // 000
 			NiPoint2      viewDepthRange;                 // 010
@@ -541,8 +553,9 @@ namespace RE
 		};
 		static_assert(sizeof(ViewData) == 0x210);
 
-		struct CameraStateData
+		class CameraStateData
 		{
+		public:
 			// members
 			ViewData        camViewData;        // 000
 			NiPoint3        posAdjust;          // 210
@@ -610,7 +623,7 @@ namespace RE
 		};
 		static_assert(sizeof(State) == 0x3C0);
 
-		struct RenderTargetProperties
+		class RenderTargetProperties
 		{
 		public:
 			// members
@@ -628,7 +641,7 @@ namespace RE
 		};
 		static_assert(sizeof(RenderTargetProperties) == 0x20);
 
-		struct DepthStencilTargetProperties
+		class DepthStencilTargetProperties
 		{
 		public:
 			// members
@@ -644,7 +657,7 @@ namespace RE
 		};
 		static_assert(sizeof(DepthStencilTargetProperties) == 0x18);
 
-		struct CubeMapRenderTargetProperties
+		class CubeMapRenderTargetProperties
 		{
 		public:
 			// members

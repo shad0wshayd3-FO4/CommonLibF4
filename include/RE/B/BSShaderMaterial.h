@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct BSShaderProperty;
+	class BSShaderProperty;
 
 	class __declspec(novtable) BSShaderMaterial :
 		public BSIntrusiveRefCounted  // 00

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct PACKAGE_DATA
+	class PACKAGE_DATA
 	{
 	public:
 		// members

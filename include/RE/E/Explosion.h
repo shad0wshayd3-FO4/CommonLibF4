@@ -25,7 +25,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::Explosion };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kREFR };
 
-		struct ExplodedLimb
+		class ExplodedLimb
 		{
 		public:
 			// members

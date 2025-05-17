@@ -4,8 +4,9 @@
 
 namespace RE
 {
-	struct TESLoadGameEvent
+	class TESLoadGameEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESLoadGameEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESLoadGameEvent::GetEventSource);

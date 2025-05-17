@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct FORM_ENUM_STRING
+	class FORM_ENUM_STRING
 	{
 	public:
 		// members

@@ -13,48 +13,48 @@ namespace RE
 {
 	namespace ActorEquipManagerEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace ActorValueEvents
 	{
-		struct ActorValueChangedEvent;
+		class ActorValueChangedEvent;
 	}
 
 	namespace BGSInventoryItemEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace BGSInventoryListEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace HolotapeStateChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace InventoryInterface
 	{
-		struct FavoriteChangedEvent;
+		class FavoriteChangedEvent;
 	}
 
 	namespace FavoriteMgr_Events
 	{
-		struct ComponentFavoriteEvent;
+		class ComponentFavoriteEvent;
 	}
 
 	namespace PerkValueEvents
 	{
-		struct PerkValueChangedEvent;
-		struct PerkEntryUpdatedEvent;
+		class PerkValueChangedEvent;
+		class PerkEntryUpdatedEvent;
 	}
 
 	namespace PlayerDifficultySettingChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	class PipboyInventoryData :
@@ -94,15 +94,19 @@ namespace RE
 			SOF_WEIGHT = 0x6
 		};
 
-		struct StackEntry
+		class StackEntry
 		{
+		public:
+			// members
 			PipboyObject*                    linkedObject;     // 00
 			const InventoryInterface::Handle inventoryHandle;  // 08
 		};
 		static_assert(sizeof(StackEntry) == 0x10);
 
-		struct ItemEntry
+		class ItemEntry
 		{
+		public:
+			// members
 			void* stackEntries;  // 00 - BSTList<PipboyInventoryData::StackEntry*>
 		};
 		static_assert(sizeof(ItemEntry) == 0x8);

@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct CALCED_OBJECT
+	class CALCED_OBJECT
 	{
 	public:
 		// members

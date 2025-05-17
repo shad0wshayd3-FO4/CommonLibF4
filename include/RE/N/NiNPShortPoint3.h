@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct NiNPShortPoint3
+	class NiNPShortPoint3
 	{
 	public:
 		// members

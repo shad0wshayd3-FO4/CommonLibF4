@@ -5,10 +5,10 @@
 
 namespace RE
 {
-	struct TESResponse
+	class TESResponse
 	{
 	public:
-		struct RespData
+		class RespData
 		{
 			std::uint16_t percent;
 			std::uint8_t  responseID;

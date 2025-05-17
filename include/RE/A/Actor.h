@@ -30,28 +30,28 @@ namespace RE
 	template <class>
 	class BSPointerHandleSmartPointer;
 
+	class ActorCPMEvent;
 	class ActorMagicCaster;
 	class ActorMotionFeedbackData;
 	class ActorMotionFeedbackOutput;
 	class ActorMover;
 	class bhkCharacterController;
+	class bhkCharacterMoveFinishEvent;
+	class bhkCharacterStateChangeEvent;
+	class bhkNonSupportContactEvent;
+	class BSMovementDataChangedEvent;
+	class BSSubGraphActivationUpdate;
+	class BSTransformDeltaEvent;
 	class CastPowerItem;
 	class CombatController;
 	class CombatGroup;
 	class MovementControllerNPC;
 	class MovementMessageActorCollision;
 	class MovementMessageNewPath;
+	class MovementMessageUpdateRequestImmediate;
 	class PackageLocation;
 	class PerkEntryVisitor;
 	class Perks;
-	struct ActorCPMEvent;
-	struct MovementMessageUpdateRequestImmediate;
-	struct BSMovementDataChangedEvent;
-	struct BSTransformDeltaEvent;
-	struct BSSubGraphActivationUpdate;
-	struct bhkCharacterMoveFinishEvent;
-	struct bhkNonSupportContactEvent;
-	struct bhkCharacterStateChangeEvent;
 
 	namespace MagicSystem
 	{
@@ -60,8 +60,8 @@ namespace RE
 
 	namespace PerkValueEvents
 	{
-		struct PerkEntryUpdatedEvent;
-		struct PerkValueChangedEvent;
+		class PerkEntryUpdatedEvent;
+		class PerkValueChangedEvent;
 	}
 
 	class __declspec(novtable) Actor :

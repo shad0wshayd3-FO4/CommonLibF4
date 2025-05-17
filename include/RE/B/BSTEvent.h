@@ -141,7 +141,7 @@ namespace RE
 		public BSTEventSink<T>  // 00
 	{
 	public:
-		struct BSTEventValueData
+		class BSTEventValueData
 		{
 		public:
 			// members
@@ -193,7 +193,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSTGlobalEvent };
 		static constexpr auto VTABLE{ RTTI::BSTGlobalEvent };
 
-		struct KillSDMEvent
+		class KillSDMEvent
 		{};
 		static_assert(sizeof(KillSDMEvent) == 0x01);
 

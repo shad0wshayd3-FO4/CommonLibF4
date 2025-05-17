@@ -12,7 +12,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSNavmeshInfoMap };
 		static constexpr auto VTABLE{ VTABLE::BSNavmeshInfoMap };
 
-		struct IVisitor;
+		class IVisitor;
 
 		virtual ~BSNavmeshInfoMap();  // 00
 

@@ -34,7 +34,7 @@ namespace RE
 		};
 		static_assert(sizeof(FXQuantityMenu) == 0x2C0);
 
-		struct ItemSorter
+		class ItemSorter
 		{
 		public:
 			enum class SORT_ON_FIELD

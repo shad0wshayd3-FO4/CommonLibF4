@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct LEVELED_OBJECT
+	class LEVELED_OBJECT
 	{
 	public:
 		// members

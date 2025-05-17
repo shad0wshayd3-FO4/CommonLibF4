@@ -4,9 +4,9 @@
 
 namespace RE
 {
-	struct ACTION_OBJECT;
-	struct SCRIPT_EFFECT_DATA;
-	struct SCRIPT_LOCAL;
+	class ACTION_OBJECT;
+	class SCRIPT_EFFECT_DATA;
+	class SCRIPT_LOCAL;
 
 	class ScriptLocals
 	{

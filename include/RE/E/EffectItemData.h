@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct EffectItemData
+	class EffectItemData
 	{
 	public:
 		// members

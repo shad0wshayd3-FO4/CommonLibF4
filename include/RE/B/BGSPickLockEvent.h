@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSPickLockEvent
+	class BGSPickLockEvent
 	{
 	public:
 		BGSPickLockEvent(TESObjectREFR* a_actor, TESObjectREFR* a_lockRef, bool a_isCrime)

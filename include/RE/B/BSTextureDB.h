@@ -2,13 +2,13 @@
 
 namespace RE
 {
-	struct BSTextureDB
+	class BSTextureDB
 	{
 	public:
-		struct DBTraits
+		class DBTraits
 		{
 		public:
-			struct ArgsType
+			class ArgsType
 			{
 			public:
 				// members

@@ -6,7 +6,7 @@ namespace RE
 {
 	class TESFile;
 
-	struct TESFileCollection
+	class TESFileCollection
 	{
 	public:
 		// members

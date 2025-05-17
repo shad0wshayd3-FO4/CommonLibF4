@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct MovementData
+	class MovementData
 	{
 	public:
 		// members

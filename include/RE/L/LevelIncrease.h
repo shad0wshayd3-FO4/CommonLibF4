@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace LevelIncrease
 	{
-		struct Event
+		class Event
 		{
+		public:
 			[[nodiscard]] static BSTEventSource<Event>* GetEventSource()
 			{
 				using func_t = decltype(&Event::GetEventSource);

@@ -14,16 +14,15 @@
 
 namespace RE
 {
-	struct INSTANCE_FILTER;
+	class INSTANCE_FILTER;
 }
 
 namespace RE::BGSMod
 {
 	namespace Attachment
 	{
+		class Instance;
 		class Mod;
-
-		struct Instance;
 	}
 
 	namespace Property
@@ -61,7 +60,7 @@ namespace RE::BGSMod
 			};
 			static_assert(sizeof(FLOATINT) == 0x4);
 
-			struct MinMax
+			class MinMax
 			{
 			public:
 				// members
@@ -70,7 +69,7 @@ namespace RE::BGSMod
 			};
 			static_assert(sizeof(MinMax) == 0x8);
 
-			struct FormValuePair
+			class FormValuePair
 			{
 			public:
 				// members
@@ -112,7 +111,7 @@ namespace RE::BGSMod
 	public:
 		static constexpr auto RTTI{ RTTI::BGSMod__Container };
 
-		struct Data
+		class Data
 		{
 		public:
 			// members
@@ -125,7 +124,7 @@ namespace RE::BGSMod
 	};
 	static_assert(sizeof(Container) == 0x10);
 
-	struct ObjectIndexData
+	class ObjectIndexData
 	{
 	public:
 		std::uint32_t objectID;  // 0
@@ -155,7 +154,7 @@ namespace RE::BGSMod
 			static constexpr auto VTABLE{ VTABLE::BGSMod__Attachment__Mod };
 			static constexpr auto FORM_ID{ ENUM_FORM_ID::kOMOD };
 
-			struct Data :
+			class Data :
 				public Container::Data  // 00
 			{
 			public:
@@ -209,7 +208,7 @@ namespace RE::BGSMod
 		};
 		static_assert(sizeof(Mod) == 0xC8);
 
-		struct Instance  // id == 0
+		class Instance  // id == 0
 		{
 		public:
 			// members

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct WORLD_MAP_DATA
+	class WORLD_MAP_DATA
 	{
 	public:
 		// members

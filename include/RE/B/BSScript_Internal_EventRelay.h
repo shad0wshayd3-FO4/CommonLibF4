@@ -17,7 +17,7 @@ namespace RE
 				public BSIntrusiveRefCounted  // 00
 			{
 			public:
-				struct TargetList :
+				class TargetList :
 					public BSIntrusiveRefCounted  // 00
 				{
 				public:

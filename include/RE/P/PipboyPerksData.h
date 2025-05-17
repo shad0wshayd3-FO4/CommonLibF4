@@ -8,7 +8,7 @@ namespace RE
 {
 	namespace PerkValueEvents
 	{
-		struct PerkValueChangedEvent;
+		class PerkValueChangedEvent;
 	}
 
 	class __declspec(novtable) PipboyPerksData :

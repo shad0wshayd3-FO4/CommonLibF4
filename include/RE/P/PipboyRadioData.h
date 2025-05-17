@@ -7,8 +7,8 @@ namespace RE
 {
 	namespace RadioManager
 	{
-		struct PipboyFrequencyDetectionEvent;
-		struct PipboyRadioTuningEvent;
+		class PipboyFrequencyDetectionEvent;
+		class PipboyRadioTuningEvent;
 	}
 
 	class __declspec(novtable) PipboyRadioData :

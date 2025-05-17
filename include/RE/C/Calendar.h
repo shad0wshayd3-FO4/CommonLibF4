@@ -9,8 +9,9 @@ namespace RE
 		public BSTSingletonSDM<Calendar>
 	{
 	public:
-		struct Months
+		class Months
 		{
+		public:
 			enum Month
 			{
 				kJanuary = 0x0,

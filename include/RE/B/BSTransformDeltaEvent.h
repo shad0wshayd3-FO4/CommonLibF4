@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct BSTransformDeltaEvent
+	class BSTransformDeltaEvent
 	{
 	public:
 		// members

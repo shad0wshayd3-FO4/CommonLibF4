@@ -10,7 +10,7 @@ namespace RE
 {
 	class BGSArtObjectCloneTask;
 	class NiAVObject;
-	struct BSAnimationGraphEvent;
+	class BSAnimationGraphEvent;
 
 	class __declspec(novtable) SummonPlacementEffect :
 		public ReferenceEffect,                     // 00

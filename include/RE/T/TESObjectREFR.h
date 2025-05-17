@@ -24,42 +24,41 @@ namespace RE
 	enum class BIPED_OBJECT;
 	enum class IO_TASK_PRIORITY;
 	enum class RESET_3D_FLAGS;
-
 	class ActorCause;
-	class BipedAnim;
 	class BGSAnimationSequencer;
+	class BGSBehaviorRootData;
 	class BGSDecalGroup;
+	class BipedAnim;
+	class BSActiveGraphIfInactiveEvent;
+	class BSAnimationGraphEvent;
 	class BSAnimationUpdateData;
 	class BSFaceGenNiNode;
 	class DialogueResponse;
 	class hknpBodyId;
 	class hkVector4f;
+	class INSTANCE_FILTER;
+	class LOADED_REF_DATA;
 	class MagicCaster;
 	class MagicTarget;
 	class ModelReferenceEffect;
 	class NiAVObject;
 	class NiNode;
 	class NiTransform;
+	class REFR_LOCK;
 	class ShaderReferenceEffect;
 	class TargetEntry;
 	class TESModel;
 	class TrapData;
 	class TrapEntry;
-	struct BGSBehaviorRootData;
-	struct BSActiveGraphIfInactiveEvent;
-	struct BSAnimationGraphEvent;
-	struct INSTANCE_FILTER;
-	struct LOADED_REF_DATA;
-	struct REFR_LOCK;
 
 	namespace ActorValueEvents
 	{
-		struct ActorValueChangedEvent;
+		class ActorValueChangedEvent;
 	}
 
 	namespace BGSInventoryListEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace MagicSystem
@@ -83,7 +82,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESObjectREFR };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kREFR };
 
-		struct RemoveItemData
+		class RemoveItemData
 		{
 		public:
 			RemoveItemData(TESForm* a_form, std::int32_t a_count) :

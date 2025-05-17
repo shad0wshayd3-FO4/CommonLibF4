@@ -8,8 +8,8 @@
 
 namespace RE
 {
+	class BSAnimationGraphEvent;
 	class BSAnimationGraphManager;
-	struct BSAnimationGraphEvent;
 
 	class __declspec(novtable) WeaponAnimationGraphManagerHolder :
 		public IAnimationGraphManagerHolder,

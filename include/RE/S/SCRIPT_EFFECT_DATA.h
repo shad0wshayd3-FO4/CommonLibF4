@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct SCRIPT_EFFECT_DATA
+	class SCRIPT_EFFECT_DATA
 	{
 	public:
 		// members

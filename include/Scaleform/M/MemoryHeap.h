@@ -7,7 +7,7 @@ namespace Scaleform
 {
 	class StatBag;
 	class SysAllocPaged;
-	struct AllocInfo;
+	class AllocInfo;
 
 	namespace Heap
 	{
@@ -21,7 +21,7 @@ namespace Scaleform
 	public:
 		using ChildListType = List<MemoryHeap>;
 
-		struct HeapDesc
+		class HeapDesc
 		{
 		public:
 			// members
@@ -36,7 +36,7 @@ namespace Scaleform
 		};
 		static_assert(sizeof(HeapDesc) == 0x40);
 
-		struct HeapInfo
+		class HeapInfo
 		{
 		public:
 			// members
@@ -46,7 +46,7 @@ namespace Scaleform
 		};
 		static_assert(sizeof(HeapInfo) == 0x50);
 
-		struct __declspec(novtable) HeapVisitor
+		class __declspec(novtable) HeapVisitor
 		{
 		public:
 			virtual ~HeapVisitor() = default;  // 00
@@ -56,7 +56,7 @@ namespace Scaleform
 		};
 		static_assert(sizeof(HeapVisitor) == 0x8);
 
-		struct __declspec(novtable) LimitHandler
+		class __declspec(novtable) LimitHandler
 		{
 		public:
 			virtual ~LimitHandler() = default;  // 00
@@ -67,7 +67,7 @@ namespace Scaleform
 		};
 		static_assert(sizeof(LimitHandler) == 0x8);
 
-		struct __declspec(novtable) HeapTracer
+		class __declspec(novtable) HeapTracer
 		{
 		public:
 			virtual ~HeapTracer() = default;  // 00
@@ -81,7 +81,7 @@ namespace Scaleform
 		};
 		static_assert(sizeof(HeapTracer) == 0x8);
 
-		struct RootStats
+		class RootStats
 		{
 		public:
 			// members

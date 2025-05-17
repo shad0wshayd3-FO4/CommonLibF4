@@ -4,7 +4,7 @@
 
 namespace Scaleform::GFx
 {
-	struct MemoryParams
+	class MemoryParams
 	{
 	public:
 		// members

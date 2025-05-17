@@ -7,13 +7,12 @@
 namespace RE
 {
 	enum class COMPILER_NAME;
-
+	class SCRIPT_FUNCTION;
+	class SCRIPT_PARAMETER;
+	class SCRIPT_REFERENCED_OBJECT;
 	class ScriptCompiler;
 	class ScriptLocals;
-	struct SCRIPT_FUNCTION;
-	struct SCRIPT_PARAMETER;
-	struct SCRIPT_REFERENCED_OBJECT;
-	struct ScriptVariable;
+	class ScriptVariable;
 
 	class __declspec(novtable) Script :
 		public TESForm  // 00

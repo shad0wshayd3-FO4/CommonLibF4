@@ -49,7 +49,7 @@ namespace RE
 	};
 
 	template <std::uint32_t N>
-	struct BSTAlignedHeapArrayAllocator
+	class BSTAlignedHeapArrayAllocator
 	{
 	public:
 		class Allocator

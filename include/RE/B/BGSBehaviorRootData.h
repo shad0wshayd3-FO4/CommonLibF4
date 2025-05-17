@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct BGSBehaviorRootData
+	class BGSBehaviorRootData
 	{
 	public:
 		// members

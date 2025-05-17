@@ -5,8 +5,9 @@
 
 namespace RE
 {
-	struct TESDeathEvent
+	class TESDeathEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESDeathEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESDeathEvent::GetEventSource);

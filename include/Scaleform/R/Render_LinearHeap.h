@@ -9,7 +9,7 @@ namespace Scaleform
 		class LinearHeap
 		{
 		public:
-			struct PageType
+			class PageType
 			{
 			public:
 				// members

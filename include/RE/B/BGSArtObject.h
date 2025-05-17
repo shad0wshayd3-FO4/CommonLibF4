@@ -18,7 +18,7 @@ namespace RE
 
 		enum class ArtType;
 
-		struct Data
+		class Data
 		{
 		public:
 			// members

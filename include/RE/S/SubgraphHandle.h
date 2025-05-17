@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct SubgraphHandle
+	class SubgraphHandle
 	{
 	public:
 		// members

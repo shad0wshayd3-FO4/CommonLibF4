@@ -12,7 +12,7 @@
 
 namespace RE
 {
-	struct RANK_DATA;
+	class RANK_DATA;
 
 	class __declspec(novtable) TESFaction :
 		public TESForm,         // 000

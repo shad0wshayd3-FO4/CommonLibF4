@@ -42,7 +42,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESObjectARMO };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kARMO };
 
-		struct __declspec(novtable) InstanceData :
+		class __declspec(novtable) InstanceData :
 			public TBO_InstanceData  // 00
 		{
 		public:

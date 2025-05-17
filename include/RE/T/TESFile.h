@@ -15,15 +15,14 @@ namespace RE
 {
 	enum class CHUNK_ID;
 	enum class TES_RETURN_CODE;
-
+	class _ULARGE_INTEGER;
+	class FORM_GROUP;
 	class TESBitArrayFile;
-	struct _ULARGE_INTEGER;
-	struct FORM_GROUP;
 
 	class TESFile
 	{
 	public:
-		struct InteriorCellOffsetDataStruct;
+		class InteriorCellOffsetDataStruct;
 
 		enum class RecordFlag
 		{

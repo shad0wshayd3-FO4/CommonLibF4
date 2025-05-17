@@ -13,7 +13,7 @@ namespace RE
 
 	namespace BGSInventoryListEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	class BGSInventoryList :

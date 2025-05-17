@@ -16,8 +16,9 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BSFlattenedBoneTree };
 		static constexpr auto Ni_RTTI{ Ni_RTTI::BSFlattenedBoneTree };
 
-		struct FlattenedBone
+		class FlattenedBone
 		{
+		public:
 			NiTransform       local;
 			NiTransform       world;
 			std::int16_t      parent;

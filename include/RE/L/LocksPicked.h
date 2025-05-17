@@ -5,7 +5,7 @@ namespace RE
 	class LocksPicked
 	{
 	public:
-		struct Event
+		class Event
 		{
 		public:
 		};

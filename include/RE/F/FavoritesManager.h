@@ -14,17 +14,17 @@ namespace RE
 
 	namespace BGSInventoryListEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace FavoriteMgr_Events
 	{
-		struct ComponentFavoriteEvent;
+		class ComponentFavoriteEvent;
 	}
 
 	namespace InventoryInterface
 	{
-		struct FavoriteChangedEvent;
+		class FavoriteChangedEvent;
 	}
 
 	class __declspec(novtable) FavoritesManager :

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct OBJ_LAND
+	class OBJ_LAND
 	{
 	public:
 		enum class LAND

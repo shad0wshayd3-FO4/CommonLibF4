@@ -6,7 +6,7 @@
 
 namespace RE
 {
-	struct GridCell;
+	class GridCell;
 
 	class __declspec(novtable) GridCellArray :
 		public GridArray  // 00
@@ -15,8 +15,9 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::GridCellArray };
 		static constexpr auto VTABLE{ VTABLE::GridCellArray };
 
-		struct QueuedAttatch
+		class QueuedAttatch
 		{
+		private:
 			enum class ProgressiveAttatchState : std::int32_t
 			{
 				PROGRESSIVE_ATTATCH_TO_WORLD = 0x0,
@@ -32,8 +33,9 @@ namespace RE
 		};
 		static_assert(sizeof(QueuedAttatch) == 0x10);
 
-		struct QueuedDetach
+		class QueuedDetach
 		{
+		private:
 			enum class ProgressiveDetachState : std::int32_t
 			{
 				PROGRESSIVE_DETATCH_ACTORS_NEXT = 0x0,
@@ -49,7 +51,7 @@ namespace RE
 		};
 		static_assert(sizeof(QueuedDetach) == 0x10);
 
-		struct AutoDisableQueuedCellAttatchDetach
+		class AutoDisableQueuedCellAttatchDetach
 		{
 		public:
 			// members

@@ -7,8 +7,9 @@ namespace RE
 {
 	class TESObjectREFR;
 
-	struct TESSwitchRaceCompleteEvent
+	class TESSwitchRaceCompleteEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESSwitchRaceCompleteEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESSwitchRaceCompleteEvent::GetEventSource);

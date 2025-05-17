@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct ScriptVariable
+	class ScriptVariable
 	{
 	public:
 		// members

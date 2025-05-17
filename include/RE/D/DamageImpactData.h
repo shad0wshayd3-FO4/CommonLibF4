@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct DamageImpactData
+	class DamageImpactData
 	{
 		// members
 		NiPoint3A                       location;  // 00

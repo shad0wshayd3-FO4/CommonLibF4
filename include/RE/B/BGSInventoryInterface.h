@@ -9,8 +9,8 @@ namespace RE
 {
 	namespace InventoryInterface
 	{
-		struct CountChangedEvent;
-		struct FavoriteChangedEvent;
+		class CountChangedEvent;
+		class FavoriteChangedEvent;
 	}
 
 	class BGSInventoryInterface :
@@ -19,7 +19,7 @@ namespace RE
 		BSTEventSource<InventoryInterface::FavoriteChangedEvent>  // 60
 	{
 	public:
-		struct Agent
+		class Agent
 		{
 		public:
 			// members

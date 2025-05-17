@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct HUDPerkVaultBoyData
+	class HUDPerkVaultBoyData
 	{
 	public:
 		// members

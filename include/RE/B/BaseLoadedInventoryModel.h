@@ -8,7 +8,7 @@ namespace RE
 {
 	class NiAVObject;
 
-	struct BaseLoadedInventoryModel
+	class BaseLoadedInventoryModel
 	{
 	public:
 		// members

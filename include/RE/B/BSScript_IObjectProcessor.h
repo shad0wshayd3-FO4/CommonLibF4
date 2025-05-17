@@ -6,7 +6,7 @@ namespace RE
 {
 	namespace BSScript
 	{
-		struct ILoader;
+		class ILoader;
 
 		class __declspec(novtable) IObjectProcessor
 		{

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BSIntrusiveRefCounted
+	class BSIntrusiveRefCounted
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::BSIntrusiveRefCounted };

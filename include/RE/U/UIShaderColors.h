@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct UIShaderColors
+	class UIShaderColors
 	{
 	public:
 		enum class Flags

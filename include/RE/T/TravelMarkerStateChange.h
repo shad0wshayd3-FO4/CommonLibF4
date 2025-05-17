@@ -4,12 +4,13 @@
 
 namespace RE
 {
-	struct MapMarkerData;
+	class MapMarkerData;
 
 	namespace TravelMarkerStateChange
 	{
-		struct Event
+		class Event
 		{
+		public:
 			ObjectRefHandle markerRef;            // 00
 			MapMarkerData*  data;                 // 08
 			std::uint32_t   selectedMarkerIndex;  // 10

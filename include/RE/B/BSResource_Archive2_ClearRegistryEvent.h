@@ -4,7 +4,7 @@ namespace RE::BSResource
 {
 	namespace Archive2
 	{
-		struct ClearRegistryEvent
+		class ClearRegistryEvent
 		{
 		public:
 		};

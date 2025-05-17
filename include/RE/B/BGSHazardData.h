@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSHazardData
+	class BGSHazardData
 	{
 	public:
 		enum class BGSHazardFlags

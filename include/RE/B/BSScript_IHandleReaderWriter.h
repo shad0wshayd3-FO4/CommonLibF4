@@ -6,7 +6,7 @@ namespace RE
 
 	namespace BSScript
 	{
-		struct __declspec(novtable) IHandleReaderWriter
+		class __declspec(novtable) IHandleReaderWriter
 		{
 		public:
 			inline static constexpr auto RTTI = { RTTI::BSScript__IHandleReaderWriter };

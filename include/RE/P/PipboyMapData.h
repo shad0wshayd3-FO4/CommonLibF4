@@ -9,44 +9,44 @@
 
 namespace RE
 {
-	struct BGSActorCellEvent;
-	struct MapMarkerData;
-	struct PlayerUpdateEvent;
-	struct TESLocationClearedEvent;
+	class BGSActorCellEvent;
+	class MapMarkerData;
+	class PlayerUpdateEvent;
+	class TESLocationClearedEvent;
 
 	namespace ActorValueEvents
 	{
-		struct ActorValueChangedEvent;
+		class ActorValueChangedEvent;
 	}
 
 	namespace CustomMarkerUpdate
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace LocalMapCameraUpdate
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace LocationMarkerArrayUpdate
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace PlayerCharacterQuestEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace TESQuestEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace TravelMarkerStateChange
 	{
-		struct Event;
+		class Event;
 	}
 
 	class __declspec(novtable) PipboyMapData :

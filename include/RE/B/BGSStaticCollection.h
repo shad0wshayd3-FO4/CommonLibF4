@@ -17,7 +17,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSStaticCollection };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kSCOL };
 
-		struct REF_COL_DATA
+		class REF_COL_DATA
 		{
 		public:
 			// members

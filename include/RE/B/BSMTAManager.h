@@ -35,7 +35,7 @@ namespace RE
 		};
 		static_assert(sizeof(RegisterBatchRendererPassTask) == 0x10);
 
-		struct RegisterGeometryGroupPassTask
+		class RegisterGeometryGroupPassTask
 		{
 		public:
 			// members

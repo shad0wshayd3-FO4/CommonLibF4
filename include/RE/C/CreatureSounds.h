@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct CREATURE_SOUND;
+	class CREATURE_SOUND;
 
 	class CreatureSounds
 	{

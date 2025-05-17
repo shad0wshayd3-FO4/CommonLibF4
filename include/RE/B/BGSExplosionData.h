@@ -7,7 +7,7 @@ namespace RE
 	enum class SOUND_LEVEL;
 	enum class STAGGER_MAGNITUDE;
 
-	struct BGSExplosionData
+	class BGSExplosionData
 	{
 	public:
 		// members

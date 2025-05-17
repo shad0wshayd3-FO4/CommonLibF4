@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct REFR_LOCK
+	class REFR_LOCK
 	{
 	public:
 		[[nodiscard]] LOCK_LEVEL GetLockLevel(TESObjectREFR* a_owner)

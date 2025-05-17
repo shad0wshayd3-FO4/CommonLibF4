@@ -18,7 +18,7 @@ namespace RE
 		enum class TextureAddressMode;
 	}
 
-	struct __declspec(novtable) BSLightingShaderMaterialBase :
+	class __declspec(novtable) BSLightingShaderMaterialBase :
 		public BSShaderMaterial  // 00
 	{
 	public:

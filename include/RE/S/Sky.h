@@ -54,7 +54,7 @@ namespace RE
 			kReleaseWeatherOverride = 1 << 21
 		};
 
-		struct SkyStaticRefData
+		class SkyStaticRefData
 		{
 		public:
 			// members

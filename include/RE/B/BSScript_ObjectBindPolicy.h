@@ -13,12 +13,12 @@ namespace RE
 	namespace BSScript
 	{
 		class BoundScript;
+		class IHandleReaderWriter;
 		class IVirtualMachine;
+		class IVMObjectBindInterface;
 		class MergedBoundScript;
 		class Object;
 		class Variable;
-		struct IHandleReaderWriter;
-		struct IVMObjectBindInterface;
 
 		class __declspec(novtable) ObjectBindPolicy
 		{

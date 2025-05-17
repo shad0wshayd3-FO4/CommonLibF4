@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct ImageSpaceData
+	class ImageSpaceData
 	{
 	public:
 		// members

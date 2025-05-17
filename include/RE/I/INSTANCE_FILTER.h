@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct INSTANCE_FILTER
+	class INSTANCE_FILTER
 	{
 	public:
 		// members

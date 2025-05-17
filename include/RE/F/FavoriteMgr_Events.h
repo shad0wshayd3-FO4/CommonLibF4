@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace FavoriteMgr_Events
 	{
-		struct ComponentFavoriteEvent
+		class ComponentFavoriteEvent
 		{
+		public:
 			// members
 			BGSComponent* component;    // 00
 			bool          isFavorited;  // 08

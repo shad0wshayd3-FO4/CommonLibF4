@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct NiRTTI
+	class NiRTTI
 	{
 	public:
 		[[nodiscard]] constexpr const char*   GetName() const noexcept { return name; }

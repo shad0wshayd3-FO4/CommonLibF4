@@ -10,7 +10,7 @@ namespace RE
 	namespace BSScript
 	{
 		class ICachedErrorMessage;
-		struct LogEvent;
+		class LogEvent;
 
 		class __declspec(novtable) ErrorLogger :
 			public BSTEventSource<LogEvent>  // 08
@@ -27,7 +27,7 @@ namespace RE
 				kFatal = 0x3
 			};
 
-			struct PerThreadErrorCounts
+			class PerThreadErrorCounts
 			{
 			public:
 				// members

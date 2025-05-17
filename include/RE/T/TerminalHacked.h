@@ -5,7 +5,7 @@ namespace RE
 	class TerminalHacked
 	{
 	public:
-		struct Event
+		class Event
 		{
 		public:
 			// members

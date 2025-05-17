@@ -4,10 +4,10 @@
 
 namespace RE
 {
-	struct WeatherEntry;
+	class WeatherEntry;
 
 	class TESWeatherList :
-		BSSimpleList<WeatherEntry*>
+		public BSSimpleList<WeatherEntry*>
 	{
 	public:
 	};

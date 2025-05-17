@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct SCRIPT_REFERENCED_OBJECT
+	class SCRIPT_REFERENCED_OBJECT
 	{
 	public:
 		// members

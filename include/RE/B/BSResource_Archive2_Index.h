@@ -16,8 +16,8 @@ namespace RE::BSResource
 
 	namespace Archive2
 	{
-		struct RegisteredEvent;
-		struct ClearRegistryEvent;
+		class RegisteredEvent;
+		class ClearRegistryEvent;
 
 		class __declspec(novtable) Index :
 			public BSTEventSink<RegisteredEvent>,    // 0000
@@ -28,9 +28,9 @@ namespace RE::BSResource
 			static constexpr auto VTABLE{ VTABLE::BSResource__Archive2__Index };
 
 			class Pager;
-			struct NameIDAccess;
+			class NameIDAccess;
 
-			struct Chunk
+			class Chunk
 			{
 			public:
 				// members
@@ -40,7 +40,7 @@ namespace RE::BSResource
 			};
 			static_assert(sizeof(Chunk) == 0x10);
 
-			struct Loose
+			class Loose
 			{
 			public:
 				// members
@@ -49,7 +49,7 @@ namespace RE::BSResource
 			};
 			static_assert(sizeof(Loose) == 0x10);
 
-			struct EntryHeader
+			class EntryHeader
 			{
 			public:
 				[[nodiscard]] bool IsChunk() const noexcept { return this->chunkOffsetOrType != 0; }

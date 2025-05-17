@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct SFRendererInitializedEvent
+	class SFRendererInitializedEvent
 	{
 	public:
 	};

@@ -13,9 +13,9 @@ namespace Scaleform::Render
 
 namespace RE
 {
-	struct SFRendererInitializedEvent;
+	class SFRendererInitializedEvent;
 
-	struct BSScaleformRenderer :
+	class BSScaleformRenderer :
 		public BSTEventSource<SFRendererInitializedEvent>  // 000
 	{
 	public:

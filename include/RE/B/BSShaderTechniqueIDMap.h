@@ -7,8 +7,9 @@ namespace RE
 	namespace BSShaderTechniqueIDMap
 	{
 		template <class T>
-		struct HashPolicy
+		class HashPolicy
 		{
+		public:
 			[[nodiscard]] std::uint32_t operator()(const T a_shader) const noexcept
 			{
 				assert(a_shader != nullptr);
@@ -17,8 +18,9 @@ namespace RE
 		};
 
 		template <class T>
-		struct ComparePolicy
+		class ComparePolicy
 		{
+		public:
 			[[nodiscard]] bool operator()(const T a_lhs, const T a_rhs) const noexcept
 			{
 				assert(a_lhs != nullptr);

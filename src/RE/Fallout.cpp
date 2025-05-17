@@ -4,13 +4,13 @@ namespace RE
 {
 	namespace BSSpring
 	{
-		template struct SpringState<float>;
+		template class SpringState<float>;
 		static_assert(sizeof(SpringState<float>) == 0xC);
 
-		template struct SpringState<NiPoint2>;
+		template class SpringState<NiPoint2>;
 		static_assert(sizeof(SpringState<NiPoint2>) == 0x14);
 
-		template struct SpringState<NiPoint3>;
+		template class SpringState<NiPoint3>;
 		static_assert(sizeof(SpringState<NiPoint3>) == 0x1C);
 	}
 
@@ -29,19 +29,19 @@ namespace RE
 		static_assert(sizeof(BSFixedString<wchar_t, true>) == 0x8);
 	}
 
-	template struct BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<AlchemyItem>;
+	template class BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<AlchemyItem>;
 	static_assert(std::is_empty_v<BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<AlchemyItem>>);
 
-	template struct BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<TESForm>;
+	template class BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<TESForm>;
 	static_assert(std::is_empty_v<BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<TESForm>>);
 
-	template struct BSAutoLockReadLockPolicy<BSReadWriteLock>;
+	template class BSAutoLockReadLockPolicy<BSReadWriteLock>;
 	static_assert(std::is_empty_v<BSAutoLockReadLockPolicy<BSReadWriteLock>>);
 
-	template struct BSAutoLockWriteLockPolicy<BSReadWriteLock>;
+	template class BSAutoLockWriteLockPolicy<BSReadWriteLock>;
 	static_assert(std::is_empty_v<BSAutoLockWriteLockPolicy<BSReadWriteLock>>);
 
-	template struct BSAutoLockDefaultPolicy<BSSpinLock>;
+	template class BSAutoLockDefaultPolicy<BSSpinLock>;
 	static_assert(std::is_empty_v<BSAutoLockDefaultPolicy<BSSpinLock>>);
 
 	template class BSAutoLock<BSReadWriteLock, BSAutoLockReadLockPolicy>;

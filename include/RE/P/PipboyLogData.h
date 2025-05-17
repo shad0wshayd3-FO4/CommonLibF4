@@ -7,7 +7,7 @@
 
 namespace RE
 {
-	struct TESTrackedStatsEvent;
+	class TESTrackedStatsEvent;
 
 	class __declspec(novtable) PipboyLogData :
 		public PipboyDataGroup,                    // 00

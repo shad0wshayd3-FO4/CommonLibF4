@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct OBJ_REFR
+	class OBJ_REFR
 	{
 	public:
 		// members

@@ -12,7 +12,7 @@ namespace RE
 		class Texture;
 	}
 
-	struct ImageSpaceLUTData
+	class ImageSpaceLUTData
 	{
 	public:
 		// members

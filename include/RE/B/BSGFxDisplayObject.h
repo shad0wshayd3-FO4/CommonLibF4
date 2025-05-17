@@ -11,7 +11,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSGFxDisplayObject };
 		static constexpr auto VTABLE{ VTABLE::BSGFxDisplayObject };
 
-		struct InitialDisplayState
+		class InitialDisplayState
 		{
 		public:
 			// members

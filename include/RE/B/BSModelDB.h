@@ -8,14 +8,17 @@ namespace RE
 	enum class ENUM_LOD_MULT;
 	class NiNode;
 
-	struct BSModelDB
+	class BSModelDB
 	{
+	public:
 		using Handle = void*;
 
-		struct DBTraits
+		class DBTraits
 		{
-			struct ArgsType
+		public:
+			class ArgsType
 			{
+			public:
 				// members
 				REX::EnumSet<ENUM_LOD_MULT, std::int32_t> lodFadeMult;          // 00
 				std::uint32_t                             loadLevel;            // 04
@@ -30,10 +33,12 @@ namespace RE
 		};
 		static_assert(std::is_empty_v<DBTraits>);
 
-		struct HandelListHead
+		class HandelListHead
 		{
-			struct HandleList
+		public:
+			class HandleList
 			{
+			public:
 				// members
 				Handle      handle;  // 00
 				HandleList* next;    // 08

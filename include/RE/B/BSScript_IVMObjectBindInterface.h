@@ -9,7 +9,7 @@ namespace RE
 	{
 		class Object;
 
-		struct __declspec(novtable) IVMObjectBindInterface
+		class __declspec(novtable) IVMObjectBindInterface
 		{
 		public:
 			static constexpr auto RTTI{ RTTI::BSScript__IVMObjectBindInterface };

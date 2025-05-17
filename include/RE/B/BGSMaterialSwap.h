@@ -14,7 +14,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSMaterialSwap };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kMSWP };
 
-		struct Entry
+		class Entry
 		{
 		public:
 			// members

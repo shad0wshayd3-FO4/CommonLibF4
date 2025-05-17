@@ -6,13 +6,14 @@ namespace RE
 {
 	namespace InventoryInterface
 	{
-		struct Handle;
+		class Handle;
 	}
 
 	namespace BGSInventoryItemEvent
 	{
-		struct Event
+		class Event
 		{
+		public:
 			ObjectRefHandle             owner;  // 00
 			InventoryInterface::Handle* item;   // 04
 		};

@@ -7,7 +7,7 @@ namespace RE
 {
 	namespace BSResource
 	{
-		struct ID;
+		class ID;
 	}
 
 	class __declspec(novtable) TESModel :

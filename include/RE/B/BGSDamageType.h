@@ -12,7 +12,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSDamageType };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kDMGT };
 
-		struct Data
+		class Data
 		{
 		public:
 			// members

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct SCRIPT_LOCAL
+	class SCRIPT_LOCAL
 	{
 	public:
 		// members

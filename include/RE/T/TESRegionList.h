@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct __declspec(novtable) TESRegionList :
+	class __declspec(novtable) TESRegionList :
 		public BSSimpleList<TESRegion*>
 	{
 	public:

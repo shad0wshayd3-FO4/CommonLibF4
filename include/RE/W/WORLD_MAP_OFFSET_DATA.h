@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct WORLD_MAP_OFFSET_DATA
+	class WORLD_MAP_OFFSET_DATA
 	{
 	public:
 		// members

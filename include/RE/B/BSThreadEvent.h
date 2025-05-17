@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BSThreadEvent
+	class BSThreadEvent
 	{
 	public:
 		enum class Event

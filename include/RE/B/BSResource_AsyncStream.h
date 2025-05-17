@@ -12,7 +12,7 @@ namespace RE::BSResource
 		static constexpr auto RTTI{ RTTI::BSResource__AsyncStream };
 		static constexpr auto VTABLE{ VTABLE::BSResource__AsyncStream };
 
-		struct PacketAlignedBuffer
+		class PacketAlignedBuffer
 		{
 		public:
 			std::uint64_t resultOffset = 0;        // 00

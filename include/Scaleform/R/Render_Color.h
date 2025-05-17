@@ -5,7 +5,7 @@ namespace Scaleform::Render
 	class Color
 	{
 	public:
-		struct Rgb32
+		class Rgb32
 		{
 		public:
 			// members

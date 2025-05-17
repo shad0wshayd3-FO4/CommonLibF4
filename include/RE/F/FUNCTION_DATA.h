@@ -4,7 +4,7 @@ namespace RE
 {
 	enum class SCRIPT_OUTPUT;
 
-	struct FUNCTION_DATA
+	class FUNCTION_DATA
 	{
 	public:
 		// members

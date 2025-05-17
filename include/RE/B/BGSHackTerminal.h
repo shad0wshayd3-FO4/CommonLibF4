@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSHackTerminal
+	class BGSHackTerminal
 	{
 	public:
 		BGSHackTerminal(TESObjectREFR* a_terminal, std::uint32_t a_success) :

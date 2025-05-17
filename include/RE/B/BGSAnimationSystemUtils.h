@@ -10,7 +10,7 @@ namespace RE
 
 	namespace BGSAnimationSystemUtils
 	{
-		struct ActiveSyncInfo
+		class ActiveSyncInfo
 		{
 		public:
 			// members

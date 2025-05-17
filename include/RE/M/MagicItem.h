@@ -27,7 +27,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::MagicItem };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kNONE };
 
-		struct SkillUsageData
+		class SkillUsageData
 		{
 		public:
 			// members

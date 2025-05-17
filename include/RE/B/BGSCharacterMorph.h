@@ -12,7 +12,7 @@ namespace RE
 {
 	namespace BGSCharacterMorph
 	{
-		struct BoneBaseScales
+		class BoneBaseScales
 		{
 		public:
 			// members
@@ -20,7 +20,7 @@ namespace RE
 		};
 		static_assert(sizeof(BoneBaseScales) == 0x24);
 
-		struct BONE_MODIFIER_MIN_MAX
+		class BONE_MODIFIER_MIN_MAX
 		{
 		public:
 			// members
@@ -31,7 +31,7 @@ namespace RE
 		};
 		static_assert(sizeof(BONE_MODIFIER_MIN_MAX) == 0x10);
 
-		struct Slider
+		class Slider
 		{
 		public:
 			// members
@@ -40,7 +40,7 @@ namespace RE
 		};
 		static_assert(sizeof(Slider) == 0x18);
 
-		struct Transform
+		class Transform
 		{
 		public:
 			// members
@@ -50,7 +50,7 @@ namespace RE
 		};
 		static_assert(sizeof(Transform) == 0x24);
 
-		struct TransformMinMax
+		class TransformMinMax
 		{
 		public:
 			// members
@@ -74,7 +74,7 @@ namespace RE
 		};
 		static_assert(sizeof(FacialBoneRegion) == 0x90);
 
-		struct Preset
+		class Preset
 		{
 		public:
 			// members
@@ -86,7 +86,7 @@ namespace RE
 		};
 		static_assert(sizeof(Preset) == 0x20);
 
-		struct Group
+		class Group
 		{
 		public:
 			// members

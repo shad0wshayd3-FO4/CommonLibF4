@@ -23,7 +23,7 @@ namespace RE
 		public BSTSingletonSDM<BSInputEnableManager>            // 108
 	{
 	public:
-		struct EnableLayer
+		class EnableLayer
 		{
 		public:
 			// members

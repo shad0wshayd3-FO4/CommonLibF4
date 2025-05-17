@@ -9,12 +9,12 @@ namespace RE
 {
 	namespace BSScript
 	{
+		class IMemoryPagePolicy;
 		class IProfilePolicy;
 		class IStackCallbackFunctor;
 		class MemoryPage;
 		class Object;
 		class StackFrame;
-		struct IMemoryPagePolicy;
 
 		namespace Internal
 		{
@@ -47,7 +47,7 @@ namespace RE
 				kRetryCall = 0x8
 			};
 
-			struct MemoryPageData
+			class MemoryPageData
 			{
 			public:
 				// members

@@ -10,27 +10,27 @@ namespace RE
 
 	namespace BGSInventoryListEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace LoadingStatusChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace PlayerInDialogueChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace PlayerLifeStateChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace VATSEvents
 	{
-		struct ModeChange;
+		class ModeChange;
 	}
 
 	class __declspec(novtable) PipboyStatusData :

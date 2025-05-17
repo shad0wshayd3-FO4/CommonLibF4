@@ -19,7 +19,7 @@ namespace Scaleform::Render::ContextImpl
 			kDead
 		};
 
-		struct __declspec(novtable) HandleData :
+		class __declspec(novtable) HandleData :
 			public RefCountBase<HandleData, 69>,  // 00
 			public ListNode<HandleData>           // 10
 		{

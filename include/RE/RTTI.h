@@ -39,7 +39,7 @@ namespace RE
 
 		using TypeDescriptor = std::type_info;
 
-		struct PMD
+		class PMD
 		{
 		public:
 			// members
@@ -49,7 +49,7 @@ namespace RE
 		};
 		static_assert(sizeof(PMD) == 0xC);
 
-		struct BaseClassDescriptor
+		class BaseClassDescriptor
 		{
 		public:
 			enum class Attribute : std::uint32_t
@@ -72,7 +72,7 @@ namespace RE
 		};
 		static_assert(sizeof(BaseClassDescriptor) == 0x18);
 
-		struct ClassHierarchyDescriptor
+		class ClassHierarchyDescriptor
 		{
 		public:
 			enum class Attribute
@@ -91,7 +91,7 @@ namespace RE
 		};
 		static_assert(sizeof(ClassHierarchyDescriptor) == 0x10);
 
-		struct CompleteObjectLocator
+		class CompleteObjectLocator
 		{
 		public:
 			enum class Signature

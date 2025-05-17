@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct __declspec(novtable) MapMarkerData :
+	class __declspec(novtable) MapMarkerData :
 		public TESFullName  // 00
 	{
 		enum MARKER_TYPE : std::uint16_t

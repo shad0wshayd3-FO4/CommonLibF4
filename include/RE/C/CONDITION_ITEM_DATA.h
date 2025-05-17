@@ -7,7 +7,7 @@ namespace RE
 {
 	enum class CONDITIONITEMOBJECT;
 
-	struct CONDITION_ITEM_DATA
+	class CONDITION_ITEM_DATA
 	{
 	public:
 		// members

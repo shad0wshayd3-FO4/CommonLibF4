@@ -35,7 +35,8 @@ namespace RE
 	enum class DifficultyLevel;
 	enum class PLAYER_ACTION;
 	enum class SCENE_ACTION_PLAYER_RESPONSE_TYPE;
-
+	class BGSActorCellEvent;
+	class BGSActorDeathEvent;
 	class BGSInstancedQuestObjective;
 	class BipedAnim;
 	class BSLight;
@@ -45,26 +46,24 @@ namespace RE
 	class ImageSpaceModifierInstanceDOF;
 	class ImageSpaceModifierInstanceForm;
 	class ItemChange;
+	class MenuModeChangeEvent;
+	class MenuOpenCloseEvent;
 	class NiAVObject;
 	class NiLight;
 	class NiNode;
-	class MenuModeChangeEvent;
-	class MenuOpenCloseEvent;
 	class OtherEventEnabledEvent;
 	class PickRefUpdateEvent;
 	class PlayerActionObject;
+	class PositionPlayerEvent;
 	class QuestTargetArray;
 	class TeleportPath;
 	class TESHitEvent;
 	class TESQuestStageItem;
 	class UserEventEnabledEvent;
-	struct BGSActorCellEvent;
-	struct BGSActorDeathEvent;
-	struct PositionPlayerEvent;
 
 	namespace PerkValueEvents
 	{
-		struct PerkEntryUpdatedEvent;
+		class PerkEntryUpdatedEvent;
 	}
 
 	class __declspec(novtable) PlayerCharacter :
@@ -88,7 +87,7 @@ namespace RE
 
 		enum class GrabbingType;
 
-		struct PlayerActionObject
+		class PlayerActionObject
 		{
 		public:
 			// members
@@ -98,7 +97,7 @@ namespace RE
 		};
 		static_assert(sizeof(PlayerActionObject) == 0xC);
 
-		struct ScopedInventoryChangeMessageContext
+		class ScopedInventoryChangeMessageContext
 		{
 		public:
 			ScopedInventoryChangeMessageContext(bool a_suppressMessages, bool a_suppressAudio) :

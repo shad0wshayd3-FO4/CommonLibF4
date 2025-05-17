@@ -14,7 +14,7 @@ namespace RE::BSResource
 		static constexpr auto RTTI{ RTTI::BSResource____GlobalLocations };
 		static constexpr auto VTABLE{ VTABLE::BSResource____GlobalLocations };
 
-		struct Entry
+		class Entry
 		{
 		public:
 			// members

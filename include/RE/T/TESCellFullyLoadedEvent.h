@@ -4,8 +4,9 @@
 
 namespace RE
 {
-	struct TESCellFullyLoadedEvent
+	class TESCellFullyLoadedEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESCellFullyLoadedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESCellFullyLoadedEvent::GetEventSource);

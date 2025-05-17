@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct PowerArmorLightData
+	class PowerArmorLightData
 	{
 	private:
 		using EventSource_t = BSTGlobalEvent::EventSource<PowerArmorLightData>;

@@ -5,7 +5,7 @@
 
 namespace Scaleform::GFx
 {
-	struct ExporterInfo
+	class ExporterInfo
 	{
 	public:
 		enum class ExportFlagConstants : std::uint32_t

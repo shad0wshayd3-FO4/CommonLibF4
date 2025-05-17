@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct WaterShaderData
+	class WaterShaderData
 	{
 	public:
 		// members

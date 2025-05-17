@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct __declspec(novtable) BIPED_MODEL
+	class __declspec(novtable) BIPED_MODEL
 	{
 	public:
 		// members

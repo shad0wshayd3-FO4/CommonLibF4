@@ -6,7 +6,7 @@ namespace RE
 	enum class _D3DBLENDOP;
 	enum class _D3DCMPFUNC;
 
-	struct EffectShaderData
+	class EffectShaderData
 	{
 	public:
 		// members

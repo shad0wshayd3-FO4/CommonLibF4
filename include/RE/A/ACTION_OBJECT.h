@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct ACTION_OBJECT
+	class ACTION_OBJECT
 	{
 	public:
 		// members

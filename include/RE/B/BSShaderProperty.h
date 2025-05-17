@@ -12,7 +12,7 @@ namespace RE
 	class BSShaderMaterial;
 	class NiTexture;
 
-	struct __declspec(novtable) BSShaderProperty :
+	class __declspec(novtable) BSShaderProperty :
 		public NiShadeProperty  // 00
 	{
 	private:

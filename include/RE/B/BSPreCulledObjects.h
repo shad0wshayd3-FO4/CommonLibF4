@@ -4,10 +4,10 @@ namespace RE
 {
 	class NiAVObject;
 
-	struct BSPreCulledObjects
+	class BSPreCulledObjects
 	{
 	public:
-		struct ObjectRecord
+		class ObjectRecord
 		{
 		public:
 			// members

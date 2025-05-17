@@ -2,7 +2,7 @@
 
 namespace RE::BSResource
 {
-	struct FileID
+	class FileID
 	{
 	public:
 		[[nodiscard]] bool operator==(const FileID&) const noexcept = default;

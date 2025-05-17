@@ -349,8 +349,9 @@ namespace RE
 
 	namespace detail
 	{
-		struct SettingCollectionMapCompare
+		class SettingCollectionMapCompare
 		{
+		public:
 			[[nodiscard]] bool operator()(const RE::BSFixedString& a_lhs, const RE::BSFixedString& a_rhs) const noexcept
 			{
 				return a_lhs.c_str() < a_rhs.c_str();

@@ -111,7 +111,7 @@ namespace RE
 		class Renderer
 		{
 		public:
-			struct LightParams
+			class LightParams
 			{
 			public:
 				// members

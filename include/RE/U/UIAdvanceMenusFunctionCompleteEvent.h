@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct UIAdvanceMenusFunctionCompleteEvent
+	class UIAdvanceMenusFunctionCompleteEvent
 	{
 	private:
 		using EventSource_t = BSTGlobalEvent::EventSource<UIAdvanceMenusFunctionCompleteEvent>;

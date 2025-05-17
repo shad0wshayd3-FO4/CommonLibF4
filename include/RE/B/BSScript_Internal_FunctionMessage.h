@@ -12,7 +12,7 @@ namespace RE
 		{
 			class IFuncCallQuery;
 
-			struct FunctionMessage
+			class FunctionMessage
 			{
 			public:
 				enum class Type

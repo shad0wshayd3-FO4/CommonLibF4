@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct MiddleLowProcessData
+	class MiddleLowProcessData
 	{
 	public:
 		// members

@@ -14,7 +14,7 @@ namespace Scaleform::Render::ContextImpl
 	class __declspec(novtable) RenderNotify
 	{
 	public:
-		struct ContextNode :
+		class ContextNode :
 			public ListNode<ContextNode>  // 00
 		{
 		public:

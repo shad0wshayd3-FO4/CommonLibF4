@@ -2,8 +2,9 @@
 
 namespace RE
 {
-	struct GridCell
+	class GridCell
 	{
+	public:
 		// members
 		TESObjectCELL* cell;  // 00
 	};

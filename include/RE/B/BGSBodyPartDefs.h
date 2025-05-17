@@ -49,7 +49,7 @@ namespace RE
 			kFaceTargetSource = 0x19
 		};
 
-		struct HitReactionData
+		class HitReactionData
 		{
 		public:
 			// members

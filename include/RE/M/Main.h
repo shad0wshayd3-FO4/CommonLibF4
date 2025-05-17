@@ -12,7 +12,7 @@ namespace RE
 {
 	class NiCamera;
 	class TESPageCache;
-	struct PositionPlayerEvent;
+	class PositionPlayerEvent;
 
 	class Main :
 		public BSTEventSink<PositionPlayerEvent>

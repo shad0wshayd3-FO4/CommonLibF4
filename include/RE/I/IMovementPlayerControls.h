@@ -4,9 +4,9 @@
 
 namespace RE
 {
-	struct PlayerControlsMovementData;
+	class PlayerControlsMovementData;
 
-	struct __declspec(novtable) IMovementPlayerControls :
+	class __declspec(novtable) IMovementPlayerControls :
 		public IMovementInterface  // 00
 	{
 	public:

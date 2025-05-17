@@ -6,7 +6,7 @@
 
 namespace RE
 {
-	struct UIAdvanceMenusFunctionCompleteEvent;
+	class UIAdvanceMenusFunctionCompleteEvent;
 
 	class __declspec(novtable) FlatScreenModel :
 		public BSTEventSink<UIAdvanceMenusFunctionCompleteEvent>,  // 00

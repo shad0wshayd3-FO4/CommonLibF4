@@ -20,7 +20,7 @@ namespace RE
 			kInheritRotation = 1 << 2
 		};
 
-		struct Data
+		class Data
 		{
 		public:
 			// members

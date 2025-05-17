@@ -7,7 +7,7 @@ namespace RE
 	enum class BIPED_OBJECT;
 	enum class RACE_SIZE;
 
-	struct RACE_DATA
+	class RACE_DATA
 	{
 	public:
 		// members

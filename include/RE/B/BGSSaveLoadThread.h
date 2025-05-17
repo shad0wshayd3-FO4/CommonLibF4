@@ -12,7 +12,7 @@ namespace RE
 		public BSThread  // 00
 	{
 	public:
-		struct AsyncRequest
+		class AsyncRequest
 		{
 		public:
 			using TaskFinishedCallback_t = void (*)(bool);

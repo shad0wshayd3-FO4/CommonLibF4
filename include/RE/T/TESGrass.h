@@ -16,7 +16,7 @@ namespace RE
 
 		enum class GRASS_WATER_STATE;
 
-		struct GRASS_DATA
+		class GRASS_DATA
 		{
 		public:
 			// members

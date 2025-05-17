@@ -45,10 +45,10 @@ namespace RE
 			kTotal = 0x17
 		};
 
-		struct CommandBufferPassesMapAccess;
-		struct RenderPassMapAccess;
+		class CommandBufferPassesMapAccess;
+		class RenderPassMapAccess;
 
-		struct CommandBufferPassesData
+		class CommandBufferPassesData
 		{
 		public:
 			// members
@@ -60,7 +60,7 @@ namespace RE
 		};
 		static_assert(sizeof(CommandBufferPassesData) == 0x10018);
 
-		struct CommandBufferPassesDataEntry
+		class CommandBufferPassesDataEntry
 		{
 		public:
 			// members

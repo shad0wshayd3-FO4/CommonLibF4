@@ -18,7 +18,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESObjectLAND };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kLAND };
 
-		struct LoadedLandData;
+		class LoadedLandData;
 
 		// members
 		OBJ_LAND              data;            // 28

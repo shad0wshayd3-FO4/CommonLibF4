@@ -10,11 +10,11 @@ namespace RE
 	class BSInputEventUser;
 	class CameraZoomHandler;
 	class ClickHandler;
+	class DisconnectHandler;
 	class GFxConvertHandler;
+	class MenuOpenHandler;
 	class PipboyHandler;
 	class QuickSaveLoadHandler;
-	struct DisconnectHandler;
-	struct MenuOpenHandler;
 
 	class MenuControls :
 		public BSInputEventReceiver,          // 00

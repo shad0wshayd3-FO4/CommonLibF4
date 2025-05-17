@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace ActorItemEquipped
 	{
-		struct Event
+		class Event
 		{
+		public:
 			// members
 			const TESBoundObject* item;      // 00
 			const Actor*          equipper;  // 08

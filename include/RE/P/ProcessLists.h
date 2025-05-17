@@ -19,8 +19,8 @@ namespace RE
 {
 	class Crime;
 	class MuzzleFlash;
+	class PositionPlayerEvent;
 	class SyncQueueObj;
-	struct PositionPlayerEvent;
 
 	class __declspec(novtable) ProcessLists :
 		public BSTEventSink<PositionPlayerEvent>,  // 000

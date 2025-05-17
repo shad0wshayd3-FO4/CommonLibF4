@@ -14,7 +14,7 @@ namespace Scaleform::GFx
 		static constexpr auto RTTI{ RE::RTTI::Scaleform__GFx__FunctionHandler };
 		static constexpr auto VTABLE{ RE::VTABLE::Scaleform__GFx__FunctionHandler };
 
-		struct Params
+		class Params
 		{
 		public:
 			// members

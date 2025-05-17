@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct RANK_DATA
+	class RANK_DATA
 	{
 	public:
 		// members

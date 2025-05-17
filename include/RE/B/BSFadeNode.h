@@ -18,7 +18,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BSFadeNode };
 		static constexpr auto Ni_RTTI{ Ni_RTTI::BSFadeNode };
 
-		struct FlattenedGeometryData
+		class FlattenedGeometryData
 		{
 		public:
 			// members

@@ -15,9 +15,9 @@ namespace Scaleform::GFx
 namespace RE
 {
 	class BSScaleformImageLoader;
+	class BSScaleformRenderer;
 	class IMenu;
-	struct BSScaleformRenderer;
-	struct SFRendererInitializedEvent;
+	class SFRendererInitializedEvent;
 
 	class __declspec(novtable) BSScaleformManager :
 		public BSTEventSink<SFRendererInitializedEvent>,  // 00

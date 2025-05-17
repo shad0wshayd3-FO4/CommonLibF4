@@ -8,7 +8,7 @@ namespace RE
 	class BGSObjectInstanceExtra;
 	class BGSPrimitive;
 	class ExtraDataList;
-	struct INSTANCE_FILTER;
+	class INSTANCE_FILTER;
 
 	class __declspec(novtable) NEW_REFR_DATA
 	{

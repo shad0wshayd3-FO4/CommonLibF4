@@ -40,7 +40,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::Projectile };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kREFR };
 
-		struct ImpactCreation;
+		class ImpactCreation;
 
 		class ImpactData
 		{

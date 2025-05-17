@@ -106,34 +106,34 @@ namespace RE
 	static_assert(sizeof(BSReadWriteLock) == 0x8);
 
 	template <class Mutex>
-	struct BSAutoLockDefaultPolicy
+	class BSAutoLockDefaultPolicy
 	{
 	public:
 		static void lock(Mutex& a_mutex) { a_mutex.lock(); }
 		static void unlock(Mutex& a_mutex) { a_mutex.unlock(); }
 	};
 
-	extern template struct BSAutoLockDefaultPolicy<BSSpinLock>;
+	extern template class BSAutoLockDefaultPolicy<BSSpinLock>;
 
 	template <class Mutex>
-	struct BSAutoLockReadLockPolicy
+	class BSAutoLockReadLockPolicy
 	{
 	public:
 		static void lock(Mutex& a_mutex) { a_mutex.lock_read(); }
 		static void unlock(Mutex& a_mutex) { a_mutex.unlock_read(); }
 	};
 
-	extern template struct BSAutoLockReadLockPolicy<BSReadWriteLock>;
+	extern template class BSAutoLockReadLockPolicy<BSReadWriteLock>;
 
 	template <class Mutex>
-	struct BSAutoLockWriteLockPolicy
+	class BSAutoLockWriteLockPolicy
 	{
 	public:
 		static void lock(Mutex& a_mutex) { a_mutex.lock_write(); }
 		static void unlock(Mutex& a_mutex) { a_mutex.unlock_write(); }
 	};
 
-	extern template struct BSAutoLockWriteLockPolicy<BSReadWriteLock>;
+	extern template class BSAutoLockWriteLockPolicy<BSReadWriteLock>;
 
 	template <class Mutex, template <class> class Policy = BSAutoLockDefaultPolicy>
 	class BSAutoLock

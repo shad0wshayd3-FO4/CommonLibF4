@@ -29,7 +29,7 @@ namespace RE
 		};
 		static_assert(sizeof(RuleData) == 0x38);
 
-		struct RuleSet :
+		class RuleSet :
 			public BSTArray<RuleData>  // 00
 		{
 		public:

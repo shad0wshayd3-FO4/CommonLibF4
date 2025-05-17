@@ -10,7 +10,7 @@ namespace RE
 {
 	class BSInputEnableLayer;
 	class MenuOpenCloseEvent;
-	struct PositionPlayerEvent;
+	class PositionPlayerEvent;
 
 	class __declspec(novtable) MenuTopicManager :
 		public BSTEventSink<MenuOpenCloseEvent>,   // 00

@@ -21,7 +21,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSConstructibleObject };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kCOBJ };
 
-		struct ConstructibleObjectData
+		class ConstructibleObjectData
 		{
 		public:
 			// members

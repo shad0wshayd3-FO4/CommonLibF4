@@ -7,7 +7,7 @@ namespace Scaleform
 {
 	class MemoryHeap;
 
-	struct ArrayDefaultPolicy
+	class ArrayDefaultPolicy
 	{
 	public:
 		~ArrayDefaultPolicy() noexcept {}
@@ -18,7 +18,7 @@ namespace Scaleform
 	static_assert(sizeof(ArrayDefaultPolicy) == 0x8);
 
 	template <std::int32_t MinCapacity = 0, std::int32_t Granularity = 4, bool NeverShrink = false>
-	struct ArrayConstPolicy
+	class ArrayConstPolicy
 	{
 	public:
 		~ArrayConstPolicy() noexcept {}
@@ -29,7 +29,7 @@ namespace Scaleform
 	static_assert(sizeof(ArrayConstPolicy<>) == 0x8);
 
 	template <class T, class Allocator, class SizePolicy>
-	struct ArrayDataBase
+	class ArrayDataBase
 	{
 	public:
 		// members
@@ -40,7 +40,7 @@ namespace Scaleform
 	static_assert(sizeof(ArrayDataBase<void*, void*, ArrayDefaultPolicy>) == 0x18);
 
 	template <class T, class Allocator, class SizePolicy>
-	struct ArrayData :
+	class ArrayData :
 		public ArrayDataBase<T, Allocator, SizePolicy>
 	{
 	public:
@@ -48,7 +48,7 @@ namespace Scaleform
 	static_assert(sizeof(ArrayData<void*, void*, ArrayDefaultPolicy>) == 0x18);
 
 	template <class T, class Allocator, class SizePolicy>
-	struct ArrayDataDH :
+	class ArrayDataDH :
 		ArrayDataBase<T, Allocator, SizePolicy>
 	{
 	public:
@@ -58,7 +58,7 @@ namespace Scaleform
 	static_assert(sizeof(ArrayDataDH<void*, void*, ArrayDefaultPolicy>) == 0x20);
 
 	template <class T, class Allocator, class SizePolicy>
-	struct ArrayDataCC :
+	class ArrayDataCC :
 		public ArrayDataBase<T, Allocator, SizePolicy>
 	{
 	public:

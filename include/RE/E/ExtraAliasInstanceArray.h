@@ -6,7 +6,7 @@
 
 namespace RE
 {
-	struct BGSRefAliasInstanceData;
+	class BGSRefAliasInstanceData;
 
 	class __declspec(novtable) ExtraAliasInstanceArray :
 		public BSExtraData  // 00

@@ -17,7 +17,7 @@ namespace RE
 			kTry = 0x2
 		};
 
-		struct Data
+		class Data
 		{
 		public:
 			union

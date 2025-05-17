@@ -2,8 +2,9 @@
 
 namespace RE
 {
-	struct TESLocationClearedEvent
+	class TESLocationClearedEvent
 	{
+	public:
 		// members
 		const BGSLocation* location;  // 00
 	};

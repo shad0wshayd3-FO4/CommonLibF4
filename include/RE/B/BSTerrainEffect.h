@@ -13,7 +13,7 @@
 namespace RE
 {
 	class bhkWorld;
-	struct PositionPlayerEvent;
+	class PositionPlayerEvent;
 
 	class __declspec(novtable) BSTerrainEffect :
 		public BSTempEffect,                      // 00
@@ -24,7 +24,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BSTerrainEffect };
 		static constexpr auto TYPE{ TEMP_EFFECT_TYPE::kTerrain };
 
-		struct BoneAdjustment
+		class BoneAdjustment
 		{
 		public:
 			// members

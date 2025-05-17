@@ -18,13 +18,13 @@ namespace RE
 	class NiFogProperty;
 	class NiNode;
 	class NiTexture;
+	class PositionPlayerEvent;
 	class QueuedFile;
 	class Sky;
-	struct PositionPlayerEvent;
 
 	namespace BSResource::Archive2
 	{
-		struct StreamOpenedEvent;
+		class StreamOpenedEvent;
 	}
 
 	class TES :
@@ -37,7 +37,7 @@ namespace RE
 
 		using TACCallbackFunc_t = void(TESObjectCELL*, void*, void*);
 
-		struct ParticleObjectCache
+		class ParticleObjectCache
 		{
 		public:
 			// members

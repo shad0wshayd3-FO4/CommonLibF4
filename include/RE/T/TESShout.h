@@ -20,7 +20,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESShout };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kSHOU };
 
-		struct Variation
+		class Variation
 		{
 		public:
 			// members

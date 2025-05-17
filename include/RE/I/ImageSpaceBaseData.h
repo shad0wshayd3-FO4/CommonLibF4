@@ -2,10 +2,10 @@
 
 namespace RE
 {
-	struct ImageSpaceBaseData
+	class ImageSpaceBaseData
 	{
 	public:
-		struct HDR  // HNAM
+		class HDR  // HNAM
 		{
 		public:
 			// members
@@ -21,7 +21,7 @@ namespace RE
 		};
 		static_assert(sizeof(HDR) == 0x24);
 
-		struct Cinematic  // CNAM
+		class Cinematic  // CNAM
 		{
 		public:
 			// members
@@ -31,10 +31,10 @@ namespace RE
 		};
 		static_assert(sizeof(Cinematic) == 0xC);
 
-		struct Tint  // TNAM
+		class Tint  // TNAM
 		{
 		public:
-			struct ColorF
+			class ColorF
 			{
 			public:
 				// members
@@ -50,7 +50,7 @@ namespace RE
 		};
 		static_assert(sizeof(Tint) == 0x10);
 
-		struct DepthOfField  // DNAM
+		class DepthOfField  // DNAM
 		{
 		public:
 			// members

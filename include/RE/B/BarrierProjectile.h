@@ -14,7 +14,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BarrierProjectile };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kPBAR };
 
-		struct CollisionData
+		class CollisionData
 		{
 		public:
 			// members

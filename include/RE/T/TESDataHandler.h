@@ -12,12 +12,12 @@
 
 namespace RE
 {
+	class BGSHotloadCompletedEvent;
 	class NEW_REFR_DATA;
 	class TESFile;
 	class TESObjectList;
 	class TESRegionDataManager;
-	struct BGSHotloadCompletedEvent;
-	struct TESRegionList;
+	class TESRegionList;
 
 	class TESDataHandler :
 		public BSTEventSource<BGSHotloadCompletedEvent>,  // 0000

@@ -24,7 +24,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESForm };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kNONE };
 
-		struct FormSortFunc
+		class FormSortFunc
 		{
 		public:
 			std::int32_t operator()(const TESForm* a_arg1, const TESForm* a_arg2)

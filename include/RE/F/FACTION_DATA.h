@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct FACTION_DATA
+	class FACTION_DATA
 	{
 	public:
 		// members

@@ -7,31 +7,31 @@
 
 namespace RE
 {
-	struct ConditionBoyEvent;
+	class ConditionBoyEvent;
 
 	namespace ActorItemEquipped
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace ActorValueEvents
 	{
-		struct ActorValueChangedEvent;
+		class ActorValueChangedEvent;
 	}
 
 	namespace BGSInventoryItemEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace BGSInventoryListEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace PlayerActiveEffectChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	class __declspec(novtable) PipboyStatsData :

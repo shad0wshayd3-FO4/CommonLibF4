@@ -33,7 +33,7 @@ namespace Scaleform::GFx::AS3
 	class Value
 	{
 	public:
-		struct Extra
+		class Extra
 		{
 		public:
 			// members
@@ -63,7 +63,7 @@ namespace Scaleform::GFx::AS3
 			const Traits* traits;
 		};
 
-		struct VStruct
+		class VStruct
 		{
 		public:
 			// members

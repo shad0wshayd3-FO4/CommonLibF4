@@ -21,12 +21,12 @@ namespace RE
 
 	namespace ExitPowerArmor
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace PreloadPowerArmor
 	{
-		struct Event;
+		class Event;
 	}
 
 	class __declspec(novtable) PowerArmorGeometry :

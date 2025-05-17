@@ -3,7 +3,7 @@
 namespace Scaleform
 {
 	template <class T>
-	struct ListNode
+	class ListNode
 	{
 	public:
 		// members

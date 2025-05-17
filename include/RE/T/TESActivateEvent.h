@@ -5,8 +5,9 @@
 
 namespace RE
 {
-	struct TESActivateEvent
+	class TESActivateEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESActivateEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESActivateEvent::GetEventSource);

@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct BSTObjectArenaScrapAllocBase
+	class BSTObjectArenaScrapAllocBase
 	{
 	public:
 		// members
@@ -12,7 +12,7 @@ namespace RE
 	};
 	static_assert(sizeof(BSTObjectArenaScrapAllocBase) == 0x8);
 
-	struct BSTObjectArenaScrapAlloc :
+	class BSTObjectArenaScrapAlloc :
 		private BSTObjectArenaScrapAllocBase  // 0
 	{
 	public:
@@ -37,7 +37,7 @@ namespace RE
 		using size_type = std::uint32_t;
 		using pointer = value_type*;
 
-		struct Page
+		class Page
 		{
 		public:
 			F4_HEAP_REDEFINE_NEW(Page);

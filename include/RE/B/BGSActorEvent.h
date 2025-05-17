@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSActorEvent
+	class BGSActorEvent
 	{
 	public:
 		// member

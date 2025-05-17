@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct TESObjectSTATData
+	class TESObjectSTATData
 	{
 	public:
 		// members

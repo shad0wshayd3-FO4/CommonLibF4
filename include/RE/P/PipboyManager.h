@@ -18,7 +18,7 @@ namespace RE
 	class BSTriShape;
 	class IMenu;
 	class IsPipboyActiveEvent;
-	struct BSAnimationGraphEvent;
+	class BSAnimationGraphEvent;
 
 	class __declspec(novtable) PipboyManager :
 		public BSTEventSink<BSAnimationGraphEvent>,  // 00

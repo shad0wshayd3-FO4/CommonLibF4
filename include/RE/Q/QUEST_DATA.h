@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct QUEST_DATA
+	class QUEST_DATA
 	{
 	public:
 		// members

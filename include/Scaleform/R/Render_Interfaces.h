@@ -8,7 +8,7 @@ namespace Scaleform::Render
 	class Renderer2D;
 	class TextureManager;
 
-	struct Interfaces
+	class Interfaces
 	{
 	public:
 		// members

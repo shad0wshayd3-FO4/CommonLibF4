@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace FatmanDeaths
 	{
-		struct Event
+		class Event
 		{
+		public:
 			// members
 			Actor* victim;  // 00
 		};

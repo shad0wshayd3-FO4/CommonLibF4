@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct BGSActorDeathEvent :
+	class BGSActorDeathEvent :
 		public BGSActorEvent
 	{
 	public:

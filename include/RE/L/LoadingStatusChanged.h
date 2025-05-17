@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace LoadingStatusChanged
 	{
-		struct Event
+		class Event
 		{
+		public:
 			bool isLoading;  // 00
 		};
 		static_assert(sizeof(Event) == 0x1);

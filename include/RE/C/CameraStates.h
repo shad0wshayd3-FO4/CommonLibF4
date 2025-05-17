@@ -2,8 +2,9 @@
 
 namespace RE
 {
-	struct CameraStates
+	class CameraStates
 	{
+	public:
 		enum CameraState : std::uint32_t
 		{
 			kFirstPerson = 0x0,

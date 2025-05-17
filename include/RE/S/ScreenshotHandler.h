@@ -4,9 +4,10 @@
 
 namespace RE
 {
-	struct __declspec(novtable) ScreenshotHandler :
+	class __declspec(novtable) ScreenshotHandler :
 		public BSInputEventUser  // 00
 	{
+	public:
 		static constexpr auto RTTI{ RTTI::ScreenshotHandler };
 		static constexpr auto VTABLE{ VTABLE::ScreenshotHandler };
 

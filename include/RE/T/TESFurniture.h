@@ -18,7 +18,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESFurniture };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kFURN };
 
-		struct EntryPointData
+		class EntryPointData
 		{
 		public:
 			// members

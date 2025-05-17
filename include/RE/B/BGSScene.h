@@ -10,7 +10,7 @@
 namespace RE
 {
 	class BGSSceneAction;
-	struct BGSScenePhase;
+	class BGSScenePhase;
 
 	class __declspec(novtable) BGSScene :
 		public TESForm,          // 00

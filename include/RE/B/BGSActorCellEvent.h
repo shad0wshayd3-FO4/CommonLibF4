@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct BGSActorCellEvent :
+	class BGSActorCellEvent :
 		public BGSActorEvent
 	{
 	public:

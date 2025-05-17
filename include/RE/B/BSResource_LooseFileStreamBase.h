@@ -6,7 +6,7 @@
 
 namespace RE::BSResource
 {
-	struct LooseFileStreamBase
+	class LooseFileStreamBase
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::BSResource____LooseFileStreamBase };

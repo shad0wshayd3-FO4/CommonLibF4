@@ -10,7 +10,7 @@ namespace RE
 	class DestructibleObjectStage;
 	class QueuedFile;
 
-	struct DestructibleObjectData
+	class DestructibleObjectData
 	{
 	public:
 		// members

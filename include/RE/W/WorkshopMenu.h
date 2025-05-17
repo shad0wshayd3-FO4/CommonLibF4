@@ -20,8 +20,8 @@ namespace RE
 
 	namespace Workshop
 	{
-		struct BuildableAreaEvent;
-		struct PlacementStatusEvent;
+		class BuildableAreaEvent;
+		class PlacementStatusEvent;
 	}
 
 	class __declspec(novtable) WorkshopMenu :
@@ -83,7 +83,7 @@ namespace RE
 		};
 		static_assert(sizeof(FXWorkshopMenu) == 0x1E8);
 
-		struct IconBG
+		class IconBG
 		{
 		public:
 			BSTAlignedArray<UIShaderFXInfo> cachedColorFXInfos;       // 00

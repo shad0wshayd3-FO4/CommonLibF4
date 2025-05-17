@@ -6,61 +6,61 @@
 namespace RE
 {
 	class PerkPointIncreaseEvent;
-	struct PlayerUpdateEvent;
+	class PlayerUpdateEvent;
 
 	namespace ActorEquipManagerEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace ActorValueEvents
 	{
-		struct ActorValueChangedEvent;
+		class ActorValueChangedEvent;
 	}
 
 	namespace BGSInventoryItemEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace BGSInventoryListEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace HourPassed
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace LevelIncrease
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace PerkValueEvents
 	{
-		struct PerkEntryUpdatedEvent;
+		class PerkEntryUpdatedEvent;
 	}
 
 	namespace PlayerActiveEffectChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace PlayerCharacterQuestEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace PlayerDifficultySettingChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace SPECIALMenuEvent
 	{
-		struct NameChangedEvent;
+		class NameChangedEvent;
 	}
 
 	class __declspec(novtable) PipboyPlayerInfoData :

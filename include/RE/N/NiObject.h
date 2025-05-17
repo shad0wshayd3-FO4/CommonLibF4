@@ -25,12 +25,12 @@ namespace RE
 	class NiObjectGroup;
 	class NiParticles;
 	class NiParticleSystem;
+	class NiRTTI;
 	class NiStream;
 	class NiSwitchNode;
 	class NiTriBasedGeom;
 	class NiTriShape;
 	class NiTriStrips;
-	struct NiRTTI;
 
 	class __declspec(novtable) NiObject :
 		public NiRefObject  // 00

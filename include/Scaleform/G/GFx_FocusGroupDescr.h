@@ -13,8 +13,9 @@ namespace Scaleform::GFx
 	class CharacterHandle;
 	class InteractiveObject;
 
-	struct alignas(0x10) FocusGroupDescr
+	class alignas(0x10) FocusGroupDescr
 	{
+	public:
 		enum
 		{
 			kTabableArray_Initialized = 0x1,

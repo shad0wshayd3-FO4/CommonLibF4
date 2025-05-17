@@ -8,7 +8,7 @@ namespace RE
 {
 	namespace BSScript
 	{
-		struct LogEvent
+		class LogEvent
 		{
 		public:
 			const ICachedErrorMessage&  errorMsg;     // 00

@@ -14,7 +14,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BarterMenu };
 		static constexpr auto MENU_NAME{ "BarterMenu"sv };
 
-		struct ItemBarterData
+		class ItemBarterData
 		{
 		public:
 			// members

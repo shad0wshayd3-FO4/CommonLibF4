@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct OBJ_ARMA
+	class OBJ_ARMA
 	{
 	public:
 		// members

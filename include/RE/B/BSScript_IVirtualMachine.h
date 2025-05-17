@@ -21,20 +21,20 @@ namespace RE
 		class Array;
 		class BoundScript;
 		class IFunction;
+		class ILoader;
+		class IObjectHandlePolicy;
 		class ISavePatcherInterface;
 		class IStackCallbackFunctor;
 		class ITypeLinkedCallback;
 		class JobList;
+		class LogEvent;
 		class Object;
 		class ObjectBindPolicy;
 		class ObjectTypeInfo;
+		class StatsEvent;
 		class Struct;
 		class StructTypeInfo;
 		class Variable;
-		struct ILoader;
-		struct IObjectHandlePolicy;
-		struct LogEvent;
-		struct StatsEvent;
 
 		class __declspec(novtable) IVirtualMachine :
 			public BSIntrusiveRefCounted  // 08

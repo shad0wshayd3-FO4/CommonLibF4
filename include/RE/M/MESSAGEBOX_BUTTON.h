@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct MESSAGEBOX_BUTTON
+	class MESSAGEBOX_BUTTON
 	{
 	public:
 		// members

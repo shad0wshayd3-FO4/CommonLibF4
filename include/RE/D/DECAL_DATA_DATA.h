@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct DECAL_DATA_DATA
+	class DECAL_DATA_DATA
 	{
 	public:
 		// members

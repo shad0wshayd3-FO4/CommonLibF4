@@ -37,7 +37,7 @@ namespace RE
 
 		using FilterValidationFunction_t = bool(EffectSetting*, void*);
 
-		struct EffectSettingData
+		class EffectSettingData
 		{
 		public:
 			enum class Flag
@@ -105,7 +105,7 @@ namespace RE
 		};
 		static_assert(sizeof(EffectSettingData) == 0x100);
 
-		struct SoundPair
+		class SoundPair
 		{
 		public:
 			// members

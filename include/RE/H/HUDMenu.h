@@ -8,8 +8,8 @@ namespace RE
 	class HUDComponentBase;
 	class RequestHUDModesEvent;
 	class UserEventEnabledEvent;
-	
-	struct __declspec(novtable) HUDMenu :
+
+	class __declspec(novtable) HUDMenu :
 		public GameMenuBase,                         // 000
 		public BSTEventSink<UserEventEnabledEvent>,  // 0E0
 		public BSTEventSink<RequestHUDModesEvent>    // 0E8

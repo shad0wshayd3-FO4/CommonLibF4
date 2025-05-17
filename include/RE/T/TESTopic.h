@@ -16,7 +16,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESTopic };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kDIAL };
 
-		struct InfoTree;
+		class InfoTree;
 
 		// members
 		DIALOGUE_DATA      data;                     // 30

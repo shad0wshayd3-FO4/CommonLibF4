@@ -10,7 +10,7 @@ namespace RE
 		class LocalHeap
 		{
 		public:
-			struct FreeBlock;
+			class FreeBlock;
 
 			// members
 			std::byte*    memoryBase;       // 00
@@ -20,7 +20,7 @@ namespace RE
 		};
 		static_assert(sizeof(LocalHeap) == 0x18);
 
-		struct ChunkDesc
+		class ChunkDesc
 		{
 		public:
 			// members
@@ -33,7 +33,7 @@ namespace RE
 		};
 		static_assert(sizeof(ChunkDesc) == 0x18);
 
-		struct TextureDescHeader
+		class TextureDescHeader
 		{
 		public:
 			// members
@@ -45,7 +45,7 @@ namespace RE
 		static_assert(sizeof(TextureDescHeader) == 0x10);
 
 		template <class T>
-		struct NativeDesc :
+		class NativeDesc :
 			public TextureDescHeader  // 00
 		{
 		public:

@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct __declspec(novtable) DisconnectHandler :
+	class __declspec(novtable) DisconnectHandler :
 		public BSInputEventUser
 	{
 	public:

@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct DoBeforeNewOrLoadCompletedEvent
+	class DoBeforeNewOrLoadCompletedEvent
 	{
 	private:
 		using EventSource_t = BSTGlobalEvent::EventSource<DoBeforeNewOrLoadCompletedEvent>;

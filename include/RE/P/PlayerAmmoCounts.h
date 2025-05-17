@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct PlayerAmmoCounts
+	class PlayerAmmoCounts
 	{
 	public:
 		// members

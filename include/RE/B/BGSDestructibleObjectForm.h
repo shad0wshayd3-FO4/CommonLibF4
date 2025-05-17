@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct DestructibleObjectData;
+	class DestructibleObjectData;
 
 	class __declspec(novtable) BGSDestructibleObjectForm :
 		public BaseFormComponent  // 00

@@ -7,7 +7,7 @@
 
 namespace RE
 {
-	struct InvInterfaceStateChangeEvent;
+	class InvInterfaceStateChangeEvent;
 
 	class __declspec(novtable) InventoryUserUIInterface :
 		public BSTEventSource<InvInterfaceStateChangeEvent>  // 00

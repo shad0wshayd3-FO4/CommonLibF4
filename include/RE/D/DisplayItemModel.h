@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct DisplayItemModel :
+	class DisplayItemModel :
 		public BaseLoadedInventoryModel  // 00
 	{
 	public:

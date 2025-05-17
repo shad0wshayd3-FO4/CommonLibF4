@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct IDLE_DATA
+	class IDLE_DATA
 	{
 	public:
 		// members

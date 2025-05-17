@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BSPointerAllocator
+	class BSPointerAllocator
 	{
 	public:
 	};

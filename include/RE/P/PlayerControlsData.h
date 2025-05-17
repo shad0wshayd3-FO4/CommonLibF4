@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct PlayerControlsData
+	class PlayerControlsData
 	{
 	public:
 		// members

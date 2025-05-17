@@ -19,7 +19,7 @@ namespace RE
 
 		enum class INSPECT_MODE_STATE;
 
-		struct ComponentBuilderFunctor
+		class ComponentBuilderFunctor
 		{
 		public:
 			// members

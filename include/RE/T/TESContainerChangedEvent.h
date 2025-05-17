@@ -4,8 +4,9 @@
 
 namespace RE
 {
-	struct TESContainerChangedEvent
+	class TESContainerChangedEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESContainerChangedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESContainerChangedEvent::GetEventSource);

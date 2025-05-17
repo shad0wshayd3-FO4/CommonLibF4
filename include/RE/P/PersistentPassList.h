@@ -4,7 +4,7 @@ namespace RE
 {
 	class BSRenderPass;
 
-	struct PersistentPassList
+	class PersistentPassList
 	{
 	public:
 		// members

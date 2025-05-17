@@ -11,7 +11,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::TESSpellList };
 		static constexpr auto VTABLE{ VTABLE::TESSpellList };
 
-		struct SpellData
+		class SpellData
 		{
 		public:
 			SpellData() :

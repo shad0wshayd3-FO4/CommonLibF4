@@ -8,7 +8,7 @@ namespace RE
 
 	namespace InventoryInterface
 	{
-		struct CountChangedEvent
+		class CountChangedEvent
 		{
 		public:
 			// members
@@ -19,7 +19,7 @@ namespace RE
 		};
 		static_assert(sizeof(CountChangedEvent) == 0x10);
 
-		struct FavoriteChangedEvent
+		class FavoriteChangedEvent
 		{
 		public:
 			~FavoriteChangedEvent() noexcept {}  // intentional
@@ -29,7 +29,7 @@ namespace RE
 		};
 		static_assert(sizeof(FavoriteChangedEvent) == 0x8);
 
-		struct Handle
+		class Handle
 		{
 		public:
 			~Handle() noexcept {}  // intentional

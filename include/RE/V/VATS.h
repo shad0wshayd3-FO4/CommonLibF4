@@ -10,12 +10,12 @@
 namespace RE
 {
 	class BSLight;
+	class ProjectileBeginUpdateEvent;
+	class TESDeathEvent;
 	class TESHitEvent;
 	class VATSCameraContext;
 	class VATSCommand;
-	struct ProjectileBeginUpdateEvent;
-	struct TESDeathEvent;
-	struct WeaponFiredEvent;
+	class WeaponFiredEvent;
 
 	class __declspec(novtable) VATS :
 		public BSTEventSink<WeaponFiredEvent>,            // 00

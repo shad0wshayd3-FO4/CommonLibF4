@@ -4,8 +4,9 @@
 
 namespace RE
 {
-	struct TESFormDeleteEvent
+	class TESFormDeleteEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESFormDeleteEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESFormDeleteEvent::GetEventSource);

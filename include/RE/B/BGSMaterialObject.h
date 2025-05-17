@@ -17,7 +17,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSMaterialObject };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kMATO };
 
-		struct FILE_DATA
+		class FILE_DATA
 		{
 		public:
 			// members

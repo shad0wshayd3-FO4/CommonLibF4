@@ -16,7 +16,7 @@ namespace RE
 			UpdateWeight
 		};
 
-		struct Event
+		class Event
 		{
 		public:
 			// members

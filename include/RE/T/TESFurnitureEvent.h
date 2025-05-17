@@ -5,8 +5,9 @@
 
 namespace RE
 {
-	struct TESFurnitureEvent
+	class TESFurnitureEvent
 	{
+	public:
 		enum class FurnitureEventType : std::int32_t
 		{
 			kEnter = 0x0,

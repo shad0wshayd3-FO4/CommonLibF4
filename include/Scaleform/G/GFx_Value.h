@@ -766,8 +766,8 @@ namespace Scaleform::GFx
 		{
 			assert(IsObject());
 
-			struct MemberVisitor :
-				ObjectInterface::ObjVisitor
+			class MemberVisitor :
+				public ObjectInterface::ObjVisitor
 			{
 			public:
 				MemberVisitor(ObjectVisitFn&& a_fn) :

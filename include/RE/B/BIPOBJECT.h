@@ -14,7 +14,7 @@ namespace RE
 	class TESModel;
 	class WeaponAnimationGraphManagerHolder;
 
-	struct BIPOBJECT
+	class BIPOBJECT
 	{
 	public:
 		// members

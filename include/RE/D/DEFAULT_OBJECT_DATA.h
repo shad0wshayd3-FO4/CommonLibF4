@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct DEFAULT_OBJECT_DATA
+	class DEFAULT_OBJECT_DATA
 	{
 	public:
 		[[nodiscard]] static std::span<DEFAULT_OBJECT_DATA, 394> GetDefaultObjectData()

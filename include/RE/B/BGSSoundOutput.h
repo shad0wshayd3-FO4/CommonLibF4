@@ -16,8 +16,8 @@ namespace RE
 
 		enum class SPEAKER_OUTPUT_MODE;
 
-		struct DynamicAttenuationCharacteristics;
-		struct SpeakerArrays;
+		class DynamicAttenuationCharacteristics;
+		class SpeakerArrays;
 
 		// members
 		DynamicAttenuationCharacteristics*              attenuation;          // 28

@@ -20,7 +20,7 @@ namespace RE
 		enum class CAM_ACTION;
 		enum class CAM_OBJECT;
 
-		struct CAMERA_SHOT_DATA
+		class CAMERA_SHOT_DATA
 		{
 		public:
 			// members

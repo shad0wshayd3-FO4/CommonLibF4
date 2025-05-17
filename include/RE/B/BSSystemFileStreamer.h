@@ -4,7 +4,7 @@ namespace RE
 {
 	namespace BSSystemFileStreamer
 	{
-		struct ID
+		class ID
 		{
 		public:
 			// members

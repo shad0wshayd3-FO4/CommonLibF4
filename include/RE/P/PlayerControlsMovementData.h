@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct PlayerControlsMovementData :
+	class PlayerControlsMovementData :
 		public MovementData  // 00
 	{
 	public:

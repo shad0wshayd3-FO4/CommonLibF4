@@ -13,7 +13,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSGodRays };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kGDRY };
 
-		struct GodRaysData
+		class GodRaysData
 		{
 		public:
 			// members

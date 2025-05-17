@@ -11,7 +11,7 @@ namespace RE
 	class BGSLargeRefData
 	{
 	public:
-		struct REF_CELL_DATA
+		class REF_CELL_DATA
 		{
 		public:
 			// members

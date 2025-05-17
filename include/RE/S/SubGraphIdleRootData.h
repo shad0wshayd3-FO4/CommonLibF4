@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct SubGraphIdleRootData
+	class SubGraphIdleRootData
 	{
 	public:
 		// members

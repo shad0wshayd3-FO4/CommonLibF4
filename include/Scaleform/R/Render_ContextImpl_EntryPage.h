@@ -5,7 +5,7 @@
 
 namespace Scaleform::Render::ContextImpl
 {
-	struct EntryPage :
+	class EntryPage :
 		public EntryPageBase  // 000
 	{
 	public:

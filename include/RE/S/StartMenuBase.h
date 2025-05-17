@@ -6,7 +6,7 @@
 
 namespace RE
 {
-	struct __declspec(novtable) StartMenuBase :
+	class __declspec(novtable) StartMenuBase :
 		public GameMenuBase  // 00
 	{
 	public:

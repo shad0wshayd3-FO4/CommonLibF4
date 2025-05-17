@@ -9,9 +9,10 @@ namespace RE
 {
 	class TESFile;
 
-	struct BGSLocalizedStrings
+	class BGSLocalizedStrings
 	{
-		struct ScrapStringBuffer
+	public:
+		class ScrapStringBuffer
 		{
 		public:
 			[[nodiscard]] const char* GetString() const noexcept { return static_cast<const char*>(buffer.GetPtr()) + offset; }
@@ -24,7 +25,7 @@ namespace RE
 	};
 	static_assert(std::is_empty_v<BGSLocalizedStrings>);
 
-	struct BGSLocalizedStringDL
+	class BGSLocalizedStringDL
 	{
 	public:
 		void GetDescription(BSString& a_out, const TESForm* a_form) const

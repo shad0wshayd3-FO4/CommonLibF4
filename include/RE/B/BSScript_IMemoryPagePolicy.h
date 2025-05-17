@@ -8,7 +8,7 @@ namespace RE
 	{
 		class MemoryPage;
 
-		struct __declspec(novtable) IMemoryPagePolicy
+		class __declspec(novtable) IMemoryPagePolicy
 		{
 		public:
 			static constexpr auto RTTI{ RTTI::BSScript__IMemoryPagePolicy };

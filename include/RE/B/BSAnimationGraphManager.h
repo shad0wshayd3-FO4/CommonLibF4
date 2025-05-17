@@ -13,14 +13,14 @@ namespace RE
 {
 	class BSAnimationGraphChannel;
 	class BShkbAnimationGraph;
-	struct BSAnimationGraphEvent;
+	class BSAnimationGraphEvent;
 
 	class BSAnimationGraphManager :
 		public BSTEventSink<BSAnimationGraphEvent>,  //00
 		public BSIntrusiveRefCounted                 //08
 	{
 	public:
-		struct DependentManagerSmartPtr
+		class DependentManagerSmartPtr
 		{
 		public:
 			// members

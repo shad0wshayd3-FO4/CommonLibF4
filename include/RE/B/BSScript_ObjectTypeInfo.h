@@ -41,7 +41,7 @@ namespace RE
 
 			[[nodiscard]] bool Valid() const noexcept { return linkedValid == LinkValidState::kLinkedValid; }
 
-			struct UnlinkedNativeFunction
+			class UnlinkedNativeFunction
 			{
 			public:
 				// members
@@ -50,7 +50,7 @@ namespace RE
 			};
 			static_assert(sizeof(UnlinkedNativeFunction) == 0x10);
 
-			struct UserFlagInfo
+			class UserFlagInfo
 			{
 			public:
 				enum : std::uintptr_t
@@ -65,7 +65,7 @@ namespace RE
 			};
 			static_assert(sizeof(UserFlagInfo) == 0x8);
 
-			struct VariableInfo
+			class VariableInfo
 			{
 			public:
 				// members
@@ -75,7 +75,7 @@ namespace RE
 			};
 			static_assert(sizeof(VariableInfo) == 0x18);
 
-			struct InitialValueInfo
+			class InitialValueInfo
 			{
 			public:
 				// members
@@ -85,7 +85,7 @@ namespace RE
 			};
 			static_assert(sizeof(InitialValueInfo) == 0x18);
 
-			struct PropertyInfo
+			class PropertyInfo
 			{
 			public:
 				// members
@@ -94,7 +94,7 @@ namespace RE
 			};
 			static_assert(sizeof(PropertyInfo) == 0x48);
 
-			struct GlobalFuncInfo
+			class GlobalFuncInfo
 			{
 			public:
 				// members
@@ -102,7 +102,7 @@ namespace RE
 			};
 			static_assert(sizeof(GlobalFuncInfo) == 0x8);
 
-			struct MemberFuncInfo
+			class MemberFuncInfo
 			{
 			public:
 				// members
@@ -110,7 +110,7 @@ namespace RE
 			};
 			static_assert(sizeof(MemberFuncInfo) == 0x8);
 
-			struct NamedStateInfo
+			class NamedStateInfo
 			{
 			public:
 				enum : std::uint32_t
@@ -119,7 +119,7 @@ namespace RE
 					kFuncOffsetShift = 0x9
 				};
 
-				struct Func
+				class Func
 				{
 				public:
 					// members

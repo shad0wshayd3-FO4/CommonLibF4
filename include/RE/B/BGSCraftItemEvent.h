@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSCraftItemEvent
+	class BGSCraftItemEvent
 	{
 	public:
 		BGSCraftItemEvent(TESObjectREFR* a_workbench, BGSLocation* a_location, TESForm* a_baseObject) :

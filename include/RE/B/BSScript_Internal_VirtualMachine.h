@@ -29,20 +29,20 @@ namespace RE
 		class Array;
 		class ErrorLogger;
 		class IClientVM;
+		class IMemoryPagePolicy;
+		class IObjectHandlePolicy;
 		class IProfilePolicy;
 		class ISavePatcherInterface;
 		class IStackCallbackFunctor;
 		class IStackCallbackSaveInterface;
 		class ObjectBindPolicy;
 		class Stack;
-		struct IMemoryPagePolicy;
-		struct IObjectHandlePolicy;
-		struct StatsEvent;
+		class StatsEvent;
 
 		namespace Internal
 		{
 			class CodeTasklet;
-			struct SuspendedStack;
+			class SuspendedStack;
 
 			class VirtualMachine :
 				public IVirtualMachine,  // 0000
@@ -63,7 +63,7 @@ namespace RE
 					kFrozen
 				};
 
-				struct LoadedArrayEntry
+				class LoadedArrayEntry
 				{
 				public:
 					// members
@@ -72,7 +72,7 @@ namespace RE
 				};
 				static_assert(sizeof(LoadedArrayEntry) == 0x10);
 
-				struct PendingLatentReturn
+				class PendingLatentReturn
 				{
 				public:
 					// members
@@ -81,7 +81,7 @@ namespace RE
 				};
 				static_assert(sizeof(PendingLatentReturn) == 0x18);
 
-				struct QueuedUnbindRefs
+				class QueuedUnbindRefs
 				{
 				public:
 					// members

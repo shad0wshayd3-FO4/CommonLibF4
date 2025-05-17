@@ -32,9 +32,9 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESQuest };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kQUST };
 
-		struct AliasesAccess;
-		struct ListObjectivesAccess;
-		struct ListStagesAccess;
+		class AliasesAccess;
+		class ListObjectivesAccess;
+		class ListStagesAccess;
 
 		bool SetStage(std::uint16_t a_stage)
 		{

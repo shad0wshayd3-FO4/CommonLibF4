@@ -13,8 +13,8 @@ namespace RE
 {
 	class OverrideData;
 	class QueuedPromoteLocationReferencesTask;
-	struct SpecialRefData;
-	struct UniqueNPCData;
+	class SpecialRefData;
+	class UniqueNPCData;
 
 	class __declspec(novtable) BGSLocation :
 		public TESForm,        // 000
@@ -26,7 +26,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSLocation };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kLCTN };
 
-		struct KEYWORD_DATA
+		class KEYWORD_DATA
 		{
 		public:
 			// members

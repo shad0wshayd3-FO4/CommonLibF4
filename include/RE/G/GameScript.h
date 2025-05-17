@@ -38,101 +38,101 @@ namespace RE
 		class IVMDebugInterface;
 		class IVMSaveLoadInterface;
 		class Object;
-		struct StatsEvent;
+		class StatsEvent;
 	}
 
 	namespace PlayerDifficultySettingChanged
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace RadioManager
 	{
-		struct PipboyTransmitterDetectionEvent;
+		class PipboyTransmitterDetectionEvent;
 	}
 
 	namespace Workshop
 	{
-		struct ItemDestroyedEvent;
-		struct ItemGrabbedEvent;
-		struct ItemMovedEvent;
-		struct ItemPlacedEvent;
-		struct ItemRepairedEvent;
-		struct PowerOffEvent;
-		struct PowerOnEvent;
-		struct WorkshopModeEvent;
+		class ItemDestroyedEvent;
+		class ItemGrabbedEvent;
+		class ItemMovedEvent;
+		class ItemPlacedEvent;
+		class ItemRepairedEvent;
+		class PowerOffEvent;
+		class PowerOnEvent;
+		class WorkshopModeEvent;
 	}
 
+	class BGSLocationLoadedEvent;
+	class BGSOnPlayerCompanionDismiss;
+	class BGSOnPlayerCreateRobotEvent;
+	class BGSOnPlayerEnterVertibirdEvent;
+	class BGSOnPlayerFallLongDistances;
+	class BGSOnPlayerFireWeaponEvent;
+	class BGSOnPlayerHealTeammateEvent;
+	class BGSOnPlayerModArmorWeaponEvent;
+	class BGSOnPlayerModRobotEvent;
+	class BGSOnPlayerSwimmingEvent;
+	class BGSOnPlayerUseWorkBenchEvent;
+	class BGSOnSpeechChallengeAvailable;
+	class BGSRadiationDamageEvent;
 	class BSLog;
 	class BSStorage;
 	class InputEnableLayerDestroyedEvent;
+	class PositionPlayerEvent;
+	class TESActivateEvent;
+	class TESActiveEffectApplyRemoveEvent;
+	class TESActorLocationChangeEvent;
+	class TESBookReadEvent;
+	class TESCellAttachDetachEvent;
+	class TESCellFullyLoadedEvent;
+	class TESCombatEvent;
+	class TESCommandModeCompleteCommandEvent;
+	class TESCommandModeEnterEvent;
+	class TESCommandModeExitEvent;
+	class TESCommandModeGiveCommandEvent;
+	class TESConsciousnessEvent;
+	class TESDeathEvent;
+	class TESDeferredKillEvent;
+	class TESDestructionStageChangedEvent;
+	class TESEnterBleedoutEvent;
+	class TESEnterSneakingEvent;
+	class TESEscortWaitStartEvent;
+	class TESEscortWaitStopEvent;
+	class TESExitFurnitureEvent;
 	class TESFile;
+	class TESFormDeleteEvent;
+	class TESFormIDRemapEvent;
+	class TESFurnitureEvent;
+	class TESGrabReleaseEvent;
 	class TESHitEvent;
-	struct BGSLocationLoadedEvent;
-	struct BGSOnPlayerCompanionDismiss;
-	struct BGSOnPlayerCreateRobotEvent;
-	struct BGSOnPlayerEnterVertibirdEvent;
-	struct BGSOnPlayerFallLongDistances;
-	struct BGSOnPlayerFireWeaponEvent;
-	struct BGSOnPlayerHealTeammateEvent;
-	struct BGSOnPlayerModArmorWeaponEvent;
-	struct BGSOnPlayerModRobotEvent;
-	struct BGSOnPlayerSwimmingEvent;
-	struct BGSOnPlayerUseWorkBenchEvent;
-	struct BGSOnSpeechChallengeAvailable;
-	struct BGSRadiationDamageEvent;
-	struct PositionPlayerEvent;
-	struct TESActivateEvent;
-	struct TESActiveEffectApplyRemoveEvent;
-	struct TESActorLocationChangeEvent;
-	struct TESBookReadEvent;
-	struct TESCellAttachDetachEvent;
-	struct TESCellFullyLoadedEvent;
-	struct TESCombatEvent;
-	struct TESCommandModeCompleteCommandEvent;
-	struct TESCommandModeEnterEvent;
-	struct TESCommandModeExitEvent;
-	struct TESCommandModeGiveCommandEvent;
-	struct TESConsciousnessEvent;
-	struct TESDeathEvent;
-	struct TESDeferredKillEvent;
-	struct TESDestructionStageChangedEvent;
-	struct TESEnterBleedoutEvent;
-	struct TESEnterSneakingEvent;
-	struct TESEscortWaitStartEvent;
-	struct TESEscortWaitStopEvent;
-	struct TESExitFurnitureEvent;
-	struct TESFormDeleteEvent;
-	struct TESFormIDRemapEvent;
-	struct TESFurnitureEvent;
-	struct TESGrabReleaseEvent;
-	struct TESInitScriptEvent;
-	struct TESLimbCrippleEvent;
-	struct TESLoadGameEvent;
-	struct TESLocationClearedEvent;
-	struct TESLockChangedEvent;
-	struct TESMagicEffectApplyEvent;
-	struct TESObjectLoadedEvent;
-	struct TESObjectREFRTranslationEvent;
-	struct TESOnPCDialogueTargetEvent;
-	struct TESOpenCloseEvent;
-	struct TESPickpocketFailedEvent;
-	struct TESQuestInitEvent;
-	struct TESResetEvent;
-	struct TESResolveNPCTemplatesEvent;
-	struct TESSellEvent;
-	struct TESSpellCastEvent;
-	struct TESSwitchRaceCompleteEvent;
-	struct TESTrapHitEvent;
-	struct TESTriggerEnterEvent;
-	struct TESTriggerLeaveEvent;
-	struct TESUniqueIDChangeEvent;
-	struct WorkshopNPCTransferEvent;
+	class TESInitScriptEvent;
+	class TESLimbCrippleEvent;
+	class TESLoadGameEvent;
+	class TESLocationClearedEvent;
+	class TESLockChangedEvent;
+	class TESMagicEffectApplyEvent;
+	class TESObjectLoadedEvent;
+	class TESObjectREFRTranslationEvent;
+	class TESOnPCDialogueTargetEvent;
+	class TESOpenCloseEvent;
+	class TESPickpocketFailedEvent;
+	class TESQuestInitEvent;
+	class TESResetEvent;
+	class TESResolveNPCTemplatesEvent;
+	class TESSellEvent;
+	class TESSpellCastEvent;
+	class TESSwitchRaceCompleteEvent;
+	class TESTrapHitEvent;
+	class TESTriggerEnterEvent;
+	class TESTriggerLeaveEvent;
+	class TESUniqueIDChangeEvent;
+	class WorkshopNPCTransferEvent;
 
 	namespace GameScript
 	{
 		class DelayFunctor;
-		struct StatsEvent;
+		class StatsEvent;
 
 		namespace Internal
 		{
@@ -228,7 +228,7 @@ namespace RE
 		};
 		static_assert(sizeof(Logger) == 0xB0);
 
-		struct __declspec(novtable) HandlePolicy :
+		class __declspec(novtable) HandlePolicy :
 			public BSScript::IObjectHandlePolicy  // 00
 		{
 		public:
@@ -296,7 +296,7 @@ namespace RE
 			static constexpr auto RTTI{ RTTI::GameScript__ObjectBindPolicy };
 			static constexpr auto VTABLE{ VTABLE::GameScript__ObjectBindPolicy };
 
-			struct QueuedObject
+			class QueuedObject
 			{
 			public:
 				// members
@@ -362,7 +362,7 @@ namespace RE
 			};
 			static_assert(sizeof(QuestStageFragments) == 0x38);
 
-			struct QuestFragments :
+			class QuestFragments :
 				public BSIntrusiveRefCounted  // 00
 			{
 			public:

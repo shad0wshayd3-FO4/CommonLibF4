@@ -10,10 +10,10 @@ namespace Scaleform
 	{
 		class Context;
 		class Entry;
+		class EntryListAccessor;
+		class EntryPage;
+		class EntryPageBase;
 		class Snapshot;
-		struct EntryListAccessor;
-		struct EntryPage;
-		struct EntryPageBase;
 
 		class EntryTable
 		{

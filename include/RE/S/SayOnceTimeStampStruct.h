@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct SayOnceTimeStampStruct
+	class SayOnceTimeStampStruct
 	{
 	public:
 		// members

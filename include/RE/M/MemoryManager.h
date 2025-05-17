@@ -15,7 +15,7 @@ namespace RE
 	class MemoryManager
 	{
 	public:
-		struct AutoScrapBuffer
+		class AutoScrapBuffer
 		{
 		public:
 			AutoScrapBuffer() { Ctor(); }
@@ -43,7 +43,7 @@ namespace RE
 		};
 		static_assert(sizeof(AutoScrapBuffer) == 0x8);
 
-		struct ThreadScrapHeap
+		class ThreadScrapHeap
 		{
 		public:
 			// members

@@ -13,7 +13,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSAttractionRule };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kAORU };
 
-		struct ATTRACTION_RULE_DATA
+		class ATTRACTION_RULE_DATA
 		{
 		public:
 			// members

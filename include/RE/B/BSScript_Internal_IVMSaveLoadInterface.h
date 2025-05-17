@@ -9,11 +9,11 @@ namespace RE
 	namespace BSScript
 	{
 		class Array;
+		class IHandleReaderWriter;
 		class Object;
 		class Stack;
 		class Struct;
 		class TypeInfo;
-		struct IHandleReaderWriter;
 
 		namespace Internal
 		{

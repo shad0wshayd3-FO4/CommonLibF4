@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct TESInitScriptEvent
+	class TESInitScriptEvent
 	{
 	public:
 		[[nodiscard]] static BSTEventSource<TESInitScriptEvent>* GetEventSource()

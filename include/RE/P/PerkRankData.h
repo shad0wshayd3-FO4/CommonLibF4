@@ -2,13 +2,12 @@
 
 namespace RE
 {
-	struct PerkRankData
+	class PerkRankData
 	{
 	public:
 		PerkRankData(BGSPerk* a_perk, std::int8_t a_rank) :
 			perk(a_perk), currentRank(a_rank)
-		{
-		}
+		{}
 
 		F4_HEAP_REDEFINE_NEW(PerkRankData);
 

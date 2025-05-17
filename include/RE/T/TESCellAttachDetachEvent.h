@@ -5,8 +5,9 @@
 
 namespace RE
 {
-	struct TESCellAttachDetachEvent
+	class TESCellAttachDetachEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESCellAttachDetachEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESCellAttachDetachEvent::GetEventSource);

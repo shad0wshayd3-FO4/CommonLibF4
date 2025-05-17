@@ -7,12 +7,12 @@ namespace RE
 {
 	namespace PlayerCharacterQuestEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	namespace TESQuestEvent
 	{
-		struct Event;
+		class Event;
 	}
 
 	class __declspec(novtable) PipboyQuestData :

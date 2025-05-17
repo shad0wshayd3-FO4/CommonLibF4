@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct InventoryUserUIInterfaceEntry
+	class InventoryUserUIInterfaceEntry
 	{
 	public:
 		// members

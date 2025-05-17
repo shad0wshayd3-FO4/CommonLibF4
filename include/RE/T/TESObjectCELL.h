@@ -10,14 +10,14 @@
 
 namespace RE
 {
+	class bhkPickData;
 	class bhkWorldM;
+	class EXTERIOR_DATA;
+	class INTERIOR_DATA;
+	class LOADED_CELL_DATA;
 	class NavMeshArray;
 	class NiAVObject;
-	struct bhkPickData;
-	struct EXTERIOR_DATA;
-	struct INTERIOR_DATA;
-	struct LOADED_CELL_DATA;
-	struct TESRegionList;
+	class TESRegionList;
 
 	namespace BGSWaterCollisionManager
 	{

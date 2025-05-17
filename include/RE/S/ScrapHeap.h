@@ -11,7 +11,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::ScrapHeap };
 		static constexpr auto VTABLE{ VTABLE::ScrapHeap };
 
-		struct Block
+		class Block
 		{
 		public:
 			// members
@@ -20,7 +20,7 @@ namespace RE
 		};
 		static_assert(sizeof(Block) == 0x10);
 
-		struct FreeBlock :
+		class FreeBlock :
 			public Block  // 00
 		{
 		public:
@@ -30,7 +30,7 @@ namespace RE
 		};
 		static_assert(sizeof(FreeBlock) == 0x20);
 
-		struct FreeTreeNode :
+		class FreeTreeNode :
 			public FreeBlock  // 00
 		{
 		public:

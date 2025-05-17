@@ -29,7 +29,7 @@ namespace RE
 		using value_type = NiTMapItem<Key, T>;
 		using size_type = std::uint32_t;
 
-		struct AntiBloatAllocator :
+		class AntiBloatAllocator :
 			public Allocator  // 00
 		{
 		public:

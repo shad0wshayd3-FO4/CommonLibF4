@@ -18,7 +18,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESImageSpaceModifier };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kIMAD };
 
-		struct ImageSpaceModifierData
+		class ImageSpaceModifierData
 		{
 		public:
 			// members

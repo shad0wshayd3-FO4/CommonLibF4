@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct INTERIOR_DATA
+	class INTERIOR_DATA
 	{
 	public:
 		// members

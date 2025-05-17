@@ -3,7 +3,7 @@
 namespace RE
 {
 	template <class T>
-	struct BSTFreeListElem
+	class BSTFreeListElem
 	{
 	public:
 		// members

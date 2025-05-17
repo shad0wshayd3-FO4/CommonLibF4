@@ -2,8 +2,8 @@
 
 namespace Scaleform::Render
 {
+	class Interfaces;
 	class ThreadCommand;
-	struct Interfaces;
 
 	class __declspec(novtable) ThreadCommandQueue
 	{

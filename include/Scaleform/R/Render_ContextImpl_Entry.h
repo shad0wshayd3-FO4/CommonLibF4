@@ -11,7 +11,7 @@ namespace Scaleform::Render::ContextImpl
 	class Entry
 	{
 	public:
-		struct PropagateNode :
+		class PropagateNode :
 			public ListNode<PropagateNode>  // 00
 		{
 		public:

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct __declspec(novtable) IMovementInterface
+	class __declspec(novtable) IMovementInterface
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::IMovementInterface };

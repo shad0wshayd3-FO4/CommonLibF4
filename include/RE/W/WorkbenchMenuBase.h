@@ -30,7 +30,7 @@ namespace RE
 			kWorld
 		};
 
-		struct InitParams
+		class InitParams
 		{
 		public:
 			InitParams();
@@ -49,7 +49,7 @@ namespace RE
 		};
 		static_assert(sizeof(InitParams) == 0x28);
 
-		struct ModChoiceData
+		class ModChoiceData
 		{
 		public:
 			// members

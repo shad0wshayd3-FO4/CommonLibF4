@@ -4,7 +4,7 @@
 
 namespace RE::BSResource
 {
-	struct ID :
+	class ID :
 		public FileID  // 0
 	{
 	public:

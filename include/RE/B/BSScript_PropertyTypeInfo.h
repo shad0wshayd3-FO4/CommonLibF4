@@ -10,7 +10,7 @@ namespace RE
 	{
 		class IFunction;
 
-		struct PropertyTypeInfo
+		class PropertyTypeInfo
 		{
 		public:
 			enum class Permissions;

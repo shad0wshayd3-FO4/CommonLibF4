@@ -7,7 +7,7 @@
 
 namespace RE
 {
-	struct InventoryItemDisplayData
+	class InventoryItemDisplayData
 	{
 	public:
 		InventoryItemDisplayData(

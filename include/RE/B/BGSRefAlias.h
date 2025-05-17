@@ -26,7 +26,7 @@ namespace RE
 			kNearAlias = 0x7,
 		};
 
-		struct GenericFillData
+		class GenericFillData
 		{
 		public:
 			// members

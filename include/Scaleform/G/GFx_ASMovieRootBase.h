@@ -40,8 +40,8 @@ namespace Scaleform
 		class MovieDefRootNode;
 		class MovieImpl;
 		class OrientationEvent;
+		class ProcessFocusKeyInfo;
 		class Value;
-		struct ProcessFocusKeyInfo;
 
 		class __declspec(novtable) ASMovieRootBase :
 			public RefCountBase<ASMovieRootBase, 327>  // 00

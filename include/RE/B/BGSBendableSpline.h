@@ -13,7 +13,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSBendableSpline };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kBNDS };
 
-		struct SplineData_Untilv130
+		class SplineData_Untilv130
 		{
 		public:
 			// members
@@ -24,7 +24,7 @@ namespace RE
 		};
 		static_assert(sizeof(SplineData_Untilv130) == 0x14);
 
-		struct SplineData :
+		class SplineData :
 			public SplineData_Untilv130  // 00
 		{
 		public:

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct DIALOGUE_DATA
+	class DIALOGUE_DATA
 	{
 	public:
 		// members

@@ -33,7 +33,7 @@ namespace RE
 	class TogglePOVHandler;
 	class ToggleRunHandler;
 	class UserEventEnabledEvent;
-	struct TESFurnitureEvent;
+	class TESFurnitureEvent;
 
 	class __declspec(novtable) PlayerControls :
 		public BSInputEventReceiver,                    // 000

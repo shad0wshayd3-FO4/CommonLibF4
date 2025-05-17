@@ -19,7 +19,7 @@ namespace RE
 
 		enum class ORIENTATION;
 
-		struct IMPACT_DATA_DATA
+		class IMPACT_DATA_DATA
 		{
 		public:
 			// members

@@ -6,8 +6,9 @@ namespace RE
 {
 	namespace TESHarvestEvent
 	{
-		struct ItemHarvested
+		class ItemHarvested
 		{
+		public:
 			[[nodiscard]] static BSTEventSource<ItemHarvested>* GetEventSource()
 			{
 				using func_t = decltype(&ItemHarvested::GetEventSource);

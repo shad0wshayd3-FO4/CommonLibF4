@@ -8,10 +8,9 @@ namespace RE
 {
 	enum class COMPILER_NAME;
 	enum class SCRIPT_ERROR;
-
-	struct SCRIPT_LINE;
-	struct SCRIPT_REFERENCED_OBJECT;
-	struct ScriptVariable;
+	class SCRIPT_LINE;
+	class SCRIPT_REFERENCED_OBJECT;
+	class ScriptVariable;
 
 	class ScriptCompileData
 	{

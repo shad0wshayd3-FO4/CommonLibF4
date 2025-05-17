@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BSNavmeshTriangle
+	class BSNavmeshTriangle
 	{
 	public:
 		// members

@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct ApplyColorUpdateEvent
+	class ApplyColorUpdateEvent
 	{
 	private:
 		using EventSource_t = BSTGlobalEvent::EventSource<ApplyColorUpdateEvent>;

@@ -5,7 +5,7 @@ namespace Scaleform
 	class String
 	{
 	public:
-		struct DataDesc
+		class DataDesc
 		{
 		public:
 			// members

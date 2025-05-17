@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct BSNavmeshGrid
+	class BSNavmeshGrid
 	{
 	public:
 		// members

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct WeatherEntry
+	class WeatherEntry
 	{
 	public:
 		// members

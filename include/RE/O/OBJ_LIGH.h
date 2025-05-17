@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct OBJ_LIGH
+	class OBJ_LIGH
 	{
 	public:
 		// members

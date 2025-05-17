@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct UniqueNPCData
+	class UniqueNPCData
 	{
 	public:
 		// members

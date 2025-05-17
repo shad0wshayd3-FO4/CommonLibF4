@@ -8,7 +8,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSISoundOutputModel };
 		static constexpr auto VTABLE{ VTABLE::BSISoundOutputModel };
 
-		struct BSIAttenuationCharacteristics;
+		class BSIAttenuationCharacteristics;
 
 		virtual ~BSISoundOutputModel() = default;  // 00
 

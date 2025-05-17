@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct ImageSpaceModData
+	class ImageSpaceModData
 	{
 	public:
 		// members

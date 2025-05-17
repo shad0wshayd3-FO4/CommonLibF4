@@ -12,7 +12,7 @@ namespace RE
 		{
 			class IFuncCallQuery;
 
-			struct SuspendedStack
+			class SuspendedStack
 			{
 			public:
 				// members

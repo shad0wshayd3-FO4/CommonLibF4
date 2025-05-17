@@ -7,7 +7,7 @@ namespace RE
 	class PackageLocation;
 	class TESCondition;
 
-	struct FACTION_VENDOR_DATA
+	class FACTION_VENDOR_DATA
 	{
 	public:
 		// members

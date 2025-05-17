@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct FACTION_CRIME_DATA_VALUES
+	class FACTION_CRIME_DATA_VALUES
 	{
 	public:
 		// members

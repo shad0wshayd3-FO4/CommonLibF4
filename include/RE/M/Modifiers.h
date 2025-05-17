@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct Modifiers
+	class Modifiers
 	{
 	public:
 		// members

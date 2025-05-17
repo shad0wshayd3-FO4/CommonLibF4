@@ -2,10 +2,10 @@
 
 namespace RE
 {
-	struct Rumble
+	class Rumble
 	{
 	public:
-		struct AutoRumblePause
+		class AutoRumblePause
 		{
 		public:
 		};

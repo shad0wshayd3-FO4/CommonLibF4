@@ -2,7 +2,7 @@
 
 namespace Scaleform::Render::ContextImpl
 {
-	struct EntryListAccessor
+	class EntryListAccessor
 	{
 	public:
 	};

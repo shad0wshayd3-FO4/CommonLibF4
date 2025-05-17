@@ -21,7 +21,7 @@ namespace RE
 			kInvalid = static_cast<std::uint8_t>(-1)
 		};
 
-		struct UserEventMapping
+		class UserEventMapping
 		{
 		public:
 			// members
@@ -34,7 +34,7 @@ namespace RE
 		};
 		static_assert(sizeof(UserEventMapping) == 0x18);
 
-		struct InputContext
+		class InputContext
 		{
 		public:
 			// members
@@ -42,7 +42,7 @@ namespace RE
 		};
 		static_assert(sizeof(InputContext) == 0x48);
 
-		struct LinkedMapping
+		class LinkedMapping
 		{
 		public:
 			// members

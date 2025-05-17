@@ -6,7 +6,7 @@ namespace RE
 {
 	namespace BSAttachTechniques
 	{
-		struct __declspec(novtable) AttachTechniqueInput
+		class __declspec(novtable) AttachTechniqueInput
 		{
 		public:
 			static constexpr auto RTTI{ RTTI::BSAttachTechniques__AttachTechniqueInput };

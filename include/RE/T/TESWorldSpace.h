@@ -43,7 +43,7 @@ namespace RE
 			kSkyCell = 1u << 6
 		};
 
-		struct ShortPoint
+		class ShortPoint
 		{
 		public:
 			// members
@@ -52,7 +52,7 @@ namespace RE
 		};
 		static_assert(sizeof(ShortPoint) == 0x4);
 
-		struct OFFSET_DATA
+		class OFFSET_DATA
 		{
 		public:
 			// members

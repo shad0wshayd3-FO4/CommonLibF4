@@ -4,8 +4,9 @@
 
 namespace RE
 {
-	struct TESEquipEvent
+	class TESEquipEvent
 	{
+	public:
 		// members
 		NiPointer<TESObjectREFR> actor;         // 00
 		std::uint32_t            baseObject;    // 08

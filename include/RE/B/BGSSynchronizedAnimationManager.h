@@ -8,9 +8,9 @@
 
 namespace RE
 {
+	class AnimationDataCleanupEvent;
+	class AnimationDataSetupEvent;
 	class BGSSynchronizedAnimationInstance;
-	struct AnimationDataCleanupEvent;
-	struct AnimationDataSetupEvent;
 
 	class __declspec(novtable) BGSSynchronizedAnimationManager :
 		public BSTEventSink<AnimationDataSetupEvent>,            // 00

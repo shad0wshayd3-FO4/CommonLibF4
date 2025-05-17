@@ -2,7 +2,7 @@
 
 namespace Scaleform
 {
-	struct AllocInfo
+	class AllocInfo
 	{
 	public:
 		~AllocInfo() noexcept {}

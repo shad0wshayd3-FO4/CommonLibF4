@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace Bleedout
 	{
-		struct Event
+		class Event
 		{
+		public:
 			// members
 			Actor* actorBleedingOut;  // 00
 		};

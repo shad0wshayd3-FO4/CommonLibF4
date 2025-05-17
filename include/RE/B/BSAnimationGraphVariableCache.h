@@ -10,7 +10,7 @@ namespace RE
 	class BSSpinLock;
 	class hkbVariableValue;
 
-	struct BSAnimationGraphVariableCache
+	class BSAnimationGraphVariableCache
 	{
 	public:
 		// members

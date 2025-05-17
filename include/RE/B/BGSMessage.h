@@ -9,7 +9,7 @@
 
 namespace RE
 {
-	struct MESSAGEBOX_BUTTON;
+	class MESSAGEBOX_BUTTON;
 
 	class __declspec(novtable) BGSMessage :
 		public TESForm,        // 00

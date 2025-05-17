@@ -49,7 +49,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESObjectWEAP };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kWEAP };
 
-		struct RangedData
+		class RangedData
 		{
 		public:
 			// members
@@ -67,7 +67,7 @@ namespace RE
 		};
 		static_assert(sizeof(RangedData) == 0x30);
 
-		struct __declspec(novtable) InstanceData :
+		class __declspec(novtable) InstanceData :
 			public TBO_InstanceData  // 000
 		{
 		public:
@@ -130,7 +130,7 @@ namespace RE
 		};
 		static_assert(sizeof(InstanceData) == 0x138);
 
-		struct __declspec(novtable) Data :
+		class __declspec(novtable) Data :
 			public InstanceData  // 000
 		{
 		public:

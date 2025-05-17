@@ -14,7 +14,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSMaterialObject };
 		static constexpr auto VTABLE{ VTABLE::BSMaterialObject };
 
-		struct DIRECTIONAL_DATA
+		class DIRECTIONAL_DATA
 		{
 		public:
 			// members

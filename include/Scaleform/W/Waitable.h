@@ -22,9 +22,10 @@ namespace Scaleform
 		};
 		static_assert(sizeof(HandlerStruct) == 0x10);
 
-		struct HandlerArray :
+		class HandlerArray :
 			public NewOverrideBase<2>  // 00
 		{
+		public:
 			using SizePolicyType = ArrayConstPolicy<0, 16, true>;
 			using HandlerArrayType = Array<HandlerStruct, 2, SizePolicyType>;
 

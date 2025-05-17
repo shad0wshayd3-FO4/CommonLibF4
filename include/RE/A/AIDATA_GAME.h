@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct AIDATA_GAME
+	class AIDATA_GAME
 	{
 	public:
 		// members

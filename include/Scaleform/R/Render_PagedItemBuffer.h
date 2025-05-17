@@ -6,7 +6,7 @@ namespace Scaleform::Render
 	class PagedItemBuffer
 	{
 	public:
-		struct Page
+		class Page
 		{
 		public:
 			// members

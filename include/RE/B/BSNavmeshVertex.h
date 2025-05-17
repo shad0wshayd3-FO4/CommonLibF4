@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct BSNavmeshVertex
+	class BSNavmeshVertex
 	{
 	public:
 		// members

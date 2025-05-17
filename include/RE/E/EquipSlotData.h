@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct EquipSlotData
+	class EquipSlotData
 	{
 	public:
 		// members

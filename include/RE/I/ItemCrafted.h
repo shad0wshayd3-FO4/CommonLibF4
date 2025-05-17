@@ -4,7 +4,7 @@ namespace RE
 {
 	namespace ItemCrafted
 	{
-		struct Event
+		class Event
 		{
 		public:
 			// members

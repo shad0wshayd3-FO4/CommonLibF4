@@ -2,7 +2,7 @@
 
 namespace RE::BSResource
 {
-	struct Info
+	class Info
 	{
 	public:
 		// members

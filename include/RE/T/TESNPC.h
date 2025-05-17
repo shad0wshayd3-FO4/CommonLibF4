@@ -37,7 +37,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESActorBase };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kNPC_ };
 
-		struct HeadRelatedData
+		class HeadRelatedData
 		{
 		public:
 			// members

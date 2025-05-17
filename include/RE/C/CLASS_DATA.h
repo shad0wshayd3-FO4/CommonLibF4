@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct CLASS_DATA
+	class CLASS_DATA
 	{
 	public:
 		// members

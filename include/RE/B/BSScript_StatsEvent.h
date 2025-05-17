@@ -4,7 +4,7 @@ namespace RE
 {
 	namespace BSScript
 	{
-		struct StatsEvent
+		class StatsEvent
 		{
 		public:
 			// members

@@ -15,8 +15,8 @@ namespace RE::BSResource
 			static constexpr auto RTTI{ RTTI::BSResource__Archive2__ReaderStream };
 			static constexpr auto VTABLE{ VTABLE::BSResource__Archive2__ReaderStream };
 
-			struct PlatformContext;
-			struct StandardContext;
+			class PlatformContext;
+			class StandardContext;
 
 			ReaderStream() { stl::emplace_vtable<ReaderStream>(this); }
 

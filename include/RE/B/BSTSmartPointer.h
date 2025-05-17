@@ -5,7 +5,7 @@
 namespace RE
 {
 	template <class T>
-	struct BSTSmartPointerIntrusiveRefCount
+	class BSTSmartPointerIntrusiveRefCount
 	{
 	public:
 		static void Acquire(stl::not_null<T*> a_ptr) { a_ptr->IncRef(); }
@@ -19,7 +19,7 @@ namespace RE
 	};
 
 	template <class T>
-	struct BSTSmartPointerAutoPtr
+	class BSTSmartPointerAutoPtr
 	{
 	public:
 		constexpr static void Acquire(stl::not_null<T*> a_ptr) { return; }
@@ -27,7 +27,7 @@ namespace RE
 	};
 
 	template <class T>
-	struct BSTSmartPointerGamebryoRefCount
+	class BSTSmartPointerGamebryoRefCount
 	{
 	public:
 		constexpr static void Acquire(stl::not_null<T*> a_ptr) { a_ptr->IncRefCount(); }

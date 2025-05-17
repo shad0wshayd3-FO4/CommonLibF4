@@ -13,7 +13,7 @@ namespace RE
 	{
 	public:
 		template <class T>
-		struct BSTCreatedObjectSmartPointerPolicy
+		class BSTCreatedObjectSmartPointerPolicy
 		{
 		public:
 			static void Acquire(stl::not_null<T*> a_ptr)
@@ -37,7 +37,7 @@ namespace RE
 			}
 		};
 
-		struct CreatedMagicItemData
+		class CreatedMagicItemData
 		{
 		public:
 			// members
@@ -76,8 +76,8 @@ namespace RE
 	};
 	static_assert(sizeof(BGSCreatedObjectManager) == 0xD0);
 
-	extern template struct BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<AlchemyItem>;
-	extern template struct BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<TESForm>;
+	extern template class BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<AlchemyItem>;
+	extern template class BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<TESForm>;
 
 	template <class T>
 	using CreatedObjPtr = BSTSmartPointer<T, BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy>;

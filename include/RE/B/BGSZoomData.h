@@ -13,7 +13,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSZoomData };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kZOOM };
 
-		struct Data
+		class Data
 		{
 		public:
 			// members

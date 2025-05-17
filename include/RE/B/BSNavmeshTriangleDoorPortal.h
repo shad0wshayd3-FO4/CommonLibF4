@@ -6,7 +6,7 @@ namespace RE
 {
 	class BSPathingDoor;
 
-	struct BSNavmeshTriangleDoorPortal
+	class BSNavmeshTriangleDoorPortal
 	{
 	public:
 		// members

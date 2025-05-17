@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct TESMagicEffectApplyEvent
+	class TESMagicEffectApplyEvent
 	{
 	public:
 		[[nodiscard]] static BSTEventSource<TESMagicEffectApplyEvent>* GetEventSource()

@@ -7,9 +7,9 @@
 
 namespace RE
 {
+	class CALCED_OBJECT;
 	class ContainerItemExtra;
-	struct CALCED_OBJECT;
-	struct LEVELED_OBJECT;
+	class LEVELED_OBJECT;
 
 	class __declspec(novtable) TESLeveledList :
 		public BaseFormComponent  // 00

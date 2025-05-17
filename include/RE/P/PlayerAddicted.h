@@ -4,9 +4,11 @@ namespace RE
 {
 	namespace PlayerAddicted
 	{
-		struct Event
+		class Event
 		{
-			const AlchemyItem* chem;
+		public:
+			// members
+			const AlchemyItem* chem;  // 00
 		};
 		static_assert(sizeof(Event) == 0x8);
 	}

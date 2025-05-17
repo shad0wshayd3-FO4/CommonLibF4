@@ -4,7 +4,7 @@
 
 namespace RE
 {
-	struct __declspec(novtable) BSLightingShaderMaterial :
+	class __declspec(novtable) BSLightingShaderMaterial :
 		public BSLightingShaderMaterialBase  // 00
 	{
 	public:

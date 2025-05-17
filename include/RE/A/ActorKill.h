@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace ActorKill
 	{
-		struct Event
+		class Event
 		{
+		public:
 			// members
 			const Actor* killer;
 			const Actor* victim;

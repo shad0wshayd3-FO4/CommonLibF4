@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	struct BSTranslator
+	class BSTranslator
 	{
 	public:
 		// members

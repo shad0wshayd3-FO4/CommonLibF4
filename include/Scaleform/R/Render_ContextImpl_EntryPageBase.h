@@ -5,9 +5,9 @@
 namespace Scaleform::Render::ContextImpl
 {
 	class Snapshot;
-	struct SnapshotPage;
+	class SnapshotPage;
 
-	struct EntryPageBase :
+	class EntryPageBase :
 		public ListNode<EntryPageBase>  // 00
 	{
 	public:

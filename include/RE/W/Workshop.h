@@ -18,7 +18,7 @@ namespace RE
 
 	namespace Workshop
 	{
-		struct ContextData
+		class ContextData
 		{
 		public:
 			ContextData(Actor* a_actor)
@@ -39,7 +39,7 @@ namespace RE
 		};
 		static_assert(sizeof(ContextData) == 0x30);
 
-		struct DeletedItemInfo
+		class DeletedItemInfo
 		{
 		public:
 			~DeletedItemInfo() noexcept {}  // NOLINT(modernize-use-equals-default)
@@ -67,7 +67,7 @@ namespace RE
 		};
 		static_assert(sizeof(ExtraData) == 0x58);
 
-		struct ItemDestroyedEvent
+		class ItemDestroyedEvent
 		{
 		public:
 			// members
@@ -76,7 +76,7 @@ namespace RE
 		};
 		static_assert(sizeof(ItemDestroyedEvent) == 0x10);
 
-		struct ItemMovedEvent
+		class ItemMovedEvent
 		{
 		public:
 			// members
@@ -85,7 +85,7 @@ namespace RE
 		};
 		static_assert(sizeof(ItemMovedEvent) == 0x10);
 
-		struct ItemPlacedEvent
+		class ItemPlacedEvent
 		{
 		public:
 			// members
@@ -173,7 +173,7 @@ namespace RE
 		};
 		static_assert(sizeof(WorkshopMenuNode) == 0x50);
 
-		struct WorkshopModeEvent
+		class WorkshopModeEvent
 		{
 		public:
 			// members

@@ -5,7 +5,7 @@ namespace RE
 	enum class SCRIPT_ERROR;
 	enum class SCRIPT_OUTPUT;
 
-	struct SCRIPT_LINE
+	class SCRIPT_LINE
 	{
 	public:
 		// members

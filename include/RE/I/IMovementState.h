@@ -11,7 +11,7 @@ namespace RE
 	class BSPathingRequest;
 	class IMovementParameters;
 
-	struct __declspec(novtable) IMovementState :
+	class __declspec(novtable) IMovementState :
 		public IMovementInterface  // 0
 	{
 	public:

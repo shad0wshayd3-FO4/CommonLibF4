@@ -31,7 +31,7 @@ namespace RE
 			std::int64_t operator()(const BGSInventoryItem* a_item, std::uint32_t a_stackID)
 			{
 				using func_t = decltype(&ArmorRatingVisitorBase::operator());
-				static REL::Relocation<func_t> func{ REL::ID(2227206) };
+				static REL::Relocation<func_t> func{ ID::ActorUtils::ArmorRatingVisitorBase::_operator };
 				return func(this, a_item, a_stackID);
 			}
 
@@ -45,7 +45,7 @@ namespace RE
 			void ctor(const Actor* a_actor, bool a_checkEquipped)
 			{
 				using func_t = decltype(&ArmorRatingVisitorBase::ctor);
-				static REL::Relocation<func_t> func{ REL::ID(2227205) };
+				static REL::Relocation<func_t> func{ ID::ActorUtils::ArmorRatingVisitorBase::ctor };
 				return func(this, a_actor, a_checkEquipped);
 			}
 		};

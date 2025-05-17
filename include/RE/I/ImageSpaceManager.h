@@ -272,7 +272,7 @@ namespace RE
 
 		[[nodiscard]] static ImageSpaceManager* GetSingleton()
 		{
-			static REL::Relocation<ImageSpaceManager**> singleton{ REL::ID(2712627) };
+			static REL::Relocation<ImageSpaceManager**> singleton{ ID::ImageSpaceManager::Singleton };
 			return *singleton;
 		}
 

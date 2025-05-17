@@ -17,25 +17,25 @@ namespace RE
 		static void ExecuteCommand(const char* a_command)
 		{
 			using func_t = decltype(&Console::ExecuteCommand);
-			static REL::Relocation<func_t> func{ REL::ID(2248537) };
+			static REL::Relocation<func_t> func{ ID::Console::ExecuteCommand };
 			return func(a_command);
 		}
 
 		[[nodiscard]] static decltype(auto) GetCurrentPickIndex()
 		{
-			static REL::Relocation<std::int32_t*> currentPickIndex{ REL::ID(2701382) };
+			static REL::Relocation<std::int32_t*> currentPickIndex{ ID::Console::GetCurrentPickIndex };
 			return *currentPickIndex;
 		}
 
 		[[nodiscard]] static decltype(auto) GetPickRef()
 		{
-			static REL::Relocation<ObjectRefHandle*> ref{ REL::ID(2701395) };
+			static REL::Relocation<ObjectRefHandle*> ref{ ID::Console::GetPickRef };
 			return *ref;
 		}
 
 		[[nodiscard]] static decltype(auto) GetPickRefs()
 		{
-			static REL::Relocation<BSTArray<ObjectRefHandle>*> pickRefs{ REL::ID(2701391) };
+			static REL::Relocation<BSTArray<ObjectRefHandle>*> pickRefs{ ID::Console::GetPickRefs };
 			return *pickRefs;
 		}
 
@@ -51,7 +51,7 @@ namespace RE
 		void SetCurrentPickREFR(stl::not_null<ObjectRefHandle*> a_refr)
 		{
 			using func_t = decltype(&Console::SetCurrentPickREFR);
-			static REL::Relocation<func_t> func{ REL::ID(2248551) };
+			static REL::Relocation<func_t> func{ ID::Console::SetCurrentPickREFR };
 			return func(this, a_refr);
 		}
 

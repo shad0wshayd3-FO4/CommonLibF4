@@ -24,21 +24,21 @@ namespace RE::BSResource
 			ErrorCode DoOpen() override  // 01
 			{
 				using func_t = decltype(&AsyncReaderStream::DoOpen);
-				static REL::Relocation<func_t> func{ REL::ID(1401160) };
+				static REL::Relocation<func_t> func{ RE::ID::BSResource_Archive2_AsyncReaderStream::DoOpen };
 				return func(this);
 			}
 
 			void DoClose() override  // 02
 			{
 				using func_t = decltype(&AsyncReaderStream::DoClose);
-				static REL::Relocation<func_t> func{ REL::ID(883012) };
+				static REL::Relocation<func_t> func{ RE::ID::BSResource_Archive2_AsyncReaderStream::DoClose };
 				return func(this);
 			}
 
 			void DoClone(BSTSmartPointer<AsyncStream>& a_result) const override  // 05
 			{
 				using func_t = decltype(&AsyncReaderStream::DoClone);
-				static REL::Relocation<func_t> func{ REL::ID(803750) };
+				static REL::Relocation<func_t> func{ RE::ID::BSResource_Archive2_AsyncReaderStream::DoClone };
 				return func(this, a_result);
 			}
 
@@ -48,7 +48,7 @@ namespace RE::BSResource
 				std::uint64_t a_offset) const override  // 06
 			{
 				using func_t = decltype(&AsyncReaderStream::DoStartRead);
-				static REL::Relocation<func_t> func{ REL::ID(1215072) };
+				static REL::Relocation<func_t> func{ RE::ID::BSResource_Archive2_AsyncReaderStream::DoStartRead };
 				return func(this, a_buffer, a_bytes, a_offset);
 			}
 
@@ -58,7 +58,7 @@ namespace RE::BSResource
 				std::uint64_t        a_offset) const override  // 07
 			{
 				using func_t = decltype(&AsyncReaderStream::DoStartPacketAlignedBufferedRead);
-				static REL::Relocation<func_t> func{ REL::ID(603387) };
+				static REL::Relocation<func_t> func{ RE::ID::BSResource_Archive2_AsyncReaderStream::DoStartPacketAlignedBufferedRead };
 				return func(this, a_buffer, a_bytes, a_offset);
 			}
 
@@ -75,7 +75,7 @@ namespace RE::BSResource
 			ErrorCode DoWait(std::uint64_t& a_transferred, bool a_block) override  // 0B
 			{
 				using func_t = decltype(&AsyncReaderStream::DoWait);
-				static REL::Relocation<func_t> func{ REL::ID(2269399) };
+				static REL::Relocation<func_t> func{ RE::ID::BSResource_Archive2_AsyncReaderStream::DoWait };
 				return func(this, a_transferred, a_block);
 			}
 

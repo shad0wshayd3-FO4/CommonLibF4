@@ -22,7 +22,7 @@ namespace RE
 		void Initialize()
 		{
 			using func_t = decltype(&BSScaleformRenderer::Initialize);
-			static REL::Relocation<func_t> func{ REL::ID(2284938) };
+			static REL::Relocation<func_t> func{ ID::BSScaleformRenderer::Initialize };
 			return func(this);
 		}
 

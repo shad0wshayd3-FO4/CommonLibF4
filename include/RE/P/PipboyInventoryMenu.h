@@ -15,14 +15,14 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyInventoryMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(2224143) };
+			static REL::Relocation<func_t> func{ ID::PipboyInventoryMenu::UpdateData };
 			return func(this);
 		}
 
 		void SetQuickkey(int a_selectedIndex, int a_quickkeyIndex)
 		{
 			using func_t = decltype(&PipboyInventoryMenu::SetQuickkey);
-			static REL::Relocation<func_t> func{ REL::ID(2224159) };
+			static REL::Relocation<func_t> func{ ID::PipboyInventoryMenu::SetQuickkey };
 			return func(this, a_selectedIndex, a_quickkeyIndex);
 		}
 	};

@@ -12,7 +12,7 @@ namespace RE
 	public:
 		[[nodiscard]] static EventSource_t* GetEventSource()
 		{
-			static REL::Relocation<EventSource_t**> singleton{ REL::ID(2707340) };
+			static REL::Relocation<EventSource_t**> singleton{ ID::ApplyColorUpdateEvent::GetEventSource };
 			if (!*singleton) {
 				*singleton = new EventSource_t(&BSTGlobalEvent::GetSingleton()->eventSourceSDMKiller);
 			}

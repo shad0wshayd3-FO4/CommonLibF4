@@ -59,14 +59,14 @@ namespace RE
 			[[nodiscard]] std::uint32_t GetPageForFrame(const StackFrame* a_frame) const
 			{
 				using func_t = decltype(&Stack::GetPageForFrame);
-				static REL::Relocation<func_t> func{ REL::ID(1429302) };
+				static REL::Relocation<func_t> func{ ID::BSScript_Internal_Stack::GetPageForFrame };
 				return func(this, a_frame);
 			}
 
 			[[nodiscard]] Variable& GetStackFrameVariable(const StackFrame* a_frame, std::uint32_t a_index, std::uint32_t a_pageHint)
 			{
 				using func_t = decltype(&Stack::GetStackFrameVariable);
-				static REL::Relocation<func_t> func{ REL::ID(2314681) };
+				static REL::Relocation<func_t> func{ ID::BSScript_Internal_Stack::GetStackFrameVariable };
 				return func(this, a_frame, a_index, a_pageHint);
 			}
 

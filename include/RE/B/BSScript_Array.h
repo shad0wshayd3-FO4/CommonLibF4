@@ -14,7 +14,7 @@ namespace RE
 			public BSIntrusiveRefCounted  // 00
 		{
 		private:
-			// Array * Ctor(const TypeInfo *type_info, std::uint32_t initial_size = 0);
+			// Array * ctor(const TypeInfo *type_info, std::uint32_t initial_size = 0);
 
 		public:
 			using value_type = Variable;

@@ -18,7 +18,7 @@ namespace RE
 		BSEventNotifyControl ProcessEvent(const PipboyValueChangedEvent& a_event, BSTEventSource<PipboyValueChangedEvent>* a_source) override
 		{
 			using func_t = decltype(&PipboySubMenu::ProcessEvent);
-			static REL::Relocation<func_t> func{ REL::ID(893703) };
+			static REL::Relocation<func_t> func{ ID::PipboySubMenu::ProcessEvent };
 			return func(this, a_event, a_source);
 		}
 

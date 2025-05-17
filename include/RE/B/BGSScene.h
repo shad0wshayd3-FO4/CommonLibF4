@@ -79,14 +79,14 @@ namespace RE
 		void ResetAllSceneActions()
 		{
 			using func_t = decltype(&BGSScene::ResetAllSceneActions);
-			static REL::Relocation<func_t> func{ REL::ID(2206864) };
+			static REL::Relocation<func_t> func{ ID::BGSScene::ResetAllSceneActions };
 			return func(this);
 		}
 
 		void SetSceneActive(bool abFlag)
 		{
 			using func_t = decltype(&BGSScene::SetSceneActive);
-			static REL::Relocation<func_t> func{ REL::ID(2206845) };
+			static REL::Relocation<func_t> func{ ID::BGSScene::SetSceneActive };
 			return func(this, abFlag);
 		}
 	};

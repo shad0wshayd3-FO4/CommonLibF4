@@ -57,7 +57,7 @@ namespace RE
 		bool CheckDisplacementSpellOnTarget()
 		{
 			using func_t = decltype(&ActiveEffect::CheckDisplacementSpellOnTarget);
-			static REL::Relocation<func_t> func{ REL::ID(1415178) };
+			static REL::Relocation<func_t> func{ ID::ActiveEffect::CheckDisplacementSpellOnTarget };
 			return func(this);
 		}
 

@@ -93,7 +93,7 @@ namespace RE
 		void UpdateOptimizedAutoBuildInv()
 		{
 			using func_t = decltype(&WorkbenchMenuBase::UpdateOptimizedAutoBuildInv);
-			static REL::Relocation<func_t> func{ REL::ID(2224955) };
+			static REL::Relocation<func_t> func{ ID::WorkbenchMenuBase::UpdateOptimizedAutoBuildInv };
 			return func(this);
 		}
 

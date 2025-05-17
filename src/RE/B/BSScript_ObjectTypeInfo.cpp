@@ -24,7 +24,7 @@ namespace RE
 
 		ObjectTypeInfo::~ObjectTypeInfo()
 		{
-			Dtor();
+			dtor();
 		}
 
 		const char* ObjectTypeInfo::GetName() const
@@ -177,10 +177,10 @@ namespace RE
 			return reinterpret_cast<const BSFixedString*>(GetNamedStateIter() + GetNumNamedStates());
 		}
 
-		void ObjectTypeInfo::Dtor()
+		void ObjectTypeInfo::dtor()
 		{
-			using func_t = decltype(&ObjectTypeInfo::Dtor);
-			REL::Relocation<func_t> func{ REL::ID(1047917) };
+			using func_t = decltype(&ObjectTypeInfo::dtor);
+			REL::Relocation<func_t> func{ ID::BSScript_ObjectTypeInfo::dtor };
 			return func(this);
 		}
 	}

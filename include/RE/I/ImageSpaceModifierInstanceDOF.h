@@ -36,7 +36,7 @@ namespace RE
 			float            a_duration)
 		{
 			using func_t = decltype(&ImageSpaceModifierInstanceDOF::Trigger);
-			static REL::Relocation<func_t> func{ REL::ID(2199922) };
+			static REL::Relocation<func_t> func{ ID::ImageSpaceModifierInstanceDOF::Trigger };
 			return func(a_distance, a_range, a_vignetteRadius, a_vignetteStrength, a_mode, a_strength, a_duration);
 		}
 

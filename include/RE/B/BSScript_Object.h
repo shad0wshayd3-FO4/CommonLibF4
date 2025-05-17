@@ -25,21 +25,21 @@ namespace RE
 			[[nodiscard]] std::uint32_t DecRef() const
 			{
 				using func_t = decltype(&Object::DecRef);
-				static REL::Relocation<func_t> func{ REL::ID(541793) };
+				static REL::Relocation<func_t> func{ ID::BSScript_Object::DecRef };
 				return func(this);
 			}
 
 			[[nodiscard]] std::size_t GetHandle() const
 			{
 				using func_t = decltype(&Object::GetHandle);
-				static REL::Relocation<func_t> func{ REL::ID(2314431) };
+				static REL::Relocation<func_t> func{ ID::BSScript_Object::GetHandle };
 				return func(this);
 			}
 
 			void IncRef() const
 			{
 				using func_t = decltype(&Object::IncRef);
-				static REL::Relocation<func_t> func{ REL::ID(2314436) };
+				static REL::Relocation<func_t> func{ ID::BSScript_Object::IncRef };
 				return func(this);
 			}
 

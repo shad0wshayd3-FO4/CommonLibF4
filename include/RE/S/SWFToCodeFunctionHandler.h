@@ -25,14 +25,14 @@ namespace RE
 		void MapCodeMethodToASFunction(const char* a_functionName, std::int32_t a_functionID)
 		{
 			using func_t = decltype(&SWFToCodeFunctionHandler::MapCodeMethodToASFunction);
-			static REL::Relocation<func_t> func{ REL::ID(2287419) };
+			static REL::Relocation<func_t> func{ ID::SWFToCodeFunctionHandler::MapCodeMethodToASFunction };
 			return func(this, a_functionName, a_functionID);
 		}
 
 		void RegisterCodeObject(Scaleform::GFx::Movie& a_movie, Scaleform::GFx::Value& a_menuObj)
 		{
 			using func_t = decltype(&SWFToCodeFunctionHandler::RegisterCodeObject);
-			static REL::Relocation<func_t> func{ REL::ID(2287415) };
+			static REL::Relocation<func_t> func{ ID::SWFToCodeFunctionHandler::RegisterCodeObject };
 			return func(this, a_movie, a_menuObj);
 		}
 	};

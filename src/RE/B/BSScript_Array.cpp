@@ -7,11 +7,14 @@ namespace RE
 		Array::~Array()
 		{
 		}
-		// Array* Array::Ctor(const TypeInfo *type_info, std::uint32_t initial_size){
-		// 	using func_t = decltype(&Array::Ctor);
-		// 	REL::Relocation<func_t> func{ REL::ID(870924) };
+
+		// Array* Array::ctor(const TypeInfo *type_info, std::uint32_t initial_size)
+		// {
+		// 	using func_t = decltype(&Array::ctor);
+		// 	REL::Relocation<func_t> func{ ID::BSScript_Array::ctor };
 		// 	return func(this, type_info, initial_size);
 		// }
+
 		[[nodiscard]] auto Array::operator[](size_type a_pos)
 			-> reference
 		{

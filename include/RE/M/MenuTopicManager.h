@@ -23,7 +23,7 @@ namespace RE
 
 		[[nodiscard]] static MenuTopicManager* GetSingleton()
 		{
-			static REL::Relocation<MenuTopicManager**> singleton{ REL::ID(2689089) };
+			static REL::Relocation<MenuTopicManager**> singleton{ ID::MenuTopicManager::Singleton };
 			return *singleton;
 		}
 

@@ -10,7 +10,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESObjectLoadedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESObjectLoadedEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2201853) };
+			static REL::Relocation<func_t> func{ ID::TESObjectLoadedEvent::GetEventSource };
 			return func();
 		}
 

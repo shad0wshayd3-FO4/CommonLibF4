@@ -8,21 +8,21 @@ namespace RE
 		[[nodiscard]] LOCK_LEVEL GetLockLevel(TESObjectREFR* a_owner)
 		{
 			using func_t = decltype(&REFR_LOCK::GetLockLevel);
-			static REL::Relocation<func_t> func{ REL::ID(2191018) };
+			static REL::Relocation<func_t> func{ ID::REFR_LOCK::GetLockLevel };
 			return func(this, a_owner);
 		}
 
 		void SetLocked(bool a_locked)
 		{
 			using func_t = decltype(&REFR_LOCK::SetLocked);
-			static REL::Relocation<func_t> func{ REL::ID(2191020) };
+			static REL::Relocation<func_t> func{ ID::REFR_LOCK::SetLocked };
 			return func(this, a_locked);
 		}
 
 		bool IsBroken()
 		{
 			using func_t = decltype(&REFR_LOCK::IsBroken);
-			static REL::Relocation<func_t> func{ REL::ID(2191021) };
+			static REL::Relocation<func_t> func{ ID::REFR_LOCK::IsBroken };
 			return func(this);
 		}
 

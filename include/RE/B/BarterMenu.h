@@ -39,21 +39,21 @@ namespace RE
 		void ClearTradingData()
 		{
 			using func_t = decltype(&BarterMenu::ClearTradingData);
-			static REL::Relocation<func_t> func{ REL::ID(1112285) };
+			static REL::Relocation<func_t> func{ ID::BarterMenu::ClearTradingData };
 			return func(this);
 		}
 
 		void CompleteTrade()
 		{
 			using func_t = decltype(&BarterMenu::CompleteTrade);
-			static REL::Relocation<func_t> func{ REL::ID(379932) };
+			static REL::Relocation<func_t> func{ ID::BarterMenu::CompleteTrade };
 			return func(this);
 		}
 
 		[[nodiscard]] std::int64_t GetCapsOwedByPlayer()
 		{
 			using func_t = decltype(&BarterMenu::GetCapsOwedByPlayer);
-			static REL::Relocation<func_t> func{ REL::ID(672405) };
+			static REL::Relocation<func_t> func{ ID::BarterMenu::GetCapsOwedByPlayer };
 			return func(this);
 		}
 

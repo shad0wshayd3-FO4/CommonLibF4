@@ -17,5 +17,4 @@ namespace RE
 		BSTHashMap<const BSNavmeshInfo*, std::uint32_t> infoToIndexMap;  // 18
 	};
 	static_assert(sizeof(BSPrecomputedNavmeshInfoPathMap) == 0x48);
-
 }

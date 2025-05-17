@@ -26,7 +26,7 @@ namespace RE
 		void GetDescription(BSString& a_outString, const TESForm* a_form = nullptr)
 		{
 			using func_t = decltype(&TESDescription::GetDescription);
-			static REL::Relocation<func_t> func{ REL::ID(2193019) };
+			static REL::Relocation<func_t> func{ ID::TESDescription::GetDescription };
 			return func(this, a_outString, a_form);
 		}
 

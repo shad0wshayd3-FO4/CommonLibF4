@@ -45,7 +45,7 @@ namespace RE
 		[[nodiscard]] static auto GetTypedKeywords()
 			-> std::optional<std::span<BSTArray<BGSKeyword*>, std::to_underlying(KeywordType::kTotal)>>
 		{
-			static REL::Relocation<BSTArray<BGSKeyword*>(*)[std::to_underlying(KeywordType::kTotal)]> keywords{ REL::ID(1095775) };
+			static REL::Relocation<BSTArray<BGSKeyword*>(*)[std::to_underlying(KeywordType::kTotal)]> keywords{ ID::BGSKeyword::TypedKeywords };
 			if (*keywords) {
 				return { *keywords };
 			} else {

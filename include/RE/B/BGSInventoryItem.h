@@ -62,8 +62,7 @@ namespace RE
 
 			CheckStackIDFunctor(std::uint32_t a_targetIndex) noexcept :
 				targetIndex(a_targetIndex)
-			{
-			}
+			{}
 
 			// override (StackDataCompareFunctor)
 			bool CompareData(const BGSInventoryItem::Stack&) override { return targetIndex-- == 0; }  // 00
@@ -82,8 +81,7 @@ namespace RE
 
 			CheckExtraDataFunctor(const BGSInventoryItem::Stack* a_stack) noexcept :
 				extra(a_stack->extra.get())
-			{
-			}
+			{}
 
 			// override (StackDataCompareFunctor)
 			bool CompareData(const BGSInventoryItem::Stack&) override { return this->extra == extra; }
@@ -164,7 +162,7 @@ namespace RE
 		bool FindAndWriteStackData(StackDataCompareFunctor& a_compareFunc, StackDataWriteFunctor& a_writeFunc, bool a_manualMerge, ObjectRefHandle a_owner)
 		{
 			using func_t = decltype(&BGSInventoryItem::FindAndWriteStackData);
-			static REL::Relocation<func_t> func{ REL::ID(2194123) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::FindAndWriteStackData };
 			return func(this, a_compareFunc, a_writeFunc, a_manualMerge, a_owner);
 		}
 
@@ -182,42 +180,42 @@ namespace RE
 		[[nodiscard]] const char* GetDisplayFullName(std::uint32_t a_stackID) const
 		{
 			using func_t = const char* (BGSInventoryItem::*)(std::uint32_t) const;
-			static REL::Relocation<func_t> func{ REL::ID(2194079) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::GetDisplayFullName1 };
 			return func(this, a_stackID);
 		}
 
 		[[nodiscard]] const char* GetDisplayFullName(const ExtraDataList* a_extra) const
 		{
 			using func_t = const char* (BGSInventoryItem::*)(const ExtraDataList*) const;
-			static REL::Relocation<func_t> func{ REL::ID(2194080) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::GetDisplayFullName2 };
 			return func(this, a_extra);
 		}
 
 		[[nodiscard]] TBO_InstanceData* GetInstanceData(std::uint32_t a_stackID) const
 		{
 			using func_t = decltype(&BGSInventoryItem::GetInstanceData);
-			static REL::Relocation<func_t> func{ REL::ID(2194072) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::GetInstanceData };
 			return func(this, a_stackID);
 		}
 
 		[[nodiscard]] std::int32_t GetInventoryValue(std::uint32_t a_stackID, bool a_scale) const
 		{
 			using func_t = decltype(&BGSInventoryItem::GetInventoryValue);
-			static REL::Relocation<func_t> func{ REL::ID(2194099) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::GetInventoryValue };
 			return func(this, a_stackID, a_scale);
 		}
 
 		ExtraDataList GetExtraDataAt(std::uint32_t a_index)
 		{
 			using func_t = decltype(&BGSInventoryItem::GetExtraDataAt);
-			static REL::Relocation<func_t> func{ REL::ID(2194092) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::GetExtraDataAt };
 			return func(this, a_index);
 		}
 
 		[[nodiscard]] void MergeStacks()
 		{
 			using func_t = decltype(&BGSInventoryItem::MergeStacks);
-			static REL::Relocation<func_t> func{ REL::ID(2194109) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryItem::MergeStacks };
 			return func(this);
 		}
 

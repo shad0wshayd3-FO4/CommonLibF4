@@ -34,7 +34,7 @@ namespace RE
 		void AddKeyword(BGSKeyword* a_keyword)
 		{
 			using func_t = decltype(&BGSKeywordForm::AddKeyword);
-			static REL::Relocation<func_t> func{ REL::ID(2192766) };
+			static REL::Relocation<func_t> func{ ID::BGSKeywordForm::AddKeyword };
 			return func(this, a_keyword);
 		}
 
@@ -81,7 +81,7 @@ namespace RE
 		void RemoveKeyword(BGSKeyword* a_keyword)
 		{
 			using func_t = decltype(&BGSKeywordForm::RemoveKeyword);
-			static REL::Relocation<func_t> func{ REL::ID(921694) };
+			static REL::Relocation<func_t> func{ ID::BGSKeywordForm::RemoveKeyword };
 			return func(this, a_keyword);
 		}
 

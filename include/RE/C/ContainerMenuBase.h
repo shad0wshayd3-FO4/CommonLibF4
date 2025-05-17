@@ -51,7 +51,7 @@ namespace RE
 			void IncrementSort()
 			{
 				using func_t = decltype(&ItemSorter::IncrementSort);
-				static REL::Relocation<func_t> func{ REL::ID(1307263) };
+				static REL::Relocation<func_t> func{ ID::ContainerMenuBase::ItemSorter::IncrementSort };
 				return func(this);
 			}
 

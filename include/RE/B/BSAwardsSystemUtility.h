@@ -13,7 +13,7 @@ namespace RE
 		[[nodiscard]] static BSAwardsSystemUtility& GetSingleton()
 		{
 			using func_t = decltype(&BSAwardsSystemUtility::GetSingleton);
-			static REL::Relocation<func_t> func{ REL::ID(1569384) };
+			static REL::Relocation<func_t> func{ ID::BSAwardsSystemUtility::Singleton };
 			return func();
 		}
 

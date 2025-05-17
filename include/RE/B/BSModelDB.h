@@ -56,7 +56,7 @@ namespace RE
 			const DBTraits::ArgsType& a_args)
 		{
 			using func_t = BSResource::ErrorCode (*)(const char*, Handle&, const DBTraits::ArgsType&);
-			static REL::Relocation<func_t> func{ REL::ID(1066398) };
+			static REL::Relocation<func_t> func{ ID::BSModelDB::Demand1 };
 			return func(a_name, a_result, a_args);
 		}
 
@@ -66,7 +66,7 @@ namespace RE
 			const DBTraits::ArgsType& a_args)
 		{
 			using func_t = BSResource::ErrorCode (*)(const char*, NiPointer<NiNode>*, const DBTraits::ArgsType&);
-			static REL::Relocation<func_t> func{ REL::ID(1225688) };
+			static REL::Relocation<func_t> func{ ID::BSModelDB::Demand2 };
 			return func(a_name, a_result, a_args);
 		}
 	};

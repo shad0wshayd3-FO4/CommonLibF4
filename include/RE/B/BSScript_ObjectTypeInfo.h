@@ -212,7 +212,7 @@ namespace RE
 			void*                                        data;                               // 50
 
 		private:
-			void Dtor();
+			void dtor();
 		};
 
 		static_assert(sizeof(ObjectTypeInfo) == 0x58);

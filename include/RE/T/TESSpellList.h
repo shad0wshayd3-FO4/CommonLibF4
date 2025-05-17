@@ -21,8 +21,8 @@ namespace RE
 				numSpells(0),
 				numLevSpells(0),
 				numShouts(0)
-			{
-			}
+			{}
+
 			~SpellData() = default;
 
 			F4_HEAP_REDEFINE_NEW(SpellData);
@@ -132,7 +132,7 @@ namespace RE
 		bool AddSpell(TESForm* a_spell)
 		{
 			using func_t = decltype(&TESSpellList::AddSpell);
-			static REL::Relocation<func_t> func{ REL::ID(1312083) };
+			static REL::Relocation<func_t> func{ ID::TESSpellList::AddSpell };
 			return func(this, a_spell);
 		}
 

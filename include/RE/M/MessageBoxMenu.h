@@ -25,7 +25,7 @@ namespace RE
 		void ShowMessage()
 		{
 			using func_t = decltype(&MessageBoxMenu::ShowMessage);
-			static REL::Relocation<func_t> func{ REL::ID(442479) };
+			static REL::Relocation<func_t> func{ ID::MessageBoxMenu::ShowMessage };
 			return func(this);
 		}
 

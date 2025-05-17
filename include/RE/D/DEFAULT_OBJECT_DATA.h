@@ -10,7 +10,7 @@ namespace RE
 	public:
 		[[nodiscard]] static std::span<DEFAULT_OBJECT_DATA, 394> GetDefaultObjectData()
 		{
-			static REL::Relocation<DEFAULT_OBJECT_DATA(*)[394]> data{ REL::ID(838886) };
+			static REL::Relocation<DEFAULT_OBJECT_DATA(*)[394]> data{ ID::DEFAULT_OBJECT_DATA::GetDefaultObjectData };
 			return { *data };
 		}
 

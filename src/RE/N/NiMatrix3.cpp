@@ -115,42 +115,42 @@ namespace RE
 	bool NiMatrix3::ToEulerAnglesXYZ(float& a_x, float& a_y, float& a_z) const
 	{
 		using func_t = bool (*)(const NiMatrix3*, float&, float&, float&);
-		static REL::Relocation<func_t> func{ REL::ID(2269806) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesXYZ1 };
 		return func(this, a_x, a_y, a_z);
 	}
 
 	bool NiMatrix3::ToEulerAnglesXZY(float& a_x, float& a_z, float& a_y) const
 	{
 		using func_t = bool (*)(const NiMatrix3*, float&, float&, float&);
-		static REL::Relocation<func_t> func{ REL::ID(2269807) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesXZY2 };
 		return func(this, a_x, a_z, a_y);
 	}
 
 	bool NiMatrix3::ToEulerAnglesYXZ(float& a_y, float& a_x, float& a_z) const
 	{
 		using func_t = bool (*)(const NiMatrix3*, float&, float&, float&);
-		static REL::Relocation<func_t> func{ REL::ID(2269808) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesYXZ3 };
 		return func(this, a_y, a_x, a_z);
 	}
 
 	bool NiMatrix3::ToEulerAnglesYZX(float& a_y, float& a_z, float& a_x) const
 	{
 		using func_t = bool (*)(const NiMatrix3*, float&, float&, float&);
-		static REL::Relocation<func_t> func{ REL::ID(2269809) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesYZX4 };
 		return func(this, a_y, a_z, a_x);
 	}
 
 	bool NiMatrix3::ToEulerAnglesZYX(float& a_z, float& a_y, float& a_x) const
 	{
 		using func_t = bool (*)(const NiMatrix3*, float&, float&, float&);
-		static REL::Relocation<func_t> func{ REL::ID(2269810) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesZYX5 };
 		return func(this, a_z, a_y, a_x);
 	}
 
 	bool NiMatrix3::ToEulerAnglesZXY(float& a_z, float& a_x, float& a_y) const
 	{
 		using func_t = bool (*)(const NiMatrix3*, float&, float&, float&);
-		static REL::Relocation<func_t> func{ REL::ID(2269824) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::ToEulerAnglesZXY6 };
 		return func(this, a_z, a_x, a_y);
 	}
 
@@ -162,42 +162,42 @@ namespace RE
 	void NiMatrix3::FromEulerAnglesXYZ(float a_x, float a_y, float a_z)
 	{
 		using func_t = void (*)(NiMatrix3*, float, float, float);
-		static REL::Relocation<func_t> func{ REL::ID(2269813) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::FromEulerAnglesXYZ1 };
 		return func(this, a_x, a_y, a_z);
 	}
 
 	void NiMatrix3::FromEulerAnglesXZY(float a_x, float a_z, float a_y)
 	{
 		using func_t = void (*)(NiMatrix3*, float, float, float);
-		static REL::Relocation<func_t> func{ REL::ID(2269814) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::FromEulerAnglesXZY2 };
 		return func(this, a_x, a_z, a_y);
 	}
 
 	void NiMatrix3::FromEulerAnglesYXZ(float a_y, float a_x, float a_z)
 	{
 		using func_t = void (*)(NiMatrix3*, float, float, float);
-		static REL::Relocation<func_t> func{ REL::ID(2269815) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::FromEulerAnglesYXZ3 };
 		return func(this, a_y, a_x, a_z);
 	}
 
 	void NiMatrix3::FromEulerAnglesYZX(float a_y, float a_z, float a_x)
 	{
 		using func_t = void (*)(NiMatrix3*, float, float, float);
-		static REL::Relocation<func_t> func{ REL::ID(2269816) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::FromEulerAnglesYZX4 };
 		return func(this, a_y, a_z, a_x);
 	}
 
 	void NiMatrix3::FromEulerAnglesZYX(float a_z, float a_y, float a_x)
 	{
 		using func_t = void (*)(NiMatrix3*, float, float, float);
-		static REL::Relocation<func_t> func{ REL::ID(2269817) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::FromEulerAnglesZYX5 };
 		return func(this, a_z, a_y, a_x);
 	}
 
 	void NiMatrix3::FromEulerAnglesZXY(float a_z, float a_x, float a_y)
 	{
 		using func_t = void (*)(NiMatrix3*, float, float, float);
-		static REL::Relocation<func_t> func{ REL::ID(2269825) };
+		static REL::Relocation<func_t> func{ ID::NiMatrix3::FromEulerAnglesZXY6 };
 		return func(this, a_z, a_x, a_y);
 	}
 }

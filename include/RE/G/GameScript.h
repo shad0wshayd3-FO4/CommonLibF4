@@ -149,7 +149,7 @@ namespace RE
 			BSScript::ErrorLogger::Severity a_severity = BSScript::ErrorLogger::Severity::kError)
 		{
 			using func_t = decltype(&LogFormError);
-			static REL::Relocation<func_t> func{ REL::ID(2251028) };
+			static REL::Relocation<func_t> func{ ID::GameScript::LogFormError };
 			return func(a_obj, a_error, a_vm, a_stackID, a_severity);
 		}
 
@@ -262,21 +262,21 @@ namespace RE
 			void DropSaveLoadRemapData()
 			{
 				using func_t = decltype(&HandlePolicy::DropSaveLoadRemapData);
-				static REL::Relocation<func_t> func{ REL::ID(2249995) };
+				static REL::Relocation<func_t> func{ ID::GameScript::HandlePolicy::DropSaveLoadRemapData };
 				return func(this);
 			}
 
 			void GetInventoryObjFromHandle(std::uint64_t a_cobj, TESObjectREFR*& a_container, std::uint16_t& a_uniqueID, TESObjectREFR*& a_inWorldREFR)
 			{
 				using func_t = decltype(&HandlePolicy::GetInventoryObjFromHandle);
-				static REL::Relocation<func_t> func{ REL::ID(2249989) };
+				static REL::Relocation<func_t> func{ ID::GameScript::HandlePolicy::GetInventoryObjFromHandle };
 				return func(this, a_cobj, a_container, a_uniqueID, a_inWorldREFR);
 			}
 
 			void UpdatePersistence()
 			{
 				using func_t = decltype(&HandlePolicy::UpdatePersistence);
-				static REL::Relocation<func_t> func{ REL::ID(2249991) };
+				static REL::Relocation<func_t> func{ ID::GameScript::HandlePolicy::UpdatePersistence };
 				return func(this);
 			}
 
@@ -325,7 +325,7 @@ namespace RE
 			void EndSaveLoad()
 			{
 				using func_t = decltype(&ObjectBindPolicy::EndSaveLoad);
-				static REL::Relocation<func_t> func{ REL::ID(2250482) };
+				static REL::Relocation<func_t> func{ ID::GameScript::ObjectBindPolicy::EndSaveLoad };
 				return func(this);
 			}
 
@@ -497,7 +497,7 @@ namespace RE
 
 		[[nodiscard]] static GameVM* GetSingleton()
 		{
-			static REL::Relocation<GameVM**> singleton{ REL::ID(2689134) };
+			static REL::Relocation<GameVM**> singleton{ ID::GameScript::GameVM::Singleton };
 			return *singleton;
 		}
 
@@ -506,14 +506,14 @@ namespace RE
 		bool QueuePostRenderCall(const BSTSmartPointer<GameScript::DelayFunctor>& a_functor)
 		{
 			using func_t = decltype(&GameVM::QueuePostRenderCall);
-			static REL::Relocation<func_t> func{ REL::ID(2251314) };
+			static REL::Relocation<func_t> func{ ID::GameScript::GameVM::QueuePostRenderCall };
 			return func(this, a_functor);
 		}
 
 		void RegisterForAllGameEvents()
 		{
 			using func_t = decltype(&GameVM::RegisterForAllGameEvents);
-			static REL::Relocation<func_t> func{ REL::ID(2251353) };
+			static REL::Relocation<func_t> func{ ID::GameScript::GameVM::RegisterForAllGameEvents };
 			return func(this);
 		}
 
@@ -525,7 +525,7 @@ namespace RE
 			const BSTSmartPointer<BSScript::IStackCallbackFunctor>&                       a_callback)
 		{
 			using func_t = decltype(&GameVM::SendEventToObjectAndRelated);
-			static REL::Relocation<func_t> func{ REL::ID(367992) };
+			static REL::Relocation<func_t> func{ ID::GameScript::GameVM::SendEventToObjectAndRelated };
 			return func(this, a_object, a_eventName, a_args, a_filter, a_callback);
 		}
 
@@ -702,7 +702,7 @@ namespace RE
 		inline void BindCObject(const BSTSmartPointer<BSScript::Object>& a_scriptObj, const RefrOrInventoryObj& a_cobj, BSScript::IVirtualMachine& a_vm)
 		{
 			using func_t = decltype(&BindCObject);
-			static REL::Relocation<func_t> func{ REL::ID(81787) };
+			static REL::Relocation<func_t> func{ ID::GameScript::BindCObject };
 			return func(a_scriptObj, a_cobj, a_vm);
 		}
 

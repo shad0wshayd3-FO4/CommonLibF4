@@ -72,7 +72,7 @@ namespace RE
 
 		[[nodiscard]] static BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>& GetAlternateHeadPartListMap()
 		{
-			static REL::Relocation<BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>*> map{ REL::ID(2662368), -0x8 };
+			static REL::Relocation<BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>*> map{ ID::TESNPC::AlternateHeadPartListMap, -0x8 };
 			return *map;
 		}
 
@@ -121,7 +121,7 @@ namespace RE
 		[[nodiscard]] SEX GetSex() noexcept
 		{
 			using func_t = decltype(&TESNPC::GetSex);
-			static REL::Relocation<func_t> func{ REL::ID(2207107) };
+			static REL::Relocation<func_t> func{ ID::TESNPC::GetSex };
 			return func(this);
 		}
 
@@ -152,7 +152,7 @@ namespace RE
 		float GetFacialBoneMorphIntensity()
 		{
 			using func_t = decltype(&TESNPC::GetFacialBoneMorphIntensity);
-			static REL::Relocation<func_t> func{ REL::ID(2207416) };
+			static REL::Relocation<func_t> func{ ID::TESNPC::GetFacialBoneMorphIntensity };
 			return func(this);
 		}
 

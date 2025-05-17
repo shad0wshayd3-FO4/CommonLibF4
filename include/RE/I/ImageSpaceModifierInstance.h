@@ -36,7 +36,7 @@ namespace RE
 		void Stop()
 		{
 			using func_t = decltype(&ImageSpaceModifierInstance::Stop);
-			static REL::Relocation<func_t> func{ REL::ID(2199897) };
+			static REL::Relocation<func_t> func{ ID::ImageSpaceModifierInstance::Stop };
 			return func(this);
 		}
 

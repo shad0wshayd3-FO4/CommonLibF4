@@ -24,28 +24,28 @@ namespace RE
 		static ImageSpaceModifierInstanceForm* Trigger(TESImageSpaceModifier* a_mod, float a_strength, NiAVObject* a_target)
 		{
 			using func_t = ImageSpaceModifierInstanceForm* (*)(TESImageSpaceModifier*, float, NiAVObject*);
-			static REL::Relocation<func_t> func{ REL::ID(2199906) };
+			static REL::Relocation<func_t> func{ ID::ImageSpaceModifierInstanceForm::Trigger1 };
 			return func(a_mod, a_strength, a_target);
 		}
 
 		static ImageSpaceModifierInstanceForm* Trigger(const BSFixedString& a_name)
 		{
 			using func_t = ImageSpaceModifierInstanceForm* (*)(const BSFixedString&);
-			static REL::Relocation<func_t> func{ REL::ID(2199907) };
+			static REL::Relocation<func_t> func{ ID::ImageSpaceModifierInstanceForm::Trigger2 };
 			return func(a_name);
 		}
 
 		static void Stop(TESImageSpaceModifier* a_mod)
 		{
 			using func_t = void (*)(TESImageSpaceModifier*);
-			static REL::Relocation<func_t> func{ REL::ID(2199909) };
+			static REL::Relocation<func_t> func{ ID::ImageSpaceModifierInstanceForm::Stop1 };
 			return func(a_mod);
 		}
 
 		static void Stop(const BSFixedString& a_name)
 		{
 			using func_t = void (*)(const BSFixedString&);
-			static REL::Relocation<func_t> func{ REL::ID(2199910) };
+			static REL::Relocation<func_t> func{ ID::ImageSpaceModifierInstanceForm::Stop2 };
 			return func(a_name);
 		}
 

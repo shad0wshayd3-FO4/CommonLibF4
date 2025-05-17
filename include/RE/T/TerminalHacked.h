@@ -16,7 +16,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TerminalHacked::Event>* GetEventSource()
 		{
 			using func_t = decltype(&TerminalHacked::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(425579) };
+			static REL::Relocation<func_t> func{ ID::TerminalHacked::GetEventSource };
 			return func();
 		}
 	};

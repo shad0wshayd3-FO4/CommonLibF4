@@ -44,7 +44,7 @@ namespace RE
 		void ctor(PipboyValue* a_parentValue)
 		{
 			using func_t = decltype(&PipboyValue::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(2225915) };
+			static REL::Relocation<func_t> func{ ID::PipboyValue::ctor };
 			return func(this, a_parentValue);
 		}
 

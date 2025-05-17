@@ -19,7 +19,7 @@ namespace RE
 		virtual void Shutdown() override;                                                           // 04
 		virtual bool UpdateParams(ImageSpaceEffectParam* a_param) override;                         // 09
 
-		inline static REL::Relocation<bool*> UsePipboyScreenMask{ REL::ID(2678029) };
+		inline static REL::Relocation<bool*> UsePipboyScreenMask{ ID::ImageSpaceEffectHDR::UsePipboyScreenMask };
 	};
 	static_assert(sizeof(ImageSpaceEffectHDR) == 0xB0);
 }

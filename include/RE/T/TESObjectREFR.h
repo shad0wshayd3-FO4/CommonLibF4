@@ -235,28 +235,28 @@ namespace RE
 		bool ActivateRef(TESObjectREFR* a_actionRef, TESBoundObject* a_objectToGet, std::int32_t a_count, bool a_defaultProcessingOnly, bool a_fromScript, bool a_looping)
 		{
 			using func_t = decltype(&TESObjectREFR::ActivateRef);
-			static REL::Relocation<func_t> func{ REL::ID(2201147) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::ActivateRef };
 			return func(this, a_actionRef, a_objectToGet, a_count, a_defaultProcessingOnly, a_fromScript, a_looping);
 		}
 
 		void AddInventoryItem(TESBoundObject* a_object, BSTSmartPointer<ExtraDataList> a_extra, std::uint32_t a_count, TESObjectREFR* a_oldContainer, const INSTANCE_FILTER* a_filter, TESObjectREFR* a_overrideRef)
 		{
 			using func_t = decltype(&TESObjectREFR::AddInventoryItem);
-			static REL::Relocation<func_t> func{ REL::ID(2200949) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::AddInventoryItem };
 			return func(this, a_object, a_extra, a_count, a_oldContainer, a_filter, a_overrideRef);
 		}
 
 		void AddKeyword(BGSKeyword* kwd)
 		{
 			using func_t = decltype(&TESObjectREFR::AddKeyword);
-			static REL::Relocation<func_t> func{ REL::ID(2200860) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::AddKeyword };
 			return func(this, kwd);
 		}
 
 		void AddLockChange()
 		{
 			using func_t = decltype(&TESObjectREFR::AddLockChange);
-			static REL::Relocation<func_t> func{ REL::ID(1578706) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::AddLockChange };
 			return func(this);
 		}
 
@@ -270,7 +270,7 @@ namespace RE
 			bool           a_interfaceEffect = false)
 		{
 			using func_t = decltype(&TESObjectREFR::ApplyArtObject);
-			static REL::Relocation<func_t> func{ REL::ID(2205200) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::ApplyArtObject };
 			return func(this, a_art, a_time, a_facingRef, a_attachToCamera, a_inheritRotation, a_3D, a_interfaceEffect);
 		}
 
@@ -284,14 +284,14 @@ namespace RE
 			bool             a_interfaceEffect = false)
 		{
 			using func_t = decltype(&TESObjectREFR::ApplyEffectShader);
-			static REL::Relocation<func_t> func{ REL::ID(2205201) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::ApplyEffectShader };
 			return func(this, a_art, a_time, a_facingRef, a_attachToCamera, a_inheritRotation, a_3D, a_interfaceEffect);
 		}
 
 		void Enable(bool a_resetInventory)
 		{
 			using func_t = decltype(&TESObjectREFR::Enable);
-			static REL::Relocation<func_t> func{ REL::ID(1396707) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::Enable };
 			return func(this, a_resetInventory);
 		}
 
@@ -310,21 +310,21 @@ namespace RE
 		[[nodiscard]] BGSLocation* GetCurrentLocation() const
 		{
 			using func_t = decltype(&TESObjectREFR::GetCurrentLocation);
-			static REL::Relocation<func_t> func{ REL::ID(2201163) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetCurrentLocation };
 			return func(this);
 		}
 
 		[[nodiscard]] const char* GetDisplayFullName()
 		{
 			using func_t = decltype(&TESObjectREFR::GetDisplayFullName);
-			static REL::Relocation<func_t> func{ REL::ID(2201126) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetDisplayFullName };
 			return func(this);
 		}
 
 		bool GetEditorDead() const
 		{
 			using func_t = decltype(&TESObjectREFR::GetEditorDead);
-			static REL::Relocation<func_t> func{ REL::ID(2200781) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetEditorDead };
 			return func(this);
 		}
 
@@ -333,7 +333,7 @@ namespace RE
 		[[nodiscard]] TESForm* GetOwner()
 		{
 			using func_t = decltype(&TESObjectREFR::GetOwner);
-			static REL::Relocation<func_t> func{ REL::ID(1323437) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetOwner };
 			return func(this);
 		}
 
@@ -350,182 +350,182 @@ namespace RE
 		[[nodiscard]] std::int64_t GetGoldAmount()
 		{
 			using func_t = decltype(&TESObjectREFR::GetGoldAmount);
-			static REL::Relocation<func_t> func{ REL::ID(2200923) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetGoldAmount };
 			return func(this);
 		}
 
 		[[nodiscard]] ObjectRefHandle GetHandle()
 		{
 			using func_t = decltype(&TESObjectREFR::GetHandle);
-			static REL::Relocation<func_t> func{ REL::ID(2201196) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetHandle };
 			return func(this);
 		}
 
 		[[nodiscard]] bool GetHasOwner()
 		{
 			using func_t = decltype(&TESObjectREFR::GetHasOwner);
-			static REL::Relocation<func_t> func{ REL::ID(1016277) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetHasOwner };
 			return func(this);
 		}
 
 		[[nodiscard]] std::uint32_t GetInventoryObjectCount(const TESBoundObject* a_object)
 		{
 			using func_t = decltype(&TESObjectREFR::GetInventoryObjectCount);
-			static REL::Relocation<func_t> func{ REL::ID(2200939) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetInventoryObjectCount };
 			return func(this, a_object);
 		}
 
 		[[nodiscard]] TESObjectREFR* GetLinkedRef(BGSKeyword* a_keyword)
 		{
 			using func_t = decltype(&TESObjectREFR::GetLinkedRef);
-			static REL::Relocation<func_t> func{ REL::ID(897287) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetLinkedRef };
 			return func(this, a_keyword);
 		}
 
 		[[nodiscard]] REFR_LOCK* GetLock()
 		{
 			using func_t = decltype(&TESObjectREFR::GetLock);
-			static REL::Relocation<func_t> func{ REL::ID(930785) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetLock };
 			return func(this);
 		}
 
 		[[nodiscard]] float GetWeightInContainer()
 		{
 			using func_t = decltype(&TESObjectREFR::GetWeightInContainer);
-			static REL::Relocation<func_t> func{ REL::ID(2201001) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetWeightInContainer };
 			return func(this);
 		}
 
 		BaseFormComponent* HasContainer()
 		{
 			using func_t = decltype(&TESObjectREFR::HasContainer);
-			static REL::Relocation<func_t> func{ REL::ID(2201022) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::HasContainer };
 			return func(this);
 		}
 
 		[[nodiscard]] bool IsAnOwner(Actor* a_testOwner, bool a_useFaction, bool a_requiresOwner)
 		{
 			using func_t = decltype(&TESObjectREFR::IsAnOwner);
-			static REL::Relocation<func_t> func{ REL::ID(933798) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::IsAnOwner };
 			return func(this, a_testOwner, a_useFaction, a_requiresOwner);
 		}
 
 		[[nodiscard]] bool IsCrimeToActivate()
 		{
 			using func_t = decltype(&TESObjectREFR::IsCrimeToActivate);
-			static REL::Relocation<func_t> func{ REL::ID(2201180) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::IsCrimeToActivate };
 			return func(this);
 		}
 
 		[[nodiscard]] bool IsInWater()
 		{
 			using func_t = decltype(&TESObjectREFR::IsInWater);
-			static REL::Relocation<func_t> func{ REL::ID(315318) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::IsInWater };
 			return func(this);
 		}
 
 		[[nodiscard]] bool IsLeveledCreature()
 		{
 			using func_t = decltype(&TESObjectREFR::IsLeveledCreature);
-			static REL::Relocation<func_t> func{ REL::ID(2202655) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::IsLeveledCreature };
 			return func(this);
 		}
 
 		void MarkAsDeleted()
 		{
 			using func_t = decltype(&TESObjectREFR::MarkAsDeleted);
-			static REL::Relocation<func_t> func{ REL::ID(192661) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::MarkAsDeleted };
 			return func(this);
 		}
 
 		void MoveRefToNewSpace(TESObjectCELL* a_interior, TESWorldSpace* a_world)
 		{
 			using func_t = decltype(&TESObjectREFR::MoveRefToNewSpace);
-			static REL::Relocation<func_t> func{ REL::ID(629658) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::MoveRefToNewSpace };
 			return func(this, a_interior, a_world);
 		}
 
 		void RemoveKeyword(BGSKeyword* a_keyworld)
 		{
 			using func_t = decltype(&TESObjectREFR::RemoveKeyword);
-			static REL::Relocation<func_t> func{ REL::ID(2200861) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::RemoveKeyword };
 			return func(this, a_keyworld);
 		}
 
 		void SetAngleOnReference(const NiPoint3& a_point)
 		{
 			using func_t = decltype(&TESObjectREFR::SetAngleOnReference);
-			static REL::Relocation<func_t> func{ REL::ID(1049748) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::SetAngleOnReference };
 			return func(this, a_point);
 		}
 
 		void SetLinkedRef(Actor* a_actor, BGSKeyword* a_keyword)
 		{
 			using func_t = decltype(&TESObjectREFR::SetLinkedRef);
-			static REL::Relocation<func_t> func{ REL::ID(192840) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::SetLinkedRef };
 			return func(this, a_actor, a_keyword);
 		}
 
 		void SetLocationOnReference(const NiPoint3& a_point)
 		{
 			using func_t = decltype(&TESObjectREFR::SetLocationOnReference);
-			static REL::Relocation<func_t> func{ REL::ID(1101832) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::SetLocationOnReference };
 			return func(this, a_point);
 		}
 
 		void SetWantsDelete(bool a_delete)
 		{
 			using func_t = decltype(&TESObjectREFR::SetWantsDelete);
-			static REL::Relocation<func_t> func{ REL::ID(761346) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::SetWantsDelete };
 			return func(this, a_delete);
 		}
 
 		void RebuildBendableSpline(bool rebuildCollision, NiAVObject* target)
 		{
 			using func_t = decltype(&TESObjectREFR::RebuildBendableSpline);
-			static REL::Relocation<func_t> func{ REL::ID(340319) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::RebuildBendableSpline };
 			return func(this, rebuildCollision, target);
 		}
 
 		bool GetItemCount(uint32_t& count, TESForm* item, bool countComponent)
 		{
 			using func_t = decltype(&TESObjectREFR::GetItemCount);
-			static REL::Relocation<func_t> func{ REL::ID(2200996) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetItemCount };
 			return func(this, count, item, countComponent);
 		}
 
 		void UpdateReference3D()
 		{
 			using func_t = decltype(&TESObjectREFR::UpdateReference3D);
-			static REL::Relocation<func_t> func{ REL::ID(1568075) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::UpdateReference3D };
 			return func(this);
 		}
 
 		void GetObjectCenter(NiPoint3& center)
 		{
 			using func_t = decltype(&TESObjectREFR::GetObjectCenter);
-			static REL::Relocation<func_t> func{ REL::ID(777738) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::GetObjectCenter };
 			return func(this, center);
 		}
 
 		void SetScale(float scale)
 		{
 			using func_t = decltype(&TESObjectREFR::SetScale);
-			static REL::Relocation<func_t> func{ REL::ID(2200893) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::SetScale };
 			return func(this, scale);
 		}
 
 		bool IsMarker()
 		{
 			using func_t = decltype(&TESObjectREFR::IsMarker);
-			static REL::Relocation<func_t> func{ REL::ID(2201157) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::IsMarker };
 			return func(this);
 		}
 
 		bool IsDecalRef()
 		{
 			using func_t = decltype(&TESObjectREFR::IsDecalRef);
-			static REL::Relocation<func_t> func{ REL::ID(2200794) };
+			static REL::Relocation<func_t> func{ ID::TESObjectREFR::IsDecalRef };
 			return func(this);
 		}
 

@@ -36,7 +36,7 @@ namespace RE
 		static void StartTestingLoadMenu()
 		{
 			using func_t = decltype(&LoadingMenu::StartTestingLoadMenu);
-			static REL::Relocation<func_t> func{ REL::ID(2249224) };
+			static REL::Relocation<func_t> func{ ID::LoadingMenu::StartTestingLoadMenu };
 			return func();
 		}
 

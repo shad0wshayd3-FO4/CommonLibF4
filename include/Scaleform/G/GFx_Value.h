@@ -408,92 +408,92 @@ namespace Scaleform::GFx
 
 			void ObjectAddRef(Value* a_val, void* a_obj)
 			{
-				using func_t = decltype(&ObjectInterface::ObjectRelease);
-				static REL::Relocation<func_t> func{ REL::ID(2286228) };
+				using func_t = decltype(&ObjectInterface::ObjectAddRef);
+				static REL::Relocation<func_t> func{ ID::GFx::Value::ObjectAddRef };
 				return func(this, a_val, a_obj);
 			}
 
 			void ObjectRelease(Value* a_val, void* a_obj)
 			{
 				using func_t = decltype(&ObjectInterface::ObjectRelease);
-				static REL::Relocation<func_t> func{ REL::ID(2286229) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::ObjectRelease };
 				return func(this, a_val, a_obj);
 			}
 
 			bool HasMember(void* a_data, const char* a_name, bool a_isdobj) const
 			{
 				using func_t = decltype(&ObjectInterface::HasMember);
-				static REL::Relocation<func_t> func{ REL::ID(2286078) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::HasMember };
 				return func(this, a_data, a_name, a_isdobj);
 			}
 
 			std::uint32_t GetArraySize(void* a_data) const
 			{
 				using func_t = decltype(&ObjectInterface::GetArraySize);
-				static REL::Relocation<func_t> func{ REL::ID(2285791) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GetArraySize };
 				return func(this, a_data);
 			}
 
 			bool GetMember(void* a_data, const char* a_name, Value* a_val, bool a_isdobj) const
 			{
 				using func_t = decltype(&ObjectInterface::GetMember);
-				static REL::Relocation<func_t> func{ REL::ID(2285936) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GetMember };
 				return func(this, a_data, a_name, a_val, a_isdobj);
 			}
 
 			bool GetElement(void* a_data, std::uint32_t a_idx, Value* a_val) const
 			{
 				using func_t = decltype(&ObjectInterface::GetElement);
-				static REL::Relocation<func_t> func{ REL::ID(2285881) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GetElement };
 				return func(this, a_data, a_idx, a_val);
 			}
 
 			bool SetElement(void* a_data, std::uint32_t a_idx, const Value& a_val)
 			{
 				using func_t = decltype(&ObjectInterface::SetElement);
-				static REL::Relocation<func_t> func{ REL::ID(2286575) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::SetElement };
 				return func(this, a_data, a_idx, a_val);
 			}
 
 			bool SetMember(void* a_data, const char* a_name, const Value& a_value, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::SetMember);
-				static REL::Relocation<func_t> func{ REL::ID(2286589) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::SetMember };
 				return func(this, a_data, a_name, a_value, a_isdobj);
 			}
 
 			bool Invoke(void* a_data, Value* a_result, const char* a_name, const Value* a_args, std::size_t a_numArgs, bool a_isdobj)
 			{
 				using func_t = decltype(&ObjectInterface::Invoke);
-				static REL::Relocation<func_t> func{ REL::ID(2286101) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::Invoke };
 				return func(this, a_data, a_result, a_name, a_args, a_numArgs, a_isdobj);
 			}
 
 			bool PushBack(void* a_data, const Value& a_value)
 			{
 				using func_t = decltype(&ObjectInterface::PushBack);
-				static REL::Relocation<func_t> func{ REL::ID(2286424) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::PushBack };
 				return func(this, a_data, a_value);
 			}
 
 			bool RemoveElements(void* a_data, std::uint32_t a_idx, std::int32_t a_count)
 			{
 				using func_t = decltype(&ObjectInterface::RemoveElements);
-				static REL::Relocation<func_t> func{ REL::ID(2286475) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::RemoveElements };
 				return func(this, a_data, a_idx, a_count);
 			}
 
 			void VisitMembers(void* a_data, ObjVisitor* a_visitor, bool a_isDObj) const
 			{
 				using func_t = decltype(&ObjectInterface::VisitMembers);
-				static REL::Relocation<func_t> func{ REL::ID(2286786) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::VisitMembers };
 				return func(this, a_data, a_visitor, a_isDObj);
 			}
 
 			bool GetDisplayInfo(void* a_data, DisplayInfo* a_info) const
 			{
 				using func_t = decltype(&ObjectInterface::GetDisplayInfo);
-				static REL::Relocation<func_t> func{ REL::ID(2285873) };
+				static REL::Relocation<func_t> func{ ID::GFx::Value::GetDisplayInfo };
 				return func(this, a_data, a_info);
 			}
 

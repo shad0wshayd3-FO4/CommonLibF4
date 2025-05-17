@@ -32,7 +32,7 @@ namespace RE
 		void AddMember(const BSFixedString* a_name, PipboyValue* a_member)
 		{
 			using func_t = decltype(&PipboyObject::AddMember);
-			static REL::Relocation<func_t> func{ REL::ID(2225699) };
+			static REL::Relocation<func_t> func{ ID::PipboyObject::AddMember };
 			return func(this, a_name, a_member);
 		}
 

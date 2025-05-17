@@ -49,7 +49,7 @@ namespace RE
 		bool ShouldHandleEvent(const InputEvent* a_event) override  // 01
 		{
 			using func_t = decltype(&IMenu::ShouldHandleEvent);
-			static REL::Relocation<func_t> func{ REL::ID(2287392) };
+			static REL::Relocation<func_t> func{ ID::IMenu::ShouldHandleEvent };
 			return func(this, a_event);
 		}
 
@@ -101,7 +101,7 @@ namespace RE
 		virtual bool PassesRenderConditionText(MENU_RENDER_CONTEXT a_reason, const BSFixedString& a_customRendererName) const  // 07
 		{
 			using func_t = decltype(&IMenu::PassesRenderConditionText);
-			static REL::Relocation<func_t> func{ REL::ID(2287379) };
+			static REL::Relocation<func_t> func{ ID::IMenu::PassesRenderConditionText };
 			return func(this, a_reason, a_customRendererName);
 		}
 
@@ -153,7 +153,7 @@ namespace RE
 		void OnSetSafeRect()
 		{
 			using func_t = decltype(&IMenu::OnSetSafeRect);
-			static REL::Relocation<func_t> func{ REL::ID(2287375) };
+			static REL::Relocation<func_t> func{ ID::IMenu::OnSetSafeRect };
 			return func(this);
 		}
 
@@ -162,14 +162,14 @@ namespace RE
 		UI_MESSAGE_RESULTS ProcessScaleformEvent(Scaleform::GFx::Movie* a_movie, const IUIMessageData* a_data)
 		{
 			using func_t = decltype(&IMenu::ProcessScaleformEvent);
-			static REL::Relocation<func_t> func{ REL::ID(2287395) };
+			static REL::Relocation<func_t> func{ ID::IMenu::ProcessScaleformEvent };
 			return func(this, a_movie, a_data);
 		}
 
 		void RefreshPlatform()
 		{
 			using func_t = decltype(&IMenu::RefreshPlatform);
-			static REL::Relocation<func_t> func{ REL::ID(2287374) };
+			static REL::Relocation<func_t> func{ ID::IMenu::RefreshPlatform };
 			return func(this);
 		}
 

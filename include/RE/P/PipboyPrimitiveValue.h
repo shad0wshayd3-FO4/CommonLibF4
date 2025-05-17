@@ -26,7 +26,7 @@ namespace RE
 		void ctor(std::uint32_t a_value, PipboyValue* a_parentValue)
 		{
 			using func_t = decltype(&PipboyPrimitiveValue<std::uint32_t>::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(2225324) };
+			static REL::Relocation<func_t> func{ ID::PipboyPrimitiveValue::uint32::ctor };
 			func(this, a_value, a_parentValue);
 		}
 
@@ -59,7 +59,7 @@ namespace RE
 		void ctor(bool a_value, PipboyValue* a_parentValue)
 		{
 			using func_t = decltype(&PipboyPrimitiveValue<bool>::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(2225327) };
+			static REL::Relocation<func_t> func{ ID::PipboyPrimitiveValue::boolean::ctor };
 			func(this, a_value, a_parentValue);
 		}
 

@@ -316,7 +316,7 @@ namespace RE
 
 		[[nodiscard]] static INISettingCollection* GetSingleton()
 		{
-			static REL::Relocation<INISettingCollection**> singleton{ REL::ID(2704108) };
+			static REL::Relocation<INISettingCollection**> singleton{ ID::Setting::INISettingCollection::Singleton };
 			return *singleton;
 		}
 
@@ -341,7 +341,7 @@ namespace RE
 
 		[[nodiscard]] static INIPrefSettingCollection* GetSingleton()
 		{
-			static REL::Relocation<INIPrefSettingCollection**> singleton{ REL::ID(2703234) };
+			static REL::Relocation<INIPrefSettingCollection**> singleton{ ID::Setting::INIPrefSettingCollection::Singleton };
 			return *singleton;
 		}
 	};
@@ -380,13 +380,13 @@ namespace RE
 		[[nodiscard]] static void InitCollection()
 		{
 			using func_t = decltype(&GameSettingCollection::InitCollection);
-			static REL::Relocation<func_t> func{ REL::ID(2188690) };
+			static REL::Relocation<func_t> func{ ID::Setting::GameSettingCollection::InitCollection };
 			return func();
 		}
 
 		[[nodiscard]] static GameSettingCollection* GetSingleton()
 		{
-			static REL::Relocation<GameSettingCollection**> singleton{ REL::ID(2690301) };
+			static REL::Relocation<GameSettingCollection**> singleton{ ID::Setting::GameSettingCollection::Singleton };
 			return *singleton;
 		}
 

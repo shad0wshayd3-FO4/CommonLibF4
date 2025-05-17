@@ -30,7 +30,7 @@ namespace RE
 			std::int32_t operator()(const TESForm* a_arg1, const TESForm* a_arg2)
 			{
 				using func_t = decltype(&FormSortFunc::operator());
-				static REL::Relocation<func_t> func{ REL::ID(705530) };
+				static REL::Relocation<func_t> func{ ID::TESForm::FormSortFunc };
 				return func(this, a_arg1, a_arg2);
 			}
 		};
@@ -113,7 +113,7 @@ namespace RE
 		static void AddCompileIndex(std::uint32_t& a_id, TESFile* a_file)
 		{
 			using func_t = decltype(&TESForm::AddCompileIndex);
-			static REL::Relocation<func_t> func{ REL::ID(2193152) };
+			static REL::Relocation<func_t> func{ ID::TESForm::AddCompileIndex};
 			return func(a_id, a_file);
 		}
 
@@ -122,8 +122,8 @@ namespace RE
 				BSTHashMap<std::uint32_t, TESForm*>*,
 				std::reference_wrapper<BSReadWriteLock>>
 		{
-			static REL::Relocation<BSTHashMap<std::uint32_t, TESForm*>**> allForms{ REL::ID(2689178) };
-			static REL::Relocation<BSReadWriteLock*>                      allFormsMapLock{ REL::ID(2689189) };
+			static REL::Relocation<BSTHashMap<std::uint32_t, TESForm*>**> allForms{ ID::TESForm::AllForms};
+			static REL::Relocation<BSReadWriteLock*>                      allFormsMapLock{ ID::TESForm::AllFormsMapLock};
 			return { *allForms, *allFormsMapLock };
 		}
 
@@ -132,8 +132,8 @@ namespace RE
 				BSTHashMap<BSFixedString, TESForm*>*,
 				std::reference_wrapper<BSReadWriteLock>>
 		{
-			static REL::Relocation<BSTHashMap<BSFixedString, TESForm*>**> allFormsByEditorID{ REL::ID(2689179) };
-			static REL::Relocation<BSReadWriteLock*>                      allFormsEditorIDMapLock{ REL::ID(2689190) };
+			static REL::Relocation<BSTHashMap<BSFixedString, TESForm*>**> allFormsByEditorID{ ID::TESForm::AllFormsByEditorID};
+			static REL::Relocation<BSReadWriteLock*>                      allFormsEditorIDMapLock{ ID::TESForm::AllFormsEditorIDMapLock};
 			return { *allFormsByEditorID, *allFormsEditorIDMapLock };
 		}
 
@@ -145,7 +145,7 @@ namespace RE
 		[[nodiscard]] TESFile* GetFile(std::int32_t a_index = -1) const
 		{
 			using func_t = decltype(&TESForm::GetFile);
-			static REL::Relocation<func_t> func{ REL::ID(2193103) };
+			static REL::Relocation<func_t> func{ ID::TESForm::GetFile};
 			return func(this, a_index);
 		}
 
@@ -189,14 +189,14 @@ namespace RE
 
 		[[nodiscard]] static std::span<FORM_ENUM_STRING, 159> GetFormEnumString()
 		{
-			static REL::Relocation<FORM_ENUM_STRING(*)[159]> functions{ REL::ID(1309967) };
+			static REL::Relocation<FORM_ENUM_STRING(*)[159]> functions{ ID::TESForm::GetFormEnumString};
 			return { *functions };
 		}
 
 		[[nodiscard]] static ENUM_FORM_ID GetFormTypeFromString(const char* a_formTypeString)
 		{
 			using func_t = decltype(&TESForm::GetFormTypeFromString);
-			static REL::Relocation<func_t> func{ REL::ID(2193108) };
+			static REL::Relocation<func_t> func{ ID::TESForm::GetFormTypeFromString};
 			return func(a_formTypeString);
 		}
 
@@ -276,7 +276,7 @@ namespace RE
 		void SetTemporary()
 		{
 			using func_t = decltype(&TESForm::SetTemporary);
-			static REL::Relocation<func_t> func{ REL::ID(2193125) };
+			static REL::Relocation<func_t> func{ ID::TESForm::SetTemporary };
 			return func(this);
 		}
 

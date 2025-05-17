@@ -13,8 +13,7 @@ namespace RE
 
 		explicit constexpr ReadyWeaponHandler(PlayerControlsData& a_data) noexcept :
 			PlayerInputHandler(a_data)
-		{
-		}
+		{}
 
 		// members
 		bool actionTaken{ false };  // 20

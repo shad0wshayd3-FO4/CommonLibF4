@@ -26,7 +26,7 @@ namespace RE::BSResource
 
 		[[nodiscard]] static GlobalLocations* GetSingleton()
 		{
-			static REL::Relocation<GlobalLocations**> singleton{ REL::ID(1573818) };
+			static REL::Relocation<GlobalLocations**> singleton{ RE::ID::BSResource_GlobalLocations::Singleton };
 			return *singleton;
 		}
 

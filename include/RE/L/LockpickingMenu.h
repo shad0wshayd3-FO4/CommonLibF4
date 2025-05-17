@@ -36,7 +36,7 @@ namespace RE
 		static void OpenLockpickingMenu(TESObjectREFR* a_lockedRef)
 		{
 			using func_t = decltype(&LockpickingMenu::OpenLockpickingMenu);
-			static REL::Relocation<func_t> func{ REL::ID(129892) };
+			static REL::Relocation<func_t> func{ ID::LockpickingMenu::OpenLockpickingMenu };
 			return func(a_lockedRef);
 		}
 

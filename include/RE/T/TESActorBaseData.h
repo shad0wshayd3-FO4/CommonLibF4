@@ -40,7 +40,7 @@ namespace RE
 		std::uint16_t GetLevel() const
 		{
 			using func_t = decltype(&TESActorBaseData::GetLevel);
-			static REL::Relocation<func_t> func{ REL::ID(2192891) };
+			static REL::Relocation<func_t> func{ ID::TESActorBaseData::GetLevel };
 			return func(this);
 		}
 

@@ -22,7 +22,7 @@ namespace RE
 		[[nodiscard]] static auto GetSparseFullNameMap()
 			-> BSTHashMap<const TESForm*, BGSLocalizedString>&
 		{
-			static REL::Relocation<BSTHashMap<const TESForm*, BGSLocalizedString>*> sparseFullNameMap{ REL::ID(2661402), -0x8 };
+			static REL::Relocation<BSTHashMap<const TESForm*, BGSLocalizedString>*> sparseFullNameMap{ ID::TESFullName::SparseFullNameMap, -0x8 };
 			return *sparseFullNameMap;
 		}
 

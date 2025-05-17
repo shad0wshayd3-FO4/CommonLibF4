@@ -19,14 +19,14 @@ namespace RE
 		const char* GetResponseText()
 		{
 			using func_t = decltype(&TESResponse::GetResponseText);
-			static REL::Relocation<func_t> func{ REL::ID(2208288) };
+			static REL::Relocation<func_t> func{ ID::TESResponse::GetResponseText };
 			return func(this);
 		}
 
 		TESIdleForm* GetSpeakerIdle()
 		{
 			using func_t = decltype(&TESResponse::GetSpeakerIdle);
-			static REL::Relocation<func_t> func{ REL::ID(2208293) };
+			static REL::Relocation<func_t> func{ ID::TESResponse::GetSpeakerIdle };
 			return func(this);
 		}
 

@@ -57,7 +57,7 @@ namespace RE
 
 		[[nodiscard]] static TES* GetSingleton()
 		{
-			static REL::Relocation<TES**> singleton{ REL::ID(2698044) };
+			static REL::Relocation<TES**> singleton{ ID::TES::Singleton };
 			return *singleton;
 		}
 

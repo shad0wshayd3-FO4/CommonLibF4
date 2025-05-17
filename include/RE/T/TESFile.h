@@ -47,14 +47,14 @@ namespace RE
 		[[nodiscard]] bool CloseTES(bool a_forceClose)
 		{
 			using func_t = decltype(&TESFile::CloseTES);
-			static REL::Relocation<func_t> func{ REL::ID(2192491) };
+			static REL::Relocation<func_t> func{ ID::TESFile::CloseTES };
 			return func(this, a_forceClose);
 		}
 
 		[[nodiscard]] bool GetChunkData(void* a_data, std::uint32_t a_maxSize)
 		{
 			using func_t = bool (TESFile::*)(void*, uint32_t);
-			static REL::Relocation<func_t> func{ REL::ID(2192538) };
+			static REL::Relocation<func_t> func{ ID::TESFile::GetChunkData};
 			return func(this, a_data, a_maxSize);
 		}
 
@@ -77,35 +77,35 @@ namespace RE
 		[[nodiscard]] std::uint32_t GetTESChunk()
 		{
 			using func_t = decltype(&TESFile::GetTESChunk);
-			static REL::Relocation<func_t> func{ REL::ID(2192536) };
+			static REL::Relocation<func_t> func{ ID::TESFile::GetTESChunk };
 			return func(this);
 		}
 
 		[[nodiscard]] bool NextChunk()
 		{
 			using func_t = decltype(&TESFile::NextChunk);
-			static REL::Relocation<func_t> func{ REL::ID(2192537) };
+			static REL::Relocation<func_t> func{ ID::TESFile::NextChunk };
 			return func(this);
 		}
 
 		[[nodiscard]] bool NextForm(bool a_skipIgnored)
 		{
 			using func_t = decltype(&TESFile::NextForm);
-			static REL::Relocation<func_t> func{ REL::ID(2192527) };
+			static REL::Relocation<func_t> func{ ID::TESFile::NextForm };
 			return func(this, a_skipIgnored);
 		}
 
 		[[nodiscard]] bool NextGroup()
 		{
 			using func_t = decltype(&TESFile::NextGroup);
-			static REL::Relocation<func_t> func{ REL::ID(2192522) };
+			static REL::Relocation<func_t> func{ ID::TESFile::NextGroup };
 			return func(this);
 		}
 
 		[[nodiscard]] bool OpenTES(char* a_path, const char* a_filename, NiFile::OpenMode a_accessMode, bool a_lock)
 		{
 			using func_t = bool (TESFile::*)(char*, const char*, NiFile::OpenMode, bool);
-			static REL::Relocation<func_t> func{ REL::ID(2192490) };
+			static REL::Relocation<func_t> func{ ID::TESFile::OpenTES};
 			return func(this, a_path, a_filename, a_accessMode, a_lock);
 		}
 

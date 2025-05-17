@@ -39,14 +39,14 @@ namespace RE
 		bool SetStage(std::uint16_t a_stage)
 		{
 			using func_t = decltype(&TESQuest::SetStage);
-			static REL::Relocation<func_t> func{ REL::ID(2207743) };
+			static REL::Relocation<func_t> func{ ID::TESQuest::SetStage };
 			return func(this, a_stage);
 		}
 
 		ObjectRefHandle* GetAliasedRef(ObjectRefHandle* a_result, std::uint32_t a_aiAliasID)
 		{
 			using func_t = decltype(&TESQuest::GetAliasedRef);
-			static REL::Relocation<func_t> func{ REL::ID(2207810) };
+			static REL::Relocation<func_t> func{ ID::TESQuest::GetAliasedRef };
 			return func(this, a_result, a_aiAliasID);
 		}
 

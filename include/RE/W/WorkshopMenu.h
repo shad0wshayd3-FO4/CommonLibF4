@@ -95,14 +95,14 @@ namespace RE
 		void CheckAndSetItemForPlacement()
 		{
 			using func_t = decltype(&WorkshopMenu::CheckAndSetItemForPlacement);
-			static REL::Relocation<func_t> func{ REL::ID(1541862) };
+			static REL::Relocation<func_t> func{ ID::WorkshopMenu::CheckAndSetItemForPlacement };
 			return func(this);
 		}
 
 		void UpdateButtonText()
 		{
 			using func_t = decltype(&WorkshopMenu::UpdateButtonText);
-			static REL::Relocation<func_t> func{ REL::ID(1089189) };
+			static REL::Relocation<func_t> func{ ID::WorkshopMenu::UpdateButtonText };
 			return func(this);
 		}
 
@@ -132,5 +132,4 @@ namespace RE
 		std::unique_ptr<FXWorkshopMenu>                                                             workshopMenuBase;                        // 438
 	};
 	static_assert(sizeof(WorkshopMenu) == 0x440);
-
 }

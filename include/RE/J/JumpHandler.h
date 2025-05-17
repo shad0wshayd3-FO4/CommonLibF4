@@ -13,8 +13,7 @@ namespace RE
 
 		explicit constexpr JumpHandler(PlayerControlsData& a_data) noexcept :
 			PlayerInputHandler(a_data)
-		{
-		}
+		{}
 
 		// members
 		bool debounceAlternateExit{ false };  // 20

@@ -33,14 +33,14 @@ namespace RE
 
 		[[nodiscard]] static BSAudioManager* GetSingleton()
 		{
-			static REL::Relocation<BSAudioManager**> singleton{ REL::ID(1321158) };
+			static REL::Relocation<BSAudioManager**> singleton{ ID::BSAudioManager::Singleton };
 			return *singleton;
 		}
 
 		void GetSoundHandleByName(BSSoundHandle& a_handle, const char* a_soundName, float a_distance, std::uint32_t a_usageFlags, BSISoundDescriptor::ExtraResolutionData* a_data)
 		{
 			using func_t = decltype(&BSAudioManager::GetSoundHandleByName);
-			static REL::Relocation<func_t> func{ REL::ID(196484) };
+			static REL::Relocation<func_t> func{ ID::BSAudioManager::GetSoundHandleByName };
 			return func(this, a_handle, a_soundName, a_distance, a_usageFlags, a_data);
 		}
 

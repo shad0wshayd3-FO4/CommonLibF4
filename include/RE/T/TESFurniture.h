@@ -30,7 +30,7 @@ namespace RE
 		[[nodiscard]] TESContainer* GetContainer()
 		{
 			using func_t = decltype(&TESFurniture::GetContainer);
-			static REL::Relocation<func_t> func{ REL::ID(2198043) };
+			static REL::Relocation<func_t> func{ ID::TESFurniture::GetContainer };
 			return func(this);
 		}
 

@@ -38,7 +38,7 @@ namespace RE
 		[[nodiscard]] static bool GetReloadsWithAmmoRef(const TESAmmo* a_ammo)
 		{
 			using func_t = decltype(&TESAmmo::GetReloadsWithAmmoRef);
-			static REL::Relocation<func_t> func{ REL::ID(2197864) };
+			static REL::Relocation<func_t> func{ ID::TESAmmo::GetReloadsWithAmmoRef };
 			return func(a_ammo);
 		}
 

@@ -33,14 +33,14 @@ namespace Scaleform
 		bool InitHeapEngine(const void* a_heapDesc) override  // 01
 		{
 			using func_t = decltype(&SysAlloc::InitHeapEngine);
-			static REL::Relocation<func_t> func{ REL::ID(2284532) };
+			static REL::Relocation<func_t> func{ ID::SysAlloc::InitHeapEngine };
 			return func(this, a_heapDesc);
 		}
 
 		bool ShutdownHeapEngine() override  // 02
 		{
 			using func_t = decltype(&SysAlloc::ShutdownHeapEngine);
-			static REL::Relocation<func_t> func{ REL::ID(2284536) };
+			static REL::Relocation<func_t> func{ ID::SysAlloc::ShutdownHeapEngine };
 			return func(this);
 		}
 

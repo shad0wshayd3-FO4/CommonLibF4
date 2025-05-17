@@ -29,14 +29,14 @@ namespace RE
 		virtual void SetIsTopButtonBar(bool a_isTopButtonBar) override  // 08
 		{
 			using func_t = decltype(&GameMenuBase::SetIsTopButtonBar);
-			static REL::Relocation<func_t> func{ REL::ID(2223204) };
+			static REL::Relocation<func_t> func{ ID::GameMenuBase::SetIsTopButtonBar };
 			return func(this, a_isTopButtonBar);
 		}
 
 		virtual void OnMenuDisplayStateChanged() override  // 0A
 		{
 			using func_t = decltype(&GameMenuBase::OnMenuDisplayStateChanged);
-			static REL::Relocation<func_t> func{ REL::ID(2223205) };
+			static REL::Relocation<func_t> func{ ID::GameMenuBase::OnMenuDisplayStateChanged };
 			return func(this);
 		}
 
@@ -59,21 +59,21 @@ namespace RE
 		virtual bool CacheShaderFXQuadsForRenderer_Impl() override  // 10
 		{
 			using func_t = decltype(&GameMenuBase::CacheShaderFXQuadsForRenderer_Impl);
-			static REL::Relocation<func_t> func{ REL::ID(2223200) };
+			static REL::Relocation<func_t> func{ ID::GameMenuBase::CacheShaderFXQuadsForRenderer_Impl };
 			return func(this);
 		}
 
 		virtual void TransferCachedShaderFXQuadsForRenderer(const BSFixedString& a_rendererName) override  // 11
 		{
 			using func_t = decltype(&GameMenuBase::TransferCachedShaderFXQuadsForRenderer);
-			static REL::Relocation<func_t> func{ REL::ID(65166) };
+			static REL::Relocation<func_t> func{ ID::GameMenuBase::TransferCachedShaderFXQuadsForRenderer };
 			return func(this, a_rendererName);
 		}
 
 		virtual void SetViewportRect(const NiRect<float>& a_viewportRect) override  // 12
 		{
 			using func_t = decltype(&GameMenuBase::SetViewportRect);
-			static REL::Relocation<func_t> func{ REL::ID(2223202) };
+			static REL::Relocation<func_t> func{ ID::GameMenuBase::SetViewportRect };
 			return func(this, a_viewportRect);
 		}
 
@@ -81,14 +81,14 @@ namespace RE
 		virtual void AppendShaderFXInfos(BSTAlignedArray<UIShaderFXInfo>& a_colorFXInfos, BSTAlignedArray<UIShaderFXInfo>& a_backgroundFXInfos) const  // 13
 		{
 			using func_t = decltype(&GameMenuBase::AppendShaderFXInfos);
-			static REL::Relocation<func_t> func{ REL::ID(2223203) };
+			static REL::Relocation<func_t> func{ ID::GameMenuBase::AppendShaderFXInfos };
 			return func(this, a_colorFXInfos, a_backgroundFXInfos);
 		}
 
 		void SetUpButtonBar(BSGFxShaderFXTarget& a_parentObject, const char* a_buttonBarPath, HUDColorTypes a_colorType)
 		{
 			using func_t = decltype(&GameMenuBase::SetUpButtonBar);
-			static REL::Relocation<func_t> func{ REL::ID(2223197) };
+			static REL::Relocation<func_t> func{ ID::GameMenuBase::SetUpButtonBar };
 			func(this, a_parentObject, a_buttonBarPath, a_colorType);
 		}
 

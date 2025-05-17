@@ -8,7 +8,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESInitScriptEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESInitScriptEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2691330) };
+			static REL::Relocation<func_t> func{ ID::TESInitScriptEvent::GetEventSource };
 			return func();
 		}
 

@@ -539,6 +539,7 @@ namespace Scaleform
 
 #include "REL/REL.h"
 
+#include "RE/IDs.h"
 #include "RE/NiRTTI_IDs.h"
 #include "RE/RTTI_IDs.h"
 #include "RE/VTABLE_IDs.h"

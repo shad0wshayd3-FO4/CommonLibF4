@@ -24,21 +24,21 @@ namespace RE
 		inline bool GetActiveSyncInfo(const IAnimationGraphManagerHolder* a_graphHolder, ActiveSyncInfo& a_infoOut)
 		{
 			using func_t = decltype(&GetActiveSyncInfo);
-			static REL::Relocation<func_t> func{ REL::ID(1349978) };
+			static REL::Relocation<func_t> func{ ID::BGSAnimationSystemUtils::GetActiveSyncInfo };
 			return func(a_graphHolder, a_infoOut);
 		}
 
 		inline bool InitializeActorInstant(Actor& a_actor, bool a_update3D)
 		{
 			using func_t = decltype(&InitializeActorInstant);
-			static REL::Relocation<func_t> func{ REL::ID(672857) };
+			static REL::Relocation<func_t> func{ ID::BGSAnimationSystemUtils::InitializeActorInstant };
 			return func(a_actor, a_update3D);
 		}
 
 		inline bool IsActiveGraphInTransition(const TESObjectREFR* a_refr)
 		{
 			using func_t = decltype(&IsActiveGraphInTransition);
-			static REL::Relocation<func_t> func{ REL::ID(839650) };
+			static REL::Relocation<func_t> func{ ID::BGSAnimationSystemUtils::IsActiveGraphInTransition };
 			return func(a_refr);
 		}
 	}

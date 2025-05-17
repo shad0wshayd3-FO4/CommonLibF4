@@ -119,14 +119,14 @@ namespace RE
 			void ctor(bool a_suppressMessages, bool a_suppressAudio)
 			{
 				using func_t = decltype(&ScopedInventoryChangeMessageContext::ctor);
-				static REL::Relocation<func_t> func{ REL::ID(2233292) };
+				static REL::Relocation<func_t> func{ ID::PlayerCharacter::ScopedInventoryChangeMessageContext::ctor };
 				return func(this, a_suppressMessages, a_suppressAudio);
 			}
 
 			void dtor()
 			{
 				using func_t = decltype(&ScopedInventoryChangeMessageContext::dtor);
-				static REL::Relocation<func_t> func{ REL::ID(2233293) };
+				static REL::Relocation<func_t> func{ ID::PlayerCharacter::ScopedInventoryChangeMessageContext::dtor };
 				return func(this);
 			}
 		};
@@ -140,41 +140,41 @@ namespace RE
 
 		[[nodiscard]] static PlayerCharacter* GetSingleton()
 		{
-			static REL::Relocation<NiPointer<PlayerCharacter>*> singleton{ REL::ID(2690919) };
+			static REL::Relocation<NiPointer<PlayerCharacter>*> singleton{ ID::PlayerCharacter::Singleton };
 			return singleton->get();
 		}
 
 		[[nodiscard]] static ActorHandle GetPlayerHandle()
 		{
-			static REL::Relocation<ActorHandle*> singleton{ REL::ID(2698072) };
+			static REL::Relocation<ActorHandle*> singleton{ ID::PlayerCharacter::GetPlayerHandle };
 			return *singleton;
 		}
 
 		DifficultyLevel GetDifficultyLevel()
 		{
 			using func_t = decltype(&PlayerCharacter::GetDifficultyLevel);
-			static REL::Relocation<func_t> func{ REL::ID(2233056) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::GetDifficultyLevel };
 			return func(this);
 		}
 
 		bool IsGodMode()
 		{
 			using func_t = decltype(&PlayerCharacter::IsGodMode);
-			static REL::Relocation<func_t> func{ REL::ID(2232986) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::IsGodMode };
 			return func(this);
 		}
 
 		bool IsHolotapePlaying(BGSNote* a_holotape)
 		{
 			using func_t = decltype(&PlayerCharacter::IsHolotapePlaying);
-			static REL::Relocation<func_t> func{ REL::ID(2233206) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::IsHolotapePlaying };
 			return func(this, a_holotape);
 		}
 
 		bool IsImmortal()
 		{
 			using func_t = decltype(&PlayerCharacter::IsImmortal);
-			static REL::Relocation<func_t> func{ REL::ID(2232988) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::IsImmortal };
 			return func(this);
 		}
 
@@ -183,7 +183,7 @@ namespace RE
 		bool IsPipboyLightOn()
 		{
 			using func_t = decltype(&PlayerCharacter::IsPipboyLightOn);
-			static REL::Relocation<func_t> func{ REL::ID(426550) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::IsPipboyLightOn };
 			return func(this);
 		}
 
@@ -192,84 +192,84 @@ namespace RE
 		void PauseHolotape(BGSNote* a_holotape)
 		{
 			using func_t = decltype(&PlayerCharacter::PauseHolotape);
-			static REL::Relocation<func_t> func{ REL::ID(2233208) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::PauseHolotape };
 			return func(this, a_holotape);
 		}
 
 		void PlayHolotape(BGSNote* a_holotape)
 		{
 			using func_t = decltype(&PlayerCharacter::PlayHolotape);
-			static REL::Relocation<func_t> func{ REL::ID(2233207) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::PlayHolotape };
 			return func(this, a_holotape);
 		}
 
 		void QueueFastTravel(ObjectRefHandle a_marker, bool a_allowAutoSave)
 		{
 			using func_t = decltype(&PlayerCharacter::QueueFastTravel);
-			static REL::Relocation<func_t> func{ REL::ID(556824) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::QueueFastTravel };
 			return func(this, a_marker, a_allowAutoSave);
 		}
 
 		void RemoveLastUsedPowerArmor()
 		{
 			using func_t = decltype(&PlayerCharacter::RemoveLastUsedPowerArmor);
-			static REL::Relocation<func_t> func{ REL::ID(1488486) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::RemoveLastUsedPowerArmor };
 			return func(this);
 		}
 
 		void SelectPerk(TESFormID a_formID, std::int8_t a_rank = 0)
 		{
 			using func_t = decltype(&PlayerCharacter::SelectPerk);
-			static REL::Relocation<func_t> func{ REL::ID(1397326) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::SelectPerk };
 			return func(this, a_formID, a_rank);
 		}
 
 		void SetEscaping(bool a_flag, bool a_escaped)
 		{
 			using func_t = decltype(&PlayerCharacter::SetEscaping);
-			static REL::Relocation<func_t> func{ REL::ID(25528) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::SetEscaping };
 			return func(this, a_flag, a_escaped);
 		}
 
 		void SetVATSCriticalCount(uint32_t a_critCount)
 		{
 			using func_t = decltype(&PlayerCharacter::SetVATSCriticalCount);
-			static REL::Relocation<func_t> func{ REL::ID(327338) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::SetVATSCriticalCount };
 			return func(this, a_critCount);
 		}
 
 		void ShowPipboyLight(bool a_show, bool a_skipEffects)
 		{
 			using func_t = decltype(&PlayerCharacter::ShowPipboyLight);
-			static REL::Relocation<func_t> func{ REL::ID(1304102) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::ShowPipboyLight };
 			return func(this, a_show, a_skipEffects);
 		}
 
 		void SetLastDialogueInput(uint32_t dialogueOption)
 		{
 			using func_t = decltype(&PlayerCharacter::SetLastDialogueInput);
-			static REL::Relocation<func_t> func{ REL::ID(2233190) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::SetLastDialogueInput };
 			return func(this, dialogueOption);
 		}
 
 		void ClearPrison()
 		{
 			using func_t = decltype(&PlayerCharacter::ClearPrison);
-			static REL::Relocation<func_t> func{ REL::ID(2233196) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::ClearPrison };
 			return func(this);
 		}
 
 		bool ReloadWeapon(const BGSObjectInstanceT<TESObjectWEAP>* a_weapon, BGSEquipIndex a_equipIndex)
 		{
 			using func_t = decltype(&PlayerCharacter::ReloadWeapon);
-			static REL::Relocation<func_t> func{ REL::ID(2232907) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::ReloadWeapon };
 			return func(this, a_weapon, a_equipIndex);
 		}
 
 		void SetPerkCount(std::uint8_t a_count)
 		{
 			using func_t = decltype(&PlayerCharacter::SetPerkCount);
-			static REL::Relocation<func_t> func{ REL::ID(2233187) };
+			static REL::Relocation<func_t> func{ ID::PlayerCharacter::SetPerkCount };
 			return func(this, a_count);
 		}
 

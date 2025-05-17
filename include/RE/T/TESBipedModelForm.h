@@ -22,5 +22,4 @@ namespace RE
 		TESModelRDT          constraintTemplate;  // 0D8
 	};
 	static_assert(sizeof(TESBipedModelForm) == 0x108);
-
 }

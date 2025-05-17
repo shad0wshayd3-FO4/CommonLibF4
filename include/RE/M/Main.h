@@ -22,7 +22,7 @@ namespace RE
 
 		[[nodiscard]] static Main* GetSingleton()
 		{
-			static REL::Relocation<Main**> singleton{ REL::ID(2698043) };
+			static REL::Relocation<Main**> singleton{ ID::Main::Singleton };
 			return *singleton;
 		}
 
@@ -32,26 +32,26 @@ namespace RE
 		[[nodiscard]] static NiCamera* WorldRootCamera()
 		{
 			using func_t = decltype(&Main::WorldRootCamera);
-			static REL::Relocation<func_t> func{ REL::ID(2228956) };
+			static REL::Relocation<func_t> func{ ID::Main::WorldRootCamera };
 			return func();
 		}
 
 		[[nodiscard]] static bool QGameSystemsShouldUpdate()
 		{
-			static REL::Relocation<bool*> singleton{ REL::ID(2698031) };
+			static REL::Relocation<bool*> singleton{ ID::Main::QGameSystemsShouldUpdate };
 			return *singleton;
 		}
 
 		[[nodiscard]] static bool QGameDataLoaded()
 		{
-			static REL::Relocation<bool*> singleton{ REL::ID(2698032) };
+			static REL::Relocation<bool*> singleton{ ID::Main::QGameDataLoaded };
 			return *singleton;
 		}
 
 		void SetCameraFOV(float a_fov)
 		{
 			using func_t = decltype(&Main::SetCameraFOV);
-			static REL::Relocation<func_t> func{ REL::ID(2228973) };
+			static REL::Relocation<func_t> func{ ID::Main::SetCameraFOV };
 			return func(this, a_fov);
 		}
 

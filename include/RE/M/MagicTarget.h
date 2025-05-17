@@ -33,14 +33,14 @@ namespace RE
 		[[nodiscard]] bool IsTakingHealthDamageFromActiveEffect()
 		{
 			using func_t = decltype(&MagicTarget::IsTakingHealthDamageFromActiveEffect);
-			static REL::Relocation<func_t> func{ REL::ID(2226397) };
+			static REL::Relocation<func_t> func{ ID::MagicTarget::IsTakingHealthDamageFromActiveEffect };
 			return func(this);
 		}
 
 		[[nodiscard]] bool IsTakingRadDamageFromActiveEffect()
 		{
 			using func_t = decltype(&MagicTarget::IsTakingRadDamageFromActiveEffect);
-			static REL::Relocation<func_t> func{ REL::ID(2226398) };
+			static REL::Relocation<func_t> func{ ID::MagicTarget::IsTakingRadDamageFromActiveEffect };
 			return func(this);
 		}
 

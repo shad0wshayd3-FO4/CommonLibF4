@@ -420,7 +420,7 @@ namespace RE::BSScript
 	{
 		const auto                                 game = GameVM::GetSingleton();
 		const auto                                 vm = game ? game->GetVM() : nullptr;
-		static REL::Relocation<RE::BSFixedString*> baseObjectName{ REL::ID(648543) };
+		static REL::Relocation<RE::BSFixedString*> baseObjectName{ ID::BSScriptUtil::BaseObjectName };
 		BSTSmartPointer<ObjectTypeInfo>            typeInfo;
 		if (!vm ||
 			!vm->GetScriptObjectType(*baseObjectName, typeInfo) ||

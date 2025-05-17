@@ -18,7 +18,7 @@ namespace RE
 
 		[[nodiscard]] static auto GetConsoleFunctions()
 		{
-			static REL::Relocation<SCRIPT_FUNCTION(*)[526]> functions{ REL::ID(901511) };
+			static REL::Relocation<SCRIPT_FUNCTION(*)[526]> functions{ ID::SCRIPT_FUNCTION::ConsoleFunctions };
 			return std::span{ *functions };
 		}
 
@@ -35,7 +35,7 @@ namespace RE
 
 		[[nodiscard]] static auto GetScriptFunctions()
 		{
-			static REL::Relocation<SCRIPT_FUNCTION(*)[819]> functions{ REL::ID(75173) };
+			static REL::Relocation<SCRIPT_FUNCTION(*)[819]> functions{ ID::SCRIPT_FUNCTION::ScriptFunctions };
 			return std::span{ *functions };
 		}
 
@@ -51,18 +51,21 @@ namespace RE
 		}
 
 		// members
-		const char*                               functionName{ "" };                                                                // 00
-		const char*                               shortName{ "" };                                                                   // 08
-		REX::EnumSet<SCRIPT_OUTPUT, std::int32_t> output;                                                                            // 10
-		const char*                               helpString{ "" };                                                                  // 18
-		bool                                      referenceFunction{ false };                                                        // 20
-		std::uint16_t                             paramCount{ 0 };                                                                   // 22
-		SCRIPT_PARAMETER*                         parameters{ nullptr };                                                             // 28
-		ExecuteFunction_t*                        executeFunction{ nullptr };                                                        // 30
-		CompileFunction_t*                        compileFunction{ REL::Relocation<CompileFunction_t*>{ REL::ID(2204343) }.get() };  // 38
-		ConditionFunction_t*                      conditionFunction{ nullptr };                                                      // 40
-		bool                                      editorFilter{ false };                                                             // 48
-		bool                                      invalidatesCellList{ false };                                                      // 49
+		const char*                               functionName{ "" };                        // 00
+		const char*                               shortName{ "" };                           // 08
+		REX::EnumSet<SCRIPT_OUTPUT, std::int32_t> output;                                    // 10
+		const char*                               helpString{ "" };                          // 18
+		bool                                      referenceFunction{ false };                // 20
+		std::uint16_t                             paramCount{ 0 };                           // 22
+		SCRIPT_PARAMETER*                         parameters{ nullptr };                     // 28
+		ExecuteFunction_t*                        executeFunction{ nullptr };                // 30
+		CompileFunction_t*                        compileFunction{ CompileFunction.get() };  // 38
+		ConditionFunction_t*                      conditionFunction{ nullptr };              // 40
+		bool                                      editorFilter{ false };                     // 48
+		bool                                      invalidatesCellList{ false };              // 49
+
+	private:
+		inline static REL::Relocation<CompileFunction_t*> CompileFunction{ ID::SCRIPT_FUNCTION::CompileFunction };
 	};
 	static_assert(sizeof(SCRIPT_FUNCTION) == 0x50);
 }

@@ -14,7 +14,7 @@ namespace RE
 		static void InitSDM()
 		{
 			using func_t = decltype(&BSThreadEvent::InitSDM);
-			static REL::Relocation<func_t> func{ REL::ID(1425097) };
+			static REL::Relocation<func_t> func{ ID::BSThreadEvent::InitSDM };
 			return func();
 		}
 	};

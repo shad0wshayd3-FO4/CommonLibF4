@@ -56,5 +56,4 @@ namespace RE
 		virtual void             LoadGame(BGSLoadGameBuffer* a_buf);                        // 22 - { return; }
 	};
 	static_assert(sizeof(ReferenceEffectController) == 0x8);
-
 }

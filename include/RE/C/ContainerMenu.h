@@ -25,7 +25,7 @@ namespace RE
 		void TakeAllItems()
 		{
 			using func_t = decltype(&ContainerMenu::TakeAllItems);
-			static REL::Relocation<func_t> func{ REL::ID(1323703) };
+			static REL::Relocation<func_t> func{ ID::ContainerMenu::TakeAllItems };
 			return func(this);
 		}
 

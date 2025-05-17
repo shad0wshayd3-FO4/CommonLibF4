@@ -49,21 +49,21 @@ namespace RE
 
 		[[nodiscard]] static PowerArmorGeometry* GetSingleton()
 		{
-			static REL::Relocation<PowerArmorGeometry**> singleton{ REL::ID(1365745) };
+			static REL::Relocation<PowerArmorGeometry**> singleton{ ID::PowerArmorGeometry::Singleton };
 			return *singleton;
 		}
 
 		void HidePipboyPAGeometry()
 		{
 			using func_t = decltype(&PowerArmorGeometry::HidePipboyPAGeometry);
-			static REL::Relocation<func_t> func{ REL::ID(976332) };
+			static REL::Relocation<func_t> func{ ID::PowerArmorGeometry::HidePipboyPAGeometry };
 			return func(this);
 		}
 
 		void ShowPipboyPAGeometry()
 		{
 			using func_t = decltype(&PowerArmorGeometry::ShowPipboyPAGeometry);
-			static REL::Relocation<func_t> func{ REL::ID(19066) };
+			static REL::Relocation<func_t> func{ ID::PowerArmorGeometry::ShowPipboyPAGeometry };
 			return func(this);
 		}
 

@@ -57,98 +57,98 @@ namespace RE
 		[[nodiscard]] bhkWorldM* GetbhkWorld() const
 		{
 			using func_t = decltype(&TESObjectCELL::GetbhkWorld);
-			static REL::Relocation<func_t> func{ REL::ID(2200260) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::GetbhkWorld };
 			return func(this);
 		}
 
 		[[nodiscard]] bool GetCantWaitHere()
 		{
 			using func_t = decltype(&TESObjectCELL::GetCantWaitHere);
-			static REL::Relocation<func_t> func{ REL::ID(2200287) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::GetCantWaitHere };
 			return func(this);
 		}
 
 		[[nodiscard]] std::int32_t GetDataX()
 		{
 			using func_t = decltype(&TESObjectCELL::GetDataX);
-			static REL::Relocation<func_t> func{ REL::ID(2200213) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::GetDataX };
 			return func(this);
 		}
 
 		[[nodiscard]] std::int32_t GetDataY()
 		{
 			using func_t = decltype(&TESObjectCELL::GetDataY);
-			static REL::Relocation<func_t> func{ REL::ID(2200214) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::GetDataY };
 			return func(this);
 		}
 
 		[[nodiscard]] BGSEncounterZone* GetEncounterZone() const
 		{
 			using func_t = decltype(&TESObjectCELL::GetEncounterZone);
-			static REL::Relocation<func_t> func{ REL::ID(2200242) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::GetEncounterZone };
 			return func(this);
 		}
 
 		[[nodiscard]] BGSLocation* GetLocation() const
 		{
 			using func_t = decltype(&TESObjectCELL::GetLocation);
-			static REL::Relocation<func_t> func{ REL::ID(2200179) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::GetLocation };
 			return func(this);
 		}
 
 		[[nodiscard]] TESForm* GetOwner()
 		{
 			using func_t = decltype(&TESObjectCELL::GetOwner);
-			static REL::Relocation<func_t> func{ REL::ID(910422) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::GetOwner };
 			return func(this);
 		}
 
 		[[nodiscard]] TESRegionList* GetRegionList(bool a_createIfMissing)
 		{
 			using func_t = decltype(&TESObjectCELL::GetRegionList);
-			static REL::Relocation<func_t> func{ REL::ID(2200265) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::GetRegionList };
 			return func(this, a_createIfMissing);
 		}
 
 		[[nodiscard]] NiAVObject* Pick(bhkPickData& pd)
 		{
 			using func_t = decltype(&TESObjectCELL::Pick);
-			static REL::Relocation<func_t> func{ REL::ID(434717) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::Pick };
 			return func(this, pd);
 		}
 
 		[[nodiscard]] void SetCullCellMarkers(bool a_cull)
 		{
 			using func_t = decltype(&TESObjectCELL::SetCullCellMarkers);
-			static REL::Relocation<func_t> func{ REL::ID(2192259) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::SetCullCellMarkers };
 			return func(this, a_cull);
 		}
 
 		[[nodiscard]] void UpdateAllRefsLoaded()
 		{
 			using func_t = decltype(&TESObjectCELL::UpdateAllRefsLoaded);
-			static REL::Relocation<func_t> func{ REL::ID(2200415) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::UpdateAllRefsLoaded };
 			return func(this);
 		}
 
 		[[nodiscard]] void AttatchReference3D(TESObjectREFR* a_ref, bool a_onTop, bool a_queueAttatch)
 		{
 			using func_t = decltype(&TESObjectCELL::AttatchReference3D);
-			static REL::Relocation<func_t> func{ REL::ID(2200620) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::AttatchReference3D };
 			return func(this, a_ref, a_onTop, a_queueAttatch);
 		}
 
 		[[nodiscard]] void RemoveReference(TESObjectREFR* a_ref)
 		{
 			using func_t = decltype(&TESObjectCELL::RemoveReference);
-			static REL::Relocation<func_t> func{ REL::ID(2200299) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::RemoveReference };
 			return func(this, a_ref);
 		}
 
 		[[nodiscard]] void UpdateAllDecals()
 		{
 			using func_t = decltype(&TESObjectCELL::UpdateAllDecals);
-			static REL::Relocation<func_t> func{ REL::ID(2200643) };
+			static REL::Relocation<func_t> func{ ID::TESObjectCELL::UpdateAllDecals };
 			return func(this);
 		}
 

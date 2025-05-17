@@ -71,7 +71,7 @@ namespace RE
 		GridCell* Get(std::uint32_t a_x, std::uint32_t a_y)
 		{
 			using func_t = decltype(&GridCellArray::Get);
-			static REL::Relocation<func_t> func{ REL::ID(2194566) };
+			static REL::Relocation<func_t> func{ ID::GridCellArray::Get };
 			return func(this, a_x, a_y);
 		}
 

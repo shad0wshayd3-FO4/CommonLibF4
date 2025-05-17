@@ -15,14 +15,14 @@ namespace RE
 
 		[[nodiscard]] static MenuCursor* GetSingleton()
 		{
-			static REL::Relocation<MenuCursor**> singleton{ REL::ID(2696546) };
+			static REL::Relocation<MenuCursor**> singleton{ ID::MenuCursor::Singleton };
 			return *singleton;
 		}
 
 		void CenterCursor()
 		{
 			using func_t = decltype(&MenuCursor::CenterCursor);
-			static REL::Relocation<func_t> func{ REL::ID(2287473) };
+			static REL::Relocation<func_t> func{ ID::MenuCursor::CenterCursor };
 			return func(this);
 		}
 
@@ -40,21 +40,21 @@ namespace RE
 		void RegisterCursor()
 		{
 			using func_t = decltype(&MenuCursor::RegisterCursor);
-			static REL::Relocation<func_t> func{ REL::ID(1318193) };
+			static REL::Relocation<func_t> func{ ID::MenuCursor::RegisterCursor };
 			return func(this);
 		}
 
 		void SetCursorConstraintsRaw(std::uint32_t a_tlx, std::uint32_t a_tly, std::uint32_t a_width, std::uint32_t a_height)
 		{
 			using func_t = decltype(&MenuCursor::SetCursorConstraintsRaw);
-			static REL::Relocation<func_t> func{ REL::ID(907092) };
+			static REL::Relocation<func_t> func{ ID::MenuCursor::SetCursorConstraintsRaw };
 			return func(this, a_tlx, a_tly, a_width, a_height);
 		}
 
 		void UnregisterCursor()
 		{
 			using func_t = decltype(&MenuCursor::UnregisterCursor);
-			static REL::Relocation<func_t> func{ REL::ID(1225249) };
+			static REL::Relocation<func_t> func{ ID::MenuCursor::UnregisterCursor };
 			return func(this);
 		}
 

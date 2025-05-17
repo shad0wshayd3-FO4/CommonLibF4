@@ -7,15 +7,16 @@ namespace RE
 		class Event
 		{
 		public:
-			[[nodiscard]] static BSTEventSource<Event>* GetEventSource()
-			{
-				using func_t = decltype(&Event::GetEventSource);
-				static REL::Relocation<func_t> func{ REL::ID(2233736) };
-				return func();
-			}
-
+			// members
 			std::uint32_t newLevel;  // 00
 		};
 		static_assert(sizeof(Event) == 0x4);
+
+		[[nodiscard]] static BSTEventSource<LevelIncrease::Event>* GetEventSource()
+		{
+			using func_t = decltype(&LevelIncrease::GetEventSource);
+			static REL::Relocation<func_t> func{ ID::LevelIncrease::GetEventSource };
+			return func();
+		}
 	}
 }

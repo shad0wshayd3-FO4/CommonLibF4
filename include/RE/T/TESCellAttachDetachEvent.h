@@ -11,7 +11,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESCellAttachDetachEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESCellAttachDetachEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2201823) };
+			static REL::Relocation<func_t> func{ ID::TESCellAttachDetachEvent::GetEventSource };
 			return func();
 		}
 

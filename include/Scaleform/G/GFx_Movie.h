@@ -191,7 +191,7 @@ namespace Scaleform
 			void Release()
 			{
 				using func_t = decltype(&Movie::Release);
-				static REL::Relocation<func_t> func{ REL::ID(2287230) };
+				static REL::Relocation<func_t> func{ ID::GFx::Movie::Release };
 				return func(this);
 			}
 

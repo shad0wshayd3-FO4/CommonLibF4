@@ -9,13 +9,13 @@ namespace Scaleform
 	public:
 		static void SetGlobalHeap(MemoryHeap* a_heap)
 		{
-			static REL::Relocation<MemoryHeap**> heap{ REL::ID(2707353) };
+			static REL::Relocation<MemoryHeap**> heap{ ID::Memory::SetGlobalHeap };
 			*heap = a_heap;
 		}
 
 		[[nodiscard]] static MemoryHeap* GetGlobalHeap()
 		{
-			static REL::Relocation<MemoryHeap**> heap{ REL::ID(2707353) };
+			static REL::Relocation<MemoryHeap**> heap{ ID::Memory::GetGlobalHeap };
 			return *heap;
 		}
 

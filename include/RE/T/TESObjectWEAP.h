@@ -142,14 +142,14 @@ namespace RE
 		[[nodiscard]] MELEE_ATTACK_SPEED GetMeleeAttackSpeed()
 		{
 			using func_t = decltype(&TESObjectWEAP::GetMeleeAttackSpeed);
-			static REL::Relocation<func_t> func{ REL::ID(2198957) };
+			static REL::Relocation<func_t> func{ ID::TESObjectWEAP::GetMeleeAttackSpeed };
 			return func(this);
 		}
 
 		[[nodiscard]] static const char* GetMeleeAttackSpeedLabel(MELEE_ATTACK_SPEED a_speed)
 		{
 			using func_t = decltype(&TESObjectWEAP::GetMeleeAttackSpeedLabel);
-			static REL::Relocation<func_t> func{ REL::ID(2198959) };
+			static REL::Relocation<func_t> func{ ID::TESObjectWEAP::GetMeleeAttackSpeedLabel };
 			return func(a_speed);
 		}
 

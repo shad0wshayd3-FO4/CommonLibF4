@@ -13,14 +13,14 @@ namespace RE
 		NiRefObject()
 		{
 			stl::emplace_vtable(this);
-			static REL::Relocation<std::uint32_t*> objects{ REL::ID(1161724) };
+			static REL::Relocation<std::uint32_t*> objects{ ID::NiRefObject::Objects };
 			stl::atomic_ref                        myObjects{ *objects };
 			++myObjects;
 		}
 
 		virtual ~NiRefObject()  // 00
 		{
-			static REL::Relocation<std::uint32_t*> objects{ REL::ID(1161724) };
+			static REL::Relocation<std::uint32_t*> objects{ ID::NiRefObject::Objects };
 			stl::atomic_ref                        myObjects{ *objects };
 			--myObjects;
 		}

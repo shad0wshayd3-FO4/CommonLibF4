@@ -19,5 +19,4 @@ namespace RE
 		BGSEquipSlot* equipSlot;  // 08
 	};
 	static_assert(sizeof(BGSEquipType) == 0x10);
-
 }

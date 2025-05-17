@@ -24,7 +24,7 @@ namespace RE
 		[[nodiscard]] const BSFixedStringCS& GetDisplayName(TESBoundObject* a_baseObject)
 		{
 			using func_t = decltype(&ExtraTextDisplayData::GetDisplayName);
-			static REL::Relocation<func_t> func{ REL::ID(1523343) };
+			static REL::Relocation<func_t> func{ ID::ExtraTextDisplayData::GetDisplayName };
 			return func(this, a_baseObject);
 		}
 

@@ -305,7 +305,7 @@ namespace RE
 	float NiPoint3::GetZAngleFromVector() const
 	{
 		using func_t = decltype(&NiPoint3::GetZAngleFromVector);
-		static REL::Relocation<func_t> func{ REL::ID(1450064) };
+		static REL::Relocation<func_t> func{ ID::NiPoint::NiPoint3::GetZAngleFromVector };
 		return func(this);
 	}
 

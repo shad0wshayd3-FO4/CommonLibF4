@@ -23,14 +23,14 @@ namespace RE
 		[[nodiscard]] static NiControllerManager* GetNiControllerManager(const NiObjectNET* a_object)
 		{
 			using func_t = decltype(&NiControllerManager::GetNiControllerManager);
-			static REL::Relocation<func_t> func{ REL::ID(2271798) };
+			static REL::Relocation<func_t> func{ ID::NiControllerManager::GetNiControllerManager };
 			return func(a_object);
 		}
 
 		[[nodiscard]] NiControllerSequence* GetSequenceByName(const BSFixedString& a_name)
 		{
 			using func_t = decltype(&NiControllerManager::GetSequenceByName);
-			static REL::Relocation<func_t> func{ REL::ID(846648) };
+			static REL::Relocation<func_t> func{ ID::NiControllerManager::GetSequenceByName };
 			return func(this, a_name);
 		}
 

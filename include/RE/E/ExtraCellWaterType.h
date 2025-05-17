@@ -16,5 +16,4 @@ namespace RE
 		TESWaterForm* water;  // 18
 	};
 	static_assert(sizeof(ExtraCellWaterType) == 0x20);
-
 }

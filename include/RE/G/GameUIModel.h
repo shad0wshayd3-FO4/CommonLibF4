@@ -25,14 +25,14 @@ namespace RE
 
 		[[nodiscard]] static GameUIModel* GetSingleton()
 		{
-			static REL::Relocation<GameUIModel**> singleton{ REL::ID(17419) };
+			static REL::Relocation<GameUIModel**> singleton{ ID::GameUIModel::Singleton };
 			return *singleton;
 		}
 
 		void UpdateDataModels()
 		{
 			using func_t = decltype(&GameUIModel::UpdateDataModels);
-			static REL::Relocation<func_t> func{ REL::ID(2220905) };
+			static REL::Relocation<func_t> func{ ID::GameUIModel::UpdateDataModels };
 			return func(this);
 		}
 	};

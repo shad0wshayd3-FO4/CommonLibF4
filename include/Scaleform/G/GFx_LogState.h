@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Scaleform/G/GFx_Log.h"
 #include "Scaleform/G/GFx_LogBase.h"
 #include "Scaleform/G/GFx_State.h"
 #include "Scaleform/P/Ptr.h"

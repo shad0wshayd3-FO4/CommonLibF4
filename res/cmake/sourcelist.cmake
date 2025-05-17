@@ -1198,7 +1198,6 @@ set(SOURCES
 	include/Scaleform/G/GFx_HeapId.h
 	include/Scaleform/G/GFx_KeyboardState.h
 	include/Scaleform/G/GFx_Loader.h
-	include/Scaleform/G/GFx_Log.h
 	include/Scaleform/G/GFx_LogBase.h
 	include/Scaleform/G/GFx_LogState.h
 	include/Scaleform/G/GFx_MemoryContext.h

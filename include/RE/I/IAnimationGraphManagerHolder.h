@@ -49,28 +49,28 @@ namespace RE
 		bool SetGraphVariableBool(const BSFixedString& a_variable, bool a_var)
 		{
 			using func_t = decltype(&IAnimationGraphManagerHolder::SetGraphVariableBool);
-			static REL::Relocation<func_t> func{ REL::ID(2214543) };
+			static REL::Relocation<func_t> func{ ID::IAnimationGraphManagerHolder::SetGraphVariableBool };
 			return func(this, a_variable, a_var);
 		};
 
 		bool SetGraphVariableFloat(const BSFixedString& a_variable, float a_var)
 		{
 			using func_t = decltype(&IAnimationGraphManagerHolder::SetGraphVariableFloat);
-			static REL::Relocation<func_t> func{ REL::ID(27400) };
+			static REL::Relocation<func_t> func{ ID::IAnimationGraphManagerHolder::SetGraphVariableFloat };
 			return func(this, a_variable, a_var);
 		};
 
 		bool SetGraphVariableInt(const BSFixedString& a_variable, int a_var)
 		{
 			using func_t = decltype(&IAnimationGraphManagerHolder::SetGraphVariableInt);
-			static REL::Relocation<func_t> func{ REL::ID(732926) };
+			static REL::Relocation<func_t> func{ ID::IAnimationGraphManagerHolder::SetGraphVariableInt };
 			return func(this, a_variable, a_var);
 		};
 
 		bool RevertAnimationGraphManager(bool a_performModifyInitialAnimationStateC = true)
 		{
 			using func_t = decltype(&IAnimationGraphManagerHolder::RevertAnimationGraphManager);
-			static REL::Relocation<func_t> func{ REL::ID(2214541) };
+			static REL::Relocation<func_t> func{ ID::IAnimationGraphManagerHolder::RevertAnimationGraphManager };
 			return func(this, a_performModifyInitialAnimationStateC);
 		}
 	};

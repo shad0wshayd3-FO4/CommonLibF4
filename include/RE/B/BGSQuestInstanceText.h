@@ -28,7 +28,7 @@ namespace RE
 		static void ParseString(BSString* a_inOutText, const TESQuest* a_quest, std::uint32_t a_instanceID)
 		{
 			using func_t = decltype(&BGSQuestInstanceText::ParseString);
-			static REL::Relocation<func_t> func{ REL::ID(2206630) };
+			static REL::Relocation<func_t> func{ ID::BGSQuestInstanceText::ParseString };
 			return func(a_inOutText, a_quest, a_instanceID);
 		}
 

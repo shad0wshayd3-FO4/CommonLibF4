@@ -12,5 +12,4 @@ namespace RE
 		const BGSMessage* assocMsg;   // 08
 	};
 	static_assert(sizeof(TutorialEvent) == 0x10);
-
 }

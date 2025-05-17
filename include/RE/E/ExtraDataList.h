@@ -39,7 +39,7 @@ namespace RE
 		stl::observer<TBO_InstanceData*> CreateInstanceData(TESBoundObject* a_object, bool a_generateName)
 		{
 			using func_t = decltype(&ExtraDataList::CreateInstanceData);
-			static REL::Relocation<func_t> func{ REL::ID(2190185) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::CreateInstanceData };
 			return func(this, a_object, a_generateName);
 		}
 
@@ -58,7 +58,7 @@ namespace RE
 		[[nodiscard]] BGSMod::Attachment::Mod* GetLegendaryMod()
 		{
 			using func_t = decltype(&ExtraDataList::GetLegendaryMod);
-			static REL::Relocation<func_t> func{ REL::ID(2190180) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::GetLegendaryMod };
 			return func(this);
 		}
 
@@ -89,63 +89,63 @@ namespace RE
 		bool SetBendableSplineInfo(float* a_thickness, float* a_slack, NiPoint3* a_halfExtents = nullptr, bool* a_detachedEnd = nullptr)
 		{
 			using func_t = decltype(&ExtraDataList::SetBendableSplineInfo);
-			static REL::Relocation<func_t> func{ REL::ID(2190623) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::SetBendableSplineInfo };
 			return func(this, a_thickness, a_slack, a_halfExtents, a_detachedEnd);
 		}
 
 		void SetDisplayNameFromInstanceData(BGSObjectInstanceExtra* a_instExtra, TESBoundObject* a_object, const BSTSmartPointer<TBO_InstanceData>& a_data)
 		{
 			using func_t = decltype(&ExtraDataList::SetDisplayNameFromInstanceData);
-			static REL::Relocation<func_t> func{ REL::ID(2190179) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::SetDisplayNameFromInstanceData };
 			return func(this, a_instExtra, a_object, a_data);
 		}
 
 		void SetOverrideName(const char* a_name)
 		{
 			using func_t = decltype(&ExtraDataList::SetOverrideName);
-			static REL::Relocation<func_t> func{ REL::ID(2190167) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::SetOverrideName };
 			return func(this, a_name);
 		}
 
 		void SetStartingWorldOrCell(TESForm* a_form)
 		{
 			using func_t = decltype(&ExtraDataList::SetStartingWorldOrCell);
-			static REL::Relocation<func_t> func{ REL::ID(2191213) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::SetStartingWorldOrCell };
 			return func(this, a_form);
 		}
 
 		float GetHealthPerc()
 		{
 			using func_t = decltype(&ExtraDataList::GetHealthPerc);
-			static REL::Relocation<func_t> func{ REL::ID(2190226) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::GetHealthPerc };
 			return func(this);
 		}
 
 		void SetHealthPerc(float a_healthPerc)
 		{
 			using func_t = decltype(&ExtraDataList::SetHealthPerc);
-			static REL::Relocation<func_t> func{ REL::ID(2190124) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::SetHealthPerc };
 			return func(this, a_healthPerc);
 		}
 
 		bool ClearFavorite()
 		{
 			using func_t = decltype(&ExtraDataList::ClearFavorite);
-			static REL::Relocation<func_t> func{ REL::ID(2190191) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::ClearFavorite };
 			return func(this);
 		}
 
 		bool IsFavorite()
 		{
 			using func_t = decltype(&ExtraDataList::IsFavorite);
-			static REL::Relocation<func_t> func{ REL::ID(2190189) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::IsFavorite };
 			return func(this);
 		}
 
 		bool IsDamaged()
 		{
 			using func_t = decltype(&ExtraDataList::IsDamaged);
-			static REL::Relocation<func_t> func{ REL::ID(2190224) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::IsDamaged };
 			return func(this);
 		}
 
@@ -153,21 +153,21 @@ namespace RE
 		bool CompareList(const ExtraDataList* a_compare, ComparisonQualifier a_qualifier)
 		{
 			using func_t = decltype(&ExtraDataList::CompareList);
-			static REL::Relocation<func_t> func{ REL::ID(2190098) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::CompareList };
 			return func(this, a_compare, a_qualifier);
 		}
 
 		void SetFavorite(char a_quickKeyIndex)
 		{
 			using func_t = decltype(&ExtraDataList::SetFavorite);
-			static REL::Relocation<func_t> func{ REL::ID(2190188) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::SetFavorite };
 			return func(this, a_quickKeyIndex);
 		}
 
 		BGSPrimitive* GetPrimitive()
 		{
 			using func_t = decltype(&ExtraDataList::GetPrimitive);
-			static REL::Relocation<func_t> func{ REL::ID(2190427) };
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::GetPrimitive };
 			return func(this);
 		}
 

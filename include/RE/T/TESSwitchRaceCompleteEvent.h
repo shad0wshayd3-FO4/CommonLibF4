@@ -13,7 +13,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESSwitchRaceCompleteEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESSwitchRaceCompleteEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2201874) };
+			static REL::Relocation<func_t> func{ ID::TESSwitchRaceCompleteEvent::GetEventSource };
 			return func();
 		}
 
@@ -21,5 +21,4 @@ namespace RE
 		NiPointer<TESObjectREFR> actor;  // 00
 	};
 	static_assert(sizeof(TESSwitchRaceCompleteEvent) == 0x8);
-
 }

@@ -13,7 +13,7 @@ namespace RE::BSResource
 	inline void RegisterLocation(Location* a_location, std::uint32_t a_priority)
 	{
 		using func_t = decltype(&RegisterLocation);
-		static REL::Relocation<func_t> func{ REL::ID(918408) };
+		static REL::Relocation<func_t> func{ RE::ID::BSResource::RegisterLocation };
 		return func(a_location, a_priority);
 	}
 }

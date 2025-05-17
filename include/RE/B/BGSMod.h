@@ -138,7 +138,7 @@ namespace RE::BGSMod
 	{
 		[[nodiscard]] inline BSTHashMap<const Mod*, TESObjectMISC*>& GetAllLooseMods()
 		{
-			static REL::Relocation<BSTHashMap<const Mod*, TESObjectMISC*>*> mods{ REL::ID(1108112), -0x8 };
+			static REL::Relocation<BSTHashMap<const Mod*, TESObjectMISC*>*> mods{ ID::BGSMod::Attachment::GetAllLooseMods, -0x8 };
 			return *mods;
 		}
 
@@ -170,28 +170,28 @@ namespace RE::BGSMod
 			static void FindModsForLooseMod(TESObjectMISC* a_looseMod, BSScrapArray<BGSMod::Attachment::Mod*>& a_result)
 			{
 				using func_t = decltype(&Mod::FindModsForLooseMod);
-				static REL::Relocation<func_t> func{ REL::ID(410363) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Attachment::Mod::FindModsForLooseMod };
 				return func(a_looseMod, a_result);
 			}
 
 			void GetData(Data& a_data) const
 			{
 				using func_t = decltype(&Mod::GetData);
-				static REL::Relocation<func_t> func{ REL::ID(33658) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Attachment::Mod::GetData };
 				return func(this, a_data);
 			}
 
 			TESObjectMISC* GetLooseMod()
 			{
 				using func_t = decltype(&Mod::GetLooseMod);
-				static REL::Relocation<func_t> func{ REL::ID(2197514) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Attachment::Mod::GetLooseMod };
 				return func(this);
 			}
 
 			void SetLooseMod(TESObjectMISC* misc)
 			{
 				using func_t = decltype(&Mod::SetLooseMod);
-				static REL::Relocation<func_t> func{ REL::ID(123132) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Attachment::Mod::SetLooseMod };
 				return func(this, misc);
 			}
 
@@ -254,7 +254,7 @@ namespace RE::BGSMod
 			static void CreateInstanceDataForObjectAndExtra(TESBoundObject& a_object, ExtraDataList& a_extra, const INSTANCE_FILTER* a_filter, bool a_useDefault)
 			{
 				using func_t = decltype(&Items::CreateInstanceDataForObjectAndExtra);
-				static REL::Relocation<func_t> func{ REL::ID(147297) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Template::Items::CreateInstanceDataForObjectAndExtra };
 				return func(a_object, a_extra, a_filter, a_useDefault);
 			}
 

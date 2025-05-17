@@ -51,21 +51,21 @@ namespace RE
 		LOCK_LEVEL GetHackDifficultyLockLevel(TESObjectREFR* a_refr)
 		{
 			using func_t = decltype(&BGSTerminal::GetHackDifficultyLockLevel);
-			static REL::Relocation<func_t> func{ REL::ID(2197777) };
+			static REL::Relocation<func_t> func{ ID::BGSTerminal::GetHackDifficultyLockLevel };
 			return func(this, a_refr);
 		}
 
 		static bool IsTerminalRefInUse(TESObjectREFR* a_refr)
 		{
 			using func_t = decltype(&BGSTerminal::IsTerminalRefInUse);
-			static REL::Relocation<func_t> func{ REL::ID(2197779) };
+			static REL::Relocation<func_t> func{ ID::BGSTerminal::IsTerminalRefInUse };
 			return func(a_refr);
 		}
 
 		static void Show(TESObjectREFR* a_refr)
 		{
 			using func_t = decltype(&BGSTerminal::Show);
-			static REL::Relocation<func_t> func{ REL::ID(2197776) };
+			static REL::Relocation<func_t> func{ ID::BGSTerminal::Show };
 			return func(a_refr);
 		}
 

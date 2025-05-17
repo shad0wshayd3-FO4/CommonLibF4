@@ -13,8 +13,7 @@ namespace RE
 
 		explicit constexpr LookHandler(PlayerControlsData& a_data) noexcept :
 			PlayerInputHandler(a_data)
-		{
-		}
+		{}
 
 		// members
 		float thumbstickMaxedSec{ 0.0f };  // 20

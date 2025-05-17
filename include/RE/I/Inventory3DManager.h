@@ -31,49 +31,49 @@ namespace RE
 		void Begin3D()
 		{
 			using func_t = decltype(&Inventory3DManager::Begin3D);
-			static REL::Relocation<func_t> func{ REL::ID(2249084) };
+			static REL::Relocation<func_t> func{ ID::Inventory3DManager::Begin3D };
 			return func(this);
 		}
 
 		void ClearModel()
 		{
 			using func_t = decltype(&Inventory3DManager::ClearModel);
-			static REL::Relocation<func_t> func{ REL::ID(63218) };
+			static REL::Relocation<func_t> func{ ID::Inventory3DManager::ClearModel };
 			return func(this);
 		}
 
 		void DisableRendering(const BSFixedString& a_userID)
 		{
 			using func_t = decltype(&Inventory3DManager::DisableRendering);
-			static REL::Relocation<func_t> func{ REL::ID(255893) };
+			static REL::Relocation<func_t> func{ ID::Inventory3DManager::DisableRendering };
 			return func(this, a_userID);
 		}
 
 		void EnableRendering(const BSFixedString& a_userID)
 		{
 			using func_t = decltype(&Inventory3DManager::EnableRendering);
-			static REL::Relocation<func_t> func{ REL::ID(176578) };
+			static REL::Relocation<func_t> func{ ID::Inventory3DManager::EnableRendering };
 			return func(this, a_userID);
 		}
 
 		void End3D()
 		{
 			using func_t = decltype(&Inventory3DManager::End3D);
-			static REL::Relocation<func_t> func{ REL::ID(1512675) };
+			static REL::Relocation<func_t> func{ ID::Inventory3DManager::End3D };
 			return func(this);
 		}
 
 		void SetModelScale(float a_scale)
 		{
 			using func_t = decltype(&Inventory3DManager::SetModelScale);
-			static REL::Relocation<func_t> func{ REL::ID(1319701) };
+			static REL::Relocation<func_t> func{ ID::Inventory3DManager::SetModelScale };
 			return func(this, a_scale);
 		}
 
 		void SetModelScreenPosition(const NiPoint3& a_position, bool a_screenCoords)
 		{
 			using func_t = decltype(&Inventory3DManager::SetModelScreenPosition);
-			static REL::Relocation<func_t> func{ REL::ID(2249096) };
+			static REL::Relocation<func_t> func{ ID::Inventory3DManager::SetModelScreenPosition };
 			return func(this, a_position, a_screenCoords);
 		}
 

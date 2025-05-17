@@ -18,7 +18,7 @@ namespace RE
 
 		[[nodiscard]] static FlatScreenModel* GetSingleton()
 		{
-			static REL::Relocation<FlatScreenModel**> singleton{ REL::ID(847741) };
+			static REL::Relocation<FlatScreenModel**> singleton{ ID::FlatScreenModel::Singleton };
 			return *singleton;
 		}
 

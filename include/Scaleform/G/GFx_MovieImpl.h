@@ -2,7 +2,6 @@
 
 #include "Scaleform/A/Array.h"
 #include "Scaleform/G/GFx_FocusGroupDescr.h"
-#include "Scaleform/G/GFx_Log.h"
 #include "Scaleform/G/GFx_Movie.h"
 #include "Scaleform/G/GFx_MultitouchInterface.h"
 #include "Scaleform/G/GFx_Value.h"

@@ -30,10 +30,10 @@ namespace RE
 		bool                                               skinned;             // 50
 
 	private:
-		void Dtor()
+		void dtor()
 		{
-			using func_t = decltype(&BIPOBJECT::Dtor);
-			static REL::Relocation<func_t> func{ REL::ID(765242) };
+			using func_t = decltype(&BIPOBJECT::dtor);
+			static REL::Relocation<func_t> func{ ID::BIPOBJECT::dtor };
 			return func(this);
 		}
 	};

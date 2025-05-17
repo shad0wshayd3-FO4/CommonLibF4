@@ -37,14 +37,14 @@ namespace RE
 
 		[[nodiscard]] static ProcessLists* GetSingleton()
 		{
-			static REL::Relocation<ProcessLists**> singleton{ REL::ID(2688869) };
+			static REL::Relocation<ProcessLists**> singleton{ ID::ProcessLists::Singleton };
 			return *singleton;
 		}
 
 		[[nodiscard]] bool AreHostileActorsNear(BSScrapArray<ActorHandle>* a_hostileActorArray)
 		{
 			using func_t = decltype(&ProcessLists::AreHostileActorsNear);
-			static REL::Relocation<func_t> func{ REL::ID(2234105) };
+			static REL::Relocation<func_t> func{ ID::ProcessLists::AreHostileActorsNear };
 			return func(this, a_hostileActorArray);
 		}
 
@@ -85,14 +85,14 @@ namespace RE
 		[[nodiscard]] bool IsActorTargetingREFinPackage(const TESObjectREFR* a_actor, PTYPE a_type, bool a_onlyHigh)
 		{
 			using func_t = decltype(&ProcessLists::IsActorTargetingREFinPackage);
-			static REL::Relocation<func_t> func{ REL::ID(2234033) };
+			static REL::Relocation<func_t> func{ ID::ProcessLists::IsActorTargetingREFinPackage };
 			return func(this, a_actor, a_type, a_onlyHigh);
 		}
 
 		[[nodiscard]] std::int16_t RequestHighestDetectionLevelAgainstActor(Actor* a_actor, std::uint32_t& a_LOSCount)
 		{
 			using func_t = decltype(&ProcessLists::RequestHighestDetectionLevelAgainstActor);
-			static REL::Relocation<func_t> func{ REL::ID(2234111) };
+			static REL::Relocation<func_t> func{ ID::ProcessLists::RequestHighestDetectionLevelAgainstActor };
 			return func(this, a_actor, a_LOSCount);
 		}
 

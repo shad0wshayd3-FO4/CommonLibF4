@@ -26,7 +26,7 @@ namespace RE
 		bool CollidesWithSmallTransparentLayer()
 		{
 			using func_t = decltype(&BGSProjectile::CollidesWithSmallTransparentLayer);
-			static REL::Relocation<func_t> func{ REL::ID(2197620) };
+			static REL::Relocation<func_t> func{ ID::BGSProjectile::CollidesWithSmallTransparentLayer };
 			return func(this);
 		}
 

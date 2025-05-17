@@ -14,7 +14,7 @@ namespace RE
 		[[nodiscard]] static std::uint32_t GetFormValue(const TESForm* a_form, const TBO_InstanceData* a_data)
 		{
 			using func_t = std::int32_t (*)(const TESForm*, const TBO_InstanceData*);
-			static REL::Relocation<func_t> func{ REL::ID(885783) };
+			static REL::Relocation<func_t> func{ ID::TESValueForm::GetFormValue };
 			return func(a_form, a_data);
 		}
 

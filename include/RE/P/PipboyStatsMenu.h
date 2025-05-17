@@ -16,7 +16,7 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyStatsMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(332518) };
+			static REL::Relocation<func_t> func{ ID::PipboyStatsMenu::UpdateData };
 			return func(this);
 		}
 

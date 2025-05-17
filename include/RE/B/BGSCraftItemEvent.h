@@ -15,7 +15,7 @@ namespace RE
 
 		[[nodiscard]] static std::uint32_t EVENT_INDEX()
 		{
-			static REL::Relocation<std::uint32_t*> eventIdx{ REL::ID(2663409) };
+			static REL::Relocation<std::uint32_t*> eventIdx{ ID::BGSCraftItemEvent::EventIndex };
 			return *eventIdx;
 		}
 

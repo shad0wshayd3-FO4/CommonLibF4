@@ -9,8 +9,8 @@ namespace RE
 		{
 			Conditional() :
 				ownerGlobal(nullptr)
-			{
-			}
+			{}
+
 			~Conditional() = default;
 
 			F4_HEAP_REDEFINE_NEW(Conditional);
@@ -25,14 +25,13 @@ namespace RE
 			ownerForm(nullptr),
 			conditional(),
 			healthMult(100.0f)
-		{
-		}
+		{}
+
 		ContainerItemExtra(TESForm* a_owner) :
 			ownerForm(a_owner),
 			conditional(),
 			healthMult(100.0f)
-		{
-		}
+		{}
 
 		F4_HEAP_REDEFINE_NEW(ContainerItemExtra);
 

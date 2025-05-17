@@ -41,7 +41,7 @@ namespace RE
 			bool a_alwaysContinue = false)
 		{
 			using func_t = decltype(&BGSInventoryList::FindAndWriteStackDataForItem);
-			static REL::Relocation<func_t> func{ REL::ID(2194179) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryList::FindAndWriteStackDataForItem };
 			return func(this, a_object, a_compareFunc, a_writeFunc, a_objCompFn, a_alwaysContinue);
 		}
 
@@ -65,7 +65,7 @@ namespace RE
 		void BuildFromContainer(const TESContainer* a_container)
 		{
 			using func_t = decltype(&BGSInventoryList::BuildFromContainer);
-			static REL::Relocation<func_t> func{ REL::ID(2194158) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryList::BuildFromContainer };
 			return func(this, a_container);
 		}
 
@@ -79,7 +79,7 @@ namespace RE
 		void ctor(const TESContainer* a_container, std::uint32_t* a_owner)
 		{
 			using func_t = decltype(&BGSInventoryList::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(2194153) };
+			static REL::Relocation<func_t> func{ ID::BGSInventoryList::ctor };
 			return func(this, a_container, a_owner);
 		}
 	};

@@ -1,13 +1,17 @@
 #pragma once
 
+#include "RE/B/BSTSingleton.h"
+#include "RE/T/TESGlobal.h"
+
 namespace RE
 {
 	class Calendar :
 		public BSTSingletonSDM<Calendar>
 	{
 	public:
-		struct Months
+		class Months
 		{
+		public:
 			enum Month
 			{
 				kJanuary = 0x0,
@@ -29,7 +33,7 @@ namespace RE
 
 		[[nodiscard]] static Calendar* GetSingleton()
 		{
-			static REL::Relocation<Calendar**> singleton{ REL::ID(2689092) };
+			static REL::Relocation<Calendar**> singleton{ ID::Calendar::Singleton };
 			return *singleton;
 		}
 

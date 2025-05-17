@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTPoint.h"
+#include "RE/N/NiPoint.h"
+#include "RE/T/TESCameraState.h"
+
 namespace RE
 {
 	class __declspec(novtable) FreeCameraState :

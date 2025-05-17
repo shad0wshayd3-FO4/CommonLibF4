@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BSInputEventUser.h"
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiQuaternion.h"
+
 namespace RE
 {
+	class BGSLoadFormBuffer;
+	class BGSSaveFormBuffer;
+	class TESCamera;
+
 	class __declspec(novtable) TESCameraState :
 		public BSIntrusiveRefCounted,  // 10
 		public BSInputEventUser        // 00

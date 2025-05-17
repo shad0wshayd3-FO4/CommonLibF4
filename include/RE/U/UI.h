@@ -1,7 +1,21 @@
 #pragma once
 
+#include "RE/B/BSInputEventReceiver.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/B/BSTimer.h"
+#include "RE/I/IMenu.h"
+#include "RE/U/UIMenuEntry.h"
+
 namespace RE
 {
+	class MenuModeChangeEvent;
+	class MenuOpenCloseEvent;
+	class MenuModeCounterChangedEvent;
+	class TutorialEvent;
+
 	class __declspec(novtable) UI :
 		public BSInputEventReceiver,                         // 000
 		public BSTSingletonSDM<UI>,                          // 010
@@ -23,7 +37,7 @@ namespace RE
 		[[nodiscard]] bool CustomRendererHasQuads(const BSFixedString& a_customRendererName)
 		{
 			using func_t = decltype(&UI::CustomRendererHasQuads);
-			static REL::Relocation<func_t> func{ REL::ID(1401451) };
+			static REL::Relocation<func_t> func{ ID::UI::CustomRendererHasQuads };
 			return func(this, a_customRendererName);
 		}
 
@@ -35,13 +49,13 @@ namespace RE
 
 		[[nodiscard]] static BSReadWriteLock& GetMenuMapRWLock()
 		{
-			static REL::Relocation<BSReadWriteLock*> menuMapRWLock{ REL::ID(2707105) };
+			static REL::Relocation<BSReadWriteLock*> menuMapRWLock{ ID::UI::GetMenuMapRWLock };
 			return *menuMapRWLock;
 		}
 
 		[[nodiscard]] static UI* GetSingleton()
 		{
-			static REL::Relocation<UI**> singleton{ REL::ID(2689028) };
+			static REL::Relocation<UI**> singleton{ ID::UI::Singleton };
 			return *singleton;
 		}
 
@@ -76,14 +90,14 @@ namespace RE
 		void RefreshCursor()
 		{
 			using func_t = decltype(&UI::RefreshCursor);
-			static REL::Relocation<func_t> func{ REL::ID(1436639) };
+			static REL::Relocation<func_t> func{ ID::UI::RefreshCursor };
 			return func(this);
 		}
 
 		void RegisterMenu(const char* a_menu, Create_t* a_create, StaticUpdate_t* a_staticUpdate = nullptr)
 		{
 			using func_t = decltype(&UI::RegisterMenu);
-			static REL::Relocation<func_t> func{ REL::ID(2284766) };
+			static REL::Relocation<func_t> func{ ID::UI::RegisterMenu };
 			return func(this, a_menu, a_create, a_staticUpdate);
 		}
 
@@ -96,7 +110,7 @@ namespace RE
 		void UpdateControllerType()
 		{
 			using func_t = decltype(&UI::UpdateControllerType);
-			static REL::Relocation<func_t> func{ REL::ID(175796) };
+			static REL::Relocation<func_t> func{ ID::UI::UpdateControllerType };
 			return func(this);
 		}
 

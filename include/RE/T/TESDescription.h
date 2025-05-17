@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSStringT.h"
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESDescription :
@@ -19,10 +23,10 @@ namespace RE
 		void ClearDataComponent() override { return; }    // 03
 		void CopyComponent(BaseFormComponent*) override;  // 06
 
-		void GetDescription(BSStringT<char>& a_outString, const TESForm* a_form = nullptr)
+		void GetDescription(BSString& a_outString, const TESForm* a_form = nullptr)
 		{
 			using func_t = decltype(&TESDescription::GetDescription);
-			static REL::Relocation<func_t> func{ REL::ID(2193019) };
+			static REL::Relocation<func_t> func{ ID::TESDescription::GetDescription };
 			return func(this, a_outString, a_form);
 		}
 

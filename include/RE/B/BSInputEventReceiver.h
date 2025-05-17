@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class InputEvent;
+
 	class __declspec(novtable) BSInputEventReceiver
 	{
 	public:

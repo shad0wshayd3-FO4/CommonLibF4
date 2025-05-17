@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	class CanDisplayNextHUDMessage :
@@ -16,7 +18,7 @@ namespace RE
 
 		[[nodiscard]] static EventSource_t* GetEventSource()
 		{
-			static REL::Relocation<EventSource_t**> singleton{ REL::ID(344866) };
+			static REL::Relocation<EventSource_t**> singleton{ ID::CanDisplayNextHUDMessage::GetEventSource };
 			if (!*singleton) {
 				*singleton = new EventSource_t(&BSTGlobalEvent::GetSingleton()->eventSourceSDMKiller);
 			}

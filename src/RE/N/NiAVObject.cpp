@@ -1,5 +1,10 @@
 #include "RE/N/NiAVObject.h"
 
+#include "RE/B/BSGeometry.h"
+#include "RE/B/BSVisit.h"
+#include "RE/N/NiNode.h"
+#include "RE/N/NiUpdateData.h"
+
 namespace RE
 {
 	NiAVObject::NiAVObject()

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSKeyword.h"
+#include "RE/B/BSContainer.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BaseFormComponent.h"
+#include "RE/I/IKeywordFormBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSKeywordForm :
@@ -23,12 +29,12 @@ namespace RE
 		// add
 		virtual BGSKeyword* GetDefaultKeyword() const { return nullptr; }  // 07
 
-		void CopyKeywords(const std::vector<RE::BGSKeyword*>& a_copiedData);
+		void CopyKeywords(const std::vector<BGSKeyword*>& a_copiedData);
 
 		void AddKeyword(BGSKeyword* a_keyword)
 		{
 			using func_t = decltype(&BGSKeywordForm::AddKeyword);
-			static REL::Relocation<func_t> func{ REL::ID(2192766) };
+			static REL::Relocation<func_t> func{ ID::BGSKeywordForm::AddKeyword };
 			return func(this, a_keyword);
 		}
 
@@ -75,7 +81,7 @@ namespace RE
 		void RemoveKeyword(BGSKeyword* a_keyword)
 		{
 			using func_t = decltype(&BGSKeywordForm::RemoveKeyword);
-			static REL::Relocation<func_t> func{ REL::ID(921694) };
+			static REL::Relocation<func_t> func{ ID::BGSKeywordForm::RemoveKeyword };
 			return func(this, a_keyword);
 		}
 

@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/I/IKeywordFormBase.h"
+#include "RE/N/NiTFlags.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class BGSSceneAction;
+	class BGSScenePhase;
+
 	class __declspec(novtable) BGSScene :
 		public TESForm,          // 00
 		public IKeywordFormBase  // 20
@@ -69,14 +79,14 @@ namespace RE
 		void ResetAllSceneActions()
 		{
 			using func_t = decltype(&BGSScene::ResetAllSceneActions);
-			static REL::Relocation<func_t> func{ REL::ID(2206864) };
+			static REL::Relocation<func_t> func{ ID::BGSScene::ResetAllSceneActions };
 			return func(this);
 		}
 
 		void SetSceneActive(bool abFlag)
 		{
 			using func_t = decltype(&BGSScene::SetSceneActive);
-			static REL::Relocation<func_t> func{ REL::ID(2206845) };
+			static REL::Relocation<func_t> func{ ID::BGSScene::SetSceneActive };
 			return func(this, abFlag);
 		}
 	};

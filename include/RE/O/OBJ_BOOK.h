@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct OBJ_BOOK
+	class OBJ_BOOK
 	{
 	public:
 		union Teaches

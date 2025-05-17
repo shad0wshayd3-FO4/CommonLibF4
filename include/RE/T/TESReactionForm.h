@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
+	class GROUP_REACTION;
+
 	class __declspec(novtable) TESReactionForm :
 		public BaseFormComponent  // 00
 	{

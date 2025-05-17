@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace LocationMarkerArrayUpdate
 	{
-		struct Event
+		class Event
 		{
+		public:
 			bool shouldClearMapMarkers;  // 00
 		};
 		static_assert(sizeof(Event) == 0x1);

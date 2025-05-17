@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
-	struct BSNavmeshVertex
+	class BSNavmeshVertex
 	{
 	public:
 		// members

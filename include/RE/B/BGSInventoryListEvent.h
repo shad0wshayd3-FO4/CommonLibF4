@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+
 namespace RE
 {
 	namespace BGSInventoryListEvent
@@ -14,7 +16,7 @@ namespace RE
 			UpdateWeight
 		};
 
-		struct Event
+		class Event
 		{
 		public:
 			// members

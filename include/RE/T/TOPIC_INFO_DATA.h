@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct TOPIC_INFO_DATA
+	class TOPIC_INFO_DATA
 	{
 	public:
 		enum class TOPIC_INFO_FLAGS : std::uint32_t

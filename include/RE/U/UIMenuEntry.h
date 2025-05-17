@@ -1,8 +1,13 @@
 #pragma once
 
+#include "Scaleform/P/Ptr.h"
+
 namespace RE
 {
-	struct UIMenuEntry
+	class IMenu;
+	class UIMessage;
+
+	class UIMenuEntry
 	{
 	public:
 		using Create_t = IMenu*(const UIMessage&);

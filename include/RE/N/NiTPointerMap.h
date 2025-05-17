@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiTMap.h"
+#include "RE/N/NiTPointerAllocator.h"
+
 namespace RE
 {
 	template <class Key, class T>

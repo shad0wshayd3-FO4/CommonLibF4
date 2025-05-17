@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/N/NiPoint.h"
+#include "RE/R/ReferenceEffectController.h"
+
 namespace RE
 {
 	class __declspec(novtable) ActiveEffectReferenceEffectController :

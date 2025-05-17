@@ -1,7 +1,68 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	class PerkPointIncreaseEvent;
+	class PlayerUpdateEvent;
+
+	namespace ActorEquipManagerEvent
+	{
+		class Event;
+	}
+
+	namespace ActorValueEvents
+	{
+		class ActorValueChangedEvent;
+	}
+
+	namespace BGSInventoryItemEvent
+	{
+		class Event;
+	}
+
+	namespace BGSInventoryListEvent
+	{
+		class Event;
+	}
+
+	namespace HourPassed
+	{
+		class Event;
+	}
+
+	namespace LevelIncrease
+	{
+		class Event;
+	}
+
+	namespace PerkValueEvents
+	{
+		class PerkEntryUpdatedEvent;
+	}
+
+	namespace PlayerActiveEffectChanged
+	{
+		class Event;
+	}
+
+	namespace PlayerCharacterQuestEvent
+	{
+		class Event;
+	}
+
+	namespace PlayerDifficultySettingChanged
+	{
+		class Event;
+	}
+
+	namespace SPECIALMenuEvent
+	{
+		class NameChangedEvent;
+	}
+
 	class __declspec(novtable) PipboyPlayerInfoData :
 		public PipboyDataGroup,                                         // 00
 		public BSTEventSink<ActorValueEvents::ActorValueChangedEvent>,  // 98

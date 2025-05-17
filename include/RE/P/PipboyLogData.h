@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	class TESTrackedStatsEvent;
+
 	class __declspec(novtable) PipboyLogData :
 		public PipboyDataGroup,                    // 00
 		public BSTEventSink<TESTrackedStatsEvent>  // 98

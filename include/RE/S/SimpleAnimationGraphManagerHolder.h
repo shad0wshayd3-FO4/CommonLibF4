@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/I/IAnimationGraphManagerHolder.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class BSAnimationGraphManager;
+	class SimpleAnimationGraphManagerLoadingTask;
+
 	class __declspec(novtable) SimpleAnimationGraphManagerHolder :
 		public IAnimationGraphManagerHolder
 	{

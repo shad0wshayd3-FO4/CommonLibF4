@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSContainer.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSListForm :
@@ -13,14 +17,14 @@ namespace RE
 		void AddScriptAddedForm(TESForm* a_form)
 		{
 			using func_t = decltype(&BGSListForm::AddScriptAddedForm);
-			static REL::Relocation<func_t> func{ REL::ID(1064874) };
+			static REL::Relocation<func_t> func{ ID::BGSListForm::AddScriptAddedForm };
 			return func(this, a_form);
 		}
 
 		[[nodiscard]] bool ContainsItem(const TESForm* a_form)
 		{
 			using func_t = decltype(&BGSListForm::ContainsItem);
-			static REL::Relocation<func_t> func{ REL::ID(688500) };
+			static REL::Relocation<func_t> func{ ID::BGSListForm::ContainsItem };
 			return func(this, a_form);
 		}
 

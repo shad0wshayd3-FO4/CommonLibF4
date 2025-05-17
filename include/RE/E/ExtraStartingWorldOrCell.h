@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+
 namespace RE
 {
 	class __declspec(novtable) ExtraStartingWorldOrCell :
@@ -12,8 +14,7 @@ namespace RE
 
 		ExtraStartingWorldOrCell() :
 			ExtraStartingWorldOrCell(nullptr)
-		{
-		}
+		{}
 
 		ExtraStartingWorldOrCell(TESForm* a_form) :
 			BSExtraData(TYPE),

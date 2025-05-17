@@ -1,7 +1,33 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
+#include "RE/B/BGSBlockBashData.h"
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSEquipType.h"
+#include "RE/B/BGSInstanceNamingRulesForm.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSMessageIcon.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BGSPreloadable.h"
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/M/MELEE_ATTACK_SPEED.h"
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESEnchantableForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESIcon.h"
+#include "RE/W/WEAPON_FLAGS.h"
+#include "RE/W/WEAPON_TYPE.h"
+
 namespace RE
 {
+	enum class SOUND_LEVEL;
+	enum class WEAPON_RUMBLE_PATTERN;
+	enum class WEAPONHITBEHAVIOR;
+
 	class __declspec(novtable) TESObjectWEAP :
 		public TESBoundObject,             // 000
 		public TESFullName,                // 068
@@ -23,7 +49,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESObjectWEAP };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kWEAP };
 
-		struct RangedData
+		class RangedData
 		{
 		public:
 			// members
@@ -41,7 +67,7 @@ namespace RE
 		};
 		static_assert(sizeof(RangedData) == 0x30);
 
-		struct __declspec(novtable) InstanceData :
+		class __declspec(novtable) InstanceData :
 			public TBO_InstanceData  // 000
 		{
 		public:
@@ -104,7 +130,7 @@ namespace RE
 		};
 		static_assert(sizeof(InstanceData) == 0x138);
 
-		struct __declspec(novtable) Data :
+		class __declspec(novtable) Data :
 			public InstanceData  // 000
 		{
 		public:
@@ -116,14 +142,14 @@ namespace RE
 		[[nodiscard]] MELEE_ATTACK_SPEED GetMeleeAttackSpeed()
 		{
 			using func_t = decltype(&TESObjectWEAP::GetMeleeAttackSpeed);
-			static REL::Relocation<func_t> func{ REL::ID(2198957) };
+			static REL::Relocation<func_t> func{ ID::TESObjectWEAP::GetMeleeAttackSpeed };
 			return func(this);
 		}
 
 		[[nodiscard]] static const char* GetMeleeAttackSpeedLabel(MELEE_ATTACK_SPEED a_speed)
 		{
 			using func_t = decltype(&TESObjectWEAP::GetMeleeAttackSpeedLabel);
-			static REL::Relocation<func_t> func{ REL::ID(2198959) };
+			static REL::Relocation<func_t> func{ ID::TESObjectWEAP::GetMeleeAttackSpeedLabel };
 			return func(a_speed);
 		}
 

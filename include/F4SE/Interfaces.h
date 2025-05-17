@@ -10,8 +10,11 @@ namespace RE
 	{
 		class IVirtualMachine;
 	}
+}
 
-	namespace Scaleform::GFx
+namespace Scaleform
+{
+	namespace GFx
 	{
 		class Movie;
 		class Value;
@@ -249,7 +252,7 @@ namespace F4SE
 			kVersion = 1
 		};
 
-		using RegisterCallback = bool F4SEAPI(RE::Scaleform::GFx::Movie* a_view, RE::Scaleform::GFx::Value* a_value);
+		using RegisterCallback = bool F4SEAPI(Scaleform::GFx::Movie* a_view, Scaleform::GFx::Value* a_value);
 
 		[[nodiscard]] std::uint32_t Version() const noexcept { return GetProxy().interfaceVersion; }
 

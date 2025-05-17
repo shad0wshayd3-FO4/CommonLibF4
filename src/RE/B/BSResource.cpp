@@ -1,14 +1,11 @@
 #include "RE/B/BSResource.h"
 
-namespace RE
+namespace RE::BSResource
 {
-	namespace BSResource
+	ErrorCode GetOrCreateStream(const char* a_fileName, BSTSmartPointer<Stream>& a_result, bool a_writable, Location* a_optionalStart)
 	{
-		ErrorCode GetOrCreateStream(const char* a_fileName, BSTSmartPointer<Stream>& a_result, bool a_writable, Location* a_optionalStart)
-		{
-			using func_t = decltype(&GetOrCreateStream);
-			REL::Relocation<func_t> func{ REL::ID(1143155) };
-			return func(a_fileName, a_result, a_writable, a_optionalStart);
-		}
+		using func_t = decltype(&GetOrCreateStream);
+		static REL::Relocation<func_t> func{ ID::BSResource::GetOrCreateStream };
+		return func(a_fileName, a_result, a_writable, a_optionalStart);
 	}
 }

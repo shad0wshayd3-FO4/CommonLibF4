@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
+	class BSShaderProperty;
+
 	class __declspec(novtable) BSShaderMaterial :
 		public BSIntrusiveRefCounted  // 00
 	{

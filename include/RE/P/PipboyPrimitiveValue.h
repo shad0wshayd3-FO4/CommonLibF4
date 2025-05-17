@@ -1,12 +1,15 @@
 #pragma once
 
+#include "RE/P/PipboyValue.h"
+
 namespace RE
 {
 	template <class T>
 	class PipboyPrimitiveValue;  // Forward declaration for specialization **only**
 
 	template <>
-	class __declspec(novtable) PipboyPrimitiveValue<std::uint32_t> : public PipboyValue
+	class __declspec(novtable) PipboyPrimitiveValue<std::uint32_t> :
+		public PipboyValue
 	{
 	public:
 		virtual ~PipboyPrimitiveValue() {}  // 00
@@ -23,7 +26,7 @@ namespace RE
 		void ctor(std::uint32_t a_value, PipboyValue* a_parentValue)
 		{
 			using func_t = decltype(&PipboyPrimitiveValue<std::uint32_t>::ctor);
-			REL::Relocation<func_t> func{ REL::ID(2225324) };
+			static REL::Relocation<func_t> func{ ID::PipboyPrimitiveValue::uint32::ctor };
 			func(this, a_value, a_parentValue);
 		}
 
@@ -38,7 +41,8 @@ namespace RE
 	static_assert(sizeof(PipboyPrimitiveValue<std::uint32_t>) == 0x20);
 
 	template <>
-	class __declspec(novtable) PipboyPrimitiveValue<bool> : public PipboyValue
+	class __declspec(novtable) PipboyPrimitiveValue<bool> :
+		public PipboyValue
 	{
 	public:
 		virtual ~PipboyPrimitiveValue() {}  // 00
@@ -55,7 +59,7 @@ namespace RE
 		void ctor(bool a_value, PipboyValue* a_parentValue)
 		{
 			using func_t = decltype(&PipboyPrimitiveValue<bool>::ctor);
-			REL::Relocation<func_t> func{ REL::ID(2225327) };
+			static REL::Relocation<func_t> func{ ID::PipboyPrimitiveValue::boolean::ctor };
 			func(this, a_value, a_parentValue);
 		}
 

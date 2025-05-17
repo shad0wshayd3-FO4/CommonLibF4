@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct FILE_HEADER
+	class FILE_HEADER
 	{
 	public:
 		// members

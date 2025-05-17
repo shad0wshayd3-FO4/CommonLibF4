@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/T/TESTexture.h"
+
 namespace RE
 {
-	struct RANK_DATA
+	class RANK_DATA
 	{
 	public:
 		// members

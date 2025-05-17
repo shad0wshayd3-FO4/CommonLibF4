@@ -1,8 +1,16 @@
 #pragma once
 
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct DestructibleObjectData
+	class DestructibleObjectStage;
+	class QueuedFile;
+
+	class DestructibleObjectData
 	{
 	public:
 		// members

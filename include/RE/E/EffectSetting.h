@@ -1,7 +1,29 @@
 #pragma once
 
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSMenuDisplayObject.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
+	enum class SOUND_LEVEL;
+
+	namespace EffectArchetypes
+	{
+		enum class ArchetypeID;
+	}
+
+	namespace MagicSystem
+	{
+		enum class CastingType;
+		enum class Delivery;
+		enum class SoundID;
+	}
+
 	class __declspec(novtable) EffectSetting :
 		public TESForm,               // 000
 		public TESFullName,           // 020
@@ -15,7 +37,7 @@ namespace RE
 
 		using FilterValidationFunction_t = bool(EffectSetting*, void*);
 
-		struct EffectSettingData
+		class EffectSettingData
 		{
 		public:
 			enum class Flag
@@ -83,7 +105,7 @@ namespace RE
 		};
 		static_assert(sizeof(EffectSettingData) == 0x100);
 
-		struct SoundPair
+		class SoundPair
 		{
 		public:
 			// members

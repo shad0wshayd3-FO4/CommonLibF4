@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESTexture.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESIcon :

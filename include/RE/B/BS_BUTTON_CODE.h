@@ -126,5 +126,4 @@ namespace RE
 		kWheelUp = 0x10800,
 		kWheelDown = 0x10900,
 	};
-
 }

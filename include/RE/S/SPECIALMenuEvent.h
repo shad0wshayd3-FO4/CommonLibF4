@@ -4,7 +4,7 @@ namespace RE
 {
 	namespace SPECIALMenuEvent
 	{
-		struct NameChangedEvent
+		class NameChangedEvent
 		{
 		public:
 			// members

@@ -5,22 +5,22 @@ namespace RE
 	namespace BSBTreeFile
 	{
 		template <class Key, std::size_t PAGE_SIZE>
-		struct PageBasics
+		class PageBasics
 		{
 		public:
 			using key_type = Key;
 
-			struct InteriorNode;
+			class InteriorNode;
 		};
 
 		template <class T, class Key, std::size_t PAGE_SIZE>
-		struct PGFSEDL :
+		class PGFSEDL :
 			public PageBasics<Key, PAGE_SIZE>
 		{
 		public:
 			using key_type = Key;
 
-			struct LeafNode;
+			class LeafNode;
 		};
 
 		template <class Pager, class Impl, std::size_t MAX_DEPTH>
@@ -41,10 +41,10 @@ namespace RE
 			};
 			// static_assert(sizeof(PagePtr) == 0x8);
 
-			struct Cursor
+			class Cursor
 			{
 			public:
-				struct PageEntry
+				class PageEntry
 				{
 				public:
 					// members

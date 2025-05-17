@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace BooksRead
 	{
-		struct Event
+		class Event
 		{
+		public:
 			// members
 			const TESObjectBOOK* book;
 			bool                 advancedActorValue;

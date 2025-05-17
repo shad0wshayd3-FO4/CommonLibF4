@@ -1,8 +1,17 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/I/IMovementInterface.h"
+#include "RE/M/Movement.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
-	struct __declspec(novtable) IMovementState :
+	class BSPathingLocation;
+	class BSPathingRequest;
+	class IMovementParameters;
+
+	class __declspec(novtable) IMovementState :
 		public IMovementInterface  // 0
 	{
 	public:

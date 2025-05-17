@@ -1,7 +1,34 @@
 #pragma once
 
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/H/HUDModes.h"
+#include "RE/N/NiPointer.h"
+#include "RE/S/SimpleAnimationGraphManagerHolder.h"
+
 namespace RE
 {
+	class CurrentRadiationSourceCount;
+	class CurrentRadsDisplayMagnitude;
+	class CurrentRadsPercentOfLethal;
+	class NiAVObject;
+	class NiNode;
+	class PipboyLightEvent;
+	class PlayerAmmoCountEvent;
+	class PlayerWeaponReloadEvent;
+
+	namespace ExitPowerArmor
+	{
+		class Event;
+	}
+
+	namespace PreloadPowerArmor
+	{
+		class Event;
+	}
+
 	class __declspec(novtable) PowerArmorGeometry :
 		public SimpleAnimationGraphManagerHolder,       // 00
 		public BSTEventSink<PreloadPowerArmor::Event>,  // 18
@@ -22,21 +49,21 @@ namespace RE
 
 		[[nodiscard]] static PowerArmorGeometry* GetSingleton()
 		{
-			static REL::Relocation<PowerArmorGeometry**> singleton{ REL::ID(1365745) };
+			static REL::Relocation<PowerArmorGeometry**> singleton{ ID::PowerArmorGeometry::Singleton };
 			return *singleton;
 		}
 
 		void HidePipboyPAGeometry()
 		{
 			using func_t = decltype(&PowerArmorGeometry::HidePipboyPAGeometry);
-			static REL::Relocation<func_t> func{ REL::ID(976332) };
+			static REL::Relocation<func_t> func{ ID::PowerArmorGeometry::HidePipboyPAGeometry };
 			return func(this);
 		}
 
 		void ShowPipboyPAGeometry()
 		{
 			using func_t = decltype(&PowerArmorGeometry::ShowPipboyPAGeometry);
-			static REL::Relocation<func_t> func{ REL::ID(19066) };
+			static REL::Relocation<func_t> func{ ID::PowerArmorGeometry::ShowPipboyPAGeometry };
 			return func(this);
 		}
 

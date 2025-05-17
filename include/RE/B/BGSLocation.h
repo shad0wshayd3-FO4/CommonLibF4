@@ -1,7 +1,21 @@
 #pragma once
 
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiPointer.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
+	class OverrideData;
+	class QueuedPromoteLocationReferencesTask;
+	class SpecialRefData;
+	class UniqueNPCData;
+
 	class __declspec(novtable) BGSLocation :
 		public TESForm,        // 000
 		public TESFullName,    // 020
@@ -12,7 +26,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSLocation };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kLCTN };
 
-		struct KEYWORD_DATA
+		class KEYWORD_DATA
 		{
 		public:
 			// members

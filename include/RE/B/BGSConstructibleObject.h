@@ -1,5 +1,14 @@
 #pragma once
 
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BGSTypedKeywordValue.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSConstructibleObject :
@@ -12,7 +21,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSConstructibleObject };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kCOBJ };
 
-		struct ConstructibleObjectData
+		class ConstructibleObjectData
 		{
 		public:
 			// members
@@ -29,7 +38,7 @@ namespace RE
 		TESCondition                                                    conditions;      // 58
 		TESForm*                                                        createdItem;     // 60
 		BGSKeyword*                                                     benchKeyword;    // 68
-		BGSConstructibleObject::ConstructibleObjectData                 data;            // 70
+		ConstructibleObjectData                                         data;            // 70
 		BGSTypedKeywordValueArray<KeywordType::kRecipeFilter>           filterKeywords;  // 78
 	};
 	static_assert(sizeof(BGSConstructibleObject) == 0x88);

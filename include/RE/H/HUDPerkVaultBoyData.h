@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
-	struct HUDPerkVaultBoyData
+	class HUDPerkVaultBoyData
 	{
 	public:
 		// members

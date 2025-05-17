@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct bhkCollisionQueryResultHandle
+	class bhkCollisionQueryResultHandle
 	{
 	public:
 		// members

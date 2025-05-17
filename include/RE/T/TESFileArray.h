@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
 	class TESFileArray :

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BGSPreloadable.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSImpactDataSet :

@@ -1,5 +1,17 @@
 #pragma once
 
+#include "RE/B/BGSCraftingUseSound.h"
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSEquipType.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BGSMessageIcon.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/M/MagicItem.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESIcon.h"
+#include "RE/T/TESWeightForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) AlchemyItem :

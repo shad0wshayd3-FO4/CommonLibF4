@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct AttackData
+	class AttackData
 	{
 	public:
 		// members

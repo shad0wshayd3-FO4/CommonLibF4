@@ -1,5 +1,17 @@
 #pragma once
 
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSForcedLocRefType.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSNativeTerminalForm.h"
+#include "RE/B/BGSNavmeshableObject.h"
+#include "RE/B/BGSOpenCloseForm.h"
+#include "RE/B/BGSPropertySheet.h"
+#include "RE/T/TESBoundAnimObject.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESMagicTargetForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESObjectACTI :

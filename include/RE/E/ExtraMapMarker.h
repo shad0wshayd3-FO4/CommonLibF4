@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+
 namespace RE
 {
+	class MapMarkerData;
+
 	class __declspec(novtable) ExtraMapMarker :
 		public BSExtraData  // 00
 	{

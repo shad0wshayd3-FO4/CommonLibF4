@@ -1,8 +1,16 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
-	struct BSAnimationGraphVariableCache
+	class AnimVariableCacheInfo;
+	class BShkbAnimationGraph;
+	class BSSpinLock;
+	class hkbVariableValue;
+
+	class BSAnimationGraphVariableCache
 	{
 	public:
 		// members

@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/I/INPUT_DEVICE.h"
+#include "RE/I/INPUT_EVENT_TYPE.h"
+
 namespace RE
 {
+	class IDEvent;
+
 	class __declspec(novtable) InputEvent
 	{
 	public:

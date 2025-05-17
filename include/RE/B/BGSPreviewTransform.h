@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSPreviewTransform :

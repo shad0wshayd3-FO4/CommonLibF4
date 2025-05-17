@@ -1,5 +1,9 @@
 #include "RE/P/PlayerCharacter.h"
 
+#include "RE/B/BGSEntryPoint.h"
+#include "RE/C/Calendar.h"
+#include "RE/S/Setting.h"
+
 namespace RE
 {
 	void PlayerCharacter::LockOutOfTerminal(ObjectRefHandle a_handle)

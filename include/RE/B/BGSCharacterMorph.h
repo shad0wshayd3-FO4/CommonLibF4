@@ -1,10 +1,26 @@
 #pragma once
 
+#include "RE/B/BGSCharacterTint.h"
+#include "RE/B/BGSHeadPart.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	namespace BGSCharacterMorph
 	{
-		struct BONE_MODIFIER_MIN_MAX
+		class BoneBaseScales
+		{
+		public:
+			// members
+			NiPoint3 scales[3];  // 00
+		};
+		static_assert(sizeof(BoneBaseScales) == 0x24);
+
+		class BONE_MODIFIER_MIN_MAX
 		{
 		public:
 			// members
@@ -15,13 +31,33 @@ namespace RE
 		};
 		static_assert(sizeof(BONE_MODIFIER_MIN_MAX) == 0x10);
 
-		struct BoneBaseScales
+		class Slider
 		{
 		public:
 			// members
-			NiPoint3 scales[3];  // 00
+			BSFixedString       morphNames[2];  // 00
+			const std::uint32_t uniqueID;       // 10
 		};
-		static_assert(sizeof(BoneBaseScales) == 0x24);
+		static_assert(sizeof(Slider) == 0x18);
+
+		class Transform
+		{
+		public:
+			// members
+			NiPoint3 position;  // 00
+			NiPoint3 rotation;  // 0C
+			NiPoint3 scale;     // 18
+		};
+		static_assert(sizeof(Transform) == 0x24);
+
+		class TransformMinMax
+		{
+		public:
+			// members
+			Transform minima;  // 00
+			Transform maxima;  // 24
+		};
+		static_assert(sizeof(TransformMinMax) == 0x48);
 
 		class FacialBoneRegion
 		{
@@ -38,18 +74,7 @@ namespace RE
 		};
 		static_assert(sizeof(FacialBoneRegion) == 0x90);
 
-		struct Group
-		{
-		public:
-			// members
-			BSFixedString           name;          // 00
-			BSTArray<Preset>        presets;       // 08
-			BSTArray<std::uint32_t> sliders;       // 20
-			std::uint16_t           presetMaskID;  // 38
-		};
-		static_assert(sizeof(Group) == 0x40);
-
-		struct Preset
+		class Preset
 		{
 		public:
 			// members
@@ -61,32 +86,15 @@ namespace RE
 		};
 		static_assert(sizeof(Preset) == 0x20);
 
-		struct Slider
+		class Group
 		{
 		public:
 			// members
-			BSFixedString       morphNames[2];  // 00
-			const std::uint32_t uniqueID;       // 10
+			BSFixedString           name;          // 00
+			BSTArray<Preset>        presets;       // 08
+			BSTArray<std::uint32_t> sliders;       // 20
+			std::uint16_t           presetMaskID;  // 38
 		};
-		static_assert(sizeof(Slider) == 0x18);
-
-		struct Transform
-		{
-		public:
-			// members
-			NiPoint3 position;  // 00
-			NiPoint3 rotation;  // 0C
-			NiPoint3 scale;     // 18
-		};
-		static_assert(sizeof(Transform) == 0x24);
-
-		struct TransformMinMax
-		{
-		public:
-			// members
-			Transform minima;  // 00
-			Transform maxima;  // 24
-		};
-		static_assert(sizeof(TransformMinMax) == 0x48);
+		static_assert(sizeof(Group) == 0x40);
 	}
 }

@@ -2,8 +2,6 @@
 
 namespace RE
 {
-	class Actor;
-
 	namespace BGSEntryPoint
 	{
 		enum class ENTRY_POINT : std::uint32_t
@@ -172,7 +170,7 @@ namespace RE
 		inline void HandleEntryPoint(ENTRY_POINT a_entryPoint, Actor* a_perkOwner, Args... a_args)
 		{
 			using func_t = decltype(&BGSEntryPoint::HandleEntryPoint<Args...>);
-			static REL::Relocation<func_t> func{ REL::ID(2206243) };
+			static REL::Relocation<func_t> func{ ID::BGSEntryPoint::HandleEntryPoint };
 			return func(a_entryPoint, a_perkOwner, a_args...);
 		}
 	}

@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+
 namespace RE
 {
-	struct INSTANCE_FILTER
+	class INSTANCE_FILTER
 	{
 	public:
 		// members

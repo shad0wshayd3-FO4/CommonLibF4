@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSEquipType :
@@ -17,5 +19,4 @@ namespace RE
 		BGSEquipSlot* equipSlot;  // 08
 	};
 	static_assert(sizeof(BGSEquipType) == 0x10);
-
 }

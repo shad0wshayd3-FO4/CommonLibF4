@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/F/FACTION_CRIME_DATA_VALUES.h"
+
 namespace RE
 {
-	struct FACTION_CRIME_DATA
+	class FACTION_CRIME_DATA
 	{
 	public:
 		// members
@@ -12,7 +14,7 @@ namespace RE
 		TESObjectREFR*            factionPlayerInventoryContainer;  // 18
 		BGSListForm*              crimeGroup;                       // 20
 		BGSOutfit*                jailOutfit;                       // 28
-		FACTION_CRIME_DATA_VALUES crimevalues;                      // 30
+		FACTION_CRIME_DATA_VALUES crimeValues;                      // 30
 	};
 	static_assert(sizeof(FACTION_CRIME_DATA) == 0x48);
 }

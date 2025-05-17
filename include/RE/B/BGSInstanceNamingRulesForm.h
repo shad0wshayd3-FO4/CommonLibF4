@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
+	class BGSInstanceNamingRules;
+
 	class __declspec(novtable) BGSInstanceNamingRulesForm :
 		public BaseFormComponent  // 00
 	{

@@ -1,7 +1,19 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/S/SCRIPT_HEADER.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	enum class COMPILER_NAME;
+	class SCRIPT_FUNCTION;
+	class SCRIPT_PARAMETER;
+	class SCRIPT_REFERENCED_OBJECT;
+	class ScriptCompiler;
+	class ScriptLocals;
+	class ScriptVariable;
+
 	class __declspec(novtable) Script :
 		public TESForm  // 00
 	{
@@ -15,50 +27,28 @@ namespace RE
 		{
 			static_assert((std::is_pointer_v<Args> && ...), "arguments must all be pointers");
 			using func_t = bool(const SCRIPT_PARAMETER*, const char*, std::uint32_t&, TESObjectREFR*, TESObjectREFR*, Script*, ScriptLocals*, ...);
-			static REL::Relocation<func_t> func{ REL::ID(2204298) };
+			static REL::Relocation<func_t> func{ ID::Script::ParseParameters };
 			return func(a_parameters, a_compiledParams, a_offset, a_refObject, a_container, a_script, a_scriptLocals, a_args...);
 		}
 
 		void CompileAndRun(ScriptCompiler* a_compiler, COMPILER_NAME a_compilerIndex, TESObjectREFR* a_ownerObject)
 		{
 			using func_t = decltype(&Script::CompileAndRun);
-			static REL::Relocation<func_t> func{ REL::ID(2204287) };
+			static REL::Relocation<func_t> func{ ID::Script::CompileAndRun };
 			return func(this, a_compiler, a_compilerIndex, a_ownerObject);
 		}
 
 		static bool GetProcessScripts()
 		{
 			using func_t = decltype(&Script::GetProcessScripts);
-			static REL::Relocation<func_t> func{ REL::ID(2204310) };
+			static REL::Relocation<func_t> func{ ID::Script::GetProcessScripts };
 			return func();
-		}
-
-		static SCRIPT_FUNCTION* LocateConsoleCommand(const std::string_view a_longName)
-		{
-			for (auto& command : SCRIPT_FUNCTION::GetConsoleFunctions()) {
-				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
-					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
-						return std::addressof(command);
-			}
-
-			return nullptr;
-		}
-
-		static SCRIPT_FUNCTION* LocateScriptCommand(const std::string_view a_longName)
-		{
-			for (auto& command : SCRIPT_FUNCTION::GetScriptFunctions()) {
-				if (command.functionName && std::strlen(command.functionName) == a_longName.size())
-					if (_strnicmp(command.functionName, a_longName.data(), a_longName.size()) == 0)
-						return std::addressof(command);
-			}
-
-			return nullptr;
 		}
 
 		static void SetProcessScripts(bool a_processScripts)
 		{
 			using func_t = decltype(&Script::SetProcessScripts);
-			static REL::Relocation<func_t> func{ REL::ID(2204309) };
+			static REL::Relocation<func_t> func{ ID::Script::SetProcessScripts };
 			return func(a_processScripts);
 		}
 

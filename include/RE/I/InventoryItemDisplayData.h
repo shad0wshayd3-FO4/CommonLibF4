@@ -1,8 +1,13 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/I/InventoryUserUIInterfaceEntry.h"
+#include "Scaleform/G/GFx_Value.h"
+
 namespace RE
 {
-	struct InventoryItemDisplayData
+	class InventoryItemDisplayData
 	{
 	public:
 		InventoryItemDisplayData(
@@ -40,7 +45,7 @@ namespace RE
 			const InventoryUserUIInterfaceEntry& a_entry)
 		{
 			using func_t = decltype(&InventoryItemDisplayData::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(2222612) };
+			static REL::Relocation<func_t> func{ ID::InventoryItemDisplayData::ctor };
 			return func(this, a_inventoryRef, a_entry);
 		}
 	};

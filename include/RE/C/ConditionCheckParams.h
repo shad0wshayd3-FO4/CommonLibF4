@@ -2,7 +2,10 @@
 
 namespace RE
 {
-	struct ConditionCheckParams
+	class BGSPackageDataList;
+	class BGSStoryEvent;
+
+	class ConditionCheckParams
 	{
 	public:
 		// members

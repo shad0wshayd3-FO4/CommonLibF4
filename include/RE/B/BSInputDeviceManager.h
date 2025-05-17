@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTSingleton.h"
+#include "RE/I/INPUT_DEVICE.h"
+
 namespace RE
 {
+	class BSInputDevice;
+
 	class BSInputDeviceManager :
 		public BSTSingletonSDM<BSInputDeviceManager>  // 00
 	{
@@ -19,7 +24,7 @@ namespace RE
 
 		[[nodiscard]] static BSInputDeviceManager* GetSingleton()
 		{
-			static REL::Relocation<BSInputDeviceManager**> singleton{ REL::ID(1284221) };
+			static REL::Relocation<BSInputDeviceManager**> singleton{ ID::BSInputDeviceManager::Singleton };
 			return *singleton;
 		}
 

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct PATH_DATA
+	class PATH_DATA
 	{
 	public:
 		// members

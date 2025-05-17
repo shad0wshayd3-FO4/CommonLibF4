@@ -1,7 +1,223 @@
 #pragma once
 
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
+	class BSTArrayHeapAllocator
+	{
+	public:
+		using size_type = std::uint32_t;
+		using difference_type = std::ptrdiff_t;
+		using propagate_on_container_move_assignment = std::true_type;
+
+		BSTArrayHeapAllocator() noexcept = default;
+		BSTArrayHeapAllocator(const BSTArrayHeapAllocator&) = delete;
+
+		BSTArrayHeapAllocator(BSTArrayHeapAllocator&& a_rhs) noexcept :
+			_data{ std::exchange(a_rhs._data, nullptr) },
+			_capacity{ std::exchange(a_rhs._capacity, 0) }
+		{}
+
+		~BSTArrayHeapAllocator() noexcept = default;
+
+		BSTArrayHeapAllocator& operator=(const BSTArrayHeapAllocator&) = delete;
+
+		BSTArrayHeapAllocator& operator=(BSTArrayHeapAllocator&& a_rhs) noexcept
+		{
+			if (this != std::addressof(a_rhs)) {
+				_data = std::exchange(a_rhs._data, nullptr);
+				_capacity = std::exchange(a_rhs._capacity, 0);
+			}
+			return *this;
+		}
+
+		[[nodiscard]] void* allocate(uint32_t a_bytes) { return malloc(a_bytes); }
+		void                deallocate(void* a_ptr) { free(a_ptr); }
+
+		[[nodiscard]] void*       data() noexcept { return _data; }
+		[[nodiscard]] const void* data() const noexcept { return _data; }
+		void                      set_data(void* a_data) noexcept { _data = a_data; }
+
+		[[nodiscard]] size_type capacity() const noexcept { return _capacity; }
+		void                    set_capacity(size_type a_capacity, size_type) noexcept { _capacity = a_capacity; }
+
+	private:
+		// members
+		void*     _data{ nullptr };  // 00
+		size_type _capacity{ 0 };    // 08
+	};
+
+	template <std::uint32_t N>
+	class BSTAlignedHeapArrayAllocator
+	{
+	public:
+		class Allocator
+		{
+		public:
+			using size_type = std::uint32_t;
+			using difference_type = std::ptrdiff_t;
+			using propagate_on_container_move_assignment = std::true_type;
+
+			Allocator() noexcept = default;
+			Allocator(const Allocator&) = delete;
+
+			Allocator(Allocator&& a_rhs) noexcept :
+				_data{ std::exchange(a_rhs._data, nullptr) },
+				_capacity{ std::exchange(a_rhs._capacity, 0) }
+			{}
+
+			~Allocator() noexcept = default;
+
+			Allocator& operator=(const Allocator&) = delete;
+
+			Allocator& operator=(Allocator&& a_rhs) noexcept
+			{
+				if (this != std::addressof(a_rhs)) {
+					_data = std::exchange(a_rhs._data, nullptr);
+					_capacity = std::exchange(a_rhs._capacity, 0);
+				}
+				return *this;
+			}
+
+			[[nodiscard]] void* allocate(uint32_t a_bytes) { return aligned_alloc(N, a_bytes); }
+			void                deallocate(void* a_ptr) { aligned_free(a_ptr); }
+
+			[[nodiscard]] void*       data() noexcept { return _data; }
+			[[nodiscard]] const void* data() const noexcept { return _data; }
+			void                      set_data(void* a_data) noexcept { _data = a_data; }
+
+			[[nodiscard]] size_type capacity() const noexcept { return _capacity; }
+			void                    set_capacity(size_type a_capacity, size_type) noexcept { _capacity = a_capacity; }
+
+		private:
+			void*     _data{ nullptr };  // 00
+			size_type _capacity{ 0 };    // 08
+		};
+	};
+
+	extern template class BSTAlignedHeapArrayAllocator<0x10>::Allocator;
+
+	template <std::uint32_t N>
+	class BSTSmallArrayHeapAllocator
+	{
+	public:
+		using size_type = std::uint32_t;
+		using difference_type = std::ptrdiff_t;
+		using propagate_on_container_move_assignment = std::false_type;
+
+		BSTSmallArrayHeapAllocator() noexcept = default;
+		BSTSmallArrayHeapAllocator(const BSTSmallArrayHeapAllocator&) = delete;
+		BSTSmallArrayHeapAllocator(BSTSmallArrayHeapAllocator&&) = delete;
+
+		~BSTSmallArrayHeapAllocator() noexcept = default;
+
+		BSTSmallArrayHeapAllocator& operator=(const BSTSmallArrayHeapAllocator&) = delete;
+		BSTSmallArrayHeapAllocator& operator=(BSTSmallArrayHeapAllocator&&) = delete;
+
+		[[nodiscard]] void* allocate(uint32_t a_bytes)
+		{
+			if (a_bytes > N) {
+				return malloc(a_bytes);
+			} else {
+				return _stack;
+			}
+		}
+
+		void deallocate(void* a_ptr)
+		{
+			if (a_ptr != _stack) {
+				free(a_ptr);
+			}
+		}
+
+		[[nodiscard]] void*       data() noexcept { return _local ? _stack : _heap; }
+		[[nodiscard]] const void* data() const noexcept { return _local ? _stack : _heap; }
+
+		void set_data(void* a_data) noexcept
+		{
+			if (a_data != _stack) {
+				_heap = a_data;
+			}
+		}
+
+		[[nodiscard]] size_type capacity() const noexcept { return _capacity; }
+
+		void set_capacity(size_type a_capacity, size_type a_bytes) noexcept
+		{
+			_local = a_bytes <= N ? true : false;
+			_capacity = a_capacity;
+		}
+
+	private:
+		// members
+		size_type _capacity: 31 { 0 };  // 00:00
+		size_type _local: 1 { 0 };      // 00:31
+		union
+		{
+			void*     _heap{ nullptr };
+			std::byte _stack[N];
+		};  // 08
+	};
+
+	class BSScrapArrayAllocator
+	{
+	public:
+		using size_type = std::uint32_t;
+		using difference_type = std::ptrdiff_t;
+		using propagate_on_container_move_assignment = std::false_type;
+
+		BSScrapArrayAllocator() noexcept = default;
+		BSScrapArrayAllocator(const BSScrapArrayAllocator&) = delete;
+		BSScrapArrayAllocator(BSScrapArrayAllocator&&) = delete;
+
+		~BSScrapArrayAllocator() noexcept = default;
+
+		BSScrapArrayAllocator& operator=(const BSScrapArrayAllocator&) = delete;
+		BSScrapArrayAllocator& operator=(BSScrapArrayAllocator&&) = delete;
+
+		[[nodiscard]] void* allocate(uint32_t a_bytes)
+		{
+			if (!_allocator) {
+				auto& heap = MemoryManager::GetSingleton();
+				_allocator = heap.GetThreadScrapHeap();
+			}
+
+			if (!_allocator) {
+				stl::report_and_fail("failed to get thread scrap heap"sv);
+			}
+
+			const auto mem = _allocator->Allocate(a_bytes, alignof(void*));
+			if (!mem) {
+				stl::report_and_fail("failed to handle allocation request"sv);
+			} else {
+				return mem;
+			}
+		}
+
+		void deallocate(void* a_ptr)
+		{
+			if (_allocator) {
+				_allocator->Deallocate(a_ptr);
+			} else {
+				stl::report_and_fail("failed to deallocate block"sv);
+			}
+		}
+
+		[[nodiscard]] void*       data() noexcept { return _data; }
+		[[nodiscard]] const void* data() const noexcept { return _data; }
+		void                      set_data(void* a_data) noexcept { _data = a_data; }
+
+		[[nodiscard]] size_type capacity() const noexcept { return _capacity; }
+		void                    set_capacity(size_type a_capacity, size_type) noexcept { _capacity = a_capacity; }
+
+	private:
+		// members
+		ScrapHeap* _allocator{ nullptr };  // 00
+		void*      _data{ nullptr };       // 08
+		size_type  _capacity{ 0 };         // 10
+	};
+
 	template <
 		class T,
 		class Allocator = BSTArrayHeapAllocator>
@@ -380,4 +596,115 @@ namespace RE
 			using is_array = std::true_type;
 		};
 	}
+
+	template <class T>
+	class BSStaticArray
+	{
+	public:
+		using value_type = T;
+		using size_type = std::uint32_t;
+		using pointer = value_type*;
+		using const_pointer = const value_type*;
+		using reference = value_type&;
+		using const_reference = const value_type&;
+		using iterator = pointer;
+		using const_iterator = const_pointer;
+
+		[[nodiscard]] reference operator[](size_type a_pos) noexcept
+		{
+			assert(a_pos < _size);
+			return _data[a_pos];
+		}
+
+		[[nodiscard]] const_reference operator[](size_type a_pos) const noexcept
+		{
+			assert(a_pos < _size);
+			return _data[a_pos];
+		}
+
+		[[nodiscard]] reference       front() noexcept { return operator[](0); }
+		[[nodiscard]] const_reference front() const noexcept { return operator[](0); }
+
+		[[nodiscard]] reference       back() noexcept { return operator[](size() - 1); }
+		[[nodiscard]] const_reference back() const noexcept { return operator[](size() - 1); }
+
+		[[nodiscard]] pointer       data() noexcept { return _data; }
+		[[nodiscard]] const_pointer data() const noexcept { return _data; }
+
+		[[nodiscard]] iterator       begin() noexcept { return empty() ? nullptr : data(); }
+		[[nodiscard]] const_iterator begin() const noexcept { return empty() ? nullptr : data(); }
+		[[nodiscard]] const_iterator cbegin() const noexcept { return begin(); }
+
+		[[nodiscard]] iterator       end() noexcept { return empty() ? nullptr : data() + size(); }
+		[[nodiscard]] const_iterator end() const noexcept { return empty() ? nullptr : data() + size(); }
+		[[nodiscard]] const_iterator cend() const noexcept { return end(); }
+
+		[[nodiscard]] bool empty() const noexcept { return size() == 0; }
+
+		[[nodiscard]] size_type size() const noexcept { return _size; }
+
+	private:
+		// members
+		pointer       _data{ nullptr };  // 00
+		std::uint32_t _size{ 0 };        // 08
+	};
+
+	template <class T>
+	class BSTSmallSharedArray
+	{
+	public:
+		using value_type = T;
+		using size_type = std::uint32_t;
+		using pointer = value_type*;
+		using const_pointer = const value_type*;
+		using reference = value_type&;
+		using const_reference = const value_type&;
+		using iterator = pointer;
+		using const_iterator = const_pointer;
+
+		~BSTSmallSharedArray() { stl::report_and_fail("unimplemented"sv); }
+
+		[[nodiscard]] reference operator[](size_type a_pos) noexcept
+		{
+			assert(a_pos < _size);
+			return data()[a_pos];
+		}
+
+		[[nodiscard]] const_reference operator[](size_type a_pos) const noexcept
+		{
+			assert(a_pos < _size);
+			return data()[a_pos];
+		}
+
+		[[nodiscard]] pointer data() noexcept
+		{
+			return size() > 1 ? heap : std::addressof(local);
+		}
+
+		[[nodiscard]] const_pointer data() const noexcept
+		{
+			return size() > 1 ? heap : std::addressof(local);
+		}
+
+		[[nodiscard]] iterator       begin() noexcept { return data(); }
+		[[nodiscard]] const_iterator begin() const noexcept { return data(); }
+		[[nodiscard]] const_iterator cbegin() const noexcept { return begin(); }
+
+		[[nodiscard]] iterator       end() noexcept { return data() + size(); }
+		[[nodiscard]] const_iterator end() const noexcept { return data() + size(); }
+		[[nodiscard]] const_iterator cend() const noexcept { return end(); }
+
+		[[nodiscard]] bool empty() const noexcept { return size() != 0; }
+
+		[[nodiscard]] size_type size() const noexcept { return _size; }
+
+	private:
+		// members
+		std::uint32_t _size{ 0 };  // 00
+		union
+		{
+			pointer    heap{ 0 };
+			value_type local;
+		};  // 08
+	};
 }

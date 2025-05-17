@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/C/ContainerItemExtra.h"
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	class ContainerObject
@@ -9,14 +12,14 @@ namespace RE
 			count(a_count),
 			obj(a_obj),
 			itemExtra()
-		{
-		}
+		{}
+
 		ContainerObject(TESBoundObject* a_obj, std::int32_t a_count, TESForm* a_ownerForm) :
 			count(a_count),
 			obj(a_obj),
 			itemExtra(new ContainerItemExtra(a_ownerForm))
-		{
-		}
+		{}
+
 		~ContainerObject() = default;
 
 		F4_HEAP_REDEFINE_NEW(ContainerObject);

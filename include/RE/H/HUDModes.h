@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/H/HUDModeType.h"
+
 namespace RE
 {
+	enum class POWER_ARMOR_HUD_VISIBILITY_RULE;
+
 	class HUDModes
 	{
 	public:

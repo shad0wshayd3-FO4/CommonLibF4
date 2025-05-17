@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/I/ImageSpaceBaseData.h"
+
 namespace RE
 {
-	struct ImageSpaceModData
+	class ImageSpaceModData
 	{
 	public:
 		// members

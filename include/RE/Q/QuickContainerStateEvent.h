@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/Q/QuickContainerStateData.h"
+
 namespace RE
 {
 	class QuickContainerStateEvent :

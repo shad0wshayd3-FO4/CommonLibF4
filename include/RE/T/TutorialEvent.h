@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
 	class TutorialEvent
@@ -10,5 +12,4 @@ namespace RE
 		const BGSMessage* assocMsg;   // 08
 	};
 	static_assert(sizeof(TutorialEvent) == 0x10);
-
 }

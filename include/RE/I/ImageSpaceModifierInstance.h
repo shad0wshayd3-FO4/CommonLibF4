@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/N/NiObject.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class ImageSpaceModifierInstanceForm;
+	class NiAVObject;
+
 	class ImageSpaceModifierInstance :
 		public NiObject  // 00
 	{
@@ -30,7 +36,7 @@ namespace RE
 		void Stop()
 		{
 			using func_t = decltype(&ImageSpaceModifierInstance::Stop);
-			static REL::Relocation<func_t> func{ REL::ID(2199897) };
+			static REL::Relocation<func_t> func{ ID::ImageSpaceModifierInstance::Stop };
 			return func(this);
 		}
 

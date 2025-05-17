@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/N/NiMatrix3.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/P/Projectile.h"
+
 namespace RE
 {
+	enum class ImpactResult;
+	class bhkNPCollisionObject;
+
 	class __declspec(novtable) MissileProjectile :
 		public Projectile  // 000
 	{

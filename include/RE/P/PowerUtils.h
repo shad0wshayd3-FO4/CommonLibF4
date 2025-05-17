@@ -1,10 +1,14 @@
 #pragma once
 
+#include "RE/B/BSCRC32.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+
 namespace RE
 {
 	namespace PowerUtils
 	{
-		struct GridConnection
+		class GridConnection
 		{
 		public:
 			~GridConnection() noexcept {}  // NOLINT(modernize-use-equals-default)
@@ -15,7 +19,7 @@ namespace RE
 		};
 		static_assert(sizeof(GridConnection) == 0x8);
 
-		struct GridSaveLoadData
+		class GridSaveLoadData
 		{
 		public:
 			// members

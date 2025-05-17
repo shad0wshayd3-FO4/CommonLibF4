@@ -1,8 +1,12 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct LOADED_REF_DATA
+	class NiAVObject;
+
+	class LOADED_REF_DATA
 	{
 	public:
 		// members

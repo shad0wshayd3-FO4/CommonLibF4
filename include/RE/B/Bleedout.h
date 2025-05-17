@@ -4,9 +4,11 @@ namespace RE
 {
 	namespace Bleedout
 	{
-		struct Event
+		class Event
 		{
-			Actor* actorBleedingOut;
+		public:
+			// members
+			Actor* actorBleedingOut;  // 00
 		};
 		static_assert(sizeof(Event) == 0x8);
 	}

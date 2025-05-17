@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
+	class NiObject;
+
 	class NiCloningProcess
 	{
 	public:

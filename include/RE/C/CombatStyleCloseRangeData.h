@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct CombatStyleCloseRangeData
+	class CombatStyleCloseRangeData
 	{
 	public:
 		// members

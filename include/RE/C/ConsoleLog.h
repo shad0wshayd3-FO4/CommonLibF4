@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
 	class ConsoleLog :
@@ -8,14 +11,14 @@ namespace RE
 	public:
 		[[nodiscard]] static ConsoleLog* GetSingleton()
 		{
-			static REL::Relocation<ConsoleLog**> ptr{ REL::ID(2690148) };
+			static REL::Relocation<ConsoleLog**> ptr{ ID::ConsoleLog::Singleton };
 			return *ptr;
 		}
 
 		void AddString(char const* a_str)
 		{
 			using func_t = decltype(&ConsoleLog::AddString);
-			static REL::Relocation<func_t> func{ REL::ID(2248593) };
+			static REL::Relocation<func_t> func{ ID::ConsoleLog::AddString };
 			return func(this, a_str);
 		}
 
@@ -32,7 +35,7 @@ namespace RE
 		void Print(const char* a_fmt, std::va_list a_args)
 		{
 			using func_t = decltype(&ConsoleLog::Print);
-			static REL::Relocation<func_t> func{ REL::ID(2248591) };
+			static REL::Relocation<func_t> func{ ID::ConsoleLog::Print };
 			func(this, a_fmt, a_args);
 		}
 
@@ -50,8 +53,8 @@ namespace RE
 		}
 
 		// members
-		BSStringT<char> buffer;             // 08
-		bool            useConsoleOverlay;  // 18
+		BSString buffer;             // 08
+		bool     useConsoleOverlay;  // 18
 	};
 	static_assert(sizeof(ConsoleLog) == 0x20);
 }

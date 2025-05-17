@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSIReverbType.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSReverbParameters :
@@ -11,7 +14,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSReverbParameters };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kREVB };
 
-		struct ReverbParams
+		class ReverbParams
 		{
 		public:
 			// members

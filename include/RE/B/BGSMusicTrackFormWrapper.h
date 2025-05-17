@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSIMusicTrack.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class BGSMusicTrack;
+
 	class __declspec(novtable) BGSMusicTrackFormWrapper :
 		public TESForm,       // 00
 		public BSIMusicTrack  // 20

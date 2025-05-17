@@ -1,13 +1,16 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
-	struct TESCellFullyLoadedEvent
+	class TESCellFullyLoadedEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESCellFullyLoadedEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESCellFullyLoadedEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2201824) };
+			static REL::Relocation<func_t> func{ ID::TESCellFullyLoadedEvent::GetEventSource };
 			return func();
 		}
 

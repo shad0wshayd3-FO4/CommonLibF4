@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/P/Projectile.h"
+
 namespace RE
 {
 	class __declspec(novtable) BarrierProjectile :
@@ -10,7 +14,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BarrierProjectile };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kPBAR };
 
-		struct CollisionData
+		class CollisionData
 		{
 		public:
 			// members

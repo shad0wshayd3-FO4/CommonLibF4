@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
+	class AnimationDataCleanupEvent;
+	class AnimationDataSetupEvent;
+	class BGSSynchronizedAnimationInstance;
+
 	class __declspec(novtable) BGSSynchronizedAnimationManager :
 		public BSTEventSink<AnimationDataSetupEvent>,            // 00
 		public BSTEventSink<AnimationDataCleanupEvent>,          // 08
@@ -19,14 +29,14 @@ namespace RE
 
 		[[nodiscard]] static BGSSynchronizedAnimationManager* GetSingleton()
 		{
-			static REL::Relocation<BGSSynchronizedAnimationManager**> singleton{ REL::ID(2690996) };
+			static REL::Relocation<BGSSynchronizedAnimationManager**> singleton{ ID::BGSSynchronizedAnimationManager::Singleton };
 			return *singleton;
 		}
 
 		[[nodiscard]] bool IsReferenceInSynchronizedScene(ObjectRefHandle a_ref)
 		{
 			using func_t = decltype(&BGSSynchronizedAnimationManager::IsReferenceInSynchronizedScene);
-			static REL::Relocation<func_t> func{ REL::ID(2214437) };
+			static REL::Relocation<func_t> func{ ID::BGSSynchronizedAnimationManager::IsReferenceInSynchronizedScene };
 			return func(this, a_ref);
 		}
 

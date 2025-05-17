@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BSSoundHandle.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/N/NiMatrix3.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class NiControllerManager;
+	class NiControllerSequence;
+	class NiNode;
+
 	class __declspec(novtable) LockpickingMenu :
 		public GameMenuBase  // 00
 	{
@@ -26,7 +36,7 @@ namespace RE
 		static void OpenLockpickingMenu(TESObjectREFR* a_lockedRef)
 		{
 			using func_t = decltype(&LockpickingMenu::OpenLockpickingMenu);
-			static REL::Relocation<func_t> func{ REL::ID(129892) };
+			static REL::Relocation<func_t> func{ ID::LockpickingMenu::OpenLockpickingMenu };
 			return func(a_lockedRef);
 		}
 

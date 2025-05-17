@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/InventoryUserUIInterface.h"
+
 namespace RE
 {
 	class __declspec(novtable) BarterMenuTentativeInventoryUIInterface :

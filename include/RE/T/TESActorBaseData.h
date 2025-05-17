@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/A/ACTOR_BASE_DATA.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BaseFormComponent.h"
+#include "RE/F/FACTION_RANK.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESActorBaseData :
@@ -35,7 +40,7 @@ namespace RE
 		std::uint16_t GetLevel() const
 		{
 			using func_t = decltype(&TESActorBaseData::GetLevel);
-			static REL::Relocation<func_t> func{ REL::ID(2192891) };
+			static REL::Relocation<func_t> func{ ID::TESActorBaseData::GetLevel };
 			return func(this);
 		}
 

@@ -2,10 +2,12 @@
 
 namespace RE
 {
-	struct BSPreCulledObjects
+	class NiAVObject;
+
+	class BSPreCulledObjects
 	{
 	public:
-		struct ObjectRecord
+		class ObjectRecord
 		{
 		public:
 			// members

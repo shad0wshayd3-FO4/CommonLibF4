@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/E/EaseOutInterpolator.h"
+#include "RE/G/GetCurrentPositionFunctor.h"
+
 namespace RE
 {
 	template <

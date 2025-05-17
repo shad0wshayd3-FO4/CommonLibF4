@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiNode.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTransform.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSFlattenedBoneTree :
@@ -10,8 +16,9 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BSFlattenedBoneTree };
 		static constexpr auto Ni_RTTI{ Ni_RTTI::BSFlattenedBoneTree };
 
-		struct FlattenedBone
+		class FlattenedBone
 		{
+		public:
 			NiTransform       local;
 			NiTransform       world;
 			std::int16_t      parent;
@@ -26,8 +33,7 @@ namespace RE
 
 		BSFlattenedBoneTree() :
 			NiNode(0)
-		{
-		}
+		{}
 
 		explicit BSFlattenedBoneTree(std::uint32_t a_numChildren) :
 			NiNode(a_numChildren)

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESSpellList :
@@ -9,7 +11,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::TESSpellList };
 		static constexpr auto VTABLE{ VTABLE::TESSpellList };
 
-		struct SpellData
+		class SpellData
 		{
 		public:
 			SpellData() :
@@ -19,8 +21,8 @@ namespace RE
 				numSpells(0),
 				numLevSpells(0),
 				numShouts(0)
-			{
-			}
+			{}
+
 			~SpellData() = default;
 
 			F4_HEAP_REDEFINE_NEW(SpellData);
@@ -130,7 +132,7 @@ namespace RE
 		bool AddSpell(TESForm* a_spell)
 		{
 			using func_t = decltype(&TESSpellList::AddSpell);
-			static REL::Relocation<func_t> func{ REL::ID(1312083) };
+			static REL::Relocation<func_t> func{ ID::TESSpellList::AddSpell };
 			return func(this, a_spell);
 		}
 

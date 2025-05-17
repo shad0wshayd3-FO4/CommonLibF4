@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/T/TESCondition.h"
+
 namespace RE
 {
-	struct MESSAGEBOX_BUTTON
+	class MESSAGEBOX_BUTTON
 	{
 	public:
 		// members

@@ -1,13 +1,16 @@
 #pragma once
 
+#include "RE/D/DEFAULT_OBJECT_TYPE.h"
+#include "RE/E/ENUM_FORM_ID.h"
+
 namespace RE
 {
-	struct DEFAULT_OBJECT_DATA
+	class DEFAULT_OBJECT_DATA
 	{
 	public:
 		[[nodiscard]] static std::span<DEFAULT_OBJECT_DATA, 394> GetDefaultObjectData()
 		{
-			static REL::Relocation<DEFAULT_OBJECT_DATA(*)[394]> data{ REL::ID(838886) };
+			static REL::Relocation<DEFAULT_OBJECT_DATA(*)[394]> data{ ID::DEFAULT_OBJECT_DATA::GetDefaultObjectData };
 			return { *data };
 		}
 

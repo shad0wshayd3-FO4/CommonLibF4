@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSInventoryItem.h"
+
 namespace RE
 {
 	class __declspec(novtable) ApplyChangesFunctor :
@@ -13,7 +15,7 @@ namespace RE
 		virtual void WriteDataImpl(TESBoundObject& a_baseObj, BGSInventoryItem::Stack& a_stack) override  // 01
 		{
 			using func_t = decltype(&ApplyChangesFunctor::WriteDataImpl);
-			static REL::Relocation<func_t> func{ REL::ID(2223194) };
+			static REL::Relocation<func_t> func{ ID::ApplyChangesFunctor::WriteDataImpl };
 			return func(this, a_baseObj, a_stack);
 		}
 

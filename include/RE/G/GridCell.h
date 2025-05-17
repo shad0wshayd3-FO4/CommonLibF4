@@ -2,8 +2,11 @@
 
 namespace RE
 {
-	struct GridCell
+	class GridCell
 	{
-		TESObjectCELL* cell;
+	public:
+		// members
+		TESObjectCELL* cell;  // 00
 	};
+	static_assert(sizeof(GridCell) == 0x08);
 }

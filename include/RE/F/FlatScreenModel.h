@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
+	class UIAdvanceMenusFunctionCompleteEvent;
+
 	class __declspec(novtable) FlatScreenModel :
 		public BSTEventSink<UIAdvanceMenusFunctionCompleteEvent>,  // 00
 		public BSTSingletonSDM<FlatScreenModel>                    // 08
@@ -12,7 +18,7 @@ namespace RE
 
 		[[nodiscard]] static FlatScreenModel* GetSingleton()
 		{
-			static REL::Relocation<FlatScreenModel**> singleton{ REL::ID(847741) };
+			static REL::Relocation<FlatScreenModel**> singleton{ ID::FlatScreenModel::Singleton };
 			return *singleton;
 		}
 

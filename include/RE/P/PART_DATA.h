@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
-	struct PART_DATA
+	class PART_DATA
 	{
 	public:
 		// members

@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class NiColorInterpolator;
+	class NiFloatInterpolator;
+
 	class __declspec(novtable) TESImageSpaceModifier :
 		public TESForm  // 000
 	{
@@ -10,7 +18,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESImageSpaceModifier };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kIMAD };
 
-		struct ImageSpaceModifierData
+		class ImageSpaceModifierData
 		{
 		public:
 			// members
@@ -57,7 +65,7 @@ namespace RE
 		NiPointer<NiFloatInterpolator> depthOfFieldVignetteRadiusInterpolator;    // 2D0
 		NiPointer<NiFloatInterpolator> depthOfFieldVignetteStrengthInterpolator;  // 2D8
 		NiPointer<NiFloatInterpolator> motionBlurStrengthInterpolator;            // 2E0
-		BSStringT<char>                formEditorID;                              // 2E8
+		BSString                       formEditorID;                              // 2E8
 	};
 	static_assert(sizeof(TESImageSpaceModifier) == 0x2F8);
 }

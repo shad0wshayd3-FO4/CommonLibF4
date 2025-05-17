@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
+	class CALCED_OBJECT;
+	class ContainerItemExtra;
+	class LEVELED_OBJECT;
+
 	class __declspec(novtable) TESLeveledList :
 		public BaseFormComponent  // 00
 	{
@@ -27,7 +36,7 @@ namespace RE
 		LEVELED_OBJECT* AddLeveledObject(std::uint16_t a_level, std::uint16_t a_count, std::int8_t a_chanceNone, TESForm* a_item, ContainerItemExtra* a_itemExtra)
 		{
 			using func_t = decltype(&TESLeveledList::AddLeveledObject);
-			static REL::Relocation<func_t> func{ REL::ID(2193258) };
+			static REL::Relocation<func_t> func{ ID::TESLeveledList::AddLeveledObject };
 			return func(this, a_level, a_count, a_chanceNone, a_item, a_itemExtra);
 		}
 
@@ -41,21 +50,21 @@ namespace RE
 			const char*                  a_overrideName = nullptr)
 		{
 			using func_t = decltype(&TESLeveledList::CalculateCurrentFormList);
-			static REL::Relocation<func_t> func{ REL::ID(2193259) };
+			static REL::Relocation<func_t> func{ ID::TESLeveledList::CalculateCurrentFormList };
 			return func(this, a_level, a_count, a_outCont, a_allBelowForce, a_clampToPlayer, a_instanceFilter, a_overrideName);
 		}
 
 		void CalculateCurrentFormListForRef(TESObjectREFR* a_ref, BSScrapArray<CALCED_OBJECT>& a_outCont, bool a_legendary)
 		{
 			using func_t = decltype(&TESLeveledList::CalculateCurrentFormListForRef);
-			static REL::Relocation<func_t> func{ REL::ID(2193260) };
+			static REL::Relocation<func_t> func{ ID::TESLeveledList::CalculateCurrentFormListForRef };
 			return func(this, a_ref, a_outCont, a_legendary);
 		}
 
 		bool GetUseAll()
 		{
 			using func_t = decltype(&TESLeveledList::GetUseAll);
-			static REL::Relocation<func_t> func{ REL::ID(2193253) };
+			static REL::Relocation<func_t> func{ ID::TESLeveledList::GetUseAll };
 			return func(this);
 		}
 

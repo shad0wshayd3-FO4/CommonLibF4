@@ -2,14 +2,16 @@
 
 namespace RE
 {
+	class ActiveEffectList;
+
 	class __declspec(novtable) MagicTarget
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::MagicTarget };
 		static constexpr auto VTABLE{ VTABLE::MagicTarget };
 
-		struct AddTargetData;
-		struct SpellDispelData;
+		class AddTargetData;
+		class SpellDispelData;
 
 		// members
 		virtual ~MagicTarget();  // 00
@@ -31,14 +33,14 @@ namespace RE
 		[[nodiscard]] bool IsTakingHealthDamageFromActiveEffect()
 		{
 			using func_t = decltype(&MagicTarget::IsTakingHealthDamageFromActiveEffect);
-			static REL::Relocation<func_t> func{ REL::ID(2226397) };
+			static REL::Relocation<func_t> func{ ID::MagicTarget::IsTakingHealthDamageFromActiveEffect };
 			return func(this);
 		}
 
 		[[nodiscard]] bool IsTakingRadDamageFromActiveEffect()
 		{
 			using func_t = decltype(&MagicTarget::IsTakingRadDamageFromActiveEffect);
-			static REL::Relocation<func_t> func{ REL::ID(2226398) };
+			static REL::Relocation<func_t> func{ ID::MagicTarget::IsTakingRadDamageFromActiveEffect };
 			return func(this);
 		}
 

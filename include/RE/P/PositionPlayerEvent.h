@@ -2,8 +2,9 @@
 
 namespace RE
 {
-	struct PositionPlayerEvent
+	class PositionPlayerEvent
 	{
+	public:
 		enum EVENT_TYPE : std::int32_t
 		{
 			kPrePositionPlayer = 0x0,

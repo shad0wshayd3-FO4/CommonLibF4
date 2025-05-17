@@ -1,16 +1,12 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	class bhkWorld;
-	class NiAVObject;
-	class NiNode;
-	class TESObjectREFR;
-	class TESRace;
-
 	namespace BSAttachTechniques
 	{
-		struct __declspec(novtable) AttachTechniqueInput
+		class __declspec(novtable) AttachTechniqueInput
 		{
 		public:
 			static constexpr auto RTTI{ RTTI::BSAttachTechniques__AttachTechniqueInput };

@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
+	class MESSAGEBOX_BUTTON;
+
 	class __declspec(novtable) BGSMessage :
 		public TESForm,        // 00
 		public TESFullName,    // 20
@@ -15,14 +24,14 @@ namespace RE
 		void AddButton(MESSAGEBOX_BUTTON* btn)
 		{
 			using func_t = decltype(&BGSMessage::AddButton);
-			static REL::Relocation<func_t> func{ REL::ID(236744) };
+			static REL::Relocation<func_t> func{ ID::BGSMessage::AddButton };
 			return func(this, btn);
 		}
 
 		std::uint32_t GetConvertedDescription(BSFixedString& a_result)
 		{
 			using func_t = decltype(&BGSMessage::GetConvertedDescription);
-			static REL::Relocation<func_t> func{ REL::ID(8331) };
+			static REL::Relocation<func_t> func{ ID::BGSMessage::GetConvertedDescription };
 			return func(this, a_result);
 		}
 

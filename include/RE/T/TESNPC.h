@@ -1,7 +1,29 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
+#include "RE/B/BGSCharacterMorph.h"
+#include "RE/B/BGSCharacterTint.h"
+#include "RE/B/BGSForcedLocRefType.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BGSNativeTerminalForm.h"
+#include "RE/B/BGSOverridePackCollection.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NPC_DATA.h"
+#include "RE/N/NiPoint.h"
+#include "RE/P/PerkRankData.h"
+#include "RE/S/SEX.h"
+#include "RE/T/TESActorBase.h"
+#include "RE/T/TESRaceForm.h"
+#include "RE/T/TESSpellList.h"
+
 namespace RE
 {
+	class BGSRelationship;
+	class CreatureSounds;
+	class MenuOpenCloseEvent;
+
 	class __declspec(novtable) TESNPC :
 		public TESActorBase,                     // 000
 		public TESRaceForm,                      // 1B0
@@ -15,7 +37,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESActorBase };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kNPC_ };
 
-		struct HeadRelatedData
+		class HeadRelatedData
 		{
 		public:
 			// members
@@ -50,7 +72,7 @@ namespace RE
 
 		[[nodiscard]] static BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>& GetAlternateHeadPartListMap()
 		{
-			static REL::Relocation<BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>*> map{ REL::ID(2662368), -0x8 };
+			static REL::Relocation<BSTHashMap<const TESNPC*, BSTArray<BGSHeadPart*>>*> map{ ID::TESNPC::AlternateHeadPartListMap, -0x8 };
 			return *map;
 		}
 
@@ -99,7 +121,7 @@ namespace RE
 		[[nodiscard]] SEX GetSex() noexcept
 		{
 			using func_t = decltype(&TESNPC::GetSex);
-			static REL::Relocation<func_t> func{ REL::ID(2207107) };
+			static REL::Relocation<func_t> func{ ID::TESNPC::GetSex };
 			return func(this);
 		}
 
@@ -130,7 +152,7 @@ namespace RE
 		float GetFacialBoneMorphIntensity()
 		{
 			using func_t = decltype(&TESNPC::GetFacialBoneMorphIntensity);
-			static REL::Relocation<func_t> func{ REL::ID(2207416) };
+			static REL::Relocation<func_t> func{ ID::TESNPC::GetFacialBoneMorphIntensity };
 			return func(this);
 		}
 

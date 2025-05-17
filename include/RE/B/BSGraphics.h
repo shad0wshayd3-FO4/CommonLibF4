@@ -1,10 +1,21 @@
 #pragma once
 
+#include "RE/B/BSCriticalSection.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTAtomicValue.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiRect.h"
+#include "RE/N/NiTexture.h"
+
 #include "REX/W32/D3D11.h"
 
 namespace RE
 {
 	class BSD3DResourceCreator;
+	class BSEventFlag;
 	class NiCamera;
 
 	namespace BSGraphics
@@ -58,8 +69,9 @@ namespace RE
 			kWrap_S_Wrap_T = 0x3,
 		};
 
-		struct Buffer
+		class Buffer
 		{
+		public:
 			// members
 			REX::W32::ID3D11Buffer*              buffer;              // 00
 			void*                                data;                // 08
@@ -80,16 +92,23 @@ namespace RE
 		};
 		static_assert(sizeof(Buffer) == 0x50);
 
-		struct VertexBuffer : public Buffer
-		{};
+		class VertexBuffer :
+			public Buffer
+		{
+		public:
+		};
 		static_assert(sizeof(VertexBuffer) == 0x50);
 
-		struct IndexBuffer : public Buffer
-		{};
+		class IndexBuffer :
+			public Buffer
+		{
+		public:
+		};
 		static_assert(sizeof(IndexBuffer) == 0x50);
 
-		struct TextureHeader
+		class TextureHeader
 		{
+		public:
 			// members
 			std::uint16_t height = 0;    // 0
 			std::uint16_t width = 0;     // 2
@@ -283,42 +302,42 @@ namespace RE
 			void IncRef(Buffer* a_vertexBuffer)
 			{
 				using func_t = decltype(&BSGraphics::Renderer::IncRef);
-				static REL::Relocation<func_t> func{ REL::ID(1337764) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Renderer::IncRef };
 				return func(this, a_vertexBuffer);
 			}
 
 			void DecRef(Buffer* a_vertexBuffer)
 			{
 				using func_t = decltype(&BSGraphics::Renderer::DecRef);
-				static REL::Relocation<func_t> func{ REL::ID(194808) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Renderer::DecRef };
 				return func(this, a_vertexBuffer);
 			}
 
 			void Begin(std::uint32_t a_windowID)
 			{
 				using func_t = decltype(&BSGraphics::Renderer::Begin);
-				static REL::Relocation<func_t> func{ REL::ID(2276833) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Renderer::Begin };
 				return func(this, a_windowID);
 			}
 
 			void End()
 			{
 				using func_t = decltype(&BSGraphics::Renderer::End);
-				static REL::Relocation<func_t> func{ REL::ID(2276834) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Renderer::End };
 				return func(this);
 			}
 
 			void Lock()
 			{
 				using func_t = decltype(&BSGraphics::Renderer::Lock);
-				static REL::Relocation<func_t> func{ REL::ID(2276828) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Renderer::Lock };
 				return func(this);
 			}
 
 			void Unlock()
 			{
 				using func_t = decltype(&BSGraphics::Renderer::Unlock);
-				static REL::Relocation<func_t> func{ REL::ID(2276829) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Renderer::Unlock };
 				return func(this);
 			}
 
@@ -331,13 +350,13 @@ namespace RE
 
 		[[nodiscard]] inline RendererData* GetRendererData()
 		{
-			static REL::Relocation<RendererData**> ptr{ REL::ID(2704429) };
+			static REL::Relocation<RendererData**> ptr{ ID::BSGraphics::GetRendererData };
 			return *ptr;
 		}
 
 		[[nodiscard]] inline RendererWindow* GetCurrentRendererWindow()
 		{
-			static REL::Relocation<RendererWindow**> ptr{ REL::ID(2704431) };
+			static REL::Relocation<RendererWindow**> ptr{ ID::BSGraphics::GetCurrentRendererWindow };
 			return *ptr;
 		}
 
@@ -386,8 +405,9 @@ namespace RE
 		};
 		static_assert(sizeof(Context) == 0x2FF0);
 
-		struct Vertex
+		class Vertex
 		{
+		public:
 			enum Attribute : std::uint8_t
 			{
 				VA_POSITION = 0x0,
@@ -487,8 +507,9 @@ namespace RE
 		};
 		static_assert(sizeof(VertexDesc) == 0x8);
 
-		struct TriShape
+		class TriShape
 		{
+		public:
 			VertexDesc    vertexDesc;    // 00
 			VertexBuffer* vertexBuffer;  // 08
 			IndexBuffer*  indexBuffer;   // 10
@@ -496,8 +517,9 @@ namespace RE
 		};
 		static_assert(sizeof(TriShape) == 0x20);
 
-		struct FogStateType
+		class FogStateType
 		{
+		public:
 			// members
 			NiPoint4 rangeData;         // 00
 			NiColor  nearLowColor;      // 10
@@ -512,8 +534,9 @@ namespace RE
 		};
 		static_assert(sizeof(FogStateType) == 0x60);
 
-		struct ViewData
+		class ViewData
 		{
+		public:
 			// members
 			NiRect<float> viewPort;                       // 000
 			NiPoint2      viewDepthRange;                 // 010
@@ -530,8 +553,9 @@ namespace RE
 		};
 		static_assert(sizeof(ViewData) == 0x210);
 
-		struct CameraStateData
+		class CameraStateData
 		{
+		public:
 			// members
 			ViewData        camViewData;        // 000
 			NiPoint3        posAdjust;          // 210
@@ -547,7 +571,7 @@ namespace RE
 		public:
 			[[nodiscard]] static State GetSingleton()
 			{
-				static REL::Relocation<State*> singleton{ REL::ID(2704621) };
+				static REL::Relocation<State*> singleton{ ID::BSGraphics::State::Singleton };
 				return *singleton;
 			}
 
@@ -599,7 +623,7 @@ namespace RE
 		};
 		static_assert(sizeof(State) == 0x3C0);
 
-		struct RenderTargetProperties
+		class RenderTargetProperties
 		{
 		public:
 			// members
@@ -617,7 +641,7 @@ namespace RE
 		};
 		static_assert(sizeof(RenderTargetProperties) == 0x20);
 
-		struct DepthStencilTargetProperties
+		class DepthStencilTargetProperties
 		{
 		public:
 			// members
@@ -633,7 +657,7 @@ namespace RE
 		};
 		static_assert(sizeof(DepthStencilTargetProperties) == 0x18);
 
-		struct CubeMapRenderTargetProperties
+		class CubeMapRenderTargetProperties
 		{
 		public:
 			// members
@@ -656,14 +680,14 @@ namespace RE
 
 			[[nodiscard]] static RenderTargetManager GetSingleton()
 			{
-				static REL::Relocation<RenderTargetManager*> singleton{ REL::ID(2666735) };
+				static REL::Relocation<RenderTargetManager*> singleton{ ID::BSGraphics::RenderTargetManager::Singleton };
 				return *singleton;
 			}
 
 			void SetEnableDynamicResolution(bool a_enableDynamicResolution)
 			{
 				using func_t = decltype(&RenderTargetManager::SetEnableDynamicResolution);
-				static REL::Relocation<func_t> func{ REL::ID(116947) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::RenderTargetManager::SetEnableDynamicResolution };
 				return func(this, a_enableDynamicResolution);
 			}
 
@@ -699,14 +723,14 @@ namespace RE
 			inline void ConvertHALFToNiPoint3Stream(const std::uint16_t* a_src, NiPoint3* a_dst, std::uint32_t a_count, std::uint32_t a_stride)
 			{
 				using func_t = decltype(&ConvertHALFToNiPoint3Stream);
-				static REL::Relocation<func_t> func{ REL::ID(2277113) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Utility::ConvertHALFToNiPoint3Stream };
 				func(a_src, a_dst, a_count, a_stride);
 			}
 
 			inline void ConvertNiPoint3ToHALFStream(const NiPoint3* a_src, std::uint16_t* a_dst, std::uint32_t a_count)
 			{
 				using func_t = decltype(&ConvertNiPoint3ToHALFStream);
-				static REL::Relocation<func_t> func{ REL::ID(2277114) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Utility::ConvertNiPoint3ToHALFStream };
 				func(a_src, a_dst, a_count);
 			}
 
@@ -732,7 +756,7 @@ namespace RE
 				std::uint32_t  a_tangentXBufferStride)
 			{
 				using func_t = decltype(&PackVertexData);
-				static REL::Relocation<func_t> func{ REL::ID(2277106) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Utility::PackVertexData };
 				return func(a_numVertices, a_positions, a_texCoords0, a_texCoords1, a_normals, a_binormals, a_tangents, a_colors, a_skinBoneWeights, a_skinBoneIndices, a_landscapeData1, a_landscapeData2, a_eyeData, a_buffer, a_bufferSize, a_vertexMap, a_dynamicFlags, a_tangentXBuffer, a_tangentXBufferStride);
 			}
 
@@ -754,7 +778,7 @@ namespace RE
 				std::uint8_t*       a_boneIndex3)
 			{
 				using func_t = decltype(&UnpackVertexData);
-				static REL::Relocation<func_t> func{ REL::ID(2277129) };
+				static REL::Relocation<func_t> func{ ID::BSGraphics::Utility::UnpackVertexData };
 				func(a_vertices, a_index, a_vertexDesc, a_position, a_texCoord0, a_texCoord1, a_normal, a_binormal, a_tangent, a_color, a_skinBoneWeights, a_boneIndex0, a_boneIndex1, a_boneIndex2, a_boneIndex3);
 			}
 		}

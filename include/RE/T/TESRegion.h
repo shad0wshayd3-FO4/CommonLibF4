@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/N/NiColor.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class TESRegionDataList;
+	class TESRegionPointList;
+
 	class __declspec(novtable) TESRegion :
 		public TESForm  // 00
 	{

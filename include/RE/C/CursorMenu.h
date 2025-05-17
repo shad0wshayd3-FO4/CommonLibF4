@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/G/GameMenuBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) CursorMenu :
@@ -11,7 +13,7 @@ namespace RE
 		static constexpr auto MENU_NAME{ "CursorMenu"sv };
 
 		// members
-		msvc::unique_ptr<BSGFxShaderFXTarget> cursor;  // E0
+		std::unique_ptr<BSGFxShaderFXTarget> cursor;  // E0
 	};
 	static_assert(sizeof(CursorMenu) == 0xE8);
 }

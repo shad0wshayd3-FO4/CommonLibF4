@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "Scaleform/G/GFx_Value.h"
+
 namespace RE
 {
+	class PipboyValueChangedEvent;
+
 	class __declspec(novtable) PipboySubMenu :
 		public BSTEventSink<PipboyValueChangedEvent>  // 00
 	{
@@ -13,7 +18,7 @@ namespace RE
 		BSEventNotifyControl ProcessEvent(const PipboyValueChangedEvent& a_event, BSTEventSource<PipboyValueChangedEvent>* a_source) override
 		{
 			using func_t = decltype(&PipboySubMenu::ProcessEvent);
-			static REL::Relocation<func_t> func{ REL::ID(893703) };
+			static REL::Relocation<func_t> func{ ID::PipboySubMenu::ProcessEvent };
 			return func(this, a_event, a_source);
 		}
 

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct ADDON_DATA
+	class ADDON_DATA
 	{
 	public:
 		// members

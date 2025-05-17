@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/D/DIALOGUE_DATA.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESTopic :
@@ -11,7 +16,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESTopic };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kDIAL };
 
-		struct InfoTree;
+		class InfoTree;
 
 		// members
 		DIALOGUE_DATA      data;                     // 30

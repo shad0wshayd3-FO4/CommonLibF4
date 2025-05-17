@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
+	class BGSBlockBashData;
+	class BGSKeywordForm;
+	class NiAVObject;
+
 	class __declspec(novtable) TBO_InstanceData :
 		public BSIntrusiveRefCounted  // 08
 	{

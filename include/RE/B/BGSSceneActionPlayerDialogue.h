@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSSceneActionConversationBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSSceneActionPlayerDialogue :
@@ -18,7 +20,7 @@ namespace RE
 		TESTopicInfo* GetCurrentTopicInfo(BGSScene* a_parentScene, TESObjectREFR* a_target, std::uint32_t a_type)
 		{
 			using func_t = decltype(&BGSSceneActionPlayerDialogue::GetCurrentTopicInfo);
-			static REL::Relocation<func_t> func{ REL::ID(2196825) };
+			static REL::Relocation<func_t> func{ ID::BGSSceneActionPlayerDialogue::GetCurrentTopicInfo };
 			return func(this, a_parentScene, a_target, a_type);
 		}
 	};

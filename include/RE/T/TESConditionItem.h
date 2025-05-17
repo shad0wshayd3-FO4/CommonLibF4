@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/C/CONDITION_ITEM_DATA.h"
+#include "RE/C/ConditionCheckParams.h"
+
 namespace RE
 {
 	class TESConditionItem
@@ -8,21 +11,21 @@ namespace RE
 		[[nodiscard]] float GetComparisonValue()
 		{
 			using func_t = decltype(&TESConditionItem::GetComparisonValue);
-			static REL::Relocation<func_t> func{ REL::ID(2212007) };
+			static REL::Relocation<func_t> func{ ID::TESConditionItem::GetComparisonValue };
 			return func(this);
 		}
 
 		[[nodiscard]] bool IsTrue(TESObjectREFR* a_actionRef, TESObjectREFR* a_targetRef)
 		{
 			using func_t = bool (*)(TESConditionItem*, TESObjectREFR*, TESObjectREFR*);
-			static REL::Relocation<func_t> func{ REL::ID(2212008) };
+			static REL::Relocation<func_t> func{ ID::TESConditionItem::IsTrue1 };
 			return func(this, a_actionRef, a_targetRef);
 		}
 
 		[[nodiscard]] bool IsTrue(ConditionCheckParams& a_params)
 		{
 			using func_t = bool (*)(TESConditionItem*, ConditionCheckParams&);
-			static REL::Relocation<func_t> func{ REL::ID(2212009) };
+			static REL::Relocation<func_t> func{ ID::TESConditionItem::IsTrue2 };
 			return func(this, a_params);
 		}
 

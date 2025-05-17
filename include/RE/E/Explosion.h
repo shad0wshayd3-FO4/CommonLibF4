@@ -1,7 +1,22 @@
 #pragma once
 
+#include "RE/B/BGSBodyPartDefs.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/T/TESObjectREFR.h"
+
 namespace RE
 {
+	class ActorCause;
+	class NiLight;
+	class NonActorMagicCaster;
+
 	class __declspec(novtable) Explosion :
 		public TESObjectREFR  // 000
 	{
@@ -10,7 +25,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::Explosion };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kREFR };
 
-		struct ExplodedLimb
+		class ExplodedLimb
 		{
 		public:
 			// members
@@ -37,31 +52,32 @@ namespace RE
 		virtual void FindTargets();          // C8
 
 		// members
-		hknpClosestUniqueBodyIdHitCollector collector;           // 110
-		void*                               explosionDBHandle;   // 520 - TODO
-		float                               age;                 // 528
-		float                               obj3Dlifetime;       // 52C
-		float                               audioLifetime;       // 530
-		float                               buildTime;           // 534
-		float                               innerRadius;         // 538
-		float                               outerRadius;         // 53C
-		float                               imageSpaceRadius;    // 540
-		float                               damageMult;          // 544
-		BSSimpleList<ExplosionTarget*>      targetList;          // 548
-		BSTSmallArray<BSSoundHandle, 4>     soundHandles;        // 558
-		NiPointer<NiLight>                  light;               // 588
-		ObjectRefHandle                     owner;               // 590
-		ObjectRefHandle                     explodedRef;         // 594
-		ObjectRefHandle                     createdRef;          // 598
-		BSTSmartPointer<ActorCause>         actorCause;          // 5A0
-		NonActorMagicCaster*                caster;              // 5A8
-		BGSObjectInstanceT<TESObjectWEAP>   weaponSource;        // 5B0
-		std::int32_t                        frameCount;          // 5C0
-		NiPoint3A                           closestPoint;        // 5D0
-		NiPoint3A                           closestPointNormal;  // 5E0
-		float                               calculatedDamage;    // 5F0
-		float                               scale;               // 5F4
-		std::uint32_t                       flags;               // 5F8
+		// hknpClosestUniqueBodyIdHitCollector collector;           // 110
+		std::byte                         collector[0x520 - 0x110];  // 110
+		void*                             explosionDBHandle;         // 520 - TODO
+		float                             age;                       // 528
+		float                             obj3Dlifetime;             // 52C
+		float                             audioLifetime;             // 530
+		float                             buildTime;                 // 534
+		float                             innerRadius;               // 538
+		float                             outerRadius;               // 53C
+		float                             imageSpaceRadius;          // 540
+		float                             damageMult;                // 544
+		BSSimpleList<ExplosionTarget*>    targetList;                // 548
+		BSTSmallArray<BSSoundHandle, 4>   soundHandles;              // 558
+		NiPointer<NiLight>                light;                     // 588
+		ObjectRefHandle                   owner;                     // 590
+		ObjectRefHandle                   explodedRef;               // 594
+		ObjectRefHandle                   createdRef;                // 598
+		BSTSmartPointer<ActorCause>       actorCause;                // 5A0
+		NonActorMagicCaster*              caster;                    // 5A8
+		BGSObjectInstanceT<TESObjectWEAP> weaponSource;              // 5B0
+		std::int32_t                      frameCount;                // 5C0
+		NiPoint3A                         closestPoint;              // 5D0
+		NiPoint3A                         closestPointNormal;        // 5E0
+		float                             calculatedDamage;          // 5F0
+		float                             scale;                     // 5F4
+		std::uint32_t                     flags;                     // 5F8
 	};
 	static_assert(sizeof(Explosion) == 0x600);
 }

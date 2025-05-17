@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
+	namespace MagicSystem
+	{
+		enum class CastingType;
+	}
+
 	class __declspec(novtable) TESEnchantableForm :
 		public BaseFormComponent  // 00
 	{

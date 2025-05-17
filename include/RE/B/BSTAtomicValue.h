@@ -14,8 +14,7 @@ namespace RE
 
 		explicit constexpr BSTAtomicValue(T a_rhs) noexcept :
 			_value(a_rhs)
-		{
-		}
+		{}
 
 		T operator++()
 		{

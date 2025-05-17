@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	enum class DIALOGUE_SUBTYPE;
+
 	class BGSTopicSubtypeUnion
 	{
 	public:

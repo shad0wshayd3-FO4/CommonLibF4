@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/M/MemoryManager.h"
+#include "RE/U/UI_MESSAGE_TYPE.h"
+
 namespace RE
 {
+	class IUIMessageData;
+
 	class __declspec(novtable) UIMessage
 	{
 	public:

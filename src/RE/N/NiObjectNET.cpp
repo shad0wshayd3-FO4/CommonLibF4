@@ -1,4 +1,4 @@
-#include "RE/B/NiObjectNET.h"
+#include "RE/N/NiObjectNET.h"
 
 namespace RE
 {

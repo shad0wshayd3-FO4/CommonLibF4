@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct SubgraphIdentifier
+	class SubgraphIdentifier
 	{
 	public:
 		// members

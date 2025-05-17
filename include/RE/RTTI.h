@@ -37,9 +37,9 @@ namespace RE
 		};
 		static_assert(sizeof(RVA<void*>) == 0x4);
 
-		using TypeDescriptor = msvc::type_info;
+		using TypeDescriptor = std::type_info;
 
-		struct PMD
+		class PMD
 		{
 		public:
 			// members
@@ -49,7 +49,7 @@ namespace RE
 		};
 		static_assert(sizeof(PMD) == 0xC);
 
-		struct BaseClassDescriptor
+		class BaseClassDescriptor
 		{
 		public:
 			enum class Attribute : std::uint32_t
@@ -72,7 +72,7 @@ namespace RE
 		};
 		static_assert(sizeof(BaseClassDescriptor) == 0x18);
 
-		struct ClassHierarchyDescriptor
+		class ClassHierarchyDescriptor
 		{
 		public:
 			enum class Attribute
@@ -91,7 +91,7 @@ namespace RE
 		};
 		static_assert(sizeof(ClassHierarchyDescriptor) == 0x10);
 
-		struct CompleteObjectLocator
+		class CompleteObjectLocator
 		{
 		public:
 			enum class Signature
@@ -113,7 +113,7 @@ namespace RE
 	inline void* RTDynamicCast(void* a_inptr, std::int32_t a_vfDelta, void* a_srcType, void* a_targetType, std::int32_t a_isReference)
 	{
 		using func_t = decltype(&RTDynamicCast);
-		REL::Relocation<func_t> func{ REL::ID(2725673) };
+		static REL::Relocation<func_t> func{ ID::RTDynamicCast };
 		return func(a_inptr, a_vfDelta, a_srcType, a_targetType, a_isReference);
 	}
 

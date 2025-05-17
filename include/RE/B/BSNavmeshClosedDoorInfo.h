@@ -1,8 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
-	struct BSNavmeshClosedDoorInfo
+	class BSPathingDoor;
+
+	class BSNavmeshClosedDoorInfo
 	{
 	public:
 		// members

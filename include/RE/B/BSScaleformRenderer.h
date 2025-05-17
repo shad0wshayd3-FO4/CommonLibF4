@@ -1,15 +1,28 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "Scaleform/P/Ptr.h"
+
+namespace Scaleform::Render
+{
+	class HAL;
+	class Renderer2D;
+	class RenderTarget;
+	class TextureManager;
+}
+
 namespace RE
 {
-	struct BSScaleformRenderer :
+	class SFRendererInitializedEvent;
+
+	class BSScaleformRenderer :
 		public BSTEventSource<SFRendererInitializedEvent>  // 000
 	{
 	public:
 		void Initialize()
 		{
 			using func_t = decltype(&BSScaleformRenderer::Initialize);
-			static REL::Relocation<func_t> func{ REL::ID(2284938) };
+			static REL::Relocation<func_t> func{ ID::BSScaleformRenderer::Initialize };
 			return func(this);
 		}
 

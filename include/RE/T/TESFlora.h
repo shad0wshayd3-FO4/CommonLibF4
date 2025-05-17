@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESObjectACTI.h"
+#include "RE/T/TESProduceForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESFlora :

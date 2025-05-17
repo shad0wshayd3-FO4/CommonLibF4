@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/N/NiObject.h"
+
 namespace RE
 {
+	class NiAVObject;
+	class NiUpdateData;
+
 	class __declspec(novtable) NiCollisionObject :
 		public NiObject  // 00
 	{

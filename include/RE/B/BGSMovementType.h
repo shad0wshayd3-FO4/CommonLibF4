@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/M/Movement.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSMovementType :

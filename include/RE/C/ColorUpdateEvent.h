@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
-	struct ColorUpdateEvent
+	class ColorUpdateEvent
 	{
 	private:
 		using EventSource_t = BSTGlobalEvent::EventSource<ColorUpdateEvent>;
@@ -10,7 +12,7 @@ namespace RE
 	public:
 		[[nodiscard]] static EventSource_t* GetEventSource()
 		{
-			static REL::Relocation<EventSource_t**> singleton{ REL::ID(1226590) };
+			static REL::Relocation<EventSource_t**> singleton{ ID::ColorUpdateEvent::GetEventSource };
 			if (!*singleton) {
 				*singleton = new EventSource_t(&BSTGlobalEvent::GetSingleton()->eventSourceSDMKiller);
 			}

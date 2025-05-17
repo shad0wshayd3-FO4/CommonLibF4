@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	namespace RadioManager
+	{
+		class PipboyFrequencyDetectionEvent;
+		class PipboyRadioTuningEvent;
+	}
+
 	class __declspec(novtable) PipboyRadioData :
 		public PipboyDataGroup,                                            // 00
 		public BSTEventSink<RadioManager::PipboyFrequencyDetectionEvent>,  // 98

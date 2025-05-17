@@ -1,7 +1,38 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	class MenuOpenCloseEvent;
+	class UserEventEnabledEvent;
+
+	namespace BGSInventoryListEvent
+	{
+		class Event;
+	}
+
+	namespace LoadingStatusChanged
+	{
+		class Event;
+	}
+
+	namespace PlayerInDialogueChanged
+	{
+		class Event;
+	}
+
+	namespace PlayerLifeStateChanged
+	{
+		class Event;
+	}
+
+	namespace VATSEvents
+	{
+		class ModeChange;
+	}
+
 	class __declspec(novtable) PipboyStatusData :
 		public PipboyDataGroup,                               // 00
 		public BSTEventSink<PlayerLifeStateChanged::Event>,   // 98

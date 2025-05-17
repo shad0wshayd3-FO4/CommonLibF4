@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "Scaleform/G/GFx_Value.h"
+
 namespace RE
 {
 	namespace InventoryUserUIUtils
@@ -16,7 +19,7 @@ namespace RE
 				float                  a_compareDamage = FLT_MAX)
 			{
 				using func_t = decltype(&detail::AddItemCardInfoEntry);
-				static REL::Relocation<func_t> func{ REL::ID(2222648) };
+				static REL::Relocation<func_t> func{ ID::InventoryUserUIUtils::AddItemCardInfoEntry };
 				return func(a_array, a_newEntry, a_textID, a_value, a_difference, a_totalDamage, a_compareDamage);
 			}
 		}

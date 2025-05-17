@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class TEMP_EFFECT_TYPE
+	enum class TEMP_EFFECT_TYPE : std::int32_t
 	{
 		kTerrain = 0x0,
 		kWeaponBlood = 0x1,

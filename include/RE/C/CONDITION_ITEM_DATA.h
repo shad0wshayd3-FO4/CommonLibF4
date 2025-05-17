@@ -1,8 +1,13 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/F/FUNCTION_DATA.h"
+
 namespace RE
 {
-	struct CONDITION_ITEM_DATA
+	enum class CONDITIONITEMOBJECT;
+
+	class CONDITION_ITEM_DATA
 	{
 	public:
 		// members
@@ -19,7 +24,7 @@ namespace RE
 		std::uint8_t                                    valueIsGlobal: 1;          // 28:2
 		std::uint8_t                                    packDataParams: 1;         // 28:3
 		std::uint8_t                                    swapsSubjectAndTarget: 1;  // 28:4
-		ENUM_COMPARISON_CONDITION                       condition: 3;              // 28:5
+		std::uint8_t                                    condition: 3;              // 28:5
 		REX::EnumSet<CONDITIONITEMOBJECT, std::uint8_t> object;                    // 29
 	};
 	static_assert(sizeof(CONDITION_ITEM_DATA) == 0x30);

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPoint.h"
+#include "RE/T/TESBoundObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSStaticCollection :
@@ -11,7 +17,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSStaticCollection };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kSCOL };
 
-		struct REF_COL_DATA
+		class REF_COL_DATA
 		{
 		public:
 			// members

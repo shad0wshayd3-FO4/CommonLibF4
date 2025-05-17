@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class NiAVObject;
+
 	class __declspec(novtable) TESObject :
 		public TESForm  // 00
 	{

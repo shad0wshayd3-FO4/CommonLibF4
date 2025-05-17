@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct VOICE_TYPE_DATA
+	class VOICE_TYPE_DATA
 	{
 	public:
 		// members

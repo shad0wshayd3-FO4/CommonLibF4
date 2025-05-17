@@ -2,9 +2,9 @@
 
 namespace RE
 {
-	enum class LOCK_LEVEL
+	enum class LOCK_LEVEL : std::int32_t
 	{
-		kUnlocked = static_cast<std::underlying_type_t<BIPED_OBJECT>>(-1),
+		kUnlocked = static_cast<std::underlying_type_t<LOCK_LEVEL>>(-1),
 		kEasy = 0x0,
 		kAverage = 0x1,
 		kHard = 0x2,

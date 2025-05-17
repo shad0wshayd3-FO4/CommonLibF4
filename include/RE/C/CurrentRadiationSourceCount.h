@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	class CurrentRadiationSourceCount :
@@ -11,7 +13,7 @@ namespace RE
 	public:
 		[[nodiscard]] static EventSource_t* GetEventSource()
 		{
-			static REL::Relocation<EventSource_t**> singleton{ REL::ID(2696196) };
+			static REL::Relocation<EventSource_t**> singleton{ ID::CurrentRadiationSourceCount::GetEventSource };
 			if (!*singleton) {
 				*singleton = new EventSource_t(&BSTGlobalEvent::GetSingleton()->eventSourceSDMKiller);
 			}

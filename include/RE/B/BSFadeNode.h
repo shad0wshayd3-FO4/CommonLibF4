@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSShaderPropertyLightData.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiNode.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class BSGeometry;
+	class FlattenedGeometryData;
+
 	class __declspec(novtable) BSFadeNode :
 		public NiNode  // 000
 	{
@@ -10,7 +18,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BSFadeNode };
 		static constexpr auto Ni_RTTI{ Ni_RTTI::BSFadeNode };
 
-		struct FlattenedGeometryData
+		class FlattenedGeometryData
 		{
 		public:
 			// members

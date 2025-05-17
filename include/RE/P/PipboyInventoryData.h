@@ -1,7 +1,62 @@
 #pragma once
 
+#include "RE/B/BGSInventoryItem.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/E/ENUM_FORM_ID.h"
+#include "RE/I/InventoryInterface.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	namespace ActorEquipManagerEvent
+	{
+		class Event;
+	}
+
+	namespace ActorValueEvents
+	{
+		class ActorValueChangedEvent;
+	}
+
+	namespace BGSInventoryItemEvent
+	{
+		class Event;
+	}
+
+	namespace BGSInventoryListEvent
+	{
+		class Event;
+	}
+
+	namespace HolotapeStateChanged
+	{
+		class Event;
+	}
+
+	namespace InventoryInterface
+	{
+		class FavoriteChangedEvent;
+	}
+
+	namespace FavoriteMgr_Events
+	{
+		class ComponentFavoriteEvent;
+	}
+
+	namespace PerkValueEvents
+	{
+		class PerkValueChangedEvent;
+		class PerkEntryUpdatedEvent;
+	}
+
+	namespace PlayerDifficultySettingChanged
+	{
+		class Event;
+	}
+
 	class PipboyInventoryData :
 		public PipboyDataGroup,                                           // 00
 		public BSTEventSink<BGSInventoryListEvent::Event>,                // 98
@@ -39,15 +94,19 @@ namespace RE
 			SOF_WEIGHT = 0x6
 		};
 
-		struct StackEntry
+		class StackEntry
 		{
+		public:
+			// members
 			PipboyObject*                    linkedObject;     // 00
 			const InventoryInterface::Handle inventoryHandle;  // 08
 		};
 		static_assert(sizeof(StackEntry) == 0x10);
 
-		struct ItemEntry
+		class ItemEntry
 		{
+		public:
+			// members
 			void* stackEntries;  // 00 - BSTList<PipboyInventoryData::StackEntry*>
 		};
 		static_assert(sizeof(ItemEntry) == 0x8);
@@ -74,21 +133,21 @@ namespace RE
 		void RepopulateItemCardsOnSection(ENUM_FORM_ID itemTypeID)
 		{
 			using func_t = decltype(&PipboyInventoryData::RepopulateItemCardsOnSection);
-			static REL::Relocation<func_t> func{ REL::ID(2225279) };
+			static REL::Relocation<func_t> func{ ID::PipboyInventoryData::RepopulateItemCardsOnSection };
 			return func(this, itemTypeID);
 		}
 
 		void PopulateItemCardInfo(const BGSInventoryItem* a_inventoryItem, const BGSInventoryItem::Stack* a_stack, PipboyObject* a_data)
 		{
 			using func_t = decltype(&PipboyInventoryData::PopulateItemCardInfo);
-			static REL::Relocation<func_t> func{ REL::ID(2225266) };
+			static REL::Relocation<func_t> func{ ID::PipboyInventoryData::PopulateItemCardInfo };
 			return func(this, a_inventoryItem, a_stack, a_data);
 		}
 
 		void AddItemCardInfoEntry(const BSFixedStringCS* a_string, float a_value, PipboyArray* a_itemCardSection)
 		{
 			using func_t = decltype(&PipboyInventoryData::AddItemCardInfoEntry);
-			static REL::Relocation<func_t> func{ REL::ID(2225267) };
+			static REL::Relocation<func_t> func{ ID::PipboyInventoryData::AddItemCardInfoEntry };
 			return func(this, a_string, a_value, a_itemCardSection);
 		}
 

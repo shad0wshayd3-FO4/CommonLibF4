@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct DisableHeavyItemsFunc
+	class DisableHeavyItemsFunc
 	{
 	public:
 		// members

@@ -1,42 +1,62 @@
 #pragma once
 
+#include "RE/A/AITimer.h"
+#include "RE/A/ActorPackage.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/D/DEFAULT_OBJECT.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
+	enum class COMMAND_TYPE;
+	enum class DIALOGUE_SUBTYPE;
+	enum class DIALOGUE_TYPE;
+	enum class WEAPON_CULL_TYPE;
+
+	class CachedValues;
+	class HighProcessData;
+	class MiddleHighProcessData;
+	class MiddleLowProcessData;
+	class ObjectstoAcquire;
+
 	class AIProcess
 	{
 	public:
 		[[nodiscard]] TESAmmo* GetCurrentAmmo(BGSEquipIndex a_equipIndex) const
 		{
 			using func_t = decltype(&AIProcess::GetCurrentAmmo);
-			static REL::Relocation<func_t> func{ REL::ID(2232300) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::GetCurrentAmmo };
 			return func(this, a_equipIndex);
 		}
 
 		COMMAND_TYPE GetCommandType()
 		{
 			using func_t = decltype(&AIProcess::GetCommandType);
-			static REL::Relocation<func_t> func{ REL::ID(2231825) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::GetCommandType };
 			return func(this);
 		}
 
 		[[nodiscard]] ObjectRefHandle GetOccupiedFurniture()
 		{
 			using func_t = decltype(&AIProcess::GetOccupiedFurniture);
-			static REL::Relocation<func_t> func{ REL::ID(2232401) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::GetOccupiedFurniture };
 			return func(this);
 		}
 
 		bool IsWeaponSubgraphFinishedLoading(const Actor& a_actor)
 		{
 			using func_t = decltype(&AIProcess::IsWeaponSubgraphFinishedLoading);
-			static REL::Relocation<func_t> func{ REL::ID(2231757) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::IsWeaponSubgraphFinishedLoading };
 			return func(this, a_actor);
 		}
 
 		void KnockExplosion(Actor* a_actor, const NiPoint3& a_location, float a_magnitude)
 		{
 			using func_t = decltype(&AIProcess::KnockExplosion);
-			static REL::Relocation<func_t> func{ REL::ID(2232384) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::KnockExplosion };
 			return func(this, a_actor, a_location, a_magnitude);
 		}
 
@@ -48,63 +68,63 @@ namespace RE
 		bool ProcessGreet(Actor* a_actor, DIALOGUE_TYPE a_type, DIALOGUE_SUBTYPE a_subType, TESObjectREFR* a_target, BGSDialogueBranch* a_branch, bool a_forceSub, bool a_stop, bool a_que, bool a_sayCallback)
 		{
 			using func_t = decltype(&AIProcess::ProcessGreet);
-			static REL::Relocation<func_t> func{ REL::ID(2231808) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::ProcessGreet };
 			return func(this, a_actor, a_type, a_subType, a_target, a_branch, a_forceSub, a_stop, a_que, a_sayCallback);
 		}
 
 		bool RequestLoadAnimationsForWeaponChange(Actor& a_actor)
 		{
 			using func_t = decltype(&AIProcess::RequestLoadAnimationsForWeaponChange);
-			static REL::Relocation<func_t> func{ REL::ID(2231758) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::RequestLoadAnimationsForWeaponChange };
 			return func(this, a_actor);
 		}
 
 		void SetActorsDetectionEvent(Actor* a_actor, const NiPoint3& a_location, std::int32_t a_soundLevel, TESObjectREFR* a_refr)
 		{
 			using func_t = decltype(&AIProcess::SetActorsDetectionEvent);
-			static REL::Relocation<func_t> func{ REL::ID(2231738) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::SetActorsDetectionEvent };
 			return func(this, a_actor, a_location, a_soundLevel, a_refr);
 		}
 
 		void SetCurrentAmmo(BGSEquipIndex a_equipIndex, TESAmmo* a_ammo)
 		{
 			using func_t = decltype(&AIProcess::SetCurrentAmmo);
-			static REL::Relocation<func_t> func{ REL::ID(2232302) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::SetCurrentAmmo };
 			return func(this, a_equipIndex, a_ammo);
 		}
 
 		void SetCommandType(COMMAND_TYPE a_type)
 		{
 			using func_t = decltype(&AIProcess::SetCommandType);
-			static REL::Relocation<func_t> func{ REL::ID(2231826) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::SetCommandType };
 			return func(this, a_type);
 		}
 
 		void SetEquippedItem(Actor* a_actor, const BGSObjectInstance& a_instance, const BGSEquipSlot* a_slot)
 		{
 			using func_t = decltype(&AIProcess::SetEquippedItem);
-			static REL::Relocation<func_t> func{ REL::ID(1200276) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::SetEquippedItem };
 			return func(this, a_actor, a_instance, a_slot);
 		}
 
-		bool SetupSpecialIdle(Actor& a_actor, RE::DEFAULT_OBJECT a_defaultObject, TESIdleForm* a_idle, bool a_testConditions, TESObjectREFR* a_targetOverride)
+		bool SetupSpecialIdle(Actor& a_actor, DEFAULT_OBJECT a_defaultObject, TESIdleForm* a_idle, bool a_testConditions, TESObjectREFR* a_targetOverride)
 		{
 			using func_t = decltype(&AIProcess::SetupSpecialIdle);
-			static REL::Relocation<func_t> func{ REL::ID(2231704) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::SetupSpecialIdle };
 			return func(this, a_actor, a_defaultObject, a_idle, a_testConditions, a_targetOverride);
 		}
 
 		bool SetWeaponBonesCulled(const Actor& a_actor, bool a_stateToSet, WEAPON_CULL_TYPE a_weaponCullType)
 		{
 			using func_t = decltype(&AIProcess::SetWeaponBonesCulled);
-			static REL::Relocation<func_t> func{ REL::ID(2232535) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::SetWeaponBonesCulled };
 			return func(this, a_actor, a_stateToSet, a_weaponCullType);
 		}
 
 		void StopCurrentIdle(Actor* a_actor, bool a_instant, bool a_killFlavor)
 		{
 			using func_t = decltype(&AIProcess::StopCurrentIdle);
-			static REL::Relocation<func_t> func{ REL::ID(2231705) };
+			static REL::Relocation<func_t> func{ ID::AIProcess::StopCurrentIdle };
 			return func(this, a_actor, a_instant, a_killFlavor);
 		}
 

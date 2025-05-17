@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct MOVABLE_STATIC_DATA
+	class MOVABLE_STATIC_DATA
 	{
 	public:
 		// members

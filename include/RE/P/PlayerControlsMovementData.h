@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/M/MovementData.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
-	struct PlayerControlsMovementData :
+	class PlayerControlsMovementData :
 		public MovementData  // 00
 	{
 	public:

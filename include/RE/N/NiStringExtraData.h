@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiExtraData.h"
+
 namespace RE
 {
 	class NiStringExtraData :

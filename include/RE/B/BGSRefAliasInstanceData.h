@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
-	struct BGSRefAliasInstanceData
+	class BGSRefAliasInstanceData
 	{
 	public:
 		// members

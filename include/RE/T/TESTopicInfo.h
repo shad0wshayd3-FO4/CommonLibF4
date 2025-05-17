@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/R/ResponseListWrapper.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TOPIC_INFO_DATA.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESTopicInfo :
@@ -39,21 +44,21 @@ namespace RE
 		TESTopicInfo* GetParentInfoGroup()
 		{
 			using func_t = decltype(&TESTopicInfo::GetParentInfoGroup);
-			static REL::Relocation<func_t> func{ REL::ID(2208435) };
+			static REL::Relocation<func_t> func{ ID::TESTopicInfo::GetParentInfoGroup };
 			return func(this);
 		}
 
 		CHARISMA_CHALLENGE_DIFFICULTY GetChallengeLevel()
 		{
 			using func_t = decltype(&TESTopicInfo::GetChallengeLevel);
-			static REL::Relocation<func_t> func{ REL::ID(2208441) };
+			static REL::Relocation<func_t> func{ ID::TESTopicInfo::GetChallengeLevel };
 			return func(this);
 		}
 
 		CHARISMA_CHALLENGE_SUCCESS GetSuccessLevel()
 		{
 			using func_t = decltype(&TESTopicInfo::GetSuccessLevel);
-			static REL::Relocation<func_t> func{ REL::ID(2208444) };
+			static REL::Relocation<func_t> func{ ID::TESTopicInfo::GetSuccessLevel };
 			return func(this);
 		}
 

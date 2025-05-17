@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct CrimeGoldStruct
+	class CrimeGoldStruct
 	{
 	public:
 		// members

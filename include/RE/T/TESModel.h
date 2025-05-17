@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
+	namespace BSResource
+	{
+		class ID;
+	}
+
 	class __declspec(novtable) TESModel :
 		public BaseFormComponent  // 00
 	{

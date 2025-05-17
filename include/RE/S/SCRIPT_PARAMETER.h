@@ -2,7 +2,9 @@
 
 namespace RE
 {
-	struct SCRIPT_PARAMETER
+	enum class SCRIPT_PARAM_TYPE;
+
+	class SCRIPT_PARAMETER
 	{
 	public:
 		// members

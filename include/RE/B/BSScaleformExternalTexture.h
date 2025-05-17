@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class NiTexture;
+
 	class BSScaleformExternalTexture
 	{
 	public:

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/U/UIMessage.h"
+
 namespace RE
 {
 	class __declspec(novtable) IUIMessageData :

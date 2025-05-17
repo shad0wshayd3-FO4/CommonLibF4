@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSISoundDescriptor.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class BGSSoundDescriptor;
+
 	class __declspec(novtable) BGSSoundDescriptorForm :
 		public TESForm,            // 00
 		public BSISoundDescriptor  // 20

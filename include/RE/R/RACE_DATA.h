@@ -1,8 +1,13 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
-	struct RACE_DATA
+	enum class BIPED_OBJECT;
+	enum class RACE_SIZE;
+
+	class RACE_DATA
 	{
 	public:
 		// members

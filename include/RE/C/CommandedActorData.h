@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct CommandedActorData
+	class CommandedActorData
 	{
 	public:
 		// members

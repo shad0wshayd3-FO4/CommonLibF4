@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class DIALOGUE_SUBTYPE
+	enum class DIALOGUE_SUBTYPE : std::int32_t
 	{
 		kPlayerDialogue_Custom = 0x0,
 		kPlayerDialogue_Force_Greet = 0x1,

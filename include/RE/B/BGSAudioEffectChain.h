@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSIAudioEffectChain.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class BSIAudioEffectParameters;
+
 	class __declspec(novtable) BGSAudioEffectChain :
 		public TESForm,             // 00
 		public BSIAudioEffectChain  // 20

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
 	namespace BGSBodyPartDefs
@@ -47,7 +49,7 @@ namespace RE
 			kFaceTargetSource = 0x19
 		};
 
-		struct HitReactionData
+		class HitReactionData
 		{
 		public:
 			// members

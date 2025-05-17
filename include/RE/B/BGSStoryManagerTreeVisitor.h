@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
+	class BGSStoryManagerBranchNode;
+	class BGSStoryManagerQuestNode;
+	class BGSStoryManagerTreeForm;
+	class PeriodicUpdateTimer;
+
 	class __declspec(novtable) BGSStoryManagerTreeVisitor
 	{
 	public:

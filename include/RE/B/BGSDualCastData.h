@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSDualCastDataDEF.h"
+#include "RE/T/TESBoundObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSDualCastData :

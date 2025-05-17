@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/A/AttachTechniqueInput.h"
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
+	class bhkWorld;
+
 	class __declspec(novtable) RefAttachTechniqueInput :
 		public BSAttachTechniques::AttachTechniqueInput  // 00
 	{

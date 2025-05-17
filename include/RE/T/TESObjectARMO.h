@@ -1,7 +1,27 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
+#include "RE/B/BGSBipedObjectForm.h"
+#include "RE/B/BGSBlockBashData.h"
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSEquipType.h"
+#include "RE/B/BGSInstanceNamingRulesForm.h"
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/T/TESBipedModelForm.h"
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESEnchantableForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESRaceForm.h"
+
 namespace RE
 {
+	enum class STAGGER_MAGNITUDE;
+
 	class __declspec(novtable) TESObjectARMO :
 		public TESBoundObject,             // 000
 		public TESFullName,                // 068
@@ -22,7 +42,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESObjectARMO };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kARMO };
 
-		struct __declspec(novtable) InstanceData :
+		class __declspec(novtable) InstanceData :
 			public TBO_InstanceData  // 00
 		{
 		public:

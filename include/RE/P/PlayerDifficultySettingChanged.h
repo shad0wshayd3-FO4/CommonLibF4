@@ -4,8 +4,10 @@ namespace RE
 {
 	namespace PlayerDifficultySettingChanged
 	{
-		struct Event
+		class Event
 		{
+		public:
+			// members
 			std::uint32_t oldDifficulty;  // 00
 			std::uint32_t newDifficulty;  // 04
 		};

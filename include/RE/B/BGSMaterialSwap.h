@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSMaterialSwap :
@@ -10,7 +14,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSMaterialSwap };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kMSWP };
 
-		struct Entry
+		class Entry
 		{
 		public:
 			// members

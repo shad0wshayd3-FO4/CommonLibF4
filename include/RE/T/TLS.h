@@ -4,8 +4,9 @@
 
 namespace RE
 {
-	struct TLS
+	class TLS
 	{
+	public:
 		[[nodiscard]] static TLS* GetSingleton()
 		{
 			return *static_cast<TLS**>(REX::W32::NtCurrentTeb()->threadLocalStoragePointer);

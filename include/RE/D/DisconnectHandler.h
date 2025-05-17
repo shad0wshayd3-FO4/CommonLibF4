@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/B/BSInputEventUser.h"
+
 namespace RE
 {
-	struct __declspec(novtable) DisconnectHandler :
+	class __declspec(novtable) DisconnectHandler :
 		public BSInputEventUser
 	{
 	public:

@@ -1,7 +1,22 @@
 #pragma once
 
+#include "RE/B/BSGraphics.h"
+#include "RE/N/NiAVObject.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	namespace BSSkin
+	{
+		class Instance;
+	}
+
+	class BSCombinedTriShape;
+	class BSGeometrySegmentData;
+	class BSMergeInstancedTriShape;
+	class BSMultiIndexTriShape;
+	class NiProperty;
+
 	class __declspec(novtable) BSGeometry :
 		public NiAVObject  // 000
 	{

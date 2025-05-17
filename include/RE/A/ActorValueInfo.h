@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/A/ActorValue.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSStringT.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
+	class ActorValueOwner;
+
 	class __declspec(novtable) ActorValueInfo :
 		public TESForm,        // 000
 		public TESFullName,    // 020
@@ -17,7 +26,7 @@ namespace RE
 
 		// members
 		std::function<ModifiedCallback_t>              modifiedCallback;          // 048
-		BSStringT<char>                                formEditorID;              // 088
+		BSString                                       formEditorID;              // 088
 		ActorValueInfo*                                dependentActorValues[15];  // 098
 		std::function<DerivationFunction_t>            derivationFunction;        // 110
 		const char*                                    enumNames[10];             // 150

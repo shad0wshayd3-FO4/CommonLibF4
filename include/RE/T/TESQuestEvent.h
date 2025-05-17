@@ -12,8 +12,9 @@ namespace RE
 			kUpdateMiscQuestVisibility = 0x3
 		};
 
-		struct Event
+		class Event
 		{
+		public:
 			TESQuestEvent::Type changeType;  // 00
 			TESQuest*           quest;       // 08
 		};

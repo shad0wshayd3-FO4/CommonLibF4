@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct CellAttachDetachEvent
+	class CellAttachDetachEvent
 	{
 	public:
 		enum class EVENT_TYPE : std::int32_t

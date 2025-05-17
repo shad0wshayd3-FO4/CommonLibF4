@@ -1,28 +1,35 @@
 #pragma once
 
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class QueuedPromoteReferencesTask;
+
 	class BGSDynamicPersistenceManager :
 		public BSTSingletonExplicit<BGSDynamicPersistenceManager>
 	{
 	public:
 		[[nodiscard]] static BGSDynamicPersistenceManager* GetSingleton()
 		{
-			static REL::Relocation<BGSDynamicPersistenceManager**> singleton{ REL::ID(109630) };
+			static REL::Relocation<BGSDynamicPersistenceManager**> singleton{ ID::BGSDynamicPersistenceManager::Singleton };
 			return *singleton;
 		}
 
 		bool PromoteReference(TESObjectREFR* a_refr, TESForm* a_owner)
 		{
 			using func_t = decltype(&BGSDynamicPersistenceManager::PromoteReference);
-			static REL::Relocation<func_t> func{ REL::ID(1300345) };
+			static REL::Relocation<func_t> func{ ID::BGSDynamicPersistenceManager::PromoteReference };
 			return func(this, a_refr, a_owner);
 		}
 
 		bool DemoteReference(TESObjectREFR* a_refr, TESForm* a_owner, bool a_allowActors = false)
 		{
 			using func_t = decltype(&BGSDynamicPersistenceManager::DemoteReference);
-			static REL::Relocation<func_t> func{ REL::ID(222813) };
+			static REL::Relocation<func_t> func{ ID::BGSDynamicPersistenceManager::DemoteReference };
 			return func(this, a_refr, a_owner, a_allowActors);
 		}
 

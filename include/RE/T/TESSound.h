@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/R/RepeaterData.h"
+#include "RE/T/TESBoundAnimObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESSound :
@@ -14,5 +17,5 @@ namespace RE
 		BGSSoundDescriptorForm*    descriptor;  // 68
 		TESSoundDefs::RepeaterData repeatData;  // 70
 	};
-	static_assert(sizeof(TESSound) == 0x78);
+	static_assert(sizeof(TESSound) == 0x80);
 }

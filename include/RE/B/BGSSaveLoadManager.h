@@ -1,7 +1,26 @@
 #pragma once
 
+#include "RE/B/BGSSaveLoadThread.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSaveDataSystemUtility.h"
+#include "RE/B/BSSaveDataSystemUtilityImage.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class BSSaveDataSystemUtilityFile;
+	class BGSSaveLoadFile;
+	class BGSSaveLoadFileEntry;
+	class NiTexture;
+
+	namespace SPECIALMenuEvent
+	{
+		class NameChangedEvent;
+	}
+
 	class BGSSaveLoadManager :
 		public BSTEventSink<SPECIALMenuEvent::NameChangedEvent>  // 00
 	{
@@ -37,14 +56,14 @@ namespace RE
 
 		[[nodiscard]] static BGSSaveLoadManager* GetSingleton()
 		{
-			static REL::Relocation<BGSSaveLoadManager**> singleton{ REL::ID(2697802) };
+			static REL::Relocation<BGSSaveLoadManager**> singleton{ ID::BGSSaveLoadManager::Singleton };
 			return *singleton;
 		}
 
 		void QueueSaveLoadTask(QUEUED_TASK a_task)
 		{
 			using func_t = decltype(&BGSSaveLoadManager::QueueSaveLoadTask);
-			static REL::Relocation<func_t> func{ REL::ID(2228080) };
+			static REL::Relocation<func_t> func{ ID::BGSSaveLoadManager::QueueSaveLoadTask };
 			return func(this, a_task);
 		}
 

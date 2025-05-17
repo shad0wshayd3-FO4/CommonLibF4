@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/P/PlayerInputHandler.h"
+
 namespace RE
 {
 	class SneakHandler :
@@ -11,8 +13,7 @@ namespace RE
 
 		explicit constexpr SneakHandler(PlayerControlsData& a_data) noexcept :
 			PlayerInputHandler(a_data)
-		{
-		}
+		{}
 	};
 	static_assert(sizeof(SneakHandler) == 0x20);
 }

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSNumericIDIndex
+	class BGSNumericIDIndex
 	{
 	public:
 		~BGSNumericIDIndex() noexcept {}  // intentional

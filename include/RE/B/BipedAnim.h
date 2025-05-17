@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BIPED_OBJECT.h"
+#include "RE/B/BIPOBJECT.h"
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSPointerHandle.h"
+
 namespace RE
 {
+	class NiNode;
+
 	class BipedAnim :
 		public BSIntrusiveRefCounted  // 0000
 	{

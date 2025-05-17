@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/U/UnloadedRefData.h"
+
 namespace RE
 {
-	struct SpecialRefData
+	class SpecialRefData
 	{
 	public:
 		// members

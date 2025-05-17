@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/TESIcon.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSMenuIcon :

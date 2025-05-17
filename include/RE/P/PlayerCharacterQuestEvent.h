@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class BGSInstancedQuestObjective;
+
 	namespace PlayerCharacterQuestEvent
 	{
 		enum Type : std::int32_t
@@ -13,8 +15,10 @@ namespace RE
 			kUpdateQuestTarget = 0x4
 		};
 
-		struct Event
+		class Event
 		{
+		public:
+			// members
 			PlayerCharacterQuestEvent::Type changeType;      // 00
 			BGSInstancedQuestObjective*     questObjective;  // 08
 		};

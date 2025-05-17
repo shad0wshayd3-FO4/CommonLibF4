@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
+	class BGSRefAliasInstanceData;
+
 	class __declspec(novtable) ExtraAliasInstanceArray :
 		public BSExtraData  // 00
 	{

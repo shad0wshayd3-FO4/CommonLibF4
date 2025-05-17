@@ -1,5 +1,14 @@
 #pragma once
 
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSEquipType.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/M/MagicItem.h"
+#include "RE/T/TESIcon.h"
+#include "RE/T/TESValueForm.h"
+#include "RE/T/TESWeightForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) IngredientItem :
@@ -17,7 +26,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::IngredientItem };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kINGR };
 
-		struct GameData
+		class GameData
 		{
 		public:
 			// members

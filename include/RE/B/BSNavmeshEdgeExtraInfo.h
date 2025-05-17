@@ -1,8 +1,12 @@
 #pragma once
 
+#include "RE/B/BSNavmeshTriangleEdgePortal.h"
+
 namespace RE
 {
-	struct BSNavmeshEdgeExtraInfo
+	enum class EDGE_EXTRA_INFO_TYPE;
+
+	class BSNavmeshEdgeExtraInfo
 	{
 	public:
 		// members

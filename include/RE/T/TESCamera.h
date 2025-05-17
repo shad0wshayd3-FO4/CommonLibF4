@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTPoint.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class NiNode;
+	class TESCameraState;
+
 	class __declspec(novtable) TESCamera
 	{
 	public:

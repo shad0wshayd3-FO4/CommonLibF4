@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class DEFAULT_OBJECT_TYPE
+	enum class DEFAULT_OBJECT_TYPE : std::int32_t
 	{
 		kMisc = 0x0,
 		kFacegen = 0x1,

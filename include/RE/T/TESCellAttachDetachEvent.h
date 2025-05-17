@@ -1,13 +1,17 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct TESCellAttachDetachEvent
+	class TESCellAttachDetachEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESCellAttachDetachEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESCellAttachDetachEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2201823) };
+			static REL::Relocation<func_t> func{ ID::TESCellAttachDetachEvent::GetEventSource };
 			return func();
 		}
 

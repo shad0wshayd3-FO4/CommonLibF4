@@ -1,7 +1,32 @@
 #pragma once
 
+#include "RE/B/BSInputEventSingleUser.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/N/NiPointer.h"
+#include "RE/Q/QuickContainerStateEvent.h"
+
 namespace RE
 {
+	class QueuedFile;
+
+	namespace BGSInventoryListEvent
+	{
+		class Event;
+	}
+
+	namespace FavoriteMgr_Events
+	{
+		class ComponentFavoriteEvent;
+	}
+
+	namespace InventoryInterface
+	{
+		class FavoriteChangedEvent;
+	}
+
 	class __declspec(novtable) FavoritesManager :
 		public BSInputEventSingleUser,                                     // 000
 		public BSTEventSink<BGSInventoryListEvent::Event>,                 // 020
@@ -15,21 +40,21 @@ namespace RE
 
 		[[nodiscard]] static FavoritesManager* GetSingleton()
 		{
-			static REL::Relocation<FavoritesManager**> singleton{ REL::ID(2694399) };
+			static REL::Relocation<FavoritesManager**> singleton{ ID::FavoritesManager::Singleton };
 			return *singleton;
 		}
 
 		[[nodiscard]] bool IsComponentFavorite(const TESBoundObject* a_component)
 		{
 			using func_t = decltype(&FavoritesManager::IsComponentFavorite);
-			static REL::Relocation<func_t> func{ REL::ID(2248752) };
+			static REL::Relocation<func_t> func{ ID::FavoritesManager::IsComponentFavorite };
 			return func(this, a_component);
 		}
 
 		[[nodiscard]] bool UseQuickkeyItem(std::uint32_t a_quickkeyIndex)
 		{
 			using func_t = decltype(&FavoritesManager::UseQuickkeyItem);
-			static REL::Relocation<func_t> func{ REL::ID(2248744) };
+			static REL::Relocation<func_t> func{ ID::FavoritesManager::UseQuickkeyItem };
 			return func(this, a_quickkeyIndex);
 		}
 

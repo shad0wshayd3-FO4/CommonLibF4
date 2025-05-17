@@ -1,8 +1,18 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/N/NiShadeProperty.h"
+
 namespace RE
 {
-	struct __declspec(novtable) BSShaderProperty :
+	class BSEffectShaderData;
+	class BSRenderPass;
+	class BSShaderAccumulator;
+	class BSShaderMaterial;
+	class NiTexture;
+
+	class __declspec(novtable) BSShaderProperty :
 		public NiShadeProperty  // 00
 	{
 	private:
@@ -134,7 +144,7 @@ namespace RE
 		void SetMaterial(BSShaderMaterial* a_material, bool a_unique)
 		{
 			using func_t = decltype(&BSShaderProperty::SetMaterial);
-			static REL::Relocation<func_t> func{ REL::ID(706318) };
+			static REL::Relocation<func_t> func{ ID::BSShaderProperty::SetMaterial };
 			return func(this, a_material, a_unique);
 		}
 

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/C/CachedValueData.h"
+
 namespace RE
 {
 	class CachedValues

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct OBJ_TREE
+	class OBJ_TREE
 	{
 	public:
 		// members

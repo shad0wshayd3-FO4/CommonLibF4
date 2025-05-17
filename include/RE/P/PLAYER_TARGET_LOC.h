@@ -1,8 +1,13 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
-	struct PLAYER_TARGET_LOC
+	class DoorTeleportData;
+
+	class PLAYER_TARGET_LOC
 	{
 	public:
 		using ArrivalFunc_t = void(void*);

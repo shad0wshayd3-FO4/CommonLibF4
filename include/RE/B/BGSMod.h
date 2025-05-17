@@ -1,17 +1,28 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSTypedKeywordValue.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTDataBuffer.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BaseFormComponent.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
-	struct INSTANCE_FILTER;
+	class INSTANCE_FILTER;
 }
 
 namespace RE::BGSMod
 {
 	namespace Attachment
 	{
+		class Instance;
 		class Mod;
-
-		struct Instance;
 	}
 
 	namespace Property
@@ -49,7 +60,7 @@ namespace RE::BGSMod
 			};
 			static_assert(sizeof(FLOATINT) == 0x4);
 
-			struct MinMax
+			class MinMax
 			{
 			public:
 				// members
@@ -58,7 +69,7 @@ namespace RE::BGSMod
 			};
 			static_assert(sizeof(MinMax) == 0x8);
 
-			struct FormValuePair
+			class FormValuePair
 			{
 			public:
 				// members
@@ -100,7 +111,7 @@ namespace RE::BGSMod
 	public:
 		static constexpr auto RTTI{ RTTI::BGSMod__Container };
 
-		struct Data
+		class Data
 		{
 		public:
 			// members
@@ -113,7 +124,7 @@ namespace RE::BGSMod
 	};
 	static_assert(sizeof(Container) == 0x10);
 
-	struct ObjectIndexData
+	class ObjectIndexData
 	{
 	public:
 		std::uint32_t objectID;  // 0
@@ -127,7 +138,7 @@ namespace RE::BGSMod
 	{
 		[[nodiscard]] inline BSTHashMap<const Mod*, TESObjectMISC*>& GetAllLooseMods()
 		{
-			static REL::Relocation<BSTHashMap<const Mod*, TESObjectMISC*>*> mods{ REL::ID(1108112), -0x8 };
+			static REL::Relocation<BSTHashMap<const Mod*, TESObjectMISC*>*> mods{ ID::BGSMod::Attachment::GetAllLooseMods, -0x8 };
 			return *mods;
 		}
 
@@ -143,7 +154,7 @@ namespace RE::BGSMod
 			static constexpr auto VTABLE{ VTABLE::BGSMod__Attachment__Mod };
 			static constexpr auto FORM_ID{ ENUM_FORM_ID::kOMOD };
 
-			struct Data :
+			class Data :
 				public Container::Data  // 00
 			{
 			public:
@@ -159,28 +170,28 @@ namespace RE::BGSMod
 			static void FindModsForLooseMod(TESObjectMISC* a_looseMod, BSScrapArray<BGSMod::Attachment::Mod*>& a_result)
 			{
 				using func_t = decltype(&Mod::FindModsForLooseMod);
-				static REL::Relocation<func_t> func{ REL::ID(410363) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Attachment::Mod::FindModsForLooseMod };
 				return func(a_looseMod, a_result);
 			}
 
 			void GetData(Data& a_data) const
 			{
 				using func_t = decltype(&Mod::GetData);
-				static REL::Relocation<func_t> func{ REL::ID(33658) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Attachment::Mod::GetData };
 				return func(this, a_data);
 			}
 
 			TESObjectMISC* GetLooseMod()
 			{
 				using func_t = decltype(&Mod::GetLooseMod);
-				static REL::Relocation<func_t> func{ REL::ID(2197514) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Attachment::Mod::GetLooseMod };
 				return func(this);
 			}
 
 			void SetLooseMod(TESObjectMISC* misc)
 			{
 				using func_t = decltype(&Mod::SetLooseMod);
-				static REL::Relocation<func_t> func{ REL::ID(123132) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Attachment::Mod::SetLooseMod };
 				return func(this, misc);
 			}
 
@@ -197,7 +208,7 @@ namespace RE::BGSMod
 		};
 		static_assert(sizeof(Mod) == 0xC8);
 
-		struct Instance  // id == 0
+		class Instance  // id == 0
 		{
 		public:
 			// members
@@ -243,7 +254,7 @@ namespace RE::BGSMod
 			static void CreateInstanceDataForObjectAndExtra(TESBoundObject& a_object, ExtraDataList& a_extra, const INSTANCE_FILTER* a_filter, bool a_useDefault)
 			{
 				using func_t = decltype(&Items::CreateInstanceDataForObjectAndExtra);
-				static REL::Relocation<func_t> func{ REL::ID(147297) };
+				static REL::Relocation<func_t> func{ ID::BGSMod::Template::Items::CreateInstanceDataForObjectAndExtra };
 				return func(a_object, a_extra, a_filter, a_useDefault);
 			}
 

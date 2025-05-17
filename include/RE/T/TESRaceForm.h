@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESRaceForm :
@@ -23,5 +25,4 @@ namespace RE
 		TESRace* formRace;  // 08
 	};
 	static_assert(sizeof(TESRaceForm) == 0x10);
-
 }

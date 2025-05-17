@@ -70,7 +70,8 @@ target("commonlibf4", function()
     add_includedirs("include", { public = true })
     add_headerfiles(
         "include/(F4SE/**.h)",
-        "include/(RE/**.h)"
+        "include/(RE/**.h)",
+        "include/(Scaleform/**.h)"
     )
 
     -- add extra files

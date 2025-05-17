@@ -10,12 +10,11 @@ namespace RE
 	public:
 		PerkPointIncreaseEvent(std::uint8_t a_perkCount) :
 			perkCount(a_perkCount)
-		{
-		}
+		{}
 
 		[[nodiscard]] static EventSource_t* GetEventSource()
 		{
-			static REL::Relocation<EventSource_t**> singleton{ REL::ID(2697359) };
+			static REL::Relocation<EventSource_t**> singleton{ ID::PerkPointIncreaseEvent::GetEventSource };
 			if (!*singleton) {
 				*singleton = new EventSource_t(&BSTGlobalEvent::GetSingleton()->eventSourceSDMKiller);
 			}

@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BGSDestructibleObjectForm.h"
+#include "RE/B/BGSPreloadable.h"
+#include "RE/B/BGSProjectileData.h"
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESModel.h"
+
 namespace RE
 {
+	enum class SOUND_LEVEL;
+
 	class __declspec(novtable) BGSProjectile :
 		public TESBoundObject,            // 000
 		public TESFullName,               // 068
@@ -17,7 +26,7 @@ namespace RE
 		bool CollidesWithSmallTransparentLayer()
 		{
 			using func_t = decltype(&BGSProjectile::CollidesWithSmallTransparentLayer);
-			static REL::Relocation<func_t> func{ REL::ID(2197620) };
+			static REL::Relocation<func_t> func{ ID::BGSProjectile::CollidesWithSmallTransparentLayer };
 			return func(this);
 		}
 

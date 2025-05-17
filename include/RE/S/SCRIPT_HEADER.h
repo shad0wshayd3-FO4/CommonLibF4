@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct SCRIPT_HEADER
+	class SCRIPT_HEADER
 	{
 	public:
 		// members

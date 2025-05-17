@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSSoundHandle.h"
+#include "RE/P/PipboySubMenu.h"
+
 namespace RE
 {
 	class __declspec(novtable) PipboyStatsMenu :
@@ -13,7 +16,7 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyStatsMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(332518) };
+			static REL::Relocation<func_t> func{ ID::PipboyStatsMenu::UpdateData };
 			return func(this);
 		}
 
@@ -21,5 +24,4 @@ namespace RE
 		BSSoundHandle perkSound;  // 18
 	};
 	static_assert(sizeof(PipboyStatsMenu) == 0x20);
-
 }

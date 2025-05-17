@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSNavmesh.h"
+#include "RE/T/TESChildCell.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) NavMesh :

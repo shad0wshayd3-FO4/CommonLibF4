@@ -1,10 +1,24 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/P/PowerUtils.h"
+
 namespace RE
 {
+	template <class>
+	class BSPointerHandleSmartPointer;
+
+	class bhkNPCollisionObject;
+	class hknpShape;
+
 	namespace Workshop
 	{
-		struct ContextData
+		class ContextData
 		{
 		public:
 			ContextData(Actor* a_actor)
@@ -25,7 +39,7 @@ namespace RE
 		};
 		static_assert(sizeof(ContextData) == 0x30);
 
-		struct DeletedItemInfo
+		class DeletedItemInfo
 		{
 		public:
 			~DeletedItemInfo() noexcept {}  // NOLINT(modernize-use-equals-default)
@@ -45,15 +59,15 @@ namespace RE
 			static constexpr auto TYPE{ EXTRA_DATA_TYPE::kWorkshop };
 
 			// members
-			PowerUtils::PowerGrid*               currentPowerGrid;  // 18
-			BSTArray<PowerUtils::PowerGrid*>     powerGrid;         // 20
-			BSTArray<Workshop::DeletedItemInfo*> deletedItems;      // 38
-			std::int32_t                         powerRating;       // 50
-			bool                                 offGridItems;      // 54
+			PowerUtils::PowerGrid*           currentPowerGrid;  // 18
+			BSTArray<PowerUtils::PowerGrid*> powerGrid;         // 20
+			BSTArray<DeletedItemInfo*>       deletedItems;      // 38
+			std::int32_t                     powerRating;       // 50
+			bool                             offGridItems;      // 54
 		};
 		static_assert(sizeof(ExtraData) == 0x58);
 
-		struct ItemDestroyedEvent
+		class ItemDestroyedEvent
 		{
 		public:
 			// members
@@ -62,7 +76,7 @@ namespace RE
 		};
 		static_assert(sizeof(ItemDestroyedEvent) == 0x10);
 
-		struct ItemMovedEvent
+		class ItemMovedEvent
 		{
 		public:
 			// members
@@ -71,7 +85,7 @@ namespace RE
 		};
 		static_assert(sizeof(ItemMovedEvent) == 0x10);
 
-		struct ItemPlacedEvent
+		class ItemPlacedEvent
 		{
 		public:
 			// members
@@ -86,7 +100,7 @@ namespace RE
 			void Set(TESObjectREFR& a_refr)
 			{
 				using func_t = decltype(&PlacementItemData::Set);
-				static REL::Relocation<func_t> func{ REL::ID(1460935) };
+				static REL::Relocation<func_t> func{ ID::Workshop::PlacementItemData::Set };
 				return func(this, a_refr);
 			}
 
@@ -139,27 +153,27 @@ namespace RE
 			bool FindAndSetSelectedNode(std::uint16_t a_row, std::uint32_t a_crc, std::uint16_t& a_outRow)
 			{
 				using func_t = decltype(&WorkshopMenuNode::FindAndSetSelectedNode);
-				static REL::Relocation<func_t> func{ REL::ID(1309368) };
+				static REL::Relocation<func_t> func{ ID::Workshop::WorkshopMenuNode::FindAndSetSelectedNode };
 				return func(this, a_row, a_crc, a_outRow);
 			}
 
 			F4_HEAP_REDEFINE_NEW(WorkshopMenuNode);
 
 			// members
-			BGSKeyword*                                  filterKeyword{ nullptr };                    // 00
-			WorkshopMenuNode*                            parent{ nullptr };                           // 08
-			BSTArray<msvc::unique_ptr<WorkshopMenuNode>> children;                                    // 10
-			BGSConstructibleObject*                      recipe{ nullptr };                           // 28
-			BGSConstructibleObject*                      sourceFormListRecipe{ nullptr };             // 30
-			TESForm*                                     form{ nullptr };                             // 38
-			std::uint32_t                                uniqueID{ static_cast<std::uint32_t>(-1) };  // 40
-			std::uint16_t                                row{ 0 };                                    // 44
-			std::uint16_t                                column{ 0 };                                 // 46
-			bool                                         selected{ false };                           // 48
+			BGSKeyword*                                 filterKeyword{ nullptr };                    // 00
+			WorkshopMenuNode*                           parent{ nullptr };                           // 08
+			BSTArray<std::unique_ptr<WorkshopMenuNode>> children;                                    // 10
+			BGSConstructibleObject*                     recipe{ nullptr };                           // 28
+			BGSConstructibleObject*                     sourceFormListRecipe{ nullptr };             // 30
+			TESForm*                                    form{ nullptr };                             // 38
+			std::uint32_t                               uniqueID{ static_cast<std::uint32_t>(-1) };  // 40
+			std::uint16_t                               row{ 0 };                                    // 44
+			std::uint16_t                               column{ 0 };                                 // 46
+			bool                                        selected{ false };                           // 48
 		};
 		static_assert(sizeof(WorkshopMenuNode) == 0x50);
 
-		struct WorkshopModeEvent
+		class WorkshopModeEvent
 		{
 		public:
 			// members
@@ -171,152 +185,152 @@ namespace RE
 		[[nodiscard]] inline TESObjectREFR* FindNearestValidWorkshop(const TESObjectREFR& a_refr)
 		{
 			using func_t = decltype(&Workshop::FindNearestValidWorkshop);
-			static REL::Relocation<func_t> func{ REL::ID(2194970) };
+			static REL::Relocation<func_t> func{ ID::Workshop::FindNearestValidWorkshop };
 			return func(a_refr);
 		}
 
 		[[nodiscard]] inline bool FreeBuild()
 		{
 			using func_t = decltype(&Workshop::FreeBuild);
-			static REL::Relocation<func_t> func{ REL::ID(2194924) };
+			static REL::Relocation<func_t> func{ ID::Workshop::FreeBuild };
 			return func();
 		}
 
 		[[nodiscard]] inline WorkshopMenuNode* GetSelectedWorkshopMenuNode(std::uint32_t a_row, std::uint32_t& a_column)
 		{
 			using func_t = decltype(&Workshop::GetSelectedWorkshopMenuNode);
-			static REL::Relocation<func_t> func{ REL::ID(2195024) };
+			static REL::Relocation<func_t> func{ ID::Workshop::GetSelectedWorkshopMenuNode };
 			return func(a_row, a_column);
 		}
 
 		inline void InitializePlacementReference(const ContextData& a_context, TESBoundObject& a_object)
 		{
 			using func_t = decltype(&Workshop::InitializePlacementReference);
-			static REL::Relocation<func_t> func{ REL::ID(1577199) };
+			static REL::Relocation<func_t> func{ ID::Workshop::InitializePlacementReference };
 			return func(a_context, a_object);
 		}
 
 		[[nodiscard]] inline bool IsLocationWithinBuildableArea(const TESObjectREFR& a_workshop, const NiPoint3& a_location)
 		{
 			using func_t = decltype(&Workshop::IsLocationWithinBuildableArea);
-			static REL::Relocation<func_t> func{ REL::ID(990965) };
+			static REL::Relocation<func_t> func{ ID::Workshop::IsLocationWithinBuildableArea };
 			return func(a_workshop, a_location);
 		}
 
 		inline bool PlaceCurrentReference(const ContextData& a_context)
 		{
 			using func_t = decltype(&Workshop::PlaceCurrentReference);
-			static REL::Relocation<func_t> func{ REL::ID(1058211) };
+			static REL::Relocation<func_t> func{ ID::Workshop::PlaceCurrentReference };
 			return func(a_context);
 		}
 
 		inline void RegisterForItemDestroyed(BSTEventSink<ItemDestroyedEvent>* a_sink)
 		{
 			using func_t = decltype(&Workshop::RegisterForItemDestroyed);
-			static REL::Relocation<func_t> func{ REL::ID(1367004) };
+			static REL::Relocation<func_t> func{ ID::Workshop::RegisterForItemDestroyed };
 			return func(a_sink);
 		}
 
 		inline void RegisterForItemMoved(BSTEventSink<ItemMovedEvent>* a_sink)
 		{
 			using func_t = decltype(&Workshop::RegisterForItemMoved);
-			static REL::Relocation<func_t> func{ REL::ID(835323) };
+			static REL::Relocation<func_t> func{ ID::Workshop::RegisterForItemMoved };
 			return func(a_sink);
 		}
 
 		inline void RegisterForItemPlaced(BSTEventSink<ItemPlacedEvent>* a_sink)
 		{
 			using func_t = decltype(&Workshop::RegisterForItemPlaced);
-			static REL::Relocation<func_t> func{ REL::ID(849008) };
+			static REL::Relocation<func_t> func{ ID::Workshop::RegisterForItemPlaced };
 			return func(a_sink);
 		}
 
 		inline void RegisterForWorkshopModeEvent(BSTEventSink<WorkshopModeEvent>* a_sink)
 		{
 			using func_t = decltype(&Workshop::RegisterForWorkshopModeEvent);
-			static REL::Relocation<func_t> func{ REL::ID(275798) };
+			static REL::Relocation<func_t> func{ ID::Workshop::RegisterForWorkshopModeEvent };
 			return func(a_sink);
 		}
 
 		inline void RequestExitWorkshop(bool a_allowReEntry)
 		{
 			using func_t = decltype(&Workshop::RequestExitWorkshop);
-			static REL::Relocation<func_t> func{ REL::ID(209891) };
+			static REL::Relocation<func_t> func{ ID::Workshop::RequestExitWorkshop };
 			return func(a_allowReEntry);
 		}
 
 		inline void ScrapReference(const ContextData& a_context, BSPointerHandleSmartPointer<BSPointerHandleManagerInterface<TESObjectREFR, HandleManager>>& a_scrapRef, BSTArray<BSTTuple<TESBoundObject*, std::uint32_t>>* a_rewards)
 		{
 			using func_t = decltype(&Workshop::ScrapReference);
-			static REL::Relocation<func_t> func{ REL::ID(636327) };
+			static REL::Relocation<func_t> func{ ID::Workshop::ScrapReference };
 			return func(a_context, a_scrapRef, a_rewards);
 		}
 
 		inline void SetSelectedEditItem(ObjectRefHandle a_refr)
 		{
 			using func_t = decltype(&Workshop::SetSelectedEditItem);
-			static REL::Relocation<func_t> func{ REL::ID(2562) };
+			static REL::Relocation<func_t> func{ ID::Workshop::SetSelectedEditItem };
 			return func(a_refr);
 		}
 
 		inline void StartWorkshop(TESObjectREFR* a_workshopRef)
 		{
 			using func_t = decltype(&Workshop::StartWorkshop);
-			static REL::Relocation<func_t> func{ REL::ID(171771) };
+			static REL::Relocation<func_t> func{ ID::Workshop::StartWorkshop };
 			return func(a_workshopRef);
 		}
 
 		inline void ToggleEditMode(const ContextData& a_context)
 		{
 			using func_t = decltype(&Workshop::ToggleEditMode);
-			static REL::Relocation<func_t> func{ REL::ID(1243386) };
+			static REL::Relocation<func_t> func{ ID::Workshop::ToggleEditMode };
 			return func(a_context);
 		}
 
 		inline void UnregisterForItemDestroyed(BSTEventSink<ItemDestroyedEvent>* a_sink)
 		{
 			using func_t = decltype(&Workshop::UnregisterForItemDestroyed);
-			static REL::Relocation<func_t> func{ REL::ID(1101379) };
+			static REL::Relocation<func_t> func{ ID::Workshop::UnregisterForItemDestroyed };
 			return func(a_sink);
 		}
 
 		inline void UnregisterForItemMoved(BSTEventSink<ItemMovedEvent>* a_sink)
 		{
 			using func_t = decltype(&Workshop::UnregisterForItemMoved);
-			static REL::Relocation<func_t> func{ REL::ID(569432) };
+			static REL::Relocation<func_t> func{ ID::Workshop::UnregisterForItemMoved };
 			return func(a_sink);
 		}
 
 		inline void UnregisterForItemPlaced(BSTEventSink<ItemPlacedEvent>* a_sink)
 		{
 			using func_t = decltype(&Workshop::UnregisterForItemPlaced);
-			static REL::Relocation<func_t> func{ REL::ID(583255) };
+			static REL::Relocation<func_t> func{ ID::Workshop::UnregisterForItemPlaced };
 			return func(a_sink);
 		}
 
 		inline void UnregisterForWorkshopModeEvent(BSTEventSink<WorkshopModeEvent>* a_sink)
 		{
 			using func_t = decltype(&Workshop::UnregisterForWorkshopModeEvent);
-			static REL::Relocation<func_t> func{ REL::ID(9236) };
+			static REL::Relocation<func_t> func{ ID::Workshop::UnregisterForWorkshopModeEvent };
 			return func(a_sink);
 		}
 
 		inline void UpdateActiveEdit(const ContextData& a_context, bool a_multiselect = false)
 		{
 			using func_t = decltype(&Workshop::UpdateActiveEdit);
-			static REL::Relocation<func_t> func{ REL::ID(69261) };
+			static REL::Relocation<func_t> func{ ID::Workshop::UpdateActiveEdit };
 			return func(a_context, a_multiselect);
 		}
 
 		[[nodiscard]] inline bool WorkshopCanShowRecipe(BGSConstructibleObject* a_recipe, BGSKeyword* a_filter)
 		{
 			using func_t = decltype(&Workshop::WorkshopCanShowRecipe);
-			static REL::Relocation<func_t> func{ REL::ID(239190) };
+			static REL::Relocation<func_t> func{ ID::Workshop::WorkshopCanShowRecipe };
 			return func(a_recipe, a_filter);
 		}
 
-		inline REL::Relocation<PlacementItemData*> CurrentPlacementItemData{ REL::ID(1279207) };
-		inline REL::Relocation<std::uint16_t*>     CurrentRow{ REL::ID(833923) };
-		inline REL::Relocation<ObjectRefHandle*>   PlacementItem{ REL::ID(526727) };
+		inline static REL::Relocation<PlacementItemData*> CurrentPlacementItemData{ ID::Workshop::CurrentPlacementItemData };
+		inline static REL::Relocation<std::uint16_t*>     CurrentRow{ ID::Workshop::CurrentRow };
+		inline static REL::Relocation<ObjectRefHandle*>   PlacementItem{ ID::Workshop::PlacementItem };
 	}
 }

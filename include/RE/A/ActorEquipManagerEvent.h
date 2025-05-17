@@ -10,8 +10,9 @@ namespace RE
 			kUnequip = 0x1
 		};
 
-		struct Event
+		class Event
 		{
+		public:
 			// members
 			REX::EnumSet<Type, std::uint16_t> changeType;     // 00
 			const BGSObjectInstance*          itemAffected;   // 08

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class ENUM_FORM_ID
+	enum class ENUM_FORM_ID : std::int32_t
 	{
 		kNONE,  // 00 NONE X TESForm
 		//         X TESObject
@@ -183,47 +183,3 @@ namespace RE
 		kActiveEffect = 163
 	};
 }
-
-namespace std
-{
-	[[nodiscard]] inline std::string to_string(RE::ENUM_FORM_ID a_formType)
-	{
-		return RE::TESForm::GetFormTypeString(a_formType);
-	}
-}
-
-#ifdef FMT_VERSION
-namespace fmt
-{
-	template <>
-	struct formatter<RE::ENUM_FORM_ID>
-	{
-		template <class ParseContext>
-		constexpr auto parse(ParseContext& a_ctx)
-		{
-			return a_ctx.begin();
-		}
-
-		template <class FormatContext>
-		auto format(const RE::ENUM_FORM_ID& a_formType, FormatContext& a_ctx)
-		{
-			return fmt::format_to(a_ctx.out(), "{}", RE::TESForm::GetFormTypeString(a_formType));
-		}
-	};
-}
-#endif
-
-#ifdef __cpp_lib_format
-namespace std
-{
-	template <class CharT>
-	struct formatter<RE::ENUM_FORM_ID, CharT> : std::formatter<std::string_view, CharT>
-	{
-		template <class FormatContext>
-		auto format(RE::ENUM_FORM_ID a_formType, FormatContext& a_ctx)
-		{
-			return formatter<std::string_view, CharT>::format(RE::TESForm::GetFormTypeString(a_formType), a_ctx);
-		}
-	};
-}
-#endif

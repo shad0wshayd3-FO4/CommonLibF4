@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSPropertySheet :

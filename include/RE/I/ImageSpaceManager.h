@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/I/ImageSpaceData.h"
+#include "RE/I/ImageSpaceLUTData.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiRect.h"
+#include "RE/N/NiTArray.h"
+
 namespace RE
 {
+	class BSTriShape;
+
 	class ImageSpaceManager
 	{
 	public:
@@ -263,7 +272,7 @@ namespace RE
 
 		[[nodiscard]] static ImageSpaceManager* GetSingleton()
 		{
-			static REL::Relocation<ImageSpaceManager**> singleton{ REL::ID(2712627) };
+			static REL::Relocation<ImageSpaceManager**> singleton{ ID::ImageSpaceManager::Singleton };
 			return *singleton;
 		}
 

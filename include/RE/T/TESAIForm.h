@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/A/AIDATA_GAME.h"
+#include "RE/B/BaseFormComponent.h"
+#include "RE/P/PackageList.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESAIForm :

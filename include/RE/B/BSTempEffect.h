@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiObject.h"
+#include "RE/T/TEMP_EFFECT_TYPE.h"
+
 #define F4SE_TEMPEFFECT_UTIL(a_elem)                                    \
 	case a_elem::TYPE:                                                  \
 		if constexpr (std::is_convertible_v<const a_elem*, const T*>) { \
@@ -9,6 +12,21 @@
 
 namespace RE
 {
+	class BGSLoadGameBuffer;
+	class BGSSaveGameBuffer;
+	class BSTempEffectDebris;
+	class BSTempEffectGeometryDecal;
+	class BSTempEffectParticle;
+	class BSTempEffectScreenSpaceDecal;
+	class BSTempEffectSPG;
+	class BSTempEffectWeaponBlood;
+	class BSTerrainEffect;
+	class NiAVObject;
+	class ModelReferenceEffect;
+	class ReferenceEffect;
+	class ShaderReferenceEffect;
+	class SummonPlacementEffect;
+
 	class __declspec(novtable) BSTempEffect :
 		public NiObject  // 00
 	{

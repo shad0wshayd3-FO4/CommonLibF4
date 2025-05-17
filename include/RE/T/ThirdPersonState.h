@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiQuaternion.h"
+#include "RE/T/TESCameraState.h"
+
 namespace RE
 {
+	class NiAVObject;
+	class NiNode;
+
 	class __declspec(novtable) ThirdPersonState :
 		public TESCameraState  // 000
 	{

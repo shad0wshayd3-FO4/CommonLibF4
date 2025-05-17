@@ -1,7 +1,37 @@
 #pragma once
 
+#include "RE/N/NiRefObject.h"
+
 namespace RE
 {
+	class bhkBlendCollisionObject;
+	class bhkLimitedHingeConstraint;
+	class bhkNiCollisionObject;
+	class bhkNPCollisionObject;
+	class bhkRigidBody;
+	class BSDynamicTriShape;
+	class BSFadeNode;
+	class BSGeometry;
+	class BSLines;
+	class BSMultiBoundNode;
+	class BSSegmentedTriShape;
+	class BSSubIndexTriShape;
+	class BSTriShape;
+	class NiCloningProcess;
+	class NiControllerManager;
+	class NiGeometry;
+	class NiLight;
+	class NiNode;
+	class NiObjectGroup;
+	class NiParticles;
+	class NiParticleSystem;
+	class NiRTTI;
+	class NiStream;
+	class NiSwitchNode;
+	class NiTriBasedGeom;
+	class NiTriShape;
+	class NiTriStrips;
+
 	class __declspec(novtable) NiObject :
 		public NiRefObject  // 00
 	{

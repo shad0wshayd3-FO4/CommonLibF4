@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSScaleformExternalTexture.h"
+#include "RE/P/PipboySubMenu.h"
+
 namespace RE
 {
 	class __declspec(novtable) PipboyMapMenu :
@@ -13,7 +16,7 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyMapMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(2224074) };
+			static REL::Relocation<func_t> func{ ID::PipboyMapMenu::UpdateData };
 			return func(this);
 		}
 

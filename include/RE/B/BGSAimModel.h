@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSAimModel :
@@ -10,7 +12,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSAimModel };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kAMDL };
 
-		struct Data
+		class Data
 		{
 		public:
 			// members

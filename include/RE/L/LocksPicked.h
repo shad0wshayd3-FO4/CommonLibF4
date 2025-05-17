@@ -5,7 +5,7 @@ namespace RE
 	class LocksPicked
 	{
 	public:
-		struct Event
+		class Event
 		{
 		public:
 		};
@@ -14,7 +14,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<LocksPicked::Event>* GetEventSource()
 		{
 			using func_t = decltype(&LocksPicked::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(594991) };
+			static REL::Relocation<func_t> func{ ID::LocksPicked::GetEventSource };
 			return func();
 		}
 	};

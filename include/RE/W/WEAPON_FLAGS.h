@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class WEAPON_FLAGS : std::uint32_t
+	enum class WEAPON_FLAGS : std::int32_t
 	{
 		kPlayerOnly = 0x00000001,
 		kNPCsUseAmmo = 0x00000002,

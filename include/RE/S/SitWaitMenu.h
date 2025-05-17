@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/G/GameMenuBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) SitWaitMenu :
@@ -21,14 +24,14 @@ namespace RE
 		static void OnEnterFurniture(ObjectRefHandle a_handle)
 		{
 			using func_t = decltype(&SitWaitMenu::OnEnterFurniture);
-			static REL::Relocation<func_t> func{ REL::ID(562238) };
+			static REL::Relocation<func_t> func{ ID::SitWaitMenu::OnEnterFurniture };
 			return func(a_handle);
 		}
 
 		static void OnExitFurniture()
 		{
 			using func_t = decltype(&SitWaitMenu::OnExitFurniture);
-			static REL::Relocation<func_t> func{ REL::ID(454795) };
+			static REL::Relocation<func_t> func{ ID::SitWaitMenu::OnExitFurniture };
 			return func();
 		}
 

@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	enum class ACTOR_VALUE_MODIFIER;
+
 	class __declspec(novtable) ActorValueOwner
 	{
 	public:

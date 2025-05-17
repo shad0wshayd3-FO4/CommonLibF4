@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESWordOfPower :

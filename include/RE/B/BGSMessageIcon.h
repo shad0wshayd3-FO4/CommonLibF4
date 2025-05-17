@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BaseFormComponent.h"
+#include "RE/T/TESIcon.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSMessageIcon :

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESGlobal :
@@ -13,8 +16,8 @@ namespace RE
 		[[nodiscard]] float GetValue() const noexcept { return value; }
 
 		// members
-		BSStringT<char> formEditorID;  // 20
-		float           value;         // 30
+		BSString formEditorID;  // 20
+		float    value;         // 30
 	};
 	static_assert(sizeof(TESGlobal) == 0x38);
 }

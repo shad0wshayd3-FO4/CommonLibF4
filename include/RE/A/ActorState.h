@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/I/IMovementState.h"
+#include "RE/W/WEAPON_STATE.h"
+
 namespace RE
 {
+	enum class GUN_STATE;
+	enum class INTERACTING_STATE;
+	enum class SIT_SLEEP_STATE;
+
 	class __declspec(novtable) ActorState :
 		public IMovementState  // 00
 	{

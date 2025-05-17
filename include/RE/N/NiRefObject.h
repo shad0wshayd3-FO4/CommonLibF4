@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	class __declspec(novtable) alignas(0x08) NiRefObject
@@ -11,14 +13,14 @@ namespace RE
 		NiRefObject()
 		{
 			stl::emplace_vtable(this);
-			static REL::Relocation<std::uint32_t*> objects{ REL::ID(1161724) };
+			static REL::Relocation<std::uint32_t*> objects{ ID::NiRefObject::Objects };
 			stl::atomic_ref                        myObjects{ *objects };
 			++myObjects;
 		}
 
 		virtual ~NiRefObject()  // 00
 		{
-			static REL::Relocation<std::uint32_t*> objects{ REL::ID(1161724) };
+			static REL::Relocation<std::uint32_t*> objects{ ID::NiRefObject::Objects };
 			stl::atomic_ref                        myObjects{ *objects };
 			--myObjects;
 		}
@@ -45,7 +47,7 @@ namespace RE
 		}
 
 		// members
-		std::uint32_t refCount;  // 08
+		std::uint32_t refCount{ 0 };  // 08
 	};
 	static_assert(sizeof(NiRefObject) == 0x10);
 }

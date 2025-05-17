@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/ImageSpaceEffect.h"
+
 namespace RE
 {
 	class __declspec(novtable) ImageSpaceEffectTemporalAA :
@@ -17,7 +19,7 @@ namespace RE
 		virtual bool IsActive() override;                                                           // 08
 		virtual bool UpdateParams(ImageSpaceEffectParam* a_param) override;                         // 09
 
-		inline static REL::Relocation<std::uint32_t*> MaskS{ REL::ID(775377) };
+		inline static REL::Relocation<std::uint32_t*> MaskS{ ID::ImageSpaceEffectTemporalAA::MaskS };
 
 		// members
 		float previousInvTexSizeX;         // B0

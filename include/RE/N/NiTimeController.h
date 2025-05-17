@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/N/NiObject.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTFlags.h"
+
 namespace RE
 {
+	class NiObjectNET;
+	class NiUpdateData;
+
 	class __declspec(novtable) NiTimeController :
 		public NiObject  // 00
 	{

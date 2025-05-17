@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class INTERACTING_STATE : std::uint32_t
+	enum class INTERACTING_STATE : std::int32_t
 	{
 		kNotInteracting = 0x0,
 		kWaitingToInteract = 0x1,

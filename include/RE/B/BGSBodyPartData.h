@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BGSBodyPartDefs.h"
+#include "RE/B/BGSPreloadable.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESModel.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSBodyPartData :

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/A/ADDON_DATA.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/T/TESBoundObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSAddonNode :

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BS_BUTTON_CODE.h"
+#include "RE/I/IDEvent.h"
+
 namespace RE
 {
 	class __declspec(novtable) ButtonEvent :

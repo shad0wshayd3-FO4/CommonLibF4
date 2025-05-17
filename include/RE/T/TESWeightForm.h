@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESWeightForm :
@@ -12,7 +14,7 @@ namespace RE
 		[[nodiscard]] static float GetFormWeight(const TESForm* a_form, const TBO_InstanceData* a_data)
 		{
 			using func_t = float (*)(const TESForm*, const TBO_InstanceData*);
-			static REL::Relocation<func_t> func{ REL::ID(2193446) };
+			static REL::Relocation<func_t> func{ ID::TESWeightForm::GetFormWeight };
 			return func(a_form, a_data);
 		}
 

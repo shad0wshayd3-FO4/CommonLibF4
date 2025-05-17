@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
+	class PerkRankData;
+
 	class __declspec(novtable) BGSPerkRankArray :
 		public BaseFormComponent  // 00
 	{
@@ -23,14 +27,14 @@ namespace RE
 		void AllocatePerkRankArray(std::uint32_t a_count)
 		{
 			using func_t = decltype(&BGSPerkRankArray::AllocatePerkRankArray);
-			static REL::Relocation<func_t> func{ REL::ID(888419) };
+			static REL::Relocation<func_t> func{ ID::BGSPerkRankArray::AllocatePerkRankArray };
 			return func(this, a_count);
 		}
 
 		void ClearPerks(bool a_removeFormUser)
 		{
 			using func_t = decltype(&BGSPerkRankArray::ClearPerks);
-			static REL::Relocation<func_t> func{ REL::ID(1247917) };
+			static REL::Relocation<func_t> func{ ID::BGSPerkRankArray::ClearPerks };
 			return func(this, a_removeFormUser);
 		}
 

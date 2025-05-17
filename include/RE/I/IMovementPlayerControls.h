@@ -1,8 +1,12 @@
 #pragma once
 
+#include "RE/I/IMovementInterface.h"
+
 namespace RE
 {
-	struct __declspec(novtable) IMovementPlayerControls :
+	class PlayerControlsMovementData;
+
+	class __declspec(novtable) IMovementPlayerControls :
 		public IMovementInterface  // 00
 	{
 	public:

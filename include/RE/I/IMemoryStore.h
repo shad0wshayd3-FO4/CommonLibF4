@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IMemoryStoreBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) IMemoryStore :

@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSInstanceNamingRules :
@@ -24,7 +29,7 @@ namespace RE
 		};
 		static_assert(sizeof(RuleData) == 0x38);
 
-		struct RuleSet :
+		class RuleSet :
 			public BSTArray<RuleData>  // 00
 		{
 		public:

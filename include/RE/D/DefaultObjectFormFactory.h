@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSDefaultObject.h"
+#include "RE/I/IFormFactory.h"
+
 namespace RE
 {
 	class DefaultObjectFormFactory :

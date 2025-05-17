@@ -1,15 +1,24 @@
 #pragma once
 
+#include "RE/B/BSResource_ErrorCode.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct BSModelDB
-	{
-		struct DBTraits
-		{
-			using U_Type = NiPointer<NiNode>;
+	enum class ENUM_LOD_MULT;
+	class NiNode;
 
-			struct ArgsType
+	class BSModelDB
+	{
+	public:
+		using Handle = void*;
+
+		class DBTraits
+		{
+		public:
+			class ArgsType
 			{
+			public:
 				// members
 				REX::EnumSet<ENUM_LOD_MULT, std::int32_t> lodFadeMult;          // 00
 				std::uint32_t                             loadLevel;            // 04
@@ -21,28 +30,23 @@ namespace RE
 				std::uint8_t                              loadTextures: 1;      // 08:05
 			};
 			static_assert(sizeof(ArgsType) == 0x0C);
-
-			static BSResource::EntryDB<BSModelDB::DBTraits>* GetSingleton()
-			{
-				static REL::Relocation<BSResource::EntryDB<BSModelDB::DBTraits>**> singleton{ REL::ID(45807) };
-				return *singleton;
-			}
 		};
 		static_assert(std::is_empty_v<DBTraits>);
 
-		using Handle = BSResource::RHandleType<BSResource::Entry<NiPointer<NiNode>, BSResource::EntryDBTraits<BSModelDB::DBTraits, BSResource::EntryDB<BSModelDB::DBTraits>>::CArgs>, BSResource::EntryDB<BSModelDB::DBTraits>>;
-
-		struct HandelListHead
+		class HandelListHead
 		{
-			struct HandleList
+		public:
+			class HandleList
 			{
+			public:
 				// members
-				Handle      handle;
-				HandleList* next;
+				Handle      handle;  // 00
+				HandleList* next;    // 08
 			};
+			static_assert(sizeof(HandleList) == 0x10);
 
 			// members
-			HandleList* head;
+			HandleList* head;  // 00
 		};
 		static_assert(sizeof(HandelListHead) == 0x8);
 
@@ -52,7 +56,7 @@ namespace RE
 			const DBTraits::ArgsType& a_args)
 		{
 			using func_t = BSResource::ErrorCode (*)(const char*, Handle&, const DBTraits::ArgsType&);
-			static REL::Relocation<func_t> func{ REL::ID(1066398) };
+			static REL::Relocation<func_t> func{ ID::BSModelDB::Demand1 };
 			return func(a_name, a_result, a_args);
 		}
 
@@ -62,7 +66,7 @@ namespace RE
 			const DBTraits::ArgsType& a_args)
 		{
 			using func_t = BSResource::ErrorCode (*)(const char*, NiPointer<NiNode>*, const DBTraits::ArgsType&);
-			static REL::Relocation<func_t> func{ REL::ID(1225688) };
+			static REL::Relocation<func_t> func{ ID::BSModelDB::Demand2 };
 			return func(a_name, a_result, a_args);
 		}
 	};

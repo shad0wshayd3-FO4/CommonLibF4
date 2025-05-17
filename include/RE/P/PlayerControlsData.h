@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+#include "RE/S/SpringState.h"
+
 namespace RE
 {
-	struct PlayerControlsData
+	class PlayerControlsData
 	{
 	public:
 		// members

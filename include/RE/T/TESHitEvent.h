@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/H/HitData.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
 	class TESHitEvent
@@ -8,7 +13,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESHitEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESHitEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2201886) };
+			static REL::Relocation<func_t> func{ ID::TESHitEvent::GetEventSource };
 			return func();
 		}
 

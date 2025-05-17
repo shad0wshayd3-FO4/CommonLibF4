@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct FriendshipFactionsStruct
+	class FriendshipFactionsStruct
 	{
 	public:
 		// members

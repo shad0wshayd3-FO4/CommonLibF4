@@ -1,8 +1,12 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
-	struct BSNavmeshTriangleDoorPortal
+	class BSPathingDoor;
+
+	class BSNavmeshTriangleDoorPortal
 	{
 	public:
 		// members

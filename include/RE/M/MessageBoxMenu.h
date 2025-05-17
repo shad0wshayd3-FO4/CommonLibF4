@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/G/GameMenuBase.h"
+
 namespace RE
 {
+	class MenuModeChangeEvent;
+	class MessageBoxData;
+
 	class __declspec(novtable) MessageBoxMenu :
 		public GameMenuBase,                      // 00
 		public BSTEventSink<MenuModeChangeEvent>  // E0
@@ -19,7 +25,7 @@ namespace RE
 		void ShowMessage()
 		{
 			using func_t = decltype(&MessageBoxMenu::ShowMessage);
-			static REL::Relocation<func_t> func{ REL::ID(442479) };
+			static REL::Relocation<func_t> func{ ID::MessageBoxMenu::ShowMessage };
 			return func(this);
 		}
 

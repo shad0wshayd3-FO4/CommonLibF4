@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTArray.h"
+#include "RE/N/NiTimeController.h"
+
 namespace RE
 {
+	class BSAnimNoteListener;
+	class NiAVObjectPalette;
+	class NiControllerSequence;
+
 	class NiControllerManager :
 		public NiTimeController  // 00
 	{
@@ -13,14 +23,14 @@ namespace RE
 		[[nodiscard]] static NiControllerManager* GetNiControllerManager(const NiObjectNET* a_object)
 		{
 			using func_t = decltype(&NiControllerManager::GetNiControllerManager);
-			static REL::Relocation<func_t> func{ REL::ID(2271798) };
+			static REL::Relocation<func_t> func{ ID::NiControllerManager::GetNiControllerManager };
 			return func(a_object);
 		}
 
 		[[nodiscard]] NiControllerSequence* GetSequenceByName(const BSFixedString& a_name)
 		{
 			using func_t = decltype(&NiControllerManager::GetSequenceByName);
-			static REL::Relocation<func_t> func{ REL::ID(846648) };
+			static REL::Relocation<func_t> func{ ID::NiControllerManager::GetSequenceByName };
 			return func(this, a_name);
 		}
 
@@ -48,5 +58,4 @@ namespace RE
 		NiPointer<NiAVObjectPalette>                     objectPalette;                 // C0
 	};
 	static_assert(sizeof(NiControllerManager) == 0xC8);
-
 }

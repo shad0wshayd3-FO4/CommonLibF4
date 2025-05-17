@@ -4,8 +4,10 @@ namespace RE
 {
 	namespace PlayerInDialogueChanged
 	{
-		struct Event
+		class Event
 		{
+		public:
+			// members
 			bool isPlayerInDialogue;  // 00
 		};
 		static_assert(sizeof(Event) == 0x1);

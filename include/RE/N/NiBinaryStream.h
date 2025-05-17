@@ -8,8 +8,9 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::NiBinaryStream };
 		static constexpr auto VTABLE{ VTABLE::NiBinaryStream };
 
-		struct BufferInfo
+		class BufferInfo
 		{
+		public:
 			void*       buffer;           // 00
 			std::size_t fileSize;         // 08
 			std::size_t bufferAllocSize;  // 10

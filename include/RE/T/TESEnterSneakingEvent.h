@@ -1,13 +1,17 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct TESEnterSneakingEvent
+	class TESEnterSneakingEvent
 	{
+	public:
 		[[nodiscard]] static BSTEventSource<TESEnterSneakingEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESEnterSneakingEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2201837) };
+			static REL::Relocation<func_t> func{ ID::TESEnterSneakingEvent::GetEventSource };
 			return func();
 		}
 

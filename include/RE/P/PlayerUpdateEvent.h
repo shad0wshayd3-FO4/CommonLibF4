@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct PlayerUpdateEvent
+	class PlayerUpdateEvent
 	{
 	public:
 	};

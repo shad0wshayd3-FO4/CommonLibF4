@@ -1,7 +1,28 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPointer.h"
+#include "RE/S/SkyEffectController.h"
+
 namespace RE
 {
+	class Atmosphere;
+	class BSMultiBoundNode;
+	class Clouds;
+	class ImageSpaceModifierInstanceForm;
+	class Moon;
+	class NiNode;
+	class NiTexture;
+	class Precipitation;
+	class ReferenceEffect;
+	class SkySound;
+	class Stars;
+	class Sun;
+
 	class __declspec(novtable) Sky
 	{
 	public:
@@ -33,7 +54,7 @@ namespace RE
 			kReleaseWeatherOverride = 1 << 21
 		};
 
-		struct SkyStaticRefData
+		class SkyStaticRefData
 		{
 		public:
 			// members
@@ -46,14 +67,14 @@ namespace RE
 		[[nodiscard]] static Sky* GetSingleton()
 		{
 			using func_t = decltype(&Sky::GetSingleton);
-			static REL::Relocation<func_t> func{ REL::ID(2192448) };
+			static REL::Relocation<func_t> func{ ID::Sky::Singleton };
 			return func();
 		}
 
 		void ForceWeather(TESWeather* a_weather, bool a_override)
 		{
 			using func_t = decltype(&Sky::ForceWeather);
-			static REL::Relocation<func_t> func{ REL::ID(2208861) };
+			static REL::Relocation<func_t> func{ ID::Sky::ForceWeather };
 			return func(this, a_weather, a_override);
 		}
 
@@ -68,7 +89,7 @@ namespace RE
 		void ResetWeather()
 		{
 			using func_t = decltype(&Sky::ResetWeather);
-			static REL::Relocation<func_t> func{ REL::ID(2208860) };
+			static REL::Relocation<func_t> func{ ID::Sky::ResetWeather };
 			return func(this);
 		}
 
@@ -76,7 +97,7 @@ namespace RE
 		NiPointer<BSMultiBoundNode>        root;                             // 008
 		NiPointer<NiNode>                  moonsRoot;                        // 010
 		NiPointer<NiNode>                  auroraRoot;                       // 018
-		BSModelDB::Handle                  aurora3d;                         // 020
+		void*                              aurora3d;                         // 020 - BSModelDB::Handle
 		BGSLightingTemplate*               extLightingOverride;              // 028
 		ObjectRefHandle                    currentRoom;                      // 030
 		ObjectRefHandle                    previousRoom;                     // 034
@@ -145,7 +166,7 @@ namespace RE
 		SkyEffectController                effectController;                 // 430
 		BSTArray<NiPointer<NiTexture>>     storedCloudTextures;              // 438
 		BSTArray<NiPointer<NiTexture>>     storedWorldMapCloudTextures;      // 450
-		BSTArray<Sky::SkyStaticRefData>    skyStaticRefData;                 // 468
+		BSTArray<SkyStaticRefData>         skyStaticRefData;                 // 468
 	};
 	static_assert(sizeof(Sky) == 0x480);
 }

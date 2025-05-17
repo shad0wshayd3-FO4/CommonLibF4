@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSMessageIcon.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BaseFormComponent.h"
+#include "RE/T/TESIcon.h"
+#include "RE/T/TESModelRDT.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESBipedModelForm :
@@ -16,5 +22,4 @@ namespace RE
 		TESModelRDT          constraintTemplate;  // 0D8
 	};
 	static_assert(sizeof(TESBipedModelForm) == 0x108);
-
 }

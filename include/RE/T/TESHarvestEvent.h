@@ -1,15 +1,18 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	namespace TESHarvestEvent
 	{
-		struct ItemHarvested
+		class ItemHarvested
 		{
+		public:
 			[[nodiscard]] static BSTEventSource<ItemHarvested>* GetEventSource()
 			{
 				using func_t = decltype(&ItemHarvested::GetEventSource);
-				static REL::Relocation<func_t> func{ REL::ID(2193351) };
+				static REL::Relocation<func_t> func{ ID::TESHarvestEvent::GetEventSource };
 				return func();
 			}
 

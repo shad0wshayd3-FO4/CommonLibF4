@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/E/ExamineConfirmMenu.h"
+
 namespace RE
 {
 	class __declspec(novtable) ModConfirmCallback :

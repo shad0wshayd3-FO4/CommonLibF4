@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiProperty.h"
+#include "RE/N/NiTFlags.h"
+
 namespace RE
 {
 	class __declspec(novtable) NiAlphaProperty :
@@ -57,35 +60,35 @@ namespace RE
 		void SetDestBlendMode(AlphaFunction f)
 		{
 			using func_t = decltype(&NiAlphaProperty::SetDestBlendMode);
-			static REL::Relocation<func_t> func{ REL::ID(725249) };
+			static REL::Relocation<func_t> func{ ID::NiAlphaProperty::SetDestBlendMode };
 			return func(this, f);
 		}
 
 		void SetSrcBlendMode(AlphaFunction f)
 		{
 			using func_t = decltype(&NiAlphaProperty::SetSrcBlendMode);
-			static REL::Relocation<func_t> func{ REL::ID(976961) };
+			static REL::Relocation<func_t> func{ ID::NiAlphaProperty::SetSrcBlendMode };
 			return func(this, f);
 		}
 
 		void SetTestMode(TestFunction f)
 		{
 			using func_t = decltype(&NiAlphaProperty::SetTestMode);
-			static REL::Relocation<func_t> func{ REL::ID(976961), 0x20 };
+			static REL::Relocation<func_t> func{ ID::NiAlphaProperty::SetTestMode, 0x20 };
 			return func(this, f);
 		}
 
 		void SetAlphaBlending(bool b)
 		{
 			using func_t = decltype(&NiAlphaProperty::SetAlphaBlending);
-			static REL::Relocation<func_t> func{ REL::ID(645586) };
+			static REL::Relocation<func_t> func{ ID::NiAlphaProperty::SetAlphaBlending };
 			return func(this, b);
 		}
 
 		void SetAlphaTesting(bool b)
 		{
 			using func_t = decltype(&NiAlphaProperty::SetAlphaTesting);
-			static REL::Relocation<func_t> func{ REL::ID(645586), 0x20 };
+			static REL::Relocation<func_t> func{ ID::NiAlphaProperty::SetAlphaTesting, 0x20 };
 			return func(this, b);
 		}
 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSAwardsSystemUtility.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSSteamAwardsSystemUtility :

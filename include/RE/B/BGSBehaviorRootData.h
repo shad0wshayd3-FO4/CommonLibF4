@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/S/SubgraphIdentifier.h"
+
 namespace RE
 {
-	struct BGSBehaviorRootData
+	class BGSBehaviorRootData
 	{
 	public:
 		// members

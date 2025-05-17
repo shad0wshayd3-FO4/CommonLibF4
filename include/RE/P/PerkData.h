@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct PerkData
+	class PerkData
 	{
 	public:
 		// members

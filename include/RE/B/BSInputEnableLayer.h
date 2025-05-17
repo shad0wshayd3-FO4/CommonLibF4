@@ -10,7 +10,7 @@ namespace RE
 		[[nodiscard]] std::uint32_t DecRef() const
 		{
 			using func_t = decltype(&BSInputEnableLayer::DecRef);
-			static REL::Relocation<func_t> func{ REL::ID(2268272) };
+			static REL::Relocation<func_t> func{ ID::BSInputEnableLayer::DecRef };
 			return func(this);
 		}
 

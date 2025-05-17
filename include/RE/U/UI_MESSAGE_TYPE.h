@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class UI_MESSAGE_TYPE
+	enum class UI_MESSAGE_TYPE : std::int32_t
 	{
 		kUpdate = 0x0,
 		kShow = 0x1,

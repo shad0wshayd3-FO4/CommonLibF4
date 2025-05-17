@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class RESET_3D_FLAGS
+	enum class RESET_3D_FLAGS : std::int32_t
 	{
 		kModel = 1u << 0,
 		kSkin = 1u << 1,

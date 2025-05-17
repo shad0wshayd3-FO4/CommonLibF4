@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiColor.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESModel.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSMaterialType :

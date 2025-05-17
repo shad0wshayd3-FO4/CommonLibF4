@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class BSIAudioEffectVisitorBase;
+
 	class __declspec(novtable) BSIAudioEffectChain
 	{
 	public:

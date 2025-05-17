@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/D/DecalData.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESModel.h"
+
 namespace RE
 {
+	enum class SOUND_LEVEL;
+
 	class __declspec(novtable) BGSImpactData :
 		public TESForm,  // 00
 		public TESModel  // 20
@@ -13,7 +19,7 @@ namespace RE
 
 		enum class ORIENTATION;
 
-		struct IMPACT_DATA_DATA
+		class IMPACT_DATA_DATA
 		{
 		public:
 			// members

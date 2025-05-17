@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
+	class PipboyArray;
+	class PipboyObject;
+	class PipboyThrottleManager;
+	class PipboyValue;
+	class PipboyValueChangedEvent;
+
 	class PipboyDataGroup :
 		public BSTEventSource<PipboyValueChangedEvent>  // 00
 	{

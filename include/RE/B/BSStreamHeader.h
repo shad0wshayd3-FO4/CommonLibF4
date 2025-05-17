@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BSStreamHeader
+	class BSStreamHeader
 	{
 	public:
 		// members

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/T/TESBoundObject.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSArtObject :
@@ -14,7 +18,7 @@ namespace RE
 
 		enum class ArtType;
 
-		struct Data
+		class Data
 		{
 		public:
 			// members

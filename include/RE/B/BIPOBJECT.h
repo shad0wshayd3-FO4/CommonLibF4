@@ -1,16 +1,22 @@
 #pragma once
 
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BSModelDB.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct BIPOBJECT
+	class BGSObjectInstanceExtra;
+	class BGSTextureSet;
+	class NiAVObject;
+	class ModelReferenceEffect;
+	class TESModel;
+	class WeaponAnimationGraphManagerHolder;
+
+	class BIPOBJECT
 	{
 	public:
-		//~BIPOBJECT()
-		//{
-		//	Dtor();
-		//	stl::memzero(this);
-		//}
-
 		// members
 		BGSObjectInstance                                  parent;              // 00
 		BGSObjectInstanceExtra*                            modExtra;            // 10
@@ -24,10 +30,10 @@ namespace RE
 		bool                                               skinned;             // 50
 
 	private:
-		void Dtor()
+		void dtor()
 		{
-			using func_t = decltype(&BIPOBJECT::Dtor);
-			static REL::Relocation<func_t> func{ REL::ID(765242) };
+			using func_t = decltype(&BIPOBJECT::dtor);
+			static REL::Relocation<func_t> func{ ID::BIPOBJECT::dtor };
 			return func(this);
 		}
 	};

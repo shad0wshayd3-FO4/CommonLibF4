@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSStoryManagerBranchNode.h"
+
 namespace RE
 {
+	class BGSRegisteredStoryEvent;
+
 	class __declspec(novtable) BGSStoryManagerEventNode :
 		public BGSStoryManagerBranchNode  // 00
 	{

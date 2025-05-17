@@ -1,8 +1,18 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct ImageSpaceLUTData
+	class NiTexture;
+
+	namespace BSGraphics
+	{
+		class Texture;
+	}
+
+	class ImageSpaceLUTData
 	{
 	public:
 		// members

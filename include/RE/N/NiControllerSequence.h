@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class BSAnimNote;
+	class NiControllerManager;
+	class NiStringPalette;
+	class NiTextKeyExtraData;
+
 	class NiControllerSequence :
 		public NiObject  // 00
 	{
@@ -18,7 +26,7 @@ namespace RE
 		bool Activate(std::uint8_t a_priority, bool a_startOver, float a_weight, float a_easeInTime, NiControllerSequence* a_timeSyncSeq, bool a_transition)
 		{
 			using func_t = decltype(&NiControllerSequence::Activate);
-			static REL::Relocation<func_t> func{ REL::ID(2271861) };
+			static REL::Relocation<func_t> func{ ID::NiControllerSequence::Activate };
 			return func(this, a_priority, a_startOver, a_weight, a_easeInTime, a_timeSyncSeq, a_transition);
 		}
 

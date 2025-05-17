@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BGSDirectionalAmbientLightingColors.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESModel.h"
+#include "RE/T/TESTexture1024.h"
+
 namespace RE
 {
+	class BGSReferenceEffect;
+	class BGSShaderParticleGeometryData;
+
 	class __declspec(novtable) TESWeather :
 		public TESForm  // 000
 	{
@@ -24,7 +34,7 @@ namespace RE
 			kThunder = 0x3
 		};
 
-		struct SpellData
+		class SpellData
 		{
 		public:
 			// members
@@ -33,7 +43,7 @@ namespace RE
 		};
 		static_assert(sizeof(SpellData) == 0x10);
 
-		struct WeatherSound
+		class WeatherSound
 		{
 		public:
 			// members
@@ -42,7 +52,7 @@ namespace RE
 		};
 		static_assert(sizeof(WeatherSound) == 0x10);
 
-		struct WeatherSoundList :
+		class WeatherSoundList :
 			public BSSimpleList<WeatherSound*>
 		{
 		public:

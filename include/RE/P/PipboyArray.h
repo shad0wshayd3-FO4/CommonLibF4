@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/P/PipboyValue.h"
+
 namespace RE
 {
 	class PipboyArray :

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct ACTOR_BASE_DATA
+	class ACTOR_BASE_DATA
 	{
 	public:
 		enum class Flag

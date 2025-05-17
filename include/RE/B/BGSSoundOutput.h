@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSISoundOutputModel.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSSoundOutput :
@@ -13,8 +16,8 @@ namespace RE
 
 		enum class SPEAKER_OUTPUT_MODE;
 
-		struct DynamicAttenuationCharacteristics;
-		struct SpeakerArrays;
+		class DynamicAttenuationCharacteristics;
+		class SpeakerArrays;
 
 		// members
 		DynamicAttenuationCharacteristics*              attenuation;          // 28

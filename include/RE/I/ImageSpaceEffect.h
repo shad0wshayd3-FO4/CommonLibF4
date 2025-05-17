@@ -1,14 +1,26 @@
 #pragma once
 
+#include "RE/N/NiTArray.h"
+
 namespace RE
 {
+	class BSTriShape;
+	class ImageSpaceManager;
+	class ImageSpaceEffectParam;
+	class ImageSpaceTexture;
+
+	namespace BSGraphics
+	{
+		enum class TextureFilterMode;
+	}
+
 	class __declspec(novtable) ImageSpaceEffect
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::ImageSpaceEffect };
 		static constexpr auto VTABLE{ VTABLE::ImageSpaceEffect };
 
-		struct EffectDesc
+		class EffectDesc
 		{
 		public:
 			// members
@@ -20,7 +32,7 @@ namespace RE
 		};
 		static_assert(sizeof(EffectDesc) == 0x20);
 
-		struct EffectInput
+		class EffectInput
 		{
 		public:
 			// members

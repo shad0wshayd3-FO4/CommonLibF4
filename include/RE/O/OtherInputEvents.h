@@ -21,5 +21,4 @@ namespace RE
 			kSprinting = 1 << 10,
 		};
 	}
-	using OEFlag = OtherInputEvents::OTHER_EVENT_FLAG;
 }

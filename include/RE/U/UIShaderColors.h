@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/N/NiColor.h"
+#include "RE/N/NiRect.h"
+
 namespace RE
 {
-	struct UIShaderColors
+	class UIShaderColors
 	{
 	public:
 		enum class Flags

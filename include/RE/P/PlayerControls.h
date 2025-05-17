@@ -1,16 +1,49 @@
 #pragma once
 
+#include "RE/A/ActionInput.h"
+#include "RE/B/BSInputEventReceiver.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/H/HeldStateHandler.h"
+#include "RE/I/IMovementPlayerControls.h"
+#include "RE/P/PlayerInputHandler.h"
+
 namespace RE
 {
+	enum class DEFAULT_OBJECT;
+
+	class ActivateHandler;
+	class AttackBlockHandler;
+	class AutoMoveHandler;
+	class GrabRotationHandler;
+	class JumpHandler;
+	class LookHandler;
+	class MeleeThrowHandler;
+	class MenuModeChangeEvent;
+	class MenuOpenCloseEvent;
+	class MovementHandler;
+	class QuickContainerStateEvent;
+	class ReadyWeaponHandler;
+	class RunHandler;
+	class SneakHandler;
+	class SprintHandler;
+	class TogglePOVHandler;
+	class ToggleRunHandler;
+	class UserEventEnabledEvent;
+	class TESFurnitureEvent;
+
 	class __declspec(novtable) PlayerControls :
-		BSInputEventReceiver,                    // 000
-		BSTEventSink<MenuOpenCloseEvent>,        // 010
-		BSTEventSink<MenuModeChangeEvent>,       // 018
-		BSTEventSink<TESFurnitureEvent>,         // 020
-		BSTEventSink<UserEventEnabledEvent>,     // 028
-		IMovementPlayerControls,                 // 030
-		BSTEventSink<QuickContainerStateEvent>,  // 038
-		BSTSingletonSDM<PlayerControls>          // 040
+		public BSInputEventReceiver,                    // 000
+		public BSTEventSink<MenuOpenCloseEvent>,        // 010
+		public BSTEventSink<MenuModeChangeEvent>,       // 018
+		public BSTEventSink<TESFurnitureEvent>,         // 020
+		public BSTEventSink<UserEventEnabledEvent>,     // 028
+		public IMovementPlayerControls,                 // 030
+		public BSTEventSink<QuickContainerStateEvent>,  // 038
+		public BSTSingletonSDM<PlayerControls>          // 040
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::PlayerControls };
@@ -18,21 +51,21 @@ namespace RE
 
 		static PlayerControls* GetSingleton()
 		{
-			static REL::Relocation<PlayerControls**> singleton{ REL::ID(2692013) };
+			static REL::Relocation<PlayerControls**> singleton{ ID::PlayerControls::Singleton };
 			return *singleton;
 		}
 
 		bool CanPerformAction(DEFAULT_OBJECT a_action)
 		{
 			using func_t = decltype(&PlayerControls::CanPerformAction);
-			static REL::Relocation<func_t> func{ REL::ID(565925) };
+			static REL::Relocation<func_t> func{ ID::PlayerControls::CanPerformAction };
 			return func(this, a_action);
 		}
 
 		bool DoAction(DEFAULT_OBJECT a_action, ActionInput::ACTIONPRIORITY a_priority)
 		{
 			using func_t = decltype(&PlayerControls::DoAction);
-			static REL::Relocation<func_t> func{ REL::ID(818081) };
+			static REL::Relocation<func_t> func{ ID::PlayerControls::DoAction };
 			return func(this, a_action, a_priority);
 		}
 
@@ -70,7 +103,7 @@ namespace RE
 		void DoRegisterHandler(PlayerInputHandler* a_handler, bool a_isHeldStateHandler)
 		{
 			using func_t = decltype(&PlayerControls::DoRegisterHandler);
-			static REL::Relocation<func_t> func{ REL::ID(2234822) };
+			static REL::Relocation<func_t> func{ ID::PlayerControls::DoRegisterHandler };
 			return func(this, a_handler, a_isHeldStateHandler);
 		}
 	};

@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
+	class TESImageSpaceModifierForm;
+
 	class ImageSpaceModifierFinder
 	{
 	public:

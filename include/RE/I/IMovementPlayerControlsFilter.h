@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/I/IMovementInterface.h"
+
 namespace RE
 {
+	class MovementData;
+
 	class __declspec(novtable) IMovementPlayerControlsFilter :
 		public IMovementInterface  // 00
 	{

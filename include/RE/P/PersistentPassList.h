@@ -2,7 +2,9 @@
 
 namespace RE
 {
-	struct PersistentPassList
+	class BSRenderPass;
+
+	class PersistentPassList
 	{
 	public:
 		// members

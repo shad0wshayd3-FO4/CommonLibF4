@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TESCondition.h"
+
 namespace RE
 {
 	namespace BGSCharacterTint
@@ -110,8 +115,9 @@ namespace RE
 				static constexpr auto RTTI{ RTTI::BGSCharacterTint__Template__Palette };
 				static constexpr auto VTABLE{ VTABLE::BGSCharacterTint__Template__Palette };
 
-				struct ColorValue
+				class ColorValue
 				{
+				public:
 					BGSColorForm* color;     // 00
 					float         value;     // 08
 					BlendOp       blendOp;   // 0C

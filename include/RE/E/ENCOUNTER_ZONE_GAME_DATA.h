@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct ENCOUNTER_ZONE_GAME_DATA
+	class ENCOUNTER_ZONE_GAME_DATA
 	{
 	public:
 		// members

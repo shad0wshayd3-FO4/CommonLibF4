@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSTypedKeywordValue.h"
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSAttachParentArray :
@@ -20,7 +23,7 @@ namespace RE
 		void SetParentGroupNumber(BGSKeyword* a_parent, std::uint32_t a_groupID)
 		{
 			using func_t = decltype(&BGSAttachParentArray::SetParentGroupNumber);
-			static REL::Relocation<func_t> func{ REL::ID(1412266) };
+			static REL::Relocation<func_t> func{ ID::BGSAttachParentArray::SetParentGroupNumber };
 			return func(this, a_parent, a_groupID);
 		}
 	};

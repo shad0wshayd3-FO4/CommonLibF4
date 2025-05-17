@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSSoundKeywordMapping :

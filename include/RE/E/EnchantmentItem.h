@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/M/MagicItem.h"
+
 namespace RE
 {
+	namespace MagicSystem
+	{
+		enum class CastingType;
+		enum class Delivery;
+		enum class SpellType;
+	}
+
 	class __declspec(novtable) EnchantmentItem :
 		public MagicItem  // 00
 	{

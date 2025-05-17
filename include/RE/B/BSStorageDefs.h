@@ -1,14 +1,22 @@
 #pragma once
 
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	namespace BSStorageDefs
 	{
-		struct StreamBuffer
+		enum class ErrorCode;
+		enum class SeekMode;
+
+		class StreamBuffer
 		{
-			std::size_t                    size;
-			MemoryManager::AutoScrapBuffer buffer;
-			void*                          ptrCur;
+		public:
+			// members
+			std::size_t                    size;    // 00
+			MemoryManager::AutoScrapBuffer buffer;  // 08
+			void*                          ptrCur;  // 10
 		};
+		static_assert(sizeof(StreamBuffer) == 0x18);
 	}
 }

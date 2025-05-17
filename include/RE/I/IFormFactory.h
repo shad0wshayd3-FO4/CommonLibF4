@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/E/ENUM_FORM_ID.h"
+
 namespace RE
 {
+	enum class OBJECT_CATEGORY_TYPE;
+	enum class OBJECT_TYPE;
+
 	class __declspec(novtable) IFormFactory
 	{
 	public:
@@ -23,7 +28,7 @@ namespace RE
 			-> std::span<IFormFactory*, std::to_underlying(ENUM_FORM_ID::kTotal)>
 		{
 			constexpr auto                                len = std::to_underlying(ENUM_FORM_ID::kTotal);
-			static REL::Relocation<IFormFactory*(*)[len]> factories{ REL::ID(2689177) };
+			static REL::Relocation<IFormFactory*(*)[len]> factories{ ID::IFormFactory::Factories };
 			return { *factories };
 		}
 	};

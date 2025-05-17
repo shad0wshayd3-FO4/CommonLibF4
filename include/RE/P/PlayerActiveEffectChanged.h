@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
 	namespace PlayerActiveEffectChanged
@@ -11,8 +13,10 @@ namespace RE
 			kStatusChanged = 0x2
 		};
 
-		struct Event
+		class Event
 		{
+		public:
+			// members
 			BSTSmartPointer<ActiveEffect, BSTSmartPointerIntrusiveRefCount> effect;  // 00
 			PlayerActiveEffectChanged::Status                               status;  // 08
 		};

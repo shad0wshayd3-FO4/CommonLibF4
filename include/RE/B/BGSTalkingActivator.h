@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESObjectACTI.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSTalkingActivator :

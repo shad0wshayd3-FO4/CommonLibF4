@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct UnloadedRefData
+	class UnloadedRefData
 	{
 	public:
 		// members

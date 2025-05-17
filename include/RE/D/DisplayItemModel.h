@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/B/BaseLoadedInventoryModel.h"
+
 namespace RE
 {
-	struct DisplayItemModel :
+	class DisplayItemModel :
 		public BaseLoadedInventoryModel  // 00
 	{
 	public:

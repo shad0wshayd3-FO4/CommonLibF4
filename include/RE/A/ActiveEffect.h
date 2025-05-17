@@ -1,7 +1,24 @@
 #pragma once
 
+#include "RE/A/ActiveEffectReferenceEffectController.h"
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/E/ENUM_FORM_ID.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class MagicTarget;
+	class NiNode;
+	class ReferenceEffect;
+
+	namespace MagicSystem
+	{
+		enum class CastingSource;
+	}
+
 	class __declspec(novtable) ActiveEffect :
 		public BSIntrusiveRefCounted
 	{
@@ -40,7 +57,7 @@ namespace RE
 		bool CheckDisplacementSpellOnTarget()
 		{
 			using func_t = decltype(&ActiveEffect::CheckDisplacementSpellOnTarget);
-			static REL::Relocation<func_t> func{ REL::ID(1415178) };
+			static REL::Relocation<func_t> func{ ID::ActiveEffect::CheckDisplacementSpellOnTarget };
 			return func(this);
 		}
 

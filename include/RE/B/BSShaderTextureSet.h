@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTextureSet.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSShaderTextureSet :
@@ -13,7 +16,7 @@ namespace RE
 		static BSShaderTextureSet* CreateObject()
 		{
 			using func_t = decltype(&BSShaderTextureSet::CreateObject);
-			static REL::Relocation<func_t> func{ REL::ID(2316324) };
+			static REL::Relocation<func_t> func{ ID::BSShaderTextureSet::CreateObject };
 			return func();
 		}
 

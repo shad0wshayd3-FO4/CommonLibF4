@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
-	struct BSNavmeshGrid
+	class BSNavmeshGrid
 	{
 	public:
 		// members

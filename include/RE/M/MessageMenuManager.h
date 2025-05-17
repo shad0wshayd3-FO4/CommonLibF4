@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/M/MessageBoxData.h"
+
 namespace RE
 {
 	class MessageMenuManager :
@@ -8,7 +13,7 @@ namespace RE
 	public:
 		[[nodiscard]] static MessageMenuManager* GetSingleton()
 		{
-			static REL::Relocation<MessageMenuManager**> singleton{ REL::ID(2689087) };
+			static REL::Relocation<MessageMenuManager**> singleton{ ID::MessageMenuManager::Singleton };
 			return *singleton;
 		}
 
@@ -24,7 +29,7 @@ namespace RE
 			bool                 a_ensureUnique = false)
 		{
 			using func_t = decltype(&MessageMenuManager::Create);
-			static REL::Relocation<func_t> func{ REL::ID(2249456) };
+			static REL::Relocation<func_t> func{ ID::MessageMenuManager::Create };
 			return func(this, a_headerText, a_bodyText, a_callback, a_warningContext, a_button1Text, a_button2Text, a_button3Text, a_button4Text, a_ensureUnique);
 		}
 

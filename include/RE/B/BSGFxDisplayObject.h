@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSGFxObject.h"
+
 namespace RE
 {
 	class BSGFxDisplayObject :
@@ -9,7 +11,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSGFxDisplayObject };
 		static constexpr auto VTABLE{ VTABLE::BSGFxDisplayObject };
 
-		struct InitialDisplayState
+		class InitialDisplayState
 		{
 		public:
 			// members
@@ -46,7 +48,7 @@ namespace RE
 		void RemoveChild(const BSGFxDisplayObject& a_child) const
 		{
 			using func_t = decltype(&BSGFxDisplayObject::RemoveChild);
-			static REL::Relocation<func_t> func{ REL::ID(2287327) };
+			static REL::Relocation<func_t> func{ ID::BSGFxDisplayObject::RemoveChild };
 			return func(this, a_child);
 		}
 

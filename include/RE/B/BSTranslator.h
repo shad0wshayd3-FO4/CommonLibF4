@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTHashMap.h"
+
 namespace RE
 {
-	struct BSTranslator
+	class BSTranslator
 	{
 	public:
 		// members

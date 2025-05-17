@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BGSDirectionalAmbientLightingColors.h"
+#include "RE/I/INTERIOR_DATA.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSLightingTemplate :

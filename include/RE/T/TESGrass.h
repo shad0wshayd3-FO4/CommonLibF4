@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESModel.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESGrass :
@@ -13,7 +16,7 @@ namespace RE
 
 		enum class GRASS_WATER_STATE;
 
-		struct GRASS_DATA
+		class GRASS_DATA
 		{
 		public:
 			// members

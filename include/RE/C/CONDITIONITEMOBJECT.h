@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class CONDITIONITEMOBJECT : unsigned
+	enum class CONDITIONITEMOBJECT : std::int32_t
 	{
 		kSelf = 0x0,
 		kTarget = 0x1,

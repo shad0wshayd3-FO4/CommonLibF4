@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	class DoorTeleportData

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSStoryManagerNodeBase.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSStoryManagerBranchNode :

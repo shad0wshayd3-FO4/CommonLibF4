@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPoint.h"
+#include "RE/T/TESPackage.h"
+
 namespace RE
 {
 	class __declspec(novtable) FleePackage :

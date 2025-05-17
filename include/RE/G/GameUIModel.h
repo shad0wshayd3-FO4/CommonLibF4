@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
+	class ApplyColorUpdateEvent;
+	class DoBeforeNewOrLoadCompletedEvent;
+	class QueueSurvivalBumpDownMessage;
+	class RevertPlayerCharacterEvent;
+	class SaveLoadMessageTypeEvent;
+
 	class __declspec(novtable) GameUIModel :
 		public BSTSingletonSDM<GameUIModel>,
 		public BSTEventSink<ApplyColorUpdateEvent>,
@@ -16,14 +25,14 @@ namespace RE
 
 		[[nodiscard]] static GameUIModel* GetSingleton()
 		{
-			static REL::Relocation<GameUIModel**> singleton{ REL::ID(17419) };
+			static REL::Relocation<GameUIModel**> singleton{ ID::GameUIModel::Singleton };
 			return *singleton;
 		}
 
 		void UpdateDataModels()
 		{
 			using func_t = decltype(&GameUIModel::UpdateDataModels);
-			static REL::Relocation<func_t> func{ REL::ID(2220905) };
+			static REL::Relocation<func_t> func{ ID::GameUIModel::UpdateDataModels };
 			return func(this);
 		}
 	};

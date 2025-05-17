@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class ENUM_LOD_MULT
+	enum class ENUM_LOD_MULT : std::int32_t
 	{
 		kNone = 0x0,
 		kObjects = 0x1,

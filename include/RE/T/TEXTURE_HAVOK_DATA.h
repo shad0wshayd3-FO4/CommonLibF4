@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct TEXTURE_HAVOK_DATA
+	class TEXTURE_HAVOK_DATA
 	{
 	public:
 		// members

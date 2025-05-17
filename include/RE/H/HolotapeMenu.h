@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/G/GameMenuBase.h"
+
 namespace RE
 {
+	class MenuOpenCloseEvent;
+
 	class __declspec(novtable) HolotapeMenu :
 		public GameMenuBase,                     // 00
 		public BSTEventSink<MenuOpenCloseEvent>  // E0
@@ -33,14 +39,14 @@ namespace RE
 		static void ShowHolotapeInPipboy(const BSFixedString& a_holotapePath)
 		{
 			using func_t = decltype(&HolotapeMenu::ShowHolotapeInPipboy);
-			static REL::Relocation<func_t> func{ REL::ID(217953) };
+			static REL::Relocation<func_t> func{ ID::HolotapeMenu::ShowHolotapeInPipboy };
 			return func(a_holotapePath);
 		}
 
 		static void ShowHolotapeInTerminal(const BSFixedString& a_holotapePath)
 		{
 			using func_t = decltype(&HolotapeMenu::ShowHolotapeInTerminal);
-			static REL::Relocation<func_t> func{ REL::ID(390509) };
+			static REL::Relocation<func_t> func{ ID::HolotapeMenu::ShowHolotapeInTerminal };
 			return func(a_holotapePath);
 		}
 

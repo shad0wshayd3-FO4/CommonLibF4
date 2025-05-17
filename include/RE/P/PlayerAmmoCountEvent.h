@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/P/PlayerAmmoCounts.h"
+
 namespace RE
 {
 	class PlayerAmmoCountEvent :

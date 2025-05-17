@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IDEvent.h"
+
 namespace RE
 {
 	class __declspec(novtable) ThumbstickEvent :

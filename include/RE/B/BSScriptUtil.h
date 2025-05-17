@@ -1,5 +1,14 @@
 #pragma once
 
+#include "RE/B/BSScript_Array.h"
+#include "RE/B/BSScript_IVirtualMachine.h"
+#include "RE/B/BSScript_Internal_NativeFunctionBase.h"
+#include "RE/B/BSScript_Internal_Stack.h"
+#include "RE/B/BSScript_Object.h"
+#include "RE/B/BSScript_ObjectTypeInfo.h"
+#include "RE/B/BSScript_StackFrame.h"
+#include "RE/G/GameScript.h"
+
 namespace RE::BSScript
 {
 	namespace detail
@@ -411,7 +420,7 @@ namespace RE::BSScript
 	{
 		const auto                                 game = GameVM::GetSingleton();
 		const auto                                 vm = game ? game->GetVM() : nullptr;
-		static REL::Relocation<RE::BSFixedString*> baseObjectName{ REL::ID(648543) };
+		static REL::Relocation<RE::BSFixedString*> baseObjectName{ ID::BSScriptUtil::BaseObjectName };
 		BSTSmartPointer<ObjectTypeInfo>            typeInfo;
 		if (!vm ||
 			!vm->GetScriptObjectType(*baseObjectName, typeInfo) ||

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
 	class BGSCreatedObjectManager :
@@ -7,7 +13,7 @@ namespace RE
 	{
 	public:
 		template <class T>
-		struct BSTCreatedObjectSmartPointerPolicy
+		class BSTCreatedObjectSmartPointerPolicy
 		{
 		public:
 			static void Acquire(stl::not_null<T*> a_ptr)
@@ -31,7 +37,7 @@ namespace RE
 			}
 		};
 
-		struct CreatedMagicItemData
+		class CreatedMagicItemData
 		{
 		public:
 			// members
@@ -42,21 +48,21 @@ namespace RE
 
 		[[nodiscard]] static BGSCreatedObjectManager* GetSingleton()
 		{
-			static REL::Relocation<BGSCreatedObjectManager**> singleton{ REL::ID(1000678) };
+			static REL::Relocation<BGSCreatedObjectManager**> singleton{ ID::BGSCreatedObjectManager::Singleton };
 			return *singleton;
 		}
 
 		void DecrementRef(AlchemyItem* a_alchItem)
 		{
 			using func_t = decltype(&BGSCreatedObjectManager::DecrementRef);
-			static REL::Relocation<func_t> func{ REL::ID(230928) };
+			static REL::Relocation<func_t> func{ ID::BGSCreatedObjectManager::DecrementRef };
 			return func(this, a_alchItem);
 		}
 
 		void IncrementRef(AlchemyItem* a_alchItem)
 		{
 			using func_t = decltype(&BGSCreatedObjectManager::IncrementRef);
-			static REL::Relocation<func_t> func{ REL::ID(1042515) };
+			static REL::Relocation<func_t> func{ ID::BGSCreatedObjectManager::IncrementRef };
 			return func(this, a_alchItem);
 		}
 
@@ -69,4 +75,10 @@ namespace RE
 		BSSpinLock                                      dataLock;                // C8
 	};
 	static_assert(sizeof(BGSCreatedObjectManager) == 0xD0);
+
+	extern template class BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<AlchemyItem>;
+	extern template class BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy<TESForm>;
+
+	template <class T>
+	using CreatedObjPtr = BSTSmartPointer<T, BGSCreatedObjectManager::BSTCreatedObjectSmartPointerPolicy>;
 }

@@ -5,7 +5,7 @@ namespace RE
 	class BSSystemFile
 	{
 	public:
-		struct Info
+		class Info
 		{
 		public:
 			// members

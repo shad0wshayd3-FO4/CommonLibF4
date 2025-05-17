@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class DIALOGUE_TYPE
+	enum class DIALOGUE_TYPE : std::int32_t
 	{
 		kPlayerDialogue = 0x0,
 		kCommandDialogue = 0x1,

@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BarterMenuTentativeInventoryUIInterface.h"
+#include "RE/C/ContainerMenuBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) BarterMenu :
@@ -10,7 +14,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BarterMenu };
 		static constexpr auto MENU_NAME{ "BarterMenu"sv };
 
-		struct ItemBarterData
+		class ItemBarterData
 		{
 		public:
 			// members
@@ -35,28 +39,28 @@ namespace RE
 		void ClearTradingData()
 		{
 			using func_t = decltype(&BarterMenu::ClearTradingData);
-			static REL::Relocation<func_t> func{ REL::ID(1112285) };
+			static REL::Relocation<func_t> func{ ID::BarterMenu::ClearTradingData };
 			return func(this);
 		}
 
 		void CompleteTrade()
 		{
 			using func_t = decltype(&BarterMenu::CompleteTrade);
-			static REL::Relocation<func_t> func{ REL::ID(379932) };
+			static REL::Relocation<func_t> func{ ID::BarterMenu::CompleteTrade };
 			return func(this);
 		}
 
 		[[nodiscard]] std::int64_t GetCapsOwedByPlayer()
 		{
 			using func_t = decltype(&BarterMenu::GetCapsOwedByPlayer);
-			static REL::Relocation<func_t> func{ REL::ID(672405) };
+			static REL::Relocation<func_t> func{ ID::BarterMenu::GetCapsOwedByPlayer };
 			return func(this);
 		}
 
 		// members
 		BSTHashMap<InventoryInterface::Handle*, ItemBarterData*> barteredItems;              // 430
-		msvc::unique_ptr<BSGFxShaderFXTarget>                    capsTransferInfo_mc;        // 460
-		msvc::unique_ptr<BSGFxShaderFXTarget>                    capsTransferBackground_mc;  // 468
+		std::unique_ptr<BSGFxShaderFXTarget>                     capsTransferInfo_mc;        // 460
+		std::unique_ptr<BSGFxShaderFXTarget>                     capsTransferBackground_mc;  // 468
 		ObjectRefHandle                                          vendorChestRef;             // 470
 		ObjectRefHandle                                          vendorActor;                // 474
 		BarterMenuTentativeInventoryUIInterface                  playerTentativeInv;         // 478

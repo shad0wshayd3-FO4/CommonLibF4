@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BSNavmeshInfoMap.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/P/PrecomputedNavmeshInfoPathMap.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class BSNavmeshInfo;
+	class NavMeshInfo;
+
 	class __declspec(novtable) NavMeshInfoMap :
 		public TESForm,                       // 000
 		public BSNavmeshInfoMap,              // 020

@@ -2,7 +2,9 @@
 
 namespace RE
 {
-	struct __declspec(novtable) BSReloadShaderI
+	class BSIStream;
+
+	class __declspec(novtable) BSReloadShaderI
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::BSReloadShaderI };

@@ -1,7 +1,18 @@
 #pragma once
 
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
+	class ButtonEvent;
+	class CharacterEvent;
+	class CursorMoveEvent;
+	class DeviceConnectEvent;
+	class InputEvent;
+	class MouseMoveEvent;
+	class KinectEvent;
+	class ThumbstickEvent;
+
 	class alignas(0x08) BSInputEventUser
 	{
 	public:

@@ -1,7 +1,20 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	namespace PlayerCharacterQuestEvent
+	{
+		class Event;
+	}
+
+	namespace TESQuestEvent
+	{
+		class Event;
+	}
+
 	class __declspec(novtable) PipboyQuestData :
 		public PipboyDataGroup,                                 // 00
 		public BSTEventSink<PlayerCharacterQuestEvent::Event>,  // 89
@@ -21,10 +34,9 @@ namespace RE
 		virtual void DoClearSink() override;          // 05
 
 		// members
-		std::uint32_t sortIndex;   // A8
-		PipboyArray*  questArray;  // B0
-		//BSTHashMap<BSTTuple<TESQuest*, std::uint64_t>, BSTArray<BGSInstancedQuestObjective>*> objectivesByQuest;	// B8
-		void* unk[6];
+		std::uint32_t sortIndex;             // A8
+		PipboyArray*  questArray;            // B0
+		void*         objectivesByQuest[6];  // B8 - BSTHashMap<BSTTuple<TESQuest*, std::uint64_t>, BSTArray<BGSInstancedQuestObjective>*>
 	};
 	static_assert(sizeof(PipboyQuestData) == 0xE8);
 }

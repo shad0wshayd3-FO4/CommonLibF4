@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/P/PipboySubMenu.h"
+
 namespace RE
 {
 	class __declspec(novtable) PipboyLogMenu :
@@ -13,7 +15,7 @@ namespace RE
 		void UpdateData() override
 		{
 			using func_t = decltype(&PipboyLogMenu::UpdateData);
-			static REL::Relocation<func_t> func{ REL::ID(672256) };
+			static REL::Relocation<func_t> func{ ID::PipboyLogMenu::UpdateData };
 			return func(this);
 		}
 	};

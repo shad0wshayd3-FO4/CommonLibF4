@@ -2,7 +2,10 @@
 
 namespace RE
 {
-	struct SCRIPT_LINE
+	enum class SCRIPT_ERROR;
+	enum class SCRIPT_OUTPUT;
+
+	class SCRIPT_LINE
 	{
 	public:
 		// members

@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BGSSceneAction.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
+	class BSInputEnableLayer;
+
 	class __declspec(novtable) BGSSceneActionDialogue :
 		public BGSSceneAction
 	{

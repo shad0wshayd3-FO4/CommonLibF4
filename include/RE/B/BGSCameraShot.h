@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESImageSpaceModifiableForm.h"
+#include "RE/T/TESModel.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSCameraShot :
@@ -15,7 +20,7 @@ namespace RE
 		enum class CAM_ACTION;
 		enum class CAM_OBJECT;
 
-		struct CAMERA_SHOT_DATA
+		class CAMERA_SHOT_DATA
 		{
 		public:
 			// members

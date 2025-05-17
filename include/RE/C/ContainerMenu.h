@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/C/ContainerMenuBase.h"
+
 namespace RE
 {
 	class __declspec(novtable) ContainerMenu :
@@ -23,17 +25,17 @@ namespace RE
 		void TakeAllItems()
 		{
 			using func_t = decltype(&ContainerMenu::TakeAllItems);
-			static REL::Relocation<func_t> func{ REL::ID(1323703) };
+			static REL::Relocation<func_t> func{ ID::ContainerMenu::TakeAllItems };
 			return func(this);
 		}
 
 		// members
-		msvc::unique_ptr<BSGFxShaderFXTarget> pickpocketInfo_mc;         // 430
-		std::uint32_t                         valueStolenFromContainer;  // 438
-		bool                                  containerAccessed;         // 43C
-		bool                                  addedTempItems;            // 43D
-		bool                                  plantedExplosiveWeapon;    // 43E
-		bool                                  containerIsAnimatingOpen;  // 43F
+		std::unique_ptr<BSGFxShaderFXTarget> pickpocketInfo_mc;         // 430
+		std::uint32_t                        valueStolenFromContainer;  // 438
+		bool                                 containerAccessed;         // 43C
+		bool                                 addedTempItems;            // 43D
+		bool                                 plantedExplosiveWeapon;    // 43E
+		bool                                 containerIsAnimatingOpen;  // 43F
 	};
 	static_assert(sizeof(ContainerMenu) == 0x440);
 }

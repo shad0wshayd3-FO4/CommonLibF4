@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSGraphics.h"
+#include "RE/B/BSReloadShaderI.h"
+#include "RE/B/BSShaderTechniqueIDMap.h"
+#include "RE/N/NiRefObject.h"
+
 namespace RE
 {
+	class BSRenderPass;
+	class BSShaderMaterial;
+
 	class __declspec(novtable) BSShader :
 		public NiRefObject,     // 000
 		public BSReloadShaderI  // 010

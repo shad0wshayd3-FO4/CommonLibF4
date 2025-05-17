@@ -2,8 +2,10 @@
 
 namespace RE
 {
-	struct TOPIC_INFO_SCENEDATA
+	class TOPIC_INFO_SCENEDATA
 	{
+	public:
+		// members
 		BGSScene*     scene;  // 00
 		std::uint32_t phase;  // 08
 	};

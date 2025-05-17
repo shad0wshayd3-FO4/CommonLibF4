@@ -1,5 +1,13 @@
 #pragma once
 
+#include "RE/A/ApplyColorUpdateEvent.h"
+#include "RE/B/BSGFxDisplayObject.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/H/HUDColorTypes.h"
+#include "RE/U/UIShaderColors.h"
+#include "RE/U/UIShaderFXInfo.h"
+
 namespace RE
 {
 	class BSGFxShaderFXTarget :
@@ -39,7 +47,7 @@ namespace RE
 		virtual BSEventNotifyControl ProcessEvent(const ApplyColorUpdateEvent& a_event, BSTEventSource<ApplyColorUpdateEvent>* a_source) override  // 01
 		{
 			using func_t = decltype(&BSGFxShaderFXTarget::ProcessEvent);
-			static REL::Relocation<func_t> func{ REL::ID(848563) };
+			static REL::Relocation<func_t> func{ ID::BSGFxShaderFXTarget::ProcessEvent };
 			return func(this, a_event, a_source);
 		}
 
@@ -47,35 +55,35 @@ namespace RE
 		virtual void AppendShaderFXInfos(BSTArray<UIShaderFXInfo>& a_colorFXInfo, BSTArray<UIShaderFXInfo>& a_backgroundFXInfo)  // 02
 		{
 			using func_t = decltype(&BSGFxShaderFXTarget::AppendShaderFXInfos);
-			static REL::Relocation<func_t> func{ REL::ID(2287021) };
+			static REL::Relocation<func_t> func{ ID::BSGFxShaderFXTarget::AppendShaderFXInfos };
 			return func(this, a_colorFXInfo, a_backgroundFXInfo);
 		}
 
 		void CreateAndSetFiltersToColor(const NiColor& a_color, float a_brightness)
 		{
 			using func_t = void (BSGFxShaderFXTarget::*)(const NiColor&, float);
-			static REL::Relocation<func_t> func{ REL::ID(2287028) };
+			static REL::Relocation<func_t> func{ ID::BSGFxShaderFXTarget::CreateAndSetFiltersToColor1 };
 			func(this, a_color, a_brightness);
 		}
 
 		void CreateAndSetFiltersToColor(std::uint8_t a_r, std::uint8_t a_g, std::uint8_t a_b, float a_brightness)
 		{
 			using func_t = void (BSGFxShaderFXTarget::*)(std::uint8_t, std::uint8_t, std::uint8_t, float);
-			static REL::Relocation<func_t> func{ REL::ID(783104) };
+			static REL::Relocation<func_t> func{ ID::BSGFxShaderFXTarget::CreateAndSetFiltersToColor2 };
 			func(this, a_r, a_g, a_b, a_brightness);
 		}
 
 		void CreateAndSetFiltersToHUD(HUDColorTypes a_colorType, float a_scale = 1.0)
 		{
 			using func_t = decltype(&BSGFxShaderFXTarget::CreateAndSetFiltersToHUD);
-			static REL::Relocation<func_t> func{ REL::ID(2287027) };
+			static REL::Relocation<func_t> func{ ID::BSGFxShaderFXTarget::CreateAndSetFiltersToHUD };
 			func(this, a_colorType, a_scale);
 		}
 
 		void EnableShadedBackground(HUDColorTypes a_colorType, float a_scale = 1.0)
 		{
 			using func_t = decltype(&BSGFxShaderFXTarget::EnableShadedBackground);
-			static REL::Relocation<func_t> func{ REL::ID(2287022) };
+			static REL::Relocation<func_t> func{ ID::BSGFxShaderFXTarget::EnableShadedBackground };
 			func(this, a_colorType, a_scale);
 		}
 

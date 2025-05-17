@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSSceneAction.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSSceneActionConversationBase :

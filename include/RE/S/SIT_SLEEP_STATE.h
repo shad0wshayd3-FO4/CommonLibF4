@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class SIT_SLEEP_STATE : std::uint32_t
+	enum class SIT_SLEEP_STATE : std::int32_t
 	{
 		kNormal = 0x0,
 		kWantToSit = 0x1,

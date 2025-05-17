@@ -1,9 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct TESFurnitureEvent
+	class TESFurnitureEvent
 	{
+	public:
 		enum class FurnitureEventType : std::int32_t
 		{
 			kEnter = 0x0,
@@ -13,7 +17,7 @@ namespace RE
 		[[nodiscard]] static BSTEventSource<TESFurnitureEvent>* GetEventSource()
 		{
 			using func_t = decltype(&TESFurnitureEvent::GetEventSource);
-			static REL::Relocation<func_t> func{ REL::ID(2201844) };
+			static REL::Relocation<func_t> func{ ID::TESFurnitureEvent::GetEventSource };
 			return func();
 		}
 

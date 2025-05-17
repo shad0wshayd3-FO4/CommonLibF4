@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+
 namespace RE
 {
+	class REFR_LOCK;
+
 	class __declspec(novtable) ExtraLock :
 		public BSExtraData  // 00
 	{

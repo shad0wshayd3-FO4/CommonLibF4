@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSHackTerminal
+	class BGSHackTerminal
 	{
 	public:
 		BGSHackTerminal(TESObjectREFR* a_terminal, std::uint32_t a_success) :
@@ -15,7 +15,7 @@ namespace RE
 
 		[[nodiscard]] static std::uint32_t EVENT_INDEX()
 		{
-			static REL::Relocation<std::uint32_t*> eventIdx{ REL::ID(1186942) };
+			static REL::Relocation<std::uint32_t*> eventIdx{ ID::BGSHackTerminal::EventIndex };
 			return *eventIdx;
 		}
 

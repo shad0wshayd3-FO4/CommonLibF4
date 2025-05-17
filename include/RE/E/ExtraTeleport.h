@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+
 namespace RE
 {
+	class DoorTeleportData;
+
 	class __declspec(novtable) ExtraTeleport :
 		public BSExtraData  // 00
 	{

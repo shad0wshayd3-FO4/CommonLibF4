@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	namespace HUDMenuUtils
@@ -7,21 +10,21 @@ namespace RE
 		inline NiColor GetGameplayHUDColor()
 		{
 			using func_t = decltype(&HUDMenuUtils::GetGameplayHUDColor);
-			static REL::Relocation<func_t> func{ REL::ID(2248840) };
+			static REL::Relocation<func_t> func{ ID::HUDMenuUtils::GetGameplayHUDColor };
 			return func();
 		}
 
 		inline NiColor GetGameplayHUDBackgroundColor()
 		{
 			using func_t = decltype(&HUDMenuUtils::GetGameplayHUDBackgroundColor);
-			static REL::Relocation<func_t> func{ REL::ID(2248845) };
+			static REL::Relocation<func_t> func{ ID::HUDMenuUtils::GetGameplayHUDBackgroundColor };
 			return func();
 		}
 
 		inline void WorldPtToScreenPt3(const NiPoint3& a_world, NiPoint3& a_screen)
 		{
 			using func_t = void (*)(const NiPoint3&, NiPoint3&);
-			static REL::Relocation<func_t> func{ REL::ID(2222464) };
+			static REL::Relocation<func_t> func{ ID::HUDMenuUtils::WorldPtToScreenPt3 };
 			func(a_world, a_screen);
 		}
 

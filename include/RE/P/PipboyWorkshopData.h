@@ -1,7 +1,22 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	namespace ActorValueEvents
+	{
+		class ActorValueChangedEvent;
+	}
+
+	namespace Workshop
+	{
+		class WorkshopModeEvent;
+	}
+
 	class __declspec(novtable) PipboyWorkshopData :
 		public PipboyDataGroup,
 		public BSTEventSink<ActorValueEvents::ActorValueChangedEvent>,

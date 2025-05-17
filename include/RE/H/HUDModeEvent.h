@@ -1,8 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
-	struct HUDModeEvent
+	class HUDModeType;
+
+	class HUDModeEvent
 	{
 	private:
 		using EventSource_t = BSTGlobalEvent::EventSource<HUDModeEvent>;
@@ -10,7 +15,7 @@ namespace RE
 	public:
 		[[nodiscard]] static EventSource_t* GetEventSource()
 		{
-			static REL::Relocation<EventSource_t**> singleton{ REL::ID(683142) };
+			static REL::Relocation<EventSource_t**> singleton{ ID::HUDModeEvent::GetEventSource };
 			if (!*singleton) {
 				*singleton = new EventSource_t(&BSTGlobalEvent::GetSingleton()->eventSourceSDMKiller);
 			}

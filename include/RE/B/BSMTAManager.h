@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSBatchRenderer.h"
+#include "RE/B/BSEventFlag.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
+	class BSGeometry;
+	class BSRenderPass;
+
 	namespace BSMTAManager
 	{
 		enum class MODE
@@ -28,7 +35,7 @@ namespace RE
 		};
 		static_assert(sizeof(RegisterBatchRendererPassTask) == 0x10);
 
-		struct RegisterGeometryGroupPassTask
+		class RegisterGeometryGroupPassTask
 		{
 		public:
 			// members

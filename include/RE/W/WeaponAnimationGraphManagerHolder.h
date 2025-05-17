@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/I/IAnimationGraphManagerHolder.h"
+
 namespace RE
 {
+	class BSAnimationGraphEvent;
+	class BSAnimationGraphManager;
+
 	class __declspec(novtable) WeaponAnimationGraphManagerHolder :
 		public IAnimationGraphManagerHolder,
 		public BSTEventSink<BSAnimationGraphEvent>,

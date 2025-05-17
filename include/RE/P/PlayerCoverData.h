@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
-	struct PlayerCoverData
+	class PlayerCoverData
 	{
 	public:
 		enum class PEEK_STATE;

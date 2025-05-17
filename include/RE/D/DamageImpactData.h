@@ -1,8 +1,11 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct DamageImpactData
+	class DamageImpactData
 	{
 		// members
 		NiPoint3A                       location;  // 00

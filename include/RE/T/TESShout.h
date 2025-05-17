@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSEquipType.h"
+#include "RE/B/BGSMenuDisplayObject.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESShout :
@@ -14,7 +20,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESShout };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kSHOU };
 
-		struct Variation
+		class Variation
 		{
 		public:
 			// members

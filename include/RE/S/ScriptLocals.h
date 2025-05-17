@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+
 namespace RE
 {
+	class ACTION_OBJECT;
+	class SCRIPT_EFFECT_DATA;
+	class SCRIPT_LOCAL;
+
 	class ScriptLocals
 	{
 	public:

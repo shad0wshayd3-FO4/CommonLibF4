@@ -1,7 +1,18 @@
 #pragma once
 
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESTexture.h"
+#include "RE/W/WaterShaderData.h"
+
 namespace RE
 {
+	class BSWaterShaderMaterial;
+	class NiTexture;
+
 	class __declspec(novtable) TESWaterForm :
 		public TESForm,     // 000
 		public TESFullName  // 020

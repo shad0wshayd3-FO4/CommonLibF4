@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/E/ExamineConfirmMenu.h"
+#include "RE/W/WorkbenchMenuBase.h"
+
 namespace RE
 {
+	class BGSObjectInstanceExtra;
+	class BSInputEnableLayer;
+	class NiAVObject;
+
 	class __declspec(novtable) ExamineMenu :
 		public WorkbenchMenuBase  // 00
 	{
@@ -12,7 +19,7 @@ namespace RE
 
 		enum class INSPECT_MODE_STATE;
 
-		struct ComponentBuilderFunctor
+		class ComponentBuilderFunctor
 		{
 		public:
 			// members
@@ -86,28 +93,28 @@ namespace RE
 		void BuildWeaponScrappingArray()
 		{
 			using func_t = decltype(&ExamineMenu::BuildWeaponScrappingArray);
-			static REL::Relocation<func_t> func{ REL::ID(646841) };
+			static REL::Relocation<func_t> func{ ID::ExamineMenu::BuildWeaponScrappingArray };
 			return func(this);
 		}
 
 		[[nodiscard]] std::uint32_t GetSelectedIndex()
 		{
 			using func_t = decltype(&ExamineMenu::GetSelectedIndex);
-			static REL::Relocation<func_t> func{ REL::ID(2223022) };
+			static REL::Relocation<func_t> func{ ID::ExamineMenu::GetSelectedIndex };
 			return func(this);
 		}
 
 		void ShowConfirmMenu(ExamineConfirmMenu::InitData* a_data, ExamineConfirmMenu::ICallback* a_callback)
 		{
 			using func_t = decltype(&ExamineMenu::ShowConfirmMenu);
-			static REL::Relocation<func_t> func{ REL::ID(2223081) };
+			static REL::Relocation<func_t> func{ ID::ExamineMenu::ShowConfirmMenu };
 			return func(this, a_data, a_callback);
 		}
 
 		void ConsumeSelectedItems(bool a_autoBuild, const BGSSoundDescriptorForm* a_consumeSound)
 		{
 			using func_t = decltype(&ExamineMenu::ConsumeSelectedItems);
-			static REL::Relocation<func_t> func{ REL::ID(2223052) };
+			static REL::Relocation<func_t> func{ ID::ExamineMenu::ConsumeSelectedItems };
 			return func(this, a_autoBuild, a_consumeSound);
 		}
 

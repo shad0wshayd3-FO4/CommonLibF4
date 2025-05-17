@@ -1,5 +1,12 @@
 #pragma once
 
+#include "RE/B/BGSPropertySheet.h"
+#include "RE/C/CLASS_DATA.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESTexture.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESClass :

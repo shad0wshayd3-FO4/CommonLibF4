@@ -1,7 +1,37 @@
 #pragma once
 
+#include "RE/B/BGSBodyPartDefs.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/bhkCollisionQueryResultHandle.h"
+#include "RE/C/CELLJobs.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTransform.h"
+#include "RE/T/TESObjectREFR.h"
+
 namespace RE
 {
+	enum class COL_LAYER;
+	enum class ImpactResult;
+
+	class bhkNPCollisionObject;
+	class BSMagicShaderParticles;
+	class hknpAllHitsCollector;
+	class hknpShape;
+	class NiAVObject;
+	class NiLight;
+	class NiNode;
+	class QueuedFile;
+
+	namespace MagicSystem
+	{
+		enum class CastingSource;
+	}
+
 	class __declspec(novtable) Projectile :
 		public TESObjectREFR  // 000
 	{
@@ -10,7 +40,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::Projectile };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kREFR };
 
-		struct ImpactCreation;
+		class ImpactCreation;
 
 		class ImpactData
 		{

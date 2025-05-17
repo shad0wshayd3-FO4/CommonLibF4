@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSZoomData :
@@ -10,7 +13,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSZoomData };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kZOOM };
 
-		struct Data
+		class Data
 		{
 		public:
 			// members

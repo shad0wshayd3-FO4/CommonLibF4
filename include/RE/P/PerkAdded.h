@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace PerkAdded
 	{
-		struct Event
+		class Event
 		{
+		public:
 			const Actor*   adder;
 			const BGSPerk* perk;
 			std::uint8_t   rank;

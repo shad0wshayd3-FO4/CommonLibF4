@@ -1,5 +1,7 @@
 #include "RE/E/ExtraInstanceData.h"
 
+#include "RE/T/TBO_InstanceData.h"
+
 namespace RE
 {
 	ExtraInstanceData::ExtraInstanceData() :

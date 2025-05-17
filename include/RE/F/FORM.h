@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct FORM
+	class FORM
 	{
 	public:
 		// members

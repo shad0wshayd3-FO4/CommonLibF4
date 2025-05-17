@@ -12,5 +12,4 @@ namespace RE
 		kEnsureDisplayMenuCalled = 0x5,
 		kPostDisplay = 0x6
 	};
-
 }

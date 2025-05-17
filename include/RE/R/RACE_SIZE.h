@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class RACE_SIZE
+	enum class RACE_SIZE : std::int32_t
 	{
 		kSmall = 0x0,
 		kMedium = 0x1,

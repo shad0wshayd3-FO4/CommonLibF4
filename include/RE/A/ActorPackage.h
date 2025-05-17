@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSpinLock.h"
+
 namespace RE
 {
+	class ActorPackageData;
+
 	class ActorPackage
 	{
 	public:

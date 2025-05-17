@@ -1,5 +1,12 @@
 #pragma once
 
+#include "RE/I/IUIMessageData.h"
+
+namespace Scaleform::GFx
+{
+	class Event;
+}
+
 namespace RE
 {
 	class __declspec(novtable) BSUIScaleformData :

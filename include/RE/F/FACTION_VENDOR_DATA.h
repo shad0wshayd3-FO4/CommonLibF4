@@ -1,8 +1,13 @@
 #pragma once
 
+#include "RE/F/FACTION_VENDOR_DATA_VALUES.h"
+
 namespace RE
 {
-	struct FACTION_VENDOR_DATA
+	class PackageLocation;
+	class TESCondition;
+
+	class FACTION_VENDOR_DATA
 	{
 	public:
 		// members

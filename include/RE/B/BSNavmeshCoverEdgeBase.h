@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BSNavmeshCoverEdgeBase
+	class BSNavmeshCoverEdgeBase
 	{
 	public:
 	};

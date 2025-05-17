@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESTexture.h"
+
 namespace RE
 {
 	class __declspec(novtable) TESEyes :

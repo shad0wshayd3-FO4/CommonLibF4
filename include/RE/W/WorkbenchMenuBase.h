@@ -1,7 +1,21 @@
 #pragma once
 
+#include "RE/B/BGSInventoryList.h"
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/I/Inventory3DManager.h"
+#include "RE/I/InventoryInterface.h"
+#include "RE/N/NiPointer.h"
+#include "RE/R/Rumble.h"
+
 namespace RE
 {
+	class ExtraDataList;
+	class NiNode;
+
 	class __declspec(novtable) WorkbenchMenuBase :
 		public GameMenuBase  // 00
 	{
@@ -16,7 +30,7 @@ namespace RE
 			kWorld
 		};
 
-		struct InitParams
+		class InitParams
 		{
 		public:
 			InitParams();
@@ -35,7 +49,7 @@ namespace RE
 		};
 		static_assert(sizeof(InitParams) == 0x28);
 
-		struct ModChoiceData
+		class ModChoiceData
 		{
 		public:
 			// members
@@ -79,7 +93,7 @@ namespace RE
 		void UpdateOptimizedAutoBuildInv()
 		{
 			using func_t = decltype(&WorkbenchMenuBase::UpdateOptimizedAutoBuildInv);
-			static REL::Relocation<func_t> func{ REL::ID(2224955) };
+			static REL::Relocation<func_t> func{ ID::WorkbenchMenuBase::UpdateOptimizedAutoBuildInv };
 			return func(this);
 		}
 

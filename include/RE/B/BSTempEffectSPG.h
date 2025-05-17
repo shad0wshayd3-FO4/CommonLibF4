@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTempEffect.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class BGSShaderParticleGeometryData;
+	class BSGeometry;
+
 	class __declspec(novtable) BSTempEffectSPG :
 		public BSTempEffect  // 00
 	{

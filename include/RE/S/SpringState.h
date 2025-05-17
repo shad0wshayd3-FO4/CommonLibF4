@@ -1,11 +1,13 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	namespace BSSpring
 	{
 		template <class T>
-		struct SpringState
+		class SpringState
 		{
 		public:
 			// members
@@ -14,8 +16,8 @@ namespace RE
 			float springConstant;  // ??
 		};
 
-		extern template struct SpringState<float>;
-		extern template struct SpringState<NiPoint2>;
-		extern template struct SpringState<NiPoint3>;
+		extern template class SpringState<float>;
+		extern template class SpringState<NiPoint2>;
+		extern template class SpringState<NiPoint3>;
 	}
 }

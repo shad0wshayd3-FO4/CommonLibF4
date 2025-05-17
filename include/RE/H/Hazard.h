@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/N/NiPointer.h"
+#include "RE/T/TESObjectREFR.h"
+
 namespace RE
 {
+	class NiLight;
+
 	class __declspec(novtable) Hazard :
 		public TESObjectREFR  // 000
 	{

@@ -1,14 +1,20 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class NiProperty;
+
 	class __declspec(novtable) BSMaterialObject
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::BSMaterialObject };
 		static constexpr auto VTABLE{ VTABLE::BSMaterialObject };
 
-		struct DIRECTIONAL_DATA
+		class DIRECTIONAL_DATA
 		{
 		public:
 			// members

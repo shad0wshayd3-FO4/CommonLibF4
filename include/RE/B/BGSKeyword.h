@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/K/KeywordType.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSKeyword :
@@ -40,7 +45,7 @@ namespace RE
 		[[nodiscard]] static auto GetTypedKeywords()
 			-> std::optional<std::span<BSTArray<BGSKeyword*>, std::to_underlying(KeywordType::kTotal)>>
 		{
-			static REL::Relocation<BSTArray<BGSKeyword*>(*)[std::to_underlying(KeywordType::kTotal)]> keywords{ REL::ID(1095775) };
+			static REL::Relocation<BSTArray<BGSKeyword*>(*)[std::to_underlying(KeywordType::kTotal)]> keywords{ ID::BGSKeyword::TypedKeywords };
 			if (*keywords) {
 				return { *keywords };
 			} else {

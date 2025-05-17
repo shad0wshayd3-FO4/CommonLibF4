@@ -1,7 +1,24 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+#include "Scaleform/G/GFx_Movie.h"
+#include "Scaleform/P/Ptr.h"
+
+namespace Scaleform::GFx
+{
+	class DrawTextManager;
+	class Loader;
+}
+
 namespace RE
 {
+	class BSScaleformImageLoader;
+	class BSScaleformRenderer;
+	class IMenu;
+	class SFRendererInitializedEvent;
+
 	class __declspec(novtable) BSScaleformManager :
 		public BSTEventSink<SFRendererInitializedEvent>,  // 00
 		public BSTSingletonSDM<BSScaleformManager>        // 08
@@ -14,7 +31,7 @@ namespace RE
 
 		[[nodiscard]] static BSScaleformManager* GetSingleton()
 		{
-			static REL::Relocation<BSScaleformManager**> singleton{ REL::ID(2689600) };
+			static REL::Relocation<BSScaleformManager**> singleton{ ID::BSScaleformManager::Singleton };
 			return *singleton;
 		}
 
@@ -27,7 +44,7 @@ namespace RE
 			float                                  a_backgroundAlpha = 0.0F)
 		{
 			using func_t = decltype(&BSScaleformManager::LoadMovie);
-			static REL::Relocation<func_t> func{ REL::ID(2287422) };
+			static REL::Relocation<func_t> func{ ID::BSScaleformManager::LoadMovie };
 			return func(this, a_menu, a_movie, a_menuName, a_menuObjPath, a_scaleMode, a_backgroundAlpha);
 		}
 
@@ -43,20 +60,20 @@ namespace RE
 		BSScaleformRenderer*                            renderer;        // 18
 		Scaleform::Ptr<Scaleform::GFx::DrawTextManager> textManager;     // 20
 		Scaleform::Ptr<BSScaleformImageLoader>          imageLoader;     // 28
-		BSStringT<char>                                 validNameChars;  // 30
+		BSString                                        validNameChars;  // 30
 
 	private:
 		[[nodiscard]] bool GetMovieFilename(char const* a_menuName, BSStaticStringT<260>& a_filePath)
 		{
 			using func_t = decltype(&BSScaleformManager::GetMovieFilename);
-			static REL::Relocation<func_t> func{ REL::ID(1191277) };
+			static REL::Relocation<func_t> func{ ID::BSScaleformManager::GetMovieFilename };
 			return func(this, a_menuName, a_filePath);
 		}
 
 		void InitMovieViewport(Scaleform::GFx::Movie& a_movie, const float a_dynamicWidthRatio, const float a_dynamicHeightRatio)
 		{
 			using func_t = decltype(&BSScaleformManager::InitMovieViewport);
-			static REL::Relocation<func_t> func{ REL::ID(2287430) };
+			static REL::Relocation<func_t> func{ ID::BSScaleformManager::InitMovieViewport };
 			return func(this, a_movie, a_dynamicWidthRatio, a_dynamicHeightRatio);
 		}
 	};

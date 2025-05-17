@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/P/PATH_DATA.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class NiFormArray;
+
 	class __declspec(novtable) BGSCameraPath :
 		public TESForm  // 00
 	{

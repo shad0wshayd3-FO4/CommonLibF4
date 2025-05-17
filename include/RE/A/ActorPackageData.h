@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/P/PTYPE.h"
+
 namespace RE
 {
+	class ActorPackageLoadFormBuffer;
+	class BGSSaveFormBuffer;
+	class IProcedureTreeExecState;
+
 	class __declspec(novtable) ActorPackageData
 	{
 	public:

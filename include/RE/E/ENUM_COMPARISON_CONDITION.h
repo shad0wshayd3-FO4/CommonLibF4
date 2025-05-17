@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class ENUM_COMPARISON_CONDITION : std::uint8_t
+	enum class ENUM_COMPARISON_CONDITION : std::int32_t
 	{
 		kEqual = 0x0,
 		kNotEqual = 0x1,

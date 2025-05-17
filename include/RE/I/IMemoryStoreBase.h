@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class MemoryStats;
+
 	class __declspec(novtable) IMemoryStoreBase
 	{
 	public:

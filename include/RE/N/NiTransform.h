@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiMatrix3.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	class NiTransform

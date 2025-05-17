@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class TESResponse;
+
 	class ResponseListWrapper
 	{
 	public:

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSKeyword.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSLocationRefType :

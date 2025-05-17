@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/E/ExamineMenu.h"
+
 namespace RE
 {
 	class __declspec(novtable) PowerArmorModMenu :

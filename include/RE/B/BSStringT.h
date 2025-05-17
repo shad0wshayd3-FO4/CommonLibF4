@@ -2,6 +2,46 @@
 
 namespace RE
 {
+	template <class CharT, std::uint16_t>
+	class DynamicMemoryManagementPol
+	{
+	public:
+		using value_type = CharT;
+		using size_type = std::uint16_t;
+		using propagate_on_container_move_assignment = std::true_type;
+
+		[[nodiscard]] value_type* allocate(size_type a_count) { return calloc<value_type>(a_count); }
+
+		void deallocate(value_type* a_ptr, size_type) { free(a_ptr); }
+	};
+
+	template <class CharT, std::uint16_t N>
+	class FixedLengthMemoryManagementPol
+	{
+	public:
+		using value_type = CharT;
+		using size_type = std::uint16_t;
+		using propagate_on_container_move_assignment = std::false_type;
+
+		[[nodiscard]] value_type* allocate(size_type a_count)
+		{
+			if (a_count <= N) {
+				return _buffer;
+			} else {
+				stl::report_and_fail("failed to satisfy allocation request"sv);
+			}
+		}
+
+		void deallocate(value_type* a_ptr, size_type a_count)
+		{
+			assert(a_ptr == _buffer);
+			assert(a_count <= N);
+		}
+
+	private:
+		value_type _buffer[N]{ static_cast<value_type>(0) };
+	};
+
 	template <
 		class CharT,
 		std::uint16_t N = static_cast<std::uint16_t>(-1),
@@ -57,7 +97,7 @@ namespace RE
 		bool Set(const char* apString, std::uint64_t auiMaxLen)
 		{
 			using func_t = decltype(&BSStringT::Set);
-			static REL::Relocation<func_t> func{ REL::ID(2189084) };
+			static REL::Relocation<func_t> func{ ID::BSStringT::Set };
 			return func(this, apString, auiMaxLen);
 		}
 
@@ -113,6 +153,13 @@ namespace RE
 		size_type _capacity{ 0 };    // ??
 	};
 
+	using BSString = BSStringT<char, -1, DynamicMemoryManagementPol>;
+	static_assert(sizeof(BSString) == 0x10);
+
+	using BSStringW = BSStringT<wchar_t, -1, DynamicMemoryManagementPol>;
+	static_assert(sizeof(BSStringW) == 0x10);
+
 	template <std::uint16_t N>
 	using BSStaticStringT = BSStringT<char, N, FixedLengthMemoryManagementPol>;
+	static_assert(sizeof(BSStaticStringT<10>) == 0x20);
 }

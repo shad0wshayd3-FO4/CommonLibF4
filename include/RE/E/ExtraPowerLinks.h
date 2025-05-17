@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+#include "RE/B/BSTArray.h"
+
 namespace RE
 {
 	class __declspec(novtable) ExtraPowerLinks :
@@ -10,7 +13,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::ExtraPowerLinks };
 		static constexpr auto TYPE{ EXTRA_DATA_TYPE::kPowerLinks };
 
-		struct Element
+		class Element
 		{
 		public:
 			// members

@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTEvent.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	namespace ActorValueEvent
+	{
+		class ActorValueChangedEvent;
+	}
+
 	class __declspec(novtable) PipboySpecialData :
 		public PipboyDataGroup,                                        // 00
 		public BSTEventSink<ActorValueEvents::ActorValueChangedEvent>  // 98

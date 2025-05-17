@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
+	class bhkPickData;
+
 	namespace CombatUtilities
 	{
 		inline bool CalculateProjectileLOS(
@@ -15,14 +19,14 @@ namespace RE
 			float*          a_distanceFraction)
 		{
 			using func_t = bool (*)(Actor*, BGSProjectile*, float, const NiPoint3&, const NiPoint3&, NiPoint3*, TESObjectREFR**, float*);
-			static REL::Relocation<func_t> func{ REL::ID(798616) };
+			static REL::Relocation<func_t> func{ ID::CombatUtilities::CalculateProjectileLOS1 };
 			return func(a_actor, a_projectile, a_projectileSpeed, a_launchPos, a_targetPos, a_hitPos, a_collidee, a_distanceFraction);
 		}
 
 		inline bool CalculateProjectileLOS(Actor* a_actor, BGSProjectile* a_projectile, bhkPickData& a_pickData)
 		{
 			using func_t = bool (*)(Actor*, BGSProjectile*, bhkPickData&);
-			static REL::Relocation<func_t> func{ REL::ID(55339) };
+			static REL::Relocation<func_t> func{ ID::CombatUtilities::CalculateProjectileLOS2 };
 			return func(a_actor, a_projectile, a_pickData);
 		}
 
@@ -35,10 +39,10 @@ namespace RE
 			NiPoint3&       a_trajectoryPos)
 		{
 			using func_t = decltype(&CalculateProjectileTrajectory);
-			static REL::Relocation<func_t> func{ REL::ID(1575156) };
+			static REL::Relocation<func_t> func{ ID::CombatUtilities::CalculateProjectileTrajectory };
 			return func(a_projectilePos, a_projectileVelocity, a_projectileGravity, a_targetPos, a_heading, a_trajectoryPos);
 		}
 
-		static REL::Relocation<float> fWorldGravity{ REL::ID(1378547) };
+		inline static REL::Relocation<float> fWorldGravity{ ID::CombatUtilities::WorldGravity };
 	}
 }

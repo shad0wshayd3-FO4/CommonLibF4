@@ -4,7 +4,7 @@ namespace RE
 {
 	namespace ActorValueEvents
 	{
-		struct ActorValueChangedEvent
+		class ActorValueChangedEvent
 		{
 		public:
 			// members

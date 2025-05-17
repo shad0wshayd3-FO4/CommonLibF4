@@ -1,14 +1,19 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTHashMap.h"
+
 namespace RE
 {
+	enum class INPUT_DEVICE;
+
 	class __declspec(novtable) BSInputDevice
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::BSInputDevice };
 		static constexpr auto VTABLE{ VTABLE::BSInputDevice };
 
-		struct InputButton
+		class InputButton
 		{
 		public:
 			// members

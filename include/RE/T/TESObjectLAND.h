@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/O/OBJ_LAND.h"
+#include "RE/T/TESChildCell.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class QueuedFile;
+
 	class __declspec(novtable) TESObjectLAND :
 		public TESForm,      // 00
 		public TESChildCell  // 20
@@ -11,7 +18,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESObjectLAND };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kLAND };
 
-		struct LoadedLandData;
+		class LoadedLandData;
 
 		// members
 		OBJ_LAND              data;            // 28

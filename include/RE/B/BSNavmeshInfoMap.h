@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSingleton.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSNavmeshInfoMap :
@@ -9,7 +12,7 @@ namespace RE
 		static constexpr auto RTTI{ RTTI::BSNavmeshInfoMap };
 		static constexpr auto VTABLE{ VTABLE::BSNavmeshInfoMap };
 
-		struct IVisitor;
+		class IVisitor;
 
 		virtual ~BSNavmeshInfoMap();  // 00
 

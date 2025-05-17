@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class PLAYER_ACTION
+	enum class PLAYER_ACTION : std::int32_t
 	{
 		kNone = 0x0,
 		kSwingMeleeWeapon = 0x1,

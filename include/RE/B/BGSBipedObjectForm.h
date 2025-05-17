@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BIPED_MODEL.h"
+#include "RE/B/BaseFormComponent.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSBipedObjectForm :

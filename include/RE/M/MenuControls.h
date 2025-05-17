@@ -1,7 +1,21 @@
 #pragma once
 
+#include "RE/B/BSInputEventReceiver.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/S/ScreenshotHandler.h"
+
 namespace RE
 {
+	class BSInputEventUser;
+	class CameraZoomHandler;
+	class ClickHandler;
+	class DisconnectHandler;
+	class GFxConvertHandler;
+	class MenuOpenHandler;
+	class PipboyHandler;
+	class QuickSaveLoadHandler;
+
 	class MenuControls :
 		public BSInputEventReceiver,          // 00
 		public BSTSingletonSDM<MenuControls>  // 10
@@ -9,7 +23,7 @@ namespace RE
 	public:
 		[[nodiscard]] static MenuControls* GetSingleton()
 		{
-			static REL::Relocation<MenuControls**> singleton{ REL::ID(2689089) };
+			static REL::Relocation<MenuControls**> singleton{ ID::MenuControls::Singleton };
 			return *singleton;
 		}
 

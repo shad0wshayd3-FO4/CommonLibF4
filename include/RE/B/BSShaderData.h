@@ -1,8 +1,29 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiAlphaProperty.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct BSShaderData :
+	class BSEffectShaderPropertyColorController;
+	class BSEffectShaderPropertyFloatController;
+	class BSLightingShaderPropertyColorController;
+	class BSLightingShaderPropertyFloatController;
+	class BSLightingShaderPropertyUShortController;
+	class BSNiAlphaPropertyTestRefController;
+	class BSShaderTextureSet;
+
+	namespace BSGraphics
+	{
+		enum class TextureAddressMode;
+	}
+
+	class BSShaderData :
 		public BSIntrusiveRefCounted  // 000
 	{
 	public:

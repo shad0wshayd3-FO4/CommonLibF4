@@ -1,7 +1,19 @@
 #pragma once
 
+#include "RE/B/BSMagicShaderParticles.h"
+#include "RE/B/BSModelDB.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiPointer.h"
+#include "RE/R/ReferenceEffect.h"
+
 namespace RE
 {
+	class NiAVObject;
+	class NiSourceTexture;
+	class NiTexture;
+
 	class __declspec(novtable) ShaderReferenceEffect :
 		public ReferenceEffect  // 00
 	{
@@ -14,25 +26,25 @@ namespace RE
 		~ShaderReferenceEffect() override;
 
 		// members
-		BSMagicShaderParticles                                     particles;               // 048
-		BSTArray<BSTTuple<TextureDBHandle, NiPointer<NiTexture>*>> textureRequests;         // 068
-		BSTArray<NiPointer<NiAVObject>>                            addOnObjects;            // 080
-		BSTArray<BSModelDB::Handle>                                modelHandles;            // 098
-		BSTArray<NiPointer<NiAVObject>>                            targetArray;             // 0B0
-		BSSoundHandle                                              soundHandle;             // 0C8
-		NiPointer<NiSourceTexture>                                 textureShaderTexture;    // 0D0
-		NiPointer<NiSourceTexture>                                 textureBlockOutTexture;  // 0D8
-		NiPointer<NiSourceTexture>                                 texturePaletteTexture;   // 0E0
-		TESBoundObject*                                            wornObject;              // 0E8
-		TESEffectShader*                                           effectData;              // 0F0
-		BSEffectShaderData*                                        effectShaderData;        // 0F8
-		NiPointer<NiAVObject>                                      lastRootNode;            // 100
-		float                                                      alphaTimer;              // 104
-		float                                                      addonAlpha;              // 108
-		float                                                      addonScale;              // 10C
-		float                                                      effectShaderAge;         // 110
-		std::uint32_t                                              flags;                   // 114
-		std::uint32_t                                              pushCount;               // 118
+		BSMagicShaderParticles                           particles;               // 048
+		BSTArray<BSTTuple<void*, NiPointer<NiTexture>*>> textureRequests;         // 068 - TextureDB::Handle
+		BSTArray<NiPointer<NiAVObject>>                  addOnObjects;            // 080
+		BSTArray<void*>                                  modelHandles;            // 098 - BSModelDB::Handle
+		BSTArray<NiPointer<NiAVObject>>                  targetArray;             // 0B0
+		BSSoundHandle                                    soundHandle;             // 0C8
+		NiPointer<NiSourceTexture>                       textureShaderTexture;    // 0D0
+		NiPointer<NiSourceTexture>                       textureBlockOutTexture;  // 0D8
+		NiPointer<NiSourceTexture>                       texturePaletteTexture;   // 0E0
+		TESBoundObject*                                  wornObject;              // 0E8
+		TESEffectShader*                                 effectData;              // 0F0
+		BSEffectShaderData*                              effectShaderData;        // 0F8
+		NiPointer<NiAVObject>                            lastRootNode;            // 100
+		float                                            alphaTimer;              // 104
+		float                                            addonAlpha;              // 108
+		float                                            addonScale;              // 10C
+		float                                            effectShaderAge;         // 110
+		std::uint32_t                                    flags;                   // 114
+		std::uint32_t                                    pushCount;               // 118
 	};
 	static_assert(sizeof(ShaderReferenceEffect) == 0x120);
 }

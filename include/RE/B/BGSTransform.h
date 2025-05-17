@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSTransform :
@@ -10,7 +13,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BGSTransform };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kTRNS };
 
-		struct TransformData
+		class TransformData
 		{
 		public:
 			// members

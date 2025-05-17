@@ -1,7 +1,21 @@
 #pragma once
 
+#include "RE/B/BSScaleformExternalTexture.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class NiAVObject;
+
+	namespace REFREventCallbacks
+	{
+		class IEventCallback;
+	}
+
 	class __declspec(novtable) TerminalMenu :
 		public GameMenuBase  // 00
 	{
@@ -22,7 +36,7 @@ namespace RE
 			kWaitingForPapyrus = 0x7,
 		};
 
-		struct ListItem
+		class ListItem
 		{
 		public:
 			// members

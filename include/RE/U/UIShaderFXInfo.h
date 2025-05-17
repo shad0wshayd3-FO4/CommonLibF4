@@ -1,8 +1,10 @@
 #pragma once
 
+#include "RE/U/UIShaderColors.h"
+
 namespace RE
 {
-	struct alignas(0x10) UIShaderFXInfo
+	class alignas(0x10) UIShaderFXInfo
 	{
 	public:
 		// members

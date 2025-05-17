@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/T/TBO_InstanceData.h"
+
 namespace RE
 {
 	class BGSObjectInstance
@@ -18,7 +21,7 @@ namespace RE
 		BGSObjectInstance* ctor(TESForm* a_object, TBO_InstanceData* a_instanceData)
 		{
 			using func_t = decltype(&BGSObjectInstance::ctor);
-			static REL::Relocation<func_t> func{ REL::ID(2197563) };
+			static REL::Relocation<func_t> func{ ID::BGSObjectInstance::ctor };
 			return func(this, a_object, a_instanceData);
 		}
 	};
@@ -31,7 +34,6 @@ namespace RE
 	public:
 		BGSObjectInstanceT(T* a_object, TBO_InstanceData* a_instanceData) :
 			BGSObjectInstance(a_object, a_instanceData)
-		{
-		}
+		{}
 	};
 }

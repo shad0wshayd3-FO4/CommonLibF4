@@ -1,7 +1,22 @@
 #pragma once
 
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class BSLight;
+	class ProjectileBeginUpdateEvent;
+	class TESDeathEvent;
+	class TESHitEvent;
+	class VATSCameraContext;
+	class VATSCommand;
+	class WeaponFiredEvent;
+
 	class __declspec(novtable) VATS :
 		public BSTEventSink<WeaponFiredEvent>,            // 00
 		public BSTEventSink<ProjectileBeginUpdateEvent>,  // 08
@@ -29,7 +44,7 @@ namespace RE
 
 		[[nodiscard]] static VATS* GetSingleton()
 		{
-			static REL::Relocation<VATS**> singleton{ REL::ID(2690444) };
+			static REL::Relocation<VATS**> singleton{ ID::VATS::Singleton };
 			return *singleton;
 		}
 

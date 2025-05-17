@@ -1,7 +1,26 @@
 #pragma once
 
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
+	class BSTObjectArenaScrapAllocBase
+	{
+	public:
+		// members
+		ScrapHeap* scrapHeap{ MemoryManager::GetSingleton().GetThreadScrapHeap() };  // 0
+	};
+	static_assert(sizeof(BSTObjectArenaScrapAllocBase) == 0x8);
+
+	class BSTObjectArenaScrapAlloc :
+		private BSTObjectArenaScrapAllocBase  // 0
+	{
+	public:
+		[[nodiscard]] void* allocate_bytes(std::size_t a_bytes) { return scrapHeap->Allocate(a_bytes, 0x8); }
+		void                deallocate_bytes(void* a_ptr) { scrapHeap->Deallocate(a_ptr); }
+	};
+	static_assert(sizeof(BSTObjectArenaScrapAlloc) == 0x8);
+
 	template <
 		class T,
 		class Allocator = BSTObjectArenaScrapAlloc,
@@ -18,7 +37,7 @@ namespace RE
 		using size_type = std::uint32_t;
 		using pointer = value_type*;
 
-		struct Page
+		class Page
 		{
 		public:
 			F4_HEAP_REDEFINE_NEW(Page);

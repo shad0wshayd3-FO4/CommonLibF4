@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSReferenceEffect :
@@ -18,7 +20,7 @@ namespace RE
 			kInheritRotation = 1 << 2
 		};
 
-		struct Data
+		class Data
 		{
 		public:
 			// members

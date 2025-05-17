@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSIntrusiveRefCounted.h"
+
 namespace RE
 {
 	class alignas(0x10) IMessageBoxCallback :

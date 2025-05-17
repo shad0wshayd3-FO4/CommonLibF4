@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSProjectileData
+	class BGSProjectileData
 	{
 	public:
 		// members

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct BGSDualCastDataDEF
+	class BGSDualCastDataDEF
 	{
 	public:
 		// members

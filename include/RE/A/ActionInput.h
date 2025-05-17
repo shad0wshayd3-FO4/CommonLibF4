@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
 	class __declspec(novtable) ActionInput
@@ -15,7 +17,7 @@ namespace RE
 			kTry = 0x2
 		};
 
-		struct Data
+		class Data
 		{
 		public:
 			union

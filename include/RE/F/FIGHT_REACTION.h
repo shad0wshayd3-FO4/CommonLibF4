@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class FIGHT_REACTION
+	enum class FIGHT_REACTION : std::int32_t
 	{
 		kNeutral = 0x0,
 		kEnemy = 0x1,

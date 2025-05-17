@@ -1,7 +1,22 @@
 #pragma once
 
+#include "RE/B/BGSKeywordForm.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESFullName.h"
+
 namespace RE
 {
+	class QueuedFile;
+
+	namespace MagicSystem
+	{
+		enum class CastingType;
+		enum class Delivery;
+		enum class SpellType;
+	}
+
 	class __declspec(novtable) MagicItem :
 		public TESBoundObject,  // 00
 		public TESFullName,     // 68
@@ -12,7 +27,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::MagicItem };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kNONE };
 
-		struct SkillUsageData
+		class SkillUsageData
 		{
 		public:
 			// members

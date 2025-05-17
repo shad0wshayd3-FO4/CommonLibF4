@@ -1,7 +1,24 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/E/ENUM_FORM_ID.h"
+#include "RE/N/NiTArray.h"
+#include "RE/N/NiTList.h"
+#include "RE/T/TESFileCollection.h"
+
 namespace RE
 {
+	class BGSHotloadCompletedEvent;
+	class NEW_REFR_DATA;
+	class TESFile;
+	class TESObjectList;
+	class TESRegionDataManager;
+	class TESRegionList;
+
 	class TESDataHandler :
 		public BSTEventSource<BGSHotloadCompletedEvent>,  // 0000
 		public BSTSingletonSDM<TESDataHandler>            // 0058
@@ -9,28 +26,28 @@ namespace RE
 	public:
 		[[nodiscard]] static TESDataHandler* GetSingleton()
 		{
-			static REL::Relocation<TESDataHandler**> singleton{ REL::ID(2688883) };
+			static REL::Relocation<TESDataHandler**> singleton{ ID::TESDataHandler::Singleton };
 			return *singleton;
 		}
 
 		[[nodiscard]] bool AddFormToDataHandler(TESForm* a_form)
 		{
 			using func_t = decltype(&TESDataHandler::AddFormToDataHandler);
-			static REL::Relocation<func_t> func{ REL::ID(2192271) };
+			static REL::Relocation<func_t> func{ ID::TESDataHandler::AddFormToDataHandler };
 			return func(this, a_form);
 		}
 
 		[[nodiscard]] bool CheckModsLoaded(bool a_everModded)
 		{
 			using func_t = decltype(&TESDataHandler::CheckModsLoaded);
-			static REL::Relocation<func_t> func{ REL::ID(2192323) };
+			static REL::Relocation<func_t> func{ ID::TESDataHandler::CheckModsLoaded };
 			return func(this, a_everModded);
 		}
 
 		[[nodiscard]] ObjectRefHandle CreateReferenceAtLocation(NEW_REFR_DATA& a_data)
 		{
 			using func_t = decltype(&TESDataHandler::CreateReferenceAtLocation);
-			static REL::Relocation<func_t> func{ REL::ID(500304) };
+			static REL::Relocation<func_t> func{ ID::TESDataHandler::CreateReferenceAtLocation };
 			return func(this, a_data);
 		}
 
@@ -149,7 +166,7 @@ namespace RE
 		bool IsFormIDInuse(TESFormID a_formID)
 		{
 			using func_t = decltype(&TESDataHandler::IsFormIDInuse);
-			static REL::Relocation<func_t> func{ REL::ID(2192351) };
+			static REL::Relocation<func_t> func{ ID::TESDataHandler::IsFormIDInuse };
 			return func(this, a_formID);
 		}
 

@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct ENCOUNTER_ZONE_DATA
+	class ENCOUNTER_ZONE_DATA
 	{
 	public:
 		enum class FLAG

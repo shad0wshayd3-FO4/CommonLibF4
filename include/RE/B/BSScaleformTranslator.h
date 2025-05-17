@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTranslator.h"
+#include "Scaleform/G/GFX_Translator.h"
+
 namespace RE
 {
 	class __declspec(novtable) BSScaleformTranslator :

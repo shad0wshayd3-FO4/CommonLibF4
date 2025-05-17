@@ -4,8 +4,9 @@ namespace RE
 {
 	namespace HolotapeStateChanged
 	{
-		struct Event
+		class Event
 		{
+		public:
 		};
 		static_assert(std::is_empty_v<Event>);
 	}

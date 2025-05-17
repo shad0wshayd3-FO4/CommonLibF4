@@ -1,5 +1,10 @@
 #pragma once
 
+#include "RE/B/BSTAtomicValue.h"
+#include "RE/N/NiAVObject.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTArray.h"
+
 namespace RE
 {
 	class __declspec(novtable) NiNode :
@@ -19,7 +24,7 @@ namespace RE
 			children(a_numChildren)
 		{
 			stl::emplace_vtable(this);
-			static REL::Relocation<std::uintptr_t> childrenVTable{ REL::ID(390064) };
+			static REL::Relocation<std::uintptr_t> childrenVTable{ ID::NiNode::ChildrenVTable };
 			reinterpret_cast<std::uintptr_t&>(children) = childrenVTable.address();
 		}
 

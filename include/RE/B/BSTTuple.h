@@ -1,9 +1,11 @@
 #pragma once
 
+#include "RE/M/MemoryManager.h"
+
 namespace RE
 {
 	template <class T1, class T2>
-	struct BSTTuple
+	class BSTTuple
 	{
 	public:
 		using first_type = T1;

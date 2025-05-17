@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TESObjectACTI.h"
+#include "RE/W/WorkbenchData.h"
+
 namespace RE
 {
+	class BSFurnitureMarker;
+	class TESContianer;
+
 	class __declspec(novtable) TESFurniture :
 		public TESObjectACTI  // 000
 	{
@@ -10,7 +18,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::TESFurniture };
 		static constexpr auto FORM_ID{ ENUM_FORM_ID::kFURN };
 
-		struct EntryPointData
+		class EntryPointData
 		{
 		public:
 			// members
@@ -22,7 +30,7 @@ namespace RE
 		[[nodiscard]] TESContainer* GetContainer()
 		{
 			using func_t = decltype(&TESFurniture::GetContainer);
-			static REL::Relocation<func_t> func{ REL::ID(2198043) };
+			static REL::Relocation<func_t> func{ ID::TESFurniture::GetContainer };
 			return func(this);
 		}
 

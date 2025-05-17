@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/T/TESPackage.h"
+
 namespace RE
 {
+	class Crime;
+
 	class __declspec(novtable) AlarmPackage :
 		public TESPackage  // 00
 	{

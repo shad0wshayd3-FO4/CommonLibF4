@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSBaseAlias.h"
+
 namespace RE
 {
+	class TESCondition;
+
 	class __declspec(novtable) BGSRefAlias :
 		public BGSBaseAlias  // 00
 	{
@@ -22,7 +26,7 @@ namespace RE
 			kNearAlias = 0x7,
 		};
 
-		struct GenericFillData
+		class GenericFillData
 		{
 		public:
 			// members

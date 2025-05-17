@@ -1,5 +1,8 @@
 #include "RE/B/BSVisit.h"
 
+#include "RE/N/NiAVObject.h"
+#include "RE/N/NiNode.h"
+
 namespace RE
 {
 	namespace BSVisit

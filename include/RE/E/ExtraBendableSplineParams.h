@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	class __declspec(novtable) ExtraBendableSplineParams :
@@ -10,7 +13,7 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::ExtraBendableSplineParams };
 		static constexpr auto TYPE{ EXTRA_DATA_TYPE::kBendableSplineParams };
 
-		struct ParamData_Untilv13
+		class ParamData_Untilv13
 		{
 			// members
 			float    slack;        // 00
@@ -19,7 +22,7 @@ namespace RE
 		};
 		static_assert(sizeof(ParamData_Untilv13) == 0x14);
 
-		struct ParamData : public ParamData_Untilv13
+		class ParamData : public ParamData_Untilv13
 		{
 			// members
 			bool endDetached;  // 14

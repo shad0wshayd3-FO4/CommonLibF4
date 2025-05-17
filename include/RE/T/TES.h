@@ -1,7 +1,32 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
+	class GridCellArray;
+	class GridDistantArray;
+	class ImageSpaceModifierInstance;
+	class LoadedAreaBound;
+	class NavMeshInfoMap;
+	class NiAVObject;
+	class NiDirectionalLight;
+	class NiFogProperty;
+	class NiNode;
+	class NiTexture;
+	class PositionPlayerEvent;
+	class QueuedFile;
+	class Sky;
+
+	namespace BSResource::Archive2
+	{
+		class StreamOpenedEvent;
+	}
+
 	class TES :
 		public BSTEventSink<BSResource::Archive2::StreamOpenedEvent>,  // 000
 		public BSTEventSink<PositionPlayerEvent>                       // 008
@@ -12,7 +37,7 @@ namespace RE
 
 		using TACCallbackFunc_t = void(TESObjectCELL*, void*, void*);
 
-		struct ParticleObjectCache
+		class ParticleObjectCache
 		{
 		public:
 			// members
@@ -32,7 +57,7 @@ namespace RE
 
 		[[nodiscard]] static TES* GetSingleton()
 		{
-			static REL::Relocation<TES**> singleton{ REL::ID(2698044) };
+			static REL::Relocation<TES**> singleton{ ID::TES::Singleton };
 			return *singleton;
 		}
 

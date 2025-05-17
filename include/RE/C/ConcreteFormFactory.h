@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/I/IFormFactory.h"
+
 namespace RE
 {
 	template <class T, ENUM_FORM_ID ID = T::FORM_ID>

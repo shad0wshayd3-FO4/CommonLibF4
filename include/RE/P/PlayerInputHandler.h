@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSInputEventUser.h"
+#include "RE/P/PlayerControlsData.h"
+
 namespace RE
 {
 	class PlayerInputHandler :
@@ -11,8 +14,7 @@ namespace RE
 
 		explicit constexpr PlayerInputHandler(PlayerControlsData& a_data) noexcept :
 			data(a_data)
-		{
-		}
+		{}
 
 		// NOLINTNEXTLINE(modernize-use-override)
 		virtual ~PlayerInputHandler() = default;  // 00

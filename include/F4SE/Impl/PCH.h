@@ -14,9 +14,15 @@ namespace RE
 	namespace stl = XSE::stl;
 }
 
+namespace Scaleform
+{
+	using namespace std::literals;
+	namespace stl = XSE::stl;
+}
+
 #include "RE/IDs.h"
 #include "RE/NiRTTI_IDs.h"
 #include "RE/RTTI_IDs.h"
 #include "RE/VTABLE_IDs.h"
 
-#include "RE/Bethesda/BSCoreTypes.h"
+#include "RE/B/BSCoreTypes.h"

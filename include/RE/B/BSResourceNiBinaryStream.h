@@ -1,7 +1,17 @@
 #pragma once
 
+#include "RE/B/BSResource_ErrorCode.h"
+#include "RE/B/BSResource_Stream.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiBinaryStream.h"
+
 namespace RE
 {
+	namespace BSResource
+	{
+		class Location;
+	}
+
 	class BSResourceNiBinaryStream :
 		public NiBinaryStream
 	{
@@ -9,17 +19,7 @@ namespace RE
 		inline static constexpr auto RTTI = { RTTI::BSResourceNiBinaryStream };
 		inline static constexpr auto VTABLE = { VTABLE::BSResourceNiBinaryStream };
 
-		struct BufferType
-		{
-		public:
-			// BSResource::Stream &stream; //00
-			// std::uint64_t unk10;
-			// std::uint64_t unk18;
-			// std::uint32_t unk20;
-			// std::uint32_t gap24;
-			// std::uint64_t unk28;
-			// std::uint32_t unk30;
-		};
+		class BufferType;
 
 		BSResourceNiBinaryStream();
 		BSResourceNiBinaryStream(const char* a_fileName);

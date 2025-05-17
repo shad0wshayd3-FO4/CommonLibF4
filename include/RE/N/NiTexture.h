@@ -1,7 +1,22 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSResource_Stream.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiObject.h"
+
 namespace RE
 {
+	namespace BSGraphics
+	{
+		class Texture;
+	}
+
+	namespace BSTextureArray
+	{
+		class Texture;
+	}
+
 	class __declspec(novtable) NiTexture :
 		public NiObject  // 00
 	{
@@ -16,7 +31,7 @@ namespace RE
 		static void SetAllowDegrade(bool a_allow)
 		{
 			using func_t = decltype(&NiTexture::SetAllowDegrade);
-			static REL::Relocation<func_t> func{ REL::ID(948181) };
+			static REL::Relocation<func_t> func{ ID::NiTexture::SetAllowDegrade };
 			return func(a_allow);
 		}
 

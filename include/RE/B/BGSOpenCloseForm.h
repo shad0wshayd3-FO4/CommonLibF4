@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSOpenCloseForm
@@ -28,52 +30,51 @@ namespace RE
 		inline static void AutoCloseRef(const TESObjectREFR* a_ref)
 		{
 			using func_t = decltype(&BGSOpenCloseForm::AutoCloseRef);
-			static REL::Relocation<func_t> func{ REL::ID(2192797) };
+			static REL::Relocation<func_t> func{ ID::BGSOpenCloseForm::AutoCloseRef };
 			func(a_ref);
 		}
 
 		inline static OPEN_STATE GetOpenState(const TESObjectREFR* a_ref)
 		{
 			using func_t = decltype(&BGSOpenCloseForm::GetOpenState);
-			static REL::Relocation<func_t> func{ REL::ID(2192799) };
+			static REL::Relocation<func_t> func{ ID::BGSOpenCloseForm::GetOpenState };
 			return func(a_ref);
 		}
 
 		inline static bool HasOnlyOpenCloseAnims(const TESObjectREFR* a_ref)
 		{
 			using func_t = decltype(&BGSOpenCloseForm::HasOnlyOpenCloseAnims);
-			static REL::Relocation<func_t> func{ REL::ID(2192796) };
+			static REL::Relocation<func_t> func{ ID::BGSOpenCloseForm::HasOnlyOpenCloseAnims };
 			return func(a_ref);
 		}
 
 		inline static bool IsAnimating(const TESObjectREFR* a_ref)
 		{
 			using func_t = decltype(&BGSOpenCloseForm::IsAnimating);
-			static REL::Relocation<func_t> func{ REL::ID(2192801) };
+			static REL::Relocation<func_t> func{ ID::BGSOpenCloseForm::IsAnimating };
 			return func(a_ref);
 		}
 
 		inline static bool IsOpenCloseEvent(const BSFixedString& a_event, const bool& a_open)
 		{
 			using func_t = decltype(&BGSOpenCloseForm::IsOpenCloseEvent);
-			static REL::Relocation<func_t> func{ REL::ID(2192795) };
+			static REL::Relocation<func_t> func{ ID::BGSOpenCloseForm::IsOpenCloseEvent };
 			return func(a_event, a_open);
 		}
 
 		inline static bool IsOpenCloseForm(TESForm* a_form)
 		{
 			using func_t = decltype(&BGSOpenCloseForm::IsOpenCloseForm);
-			static REL::Relocation<func_t> func{ REL::ID(2192790) };
+			static REL::Relocation<func_t> func{ ID::BGSOpenCloseForm::IsOpenCloseForm };
 			return func(a_form);
 		}
 
 		inline static bool SetOpenState(const TESObjectREFR* a_ref, bool a_open, bool a_snap)
 		{
 			using func_t = decltype(&BGSOpenCloseForm::SetOpenState);
-			static REL::Relocation<func_t> func{ REL::ID(2192798) };
+			static REL::Relocation<func_t> func{ ID::BGSOpenCloseForm::SetOpenState };
 			return func(a_ref, a_open, a_snap);
 		}
 	};
 	static_assert(sizeof(BGSOpenCloseForm) == 0x8);
-
 }

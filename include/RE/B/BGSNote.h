@@ -1,5 +1,14 @@
 #pragma once
 
+#include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/T/TESBoundObject.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESIcon.h"
+#include "RE/T/TESModel.h"
+#include "RE/T/TESValueForm.h"
+#include "RE/T/TESWeightForm.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSNote :

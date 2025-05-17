@@ -1,5 +1,12 @@
 #include "RE/B/BSScaleformManager.h"
 
+#include "RE/B/BSSystemFileStreamer.h"
+#include "RE/I/IMenu.h"
+#include "RE/S/Setting.h"
+#include "Scaleform/G/GFx_Loader.h"
+#include "Scaleform/G/GFx_MovieDef.h"
+#include "Scaleform/P/Ptr.h"
+
 namespace RE
 {
 	bool BSScaleformManager::LoadMovieEx(
@@ -9,25 +16,28 @@ namespace RE
 		ScaleModeType a_scaleMode,
 		float         a_backgroundAlpha)
 	{
-		if (REL::Relocation<SettingT<INISettingCollection>*> fileUncacheOnMenuOpen{ REL::ID(2667999) };
-			fileUncacheOnMenuOpen->GetBinary()) {
+		static REL::Relocation<SettingT<INISettingCollection>*> fileUncacheOnMenuOpen{ ID::BSScaleformManager::FileUncacheOnMenuOpen };
+		if (fileUncacheOnMenuOpen && fileUncacheOnMenuOpen->GetBinary()) {
 			BSSystemFileStreamer::UncacheAll(true);
 		}
 
-		using LoadConstants = Scaleform::GFx::Loader::LoadConstants;
-		stl::enumeration     loadConstants{ LoadConstants::kWaitFrame1, LoadConstants::kKeepBindData };
-		const Scaleform::Ptr def{ loader->CreateMovie(a_filePath.data(), loadConstants.get()) };
-		if (!def) {
+		REX::EnumSet loadConstants{
+			Scaleform::GFx::Loader::LoadConstants::kKeepBindData,
+			Scaleform::GFx::Loader::LoadConstants::kWaitFrame1
+		};
+
+		const auto movieDef = Scaleform::Ptr{ loader->CreateMovie(a_filePath.data(), loadConstants.get()) };
+		if (!movieDef) {
 			return false;
 		}
-		def->Release();  // dumb scaleform thing
+		movieDef->Release();
 
 		auto& movie = a_menu.uiMovie;
-		movie.reset(def->CreateInstance(true));
+		movie.reset(movieDef->CreateInstance(true));
 		if (!movie) {
 			return false;
 		}
-		movie->Release();  // dumb scaleform thing
+		movie->Release();
 
 		movie->SetViewScaleMode(a_scaleMode);
 		movie->SetBackgroundAlpha(a_backgroundAlpha);

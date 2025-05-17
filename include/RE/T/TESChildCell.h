@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	struct __declspec(novtable) TESChildCell
+	class __declspec(novtable) TESChildCell
 	{
 	public:
 		static constexpr auto RTTI{ RTTI::TESChildCell };

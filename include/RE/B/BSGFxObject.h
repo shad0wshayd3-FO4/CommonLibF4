@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/U/UsesBSGFXFunctionHandler.h"
+#include "Scaleform/G/GFx_Movie.h"
+#include "Scaleform/G/GFx_Value.h"
+
 namespace RE
 {
 	class BSGFxObject :
@@ -11,8 +15,7 @@ namespace RE
 
 		BSGFxObject(const Scaleform::GFx::Value& a_flashObject) :
 			Scaleform::GFx::Value(a_flashObject)
-		{
-		}
+		{}
 
 		BSGFxObject(const Scaleform::GFx::Value& a_flashObject, const char* a_relativePathToMember)
 		{
@@ -27,14 +30,14 @@ namespace RE
 		Scaleform::GFx::Value* AcquireFlashObjectByMemberName(const Scaleform::GFx::Value& a_flashObject, const char* a_relativePathToMember)
 		{
 			using func_t = decltype(&BSGFxObject::AcquireFlashObjectByMemberName);
-			static REL::Relocation<func_t> func{ REL::ID(2287014) };
+			static REL::Relocation<func_t> func{ ID::BSGFxObject::AcquireFlashObjectByMemberName };
 			return func(this, a_flashObject, a_relativePathToMember);
 		}
 
 		Scaleform::GFx::Value* AcquireFlashObjectByPath(const Scaleform::GFx::Movie& a_parentMovie, const char* a_absolutePathToMember)
 		{
 			using func_t = decltype(&BSGFxObject::AcquireFlashObjectByPath);
-			static REL::Relocation<func_t> func{ REL::ID(2287015) };
+			static REL::Relocation<func_t> func{ ID::BSGFxObject::AcquireFlashObjectByPath };
 			return func(this, a_parentMovie, a_absolutePathToMember);
 		}
 	};

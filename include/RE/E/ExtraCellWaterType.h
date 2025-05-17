@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSExtraData.h"
+
 namespace RE
 {
 	class __declspec(novtable) ExtraCellWaterType :
@@ -14,5 +16,4 @@ namespace RE
 		TESWaterForm* water;  // 18
 	};
 	static_assert(sizeof(ExtraCellWaterType) == 0x20);
-
 }

@@ -1,7 +1,27 @@
 #pragma once
 
+#include "RE/B/BGSLargeRefData.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSimpleList.h"
+#include "RE/B/BSStringT.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTMap.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESTexture.h"
+#include "RE/W/WORLD_MAP_DATA.h"
+#include "RE/W/WORLD_MAP_OFFSET_DATA.h"
+
 namespace RE
 {
+	class BGSTerrainManager;
+	class BSMultiBoundNode;
+	class BSPortalGraph;
+	class NiNode;
+
 	class __declspec(novtable) TESWorldSpace :
 		public TESForm,      // 000
 		public TESFullName,  // 020
@@ -23,7 +43,7 @@ namespace RE
 			kSkyCell = 1u << 6
 		};
 
-		struct ShortPoint
+		class ShortPoint
 		{
 		public:
 			// members
@@ -32,7 +52,7 @@ namespace RE
 		};
 		static_assert(sizeof(ShortPoint) == 0x4);
 
-		struct OFFSET_DATA
+		class OFFSET_DATA
 		{
 		public:
 			// members
@@ -59,7 +79,7 @@ namespace RE
 			if (root->worldWater) {
 				return root->worldWater;
 			} else {
-				static REL::Relocation<TESWaterForm**> defaultWater{ REL::ID(289864) };
+				static REL::Relocation<TESWaterForm**> defaultWater{ ID::TESWorldSpace::DefaultWater };
 				return *defaultWater;
 			}
 		}
@@ -94,8 +114,8 @@ namespace RE
 		BGSMusicType*                                                  musicType;                // 1D0
 		NiPoint2                                                       minimumCoords;            // 1D8
 		NiPoint2                                                       maximumCoords;            // 1E0
-		NiTMap<TESFile*, TESWorldSpace::OFFSET_DATA*>                  offsetDataMap;            // 1E8
-		BSStringT<char>                                                editorID;                 // 208
+		NiTMap<TESFile*, OFFSET_DATA*>                                 offsetDataMap;            // 1E8
+		BSString                                                       editorID;                 // 208
 		float                                                          defaultLandHeight;        // 218
 		float                                                          defaultWaterHeight;       // 21C
 		float                                                          distantLODMult;           // 220

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/S/Setting.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESTexture.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSShaderParticleGeometryData :

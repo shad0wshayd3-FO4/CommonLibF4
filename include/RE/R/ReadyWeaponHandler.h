@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/P/PlayerInputHandler.h"
+
 namespace RE
 {
 	class ReadyWeaponHandler :
@@ -11,8 +13,7 @@ namespace RE
 
 		explicit constexpr ReadyWeaponHandler(PlayerControlsData& a_data) noexcept :
 			PlayerInputHandler(a_data)
-		{
-		}
+		{}
 
 		// members
 		bool actionTaken{ false };  // 20

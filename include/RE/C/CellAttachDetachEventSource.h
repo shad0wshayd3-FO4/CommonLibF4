@@ -1,17 +1,20 @@
 #pragma once
 
+#include "RE/B/BSTSingleton.h"
+#include "RE/C/CellAttachDetachEvent.h"
+
 namespace RE
 {
 	namespace CellAttachDetachEventSource
 	{
-		struct CellAttachDetachEventSourceSingleton :
+		class CellAttachDetachEventSourceSingleton :
 			public BSTSingletonImplicit<CellAttachDetachEventSourceSingleton>
 		{
 		public:
 			[[nodiscard]] static CellAttachDetachEventSourceSingleton& GetSingleton()
 			{
 				using func_t = decltype(&CellAttachDetachEventSourceSingleton::GetSingleton);
-				static REL::Relocation<func_t> func{ REL::ID(862142) };
+				static REL::Relocation<func_t> func{ ID::CellAttachDetachEvent::GetEventSource };
 				return func();
 			}
 

@@ -1,7 +1,54 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPoint.h"
+#include "RE/P/PipboyDataGroup.h"
+
 namespace RE
 {
+	class BGSActorCellEvent;
+	class MapMarkerData;
+	class PlayerUpdateEvent;
+	class TESLocationClearedEvent;
+
+	namespace ActorValueEvents
+	{
+		class ActorValueChangedEvent;
+	}
+
+	namespace CustomMarkerUpdate
+	{
+		class Event;
+	}
+
+	namespace LocalMapCameraUpdate
+	{
+		class Event;
+	}
+
+	namespace LocationMarkerArrayUpdate
+	{
+		class Event;
+	}
+
+	namespace PlayerCharacterQuestEvent
+	{
+		class Event;
+	}
+
+	namespace TESQuestEvent
+	{
+		class Event;
+	}
+
+	namespace TravelMarkerStateChange
+	{
+		class Event;
+	}
+
 	class __declspec(novtable) PipboyMapData :
 		public PipboyDataGroup,                                        // 00
 		public BSTEventSink<TravelMarkerStateChange::Event>,           // 98
@@ -38,23 +85,23 @@ namespace RE
 		virtual void DoClearSink() override;          // 0D
 
 		// members
-		PipboyObject*                                                                            mapObject;                   // E8
-		BSTHashMap<const MapMarkerData*, PipboyObject*>                                          travelLocationsMarkers;      // F0
-		BSTHashMap<std::uint32_t, BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>>> travelLocationRefrHandles;   // 120
-		BSTArray<PipboyObject*>                                                                  doorMarkers;                 // 150
-		BSTArray<BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>>>                  doorRefHandles;              // 168
-		BSTHashMap<BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>>, PipboyObject*> localQuestMarkers;           // 180
-		BSTHashMap<BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>>, PipboyObject*> worldQuestMarkers;           // 1B0
-		NiPoint3                                                                                 playerLastLocationPosition;  // 1E0
-		NiPoint3                                                                                 playerLastWorldPosition;     // 1EC
-		PipboyObject*                                                                            localPlayerMarker;           // 1F8
-		PipboyObject*                                                                            worldPlayerMarker;           // 200
-		PipboyObject*                                                                            localCustomMarker;           // 208
-		PipboyObject*                                                                            worldCustomMarker;           // 210
-		PipboyObject*                                                                            localPowerArmorMarker;       // 218
-		PipboyObject*                                                                            worldPowerArmorMarker;       // 220
-		PipboyObject*                                                                            worldMapExtents;             // 230
-		PipboyObject*                                                                            localMapExtents;             // 238
+		PipboyObject*                                   mapObject;                   // E8
+		BSTHashMap<const MapMarkerData*, PipboyObject*> travelLocationsMarkers;      // F0
+		BSTHashMap<std::uint32_t, ObjectRefHandle>      travelLocationRefrHandles;   // 120
+		BSTArray<PipboyObject*>                         doorMarkers;                 // 150
+		BSTArray<ObjectRefHandle>                       doorRefHandles;              // 168
+		BSTHashMap<ObjectRefHandle, PipboyObject*>      localQuestMarkers;           // 180
+		BSTHashMap<ObjectRefHandle, PipboyObject*>      worldQuestMarkers;           // 1B0
+		NiPoint3                                        playerLastLocationPosition;  // 1E0
+		NiPoint3                                        playerLastWorldPosition;     // 1EC
+		PipboyObject*                                   localPlayerMarker;           // 1F8
+		PipboyObject*                                   worldPlayerMarker;           // 200
+		PipboyObject*                                   localCustomMarker;           // 208
+		PipboyObject*                                   worldCustomMarker;           // 210
+		PipboyObject*                                   localPowerArmorMarker;       // 218
+		PipboyObject*                                   worldPowerArmorMarker;       // 220
+		PipboyObject*                                   worldMapExtents;             // 230
+		PipboyObject*                                   localMapExtents;             // 238
 	};
 	static_assert(sizeof(PipboyMapData) == 0x238);
 }

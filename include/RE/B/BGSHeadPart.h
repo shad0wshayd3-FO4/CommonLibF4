@@ -1,5 +1,14 @@
 #pragma once
 
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
+#include "RE/T/TESModel.h"
+#include "RE/T/TESModelTri.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSHeadPart :

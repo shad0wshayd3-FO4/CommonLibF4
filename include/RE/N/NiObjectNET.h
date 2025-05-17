@@ -1,5 +1,12 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiExtraData.h"
+#include "RE/N/NiExtraDataContainer.h"
+#include "RE/N/NiObject.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTimeController.h"
+
 namespace RE
 {
 	class __declspec(novtable) NiObjectNET :

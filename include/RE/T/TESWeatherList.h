@@ -1,9 +1,13 @@
 #pragma once
 
+#include "RE/B/BSSimpleList.h"
+
 namespace RE
 {
+	class WeatherEntry;
+
 	class TESWeatherList :
-		BSSimpleList<WeatherEntry*>
+		public BSSimpleList<WeatherEntry*>
 	{
 	public:
 	};

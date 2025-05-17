@@ -1,7 +1,16 @@
 #pragma once
 
+#include "RE/B/BSModelDB.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/I/ImageSpaceLUTData.h"
+#include "RE/N/NiMatrix3.h"
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
+	class NiAVObject;
+
 	class __declspec(novtable) LoadingMenu :
 		public GameMenuBase  // 00
 	{
@@ -27,7 +36,7 @@ namespace RE
 		static void StartTestingLoadMenu()
 		{
 			using func_t = decltype(&LoadingMenu::StartTestingLoadMenu);
-			static REL::Relocation<func_t> func{ REL::ID(2249224) };
+			static REL::Relocation<func_t> func{ ID::LoadingMenu::StartTestingLoadMenu };
 			return func();
 		}
 
@@ -36,7 +45,7 @@ namespace RE
 		TESLoadScreen*           artScreen;                         // 0E8
 		std::byte                upgrader[0x10];                    // 0F0 - TODO
 		BSTArray<TESLoadScreen*> validScreens;                      // 100
-		BSModelDB::Handle        foregroundModel;                   // 118
+		void*                    foregroundModel;                   // 118 - BDModelDB::Handle
 		NiAVObject*              zoomTarget;                        // 120
 		ImageSpaceLUTData        LUT;                               // 128
 		std::uint32_t            numNonDefaultScreens;              // 198

@@ -1,7 +1,15 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSStringT.h"
+#include "RE/I/IDLE_DATA.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
+
 namespace RE
 {
+	class NiFormArray;
+
 	class __declspec(novtable) TESIdleForm :
 		public TESForm  // 00
 	{
@@ -26,15 +34,15 @@ namespace RE
 		}
 
 		// members
-		TESCondition    conditions;         // 20
-		IDLE_DATA       data;               // 28
-		NiFormArray*    childIdles;         // 30
-		TESIdleForm*    parentIdle;         // 38
-		TESIdleForm*    prevIdle;           // 40
-		BSFixedString   behaviorGraphName;  // 48
-		BSFixedString   animEventName;      // 50
-		BSFixedString   animFileName;       // 58
-		BSStringT<char> formEditorID;       // 60
+		TESCondition  conditions;         // 20
+		IDLE_DATA     data;               // 28
+		NiFormArray*  childIdles;         // 30
+		TESIdleForm*  parentIdle;         // 38
+		TESIdleForm*  prevIdle;           // 40
+		BSFixedString behaviorGraphName;  // 48
+		BSFixedString animEventName;      // 50
+		BSFixedString animFileName;       // 58
+		BSString      formEditorID;       // 60
 	};
 	static_assert(sizeof(TESIdleForm) == 0x70);
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSSceneAction.h"
+
 namespace RE
 {
 	class __declspec(novtable) BGSSceneActionRadio :

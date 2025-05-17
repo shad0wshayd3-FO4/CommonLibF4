@@ -1,25 +1,32 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/N/NiPointer.h"
+
 namespace RE
 {
-	struct CELLJobs
+	class NiUpdateData;
+
+	namespace CELLJobs
 	{
-		struct AnimatedRefJobData
+		class AnimatedRefJobData
 		{
 		public:
-			NiPointer<NiAVObject>                                         p3d;
-			BSPointerHandle<TESObjectREFR, BSUntypedPointerHandle<21, 5>> ref;
-			float                                                         time;
-			std::uint32_t                                                 uiFlags;
-			bool                                                          allowTransformUpdates;
+			// members
+			NiPointer<NiAVObject> p3d;                    // 00
+			ObjectRefHandle       ref;                    // 08
+			float                 time;                   // 0C
+			std::uint32_t         uiFlags;                // 10
+			bool                  allowTransformUpdates;  // 14
 		};
 		static_assert(sizeof(AnimatedRefJobData) == 0x18);
 
-		struct TransUpdateFunctor
+		class TransUpdateFunctor
 		{
 		public:
-			const CELLJobs::AnimatedRefJobData* data;
-			NiUpdateData*                       updateData;
+			// members
+			const AnimatedRefJobData* data;        // 00
+			NiUpdateData*             updateData;  // 08
 		};
 		static_assert(sizeof(TransUpdateFunctor) == 0x10);
 	};

@@ -1,5 +1,11 @@
 #pragma once
 
+#include "RE/G/GameScript.h"
+#include "RE/N/NativeFunctionBase.h"
+#include "RE/I/IVirtualMachine.h"
+#include "RE/S/Stack.h"
+#include "RE/S/StackFrame.h"
+
 namespace RE::BSScript
 {
 	namespace detail

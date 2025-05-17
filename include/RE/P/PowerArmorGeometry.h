@@ -1,12 +1,34 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/B/SimpleAnimationGraphManagerHolder.h"
+#include "RE/S/SimpleAnimationGraphManagerHolder.h"
+#include "RE/N/NiPointer.h"
+#include "RE/H/HUDModes.h"
 
 namespace RE
 {
+	class CurrentRadiationSourceCount;
+	class CurrentRadsDisplayMagnitude;
+	class CurrentRadsPercentOfLethal;
+	class NiAVObject;
+	class NiNode;
+	class PipboyLightEvent;
+	class PlayerAmmoCountEvent;
+	class PlayerWeaponReloadEvent;
+
+	namespace ExitPowerArmor
+	{
+		struct Event;
+	}
+
+	namespace PreloadPowerArmor
+	{
+		struct Event;
+	}
+
 	class __declspec(novtable) PowerArmorGeometry :
 		public SimpleAnimationGraphManagerHolder,       // 00
 		public BSTEventSink<PreloadPowerArmor::Event>,  // 18

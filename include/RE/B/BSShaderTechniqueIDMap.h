@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
+
 namespace RE
 {
 	namespace BSShaderTechniqueIDMap

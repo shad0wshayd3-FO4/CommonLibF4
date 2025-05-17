@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class NiAVObject;
+
 	struct BSPreCulledObjects
 	{
 	public:

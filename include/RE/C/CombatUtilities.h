@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+
 namespace RE
 {
 	namespace CombatUtilities
@@ -19,12 +21,14 @@ namespace RE
 			return func(a_actor, a_projectile, a_projectileSpeed, a_launchPos, a_targetPos, a_hitPos, a_collidee, a_distanceFraction);
 		}
 
+		/*
 		inline bool CalculateProjectileLOS(Actor* a_actor, BGSProjectile* a_projectile, bhkPickData& a_pickData)
 		{
 			using func_t = bool (*)(Actor*, BGSProjectile*, bhkPickData&);
 			static REL::Relocation<func_t> func{ REL::ID(55339) };
 			return func(a_actor, a_projectile, a_pickData);
 		}
+		*/
 
 		inline bool CalculateProjectileTrajectory(
 			const NiPoint3& a_projectilePos,

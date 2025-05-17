@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/P/PlayerCharacter.h"
+#include "RE/S/Setting.h"
+
 namespace RE
 {
+	class BGSInventoryItem;
+
 	namespace PowerArmor
 	{
 		[[nodiscard]] inline bool ActorInPowerArmor(const Actor& a_actor)
@@ -52,6 +57,6 @@ namespace RE
 			return func(a_furniture, a_force3DUpdate, a_tempItemToAdd, a_hideCore);
 		}
 
-		inline REL::Relocation<SettingT<GameSettingCollection>*> fNewBatteryCapacity{ REL::ID(1134204) };
+		inline static REL::Relocation<SettingT<GameSettingCollection>*> fNewBatteryCapacity{ REL::ID(1134204) };
 	}
 }

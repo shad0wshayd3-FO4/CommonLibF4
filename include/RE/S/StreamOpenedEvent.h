@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+
 namespace RE
 {
 	namespace BSResource::Archive2

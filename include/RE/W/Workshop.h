@@ -1,9 +1,21 @@
 #pragma once
 
 #include "RE/B/BSExtraData.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiPoint.h"
+#include "RE/P/PowerUtils.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {
+	template <class>
+	class BSPointerHandleSmartPointer;
+
+	class bhkNPCollisionObject;
+	class hknpShape;
+
 	namespace Workshop
 	{
 		struct ContextData
@@ -47,11 +59,11 @@ namespace RE
 			static constexpr auto TYPE{ EXTRA_DATA_TYPE::kWorkshop };
 
 			// members
-			PowerUtils::PowerGrid*               currentPowerGrid;  // 18
-			BSTArray<PowerUtils::PowerGrid*>     powerGrid;         // 20
-			BSTArray<Workshop::DeletedItemInfo*> deletedItems;      // 38
-			std::int32_t                         powerRating;       // 50
-			bool                                 offGridItems;      // 54
+			PowerUtils::PowerGrid*           currentPowerGrid;  // 18
+			BSTArray<PowerUtils::PowerGrid*> powerGrid;         // 20
+			BSTArray<DeletedItemInfo*>       deletedItems;      // 38
+			std::int32_t                     powerRating;       // 50
+			bool                             offGridItems;      // 54
 		};
 		static_assert(sizeof(ExtraData) == 0x58);
 
@@ -150,7 +162,7 @@ namespace RE
 			// members
 			BGSKeyword*                                  filterKeyword{ nullptr };                    // 00
 			WorkshopMenuNode*                            parent{ nullptr };                           // 08
-			BSTArray<msvc::unique_ptr<WorkshopMenuNode>> children;                                    // 10
+			BSTArray<std::unique_ptr<WorkshopMenuNode>>  children;                                    // 10
 			BGSConstructibleObject*                      recipe{ nullptr };                           // 28
 			BGSConstructibleObject*                      sourceFormListRecipe{ nullptr };             // 30
 			TESForm*                                     form{ nullptr };                             // 38
@@ -317,8 +329,8 @@ namespace RE
 			return func(a_recipe, a_filter);
 		}
 
-		inline REL::Relocation<PlacementItemData*> CurrentPlacementItemData{ REL::ID(1279207) };
-		inline REL::Relocation<std::uint16_t*>     CurrentRow{ REL::ID(833923) };
-		inline REL::Relocation<ObjectRefHandle*>   PlacementItem{ REL::ID(526727) };
+		inline static REL::Relocation<PlacementItemData*> CurrentPlacementItemData{ REL::ID(1279207) };
+		inline static REL::Relocation<std::uint16_t*>     CurrentRow{ REL::ID(833923) };
+		inline static REL::Relocation<ObjectRefHandle*>   PlacementItem{ REL::ID(526727) };
 	}
 }

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSResource.h"
+
 namespace RE
 {
 	namespace BSTextureStreamer

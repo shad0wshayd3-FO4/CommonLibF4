@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSCRC32.h"
+
 namespace RE
 {
 	namespace PowerUtils

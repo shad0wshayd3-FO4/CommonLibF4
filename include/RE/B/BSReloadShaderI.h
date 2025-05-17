@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class BSIStream;
+
 	struct __declspec(novtable) BSReloadShaderI
 	{
 	public:

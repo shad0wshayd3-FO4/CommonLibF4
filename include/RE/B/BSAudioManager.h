@@ -1,7 +1,25 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiPoint.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSISoundDescriptor.h"
+#include "RE/B/BSAudioInit.h"
+#include "RE/B/BSAudioCallbacks.h"
+
 namespace RE
 {
+	class BSAudioManagerThread;
+	class BSGameSound;
+	class BSISoundOutputModel;
+	class BSMultisound;
+	class BSSoundInfo;
+	class NiAVObject;
+	class SoundMessageList;
+	class SoundMessageStack;
+
 	class BSAudioManager
 	{
 	public:

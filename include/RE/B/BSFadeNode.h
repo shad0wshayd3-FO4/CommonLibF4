@@ -1,9 +1,15 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/N/NiNode.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSShaderPropertyLightData.h"
 
 namespace RE
 {
+	class BSGeometry;
+	class FlattenedGeometryData;
+
 	class __declspec(novtable) BSFadeNode :
 		public NiNode  // 000
 	{

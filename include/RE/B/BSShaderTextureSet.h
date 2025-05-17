@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSTextureSet.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

@@ -36,9 +36,9 @@ namespace RE
 	class NiNode;
 	class QueuedFile;
 	class QueuedItem;
-	class SubGraphIdleRootData;
 	struct ActorInventoryEvent;
 	struct CommandedActorData;
+	struct SubGraphIdleRootData;
 
 	namespace MagicSystem
 	{

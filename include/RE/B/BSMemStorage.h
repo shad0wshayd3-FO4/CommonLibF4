@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class Win32FileType;
+
 	class BSMemStorage :
 		public BSStorage
 	{

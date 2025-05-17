@@ -1,7 +1,12 @@
 #pragma once
 
+#include "RE/E/ENUM_FORM_ID.h"
+
 namespace RE
 {
+	enum class OBJECT_CATEGORY_TYPE;
+	enum class OBJECT_TYPE;
+
 	class __declspec(novtable) IFormFactory
 	{
 	public:

@@ -1,7 +1,13 @@
 #pragma once
 
+#include "RE/D/DEFAULT_OBJECT.h"
+#include "RE/B/BGSEquipIndex.h"
+
 namespace RE
 {
+	class BSPackedTaskQueue;
+	class NiAVObject;
+
 	class TaskQueueInterface
 	{
 	public:

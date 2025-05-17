@@ -1,6 +1,8 @@
 #pragma once
 
 #include "RE/S/Stream.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

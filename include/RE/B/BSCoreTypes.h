@@ -88,12 +88,32 @@ namespace RE
 	class BGSOutfit;
 	class BGSEncounterZone;
 	class BGSLightingTemplate;
+	class TESObjectBOOK;
+	class TESFurniture;
+	class BGSConstructibleObject;
+	class TESLoadScreen;
+	class BGSComponent;
+	class BGSDebris;
+	class BGSSoundOutput;
+	class DialoguePackage;
+	class TESClass;
+	class TESKey;
+	class TESImageSpace;
+	class BGSNote;
+	class BGSMovementType;
+	class TESObjectARMA;
+	class BGSLocationRefType;
 
 	namespace BGSMod
 	{
 		namespace Attachment
 		{
 			class Mod;
+		}
+
+		namespace Property
+		{
+			class BridgeI;
 		}
 
 		namespace Template

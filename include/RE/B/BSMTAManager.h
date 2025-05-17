@@ -1,7 +1,14 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSBatchRenderer.h"
+#include "RE/B/BSEventFlag.h"
+
 namespace RE
 {
+	class BSGeometry;
+	class BSRenderPass;
+
 	namespace BSMTAManager
 	{
 		enum class MODE

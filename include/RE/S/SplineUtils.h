@@ -2,8 +2,6 @@
 
 namespace RE
 {
-	class TESObjectREFR;
-
 	namespace SplineUtils
 	{
 		inline void DisconnectSpline(TESObjectREFR& a_spline)

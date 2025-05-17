@@ -1,10 +1,20 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSAnimationGraphVariableCache.h"
 
 namespace RE
 {
+	class BSAnimationGraphChannel;
+	class BShkbAnimationGraph;
+	struct BSAnimationGraphEvent;
+
 	class BSAnimationGraphManager :
 		public BSTEventSink<BSAnimationGraphEvent>,  //00
 		public BSIntrusiveRefCounted                 //08
@@ -31,5 +41,4 @@ namespace RE
 		std::uint32_t                                          generateDepth;         // DC
 	};
 	static_assert(sizeof(BSAnimationGraphManager) == 0xE0);
-}
 }

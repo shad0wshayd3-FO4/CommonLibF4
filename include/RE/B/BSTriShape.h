@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RE/B/BSGeometry.h"
+#include "RE/N/NiRTTI.h"
 
 namespace RE
 {

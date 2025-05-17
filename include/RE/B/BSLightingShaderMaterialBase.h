@@ -1,9 +1,23 @@
 #pragma once
 
 #include "RE/B/BSShaderMaterial.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiColor.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
+	class BSLightingShaderMaterialEnvmap;
+	class BSShaderData;
+	class BSTextureSet;
+	class NiTexture;
+	class NiStream;
+
+	namespace BSGraphics
+	{
+		enum class TextureAddressMode;
+	}
+
 	struct __declspec(novtable) BSLightingShaderMaterialBase :
 		public BSShaderMaterial  // 00
 	{
@@ -12,17 +26,17 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::BSLightingShaderMaterialBase };
 
 		// add
-		virtual const BSLightingShaderMaterialEnvmap* IsLightingShaderMaterialEnvmap();                                                     // 09
-		virtual void                                  ClearTextures();                                                                      // 0A
-		virtual std::uint32_t                         GetTextures(NiTexture** a_textures, std::uint32_t a_arraySize);                       // 0B
-		virtual void                                  SaveBinary(NiStream* a_stream);                                                       // 0C
-		virtual void                                  LoadBinary(NiStream* a_stream);                                                       // 0D
-		virtual void                                  OnPrefetchTextures(TextureDBHandle* a_outHandles, const BSTextureSet* a_textureSet);  // 0E
-		virtual void                                  OnLoadTextureSet1(const BSTextureSet* a_textureSet, TextureDBHandle* a_inHandles);    // 0F
-		virtual void                                  OnLoadTextureSet2(const BSTextureSet* a_textureSet);                                  // 10
-		virtual void                                  DoReceiveValuesFromRootMaterial(const BSShaderData& a_rootData);                      // 11
+		virtual const BSLightingShaderMaterialEnvmap* IsLightingShaderMaterialEnvmap();                                          // 09
+		virtual void                                  ClearTextures();                                                           // 0A
+		virtual std::uint32_t                         GetTextures(NiTexture** a_textures, std::uint32_t a_arraySize);            // 0B
+		virtual void                                  SaveBinary(NiStream* a_stream);                                            // 0C
+		virtual void                                  LoadBinary(NiStream* a_stream);                                            // 0D
+		virtual void                                  OnPrefetchTextures(void* a_outHandles, const BSTextureSet* a_textureSet);  // 0E - TextureDB::Handle
+		virtual void                                  OnLoadTextureSet1(const BSTextureSet* a_textureSet, void* a_inHandles);    // 0F - TextureDB::Handle
+		virtual void                                  OnLoadTextureSet2(const BSTextureSet* a_textureSet);                       // 10
+		virtual void                                  DoReceiveValuesFromRootMaterial(const BSShaderData& a_rootData);           // 11
 
-		void OnLoadTextureSet(const BSTextureSet* a_textureSet, TextureDBHandle* a_inHandles)
+		void OnLoadTextureSet(const BSTextureSet* a_textureSet, void* a_inHandles) // TextureDB::Handle
 		{
 			return OnLoadTextureSet1(a_textureSet, a_inHandles);
 		}

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiMatrix3.h"
+
 namespace RE
 {
 	struct BSTransformDeltaEvent

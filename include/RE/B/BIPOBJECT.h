@@ -1,16 +1,22 @@
 #pragma once
 
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSModelDB.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BSTSmartPointer.h"
+
 namespace RE
 {
+	class BGSObjectInstanceExtra;
+	class BGSTextureSet;
+	class NiAVObject;
+	class ModelReferenceEffect;
+	class TESModel;
+	class WeaponAnimationGraphManagerHolder;
+
 	struct BIPOBJECT
 	{
 	public:
-		//~BIPOBJECT()
-		//{
-		//	Dtor();
-		//	stl::memzero(this);
-		//}
-
 		// members
 		BGSObjectInstance                                  parent;              // 00
 		BGSObjectInstanceExtra*                            modExtra;            // 10

@@ -1,9 +1,10 @@
 #pragma once
 
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/T/TESObjectWEAP.h"
+
 namespace RE
 {
-	class Actor;
-
 	namespace CombatFormulas
 	{
 		[[nodiscard]] inline float GetWeaponDisplayAccuracy(const BGSObjectInstanceT<TESObjectWEAP>& a_weapon, Actor* a_actor)

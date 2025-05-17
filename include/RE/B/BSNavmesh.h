@@ -9,17 +9,17 @@
 
 namespace RE
 {
-	class BSNavmeshClosedDoorInfo;
-	class BSNavmeshCoverEdge;
-	class BSNavmeshEdgeExtraInfo;
 	class BSNavmeshInfo;
-	class BSNavmeshObstacleData;
-	class BSNavmeshObstacleUndoData;
-	class BSNavmeshTriangle;
-	class BSNavmeshTriangleDoorPortal;
-	class BSNavmeshVertex;
-	class BSNavmeshWaypoint;
 	class BSPathingCell;
+	struct BSNavmeshClosedDoorInfo;
+	struct BSNavmeshCoverEdge;
+	struct BSNavmeshEdgeExtraInfo;
+	struct BSNavmeshObstacleData;
+	struct BSNavmeshObstacleUndoData;
+	struct BSNavmeshTriangle;
+	struct BSNavmeshTriangleDoorPortal;
+	struct BSNavmeshVertex;
+	struct BSNavmeshWaypoint;
 
 	class __declspec(novtable) BSNavmesh :
 		public BSIntrusiveRefCounted  // 008

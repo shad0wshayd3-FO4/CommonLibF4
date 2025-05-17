@@ -5,6 +5,15 @@
 
 namespace RE
 {
+	class BGSEquipSlot;
+	class BGSObjectInstance;
+	class EquippedItem;
+
+	namespace ActorEquipManagerEvent
+	{
+		struct Event;
+	}
+
 	class ActorEquipManager :
 		public BSTSingletonSDM<ActorEquipManager>,            // 00
 		public BSTEventSource<ActorEquipManagerEvent::Event>  // 08

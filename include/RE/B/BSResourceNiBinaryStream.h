@@ -1,6 +1,9 @@
 #pragma once
 
 #include "RE/N/NiBinaryStream.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSResource.h"
+#include "RE/S/Stream.h"
 
 namespace RE
 {

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/D/DataReader.h"
+#include "RE/B/BSResource.h"
+
 namespace RE
 {
 	namespace BSResource::Archive2

@@ -1,10 +1,13 @@
 #pragma once
 
+#include "RE/D/DifficultyLevel.h"
+#include "RE/L/LOCK_LEVEL.h"
+
 namespace RE
 {
 	namespace GamePlayFormulas
 	{
-		enum class EXPERIENCE_ACTIVITY
+		enum class ExperienceActivity : std::int32_t
 		{
 			kKillNPC = 0x0,
 			kHackComputer = 0x1,
@@ -24,7 +27,7 @@ namespace RE
 			return func(a_lockLevel);
 		}
 
-		inline float GetExperienceReward(EXPERIENCE_ACTIVITY a_activity, DIFFICULTY_LEVEL a_difficulty, float a_xpBase)
+		inline float GetExperienceReward(ExperienceActivity a_activity, DifficultyLevel a_difficulty, float a_xpBase)
 		{
 			using func_t = decltype(&GamePlayFormulas::GetExperienceReward);
 			static REL::Relocation<func_t> func{ REL::ID(853500) };

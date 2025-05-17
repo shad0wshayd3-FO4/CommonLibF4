@@ -1,6 +1,10 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
 #include "RE/N/NiNode.h"
+#include "RE/N/NiPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiTransform.h"
 
 namespace RE
 {
@@ -28,8 +32,7 @@ namespace RE
 
 		BSFlattenedBoneTree() :
 			NiNode(0)
-		{
-		}
+		{}
 
 		explicit BSFlattenedBoneTree(std::uint32_t a_numChildren) :
 			NiNode(a_numChildren)

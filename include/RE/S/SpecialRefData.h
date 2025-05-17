@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/U/UnloadedRefData.h"
+
 namespace RE
 {
 	struct SpecialRefData

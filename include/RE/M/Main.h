@@ -1,9 +1,19 @@
 #pragma once
 
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/S/ScrapHeap.h"
+#include "RE/B/BSPackedTaskQueue.h"
+#include "RE/B/BSSaveDataSystemUtilityImage.h"
 
 namespace RE
 {
+	class NiCamera;
+	class TESPageCache;
+	struct PositionPlayerEvent;
+
 	class Main :
 		public BSTEventSink<PositionPlayerEvent>
 	{
@@ -46,7 +56,7 @@ namespace RE
 		}
 
 		// members
-		BSTArray<BSTTuple<float, BSPointerHandle<Actor>>> sortedVisibleHighActors;      // 08
+		BSTArray<BSTTuple<float, ActorHandle>> sortedVisibleHighActors;      // 08
 		std::uint32_t                                     localMapRenderDelay;          // 20
 		bool                                              quitGame;                     // 24
 		bool                                              resetGame;                    // 25

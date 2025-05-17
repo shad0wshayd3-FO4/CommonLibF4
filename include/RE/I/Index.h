@@ -2,11 +2,21 @@
 
 #include "RE/B/BSBTreeFile.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTSmallIndexScatterTable.h"
+#include "RE/B/BSResource.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/S/Stream.h"
+#include "RE/A/AsyncStream.h"
 
 namespace RE
 {
 	namespace BSResource::Archive2
 	{
+		struct RegisteredEvent;
+		struct ClearRegistryEvent;
+
 		class __declspec(novtable) Index :
 			public BSTEventSink<RegisteredEvent>,    // 0000
 			public BSTEventSink<ClearRegistryEvent>  // 0008

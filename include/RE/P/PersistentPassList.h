@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class BSRenderPass;
+
 	struct PersistentPassList
 	{
 	public:

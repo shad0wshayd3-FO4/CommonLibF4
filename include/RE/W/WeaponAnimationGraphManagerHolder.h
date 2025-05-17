@@ -3,9 +3,14 @@
 #include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/I/IAnimationGraphManagerHolder.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {
+	class BSAnimationGraphManager;
+	struct BSAnimationGraphEvent;
+
 	class __declspec(novtable) WeaponAnimationGraphManagerHolder :
 		public IAnimationGraphManagerHolder,
 		public BSTEventSink<BSAnimationGraphEvent>,

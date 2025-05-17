@@ -1,5 +1,9 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/M/MemoryManager.h"
+#include "RE/S/Stream.h"
+
 namespace RE
 {
 	namespace BSResource::Archive2

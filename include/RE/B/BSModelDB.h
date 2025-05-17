@@ -5,9 +5,12 @@
 namespace RE
 {
 	enum class ENUM_LOD_MULT;
+	class NiNode;
 
 	struct BSModelDB
 	{
+		using Handle = void*;
+
 		struct DBTraits
 		{
 			struct ArgsType
@@ -26,19 +29,18 @@ namespace RE
 		};
 		static_assert(std::is_empty_v<DBTraits>);
 
-		using Handle = void*;
-
 		struct HandelListHead
 		{
 			struct HandleList
 			{
 				// members
-				Handle      handle;
-				HandleList* next;
+				Handle      handle;  // 00
+				HandleList* next;    // 08
 			};
+			static_assert(sizeof(HandleList) == 0x10);
 
 			// members
-			HandleList* head;
+			HandleList* head;  // 00
 		};
 		static_assert(sizeof(HandelListHead) == 0x8);
 

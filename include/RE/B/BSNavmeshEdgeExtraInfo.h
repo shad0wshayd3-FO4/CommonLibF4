@@ -1,7 +1,11 @@
 #pragma once
 
+#include "RE/B/BSNavmeshTriangleEdgePortal.h"
+
 namespace RE
 {
+	enum class EDGE_EXTRA_INFO_TYPE;
+
 	struct BSNavmeshEdgeExtraInfo
 	{
 	public:

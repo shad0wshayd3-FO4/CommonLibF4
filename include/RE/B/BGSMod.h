@@ -14,6 +14,7 @@
 
 namespace RE
 {
+	class ExtraDataList;
 	class INSTANCE_FILTER;
 }
 

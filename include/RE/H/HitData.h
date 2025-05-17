@@ -14,7 +14,6 @@
 namespace RE
 {
 	enum class STAGGER_MAGNITUDE;
-
 	class BGSAttackData;
 	class VATSCommand;
 

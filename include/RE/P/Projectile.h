@@ -17,7 +17,6 @@ namespace RE
 {
 	enum class COL_LAYER;
 	enum class ImpactResult;
-
 	class bhkNPCollisionObject;
 	class BSMagicShaderParticles;
 	class hknpAllHitsCollector;

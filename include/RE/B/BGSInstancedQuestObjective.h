@@ -3,7 +3,6 @@
 namespace RE
 {
 	enum class QUEST_OBJECTIVE_STATE;
-
 	class BGSQuestObjective;
 
 	class BGSInstancedQuestObjective

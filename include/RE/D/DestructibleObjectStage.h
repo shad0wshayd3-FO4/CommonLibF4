@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class BGSModelMaterialSwap;
+
 	class DestructibleObjectStage
 	{
 	public:

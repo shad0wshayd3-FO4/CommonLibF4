@@ -12,7 +12,6 @@
 namespace RE
 {
 	enum class UI_DEPTH_PRIORITY;
-
 	class BSGeometry;
 	class BSShaderAccumulator;
 	class NiAVObject;

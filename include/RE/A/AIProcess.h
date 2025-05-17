@@ -15,7 +15,6 @@ namespace RE
 	enum class DIALOGUE_SUBTYPE;
 	enum class DIALOGUE_TYPE;
 	enum class WEAPON_CULL_TYPE;
-
 	class CachedValues;
 	class HighProcessData;
 	class MiddleHighProcessData;

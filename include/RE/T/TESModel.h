@@ -5,6 +5,8 @@
 
 namespace RE
 {
+	class BGSModelMaterialSwap;
+
 	namespace BSResource
 	{
 		class ID;

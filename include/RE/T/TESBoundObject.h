@@ -13,7 +13,6 @@
 namespace RE
 {
 	enum class COMMAND_REFUSAL_TYPE;
-
 	class BGSObjectInstanceExtra;
 
 	class __declspec(novtable) TESBoundObject :

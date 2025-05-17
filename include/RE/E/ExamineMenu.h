@@ -1,10 +1,12 @@
 #pragma once
 
 #include "RE/E/ExamineConfirmMenu.h"
+#include "RE/I/InventoryUserUIInterface.h"
 #include "RE/W/WorkbenchMenuBase.h"
 
 namespace RE
 {
+	enum class EQUIP_TYPE;
 	class BGSObjectInstanceExtra;
 	class BSInputEnableLayer;
 	class NiAVObject;

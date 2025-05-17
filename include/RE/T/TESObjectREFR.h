@@ -34,6 +34,7 @@ namespace RE
 	class BSAnimationUpdateData;
 	class BSFaceGenNiNode;
 	class DialogueResponse;
+	class ExtraDataList;
 	class hknpBodyId;
 	class hkVector4f;
 	class INSTANCE_FILTER;

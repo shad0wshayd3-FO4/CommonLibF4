@@ -13,6 +13,7 @@ namespace RE
 	class bhkPickData;
 	class bhkWorldM;
 	class EXTERIOR_DATA;
+	class ExtraDataList;
 	class INTERIOR_DATA;
 	class LOADED_CELL_DATA;
 	class NavMeshArray;

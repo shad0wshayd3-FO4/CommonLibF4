@@ -45,11 +45,8 @@ set(SOURCES
 	include/RE/A/AnimationSystemUtils.h
 	include/RE/A/ApplyChangesFunctor.h
 	include/RE/A/ApplyColorUpdateEvent.h
-	include/RE/A/Array.h
-	include/RE/A/ArrayWrapper.h
 	include/RE/A/ArrowProjectile.h
 	include/RE/A/AttachTechniqueInput.h
-	include/RE/A/AttachedScript.h
 	include/RE/A/AttackBlockHandler.h
 	include/RE/A/AttackData.h
 	include/RE/A/AutoMoveHandler.h
@@ -327,6 +324,59 @@ set(SOURCES
 	include/RE/B/BSScaleformRenderer.h
 	include/RE/B/BSScaleformTranslator.h
 	include/RE/B/BSScriptUtil.h
+	include/RE/B/BSScript_Array.h
+	include/RE/B/BSScript_ArrayWrapper.h
+	include/RE/B/BSScript_CompiledScriptLoader.h
+	include/RE/B/BSScript_ErrorLogger.h
+	include/RE/B/BSScript_ICachedErrorMessage.h
+	include/RE/B/BSScript_IClientVM.h
+	include/RE/B/BSScript_IComplexType.h
+	include/RE/B/BSScript_IHandleReaderWriter.h
+	include/RE/B/BSScript_ILoader.h
+	include/RE/B/BSScript_IMemoryPagePolicy.h
+	include/RE/B/BSScript_IObjectHandlePolicy.h
+	include/RE/B/BSScript_IObjectProcessor.h
+	include/RE/B/BSScript_ISavePatcherInterface.h
+	include/RE/B/BSScript_IStackCallbackFunctor.h
+	include/RE/B/BSScript_IStackCallbackSaveInterface.h
+	include/RE/B/BSScript_IVMDebugInterface.h
+	include/RE/B/BSScript_IVMObjectBindInterface.h
+	include/RE/B/BSScript_IVirtualMachine.h
+	include/RE/B/BSScript_Internal_AttachedScript.h
+	include/RE/B/BSScript_Internal_CodeTasklet.h
+	include/RE/B/BSScript_Internal_EventRelay.h
+	include/RE/B/BSScript_Internal_FunctionMessage.h
+	include/RE/B/BSScript_Internal_IFuncCallQuery.h
+	include/RE/B/BSScript_Internal_IFunction.h
+	include/RE/B/BSScript_Internal_IProfilePolicy.h
+	include/RE/B/BSScript_Internal_IVMSaveLoadInterface.h
+	include/RE/B/BSScript_Internal_LinkerProcessor.h
+	include/RE/B/BSScript_Internal_NativeFunctionBase.h
+	include/RE/B/BSScript_Internal_RawFuncCallQuery.h
+	include/RE/B/BSScript_Internal_ReadableStringTable.h
+	include/RE/B/BSScript_Internal_ReadableTypeTable.h
+	include/RE/B/BSScript_Internal_ScriptFunction.h
+	include/RE/B/BSScript_Internal_Stack.h
+	include/RE/B/BSScript_Internal_SuspendedStack.h
+	include/RE/B/BSScript_Internal_VDescTable.h
+	include/RE/B/BSScript_Internal_VirtualMachine.h
+	include/RE/B/BSScript_Internal_WritableStringTable.h
+	include/RE/B/BSScript_Internal_WritableTypeTable.h
+	include/RE/B/BSScript_LogEvent.h
+	include/RE/B/BSScript_MergedBoundScript.h
+	include/RE/B/BSScript_Object.h
+	include/RE/B/BSScript_ObjectBindPolicy.h
+	include/RE/B/BSScript_ObjectTypeInfo.h
+	include/RE/B/BSScript_PackedInstructionStream.h
+	include/RE/B/BSScript_PropertyGroupInfo.h
+	include/RE/B/BSScript_PropertyTypeInfo.h
+	include/RE/B/BSScript_SimpleAllocMemoryPagePolicy.h
+	include/RE/B/BSScript_StackFrame.h
+	include/RE/B/BSScript_StatsEvent.h
+	include/RE/B/BSScript_Struct.h
+	include/RE/B/BSScript_StructTypeInfo.h
+	include/RE/B/BSScript_TypeInfo.h
+	include/RE/B/BSScript_Variable.h
 	include/RE/B/BSSemaphore.h
 	include/RE/B/BSShader.h
 	include/RE/B/BSShaderData.h
@@ -419,7 +469,6 @@ set(SOURCES
 	include/RE/C/CellAttachDetachEvent.h
 	include/RE/C/CellAttachDetachEventSource.h
 	include/RE/C/CharacterEvent.h
-	include/RE/C/CodeTasklet.h
 	include/RE/C/ColorUpdateEvent.h
 	include/RE/C/CombatFormulas.h
 	include/RE/C/CombatStyleCloseRangeData.h
@@ -432,7 +481,6 @@ set(SOURCES
 	include/RE/C/CombatUtilities.h
 	include/RE/C/CommandedActorData.h
 	include/RE/C/ComparisonQualifiers.h
-	include/RE/C/CompiledScriptLoader.h
 	include/RE/C/ConcreteFormFactory.h
 	include/RE/C/ConcreteObjectFormFactory.h
 	include/RE/C/ConditionCheckParams.h
@@ -493,8 +541,6 @@ set(SOURCES
 	include/RE/E/EquippedItem.h
 	include/RE/E/EquippedItemData.h
 	include/RE/E/EquippedWeaponData.h
-	include/RE/E/ErrorLogger.h
-	include/RE/E/EventRelay.h
 	include/RE/E/ExamineConfirmMenu.h
 	include/RE/E/ExamineMenu.h
 	include/RE/E/Explosion.h
@@ -538,7 +584,6 @@ set(SOURCES
 	include/RE/F/FormUtil.h
 	include/RE/F/FreeCameraState.h
 	include/RE/F/FriendshipFactionsStruct.h
-	include/RE/F/FunctionMessage.h
 	include/RE/Fallout.h
 	include/RE/G/GROUP_REACTION.h
 	include/RE/G/GUN_STATE.h
@@ -566,20 +611,12 @@ set(SOURCES
 	include/RE/H/HolotapeStateChanged.h
 	include/RE/H/HourPassed.h
 	include/RE/I/IAnimationGraphManagerHolder.h
-	include/RE/I/ICachedErrorMessage.h
-	include/RE/I/IClientVM.h
-	include/RE/I/IComplexType.h
 	include/RE/I/IDEvent.h
 	include/RE/I/IDLE_DATA.h
 	include/RE/I/IEventCallback.h
 	include/RE/I/IFormFactory.h
-	include/RE/I/IFuncCallQuery.h
-	include/RE/I/IFunction.h
-	include/RE/I/IHandleReaderWriter.h
 	include/RE/I/IKeywordFormBase.h
-	include/RE/I/ILoader.h
 	include/RE/I/IMemoryHeap.h
-	include/RE/I/IMemoryPagePolicy.h
 	include/RE/I/IMemoryStore.h
 	include/RE/I/IMemoryStoreBase.h
 	include/RE/I/IMenu.h
@@ -594,20 +631,10 @@ set(SOURCES
 	include/RE/I/INSTANCE_FILTER.h
 	include/RE/I/INTERACTING_STATE.h
 	include/RE/I/INTERIOR_DATA.h
-	include/RE/I/IObjectHandlePolicy.h
-	include/RE/I/IObjectProcessor.h
 	include/RE/I/IPipboyThrottledValue.h
 	include/RE/I/IPostAnimationChannelUpdateFunctor.h
-	include/RE/I/IProfilePolicy.h
-	include/RE/I/ISavePatcherInterface.h
-	include/RE/I/IStackCallbackFunctor.h
-	include/RE/I/IStackCallbackSaveInterface.h
 	include/RE/I/ITEM_REMOVE_REASON.h
 	include/RE/I/IUIMessageData.h
-	include/RE/I/IVMDebugInterface.h
-	include/RE/I/IVMObjectBindInterface.h
-	include/RE/I/IVMSaveLoadInterface.h
-	include/RE/I/IVirtualMachine.h
 	include/RE/I/ImageSpaceBaseData.h
 	include/RE/I/ImageSpaceData.h
 	include/RE/I/ImageSpaceEffect.h
@@ -652,14 +679,12 @@ set(SOURCES
 	include/RE/L/LOADED_REF_DATA.h
 	include/RE/L/LOCK_LEVEL.h
 	include/RE/L/LevelIncrease.h
-	include/RE/L/LinkerProcessor.h
 	include/RE/L/LoadingMenu.h
 	include/RE/L/LoadingStatusChanged.h
 	include/RE/L/LocalMapCameraUpdate.h
 	include/RE/L/LocationMarkerArrayUpdate.h
 	include/RE/L/LockpickingMenu.h
 	include/RE/L/LocksPicked.h
-	include/RE/L/LogEvent.h
 	include/RE/L/LookHandler.h
 	include/RE/M/MELEE_ATTACK_SPEED.h
 	include/RE/M/MENU_RENDER_CONTEXT.h
@@ -678,7 +703,6 @@ set(SOURCES
 	include/RE/M/MenuOpenCloseEvent.h
 	include/RE/M/MenuOpenHandler.h
 	include/RE/M/MenuTopicManager.h
-	include/RE/M/MergedBoundScript.h
 	include/RE/M/MessageBoxData.h
 	include/RE/M/MessageBoxMenu.h
 	include/RE/M/MessageMenuManager.h
@@ -693,7 +717,6 @@ set(SOURCES
 	include/RE/M/MovementData.h
 	include/RE/N/NEW_REFR_DATA.h
 	include/RE/N/NPC_DATA.h
-	include/RE/N/NativeFunctionBase.h
 	include/RE/N/NavMesh.h
 	include/RE/N/NavMeshInfoMap.h
 	include/RE/N/NiAVObject.h
@@ -747,9 +770,6 @@ set(SOURCES
 	include/RE/O/OBJ_LIGH.h
 	include/RE/O/OBJ_REFR.h
 	include/RE/O/OBJ_TREE.h
-	include/RE/O/Object.h
-	include/RE/O/ObjectBindPolicy.h
-	include/RE/O/ObjectTypeInfo.h
 	include/RE/O/OtherInputEvents.h
 	include/RE/P/PACKAGE_DATA.h
 	include/RE/P/PACKAGE_OBJECT_TYPE.h
@@ -765,7 +785,6 @@ set(SOURCES
 	include/RE/P/PackageEventAction.h
 	include/RE/P/PackageList.h
 	include/RE/P/PackageSchedule.h
-	include/RE/P/PackedInstructionStream.h
 	include/RE/P/PauseMenu.h
 	include/RE/P/PerkAdded.h
 	include/RE/P/PerkData.h
@@ -838,8 +857,6 @@ set(SOURCES
 	include/RE/P/ProcessLists.h
 	include/RE/P/Projectile.h
 	include/RE/P/ProjectileLaunchData.h
-	include/RE/P/PropertyGroupInfo.h
-	include/RE/P/PropertyTypeInfo.h
 	include/RE/Q/QUEST_DATA.h
 	include/RE/Q/QUEST_OBJECTIVE_STATE.h
 	include/RE/Q/QuickContainerMode.h
@@ -850,9 +867,6 @@ set(SOURCES
 	include/RE/R/RANK_DATA.h
 	include/RE/R/REFR_LOCK.h
 	include/RE/R/RESET_3D_FLAGS.h
-	include/RE/R/RawFuncCallQuery.h
-	include/RE/R/ReadableStringTable.h
-	include/RE/R/ReadableTypeTable.h
 	include/RE/R/ReadyWeaponHandler.h
 	include/RE/R/RefAttachTechniqueInput.h
 	include/RE/R/ReferenceEffect.h
@@ -885,7 +899,6 @@ set(SOURCES
 	include/RE/S/Script.h
 	include/RE/S/ScriptCompileData.h
 	include/RE/S/ScriptCompiler.h
-	include/RE/S/ScriptFunction.h
 	include/RE/S/ScriptLocals.h
 	include/RE/S/ScriptVariable.h
 	include/RE/S/ScrollItem.h
@@ -894,7 +907,6 @@ set(SOURCES
 	include/RE/S/Setting.h
 	include/RE/S/ShaderReferenceEffect.h
 	include/RE/S/ShowingDialogueSpeechChallengeAnim.h
-	include/RE/S/SimpleAllocMemoryPagePolicy.h
 	include/RE/S/SimpleAnimationGraphManagerHolder.h
 	include/RE/S/SitWaitMenu.h
 	include/RE/S/Sky.h
@@ -906,18 +918,12 @@ set(SOURCES
 	include/RE/S/SpellItem.h
 	include/RE/S/SplineUtils.h
 	include/RE/S/SpringState.h
-	include/RE/S/Stack.h
-	include/RE/S/StackFrame.h
 	include/RE/S/StartMenuBase.h
-	include/RE/S/StatsEvent.h
 	include/RE/S/StolenItemValueStruct.h
-	include/RE/S/Struct.h
-	include/RE/S/StructTypeInfo.h
 	include/RE/S/SubGraphIdleRootData.h
 	include/RE/S/SubgraphHandle.h
 	include/RE/S/SubgraphIdentifier.h
 	include/RE/S/SummonPlacementEffect.h
-	include/RE/S/SuspendedStack.h
 	include/RE/T/TBO_InstanceData.h
 	include/RE/T/TEMP_EFFECT_TYPE.h
 	include/RE/T/TES.h
@@ -1046,7 +1052,6 @@ set(SOURCES
 	include/RE/T/TravelMarkerStateChange.h
 	include/RE/T/TrespassPackage.h
 	include/RE/T/TutorialEvent.h
-	include/RE/T/TypeInfo.h
 	include/RE/U/UI.h
 	include/RE/U/UIAdvanceMenusFunctionCompleteEvent.h
 	include/RE/U/UIMenuEntry.h
@@ -1066,10 +1071,7 @@ set(SOURCES
 	include/RE/U/UsesBSGFXFunctionHandler.h
 	include/RE/V/VATS.h
 	include/RE/V/VATSEvents.h
-	include/RE/V/VDescTable.h
 	include/RE/V/VOICE_TYPE_DATA.h
-	include/RE/V/Variable.h
-	include/RE/V/VirtualMachine.h
 	include/RE/VTABLE_IDs.h
 	include/RE/W/WARNING_TYPES.h
 	include/RE/W/WEAPONHITBEHAVIOR.h
@@ -1087,8 +1089,6 @@ set(SOURCES
 	include/RE/W/WorkbenchMenuBase.h
 	include/RE/W/Workshop.h
 	include/RE/W/WorkshopMenu.h
-	include/RE/W/WritableStringTable.h
-	include/RE/W/WritableTypeTable.h
 	include/RE/X/XPChangeData.h
 	include/REL/ASM.h
 	include/REL/Hook.h
@@ -1282,7 +1282,6 @@ set(SOURCES
 	src/F4SE/Interfaces.cpp
 	src/F4SE/Logger.cpp
 	src/RE/A/Actor.cpp
-	src/RE/A/Array.cpp
 	src/RE/B/BGSInventoryItem.cpp
 	src/RE/B/BGSKeyword.cpp
 	src/RE/B/BGSKeywordForm.cpp
@@ -1293,6 +1292,16 @@ set(SOURCES
 	src/RE/B/BSResource_Stream.cpp
 	src/RE/B/BSResource_StreamBase.cpp
 	src/RE/B/BSScaleformManager.cpp
+	src/RE/B/BSScript_Array.cpp
+	src/RE/B/BSScript_Internal_VirtualMachine.cpp
+	src/RE/B/BSScript_Object.cpp
+	src/RE/B/BSScript_ObjectTypeInfo.cpp
+	src/RE/B/BSScript_PackedInstructionStream.cpp
+	src/RE/B/BSScript_StackFrame.cpp
+	src/RE/B/BSScript_Struct.cpp
+	src/RE/B/BSScript_StructTypeInfo.cpp
+	src/RE/B/BSScript_TypeInfo.cpp
+	src/RE/B/BSScript_Variable.cpp
 	src/RE/B/BSVisit.cpp
 	src/RE/C/Calendar.cpp
 	src/RE/E/ExtraInstanceData.cpp
@@ -1306,20 +1315,11 @@ set(SOURCES
 	src/RE/N/NiPoint.cpp
 	src/RE/N/NiRect.cpp
 	src/RE/N/NiTransform.cpp
-	src/RE/O/Object.cpp
-	src/RE/O/ObjectTypeInfo.cpp
-	src/RE/P/PackedInstructionStream.cpp
 	src/RE/P/PlayerCharacter.cpp
-	src/RE/S/StackFrame.cpp
-	src/RE/S/Struct.cpp
-	src/RE/S/StructTypeInfo.cpp
 	src/RE/T/TESFullName.cpp
 	src/RE/T/TESNPC.cpp
 	src/RE/T/TESObjectCELL.cpp
 	src/RE/T/TESValueForm.cpp
-	src/RE/T/TypeInfo.cpp
-	src/RE/V/Variable.cpp
-	src/RE/V/VirtualMachine.cpp
 	src/RE/W/WorkbenchMenuBase.cpp
 	src/REL/HookObject.cpp
 	src/REL/HookStore.cpp

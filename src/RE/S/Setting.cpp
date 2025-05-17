@@ -2,7 +2,7 @@
 
 namespace RE
 {
-    template class SettingT<GameSettingCollection>;
+	template class SettingT<GameSettingCollection>;
 	static_assert(sizeof(SettingT<GameSettingCollection>) == 0x18);
 
 	template class SettingT<INIPrefSettingCollection>;

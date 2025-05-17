@@ -15,7 +15,7 @@ namespace RE
 	template class BSPointerHandle<TESObjectREFR>;
 	static_assert(sizeof(BSPointerHandle<TESObjectREFR>) == 0x4);
 
-    template class BSUntypedPointerHandle<>;
+	template class BSUntypedPointerHandle<>;
 	static_assert(sizeof(BSUntypedPointerHandle<>) == 0x4);
 
 	template class BSPointerHandleManagerInterface<Actor>;

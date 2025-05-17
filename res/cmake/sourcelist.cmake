@@ -388,6 +388,7 @@ set(SOURCES
 	include/RE/B/BSSimpleList.h
 	include/RE/B/BSSoundHandle.h
 	include/RE/B/BSSpinLock.h
+	include/RE/B/BSSpring_SpringState.h
 	include/RE/B/BSSteamAwardsSystemUtility.h
 	include/RE/B/BSStorage.h
 	include/RE/B/BSStorageDefs.h
@@ -582,7 +583,6 @@ set(SOURCES
 	include/RE/F/FlameProjectile.h
 	include/RE/F/FlatScreenModel.h
 	include/RE/F/FleePackage.h
-	include/RE/F/FormUtil.h
 	include/RE/F/FreeCameraState.h
 	include/RE/F/FriendshipFactionsStruct.h
 	include/RE/Fallout.h
@@ -918,7 +918,6 @@ set(SOURCES
 	include/RE/S/SpectatorThreatInfo.h
 	include/RE/S/SpellItem.h
 	include/RE/S/SplineUtils.h
-	include/RE/S/SpringState.h
 	include/RE/S/StartMenuBase.h
 	include/RE/S/StolenItemValueStruct.h
 	include/RE/S/SubGraphIdleRootData.h
@@ -964,6 +963,7 @@ set(SOURCES
 	include/RE/T/TESFlora.h
 	include/RE/T/TESForm.h
 	include/RE/T/TESFormDeleteEvent.h
+	include/RE/T/TESFormUtil.h
 	include/RE/T/TESFullName.h
 	include/RE/T/TESFurniture.h
 	include/RE/T/TESFurnitureEvent.h
@@ -1282,11 +1282,15 @@ set(SOURCES
 	src/F4SE/Interfaces.cpp
 	src/F4SE/Logger.cpp
 	src/RE/A/Actor.cpp
+	src/RE/B/BGSCreatedObjectManager.cpp
 	src/RE/B/BGSInventoryItem.cpp
 	src/RE/B/BGSKeyword.cpp
 	src/RE/B/BGSKeywordForm.cpp
 	src/RE/B/BGSLocation.cpp
 	src/RE/B/BGSObjectInstanceExtra.cpp
+	src/RE/B/BSCRC32.cpp
+	src/RE/B/BSFixedString.cpp
+	src/RE/B/BSPointerHandle.cpp
 	src/RE/B/BSResource.cpp
 	src/RE/B/BSResourceNiBinaryStream.cpp
 	src/RE/B/BSResource_Stream.cpp
@@ -1302,14 +1306,27 @@ set(SOURCES
 	src/RE/B/BSScript_StructTypeInfo.cpp
 	src/RE/B/BSScript_TypeInfo.cpp
 	src/RE/B/BSScript_Variable.cpp
-	src/RE/B/BSTempEffectUtil.cpp
+	src/RE/B/BSSpinLock.cpp
+	src/RE/B/BSSpring_SpringState.cpp
+	src/RE/B/BSTArray.cpp
+	src/RE/B/BSTAtomicValue.cpp
+	src/RE/B/BSTDataBuffer.cpp
+	src/RE/B/BSTInterpolator.cpp
+	src/RE/B/BSTPoint.cpp
 	src/RE/B/BSVisit.cpp
+	src/RE/B/ButtonEvent.cpp
 	src/RE/C/Calendar.cpp
+	src/RE/C/CharacterEvent.cpp
+	src/RE/C/CursorMoveEvent.cpp
+	src/RE/D/DeviceConnectEvent.cpp
 	src/RE/E/ExtraInstanceData.cpp
-	src/RE/F/FormUtil.cpp
 	src/RE/Fallout.cpp
+	src/RE/G/GetCurrentPositionFunctor.cpp
+	src/RE/I/IDEvent.cpp
 	src/RE/I/InventoryInterface.cpp
+	src/RE/K/KinectEvent.cpp
 	src/RE/M/MenuCursor.cpp
+	src/RE/M/MouseMoveEvent.cpp
 	src/RE/N/NiAVObject.cpp
 	src/RE/N/NiBinaryStream.cpp
 	src/RE/N/NiMatrix3.cpp
@@ -1318,10 +1335,12 @@ set(SOURCES
 	src/RE/N/NiRect.cpp
 	src/RE/N/NiTransform.cpp
 	src/RE/P/PlayerCharacter.cpp
+	src/RE/S/Setting.cpp
 	src/RE/T/TESFullName.cpp
 	src/RE/T/TESNPC.cpp
 	src/RE/T/TESObjectCELL.cpp
 	src/RE/T/TESValueForm.cpp
+	src/RE/T/ThumbstickEvent.cpp
 	src/RE/W/WorkbenchMenuBase.cpp
 	src/REL/HookObject.cpp
 	src/REL/HookStore.cpp

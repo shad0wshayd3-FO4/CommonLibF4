@@ -3,6 +3,7 @@
 #include "RE/C/CHANGE_TYPES.h"
 #include "RE/T/TESActorBase.h"
 #include "RE/T/TESForm.h"
+#include "RE/T/TESFormUtil.h"
 #include "RE/T/TESObjectCELL.h"
 
 namespace RE

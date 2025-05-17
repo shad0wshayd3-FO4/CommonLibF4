@@ -1,15 +1,15 @@
 #pragma once
 
+#include "RE/B/BSContainer.h"
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
+#include "RE/B/BSScript_ErrorLogger.h"
+#include "RE/B/BSScript_ICachedErrorMessage.h"
+#include "RE/B/BSScript_TypeInfo.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTHashMap.h"
 #include "RE/B/BSTObjectArena.h"
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/B/BSTArray.h"
-#include "RE/B/BSScript_TypeInfo.h"
-#include "RE/B/BSContainer.h"
-#include "RE/B/BSScript_ErrorLogger.h"
-#include "RE/B/BSScript_ICachedErrorMessage.h"
 
 namespace RE
 {

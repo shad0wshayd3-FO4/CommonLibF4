@@ -1,13 +1,13 @@
 #pragma once
 
-#include "RE/I/IMenu.h"
-#include "RE/B/BSTArray.h"
-#include "RE/B/BSSpinLock.h"
-#include "RE/S/SendHUDMessage.h"
 #include "RE/B/BSGFxShaderFXTarget.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTOptional.h"
-#include "RE/H/HUDModeType.h"
 #include "RE/B/ButtonHintBar.h"
+#include "RE/H/HUDModeType.h"
+#include "RE/I/IMenu.h"
+#include "RE/S/SendHUDMessage.h"
 
 namespace RE
 {
@@ -93,13 +93,13 @@ namespace RE
 		}
 
 		// members
-		BSTArray<BSGFxShaderFXTarget*>        shaderFXObjects;              // 70
-		std::unique_ptr<BSGFxShaderFXTarget>  filterHolder;                 // 88
-		std::unique_ptr<ButtonHintBar>        buttonHintBar;                // 90
-		BSTAlignedArray<UIShaderFXInfo>       cachedColorFXInfos;           // 98
-		BSTAlignedArray<UIShaderFXInfo>       cachedBackgroundFXInfos;      // B0
-		BSReadWriteLock                       cachedQuadsLock;              // C8
-		BSTOptional<HUDModeType>              menuHUDMode{ std::nullopt };  // D0
+		BSTArray<BSGFxShaderFXTarget*>       shaderFXObjects;              // 70
+		std::unique_ptr<BSGFxShaderFXTarget> filterHolder;                 // 88
+		std::unique_ptr<ButtonHintBar>       buttonHintBar;                // 90
+		BSTAlignedArray<UIShaderFXInfo>      cachedColorFXInfos;           // 98
+		BSTAlignedArray<UIShaderFXInfo>      cachedBackgroundFXInfos;      // B0
+		BSReadWriteLock                      cachedQuadsLock;              // C8
+		BSTOptional<HUDModeType>             menuHUDMode{ std::nullopt };  // D0
 	};
 	static_assert(sizeof(GameMenuBase) == 0xE0);
 }

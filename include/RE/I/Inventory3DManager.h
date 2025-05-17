@@ -1,15 +1,15 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
-#include "RE/B/BSInputEventUser.h"
-#include "RE/N/NiPointer.h"
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/B/BSTHashMap.h"
-#include "RE/N/NiPoint.h"
-#include "RE/N/NiMatrix3.h"
-#include "RE/N/NiQuaternion.h"
 #include "RE/B/BGSInventoryItem.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSInputEventUser.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiMatrix3.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiQuaternion.h"
 
 namespace RE
 {

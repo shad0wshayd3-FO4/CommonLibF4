@@ -1,13 +1,13 @@
 #pragma once
 
+#include "RE/A/AITimer.h"
+#include "RE/A/ActorPackage.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSSimpleList.h"
 #include "RE/D/DEFAULT_OBJECT.h"
 #include "RE/N/NiPoint.h"
-#include "RE/B/BGSEquipIndex.h"
-#include "RE/B/BSPointerHandle.h"
-#include "RE/A/ActorPackage.h"
-#include "RE/A/AITimer.h"
-#include "RE/B/BGSObjectInstance.h"
 
 namespace RE
 {

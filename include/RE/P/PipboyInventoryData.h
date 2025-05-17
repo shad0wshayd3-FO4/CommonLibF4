@@ -1,13 +1,13 @@
 #pragma once
 
-#include "RE/P/PipboyDataGroup.h"
-#include "RE/B/BSTEvent.h"
-#include "RE/I/InventoryInterface.h"
-#include "RE/E/ENUM_FORM_ID.h"
 #include "RE/B/BGSInventoryItem.h"
 #include "RE/B/BSFixedString.h"
-#include "RE/B/BSTHashMap.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/E/ENUM_FORM_ID.h"
+#include "RE/I/InventoryInterface.h"
+#include "RE/P/PipboyDataGroup.h"
 
 namespace RE
 {

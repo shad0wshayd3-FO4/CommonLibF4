@@ -1,13 +1,13 @@
 #pragma once
 
-#include "RE/B/BaseFormComponent.h"
-#include "RE/B/BSTHashMap.h"
 #include "RE/B/BSFixedString.h"
-#include "RE/T/TESFile.h"
-#include "RE/T/TESFileContainer.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BaseFormComponent.h"
 #include "RE/E/ENUM_FORM_ID.h"
 #include "RE/F/FORM_ENUM_STRING.h"
-#include "RE/B/BSSpinLock.h"
+#include "RE/T/TESFile.h"
+#include "RE/T/TESFileContainer.h"
 
 namespace RE
 {
@@ -113,7 +113,7 @@ namespace RE
 		static void AddCompileIndex(std::uint32_t& a_id, TESFile* a_file)
 		{
 			using func_t = decltype(&TESForm::AddCompileIndex);
-			static REL::Relocation<func_t> func{ ID::TESForm::AddCompileIndex};
+			static REL::Relocation<func_t> func{ ID::TESForm::AddCompileIndex };
 			return func(a_id, a_file);
 		}
 
@@ -122,8 +122,8 @@ namespace RE
 				BSTHashMap<std::uint32_t, TESForm*>*,
 				std::reference_wrapper<BSReadWriteLock>>
 		{
-			static REL::Relocation<BSTHashMap<std::uint32_t, TESForm*>**> allForms{ ID::TESForm::AllForms};
-			static REL::Relocation<BSReadWriteLock*>                      allFormsMapLock{ ID::TESForm::AllFormsMapLock};
+			static REL::Relocation<BSTHashMap<std::uint32_t, TESForm*>**> allForms{ ID::TESForm::AllForms };
+			static REL::Relocation<BSReadWriteLock*>                      allFormsMapLock{ ID::TESForm::AllFormsMapLock };
 			return { *allForms, *allFormsMapLock };
 		}
 
@@ -132,8 +132,8 @@ namespace RE
 				BSTHashMap<BSFixedString, TESForm*>*,
 				std::reference_wrapper<BSReadWriteLock>>
 		{
-			static REL::Relocation<BSTHashMap<BSFixedString, TESForm*>**> allFormsByEditorID{ ID::TESForm::AllFormsByEditorID};
-			static REL::Relocation<BSReadWriteLock*>                      allFormsEditorIDMapLock{ ID::TESForm::AllFormsEditorIDMapLock};
+			static REL::Relocation<BSTHashMap<BSFixedString, TESForm*>**> allFormsByEditorID{ ID::TESForm::AllFormsByEditorID };
+			static REL::Relocation<BSReadWriteLock*>                      allFormsEditorIDMapLock{ ID::TESForm::AllFormsEditorIDMapLock };
 			return { *allFormsByEditorID, *allFormsEditorIDMapLock };
 		}
 
@@ -145,7 +145,7 @@ namespace RE
 		[[nodiscard]] TESFile* GetFile(std::int32_t a_index = -1) const
 		{
 			using func_t = decltype(&TESForm::GetFile);
-			static REL::Relocation<func_t> func{ ID::TESForm::GetFile};
+			static REL::Relocation<func_t> func{ ID::TESForm::GetFile };
 			return func(this, a_index);
 		}
 
@@ -189,14 +189,14 @@ namespace RE
 
 		[[nodiscard]] static std::span<FORM_ENUM_STRING, 159> GetFormEnumString()
 		{
-			static REL::Relocation<FORM_ENUM_STRING(*)[159]> functions{ ID::TESForm::GetFormEnumString};
+			static REL::Relocation<FORM_ENUM_STRING(*)[159]> functions{ ID::TESForm::GetFormEnumString };
 			return { *functions };
 		}
 
 		[[nodiscard]] static ENUM_FORM_ID GetFormTypeFromString(const char* a_formTypeString)
 		{
 			using func_t = decltype(&TESForm::GetFormTypeFromString);
-			static REL::Relocation<func_t> func{ ID::TESForm::GetFormTypeFromString};
+			static REL::Relocation<func_t> func{ ID::TESForm::GetFormTypeFromString };
 			return func(a_formTypeString);
 		}
 

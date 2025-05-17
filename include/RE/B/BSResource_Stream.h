@@ -1,10 +1,10 @@
 #pragma once
 
+#include "RE/B/BSEventFlag.h"
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSResource_SeekMode.h"
 #include "RE/B/BSResource_StreamBase.h"
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/B/BSEventFlag.h"
 
 namespace RE::BSResource
 {

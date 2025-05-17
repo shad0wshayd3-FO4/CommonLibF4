@@ -1,11 +1,11 @@
 #pragma once
 
 #include "RE/B/BSInputEventSingleUser.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTHashMap.h"
 #include "RE/B/BSTSingleton.h"
 #include "RE/N/NiPointer.h"
-#include "RE/B/BSTArray.h"
 #include "RE/Q/QuickContainerStateEvent.h"
 
 namespace RE

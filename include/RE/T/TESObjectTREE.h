@@ -1,10 +1,10 @@
 #pragma once
 
 #include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/O/OBJ_TREE.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESProduceForm.h"
-#include "RE/O/OBJ_TREE.h"
 
 namespace RE
 {

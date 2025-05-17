@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
-#include "RE/T/TESCondition.h"
 #include "RE/B/BGSLocalizedString.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

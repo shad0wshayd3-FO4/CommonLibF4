@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
-#include "RE/T/TESFurniture.h"
 #include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESCondition.h"
+#include "RE/T/TESFurniture.h"
 
 namespace RE
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSSystemFileStreamer.h"
+#include "RE/B/BSTSmartPointer.h"
 #include "RE/N/NiFile.h"
 
 namespace RE

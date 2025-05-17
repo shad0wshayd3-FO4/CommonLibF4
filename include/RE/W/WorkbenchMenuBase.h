@@ -1,14 +1,14 @@
 #pragma once
 
-#include "RE/G/GameMenuBase.h"
+#include "RE/B/BGSInventoryList.h"
+#include "RE/B/BGSTypedFormValuePair.h"
 #include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/I/Inventory3DManager.h"
 #include "RE/I/InventoryInterface.h"
 #include "RE/N/NiPointer.h"
-#include "RE/B/BSTTuple.h"
-#include "RE/B/BGSTypedFormValuePair.h"
-#include "RE/I/Inventory3DManager.h"
-#include "RE/B/BGSInventoryList.h"
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/R/Rumble.h"
 
 namespace RE

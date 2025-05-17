@@ -2,8 +2,8 @@
 
 #include "RE/T/TESForm.h"
 #include "RE/T/TESModel.h"
-#include "RE/T/TESWeatherList.h"
 #include "RE/T/TESTexture.h"
+#include "RE/T/TESWeatherList.h"
 
 namespace RE
 {

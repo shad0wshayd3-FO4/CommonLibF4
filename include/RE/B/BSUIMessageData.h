@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/I/IUIMessageData.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSStringT.h"
+#include "RE/I/IUIMessageData.h"
 
 namespace RE
 {
@@ -42,8 +42,8 @@ namespace RE
 		}
 
 		// members
-		BSString* string{ nullptr };  // 18
-		BSFixedString    fixedString;        // 20
+		BSString*     string{ nullptr };  // 18
+		BSFixedString fixedString;        // 20
 		union
 		{
 			std::uint32_t u;

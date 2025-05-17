@@ -1,15 +1,15 @@
 #pragma once
 
+#include "RE/A/ActionInput.h"
 #include "RE/B/BSInputEventReceiver.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSpinLock.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/I/IMovementPlayerControls.h"
-#include "RE/B/BSPointerHandle.h"
-#include "RE/A/ActionInput.h"
-#include "RE/P/PlayerInputHandler.h"
 #include "RE/H/HeldStateHandler.h"
-#include "RE/B/BSSpinLock.h"
+#include "RE/I/IMovementPlayerControls.h"
+#include "RE/P/PlayerInputHandler.h"
 
 namespace RE
 {

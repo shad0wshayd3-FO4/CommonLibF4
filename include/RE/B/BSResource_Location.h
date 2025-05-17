@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSResource_ErrorCode.h"
+#include "RE/B/BSTSmartPointer.h"
 #include "RE/M/MemoryManager.h"
 
 namespace RE::BSResource

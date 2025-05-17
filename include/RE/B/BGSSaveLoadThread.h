@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/B/BSThread.h"
-#include "RE/B/BSFixedString.h"
 #include "RE/B/BSEventFlag.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSThread.h"
 
 namespace RE
 {

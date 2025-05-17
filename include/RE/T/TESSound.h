@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/T/TESBoundAnimObject.h"
 #include "RE/R/RepeaterData.h"
+#include "RE/T/TESBoundAnimObject.h"
 
 namespace RE
 {

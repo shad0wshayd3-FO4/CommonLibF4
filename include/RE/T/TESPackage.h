@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
+#include "RE/P/PACKAGE_DATA.h"
 #include "RE/P/PackageEventAction.h"
 #include "RE/P/PackageSchedule.h"
-#include "RE/P/PACKAGE_DATA.h"
 #include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

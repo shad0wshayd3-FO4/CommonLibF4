@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
-#include "RE/T/TESForm.h"
 #include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
 #include "RE/K/KeywordType.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

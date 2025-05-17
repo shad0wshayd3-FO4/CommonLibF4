@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSScript_Internal_ReadableStringTable.h"
 #include "RE/B/BSScript_ILoader.h"
+#include "RE/B/BSScript_Internal_ReadableStringTable.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {

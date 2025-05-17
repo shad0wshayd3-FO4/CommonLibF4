@@ -9,7 +9,7 @@ namespace RE
 	class BSPackedTaskQueue
 	{
 	public:
-		using UnpackFunc_t = void(*)(const BSPackedTask&);
+		using UnpackFunc_t = void (*)(const BSPackedTask&);
 
 		// members
 		BSTCommonScrapHeapMessageQueue<BSPackedTask> queue;       // 00

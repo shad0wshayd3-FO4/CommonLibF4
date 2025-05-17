@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSResource_Location.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/B/BSResource_Location.h"
 
 namespace RE::BSResource
 {

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
 #include "RE/B/BGSBlockBashData.h"
 #include "RE/B/BGSDestructibleObjectForm.h"
 #include "RE/B/BGSEquipType.h"
@@ -9,18 +10,17 @@
 #include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BGSPickupPutdownSounds.h"
 #include "RE/B/BGSPreloadable.h"
+#include "RE/B/BGSTypedFormValuePair.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/M/MELEE_ATTACK_SPEED.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESEnchantableForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESIcon.h"
-#include "RE/B/BSTTuple.h"
-#include "RE/B/BGSTypedFormValuePair.h"
 #include "RE/W/WEAPON_FLAGS.h"
 #include "RE/W/WEAPON_TYPE.h"
-#include "RE/M/MELEE_ATTACK_SPEED.h"
-#include "RE/B/BGSAttachParentArray.h"
 
 namespace RE
 {

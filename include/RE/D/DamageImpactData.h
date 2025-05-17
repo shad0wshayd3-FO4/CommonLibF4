@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/N/NiPointer.h"
 #include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

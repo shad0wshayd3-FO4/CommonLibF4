@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Scaleform/W/Waitable.h"
 #include "Scaleform/A/AcquireInterface.h"
 #include "Scaleform/M/Mutex.h"
 #include "Scaleform/W/WaitCondition.h"
+#include "Scaleform/W/Waitable.h"
 
 namespace Scaleform
 {

@@ -1,15 +1,15 @@
 #pragma once
 
+#include "RE/B/BGSBodyPartDefs.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTArray.h"
-#include "RE/N/NiPointer.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSTTuple.h"
 #include "RE/D/DamageImpactData.h"
-#include "RE/B/BSPointerHandle.h"
-#include "RE/B/BGSObjectInstance.h"
-#include "RE/B/BGSTypedFormValuePair.h"
-#include "RE/B/BGSEquipIndex.h"
-#include "RE/B/BGSBodyPartDefs.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

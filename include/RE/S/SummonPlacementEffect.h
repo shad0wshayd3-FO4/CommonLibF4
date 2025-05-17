@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/R/ReferenceEffect.h"
-#include "RE/S/SimpleAnimationGraphManagerHolder.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/N/NiPoint.h"
 #include "RE/N/NiPointer.h"
+#include "RE/R/ReferenceEffect.h"
+#include "RE/S/SimpleAnimationGraphManagerHolder.h"
 
 namespace RE
 {

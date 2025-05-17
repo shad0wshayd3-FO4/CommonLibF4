@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTObjectArena.h"
 #include "RE/B/BSFixedString.h"
+#include "RE/B/BSTObjectArena.h"
 #include "RE/B/BSTTuple.h"
 
 namespace RE

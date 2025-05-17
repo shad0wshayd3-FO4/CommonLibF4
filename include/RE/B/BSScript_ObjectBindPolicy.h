@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/B/BSTHashMap.h"
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSSpinLock.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {

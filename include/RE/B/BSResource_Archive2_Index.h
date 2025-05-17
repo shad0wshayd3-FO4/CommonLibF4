@@ -1,14 +1,14 @@
 #pragma once
 
 #include "RE/B/BSBTreeFile.h"
-#include "RE/B/BSTEvent.h"
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSFixedString.h"
-#include "RE/B/BSTSmallIndexScatterTable.h"
-#include "RE/B/BSSpinLock.h"
-#include "RE/B/BSResource_ID.h"
 #include "RE/B/BSResource_AsyncStream.h"
+#include "RE/B/BSResource_ID.h"
 #include "RE/B/BSResource_Stream.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSmallIndexScatterTable.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE::BSResource
 {

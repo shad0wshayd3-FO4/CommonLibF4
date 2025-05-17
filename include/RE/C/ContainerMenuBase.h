@@ -1,12 +1,12 @@
 #pragma once
 
-#include "RE/B/BSTEvent.h"
-#include "RE/G/GameMenuBase.h"
-#include "RE/I/InventoryUserUIInterface.h"
-#include "RE/I/Inventory3DManager.h"
-#include "RE/R/Rumble.h"
-#include "RE/D/DisableHeavyItemsFunc.h"
 #include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/D/DisableHeavyItemsFunc.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/I/Inventory3DManager.h"
+#include "RE/I/InventoryUserUIInterface.h"
+#include "RE/R/Rumble.h"
 
 namespace RE
 {

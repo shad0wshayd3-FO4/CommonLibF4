@@ -1,6 +1,9 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
 #include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BGSTypedKeywordValue.h"
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTDataBuffer.h"
 #include "RE/B/BSTHashMap.h"
@@ -8,9 +11,6 @@
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/B/BGSTypedKeywordValue.h"
-#include "RE/B/BGSAttachParentArray.h"
 
 namespace RE
 {

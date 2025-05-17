@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/B/BSExtraData.h"
-#include "RE/B/BSTArray.h"
 #include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {

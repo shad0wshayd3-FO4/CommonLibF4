@@ -1,9 +1,9 @@
 #pragma once
 
+#include "RE/I/ImageSpaceBaseData.h"
 #include "RE/N/NiPointer.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESTexture.h"
-#include "RE/I/ImageSpaceBaseData.h"
 
 namespace RE
 {

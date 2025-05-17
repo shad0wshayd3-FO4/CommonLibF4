@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/N/NiPoint.h"
-#include "RE/B/BGSObjectInstance.h"
-#include "RE/B/BGSEquipIndex.h"
 #include "RE/B/BGSBodyPartDefs.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {

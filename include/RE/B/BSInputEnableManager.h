@@ -1,13 +1,13 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSSpinLock.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSFixedString.h"
 #include "RE/O/OtherInputEvents.h"
 #include "RE/U/UserEvents.h"
-#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {
@@ -27,7 +27,7 @@ namespace RE
 		{
 		public:
 			// members
-			REX::EnumSet<UserEvents::USER_EVENT_FLAG, std::uint32_t> inputUserEvents;   // 00
+			REX::EnumSet<UserEvents::USER_EVENT_FLAG, std::uint32_t>        inputUserEvents;   // 00
 			REX::EnumSet<OtherInputEvents::OTHER_EVENT_FLAG, std::uint32_t> otherInputEvents;  // 04
 		};
 		static_assert(sizeof(EnableLayer) == 0x08);

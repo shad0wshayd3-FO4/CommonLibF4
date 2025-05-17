@@ -1,14 +1,14 @@
 #pragma once
 
+#include "RE/A/AITimeStamp.h"
 #include "RE/B/BSSimpleList.h"
 #include "RE/B/BSTHashMap.h"
+#include "RE/F/FACTION_CRIME_DATA.h"
+#include "RE/F/FACTION_DATA.h"
+#include "RE/F/FACTION_VENDOR_DATA.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESReactionForm.h"
-#include "RE/F/FACTION_DATA.h"
-#include "RE/F/FACTION_CRIME_DATA.h"
-#include "RE/F/FACTION_VENDOR_DATA.h"
-#include "RE/A/AITimeStamp.h"
 
 namespace RE
 {

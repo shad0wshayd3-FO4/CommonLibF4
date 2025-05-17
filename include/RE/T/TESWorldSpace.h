@@ -1,19 +1,19 @@
 #pragma once
 
+#include "RE/B/BGSLargeRefData.h"
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSSimpleList.h"
+#include "RE/B/BSStringT.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiPointer.h"
+#include "RE/N/NiTMap.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESTexture.h"
-#include "RE/N/NiPoint.h"
 #include "RE/W/WORLD_MAP_DATA.h"
 #include "RE/W/WORLD_MAP_OFFSET_DATA.h"
-#include "RE/B/BGSLargeRefData.h"
-#include "RE/B/BSStringT.h"
-#include "RE/B/BSPointerHandle.h"
-#include "RE/N/NiTMap.h"
 
 namespace RE
 {

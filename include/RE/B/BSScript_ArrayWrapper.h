@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
 #include "RE/B/BSScript_Variable.h"
+#include "RE/B/BSTArray.h"
 #include "RE/M/MemoryManager.h"
 
 namespace RE

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/N/NiShadeProperty.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSSpinLock.h"
+#include "RE/N/NiShadeProperty.h"
 
 namespace RE
 {

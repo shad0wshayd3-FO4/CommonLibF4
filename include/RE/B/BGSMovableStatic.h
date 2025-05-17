@@ -2,8 +2,8 @@
 
 #include "RE/B/BGSDestructibleObjectForm.h"
 #include "RE/B/BGSKeywordForm.h"
-#include "RE/T/TESObjectSTAT.h"
 #include "RE/M/MOVABLE_STATIC_DATA.h"
+#include "RE/T/TESObjectSTAT.h"
 
 namespace RE
 {

@@ -30,12 +30,12 @@ namespace RE
 		}
 
 		// members
-		std::unique_ptr<BSGFxShaderFXTarget>  pickpocketInfo_mc;         // 430
-		std::uint32_t                         valueStolenFromContainer;  // 438
-		bool                                  containerAccessed;         // 43C
-		bool                                  addedTempItems;            // 43D
-		bool                                  plantedExplosiveWeapon;    // 43E
-		bool                                  containerIsAnimatingOpen;  // 43F
+		std::unique_ptr<BSGFxShaderFXTarget> pickpocketInfo_mc;         // 430
+		std::uint32_t                        valueStolenFromContainer;  // 438
+		bool                                 containerAccessed;         // 43C
+		bool                                 addedTempItems;            // 43D
+		bool                                 plantedExplosiveWeapon;    // 43E
+		bool                                 containerIsAnimatingOpen;  // 43F
 	};
 	static_assert(sizeof(ContainerMenu) == 0x440);
 }

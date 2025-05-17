@@ -1,11 +1,11 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTArray.h"
 #include "RE/I/IKeywordFormBase.h"
-#include "RE/T/TESForm.h"
-#include "RE/T/TESCondition.h"
-#include "RE/B/BSPointerHandle.h"
 #include "RE/N/NiTFlags.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

@@ -1,9 +1,9 @@
 #pragma once
 
 #include "RE/B/BSSimpleList.h"
-#include "RE/T/TESForm.h"
-#include "RE/T/TESCondition.h"
 #include "RE/P/PATH_DATA.h"
+#include "RE/T/TESCondition.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "RE/P/PipboyDataGroup.h"
-#include "RE/B/BSTEvent.h"
-#include "RE/B/BSTHashMap.h"
 #include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
 #include "RE/N/NiPoint.h"
+#include "RE/P/PipboyDataGroup.h"
 
 namespace RE
 {

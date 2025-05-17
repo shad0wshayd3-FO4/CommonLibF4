@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/P/PipboySubMenu.h"
 #include "RE/B/BSScaleformExternalTexture.h"
+#include "RE/P/PipboySubMenu.h"
 
 namespace RE
 {

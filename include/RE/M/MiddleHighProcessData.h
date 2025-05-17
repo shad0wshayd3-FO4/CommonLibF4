@@ -13,8 +13,8 @@
 #include "RE/B/BSTTuple.h"
 #include "RE/N/NiPoint.h"
 #include "RE/N/NiPointer.h"
-#include "RE/S/SubgraphIdentifier.h"
 #include "RE/S/SubgraphHandle.h"
+#include "RE/S/SubgraphIdentifier.h"
 
 namespace RE
 {

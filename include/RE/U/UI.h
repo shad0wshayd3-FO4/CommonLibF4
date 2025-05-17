@@ -1,13 +1,13 @@
 #pragma once
 
 #include "RE/B/BSInputEventReceiver.h"
-#include "RE/B/BSTSingleton.h"
-#include "RE/B/BSTEvent.h"
-#include "RE/U/UIMenuEntry.h"
 #include "RE/B/BSSpinLock.h"
-#include "RE/I/IMenu.h"
+#include "RE/B/BSTEvent.h"
 #include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSingleton.h"
 #include "RE/B/BSTimer.h"
+#include "RE/I/IMenu.h"
+#include "RE/U/UIMenuEntry.h"
 
 namespace RE
 {

@@ -1,10 +1,10 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSSpinLock.h"
-#include "RE/B/BSScript_Variable.h"
 #include "RE/B/BSScript_StructTypeInfo.h"
+#include "RE/B/BSScript_Variable.h"
+#include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {

@@ -1,10 +1,10 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSResource_ID.h"
+#include "RE/B/BSShaderData.h"
 #include "RE/B/BSTextureSet.h"
 #include "RE/T/TESBoundObject.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/B/BSShaderData.h"
-#include "RE/B/BSResource_ID.h"
 #include "RE/T/TESTexture.h"
 
 namespace RE

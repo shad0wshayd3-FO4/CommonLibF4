@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/B/BSTEvent.h"
 #include "RE/B/BSSimpleList.h"
-#include "RE/N/NiPointer.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTEvent.h"
 #include "RE/B/BSTTuple.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

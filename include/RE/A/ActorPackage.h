@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSSpinLock.h"
 #include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {

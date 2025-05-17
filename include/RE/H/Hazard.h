@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/N/NiPointer.h"
-#include "RE/T/TESObjectREFR.h"
 #include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSSoundHandle.h"
+#include "RE/N/NiPointer.h"
+#include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {

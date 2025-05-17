@@ -1,11 +1,11 @@
 #pragma once
 
 #include "RE/N/NiBound.h"
+#include "RE/N/NiCollisionObject.h"
 #include "RE/N/NiObjectNET.h"
 #include "RE/N/NiPointer.h"
 #include "RE/N/NiTFlags.h"
 #include "RE/N/NiTransform.h"
-#include "RE/N/NiCollisionObject.h"
 
 namespace RE
 {

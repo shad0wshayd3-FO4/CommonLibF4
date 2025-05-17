@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/I/IMovementInterface.h"
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/N/NiPoint.h"
+#include "RE/I/IMovementInterface.h"
 #include "RE/M/Movement.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {

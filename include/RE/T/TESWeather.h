@@ -1,11 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSDirectionalAmbientLightingColors.h"
 #include "RE/B/BSSimpleList.h"
 #include "RE/B/BSTArray.h"
 #include "RE/T/TESForm.h"
-#include "RE/T/TESTexture1024.h"
-#include "RE/B/BGSDirectionalAmbientLightingColors.h"
 #include "RE/T/TESModel.h"
+#include "RE/T/TESTexture1024.h"
 
 namespace RE
 {

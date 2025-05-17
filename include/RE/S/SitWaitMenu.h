@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/G/GameMenuBase.h"
 #include "RE/B/BSPointerHandle.h"
+#include "RE/G/GameMenuBase.h"
 
 namespace RE
 {

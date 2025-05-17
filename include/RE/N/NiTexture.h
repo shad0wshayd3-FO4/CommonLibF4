@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/N/NiObject.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSResource_Stream.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiObject.h"
 
 namespace RE
 {

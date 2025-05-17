@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/H/HeldStateHandler.h"
 #include "RE/B/BSFixedString.h"
+#include "RE/H/HeldStateHandler.h"
 #include "RE/S/Setting.h"
 
 namespace RE

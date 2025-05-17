@@ -23,14 +23,14 @@ namespace Scaleform::GFx
 		};
 
 		// members
-		Ptr<Render::TreeShape>                             focusRectNode;       // 00
-		ArrayDH<Ptr<InteractiveObject>, kStatMV_Other_Mem> tabableArray;        // 08
-		mutable void*                                      lastFocused;         // 28 - mutable WeakPtr<InteractiveObject>
-		Ptr<CharacterHandle>                               modalClip;           // 30
-		std::uint32_t                                      lastFocusKeyCode;    // 38
-		alignas(0x8) Render::Rect<float>                   lastFocusedRect;     // 40
-		bool                                               focusRectShown;      // 50
-		std::uint8_t                                       tabableArrayStatus;  // 51
+		Ptr<Render::TreeShape>                             focusRectNode;     // 00
+		ArrayDH<Ptr<InteractiveObject>, kStatMV_Other_Mem> tabableArray;      // 08
+		mutable void*                                      lastFocused;       // 28 - mutable WeakPtr<InteractiveObject>
+		Ptr<CharacterHandle>                               modalClip;         // 30
+		std::uint32_t                                      lastFocusKeyCode;  // 38
+		alignas(0x8) Render::Rect<float> lastFocusedRect;                     // 40
+		bool         focusRectShown;                                          // 50
+		std::uint8_t tabableArrayStatus;                                      // 51
 	};
 	static_assert(sizeof(FocusGroupDescr) == 0x60);
 }

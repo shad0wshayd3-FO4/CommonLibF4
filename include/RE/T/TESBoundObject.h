@@ -1,14 +1,14 @@
 #pragma once
 
-#include "RE/N/NiPointer.h"
-#include "RE/T/TESObject.h"
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/N/NiNPShortPoint3.h"
+#include "RE/B/BGSMod.h"
 #include "RE/B/BGSPreviewTransform.h"
 #include "RE/B/BGSSoundTagComponent.h"
-#include "RE/B/BGSMod.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiNPShortPoint3.h"
+#include "RE/N/NiPointer.h"
 #include "RE/T/TBO_InstanceData.h"
+#include "RE/T/TESObject.h"
 
 namespace RE
 {
@@ -44,7 +44,7 @@ namespace RE
 		virtual BGSSoundDescriptorForm* GetSoundForTag(const BSFixedString& a_tag) const;                                                                         // 5D
 		virtual void                    Clone3D(TESObjectREFR* a_requester, NiPointer<NiAVObject>& a_obj3D) { TESObject::Clone3D(a_requester, a_obj3D, false); }  // 5E
 		virtual bool                    ReplaceModel(const char* a_filename);                                                                                     // 5F
-		virtual bool                    GetActivateText(TESObjectREFR* a_itemActivated, BSString& a_resultString);                                         // 60
+		virtual bool                    GetActivateText(TESObjectREFR* a_itemActivated, BSString& a_resultString);                                                // 60
 		virtual COMMAND_REFUSAL_TYPE    CalculateDoFavor(Actor* a_actor, bool a_owned, TESObjectREFR*, float a_moralityMult) const;                               // 61
 		virtual void                    HandleRemoveItemFromContainer(TESObjectREFR*) { return; }                                                                 // 62
 		virtual void                    OnRemove3D(NiAVObject*) { return; }                                                                                       // 63

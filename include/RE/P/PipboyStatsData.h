@@ -2,8 +2,8 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTHashMap.h"
-#include "RE/P/PipboyDataGroup.h"
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/P/PipboyDataGroup.h"
 
 namespace RE
 {

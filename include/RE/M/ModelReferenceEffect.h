@@ -2,9 +2,9 @@
 
 #include "RE/B/BSTEvent.h"
 #include "RE/N/NiPointer.h"
+#include "RE/R/RefAttachTechniqueInput.h"
 #include "RE/R/ReferenceEffect.h"
 #include "RE/S/SimpleAnimationGraphManagerHolder.h"
-#include "RE/R/RefAttachTechniqueInput.h"
 
 namespace RE
 {

@@ -1,11 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSInventoryItem.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSpinLock.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
-#include "RE/B/BSPointerHandle.h"
-#include "RE/B/BGSInventoryItem.h"
 #include "RE/M/MemoryManager.h"
-#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {

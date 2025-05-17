@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
-#include "RE/I/INTERIOR_DATA.h"
 #include "RE/B/BGSDirectionalAmbientLightingColors.h"
+#include "RE/I/INTERIOR_DATA.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

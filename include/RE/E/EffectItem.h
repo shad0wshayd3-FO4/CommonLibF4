@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
 #include "RE/E/EffectItemData.h"
 #include "RE/T/TESCondition.h"
-#include "RE/B/BSStringT.h"
 
 namespace RE
 {

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/N/NiPointer.h"
-#include "RE/B/BGSObjectInstance.h"
 #include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

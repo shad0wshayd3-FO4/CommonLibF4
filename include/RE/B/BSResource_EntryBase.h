@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSTAtomicValue.h"
 #include "RE/B/BSResource_ID.h"
 #include "RE/B/BSResource_Stream.h"
+#include "RE/B/BSTAtomicValue.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE::BSResource
 {

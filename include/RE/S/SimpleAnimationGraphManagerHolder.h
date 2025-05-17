@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSTSmartPointer.h"
 #include "RE/I/IAnimationGraphManagerHolder.h"
 #include "RE/N/NiPointer.h"
-#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {

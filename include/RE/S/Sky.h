@@ -1,12 +1,12 @@
 #pragma once
 
-#include "RE/B/BSTTuple.h"
 #include "RE/B/BSPointerHandle.h"
-#include "RE/N/NiPointer.h"
-#include "RE/N/NiColor.h"
 #include "RE/B/BSSimpleList.h"
-#include "RE/S/SkyEffectController.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPointer.h"
+#include "RE/S/SkyEffectController.h"
 
 namespace RE
 {
@@ -166,7 +166,7 @@ namespace RE
 		SkyEffectController                effectController;                 // 430
 		BSTArray<NiPointer<NiTexture>>     storedCloudTextures;              // 438
 		BSTArray<NiPointer<NiTexture>>     storedWorldMapCloudTextures;      // 450
-		BSTArray<SkyStaticRefData>    skyStaticRefData;                      // 468
+		BSTArray<SkyStaticRefData>         skyStaticRefData;                 // 468
 	};
 	static_assert(sizeof(Sky) == 0x480);
 }

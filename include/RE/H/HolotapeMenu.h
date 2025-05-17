@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSSoundHandle.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/G/GameMenuBase.h"
-#include "RE/B/BSSoundHandle.h"
 
 namespace RE
 {

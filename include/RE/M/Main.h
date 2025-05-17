@@ -1,12 +1,12 @@
 #pragma once
 
+#include "RE/B/BSPackedTaskQueue.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSaveDataSystemUtilityImage.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTTuple.h"
-#include "RE/B/BSPointerHandle.h"
 #include "RE/S/ScrapHeap.h"
-#include "RE/B/BSPackedTaskQueue.h"
-#include "RE/B/BSSaveDataSystemUtilityImage.h"
 
 namespace RE
 {
@@ -57,29 +57,29 @@ namespace RE
 
 		// members
 		BSTArray<BSTTuple<float, ActorHandle>> sortedVisibleHighActors;      // 08
-		std::uint32_t                                     localMapRenderDelay;          // 20
-		bool                                              quitGame;                     // 24
-		bool                                              resetGame;                    // 25
-		bool                                              fullReset;                    // 26
-		bool                                              gameActive;                   // 27
-		bool                                              onIdle;                       // 28
-		bool                                              reloadContent;                // 29
-		bool                                              freezeTime;                   // 2A
-		bool                                              freezeNextFrame;              // 2B
-		REX::W32::HWND                                    hwnd;                         // 30
-		void*                                             instance;                     // 38
-		std::uint32_t                                     threadID;                     // 40
-		ScrapHeap                                         packedTaskHeap;               // 48
-		BSPackedTaskQueue                                 taskQueue;                    // D8
-		ScrapHeap                                         secondaryPackedTaskHeap;      // 108
-		BSPackedTaskQueue                                 secondaryTaskQueue;           // 198
-		TESPageCache*                                     pageCache;                    // 1C8
-		bool                                              inMenuMode;                   // 1D0
-		bool                                              inDialog;                     // 1D1
-		bool                                              renderingMenuBG;              // 1D2
-		bool                                              signOutPending;               // 1D3
-		BSSaveDataSystemUtilityImage                      saveDataBackgroundImages[3];  // 1D8
-		BSSaveDataSystemUtilityImage                      saveDataIconImages[3];        // 220
+		std::uint32_t                          localMapRenderDelay;          // 20
+		bool                                   quitGame;                     // 24
+		bool                                   resetGame;                    // 25
+		bool                                   fullReset;                    // 26
+		bool                                   gameActive;                   // 27
+		bool                                   onIdle;                       // 28
+		bool                                   reloadContent;                // 29
+		bool                                   freezeTime;                   // 2A
+		bool                                   freezeNextFrame;              // 2B
+		REX::W32::HWND                         hwnd;                         // 30
+		void*                                  instance;                     // 38
+		std::uint32_t                          threadID;                     // 40
+		ScrapHeap                              packedTaskHeap;               // 48
+		BSPackedTaskQueue                      taskQueue;                    // D8
+		ScrapHeap                              secondaryPackedTaskHeap;      // 108
+		BSPackedTaskQueue                      secondaryTaskQueue;           // 198
+		TESPageCache*                          pageCache;                    // 1C8
+		bool                                   inMenuMode;                   // 1D0
+		bool                                   inDialog;                     // 1D1
+		bool                                   renderingMenuBG;              // 1D2
+		bool                                   signOutPending;               // 1D3
+		BSSaveDataSystemUtilityImage           saveDataBackgroundImages[3];  // 1D8
+		BSSaveDataSystemUtilityImage           saveDataIconImages[3];        // 220
 	};
 	static_assert(sizeof(Main) == 0x268);
 }

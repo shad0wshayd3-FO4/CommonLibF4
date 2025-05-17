@@ -1,9 +1,9 @@
 #pragma once
 
 #include "RE/N/NiPointer.h"
+#include "RE/O/OBJ_LAND.h"
 #include "RE/T/TESChildCell.h"
 #include "RE/T/TESForm.h"
-#include "RE/O/OBJ_LAND.h"
 
 namespace RE
 {

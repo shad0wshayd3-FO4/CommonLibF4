@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/B/BSTHashMap.h"
-#include "RE/C/ContainerMenuBase.h"
 #include "RE/B/BarterMenuTentativeInventoryUIInterface.h"
+#include "RE/C/ContainerMenuBase.h"
 
 namespace RE
 {
@@ -59,7 +59,7 @@ namespace RE
 
 		// members
 		BSTHashMap<InventoryInterface::Handle*, ItemBarterData*> barteredItems;              // 430
-		std::unique_ptr<BSGFxShaderFXTarget>                    capsTransferInfo_mc;        // 460
+		std::unique_ptr<BSGFxShaderFXTarget>                     capsTransferInfo_mc;        // 460
 		std::unique_ptr<BSGFxShaderFXTarget>                     capsTransferBackground_mc;  // 468
 		ObjectRefHandle                                          vendorChestRef;             // 470
 		ObjectRefHandle                                          vendorActor;                // 474

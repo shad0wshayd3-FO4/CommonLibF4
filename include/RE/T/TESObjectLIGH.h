@@ -7,13 +7,13 @@
 #include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BGSOpenCloseForm.h"
 #include "RE/B/BGSPropertySheet.h"
+#include "RE/N/NiColor.h"
+#include "RE/O/OBJ_LIGH.h"
 #include "RE/T/TESBoundAnimObject.h"
 #include "RE/T/TESIcon.h"
+#include "RE/T/TESTexture.h"
 #include "RE/T/TESValueForm.h"
 #include "RE/T/TESWeightForm.h"
-#include "RE/O/OBJ_LIGH.h"
-#include "RE/T/TESTexture.h"
-#include "RE/N/NiColor.h"
 
 namespace RE
 {

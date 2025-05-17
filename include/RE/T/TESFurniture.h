@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
 #include "RE/B/BSTArray.h"
 #include "RE/T/TESObjectACTI.h"
-#include "RE/B/BGSAttachParentArray.h"
 #include "RE/W/WorkbenchData.h"
 
 namespace RE

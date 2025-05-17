@@ -1,13 +1,13 @@
 #pragma once
 
 #include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BGSTypedKeywordValue.h"
 #include "RE/B/BSTArray.h"
-#include "RE/T/TESDescription.h"
-#include "RE/T/TESForm.h"
 #include "RE/B/BSTTuple.h"
 #include "RE/T/TESCondition.h"
-#include "RE/B/BGSTypedKeywordValue.h"
-#include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/T/TESDescription.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

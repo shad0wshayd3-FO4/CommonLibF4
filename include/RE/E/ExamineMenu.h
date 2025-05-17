@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/W/WorkbenchMenuBase.h"
 #include "RE/E/ExamineConfirmMenu.h"
+#include "RE/W/WorkbenchMenuBase.h"
 
 namespace RE
 {

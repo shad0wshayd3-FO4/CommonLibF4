@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BGSAttachParentArray.h"
 #include "RE/B/BGSBipedObjectForm.h"
 #include "RE/B/BGSBlockBashData.h"
 #include "RE/B/BGSDestructibleObjectForm.h"
@@ -7,16 +8,15 @@
 #include "RE/B/BGSInstanceNamingRulesForm.h"
 #include "RE/B/BGSKeywordForm.h"
 #include "RE/B/BGSPickupPutdownSounds.h"
+#include "RE/B/BGSTypedFormValuePair.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
 #include "RE/T/TESBipedModelForm.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESEnchantableForm.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESRaceForm.h"
-#include "RE/B/BSTTuple.h"
-#include "RE/B/BGSTypedFormValuePair.h"
-#include "RE/B/BGSAttachParentArray.h"
 
 namespace RE
 {

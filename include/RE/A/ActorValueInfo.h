@@ -1,11 +1,11 @@
 #pragma once
 
 #include "RE/A/ActorValue.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSStringT.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/B/BSStringT.h"
-#include "RE/B/BGSLocalizedString.h"
 
 namespace RE
 {

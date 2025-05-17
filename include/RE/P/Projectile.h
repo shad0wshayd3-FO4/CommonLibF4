@@ -1,17 +1,17 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
-#include "RE/N/NiPointer.h"
-#include "RE/T/TESObjectREFR.h"
-#include "RE/N/NiPoint.h"
-#include "RE/B/bhkCollisionQueryResultHandle.h"
 #include "RE/B/BGSBodyPartDefs.h"
-#include "RE/B/BSPointerHandle.h"
-#include "RE/C/CELLJobs.h"
-#include "RE/N/NiTransform.h"
-#include "RE/B/BSSoundHandle.h"
-#include "RE/B/BGSObjectInstance.h"
 #include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/bhkCollisionQueryResultHandle.h"
+#include "RE/C/CELLJobs.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiTransform.h"
+#include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {

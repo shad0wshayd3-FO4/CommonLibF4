@@ -1,16 +1,16 @@
 #pragma once
 
-#include "RE/G/GameMenuBase.h"
-#include "RE/B/BSTEvent.h"
+#include "RE/B/BGSListForm.h"
 #include "RE/B/BSSpinLock.h"
-#include "RE/N/NiPoint.h"
-#include "RE/B/BSTTuple.h"
-#include "RE/D/DisplayItemModel.h"
-#include "RE/I/Inventory3DManager.h"
-#include "RE/N/NiPointer.h"
+#include "RE/B/BSTEvent.h"
 #include "RE/B/BSTInterpolator.h"
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BGSListForm.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/D/DisplayItemModel.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/I/Inventory3DManager.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

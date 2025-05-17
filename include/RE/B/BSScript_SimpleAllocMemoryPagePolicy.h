@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/B/BSScript_IMemoryPagePolicy.h"
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {

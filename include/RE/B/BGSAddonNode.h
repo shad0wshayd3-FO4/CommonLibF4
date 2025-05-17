@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/B/BGSModelMaterialSwap.h"
-#include "RE/T/TESBoundObject.h"
 #include "RE/A/ADDON_DATA.h"
+#include "RE/B/BGSModelMaterialSwap.h"
 #include "RE/B/BSSpinLock.h"
+#include "RE/T/TESBoundObject.h"
 
 namespace RE
 {

@@ -1,9 +1,9 @@
 #pragma once
 
 #include "RE/B/BSTempEffect.h"
-#include "RE/N/NiPointer.h"
-#include "RE/N/NiPoint.h"
 #include "RE/N/NiMatrix3.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/D/DEFAULT_OBJECT.h"
 #include "RE/B/BGSEquipIndex.h"
+#include "RE/D/DEFAULT_OBJECT.h"
 
 namespace RE
 {

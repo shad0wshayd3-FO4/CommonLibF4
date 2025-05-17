@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
-#include "RE/B/BSPointerHandle.h"
 #include "RE/I/InventoryUserUIInterfaceEntry.h"
 
 namespace RE

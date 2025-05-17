@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
 #include "RE/B/BSBatchRenderer.h"
 #include "RE/B/BSEventFlag.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
-#include "RE/N/NiPointer.h"
-#include "RE/B/BSTTuple.h"
 #include "RE/B/BGSTypedFormValuePair.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTTuple.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

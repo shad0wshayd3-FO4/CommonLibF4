@@ -4,9 +4,9 @@
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/S/SimpleAnimationGraphManagerHolder.h"
-#include "RE/N/NiPointer.h"
 #include "RE/H/HUDModes.h"
+#include "RE/N/NiPointer.h"
+#include "RE/S/SimpleAnimationGraphManagerHolder.h"
 
 namespace RE
 {

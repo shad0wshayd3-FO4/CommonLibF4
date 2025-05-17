@@ -1,13 +1,13 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
-#include "RE/N/NiPointer.h"
 #include "RE/B/BSFixedString.h"
-#include "RE/N/NiPoint.h"
-#include "RE/N/NiColor.h"
-#include "Scaleform/G/GFx_Movie.h"
-#include "RE/U/UIShaderFXInfo.h"
 #include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
+#include "RE/U/UIShaderFXInfo.h"
+#include "Scaleform/G/GFx_Movie.h"
 
 namespace RE
 {

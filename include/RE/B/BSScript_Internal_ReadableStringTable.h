@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/B/BSTObjectArena.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTObjectArena.h"
 
 namespace RE
 {

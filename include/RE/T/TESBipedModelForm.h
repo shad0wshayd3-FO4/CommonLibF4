@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/B/BaseFormComponent.h"
-#include "RE/B/BGSModelMaterialSwap.h"
-#include "RE/T/TESIcon.h"
 #include "RE/B/BGSMessageIcon.h"
+#include "RE/B/BGSModelMaterialSwap.h"
+#include "RE/B/BaseFormComponent.h"
+#include "RE/T/TESIcon.h"
 #include "RE/T/TESModelRDT.h"
 
 namespace RE

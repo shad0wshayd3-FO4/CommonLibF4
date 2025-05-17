@@ -1,9 +1,9 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTHashMap.h"
 #include "RE/P/PipboyDataGroup.h"
-#include "RE/B/BSFixedString.h"
 
 namespace RE
 {

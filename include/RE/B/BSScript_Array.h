@@ -3,8 +3,8 @@
 #include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSScript_TypeInfo.h"
 #include "RE/B/BSScript_Variable.h"
-#include "RE/B/BSTArray.h"
 #include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTArray.h"
 
 namespace RE
 {

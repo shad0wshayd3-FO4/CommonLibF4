@@ -1,23 +1,23 @@
 #pragma once
 
-#include "RE/A/ActorState.h"
-#include "RE/A/ActorValueStorage.h"
 #include "RE/A/ACTOR_VISIBILITY_MASK.h"
 #include "RE/A/AIProcess.h"
+#include "RE/A/AITimeStamp.h"
+#include "RE/A/ActorState.h"
+#include "RE/A/ActorValueStorage.h"
+#include "RE/B/BGSEquipIndex.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/C/CFilter.h"
 #include "RE/I/IPostAnimationChannelUpdateFunctor.h"
 #include "RE/M/MagicTarget.h"
-#include "RE/T/TESObjectREFR.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/B/BSTArray.h"
-#include "RE/N/NiPoint.h"
 #include "RE/M/Modifiers.h"
-#include "RE/B/BGSEquipIndex.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiTFlags.h"
-#include "RE/B/BSPointerHandle.h"
-#include "RE/A/AITimeStamp.h"
+#include "RE/T/TESObjectREFR.h"
 
 namespace RE
 {

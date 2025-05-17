@@ -1,17 +1,17 @@
 #pragma once
 
-#include "RE/B/BSTEvent.h"
-#include "RE/B/BSInputEventUser.h"
-#include "RE/B/BSTSingleton.h"
-#include "RE/N/NiRect.h"
 #include "RE/B/BSFixedString.h"
-#include "RE/B/BSSoundHandle.h"
-#include "RE/B/BSTPoint.h"
-#include "RE/N/NiPointer.h"
-#include "RE/I/Inventory3DManager.h"
-#include "RE/P/PipboyRadioController.h"
+#include "RE/B/BSInputEventUser.h"
 #include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSoundHandle.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTPoint.h"
+#include "RE/B/BSTSingleton.h"
+#include "RE/I/Inventory3DManager.h"
 #include "RE/I/InventoryInterface.h"
+#include "RE/N/NiPointer.h"
+#include "RE/N/NiRect.h"
+#include "RE/P/PipboyRadioController.h"
 
 namespace RE
 {

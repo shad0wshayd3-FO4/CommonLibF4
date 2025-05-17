@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/N/NiRefObject.h"
 #include "RE/E/EquippedItem.h"
+#include "RE/N/NiRefObject.h"
 
 namespace RE
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSResource_StreamBase.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE::BSResource
 {

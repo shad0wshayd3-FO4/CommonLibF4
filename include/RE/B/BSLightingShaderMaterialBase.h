@@ -1,9 +1,9 @@
 #pragma once
 
 #include "RE/B/BSShaderMaterial.h"
-#include "RE/N/NiPointer.h"
-#include "RE/N/NiColor.h"
 #include "RE/B/BSSpinLock.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {
@@ -36,7 +36,7 @@ namespace RE
 		virtual void                                  OnLoadTextureSet2(const BSTextureSet* a_textureSet);                       // 10
 		virtual void                                  DoReceiveValuesFromRootMaterial(const BSShaderData& a_rootData);           // 11
 
-		void OnLoadTextureSet(const BSTextureSet* a_textureSet, void* a_inHandles) // TextureDB::Handle
+		void OnLoadTextureSet(const BSTextureSet* a_textureSet, void* a_inHandles)  // TextureDB::Handle
 		{
 			return OnLoadTextureSet1(a_textureSet, a_inHandles);
 		}

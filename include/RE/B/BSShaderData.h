@@ -1,12 +1,12 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSTArray.h"
-#include "RE/N/NiPointer.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/N/NiPoint.h"
-#include "RE/N/NiColor.h"
 #include "RE/N/NiAlphaProperty.h"
+#include "RE/N/NiColor.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "RE/R/ReferenceEffect.h"
 #include "RE/B/BSMagicShaderParticles.h"
+#include "RE/B/BSModelDB.h"
+#include "RE/B/BSSoundHandle.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTTuple.h"
 #include "RE/N/NiPointer.h"
-#include "RE/B/BSModelDB.h"
-#include "RE/B/BSSoundHandle.h"
+#include "RE/R/ReferenceEffect.h"
 
 namespace RE
 {

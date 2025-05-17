@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
 #include "RE/B/BGSLocalizedString.h"
 #include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
 #include "RE/T/TESCondition.h"
 
 namespace RE

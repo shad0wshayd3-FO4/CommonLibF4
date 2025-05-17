@@ -7,13 +7,13 @@
 #include "RE/B/BGSNativeTerminalForm.h"
 #include "RE/B/BGSOpenCloseForm.h"
 #include "RE/B/BGSPropertySheet.h"
+#include "RE/C/CONT_DATA.h"
 #include "RE/T/TESBoundAnimObject.h"
 #include "RE/T/TESContainer.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESMagicCasterForm.h"
 #include "RE/T/TESMagicTargetForm.h"
 #include "RE/T/TESWeightForm.h"
-#include "RE/C/CONT_DATA.h"
 
 namespace RE
 {

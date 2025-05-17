@@ -9,14 +9,14 @@
 #include "Scaleform/L/List.h"
 #include "Scaleform/N/NewOverrideBase.h"
 #include "Scaleform/P/Ptr.h"
+#include "Scaleform/R/Render_Color.h"
 #include "Scaleform/R/Render_ContextImpl_Context.h"
 #include "Scaleform/R/Render_ContextImpl_DisplayHandle.h"
-#include "Scaleform/R/Render_ScreenToWorld.h"
-#include "Scaleform/S/StatBasicValues.h"
-#include "Scaleform/R/Render_Point.h"
 #include "Scaleform/R/Render_Matrix.h"
-#include "Scaleform/R/Render_Color.h"
+#include "Scaleform/R/Render_Point.h"
+#include "Scaleform/R/Render_ScreenToWorld.h"
 #include "Scaleform/R/Render_TreeRoot.h"
+#include "Scaleform/S/StatBasicValues.h"
 
 namespace Scaleform
 {
@@ -140,7 +140,7 @@ namespace Scaleform
 			List<MovieDefRootNode>                               rootMovieDefNodes;         // 0070
 			Ptr<StateBagImpl>                                    stateBag;                  // 0080
 			Ptr<Render::TreeRoot>                                renderRoot;                // 0088
-			Render::ContextImpl::DisplayHandle < Render::TreeRoot>        displayRoot;               // 0090
+			Render::ContextImpl::DisplayHandle<Render::TreeRoot> displayRoot;               // 0090
 			Ptr<Render::TreeContainer>                           topMostRoot;               // 0098
 			Viewport                                             viewport;                  // 00A0
 			float                                                pixelScale;                // 00D4
@@ -150,8 +150,8 @@ namespace Scaleform
 			float                                                viewOffsetY;               // 00E4
 			ScaleModeType                                        viewScaleMode;             // 00E8
 			AlignType                                            viewAlignment;             // 00EC
-			Render::Rect<float>                                 visibleFrameRect;          // 00F0
-			Render::Rect<float>                                 safeRect;                  // 0100
+			Render::Rect<float>                                  visibleFrameRect;          // 00F0
+			Render::Rect<float>                                  safeRect;                  // 0100
 			Render::Matrix2x4<float>                             viewportMatrix;            // 0110
 			Render::ScreenToWorld                                screenToWorld;             // 0130
 			mutable Ptr<Log>                                     cachedLog;                 // 0220
@@ -165,7 +165,7 @@ namespace Scaleform
 			float                                                frameTime;                 // 025C
 			std::uint32_t                                        forceFrameCatchUp;         // 0260
 			std::byte                                            pad268[0x1F60];            // 0268 - GFx::InputEventsQueue
-			Render::Color                                                backgroundColor;           // 21C8
+			Render::Color                                        backgroundColor;           // 21C8
 			std::byte                                            pad21D0[0x50];             // 21D0 - MouseState[1]
 			std::uint32_t                                        mouseCursorCount;          // 2220
 			std::uint32_t                                        controllerCount;           // 2224

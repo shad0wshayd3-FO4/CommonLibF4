@@ -1,10 +1,10 @@
 #pragma once
 
+#include "RE/B/BGSKeyword.h"
+#include "RE/B/BSContainer.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/BaseFormComponent.h"
 #include "RE/I/IKeywordFormBase.h"
-#include "RE/B/BSTArray.h"
-#include "RE/B/BSContainer.h"
-#include "RE/B/BGSKeyword.h"
 
 namespace RE
 {

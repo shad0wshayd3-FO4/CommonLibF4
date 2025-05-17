@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSGraphics.h"
 #include "RE/N/NiAVObject.h"
 #include "RE/N/NiPointer.h"
-#include "RE/B/BSGraphics.h"
 
 namespace RE
 {

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/B/BSSimpleList.h"
-#include "RE/T/TESForm.h"
 #include "RE/N/NiColor.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {

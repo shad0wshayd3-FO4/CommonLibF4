@@ -1,15 +1,15 @@
 #pragma once
 
+#include "RE/B/BSFile.h"
 #include "RE/B/BSSimpleList.h"
+#include "RE/B/BSStringT.h"
+#include "RE/B/BSSystemFile.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTHashMap.h"
 #include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSFile.h"
-#include "RE/N/NiFile.h"
-#include "RE/F/FORM.h"
 #include "RE/F/FILE_HEADER.h"
-#include "RE/B/BSStringT.h"
-#include "RE/B/BSSystemFile.h"
+#include "RE/F/FORM.h"
+#include "RE/N/NiFile.h"
 
 namespace RE
 {
@@ -54,7 +54,7 @@ namespace RE
 		[[nodiscard]] bool GetChunkData(void* a_data, std::uint32_t a_maxSize)
 		{
 			using func_t = bool (TESFile::*)(void*, uint32_t);
-			static REL::Relocation<func_t> func{ ID::TESFile::GetChunkData};
+			static REL::Relocation<func_t> func{ ID::TESFile::GetChunkData };
 			return func(this, a_data, a_maxSize);
 		}
 
@@ -105,7 +105,7 @@ namespace RE
 		[[nodiscard]] bool OpenTES(char* a_path, const char* a_filename, NiFile::OpenMode a_accessMode, bool a_lock)
 		{
 			using func_t = bool (TESFile::*)(char*, const char*, NiFile::OpenMode, bool);
-			static REL::Relocation<func_t> func{ ID::TESFile::OpenTES};
+			static REL::Relocation<func_t> func{ ID::TESFile::OpenTES };
 			return func(this, a_path, a_filename, a_accessMode, a_lock);
 		}
 

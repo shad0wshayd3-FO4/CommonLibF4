@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/B/BSScript_Internal_IFunction.h"
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSFixedString.h"
-#include "RE/B/BSScript_TypeInfo.h"
+#include "RE/B/BSScript_Internal_IFunction.h"
 #include "RE/B/BSScript_Internal_VDescTable.h"
+#include "RE/B/BSScript_TypeInfo.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {

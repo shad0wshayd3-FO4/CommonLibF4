@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/G/GameMenuBase.h"
-#include "RE/N/NiPointer.h"
-#include "RE/N/NiPoint.h"
-#include "RE/N/NiMatrix3.h"
 #include "RE/B/BSSoundHandle.h"
+#include "RE/G/GameMenuBase.h"
+#include "RE/N/NiMatrix3.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

@@ -1,14 +1,14 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSResource_ID.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTempEffect.h"
-#include "RE/N/NiPointer.h"
-#include "RE/N/NiPoint.h"
 #include "RE/N/NiMatrix3.h"
+#include "RE/N/NiPoint.h"
+#include "RE/N/NiPointer.h"
 #include "RE/N/NiQuaternion.h"
-#include "RE/B/BSResource_ID.h"
-#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

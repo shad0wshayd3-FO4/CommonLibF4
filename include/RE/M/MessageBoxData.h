@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
-#include "RE/I/IUIMessageData.h"
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSStringT.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/I/IUIMessageData.h"
 
 namespace RE
 {

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "RE/B/BSIntrusiveRefCounted.h"
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/N/NiPoint.h"
 #include "RE/B/BSExtraData.h"
-#include "RE/E/EXTRA_DATA_TYPE.h"
-#include "RE/B/BaseExtraList.h"
+#include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSSpinLock.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BaseExtraList.h"
+#include "RE/E/EXTRA_DATA_TYPE.h"
 #include "RE/M/MemoryManager.h"
+#include "RE/N/NiPoint.h"
 #include "RE/T/TBO_InstanceData.h"
 
 namespace RE

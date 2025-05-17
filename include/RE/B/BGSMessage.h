@@ -1,11 +1,11 @@
 #pragma once
 
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSSimpleList.h"
 #include "RE/T/TESDescription.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/B/BGSLocalizedString.h"
 
 namespace RE
 {

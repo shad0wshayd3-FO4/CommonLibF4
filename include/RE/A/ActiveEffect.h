@@ -1,12 +1,12 @@
 #pragma once
 
-#include "RE/B/BSIntrusiveRefCounted.h"
-#include "RE/B/BSSimpleList.h"
-#include "RE/N/NiPointer.h"
 #include "RE/A/ActiveEffectReferenceEffectController.h"
+#include "RE/B/BSIntrusiveRefCounted.h"
 #include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSSimpleList.h"
 #include "RE/B/BSSoundHandle.h"
 #include "RE/E/ENUM_FORM_ID.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

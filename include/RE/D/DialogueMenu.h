@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/G/GameMenuBase.h"
-#include "RE/B/BSTSmartPointer.h"
 #include "RE/B/BSTEvent.h"
+#include "RE/B/BSTSmartPointer.h"
+#include "RE/G/GameMenuBase.h"
 #include "RE/H/HUDPerkVaultBoySwfDisplayEvent.h"
 #include "RE/S/ShowingDialogueSpeechChallengeAnim.h"
 

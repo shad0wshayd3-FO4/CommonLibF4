@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
-#include "RE/T/TESFullName.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/D/DIALOGUE_DATA.h"
+#include "RE/T/TESForm.h"
+#include "RE/T/TESFullName.h"
 
 namespace RE
 {

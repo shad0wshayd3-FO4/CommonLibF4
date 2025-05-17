@@ -2,10 +2,10 @@
 
 #include "RE/B/BGSDestructibleObjectForm.h"
 #include "RE/B/BGSPreloadable.h"
+#include "RE/B/BGSProjectileData.h"
 #include "RE/T/TESBoundObject.h"
 #include "RE/T/TESFullName.h"
 #include "RE/T/TESModel.h"
-#include "RE/B/BGSProjectileData.h"
 
 namespace RE
 {

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/N/NiObject.h"
-#include "RE/N/NiPointer.h"
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSShaderProperty.h"
+#include "RE/N/NiObject.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

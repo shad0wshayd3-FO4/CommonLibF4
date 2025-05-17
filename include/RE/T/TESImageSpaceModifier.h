@@ -1,9 +1,9 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiPointer.h"
 #include "RE/T/TESForm.h"
-#include "RE/N/NiPoint.h"
-#include "RE/B/BSStringT.h"
 
 namespace RE
 {
@@ -65,7 +65,7 @@ namespace RE
 		NiPointer<NiFloatInterpolator> depthOfFieldVignetteRadiusInterpolator;    // 2D0
 		NiPointer<NiFloatInterpolator> depthOfFieldVignetteStrengthInterpolator;  // 2D8
 		NiPointer<NiFloatInterpolator> motionBlurStrengthInterpolator;            // 2E0
-		BSString                formEditorID;                              // 2E8
+		BSString                       formEditorID;                              // 2E8
 	};
 	static_assert(sizeof(TESImageSpaceModifier) == 0x2F8);
 }

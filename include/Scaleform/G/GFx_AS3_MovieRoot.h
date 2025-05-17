@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Scaleform/A/AutoPtr.h"
-#include "Scaleform/G/GFx_ASMovieRootBase.h"
 #include "Scaleform/G/GFx_AS3_FlashUI.h"
+#include "Scaleform/G/GFx_ASMovieRootBase.h"
 #include "Scaleform/G/GFx_KeyboardState.h"
 #include "Scaleform/P/Ptr.h"
 

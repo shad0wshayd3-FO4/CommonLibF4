@@ -1,9 +1,9 @@
 #pragma once
 
 #include "RE/B/BSIntrusiveRefCounted.h"
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSTArray.h"
 #include "RE/B/BSScript_Variable.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTSmartPointer.h"
 
 namespace RE
 {

@@ -1,9 +1,9 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

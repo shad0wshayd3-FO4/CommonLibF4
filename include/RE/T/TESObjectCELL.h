@@ -1,12 +1,12 @@
 #pragma once
 
+#include "RE/B/BSSpinLock.h"
 #include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/BSTSmartPointer.h"
 #include "RE/N/NiPointer.h"
 #include "RE/T/TESForm.h"
 #include "RE/T/TESFullName.h"
-#include "RE/B/BSTSmartPointer.h"
-#include "RE/B/BSTHashMap.h"
-#include "RE/B/BSSpinLock.h"
 
 namespace RE
 {

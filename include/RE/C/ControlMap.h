@@ -1,8 +1,8 @@
 #pragma once
 
+#include "RE/B/BSFixedString.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTSingleton.h"
-#include "RE/B/BSFixedString.h"
 #include "RE/I/INPUT_DEVICE.h"
 #include "RE/U/UserEvents.h"
 

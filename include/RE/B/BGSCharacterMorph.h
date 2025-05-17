@@ -1,12 +1,12 @@
 #pragma once
 
-#include "RE/B/BSTArray.h"
-#include "RE/B/BSTHashMap.h"
-#include "RE/B/BSFixedString.h"
-#include "RE/N/NiPoint.h"
-#include "RE/B/BGSLocalizedString.h"
 #include "RE/B/BGSCharacterTint.h"
 #include "RE/B/BGSHeadPart.h"
+#include "RE/B/BGSLocalizedString.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/B/BSTArray.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {

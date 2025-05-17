@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/N/NiPointer.h"
-#include "RE/B/BSModelDB.h"
 #include "RE/B/BGSObjectInstance.h"
+#include "RE/B/BSModelDB.h"
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/N/NiPointer.h"
 
 namespace RE
 {

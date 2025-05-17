@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/N/NiRefObject.h"
-#include "RE/B/BSFixedString.h"
 #include "RE/A/AttackData.h"
+#include "RE/B/BSFixedString.h"
+#include "RE/N/NiRefObject.h"
 
 namespace RE
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/T/TESForm.h"
 #include "RE/B/BSStringT.h"
+#include "RE/T/TESForm.h"
 
 namespace RE
 {
@@ -17,7 +17,7 @@ namespace RE
 
 		// members
 		BSString formEditorID;  // 20
-		float           value;         // 30
+		float    value;         // 30
 	};
 	static_assert(sizeof(TESGlobal) == 0x38);
 }

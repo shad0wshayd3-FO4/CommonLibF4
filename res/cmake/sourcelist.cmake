@@ -419,6 +419,7 @@ set(SOURCES
 	include/RE/B/BSTempEffectParticle.h
 	include/RE/B/BSTempEffectSPG.h
 	include/RE/B/BSTempEffectScreenSpaceDecal.h
+	include/RE/B/BSTempEffectUtil.h
 	include/RE/B/BSTempEffectWeaponBlood.h
 	include/RE/B/BSTerrainEffect.h
 	include/RE/B/BSTextureDB.h

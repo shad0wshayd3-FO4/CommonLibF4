@@ -10,6 +10,7 @@
 namespace RE
 {
 	class BSTriShape;
+	class ImageSpaceEffect;
 
 	class ImageSpaceManager
 	{

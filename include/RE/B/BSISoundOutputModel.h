@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class BSIAudioEffectChain;
+
 	class __declspec(novtable) BSISoundOutputModel
 	{
 	public:

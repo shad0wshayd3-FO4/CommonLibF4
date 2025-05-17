@@ -5,12 +5,12 @@
 #include "RE/N/NiPointer.h"
 #include "RE/N/NiTArray.h"
 #include "RE/N/NiTimeController.h"
+#include "RE/N/NiControllerSequence.h"
 
 namespace RE
 {
 	class BSAnimNoteListener;
 	class NiAVObjectPalette;
-	class NiControllerSequence;
 
 	class NiControllerManager :
 		public NiTimeController  // 00

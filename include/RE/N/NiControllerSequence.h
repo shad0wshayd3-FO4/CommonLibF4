@@ -2,10 +2,12 @@
 
 #include "RE/B/BSFixedString.h"
 #include "RE/N/NiPointer.h"
+#include "RE/N/NiObject.h"
 
 namespace RE
 {
 	class BSAnimNote;
+	class NiAVObject;
 	class NiControllerManager;
 	class NiStringPalette;
 	class NiTextKeyExtraData;

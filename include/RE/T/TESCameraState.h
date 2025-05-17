@@ -5,6 +5,7 @@
 #include "RE/B/BSTSmartPointer.h"
 #include "RE/N/NiPoint.h"
 #include "RE/N/NiQuaternion.h"
+#include "RE/C/CameraStates.h"
 
 namespace RE
 {

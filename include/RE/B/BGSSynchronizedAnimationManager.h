@@ -5,6 +5,7 @@
 #include "RE/B/BSTEvent.h"
 #include "RE/B/BSTSingleton.h"
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/B/BSPointerHandle.h"
 
 namespace RE
 {

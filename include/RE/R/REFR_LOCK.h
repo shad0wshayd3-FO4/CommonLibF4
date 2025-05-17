@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	enum class LOCK_LEVEL;
+
 	class REFR_LOCK
 	{
 	public:

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Scaleform/A/Array.h"
+#include "Scaleform/A/ArrayPaged.h"
 #include "Scaleform/G/GFx_AS3_CallFrame.h"
 #include "Scaleform/G/GFx_ASString.h"
 #include "Scaleform/N/NewOverrideBase.h"

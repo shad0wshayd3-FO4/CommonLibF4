@@ -4,6 +4,9 @@
 
 namespace RE
 {
+	class NiAVObject;
+	class NiNode;
+
 	namespace BSAttachTechniques
 	{
 		class __declspec(novtable) AttachTechniqueInput

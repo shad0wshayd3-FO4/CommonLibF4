@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class ContainerItemExtra;
+
 	class LEVELED_OBJECT
 	{
 	public:

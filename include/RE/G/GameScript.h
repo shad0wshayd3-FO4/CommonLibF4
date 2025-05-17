@@ -25,6 +25,7 @@
 #include "RE/B/BSTTuple.h"
 #include "RE/B/BSTimer.h"
 #include "RE/M/MemoryManager.h"
+#include "RE/B/BSScript_IVirtualMachine.h"
 
 namespace RE
 {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/E/ENUM_FORM_ID.h"
+
 namespace RE
 {
 	class FORM_ENUM_STRING

@@ -2,13 +2,12 @@
 
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSTTuple.h"
+#include "RE/B/BSScript_TypeInfo.h"
 
 namespace RE
 {
 	namespace BSScript
 	{
-		class TypeInfo;
-
 		namespace Internal
 		{
 			class VDescTable

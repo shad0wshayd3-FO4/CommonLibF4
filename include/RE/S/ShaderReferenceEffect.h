@@ -10,6 +10,7 @@
 
 namespace RE
 {
+	class BSEffectShaderData;
 	class NiAVObject;
 	class NiSourceTexture;
 	class NiTexture;

@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class BGSPerkEntry;
+
 	namespace PerkValueEvents
 	{
 		enum class Type : std::int32_t

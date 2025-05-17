@@ -1,5 +1,7 @@
 #pragma once
 
+#include "RE/B/BGSDirectionalAmbientLightingColors.h"
+
 namespace RE
 {
 	class INTERIOR_DATA

@@ -21,6 +21,7 @@ namespace RE
 	enum class PACKAGE_OBJECT_TYPE;
 	class ActorInventoryEvent;
 	class AIPerkData;
+	class bhkCharacterController;
 	class bhkNPCollisionObject;
 	class bhkRagdollPenetrationUtil;
 	class BSAnimationGraphManager;

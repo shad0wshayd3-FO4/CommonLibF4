@@ -4,6 +4,8 @@
 
 namespace Scaleform::GFx
 {
+	class ASStringNode;
+
 	class __declspec(novtable) alignas(0x08) ASStringManager :
 		public RefCountBase<ASStringManager, 324>  // 00
 	{

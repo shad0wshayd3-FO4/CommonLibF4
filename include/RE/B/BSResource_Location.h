@@ -7,6 +7,7 @@
 namespace RE::BSResource
 {
 	class AsyncStream;
+	class Info;
 	class LocationTraverser;
 	class Stream;
 

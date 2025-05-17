@@ -12,12 +12,12 @@
 #include "RE/N/NiPointer.h"
 #include "RE/N/NiRect.h"
 #include "RE/P/PipboyRadioController.h"
+#include "RE/I/IsPipboyActiveEvent.h"
 
 namespace RE
 {
 	class BSTriShape;
 	class IMenu;
-	class IsPipboyActiveEvent;
 	class BSAnimationGraphEvent;
 
 	class __declspec(novtable) PipboyManager :

@@ -8,7 +8,7 @@
 namespace RE
 {
 	class BSFurnitureMarker;
-	class TESContianer;
+	class TESContainer;
 
 	class __declspec(novtable) TESFurniture :
 		public TESObjectACTI  // 000

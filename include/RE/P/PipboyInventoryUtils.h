@@ -2,6 +2,7 @@
 
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTTuple.h"
+#include "RE/B/BGSInventoryItem.h"
 
 namespace RE
 {

@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	enum class ACTOR_LIFE_STATE;
+
 	namespace PlayerLifeStateChanged
 	{
 		class Event

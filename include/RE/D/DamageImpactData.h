@@ -5,6 +5,8 @@
 
 namespace RE
 {
+	class bhkNPCollisionObject;
+
 	class DamageImpactData
 	{
 		// members

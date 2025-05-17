@@ -5,6 +5,7 @@
 #include "Scaleform/G/GFx_Resource.h"
 #include "Scaleform/G/GFx_StateBag.h"
 #include "Scaleform/R/Render_Point.h"
+#include "Scaleform/R/Render_Rect.h"
 
 namespace Scaleform
 {

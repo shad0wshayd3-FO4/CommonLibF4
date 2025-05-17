@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Scaleform/S/StatBasicValues.h"
+
 namespace Scaleform
 {
 	enum StatGroup : std::int32_t

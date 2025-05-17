@@ -5,6 +5,8 @@
 
 namespace RE
 {
+	class BSNavmeshInfo;
+
 	class __declspec(novtable) BSNavmeshInfoMap :
 		public BSTSingletonExplicit<BSNavmeshInfoMap>  // 0
 	{

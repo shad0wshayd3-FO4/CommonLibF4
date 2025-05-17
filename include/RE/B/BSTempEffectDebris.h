@@ -4,6 +4,7 @@
 #include "RE/N/NiMatrix3.h"
 #include "RE/N/NiPoint.h"
 #include "RE/N/NiPointer.h"
+#include "RE/N/NiAVObject.h"
 
 namespace RE
 {

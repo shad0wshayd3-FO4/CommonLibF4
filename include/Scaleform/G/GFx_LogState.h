@@ -2,6 +2,7 @@
 
 #include "Scaleform/G/GFx_LogBase.h"
 #include "Scaleform/G/GFx_State.h"
+#include "Scaleform/L/Log.h"
 #include "Scaleform/P/Ptr.h"
 
 namespace Scaleform::GFx

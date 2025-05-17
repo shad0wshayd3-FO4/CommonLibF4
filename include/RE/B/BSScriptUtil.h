@@ -7,7 +7,10 @@
 #include "RE/B/BSScript_Object.h"
 #include "RE/B/BSScript_ObjectTypeInfo.h"
 #include "RE/B/BSScript_StackFrame.h"
+#include "RE/B/BSScript_TypeInfo.h"
+#include "RE/E/ENUM_FORM_ID.h"
 #include "RE/G/GameScript.h"
+#include "RE/T/TESObjectREFR.h"
 
 namespace RE::BSScript
 {

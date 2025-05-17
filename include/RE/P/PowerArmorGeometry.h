@@ -7,17 +7,17 @@
 #include "RE/H/HUDModes.h"
 #include "RE/N/NiPointer.h"
 #include "RE/S/SimpleAnimationGraphManagerHolder.h"
+#include "RE/C/CurrentRadiationSourceCount.h"
+#include "RE/C/CurrentRadsDisplayMagnitude.h"
+#include "RE/C/CurrentRadsPercentOfLethal.h"
+#include "RE/P/PipboyLightEvent.h"
+#include "RE/P/PlayerAmmoCountEvent.h"
+#include "RE/P/PlayerWeaponReloadEvent.h"
 
 namespace RE
 {
-	class CurrentRadiationSourceCount;
-	class CurrentRadsDisplayMagnitude;
-	class CurrentRadsPercentOfLethal;
 	class NiAVObject;
 	class NiNode;
-	class PipboyLightEvent;
-	class PlayerAmmoCountEvent;
-	class PlayerWeaponReloadEvent;
 
 	namespace ExitPowerArmor
 	{

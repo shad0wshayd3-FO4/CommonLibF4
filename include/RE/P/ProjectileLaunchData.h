@@ -7,6 +7,8 @@
 
 namespace RE
 {
+	class CombatController;
+
 	namespace MagicSystem
 	{
 		enum class CastingSource;

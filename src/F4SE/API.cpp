@@ -48,9 +48,6 @@ namespace F4SE
 
 			static std::once_flag once;
 			std::call_once(once, [&]() {
-				const auto mod = REL::Module::GetSingleton();
-				mod->load(L"Fallout4.exe"sv, L"F4SE_RUNTIME"sv);
-
 				const auto iddb = REL::IDDB::GetSingleton();
 				iddb->load("Data/F4SE/Plugins/version-{}.bin"sv);
 

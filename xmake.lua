@@ -39,11 +39,12 @@ option("rex_toml", function()
 end)
 
 -- require packages
-add_requires("commonlib-shared d72a3d06def7cbcb960c5a15db0e7c4fceb36463", { configs = {
+add_requires("commonlib-shared 2c5ddece35e5e4acaea9df45c6e2c35dfefb9575", { configs = {
     rex_ini = has_config("rex_ini"),
     rex_json = has_config("rex_json"),
     rex_toml = has_config("rex_toml"),
-    xse_xbyak = has_config("obse_xbyak")
+    xse_mmio = true,
+    xse_xbyak = has_config("f4se_xbyak")
 } })
 
 -- define targets
@@ -53,9 +54,6 @@ target("commonlibf4", function()
 
     -- set build by default
     set_default(os.scriptdir() == os.projectdir())
-
-    -- set build group
-    set_group("commonlibf4")
 
     -- add packages
     add_packages("commonlib-shared", { public = true })

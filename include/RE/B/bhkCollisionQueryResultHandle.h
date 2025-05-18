@@ -6,7 +6,7 @@ namespace RE
 	{
 	public:
 		// members
-		std::uint64_t data;  // 0
+		std::uint64_t data;  // 00
 	};
-	static_assert(sizeof(bhkCollisionQueryResultHandle) == 0x8);
+	static_assert(sizeof(bhkCollisionQueryResultHandle) == 0x08);
 }

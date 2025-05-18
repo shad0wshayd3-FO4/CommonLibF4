@@ -452,7 +452,19 @@ set(SOURCES
 	include/RE/B/BooksRead.h
 	include/RE/B/ButtonEvent.h
 	include/RE/B/ButtonHintBar.h
+	include/RE/B/bhkCharProxyManager.h
+	include/RE/B/bhkCharRigidBodyManager.h
+	include/RE/B/bhkCharacterController.h
 	include/RE/B/bhkCollisionQueryResultHandle.h
+	include/RE/B/bhkIWorldStepListener.h
+	include/RE/B/bhkNPCollisionObject.h
+	include/RE/B/bhkNPCollisionObjectBase.h
+	include/RE/B/bhkNPCollisionObjectUnlinked.h
+	include/RE/B/bhkPhysicsSystem.h
+	include/RE/B/bhkPickData.h
+	include/RE/B/bhkUtilFunctions.h
+	include/RE/B/bhkWorld.h
+	include/RE/B/bhkWorldM.h
 	include/RE/C/CALCED_OBJECT.h
 	include/RE/C/CELLJobs.h
 	include/RE/C/CFilter.h
@@ -611,6 +623,57 @@ set(SOURCES
 	include/RE/H/HolotapeMenu.h
 	include/RE/H/HolotapeStateChanged.h
 	include/RE/H/HourPassed.h
+	include/RE/H/hkAabb.h
+	include/RE/H/hkArray.h
+	include/RE/H/hkBaseObject.h
+	include/RE/H/hkBitField.h
+	include/RE/H/hkBlockStream.h
+	include/RE/H/hkBlockStreamBase.h
+	include/RE/H/hkBool.h
+	include/RE/H/hkContainerHeapAllocator.h
+	include/RE/H/hkCriticalSection.h
+	include/RE/H/hkEnum.h
+	include/RE/H/hkFlags.h
+	include/RE/H/hkHandle.h
+	include/RE/H/hkIntSpaceUtil.h
+	include/RE/H/hkMap.h
+	include/RE/H/hkMemoryAllocator.h
+	include/RE/H/hkPadSpu.h
+	include/RE/H/hkPtrAndInt.h
+	include/RE/H/hkRefPtr.h
+	include/RE/H/hkReferencedObject.h
+	include/RE/H/hkSignal.h
+	include/RE/H/hkSimdFloat32.h
+	include/RE/H/hkSlot.h
+	include/RE/H/hkStepInfo.h
+	include/RE/H/hkVector4f.h
+	include/RE/H/hkcdRay.h
+	include/RE/H/hkcdRayQueryFlags.h
+	include/RE/H/hknpBodyId.h
+	include/RE/H/hknpBodyManager.h
+	include/RE/H/hknpCharacterContext.h
+	include/RE/H/hknpCharacterState.h
+	include/RE/H/hknpCharacterSurfaceInfo.h
+	include/RE/H/hknpCollisionQuery.h
+	include/RE/H/hknpCollisionQueryType.h
+	include/RE/H/hknpCollisionResult.h
+	include/RE/H/hknpConstraintIdDiscriminant.h
+	include/RE/H/hknpConstraintManager.h
+	include/RE/H/hknpContactSolverType.h
+	include/RE/H/hknpMaterialId.h
+	include/RE/H/hknpMotionId.h
+	include/RE/H/hknpMotionManager.h
+	include/RE/H/hknpMotionPropertiesId.h
+	include/RE/H/hknpQueryFilterData.h
+	include/RE/H/hknpRayCastQuery.h
+	include/RE/H/hknpRayCastQueryResult.h
+	include/RE/H/hknpShapeManager.h
+	include/RE/H/hknpShapeSignals.h
+	include/RE/H/hknpSolverInfo.h
+	include/RE/H/hknpThreadSafetyCheck.h
+	include/RE/H/hknpWorld.h
+	include/RE/H/hknpWorldCinfo.h
+	include/RE/H/hknpWorldSignals.h
 	include/RE/I/IAnimationGraphManagerHolder.h
 	include/RE/I/IDEvent.h
 	include/RE/I/IDLE_DATA.h

@@ -334,6 +334,50 @@ namespace RE::ID
 		inline constexpr REL::ID Show{ 2197776 };
 	}
 
+	namespace bhkNPCollisionObject
+	{
+		inline constexpr REL::ID CopyMembers{ 2277907 };
+		inline constexpr REL::ID GetBody{ 2277926 };
+		inline constexpr REL::ID GetBodyId{ 2277928 };
+		inline constexpr REL::ID GetShape{ 315427 };
+		inline constexpr REL::ID GetTransform{ 1508189 };
+		inline constexpr REL::ID SetMotionType{ 2277913 };
+		inline constexpr REL::ID SetTransform{ 178085 };
+		inline constexpr REL::ID Getbhk{ 2277919 };
+	}
+
+	namespace bhkPhysicsSystem
+	{
+		inline constexpr REL::ID AddToWorld{ 2278019 };
+		inline constexpr REL::ID CopyMembers{ 2278007 };
+	}
+
+	namespace bhkPickData
+	{
+		inline constexpr REL::ID ctor{ 526783 };
+		inline constexpr REL::ID SetStartEnd{ 747470 };
+		inline constexpr REL::ID Reset{ 438299 };
+		inline constexpr REL::ID HasHit{ 1181584 };
+		inline constexpr REL::ID GetHitFraction{ 476687 };
+		inline constexpr REL::ID GetAllCollectorRayHitSize{ 1288513 };
+		inline constexpr REL::ID GetAllCollectorRayHitAt{ 583997 };
+		inline constexpr REL::ID SortAllCollectorHits{ 1274842 };
+		inline constexpr REL::ID GetNiAVObject{ 863406 };
+		inline constexpr REL::ID GetBody{ 1223055 };
+	}
+
+	namespace bhkUtilFunctions
+	{
+		inline constexpr REL::ID FindFirstCollisionObject{ 2278093 };
+	}
+
+	namespace bhkWorld
+	{
+		inline constexpr REL::ID AddPhysicsSystem{ 2277752 };
+		inline constexpr REL::ID RemovePhysicsSystem{ 2277753 };
+		inline constexpr REL::ID RemoveObjects{ 2277721 };
+	}
+
 	namespace BIPOBJECT
 	{
 		inline constexpr REL::ID dtor{ 765242 };

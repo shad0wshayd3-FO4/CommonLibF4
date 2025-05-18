@@ -1,17 +1,17 @@
 #pragma once
 
-#include "RE/B/bhkNPCollisionObjectUnlinked.h"
-#include "RE/B/BSTEvent.h"
-#include "RE/H/hkVector4f.h"
-#include "RE/H/hkStepInfo.h"
 #include "RE/B/BSBound.h"
-#include "RE/N/NiPoint.h"
-#include "RE/H/hknpCharacterSurfaceInfo.h"
+#include "RE/B/BSTEvent.h"
+#include "RE/B/BSTHashMap.h"
+#include "RE/B/bhkNPCollisionObjectUnlinked.h"
+#include "RE/H/hkRefPtr.h"
+#include "RE/H/hkStepInfo.h"
+#include "RE/H/hkVector4f.h"
 #include "RE/H/hknpCharacterContext.h"
 #include "RE/H/hknpCharacterState.h"
-#include "RE/H/hkRefPtr.h"
+#include "RE/H/hknpCharacterSurfaceInfo.h"
+#include "RE/N/NiPoint.h"
 #include "RE/N/NiPointer.h"
-#include "RE/B/BSTHashMap.h"
 
 namespace RE
 {

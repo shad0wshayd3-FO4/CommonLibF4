@@ -7,7 +7,7 @@ namespace RE
 {
 	class bhkNPCollisionObject;
 
-    class __declspec(novtable) bhkIWorldStepListener
+	class __declspec(novtable) bhkIWorldStepListener
 	{
 	public:
 		inline static constexpr auto RTTI{ RTTI::bhkIWorldStepListener };

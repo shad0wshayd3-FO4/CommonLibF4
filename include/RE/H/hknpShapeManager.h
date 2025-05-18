@@ -2,8 +2,8 @@
 
 #include "RE/H/hkArray.h"
 #include "RE/H/hkBool.h"
-#include "RE/H/hknpBodyId.h"
 #include "RE/H/hkFlags.h"
+#include "RE/H/hknpBodyId.h"
 #include "RE/H/hknpShapeSignals.h"
 
 namespace RE

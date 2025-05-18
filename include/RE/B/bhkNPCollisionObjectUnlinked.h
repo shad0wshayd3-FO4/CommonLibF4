@@ -1,13 +1,13 @@
 #pragma once
 
+#include "RE/B/BSTHashMap.h"
 #include "RE/B/bhkNPCollisionObject.h"
 #include "RE/N/NiExtraData.h"
-#include "RE/B/BSTHashMap.h"
 #include "RE/N/NiPointer.h"
 
 namespace RE
 {
-    class __declspec(novtable) bhkNPCollisionObjectUnlinked :
+	class __declspec(novtable) bhkNPCollisionObjectUnlinked :
 		public bhkNPCollisionObject  // 00
 	{
 	public:

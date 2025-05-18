@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/N/NiObject.h"
-#include "RE/H/hkRefPtr.h"
 #include "RE/B/BSTArray.h"
 #include "RE/H/hkArray.h"
+#include "RE/H/hkRefPtr.h"
+#include "RE/N/NiObject.h"
 
 namespace RE
 {

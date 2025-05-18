@@ -1,14 +1,14 @@
 #pragma once
 
-#include "RE/B/bhkIWorldStepListener.h"
 #include "RE/B/BSTArray.h"
 #include "RE/B/BSTHashMap.h"
+#include "RE/B/bhkIWorldStepListener.h"
 
 namespace RE
 {
 	class bhkCharProxyController;
 
-    class __declspec(novtable) bhkCharProxyManager :
+	class __declspec(novtable) bhkCharProxyManager :
 		public bhkIWorldStepListener
 	{
 	public:

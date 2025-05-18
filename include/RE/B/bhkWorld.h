@@ -1,13 +1,13 @@
 #pragma once
 
-#include "RE/N/NiObject.h"
-#include "RE/H/hkRefPtr.h"
-#include "RE/B/BSTArray.h"
 #include "RE/B/BSSpinLock.h"
-#include "RE/H/hkVector4f.h"
+#include "RE/B/BSTArray.h"
 #include "RE/B/bhkCharProxyManager.h"
 #include "RE/B/bhkCharRigidBodyManager.h"
+#include "RE/H/hkRefPtr.h"
+#include "RE/H/hkVector4f.h"
 #include "RE/H/hknpWorld.h"
+#include "RE/N/NiObject.h"
 
 namespace RE
 {

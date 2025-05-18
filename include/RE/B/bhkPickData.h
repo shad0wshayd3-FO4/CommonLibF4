@@ -1,10 +1,10 @@
 #pragma once
 
-#include "RE/N/NiPoint.h"
-#include "RE/M/MemoryManager.h"
+#include "RE/H/hkRefPtr.h"
 #include "RE/H/hknpRayCastQuery.h"
 #include "RE/H/hknpRayCastQueryResult.h"
-#include "RE/H/hkRefPtr.h"
+#include "RE/M/MemoryManager.h"
+#include "RE/N/NiPoint.h"
 
 namespace RE
 {
@@ -91,14 +91,14 @@ namespace RE
 		F4_HEAP_REDEFINE_NEW(bhkPickData);
 
 		// members
-		hknpRayCastQuery             castQuery;			   // 00
-		hknpRayCastQueryResult       result;			   // 60
-		hkRefPtr<hknpBSWorld>        castWorld;			   // C0
+		hknpRayCastQuery             castQuery;            // 00
+		hknpRayCastQueryResult       result;               // 60
+		hkRefPtr<hknpBSWorld>        castWorld;            // C0
 		std::uint64_t                customCollideLayers;  // C8
-		hknpCollisionQueryCollector* collector;			   // D0
-		COLLECTOR_TYPE               collectorType;		   // D8
-		bool                         incrementPickTime;	   // DC
-		bool                         allowFailedPicks;	   // DD
+		hknpCollisionQueryCollector* collector;            // D0
+		COLLECTOR_TYPE               collectorType;        // D8
+		bool                         incrementPickTime;    // DC
+		bool                         allowFailedPicks;     // DD
 		bool                         pickFailed;           // DE
 	};
 	static_assert(sizeof(bhkPickData) == 0xE0);

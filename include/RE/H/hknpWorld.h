@@ -7,6 +7,7 @@
 #include "RE/H/hkEnum.h"
 #include "RE/H/hkIntSpaceUtil.h"
 #include "RE/H/hkRefPtr.h"
+#include "RE/H/hkReferencedObject.h"
 #include "RE/H/hkSimdFloat32.h"
 #include "RE/H/hkVector4f.h"
 #include "RE/H/hknpBodyManager.h"
@@ -16,9 +17,8 @@
 #include "RE/H/hknpShapeManager.h"
 #include "RE/H/hknpSolverInfo.h"
 #include "RE/H/hknpThreadSafetyCheck.h"
-#include "RE/H/hknpWorldSignals.h"
-#include "RE/H/hkReferencedObject.h"
 #include "RE/H/hknpWorldCinfo.h"
+#include "RE/H/hknpWorldSignals.h"
 
 namespace RE
 {

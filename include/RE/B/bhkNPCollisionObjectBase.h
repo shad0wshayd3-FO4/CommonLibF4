@@ -5,7 +5,7 @@
 
 namespace RE
 {
-    class __declspec(novtable) bhkNPCollisionObjectBase :
+	class __declspec(novtable) bhkNPCollisionObjectBase :
 		public NiCollisionObject  // 00
 	{
 	public:

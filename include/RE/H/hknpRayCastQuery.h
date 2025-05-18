@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/H/hknpCollisionQuery.h"
-#include "RE/H/hkcdRay.h"
 #include "RE/H/hkFlags.h"
+#include "RE/H/hkcdRay.h"
 #include "RE/H/hkcdRayQueryFlags.h"
+#include "RE/H/hknpCollisionQuery.h"
 
 namespace RE
 {

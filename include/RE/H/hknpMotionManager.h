@@ -1,8 +1,8 @@
 #pragma once
 
 #include "RE/H/hkArray.h"
-#include "RE/H/hknpMotionId.h"
 #include "RE/H/hkBool.h"
+#include "RE/H/hknpMotionId.h"
 
 namespace RE
 {

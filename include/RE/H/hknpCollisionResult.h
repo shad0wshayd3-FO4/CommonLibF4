@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/H/hkVector4f.h"
 #include "RE/H/hkPadSpu.h"
-#include "RE/H/hknpCollisionQueryType.h"
+#include "RE/H/hkVector4f.h"
 #include "RE/H/hknpBodyId.h"
+#include "RE/H/hknpCollisionQueryType.h"
 #include "RE/H/hknpMaterialId.h"
 
 namespace RE

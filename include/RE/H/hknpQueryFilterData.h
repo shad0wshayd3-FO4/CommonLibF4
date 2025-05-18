@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/H/hknpMaterialId.h"
 #include "RE/H/hkPadSpu.h"
+#include "RE/H/hknpMaterialId.h"
 
 namespace RE
 {

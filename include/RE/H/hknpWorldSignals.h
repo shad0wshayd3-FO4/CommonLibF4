@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RE/H/hkSignal.h"
-#include "RE/H/hkRefPtr.h"
 #include "RE/H/hkHandle.h"
+#include "RE/H/hkRefPtr.h"
+#include "RE/H/hkSignal.h"
 #include "RE/H/hknpConstraintIdDiscriminant.h"
 
 namespace RE

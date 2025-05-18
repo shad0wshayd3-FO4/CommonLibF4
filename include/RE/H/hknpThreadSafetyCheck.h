@@ -1,7 +1,7 @@
 #pragma once
 
-#include "RE/H/hkCriticalSection.h"
 #include "RE/H/hkBool.h"
+#include "RE/H/hkCriticalSection.h"
 
 namespace RE
 {

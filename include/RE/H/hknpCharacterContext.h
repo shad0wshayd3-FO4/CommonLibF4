@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RE/H/hkReferencedObject.h"
-#include "RE/H/hknpCharacterState.h"
 #include "RE/H/hkBool.h"
+#include "RE/H/hkReferencedObject.h"
 #include "RE/H/hkVector4f.h"
+#include "RE/H/hknpCharacterState.h"
 
 namespace RE
 {

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "RE/H/hkBitField.h"
 #include "RE/H/hkArray.h"
+#include "RE/H/hkBitField.h"
 #include "RE/H/hkBool.h"
-#include "RE/H/hknpBodyId.h"
-#include "RE/H/hkMap.h"
 #include "RE/H/hkFlags.h"
+#include "RE/H/hkMap.h"
+#include "RE/H/hknpBodyId.h"
 
 namespace RE
 {

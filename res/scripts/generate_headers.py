@@ -1,11 +1,7 @@
 import os
 import pathlib
 
-HEADER_TYPES = (".h", ".hpp", ".hxx")
-SOURCE_TYPES = (".c", ".cpp", ".cxx")
-ALL_TYPES = HEADER_TYPES + SOURCE_TYPES
-
-def make_header(a_directory, a_filename, a_exclude):
+def make_header(a_directory, a_filename, a_exclude = set()):
 	a_exclude.add(a_filename)
 
 	with open(a_directory + "/" + a_filename, "w", encoding="utf-8") as out:
@@ -24,7 +20,7 @@ def make_header(a_directory, a_filename, a_exclude):
 				dirnames.remove(todo)
 
 			for filename in filenames:
-				if filename not in a_exclude and filename.endswith(HEADER_TYPES):
+				if filename not in a_exclude and filename.endswith((".h", ".hpp", ".hxx")):
 					path = os.path.join(dirpath, filename)
 					tmp.append(os.path.normpath(path))
 
@@ -38,39 +34,13 @@ def make_header(a_directory, a_filename, a_exclude):
 			out.write(file)
 			out.write('"\n')
 
-def make_cmake():
-	tmp = []
-	for directory in { "include", "src" }:
-		for dirpath, dirnames, filenames in os.walk(directory):
-			for filename in filenames:
-				if filename.endswith(ALL_TYPES):
-					path = os.path.join(dirpath, filename)
-					tmp.append(os.path.normpath(path))
-
-	sources = []
-	for file in tmp:
-		name = file.replace("\\", "/")
-		sources.append(name)
-	sources.sort()
-
-	def do_make(a_filename, a_varname, a_files):
-		with open("res/cmake/{}.cmake".format(a_filename), "w", encoding="utf-8") as out:
-			out.write("set({}\n".format(a_varname))
-			for file in a_files:
-				out.write("\t{}\n".format(file))
-			out.write(")\n")
-
-	do_make("sourcelist", "SOURCES", sources)
-
 def main():
 	root = pathlib.Path(os.path.dirname(os.path.realpath(__file__))).parent.parent
-	os.chdir(root)
-	make_cmake()
-
 	os.chdir(os.path.join(root, "include"))
+
 	make_header("F4SE", "F4SE.h", { "Impl" })
 	make_header("RE", "Fallout.h", { "IDs.h", "NiRTTI_IDs.h", "RTTI_IDs.h", "VTABLE_IDs.h" })
-	make_header("Scaleform", "Scaleform.h", { "null" })
+	make_header("Scaleform", "Scaleform.h")
 
 if __name__ == "__main__":
 	main()

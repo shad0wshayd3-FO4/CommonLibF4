@@ -3,21 +3,17 @@
 ## General Requirements
 
 ### Build Dependencies
-* [Visual Studio Community 2019 16.10.0 Preview 3.0](https://visualstudio.microsoft.com/vs/preview/)
+* [Visual Studio Community 2022 Preview](https://visualstudio.microsoft.com/vs/preview/)
 	* Desktop development with C++
+* [binary-io](https://github.com/Ryan-rsm-McKenzie/binary_io)
 * [mmio](https://github.com/Ryan-rsm-McKenzie/mmio)
 * [spdlog](https://github.com/gabime/spdlog)
 
 ### Development
-* [clang-format 12.0.0](https://github.com/llvm/llvm-project/releases)
-* [CMake](https://cmake.org/)
-* [vcpkg](https://github.com/microsoft/vcpkg)
+* [xmake](https://xmake.io/)
 
 ## F4SE Plugin Requirements
 
 ### End User Dependencies
 * [Address Library for F4SE Plugins](https://www.nexusmods.com/fallout4/mods/47327)
 * [F4SE](https://f4se.silverlock.org/)
-
-### Development
-* [Address Library for F4SE Plugins](https://www.nexusmods.com/fallout4/mods/47327)

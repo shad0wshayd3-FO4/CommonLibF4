@@ -2,6 +2,8 @@
 
 namespace RE
 {
+	class BGSObjectInstance;
+
 	namespace ActorEquipManagerEvent
 	{
 		enum class Type : std::int32_t

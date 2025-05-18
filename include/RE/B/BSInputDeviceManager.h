@@ -1,12 +1,11 @@
 #pragma once
 
+#include "RE/B/BSInputDevice.h"
 #include "RE/B/BSTSingleton.h"
 #include "RE/I/INPUT_DEVICE.h"
 
 namespace RE
 {
-	class BSInputDevice;
-
 	class BSInputDeviceManager :
 		public BSTSingletonSDM<BSInputDeviceManager>  // 00
 	{

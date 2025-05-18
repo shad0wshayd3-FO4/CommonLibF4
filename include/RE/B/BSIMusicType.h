@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSIMusicTrack.h"
 #include "RE/B/BSTArray.h"
 
 namespace RE

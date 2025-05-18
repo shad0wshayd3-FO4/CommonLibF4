@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class BGSRefAlias;
+
 	class BGSRefAliasInstanceData
 	{
 	public:

@@ -6,6 +6,8 @@
 
 namespace RE
 {
+	class BSNavmeshInfo;
+
 	class BSPrecomputedNavmeshInfoPathMap :
 		public BSTSingletonExplicit<BSPrecomputedNavmeshInfoPathMap>  // 00
 	{

@@ -1,7 +1,7 @@
 #pragma once
 
+#include "RE/B/BSSpring_SpringState.h"
 #include "RE/N/NiPoint.h"
-#include "RE/S/SpringState.h"
 
 namespace RE
 {

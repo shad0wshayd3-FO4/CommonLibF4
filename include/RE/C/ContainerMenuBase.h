@@ -11,7 +11,6 @@
 namespace RE
 {
 	enum class ContainerMenuMode;
-
 	class MenuOpenCloseEvent;
 
 	class __declspec(novtable) ContainerMenuBase :

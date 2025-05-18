@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/T/TESObjectREFR.h"
+
 namespace RE
 {
 	class BGSHackTerminal

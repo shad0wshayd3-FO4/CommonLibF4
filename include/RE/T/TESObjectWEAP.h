@@ -25,6 +25,7 @@
 namespace RE
 {
 	enum class SOUND_LEVEL;
+	enum class STAGGER_MAGNITUDE;
 	enum class WEAPON_RUMBLE_PATTERN;
 	enum class WEAPONHITBEHAVIOR;
 

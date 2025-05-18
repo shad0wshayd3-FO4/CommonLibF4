@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Scaleform/A/Array.h"
+#include "Scaleform/G/GFx_StatMovieView.h"
 #include "Scaleform/G/GFx_State.h"
 #include "Scaleform/P/Ptr.h"
 #include "Scaleform/R/Render_Point.h"

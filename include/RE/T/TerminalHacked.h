@@ -1,5 +1,8 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
+#include "RE/B/BSTEvent.h"
+
 namespace RE
 {
 	class TerminalHacked

@@ -1,15 +1,20 @@
 #pragma once
 
-namespace Scaleform::Render::ContextImpl
+namespace Scaleform::Render
 {
-	class EntryData;
+	class LinearHeap;
 
-	template <class C, class B>
-	class ContextData_ImplMixin : public B
+	namespace ContextImpl
 	{
-	public:
-		virtual EntryData* ConstructCopy(LinearHeap& heap) const;
-		virtual void       CopyTo(void* pdest) const;
-		virtual void       Destroy();
-	};
+		class EntryData;
+
+		template <class C, class B>
+		class ContextData_ImplMixin : public B
+		{
+		public:
+			virtual EntryData* ConstructCopy(LinearHeap& heap) const;
+			virtual void       CopyTo(void* pdest) const;
+			virtual void       Destroy();
+		};
+	}
 }

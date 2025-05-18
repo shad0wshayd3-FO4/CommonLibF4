@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSPointerHandle.h"
 #include "RE/T/TESPackage.h"
 
 namespace RE

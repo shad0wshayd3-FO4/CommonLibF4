@@ -9,6 +9,7 @@
 
 namespace RE
 {
+	class BGSModelMaterialSwap;
 	class NiAVObject;
 
 	class __declspec(novtable) LoadingMenu :

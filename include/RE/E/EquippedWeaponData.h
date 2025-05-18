@@ -11,6 +11,7 @@
 namespace RE
 {
 	enum class ATTACK_STATE_ENUM;
+	class AimModel;
 	class BSCloneReserver;
 	class MuzzleFlash;
 	class NiAVObject;

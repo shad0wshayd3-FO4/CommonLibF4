@@ -5,6 +5,8 @@
 
 namespace RE
 {
+	class BGSInventoryItem;
+
 	namespace UIUtils
 	{
 		using ComparisonItems = BSScrapArray<BSTTuple<const BGSInventoryItem*, std::uint32_t>>;

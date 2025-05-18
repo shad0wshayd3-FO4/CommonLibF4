@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/A/Actor.h"
 #include "RE/B/BSExtraData.h"
 #include "RE/B/BSPointerHandle.h"
 #include "RE/B/BSTArray.h"
@@ -7,6 +8,7 @@
 #include "RE/N/NiPoint.h"
 #include "RE/N/NiPointer.h"
 #include "RE/P/PowerUtils.h"
+#include "RE/T/TESObjectCELL.h"
 
 namespace RE
 {

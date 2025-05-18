@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/B/BSStringT.h"
 #include "RE/B/BSTArray.h"
 
 namespace RE
@@ -16,14 +17,14 @@ namespace RE
 		};
 		static_assert(sizeof(StringData) == 0x8);
 
-		class GlobabValueData
+		class GlobalValueData
 		{
 		public:
 			// members
 			const TESGlobal* global;  // 00
 			float            value;   // 08
 		};
-		static_assert(sizeof(GlobabValueData) == 0x10);
+		static_assert(sizeof(GlobalValueData) == 0x10);
 
 		static void ParseString(BSString* a_inOutText, const TESQuest* a_quest, std::uint32_t a_instanceID)
 		{
@@ -35,7 +36,7 @@ namespace RE
 		// Members
 		std::uint32_t             id;                // 00
 		BSTArray<StringData>      stringData;        // 08
-		BSTArray<GlobabValueData> valueData;         // 20
+		BSTArray<GlobalValueData> valueData;         // 20
 		std::uint16_t             journalStage;      // 38
 		std::uint16_t             journalStageItem;  // 3A
 	};

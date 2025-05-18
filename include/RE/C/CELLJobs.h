@@ -5,6 +5,7 @@
 
 namespace RE
 {
+	class NiAVObject;
 	class NiUpdateData;
 
 	namespace CELLJobs

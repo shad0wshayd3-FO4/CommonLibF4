@@ -8,6 +8,7 @@
 namespace RE
 {
 	enum class LOCK_LEVEL;
+	class TESTexture;
 
 	class __declspec(novtable) BGSTerminal :
 		public TESFurniture  // 000

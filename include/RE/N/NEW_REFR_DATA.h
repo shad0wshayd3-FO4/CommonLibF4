@@ -1,13 +1,13 @@
 #pragma once
 
 #include "RE/B/BSTSmartPointer.h"
+#include "RE/E/ExtraDataList.h"
 #include "RE/N/NiPoint.h"
 
 namespace RE
 {
 	class BGSObjectInstanceExtra;
 	class BGSPrimitive;
-	class ExtraDataList;
 	class INSTANCE_FILTER;
 
 	class __declspec(novtable) NEW_REFR_DATA

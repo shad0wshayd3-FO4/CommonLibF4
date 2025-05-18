@@ -2,6 +2,7 @@
 
 #include "RE/B/BSFixedString.h"
 #include "RE/B/BSTHashMap.h"
+#include "RE/N/NiControllerSequence.h"
 #include "RE/N/NiPointer.h"
 #include "RE/N/NiTArray.h"
 #include "RE/N/NiTimeController.h"
@@ -10,7 +11,6 @@ namespace RE
 {
 	class BSAnimNoteListener;
 	class NiAVObjectPalette;
-	class NiControllerSequence;
 
 	class NiControllerManager :
 		public NiTimeController  // 00

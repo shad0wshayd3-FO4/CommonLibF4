@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Scaleform/A/Array.h"
+#include "Scaleform/G/GFx_ASIntervalTimerIntf.h"
+#include "Scaleform/G/GFx_ASString.h"
 #include "Scaleform/G/GFx_FocusGroupDescr.h"
 #include "Scaleform/G/GFx_Movie.h"
 #include "Scaleform/G/GFx_MultitouchInterface.h"
@@ -34,7 +36,6 @@ namespace Scaleform
 	{
 		class AmpStats;
 		class ASMovieRootBase;
-		class ASString;
 		class DisplayObjContainer;
 		class DisplayObjectBase;
 

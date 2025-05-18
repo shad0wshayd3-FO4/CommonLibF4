@@ -7,6 +7,8 @@
 
 namespace RE
 {
+	class BGSInventoryItem;
+
 	namespace InventoryInterface
 	{
 		class CountChangedEvent;

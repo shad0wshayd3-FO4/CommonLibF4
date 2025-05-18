@@ -7,9 +7,11 @@
 
 namespace RE
 {
+	enum class ENUM_FORM_ID;
 	class CALCED_OBJECT;
 	class ContainerItemExtra;
 	class LEVELED_OBJECT;
+	class INSTANCE_FILTER;
 
 	class __declspec(novtable) TESLeveledList :
 		public BaseFormComponent  // 00

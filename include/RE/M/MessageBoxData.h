@@ -9,7 +9,6 @@ namespace RE
 {
 	enum class UI_DEPTH_PRIORITY;
 	enum class WARNING_TYPES;
-
 	class IMessageBoxCallback;
 
 	class __declspec(novtable) MessageBoxData :

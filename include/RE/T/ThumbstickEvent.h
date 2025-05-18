@@ -1,5 +1,6 @@
 #pragma once
 
+#include "RE/D/DIRECTION_VAL.h"
 #include "RE/I/IDEvent.h"
 
 namespace RE

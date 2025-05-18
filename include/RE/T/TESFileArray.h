@@ -4,6 +4,8 @@
 
 namespace RE
 {
+	class TESFile;
+
 	class TESFileArray :
 		public BSStaticArray<TESFile*>  // 00
 	{

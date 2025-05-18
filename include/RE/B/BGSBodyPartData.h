@@ -7,6 +7,8 @@
 
 namespace RE
 {
+	class BGSBodyPart;
+
 	class __declspec(novtable) BGSBodyPartData :
 		public TESForm,        // 000
 		public TESModel,       // 020

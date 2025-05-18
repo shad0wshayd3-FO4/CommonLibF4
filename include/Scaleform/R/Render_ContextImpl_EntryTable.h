@@ -1,6 +1,10 @@
 #pragma once
 
 #include "Scaleform/L/List.h"
+#include "Scaleform/R/Render_ContextImpl_Entry.h"
+#include "Scaleform/R/Render_ContextImpl_EntryListAccessor.h"
+#include "Scaleform/R/Render_ContextImpl_EntryPage.h"
+#include "Scaleform/R/Render_ContextImpl_EntryPageBase.h"
 
 namespace Scaleform
 {
@@ -9,10 +13,6 @@ namespace Scaleform
 	namespace Render::ContextImpl
 	{
 		class Context;
-		class Entry;
-		class EntryListAccessor;
-		class EntryPage;
-		class EntryPageBase;
 		class Snapshot;
 
 		class EntryTable

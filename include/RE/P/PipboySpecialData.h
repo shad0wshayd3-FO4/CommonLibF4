@@ -5,7 +5,7 @@
 
 namespace RE
 {
-	namespace ActorValueEvent
+	namespace ActorValueEvents
 	{
 		class ActorValueChangedEvent;
 	}

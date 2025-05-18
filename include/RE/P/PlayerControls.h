@@ -14,7 +14,6 @@
 namespace RE
 {
 	enum class DEFAULT_OBJECT;
-
 	class ActivateHandler;
 	class AttackBlockHandler;
 	class AutoMoveHandler;

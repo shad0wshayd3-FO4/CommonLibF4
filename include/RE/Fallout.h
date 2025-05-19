@@ -224,7 +224,6 @@
 #include "RE/B/BSBound.h"
 #include "RE/B/BSCRC32.h"
 #include "RE/B/BSContainer.h"
-#include "RE/B/BSCoreTypes.h"
 #include "RE/B/BSCriticalSection.h"
 #include "RE/B/BSEventFlag.h"
 #include "RE/B/BSExtraData.h"

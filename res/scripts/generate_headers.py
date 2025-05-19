@@ -39,7 +39,7 @@ def main():
 	os.chdir(os.path.join(root, "include"))
 
 	make_header("F4SE", "F4SE.h", { "Impl" })
-	make_header("RE", "Fallout.h", { "IDs.h", "NiRTTI_IDs.h", "RTTI_IDs.h", "VTABLE_IDs.h" })
+	make_header("RE", "Fallout.h", { "BSCoreTypes.h", "IDs.h", "IDs_NiRTTI.h", "IDs_RTTI.h", "IDs_VTABLE.h" })
 	make_header("Scaleform", "Scaleform.h")
 
 if __name__ == "__main__":

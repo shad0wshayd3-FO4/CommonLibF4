@@ -25,17 +25,17 @@ end)
 
 option("rex_ini", function()
     set_default(false)
-    set_description("enable ini config support for REX")
+    set_description("enable REX::INI settings support")
 end)
 
 option("rex_json", function()
     set_default(false)
-    set_description("enable json config support for REX")
+    set_description("enable REX::JSON settings support")
 end)
 
 option("rex_toml", function()
     set_default(false)
-    set_description("enable toml config support for REX")
+    set_description("enable REX::TOML settings support")
 end)
 
 -- require packages

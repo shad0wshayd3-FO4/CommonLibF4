@@ -39,7 +39,7 @@ option("rex_toml", function()
 end)
 
 -- require packages
-add_requires("commonlib-shared 2c5ddece35e5e4acaea9df45c6e2c35dfefb9575", { configs = {
+add_requires("commonlib-shared e9e8619678cc166de00a9e96dc465b696f7bd831", { configs = {
     rex_ini = has_config("rex_ini"),
     rex_json = has_config("rex_json"),
     rex_toml = has_config("rex_toml"),

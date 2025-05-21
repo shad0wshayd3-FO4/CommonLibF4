@@ -7,9 +7,9 @@
 #include "REX/W32/OLE32.h"
 #include "REX/W32/SHELL32.h"
 
-#include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/msvc_sink.h>
+#include <spdlog/spdlog.h>
 
 namespace F4SE
 {

@@ -10,11 +10,11 @@
 namespace RE
 {
 	bool BSScaleformManager::LoadMovieEx(
-		IMenu&        a_menu,
-		std::string_view  a_filePath,
-		std::string_view  a_menuObjPath,
-		ScaleModeType a_scaleMode,
-		float         a_backgroundAlpha)
+		IMenu&           a_menu,
+		std::string_view a_filePath,
+		std::string_view a_menuObjPath,
+		ScaleModeType    a_scaleMode,
+		float            a_backgroundAlpha)
 	{
 		static REL::Relocation<SettingT<INISettingCollection>*> fileUncacheOnMenuOpen{ ID::BSScaleformManager::FileUncacheOnMenuOpen };
 		if (fileUncacheOnMenuOpen && fileUncacheOnMenuOpen->GetBinary()) {

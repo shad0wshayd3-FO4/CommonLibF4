@@ -49,11 +49,11 @@ namespace RE
 		}
 
 		bool LoadMovieEx(
-			IMenu&        a_menu,
-			std::string_view  a_filePath,
-			std::string_view  a_menuObjPath = ""sv,
-			ScaleModeType a_scaleMode = ScaleModeType::kShowAll,
-			float         a_backgroundAlpha = 0.0F);
+			IMenu&           a_menu,
+			std::string_view a_filePath,
+			std::string_view a_menuObjPath = ""sv,
+			ScaleModeType    a_scaleMode = ScaleModeType::kShowAll,
+			float            a_backgroundAlpha = 0.0F);
 
 		// members
 		Scaleform::GFx::Loader*                         loader;          // 10

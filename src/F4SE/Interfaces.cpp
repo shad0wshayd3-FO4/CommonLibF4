@@ -6,7 +6,7 @@
 
 namespace F4SE
 {
-	bool MessagingInterface::RegisterListener(EventCallback* a_handler, stl::zstring a_sender) const
+	bool MessagingInterface::RegisterListener(EventCallback* a_handler, std::string_view a_sender) const
 	{
 		const auto success =
 			GetProxy().RegisterListener(
@@ -34,7 +34,7 @@ namespace F4SE
 		return success;
 	}
 
-	bool ScaleformInterface::Register(stl::zstring a_name, RegisterCallback* a_callback) const
+	bool ScaleformInterface::Register(std::string_view a_name, RegisterCallback* a_callback) const
 	{
 		const auto success =
 			GetProxy().Register(

@@ -9,7 +9,7 @@ namespace RE
 {
 	NiAVObject::NiAVObject()
 	{
-		stl::emplace_vtable(this);
+		REX::EMPLACE_VTABLE(this);
 		local.MakeIdentity();
 		world.MakeIdentity();
 		previousWorld.MakeIdentity();

@@ -48,7 +48,7 @@ namespace RE
 			           ObjectRefHandle{};
 		}
 
-		void SetCurrentPickREFR(stl::not_null<ObjectRefHandle*> a_refr)
+		void SetCurrentPickREFR(ObjectRefHandle* a_refr)
 		{
 			using func_t = decltype(&Console::SetCurrentPickREFR);
 			static REL::Relocation<func_t> func{ ID::Console::SetCurrentPickREFR };

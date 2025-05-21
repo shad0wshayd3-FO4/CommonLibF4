@@ -18,7 +18,7 @@ namespace RE::BSResource
 			class PlatformContext;
 			class StandardContext;
 
-			ReaderStream() { stl::emplace_vtable<ReaderStream>(this); }
+			ReaderStream() { REX::EMPLACE_VTABLE<ReaderStream>(this); }
 
 			// override
 			ErrorCode DoOpen() override  // 01

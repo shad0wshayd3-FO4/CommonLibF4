@@ -16,7 +16,7 @@ namespace RE
 
 			ArmorRatingVisitorBase()
 			{
-				stl::emplace_vtable(this);
+				REX::EMPLACE_VTABLE(this);
 			}
 
 			ArmorRatingVisitorBase(const Actor* a_actor, bool a_checkEquipped)

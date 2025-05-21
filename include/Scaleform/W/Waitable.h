@@ -31,7 +31,7 @@ namespace Scaleform
 
 			void AddRef()
 			{
-				stl::atomic_ref myRefCount{ refCount.value };
+				REX::TAtomicRef myRefCount{ refCount.value };
 				++myRefCount;
 			}
 

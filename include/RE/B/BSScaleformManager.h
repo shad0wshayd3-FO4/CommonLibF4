@@ -50,8 +50,8 @@ namespace RE
 
 		bool LoadMovieEx(
 			IMenu&        a_menu,
-			stl::zstring  a_filePath,
-			stl::zstring  a_menuObjPath = ""sv,
+			std::string_view  a_filePath,
+			std::string_view  a_menuObjPath = ""sv,
 			ScaleModeType a_scaleMode = ScaleModeType::kShowAll,
 			float         a_backgroundAlpha = 0.0F);
 

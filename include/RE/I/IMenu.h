@@ -177,7 +177,7 @@ namespace RE
 
 		[[nodiscard]] constexpr bool IsMenuDisplayEnabled() const noexcept { return passesTopMenuTest && menuCanBeVisible; }
 
-		void SetMenuCodeObject(Scaleform::GFx::Movie& a_movie, stl::zstring a_menuObjPath)
+		void SetMenuCodeObject(Scaleform::GFx::Movie& a_movie, std::string_view a_menuObjPath)
 		{
 			a_movie.GetVariable(std::addressof(menuObj), a_menuObjPath.data());
 			RegisterCodeObject(a_movie, menuObj);

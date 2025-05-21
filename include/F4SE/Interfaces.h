@@ -229,7 +229,7 @@ namespace F4SE
 		[[nodiscard]] std::uint32_t Version() const noexcept { return GetProxy().interfaceVersion; }
 
 		bool RegisterListener(EventCallback* a_handler) const { return RegisterListener(a_handler, "F4SE"sv); }
-		bool RegisterListener(EventCallback* a_handler, stl::zstring a_sender) const;
+		bool RegisterListener(EventCallback* a_handler, std::string_view a_sender) const;
 		bool Dispatch(std::uint32_t a_messageType, void* a_data, std::uint32_t a_dataLen, const char* a_receiver) const;
 
 		[[nodiscard]] void* GetEventDispatcher(std::uint32_t a_dispatcherID) const
@@ -256,7 +256,7 @@ namespace F4SE
 
 		[[nodiscard]] std::uint32_t Version() const noexcept { return GetProxy().interfaceVersion; }
 
-		bool Register(stl::zstring a_name, RegisterCallback* a_callback) const;
+		bool Register(std::string_view a_name, RegisterCallback* a_callback) const;
 	};
 
 	class SerializationInterface
@@ -372,7 +372,7 @@ namespace F4SE
 
 		bool Register(RegisterFunctions* a_callback) const;
 
-		void GetExternalEventRegistrations(stl::zstring a_eventName, void* a_data, RegistrantFunctor* a_functor) const
+		void GetExternalEventRegistrations(std::string_view a_eventName, void* a_data, RegistrantFunctor* a_functor) const
 		{
 			GetProxy().GetExternalEventRegistrations(a_eventName.data(), a_data, reinterpret_cast<void*>(a_functor));
 		}

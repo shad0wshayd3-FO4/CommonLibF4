@@ -20,7 +20,7 @@ namespace RE
 			BSExtraData(TYPE),
 			startingWorldOrCell(a_form)
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 		}
 
 		// members

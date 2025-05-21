@@ -35,7 +35,7 @@ namespace RE
 			ICallback(ExamineMenu* a_thisMenu) :
 				thisMenu(a_thisMenu)
 			{
-				stl::emplace_vtable(this);
+				REX::EMPLACE_VTABLE(this);
 			}
 
 			virtual ~ICallback() = default;  // 00
@@ -61,7 +61,7 @@ namespace RE
 				buttonLabel(a_buttonLabel),
 				confirmType(a_confirmType)
 			{
-				stl::emplace_vtable(this);
+				REX::EMPLACE_VTABLE(this);
 			}
 
 			virtual ~InitData() = default;  // 00
@@ -88,7 +88,7 @@ namespace RE
 				scrapSourceName(a_scrapSourceName),
 				scrapResults(a_scrapResults)
 			{
-				stl::emplace_vtable(this);
+				REX::EMPLACE_VTABLE(this);
 			}
 
 			virtual ~InitDataScrap() = default;  // 00
@@ -113,7 +113,7 @@ namespace RE
 				requiredItems(a_requiredItems)
 			{
 				this->hasCancelButton = false;
-				stl::emplace_vtable(this);
+				REX::EMPLACE_VTABLE(this);
 			}
 
 			virtual ~InitDataRepairFailure() = default;  // 00

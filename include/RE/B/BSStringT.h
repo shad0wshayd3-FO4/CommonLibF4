@@ -28,7 +28,7 @@ namespace RE
 			if (a_count <= N) {
 				return _buffer;
 			} else {
-				stl::report_and_fail("failed to satisfy allocation request"sv);
+				REX::FAIL("failed to satisfy allocation request");
 			}
 		}
 

@@ -22,13 +22,13 @@ namespace Scaleform::GFx
 
 		void AddRef()
 		{
-			stl::atomic_ref myRefCount{ refCount.value };
+			REX::TAtomicRef myRefCount{ refCount.value };
 			++myRefCount;
 		}
 
 		void Release()
 		{
-			stl::atomic_ref myRefCount{ refCount.value };
+			REX::TAtomicRef myRefCount{ refCount.value };
 			if (--myRefCount == 0) {
 				delete lib;
 				lib = nullptr;

@@ -110,8 +110,8 @@ namespace RE
 
 			template <class F>
 			void BindNativeMethod(
-				stl::zstring        a_object,
-				stl::zstring        a_function,
+				std::string_view    a_object,
+				std::string_view    a_function,
 				F                   a_func,
 				std::optional<bool> a_taskletCallable = std::nullopt,
 				bool                a_isLatent = false);

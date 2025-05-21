@@ -22,7 +22,7 @@ namespace RE::BSScript
 		using decay_t =
 			std::conditional_t<
 				std::is_pointer_v<T>,
-				stl::remove_cvptr_t<T>,
+				std::remove_cv_t<std::remove_pointer_t<T>>,
 				std::remove_cvref_t<T>>;
 
 		template <class T>
@@ -36,9 +36,9 @@ namespace RE::BSScript
 
 		template <class CharT, std::size_t N1, std::size_t N2>
 		[[nodiscard]] consteval auto make_structure_tag(
-			stl::nttp::string<CharT, N1> a_lhs,
-			stl::nttp::string<CharT, N2> a_rhs) noexcept
-			-> stl::nttp::string<CharT, N1 + 1 + N2>
+			REX::TStaticString<CharT, N1> a_lhs,
+			REX::TStaticString<CharT, N2> a_rhs) noexcept
+			-> REX::TStaticString<CharT, N1 + 1 + N2>
 		{
 			char buf[a_lhs.length() + 1 + a_rhs.length() + 1]{ '\0' };
 			std::copy_n(a_lhs.data(), a_lhs.length(), buf);
@@ -49,12 +49,12 @@ namespace RE::BSScript
 	}
 
 	template <
-		stl::nttp::string Object,
-		stl::nttp::string Structure>
+		REX::TStaticString Object,
+		REX::TStaticString Structure>
 	class structure_wrapper
 	{
 	private:
-		static constexpr stl::nttp::string _full = detail::make_structure_tag(Object, Structure);
+		static constexpr REX::TStaticString _full = detail::make_structure_tag(Object, Structure);
 
 	public:
 		static constexpr std::string_view name{ _full.data(), _full.length() };
@@ -186,7 +186,7 @@ namespace RE::BSScript
 			std::false_type
 		{};
 
-		template <stl::nttp::string O, stl::nttp::string S>
+		template <REX::TStaticString O, REX::TStaticString S>
 		struct _is_structure_wrapper<structure_wrapper<O, S>> :
 			std::true_type
 		{};
@@ -1206,8 +1206,8 @@ namespace RE::BSScript
 
 	template <class F>
 	void IVirtualMachine::BindNativeMethod(
-		stl::zstring        a_object,
-		stl::zstring        a_function,
+		std::string_view    a_object,
+		std::string_view    a_function,
 		F                   a_func,
 		std::optional<bool> a_taskletCallable,
 		bool                a_isLatent)

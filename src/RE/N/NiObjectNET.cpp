@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	NiObjectNET::NiObjectNET() { stl::emplace_vtable(this); }
+	NiObjectNET::NiObjectNET() { REX::EMPLACE_VTABLE(this); }
 
 	NiObjectNET::~NiObjectNET() {}
 

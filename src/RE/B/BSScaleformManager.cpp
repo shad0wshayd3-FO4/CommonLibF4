@@ -11,8 +11,8 @@ namespace RE
 {
 	bool BSScaleformManager::LoadMovieEx(
 		IMenu&        a_menu,
-		stl::zstring  a_filePath,
-		stl::zstring  a_menuObjPath,
+		std::string_view  a_filePath,
+		std::string_view  a_menuObjPath,
 		ScaleModeType a_scaleMode,
 		float         a_backgroundAlpha)
 	{

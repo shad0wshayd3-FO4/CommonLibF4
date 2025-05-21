@@ -26,7 +26,7 @@ namespace RE
 		BGSObjectInstanceExtra() :
 			BSExtraData(TYPE)
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 		}
 
 		BGSObjectInstanceExtra(const BGSMod::Template::Item* a_item, TESForm* a_parentForm, const INSTANCE_FILTER* a_filter)

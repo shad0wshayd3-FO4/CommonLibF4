@@ -18,7 +18,7 @@ namespace RE
 
 		NEW_REFR_DATA()
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 		}
 
 		virtual void HandlePre3D(TESObjectREFR*) { return; }

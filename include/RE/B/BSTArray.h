@@ -184,12 +184,12 @@ namespace RE
 			}
 
 			if (!_allocator) {
-				stl::report_and_fail("failed to get thread scrap heap"sv);
+				REX::FAIL("failed to get thread scrap heap");
 			}
 
 			const auto mem = _allocator->Allocate(a_bytes, alignof(void*));
 			if (!mem) {
-				stl::report_and_fail("failed to handle allocation request"sv);
+				REX::FAIL("failed to handle allocation request");
 			} else {
 				return mem;
 			}
@@ -200,7 +200,7 @@ namespace RE
 			if (_allocator) {
 				_allocator->Deallocate(a_ptr);
 			} else {
-				stl::report_and_fail("failed to deallocate block"sv);
+				REX::FAIL("failed to deallocate block");
 			}
 		}
 
@@ -662,7 +662,7 @@ namespace RE
 		using iterator = pointer;
 		using const_iterator = const_pointer;
 
-		~BSTSmallSharedArray() { stl::report_and_fail("unimplemented"sv); }
+		~BSTSmallSharedArray() { REX::FAIL("unimplemented"); }
 
 		[[nodiscard]] reference operator[](size_type a_pos) noexcept
 		{

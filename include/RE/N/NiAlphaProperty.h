@@ -42,7 +42,7 @@ namespace RE
 
 		NiAlphaProperty()
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 			NiTFlags<std::uint16_t, NiProperty> f;
 			f.flags = 0xEC;
 			flags = f;

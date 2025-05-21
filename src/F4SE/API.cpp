@@ -1,11 +1,13 @@
 #include "F4SE/API.h"
 
 #include "F4SE/Interfaces.h"
-#include "F4SE/Logger.h"
 #include "REL/Hook.h"
 #include "REL/Trampoline.h"
 #include "REX/REX/Singleton.h"
+#include "REX/W32/OLE32.h"
+#include "REX/W32/SHELL32.h"
 
+#include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/msvc_sink.h>
 
@@ -48,9 +50,6 @@ namespace F4SE
 
 			static std::once_flag once;
 			std::call_once(once, [&]() {
-				const auto iddb = REL::IDDB::GetSingleton();
-				iddb->load("Data/F4SE/Plugins/version-{}.bin"sv);
-
 				if (const auto data = PluginVersionData::GetSingleton()) {
 					pluginName = data->GetPluginName();
 					pluginAuthor = data->GetAuthorName();
@@ -77,14 +76,22 @@ namespace F4SE
 			if (info.log) {
 				static std::once_flag once;
 				std::call_once(once, [&]() {
-					auto path = log::log_directory();
-					if (!path)
+					if (saveFolderName.empty())
 						return;
 
-					*path /= std::format("{}.log", info.logName ? info.logName : F4SE::GetPluginName());
+					wchar_t*                                                       knownBuffer{ nullptr };
+					const auto                                                     knownResult = REX::W32::SHGetKnownFolderPath(REX::W32::FOLDERID_Documents, REX::W32::KF_FLAG_DEFAULT, nullptr, std::addressof(knownBuffer));
+					std::unique_ptr<wchar_t[], decltype(&REX::W32::CoTaskMemFree)> knownPath(knownBuffer, REX::W32::CoTaskMemFree);
+					if (!knownPath || knownResult != 0) {
+						REX::ERROR("failed to get known folder path");
+						return;
+					}
+
+					std::filesystem::path path = knownPath.get();
+					path /= std::format("My Games/{}/F4SE/{}.log", GetSaveFolderName(), info.logName ? info.logName : GetPluginName());
 
 					std::vector<spdlog::sink_ptr> sinks{
-						std::make_shared<spdlog::sinks::basic_file_sink_mt>(path->string(), true),
+						std::make_shared<spdlog::sinks::basic_file_sink_mt>(path.string(), true),
 						std::make_shared<spdlog::sinks::msvc_sink_mt>()
 					};
 

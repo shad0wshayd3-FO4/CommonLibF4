@@ -36,7 +36,7 @@ namespace RE
 			extraData.AddExtra(a_extra);
 		}
 
-		stl::observer<TBO_InstanceData*> CreateInstanceData(TESBoundObject* a_object, bool a_generateName)
+		TBO_InstanceData* CreateInstanceData(TESBoundObject* a_object, bool a_generateName)
 		{
 			using func_t = decltype(&ExtraDataList::CreateInstanceData);
 			static REL::Relocation<func_t> func{ ID::ExtraDataList::CreateInstanceData };

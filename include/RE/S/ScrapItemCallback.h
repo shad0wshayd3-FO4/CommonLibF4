@@ -15,7 +15,7 @@ namespace RE
 			ExamineConfirmMenu::ICallback(a_thisMenu),
 			itemIndex(a_itemIndex)
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 		}
 
 		virtual ~ScrapItemCallback() = default;  // 00

@@ -19,7 +19,7 @@ namespace RE
 		BSExtraData(EXTRA_DATA_TYPE a_type) :
 			type(a_type)
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 		}
 
 		virtual ~BSExtraData() = default;  // 00

@@ -16,7 +16,7 @@ namespace RE
 
 		std::uint32_t IncRef() const
 		{
-			stl::atomic_ref myRefCount{ refCount };
+			REX::TAtomicRef myRefCount{ refCount };
 			return ++myRefCount;
 		}
 

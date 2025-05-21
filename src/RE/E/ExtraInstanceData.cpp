@@ -13,6 +13,6 @@ namespace RE
 		base(a_base),
 		data(std::move(a_data))
 	{
-		stl::emplace_vtable(this);
+		REX::EMPLACE_VTABLE(this);
 	}
 }

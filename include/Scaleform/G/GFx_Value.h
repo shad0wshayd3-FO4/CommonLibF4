@@ -750,7 +750,7 @@ namespace Scaleform::GFx
 			return _value.uint32;
 		}
 
-		bool HasMember(stl::zstring a_name) const
+		bool HasMember(std::string_view a_name) const
 		{
 			assert(IsObject());
 			return _objectInterface->HasMember(_value.data, a_name.data(), IsDisplayObject());
@@ -806,13 +806,13 @@ namespace Scaleform::GFx
 			return _objectInterface->SetElement(_value.data, a_idx, a_val);
 		}
 
-		bool GetMember(stl::zstring a_name, Value* a_val) const
+		bool GetMember(std::string_view a_name, Value* a_val) const
 		{
 			assert(IsObject());
 			return _objectInterface->GetMember(_value.data, a_name.data(), a_val, IsDisplayObject());
 		}
 
-		bool SetMember(stl::zstring a_name, const Value& a_val)
+		bool SetMember(std::string_view a_name, const Value& a_val)
 		{
 			assert(IsObject());
 			return _objectInterface->SetMember(_value.data, a_name.data(), a_val, IsDisplayObject());

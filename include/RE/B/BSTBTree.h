@@ -2,6 +2,22 @@
 
 #include "RE/B/BSTTuple.h"
 
+namespace RE::Impl
+{
+	template <class C, class K>
+	concept transparent_comparator =
+		requires(
+			const K&                    a_transparent,
+			const typename C::key_type& a_key,
+			typename C::key_compare&    a_compare) {
+			typename C::key_compare::is_transparent;
+			// clang-format off
+		{ a_compare(a_transparent, a_key) } -> std::convertible_to<bool>;
+		{ a_compare(a_key, a_transparent) } -> std::convertible_to<bool>;
+			// clang-format on
+		};
+}
+
 namespace RE
 {
 	template <
@@ -200,14 +216,14 @@ namespace RE
 
 		template <class K>
 		[[nodiscard]] iterator find(const K& a_key)  //
-			requires(stl::transparent_comparator<BSTBTree, K>)
+			requires(Impl::transparent_comparator<BSTBTree, K>)
 		{
 			return do_find<iterator>(a_key);
 		}
 
 		template <class K>
 		[[nodiscard]] const_iterator find(const K& a_key) const  //
-			requires(stl::transparent_comparator<BSTBTree, K>)
+			requires(Impl::transparent_comparator<BSTBTree, K>)
 		{
 			return do_find<const_iterator>(a_key);
 		}

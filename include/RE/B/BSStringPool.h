@@ -24,7 +24,7 @@ namespace RE
 
 			void acquire()
 			{
-				stl::atomic_ref flags{ _flags };
+				REX::TAtomicRef flags{ _flags };
 				std::uint16_t   expected{ 0 };
 				do {
 					expected = flags;

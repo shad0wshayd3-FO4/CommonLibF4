@@ -13,7 +13,7 @@ namespace RE
 
 		std::uint32_t DecRefCount()
 		{
-			stl::atomic_ref myRefCount{ refCount };
+			REX::TAtomicRef myRefCount{ refCount };
 			const auto      newRefCount = --myRefCount & 0x3FF;
 			if (newRefCount == 0) {
 				DeleteThis();
@@ -23,7 +23,7 @@ namespace RE
 
 		void IncRefCount()
 		{
-			stl::atomic_ref myRefCount{ refCount };
+			REX::TAtomicRef myRefCount{ refCount };
 			++myRefCount;
 		}
 

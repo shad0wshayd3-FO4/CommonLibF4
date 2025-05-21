@@ -119,7 +119,7 @@ namespace RE
 				slotIndex(a_slotIndex),
 				attach(a_attach)
 			{
-				stl::emplace_vtable(this);
+				REX::EMPLACE_VTABLE(this);
 				if (success) {
 					*success = true;
 				}
@@ -148,7 +148,7 @@ namespace RE
 			SetHealthFunctor(float a_health) :
 				health(a_health)
 			{
-				stl::emplace_vtable(this);
+				REX::EMPLACE_VTABLE(this);
 			}
 
 			// override (StackDataWriteFunctor)

@@ -16,7 +16,7 @@ namespace RE
 			BSExtraData(TYPE),
 			health(a_health)
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 		}
 
 		// members

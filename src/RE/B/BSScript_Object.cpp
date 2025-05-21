@@ -19,7 +19,7 @@ namespace RE::BSScript
 
 		auto lock = reinterpret_cast<std::uintptr_t>(lockStructure) & ~static_cast<std::uintptr_t>(1);
 		if (lock) {
-			stl::atomic_ref l{ lock };
+			REX::TAtomicRef l{ lock };
 			--l;
 		}
 	}

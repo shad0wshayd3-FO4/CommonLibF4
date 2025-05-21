@@ -1,23 +1,21 @@
 #pragma once
 
-#include <REX/Impl/PCH.h>
+#include <REL/REL.h>
+#include <REX/REX.h>
 
 namespace F4SE
 {
 	using namespace std::literals;
-	namespace stl = XSE::stl;
 }
 
 namespace RE
 {
 	using namespace std::literals;
-	namespace stl = XSE::stl;
 }
 
 namespace Scaleform
 {
 	using namespace std::literals;
-	namespace stl = XSE::stl;
 }
 
 #include "RE/IDs.h"

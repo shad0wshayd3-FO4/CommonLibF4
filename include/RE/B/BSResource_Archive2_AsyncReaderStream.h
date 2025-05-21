@@ -17,7 +17,7 @@ namespace RE::BSResource
 
 			AsyncReaderStream()
 			{
-				stl::emplace_vtable<AsyncReaderStream>(this);
+				REX::EMPLACE_VTABLE<AsyncReaderStream>(this);
 			}
 
 			// override

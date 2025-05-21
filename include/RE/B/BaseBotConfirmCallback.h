@@ -14,7 +14,7 @@ namespace RE
 		BaseBotConfirmCallback(ExamineMenu* a_thisMenu) :
 			ExamineConfirmMenu::ICallback(a_thisMenu)
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 		}
 
 		virtual ~BaseBotConfirmCallback() = default;  // 00

@@ -190,21 +190,19 @@ namespace RE
 	[[nodiscard]] void* operator new(std::size_t a_count, std::align_val_t a_alignment)                       \
 	{                                                                                                         \
 		const auto mem = RE::aligned_alloc(static_cast<std::size_t>(a_alignment), a_count);                   \
-		if (mem) {                                                                                            \
-			return mem;                                                                                       \
-		} else {                                                                                              \
-			RE::stl::report_and_fail("out of memory"sv);                                                      \
-		}                                                                                                     \
+		if (!mem)                                                                                             \
+			REX::FAIL("out of memory");                                                                       \
+                                                                                                              \
+		return mem;                                                                                           \
 	}                                                                                                         \
                                                                                                               \
 	[[nodiscard]] void* operator new[](std::size_t a_count, std::align_val_t a_alignment)                     \
 	{                                                                                                         \
 		const auto mem = RE::aligned_alloc(static_cast<std::size_t>(a_alignment), a_count);                   \
-		if (mem) {                                                                                            \
-			return mem;                                                                                       \
-		} else {                                                                                              \
-			RE::stl::report_and_fail("out of memory"sv);                                                      \
-		}                                                                                                     \
+		if (!mem)                                                                                             \
+			REX::FAIL("out of memory");                                                                       \
+                                                                                                              \
+		return mem;                                                                                           \
 	}                                                                                                         \
                                                                                                               \
 	[[nodiscard]] void* operator new(std::size_t, void* a_ptr) noexcept { return a_ptr; }                     \
@@ -224,21 +222,19 @@ namespace RE
 	[[nodiscard]] void* operator new(std::size_t a_count)                 \
 	{                                                                     \
 		const auto mem = RE::malloc(a_count);                             \
-		if (mem) {                                                        \
-			return mem;                                                   \
-		} else {                                                          \
-			RE::stl::report_and_fail("out of memory"sv);                  \
-		}                                                                 \
+		if (!mem)                                                         \
+			REX::FAIL("out of memory");                                   \
+                                                                          \
+		return mem;                                                       \
 	}                                                                     \
                                                                           \
 	[[nodiscard]] void* operator new[](std::size_t a_count)               \
 	{                                                                     \
 		const auto mem = RE::malloc(a_count);                             \
-		if (mem) {                                                        \
-			return mem;                                                   \
-		} else {                                                          \
-			RE::stl::report_and_fail("out of memory"sv);                  \
-		}                                                                 \
+		if (!mem)                                                         \
+			REX::FAIL("out of memory");                                   \
+                                                                          \
+		return mem;                                                       \
 	}                                                                     \
                                                                           \
 	void operator delete(void* a_ptr) { RE::free(a_ptr); }                \
@@ -252,21 +248,19 @@ namespace RE
 	[[nodiscard]] void* operator new(std::size_t a_count)                         \
 	{                                                                             \
 		const auto mem = RE::aligned_alloc(alignof(__VA_ARGS__), a_count);        \
-		if (mem) {                                                                \
-			return mem;                                                           \
-		} else {                                                                  \
-			RE::stl::report_and_fail("out of memory"sv);                          \
-		}                                                                         \
+		if (!mem)                                                                 \
+			REX::FAIL("out of memory");                                           \
+                                                                                  \
+		return mem;                                                               \
 	}                                                                             \
                                                                                   \
 	[[nodiscard]] void* operator new[](std::size_t a_count)                       \
 	{                                                                             \
 		const auto mem = RE::aligned_alloc(alignof(__VA_ARGS__), a_count);        \
-		if (mem) {                                                                \
-			return mem;                                                           \
-		} else {                                                                  \
-			RE::stl::report_and_fail("out of memory"sv);                          \
-		}                                                                         \
+		if (!mem)                                                                 \
+			REX::FAIL("out of memory");                                           \
+                                                                                  \
+		return mem;                                                               \
 	}                                                                             \
                                                                                   \
 	void operator delete(void* a_ptr) { RE::aligned_free(a_ptr); }                \

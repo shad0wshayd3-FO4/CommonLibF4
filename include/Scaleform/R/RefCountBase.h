@@ -30,13 +30,13 @@ namespace Scaleform
 
 		void AddRef()
 		{
-			stl::atomic_ref myRefCount{ refCount };
+			REX::TAtomicRef myRefCount{ refCount };
 			++refCount;
 		}
 
 		void Release()
 		{
-			stl::atomic_ref myRefCount{ refCount };
+			REX::TAtomicRef myRefCount{ refCount };
 			if (--myRefCount == 0) {
 				delete this;
 			}

@@ -38,7 +38,7 @@ namespace RE
 		explicit BSFlattenedBoneTree(std::uint32_t a_numChildren) :
 			NiNode(a_numChildren)
 		{
-			stl::emplace_vtable(this);
+			REX::EMPLACE_VTABLE(this);
 		}
 
 		F4_HEAP_REDEFINE_ALIGNED_NEW(BSFlattenedBoneTree);

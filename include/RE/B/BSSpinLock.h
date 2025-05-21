@@ -33,7 +33,7 @@ namespace RE
 
 		void unlock()
 		{
-			stl::atomic_ref lockCount{ _lockCount };
+			REX::TAtomicRef lockCount{ _lockCount };
 			std::uint32_t   expected{ 1 };
 			if (lockCount == expected) {
 				_owningThread = 0;
@@ -83,13 +83,13 @@ namespace RE
 
 		void unlock_read()
 		{
-			stl::atomic_ref lock{ _lock };
+			REX::TAtomicRef lock{ _lock };
 			--lock;
 		}
 
 		void unlock_write()
 		{
-			stl::atomic_ref lock{ _lock };
+			REX::TAtomicRef lock{ _lock };
 			if (_lock == 0x80000001) {
 				_writerThread = 0;
 				lock.exchange(0);

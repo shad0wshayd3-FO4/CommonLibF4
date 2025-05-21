@@ -132,6 +132,61 @@ namespace RE
 			std::optional<node_type*> _cur{ nullptr };
 		};
 
+		template <class F>
+		class counted_function_iterator
+		{
+		public:
+			using difference_type = std::ptrdiff_t;
+			using value_type = std::remove_const_t<std::remove_reference_t<decltype(std::declval<F>()())>>;
+			using pointer = value_type*;
+			using reference = value_type&;
+			using iterator_category = std::input_iterator_tag;
+
+			counted_function_iterator() noexcept = default;
+
+			counted_function_iterator(F a_fn, std::size_t a_count) noexcept :
+				_fn(std::move(a_fn)),
+				_left(a_count)
+			{}
+
+			[[nodiscard]] reference operator*() const  //
+				noexcept(noexcept(std::declval<F>()()))
+			{
+				assert(_fn != std::nullopt);
+				return (*_fn)();
+			}
+
+			[[nodiscard]] pointer operator->() const
+			{
+				return std::pointer_traits<pointer>::pointer_to(operator*());
+			}
+
+			[[nodiscard]] friend bool operator==(
+				const counted_function_iterator& a_lhs,
+				const counted_function_iterator& a_rhs) noexcept
+			{
+				return a_lhs._left == a_rhs._left;
+			}
+
+			counted_function_iterator& operator++() noexcept
+			{
+				assert(_left > 0);
+				_left -= 1;
+				return *this;
+			}
+
+			counted_function_iterator operator++(int) noexcept
+			{
+				counted_function_iterator tmp{ *this };
+				operator++();
+				return tmp;
+			}
+
+		private:
+			std::optional<F> _fn;
+			std::size_t      _left{ 0 };
+		};
+
 	public:
 		using iterator = iterator_base<value_type>;
 		using const_iterator = iterator_base<const value_type>;
@@ -239,8 +294,8 @@ namespace RE
 			const auto gen = [&]() noexcept -> const_reference { return a_value; };
 			return insert_after(
 				a_pos,
-				stl::counted_function_iterator{ gen, a_count },
-				stl::counted_function_iterator<decltype(gen)>{});
+				counted_function_iterator{ gen, a_count },
+				counted_function_iterator<decltype(gen)>{});
 		}
 
 		// 4)

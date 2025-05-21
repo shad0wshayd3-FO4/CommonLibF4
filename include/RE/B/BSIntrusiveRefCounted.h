@@ -11,13 +11,13 @@ namespace RE
 
 		[[nodiscard]] std::uint32_t DecRef() const
 		{
-			stl::atomic_ref myRefCount{ refCount };
+			REX::TAtomicRef myRefCount{ refCount };
 			return --myRefCount;
 		}
 
 		std::uint32_t IncRef() const
 		{
-			stl::atomic_ref myRefCount{ refCount };
+			REX::TAtomicRef myRefCount{ refCount };
 			return ++myRefCount;
 		}
 

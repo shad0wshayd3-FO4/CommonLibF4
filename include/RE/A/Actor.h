@@ -17,6 +17,7 @@
 #include "RE/M/Modifiers.h"
 #include "RE/N/NiPoint.h"
 #include "RE/N/NiTFlags.h"
+#include "RE/S/SEX.h"
 #include "RE/T/TESObjectREFR.h"
 
 namespace RE
@@ -367,6 +368,13 @@ namespace RE
 			using func_t = decltype(&Actor::GetPerkRank);
 			static REL::Relocation<func_t> func{ ID::Actor::GetPerkRank };
 			return func(this, a_perk);
+		}
+
+		SEX GetSex()
+		{
+			using func_t = decltype(&Actor::GetSex);
+			static REL::Relocation<func_t> func{ ID::Actor::GetSex };
+			return func(this);
 		}
 
 		void HandleDefaultAnimationSwitch()

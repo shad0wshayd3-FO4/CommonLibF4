@@ -26,6 +26,7 @@ namespace RE::ID
 		inline constexpr REL::ID GetMountHandle{ 2231230 };
 		inline constexpr REL::ID GetLevel{ 2229734 };
 		inline constexpr REL::ID GetPerkRank{ 2230125 };
+		inline constexpr REL::ID GetSex{ 2229674 };
 		inline constexpr REL::ID HandleDefaultAnimationSwitch{ 2229780 };
 		inline constexpr REL::ID HandleItemEquip{ 2229781 };
 		inline constexpr REL::ID InitiateDoNothingPackage{ 2229807 };

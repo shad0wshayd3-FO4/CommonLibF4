@@ -16,7 +16,7 @@ namespace RE::ID
 		inline constexpr REL::ID ExitCover{ 2231166 };
 		inline constexpr REL::ID GetAimVector{ 2230378 };
 		inline constexpr REL::ID GetClosestBone{ 2230051 };
-		inline constexpr REL::ID GetCollisionFilter{ 1474995 };
+		inline constexpr REL::ID GetCollisionFilter{ 2277949 };
 		inline constexpr REL::ID GetCombatStyle{ 2231053 };
 		inline constexpr REL::ID SetCurrentAmmoCount{ 2229952 };
 		inline constexpr REL::ID GetCurrentCollisionGroup{ 410500 };
@@ -516,17 +516,17 @@ namespace RE::ID
 
 	namespace BSResource_EntryDBBaseUtil
 	{
-		inline constexpr REL::ID ReleaseEntryAction{ 777279 };
+		inline constexpr REL::ID ReleaseEntryAction{ 2269463 };
 	}
 
 	namespace BSResource_GlobalLocations
 	{
-		inline constexpr REL::ID Singleton{ 1573818 };
+		inline constexpr REL::ID Singleton{ 2703394 };
 	}
 
 	namespace BSResource_GlobalPaths
 	{
-		inline constexpr REL::ID Singleton{ 210868 };
+		inline constexpr REL::ID Singleton{ 2703393 };
 	}
 
 	namespace BSResource
@@ -670,7 +670,7 @@ namespace RE::ID
 
 	namespace BSThreadEvent
 	{
-		inline constexpr REL::ID InitSDM{ 1425097 };
+		inline constexpr REL::ID InitSDM{ 2268180 };
 	}
 
 	namespace BSTimer
@@ -1069,7 +1069,7 @@ namespace RE::ID
 
 	namespace LocksPicked
 	{
-		inline constexpr REL::ID GetEventSource{ 594991 };
+		inline constexpr REL::ID GetEventSource{ 2249292 };
 	}
 
 	namespace MagicTarget
@@ -1427,7 +1427,7 @@ namespace RE::ID
 
 	namespace PowerArmorLightData
 	{
-		inline constexpr REL::ID GetEventSource{ 120809 };
+		inline constexpr REL::ID GetEventSource{ 2701547 };
 	}
 
 	namespace ProcessLists
@@ -1531,7 +1531,7 @@ namespace RE::ID
 
 	namespace TerminalHacked
 	{
-		inline constexpr REL::ID GetEventSource{ 425579 };
+		inline constexpr REL::ID GetEventSource{ 2233751 };
 	}
 
 	namespace TES
@@ -1593,7 +1593,7 @@ namespace RE::ID
 		inline constexpr REL::ID Singleton{ 2688883 };
 		inline constexpr REL::ID AddFormToDataHandler{ 2192271 };
 		inline constexpr REL::ID CheckModsLoaded{ 2192323 };
-		inline constexpr REL::ID CreateReferenceAtLocation{ 500304 };
+		inline constexpr REL::ID CreateReferenceAtLocation{ 2192301 };
 		inline constexpr REL::ID IsFormIDInuse{ 2192351 };
 	}
 

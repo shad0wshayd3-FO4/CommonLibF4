@@ -38,7 +38,7 @@ option("commonlib_xbyak", function()
 end)
 
 -- require packages
-add_requires("commonlib-shared 9f05bd7de2c8cdbbc3f15128f17e5f7b1c72bce0", { configs = {
+add_requires("commonlib-shared f420a9457fe6aecb2ed9f259f788476e589fb46e", { configs = {
     ini = has_config("commonlib_ini"),
     json = has_config("commonlib_json"),
     toml = has_config("commonlib_toml"),

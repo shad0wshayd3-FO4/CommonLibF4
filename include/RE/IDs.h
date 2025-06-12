@@ -194,7 +194,7 @@ namespace RE::ID
 
 	namespace BGSKeyword
 	{
-		inline constexpr REL::ID TypedKeywords{ 1095775 };
+		inline constexpr REL::ID TypedKeywords{ 2692038 };
 	}
 
 	namespace BGSKeywordForm
@@ -1361,10 +1361,10 @@ namespace RE::ID
 	{
 		inline constexpr REL::ID Singleton{ 2688801 };
 		inline constexpr REL::ID PopState{ 2248424 };
-		inline constexpr REL::ID PushState{ 0 };
+		inline constexpr REL::ID PushState{ 2248422 };
 		inline constexpr REL::ID ToggleFreeCameraMode{ 2248368 };
 		inline constexpr REL::ID SetState{ 2214742 };
-		inline constexpr REL::ID StartFurnitureMode{ 0 };
+		inline constexpr REL::ID StartFurnitureMode{ 2248373 };
 		inline constexpr REL::ID StartPipboyMode{ 2248358 };
 		inline constexpr REL::ID StopPipboyMode{ 2248359 };
 		inline constexpr REL::ID QCameraEquals{ 2248421 };
@@ -1384,15 +1384,15 @@ namespace RE::ID
 		inline constexpr REL::ID IsGodMode{ 2232986 };
 		inline constexpr REL::ID IsHolotapePlaying{ 2233206 };
 		inline constexpr REL::ID IsImmortal{ 2232988 };
-		inline constexpr REL::ID IsPipboyLightOn{ 426550 };
+		inline constexpr REL::ID IsPipboyLightOn{ 2233202 };
 		inline constexpr REL::ID PauseHolotape{ 2233208 };
 		inline constexpr REL::ID PlayHolotape{ 2233207 };
-		inline constexpr REL::ID QueueFastTravel{ 556824 };
-		inline constexpr REL::ID RemoveLastUsedPowerArmor{ 1488486 };
-		inline constexpr REL::ID SelectPerk{ 1397326 };
-		inline constexpr REL::ID SetEscaping{ 25528 };
-		inline constexpr REL::ID SetVATSCriticalCount{ 327338 };
-		inline constexpr REL::ID ShowPipboyLight{ 1304102 };
+		inline constexpr REL::ID QueueFastTravel{ 2232918 };
+		inline constexpr REL::ID RemoveLastUsedPowerArmor{ 2233024 };
+		inline constexpr REL::ID SelectPerk{ 2232926 };
+		inline constexpr REL::ID SetEscaping{ 2233142 };
+		inline constexpr REL::ID SetVATSCriticalCount{ 2233219 };
+		inline constexpr REL::ID ShowPipboyLight{ 2233203 };
 		inline constexpr REL::ID SetLastDialogueInput{ 2233190 };
 		inline constexpr REL::ID ClearPrison{ 2233196 };
 		inline constexpr REL::ID ReloadWeapon{ 2232907 };
@@ -1495,8 +1495,8 @@ namespace RE::ID
 
 	namespace SitWaitMenu
 	{
-		inline constexpr REL::ID OnEnterFurniture{ 562238 };
-		inline constexpr REL::ID OnExitFurniture{ 454795 };
+		inline constexpr REL::ID OnEnterFurniture{ 2249503 };
+		inline constexpr REL::ID OnExitFurniture{ 2249504 };
 	}
 
 	namespace Sky
@@ -1674,7 +1674,7 @@ namespace RE::ID
 
 	namespace TESInitScriptEvent
 	{
-		inline constexpr REL::ID GetEventSource{ 2691330 };
+		inline constexpr REL::ID GetEventSource{ 2201846 };
 	}
 
 	namespace TESLeveledList
@@ -1700,6 +1700,7 @@ namespace RE::ID
 		inline constexpr REL::ID AlternateHeadPartListMap{ 2662368 };
 		inline constexpr REL::ID GetSex{ 2207107 };
 		inline constexpr REL::ID GetFacialBoneMorphIntensity{ 2207416 };
+		inline constexpr REL::ID SetHairColor{ 2207426 };
 	}
 
 	namespace TESObjectCELL
@@ -1710,15 +1711,15 @@ namespace RE::ID
 		inline constexpr REL::ID GetDataY{ 2200214 };
 		inline constexpr REL::ID GetEncounterZone{ 2200242 };
 		inline constexpr REL::ID GetLocation{ 2200179 };
-		inline constexpr REL::ID GetOwner{ 910422 };
+		inline constexpr REL::ID GetOwner{ 2200236 };
 		inline constexpr REL::ID GetRegionList{ 2200265 };
-		inline constexpr REL::ID Pick{ 434717 };
+		inline constexpr REL::ID Pick{ 2200263 };
 		inline constexpr REL::ID SetCullCellMarkers{ 2192259 };
 		inline constexpr REL::ID UpdateAllRefsLoaded{ 2200415 };
 		inline constexpr REL::ID AttatchReference3D{ 2200620 };
 		inline constexpr REL::ID RemoveReference{ 2200299 };
 		inline constexpr REL::ID UpdateAllDecals{ 2200643 };
-		inline constexpr REL::ID DefaultWater{ 289864 };
+		inline constexpr REL::ID DefaultWater{ 2691845 };
 	}
 
 	namespace TESObjectLoadedEvent
@@ -1804,7 +1805,7 @@ namespace RE::ID
 
 	namespace TESValueForm
 	{
-		inline constexpr REL::ID GetFormValue{ 885783 };
+		inline constexpr REL::ID GetFormValue{ 2193435 };
 	}
 
 	namespace TESWeightForm
@@ -1814,7 +1815,7 @@ namespace RE::ID
 
 	namespace TESWorldSpace
 	{
-		inline constexpr REL::ID DefaultWater{ 289864 };
+		inline constexpr REL::ID DefaultWater{ 2691845 };
 	}
 
 	namespace UI
@@ -1881,7 +1882,7 @@ namespace RE::ID
 		inline constexpr REL::ID RequestExitWorkshop{ 209891 };
 		inline constexpr REL::ID ScrapReference{ 636327 };
 		inline constexpr REL::ID SetSelectedEditItem{ 2562 };
-		inline constexpr REL::ID StartWorkshop{ 171771 };
+		inline constexpr REL::ID StartWorkshop{ 2195134 };
 		inline constexpr REL::ID ToggleEditMode{ 1243386 };
 		inline constexpr REL::ID UnregisterForItemDestroyed{ 1101379 };
 		inline constexpr REL::ID UnregisterForItemMoved{ 569432 };

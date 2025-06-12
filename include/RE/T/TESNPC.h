@@ -156,6 +156,13 @@ namespace RE
 			return func(this);
 		}
 
+		void SetHairColor(BGSColorForm* a_col)
+		{
+			using func_t = decltype(&TESNPC::SetHairColor);
+			static REL::Relocation<func_t> func{ ID::TESNPC::SetHairColor };
+			return func(this, a_col);
+		}
+
 		// members
 		BGSAttachParentArray attachParents;    // 220
 		NPC_DATA             data;             // 238

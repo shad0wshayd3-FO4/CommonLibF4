@@ -53,8 +53,23 @@ namespace RE
 		public hkReferencedObject
 	{
 	public:
-		enum class AdditionMode : std::int32_t;
-		enum class SimulationStage : std::int32_t;
+		enum class AdditionMode : std::int32_t
+		{
+			kDoNotAddBody = 0x0,
+			kAddBodyNow = 0x1,
+			kAddBodyInNextStep = 0x2
+		};
+
+		enum class SimulationStage : std::int32_t
+		{
+			kDone = 1,
+			kPreCollide = 2,
+			kCollide = 4,
+			kPostCollide = 8,
+			kPreSolve = 10,
+			kSolve = 20,
+			kPostSolve = 40
+		};
 
 		// members
 		hknpBodyManager                                                 bodyManager;                       // 010

@@ -24,7 +24,17 @@ namespace RE
 	{
 	public:
 		enum class LeavingBroadPhaseBehavior;
-		enum class SimulationType;
+		{
+			kDoNothing = 0x0,
+			kRemoveBody = 0x1,
+			kFreezeBody = 0x2
+		};
+
+		enum class SimulationType
+		{
+			kSingleThreaded = 0x0,
+			kMultiThreaded = 0x2
+		};
 
 		// members
 		std::int32_t                                    m_bodyBufferCapacity;                    // 00

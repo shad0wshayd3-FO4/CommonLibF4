@@ -23,7 +23,7 @@ namespace RE
 	class hknpWorldCinfo
 	{
 	public:
-		enum class LeavingBroadPhaseBehavior;
+		enum class LeavingBroadPhaseBehavior
 		{
 			kDoNothing = 0x0,
 			kRemoveBody = 0x1,

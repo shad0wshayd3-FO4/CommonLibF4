@@ -19,7 +19,14 @@ namespace RE
 		static constexpr auto VTABLE{ VTABLE::ExamineMenu };
 		static constexpr auto MENU_NAME{ "ExamineMenu"sv };
 
-		enum class INSPECT_MODE_STATE;
+		enum class INSPECT_MODE_STATE
+		{
+			kModSlotSelect = 0,
+			kSelectNewMod = 1,
+			kInvComponentSelect = 2,
+			kItemSelect = 3,
+			kConfirm = 4
+		};
 
 		class ComponentBuilderFunctor
 		{

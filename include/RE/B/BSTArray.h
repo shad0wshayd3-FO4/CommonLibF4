@@ -190,9 +190,9 @@ namespace RE
 			const auto mem = _allocator->Allocate(a_bytes, alignof(void*));
 			if (!mem) {
 				REX::FAIL("failed to handle allocation request");
-			} else {
-				return mem;
 			}
+
+			return mem;
 		}
 
 		void deallocate(void* a_ptr)

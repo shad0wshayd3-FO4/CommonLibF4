@@ -7,7 +7,12 @@ namespace RE
 	class hknpShapeSignals
 	{
 	public:
-		enum class MutationFlagsEnum;
+		enum class MutationFlagsEnum
+		{
+			kAABBChanged = 0x1,
+			kUpdateCollisionCaches = 0x2,
+			kRebuildCollisionCaches = 0x4
+		};
 
 		class ShapeDestroyedSignal :
 			public hkSignal0
